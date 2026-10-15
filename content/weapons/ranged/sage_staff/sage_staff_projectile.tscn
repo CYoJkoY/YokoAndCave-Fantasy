@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://projectiles/player_projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://projectiles/bullet_wand/bullet_wand.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/sage_staff_projectile.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+resource_local_to_scene = true
+radius = 12.0
+height = 0.0
+
+[node name="SageStaffProjectile" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+destroy_on_leaving_screen = false
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 0, 0 )
+texture = ExtResource( 2 )
+
+[node name="Collision" parent="Hitbox" index="0"]
+position = Vector2( 0, 0 )
+shape = SubResource( 1 )
+
+[editable path="Hitbox"]
