@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://weapons/weapon_stats/melee_weapon_stats.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+cooldown = 61
+damage = 200
+accuracy = 1.0
+crit_chance = 0.03
+crit_damage = 2.0
+min_range = 0
+max_range = 235
+knockback = 10
+scaling_stats = [ [ "stat_melee_damage", 2.0 ], [ "stat_curse", 2.0 ] ]
+shooting_sounds = [  ]
+recoil_duration = 0.1
