@@ -37,6 +37,8 @@ func _fantasy_curse_item(cursed_item_data: ItemParentData, turn_randomization_of
                 new_effect.weapon_stats = _boost_weapon_stats_damage(new_effect.weapon_stats, effect_modifier)
             ["fantasy_damage_clamp", _, _]:
                 new_effect.value2 = Utils.ncl_curse_effect_value(new_effect.value2, effect_modifier, {"is_negative": true, "step": 1})
+            ["fantasy_longinus", _, _]:
+                new_effect.holy_scaling *= 1.0 + effect_modifier
             ["fantasy_erosion", _, _]:
                 new_effect.scaling_stats = _boost_scaling_sats(new_effect.scaling_stats.duplicate(), effect_modifier)
                 new_effect.chance = Utils.ncl_curse_effect_value(new_effect.chance, effect_modifier)

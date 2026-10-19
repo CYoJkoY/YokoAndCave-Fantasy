@@ -1,6 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=5 format=2]
 
 [ext_resource path="res://weapons/weapon_stats/ranged_weapon_stats.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/longinus_spear.tscn" type="PackedScene" id=2]
+[ext_resource path="res://weapons/melee_sounds/whoosh_swish_high_fast_01.wav" type="AudioStream" id=3]
+[ext_resource path="res://weapons/melee_sounds/whoosh_swish_high_fast_02.wav" type="AudioStream" id=4]
 
 [resource]
 script = ExtResource( 1 )
@@ -12,9 +15,27 @@ crit_damage = 2.5
 min_range = 0
 max_range = 1000
 knockback = 8
+knockback_piercing = 0.0
+can_have_positive_knockback = true
+can_have_negative_knockback = false
+effect_scale = 1.2
 scaling_stats = [ [ "stat_melee_damage", 7.5 ], [ "stat_fantasy_holy", 2.5 ] ]
-shooting_sounds = [  ]
-recoil_duration = 0.2
+lifesteal = 0.0
+shooting_sounds = [ ExtResource( 3 ), ExtResource( 4 ) ]
+sound_db_mod = -2
+is_healing = false
+recoil = 28
+recoil_duration = 0.12
+additional_cooldown_every_x_shots = -1
+additional_cooldown_multiplier = -1.0
+speed_percent_modifier = 0
 nb_projectiles = 1
-piercing = 0
+projectile_spread = 0.0
+piercing = 99
+piercing_dmg_reduction = 0.0
 bounce = 0
+bounce_dmg_reduction = 0.5
+can_bounce = false
+projectile_speed = 4200
+increase_projectile_speed_with_range = false
+projectile_scene = ExtResource( 2 )
