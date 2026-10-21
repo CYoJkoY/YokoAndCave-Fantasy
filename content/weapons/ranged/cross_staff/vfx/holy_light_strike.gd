@@ -2,10 +2,10 @@ extends Node2D
 
 const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const TOTAL_DURATION: float = 0.42
+export(float) var strike_duration: float = 0.18
 const SUMMON_TIME: float = 0.05
-const STRIKE_TIME: float = 0.18
-const FADE_TIME: float = 0.19
+export(float) var fade_duration: float = 0.19
+
 
 onready var _ground_seal: Sprite = $GroundSeal
 onready var _ground_bloom: Sprite = $GroundBloom
@@ -105,10 +105,10 @@ func _process(delta: float) -> void:
 
 	if _elapsed < SUMMON_TIME:
 		_process_summon(_elapsed / SUMMON_TIME)
-	elif _elapsed < (SUMMON_TIME + STRIKE_TIME):
-		_process_strike((_elapsed - SUMMON_TIME) / STRIKE_TIME)
-	elif _elapsed < TOTAL_DURATION:
-		_process_fade((_elapsed - SUMMON_TIME - STRIKE_TIME) / FADE_TIME)
+	elif _elapsed < (SUMMON_TIME + strike_duration):
+		_process_strike((_elapsed - SUMMON_TIME) / strike_duration)
+	elif _elapsed < SUMMON_TIME + strike_duration + fade_duration:
+		_process_fade((_elapsed - SUMMON_TIME - strike_duration) / fade_duration)
 	else:
 		_finish()
 

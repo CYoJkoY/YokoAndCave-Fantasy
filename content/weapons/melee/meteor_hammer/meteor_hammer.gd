@@ -33,7 +33,6 @@ func _ready() -> void:
         if effect.custom_key == "meteor_hammer_kill_cooldown":
             _kill_cooldown_effect = effect
             break
-    _hitbox.active = false
     _sweep_shape.radius = HEAD_RADIUS
     head.set_as_toplevel(true)
 
