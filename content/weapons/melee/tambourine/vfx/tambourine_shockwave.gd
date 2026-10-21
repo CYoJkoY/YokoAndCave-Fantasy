@@ -27,7 +27,7 @@ func start_explosion() -> void:
 	_elapsed = 0.0
 	_damage_elapsed = 0.0
 	_active = true
-	_opacity = ProgressData.settings.explosion_opacity if ProgressData.settings.visual_effects else 0.0
+	_opacity = ProgressData.settings.explosion_opacity
 	visible = _opacity > 0.0
 	if visible:
 		_visual_rotation = rand_range(-PI, PI)

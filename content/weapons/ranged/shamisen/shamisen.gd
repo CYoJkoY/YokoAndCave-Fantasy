@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 
 
 func _update_pluck_opacity() -> void:
-    var opacity: float = FANTASY_PROJECTILE_VISUAL_UTILS.get_opacity() if ProgressData.settings.visual_effects else 0.0
+    var opacity: float = FANTASY_PROJECTILE_VISUAL_UTILS.get_opacity()
     _strings.material.set_shader_param("strength", opacity)
     _resonance.modulate.a = opacity
     _resonance.visible = opacity > 0.0

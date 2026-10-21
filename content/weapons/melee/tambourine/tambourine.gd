@@ -25,15 +25,12 @@ func _process(delta: float) -> void:
         _swing_trail.clear_trail()
         _shockwave_sequences.clear()
         return
-    if not ProgressData.settings.visual_effects:
-        _swing_trail.clear_trail()
     _advance_shockwaves(delta)
 
 
 func enable_hitbox() -> void:
     .enable_hitbox()
-    if ProgressData.settings.visual_effects:
-        _swing_trail.begin_trail(sprite)
+    _swing_trail.begin_trail(sprite)
 
 
 func disable_hitbox() -> void:

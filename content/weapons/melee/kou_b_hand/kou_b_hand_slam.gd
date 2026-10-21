@@ -28,7 +28,6 @@ var _hitbox_disabled: bool
 var _hurtbox_disabled: bool
 var _z_index: int
 var _spin: float
-var _visuals: bool
 var _self_loss_ratio: float
 var _impact_radius: float
 var _player_index: int
@@ -55,7 +54,6 @@ func begin(source: Node, target: Node, weapon: Node, main: Node, effect: Effect)
     _hurtbox_disabled = source._hurtbox.is_disabled()
     _z_index = source.z_index
     _spin = -1.0 if _destination.x < _start.x else 1.0
-    _visuals = ProgressData.settings.visual_effects
     _self_loss_ratio = (effect.boss_loss_percent if source is Boss else effect.self_loss_percent) / 100.0
     _impact_radius = effect.impact_radius
     _player_index = weapon.player_index
@@ -102,8 +100,7 @@ func _physics_process(delta: float) -> void:
     if _landed:
         if _age >= FLIGHT_DURATION + IMPACT_DURATION:
             queue_free()
-        if _visuals:
-            update()
+        update()
         return
     if not is_instance_valid(_source) or _source.dead or _source._pending_die:
         _finish()
@@ -120,8 +117,7 @@ func _physics_process(delta: float) -> void:
     _source.sprite.rotation = _sprite_rotation + _spin * arc * 0.55
     _source.sprite.scale = _sprite_scale * Vector2(1.0 - arc * 0.12, 1.0 + arc * 0.12)
     global_position = _source.global_position
-    if _visuals:
-        update()
+    update()
     if progress >= 1.0:
         _land()
 
@@ -134,8 +130,6 @@ func _land() -> void:
     if is_instance_valid(_weapon) and not _weapon.is_queued_for_deletion() and not _weapon._parent.dead and not _weapon._parent.cleaning_up:
         _apply_self_loss(thrown)
         _apply_impact(thrown)
-    if not _visuals:
-        _finish()
 
 
 func _apply_self_loss(thrown: Node) -> void:
@@ -217,8 +211,6 @@ func _exit_tree() -> void:
 
 
 func _draw() -> void:
-    if not _visuals:
-        return
     if not _landed:
         var height: float = sin(min(_age / FLIGHT_DURATION, 1.0) * PI)
         draw_set_transform(Vector2.ZERO, 0.0, Vector2(1.0, 0.38))

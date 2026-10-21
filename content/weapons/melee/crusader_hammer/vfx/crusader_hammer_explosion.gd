@@ -40,11 +40,10 @@ func start_explosion() -> void:
 	_seal.rotation = rand_range(-0.12, 0.12)
 	_sparks.emitting = false
 	_dust.emitting = false
-	if ProgressData.settings.visual_effects:
-		_sparks.restart()
-		_sparks.emitting = true
-		_dust.restart()
-		_dust.emitting = true
+	_sparks.restart()
+	_sparks.emitting = true
+	_dust.restart()
+	_dust.emitting = true
 	_update_visuals()
 	set_process(true)
 	set_physics_process(true)

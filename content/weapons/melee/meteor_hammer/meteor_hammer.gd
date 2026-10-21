@@ -129,9 +129,9 @@ func _physics_process(delta: float) -> void:
     _last_anchor = get_chain_anchor()
     _last_owner_position = global_position
     _impact_time = max(0.0, _impact_time - delta)
-    var flash: float = _impact_time / 0.10 if ProgressData.settings.visual_effects else 0.0
+    var flash: float = _impact_time / 0.10
     head.self_modulate = Color(1.0 + flash * 0.3, 1.0 + flash * 0.25, 1.0 + flash * 0.15)
-    var trail_opacity: float = ProgressData.settings.explosion_opacity if ProgressData.settings.visual_effects else 0.0
+    var trail_opacity: float = ProgressData.settings.explosion_opacity
     _swing_trail.advance(head, _hitbox.active and _shooting_behavior.is_damage_phase(), delta, trail_opacity)
     if chain_changed or global_transform != _chain_draw_transform:
         update()
