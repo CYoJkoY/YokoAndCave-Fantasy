@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=7 format=2]
+[gd_resource type="Resource" load_steps=10 format=2]
 
 [ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
 [ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/apocalypse/apocalypse_icon.webp" type="Texture" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/apocalypse/4/apocalypse_4_stats.tres" type="Resource" id=4]
 [ext_resource path="res://items/sets/legendary/legendary_set_data.tres" type="Resource" id=5]
 [ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/sets/fallen/fallen_set_data.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/apocalypse/apocalypse_erosion.tres" type="Resource" id=7]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/apocalypse/apocalypse_speed.tres" type="Resource" id=8]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/apocalypse/apocalypse_attack.tres" type="Resource" id=9]
 
 [resource]
 script = ExtResource( 1 )
@@ -16,7 +19,7 @@ icon = ExtResource( 2 )
 name = "WEAPON_FANTASY_APOCALYPSE"
 tier = 3
 value = 367
-effects = [  ]
+effects = [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ) ]
 tracking_text = ""
 is_lockable = true
 unlock_codex_descr_after_get_it = 1

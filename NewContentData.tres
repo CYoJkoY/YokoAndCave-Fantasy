@@ -363,6 +363,7 @@ tracked_items = {
 "item_fantasy_prism_tower": 0,
 "item_fantasy_white_fox": 0,
 "item_fantasy_wolf_totem": 0,
+"weapon_fantasy_apocalypse": 0,
 "weapon_fantasy_rusted_blade": 0
 }
 tracked_effects = {

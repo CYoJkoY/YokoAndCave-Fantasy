@@ -42,7 +42,6 @@ local_coords = false
 
 [node name="Attach" parent="Sprite" index="2"]
 position = Vector2( -17, 0 )
-scale = Vector2( 1e-05, 1e-05 )
 
 [node name="CollisionShape2D" parent="Range" index="0"]
 shape = SubResource( 3 )
