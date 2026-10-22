@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/seven_star_sword/vfx/seven_star_light.gd" type="Script" id=1]
+[ext_resource path="res://overlap/hitbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/seven_star_sword/vfx/textures/star_cut.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/seven_star_sword/vfx/seven_star_cross.gdshader" type="Shader" id=4]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+
+[sub_resource type="ShaderMaterial" id=4]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/delay = 0.020
+
+[node name="SevenStarLight" type="Node2D"]
+material = SubResource( 1 )
+z_index = 2
+script = ExtResource( 1 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 2 )]
+monitorable = false
+
+[node name="Collision" parent="Hitbox" index="0"]
+disabled = true
+
+[node name="Cross" type="Node2D" parent="."]
+visible = false
+
+[node name="MainCut" type="Sprite" parent="Cross"]
+material = SubResource( 2 )
+texture = ExtResource( 3 )
+scale = Vector2( 0.44, 0.44 )
+
+[node name="EchoCut" type="Sprite" parent="Cross"]
+material = SubResource( 4 )
+texture = ExtResource( 3 )
+rotation = 1.5707963
+scale = Vector2( 0.40, 0.38 )
+
+[editable path="Hitbox"]

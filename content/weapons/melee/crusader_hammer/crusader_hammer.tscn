@@ -11,7 +11,7 @@
 [ext_resource path="res://resources/shaders/outline.gdshader" type="Shader" id=13]
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 60, 32.5 )
+extents = Vector2( 80, 32.5 )
 
 [sub_resource type="CircleShape2D" id=5]
 resource_local_to_scene = true
@@ -39,7 +39,7 @@ texture = ExtResource( 2 )
 offset = Vector2( 35, 0 )
 
 [node name="Collision" parent="Sprite/Hitbox" index="0"]
-position = Vector2( 22, 0 )
+position = Vector2( 2, 0 )
 shape = SubResource( 4 )
 
 [node name="Muzzle" parent="Sprite" index="1"]

@@ -29,9 +29,9 @@ shader_param/outline_color_3 = Color( 0, 0, 0, 0 )
 resource_local_to_scene = true
 radius = 47.2652
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=3]
 resource_local_to_scene = true
-points = PoolVector2Array( -24, 108, 158, 108, 158, -48, -24, -48 )
+extents = Vector2( 91, 78 )
 
 [sub_resource type="ShaderMaterial" id=4]
 resource_local_to_scene = true
@@ -62,6 +62,7 @@ flip_v = false
 
 [node name="Hitbox" parent="Sprite" index="0"]
 visible = false
+position = Vector2( 67, 30 )
 
 [node name="Collision" parent="Sprite/Hitbox" index="0"]
 shape = SubResource( 3 )

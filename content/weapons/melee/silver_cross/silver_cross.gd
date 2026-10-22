@@ -7,7 +7,6 @@ onready var _glow: Sprite = $Sprite/Glow
 onready var _trail: Sprite = $Sweep
 onready var _sparks: CPUParticles2D = $Sprite/Sparks
 onready var _impact: Sprite = $Sprite/Impact
-onready var _sweep_shape: ConvexPolygonShape2D = $Sprite/Hitbox/Collision.shape
 
 var _holy_effect: Resource
 var _clock: float = 0.0
@@ -38,6 +37,7 @@ func update_sprite_flipv() -> void:
     var facing: float = 1.0 if Utils.is_facing_right(rotation_degrees) else -1.0
     sprite.flip_v = facing < 0.0
     sprite.offset = Vector2(65, -35 * facing)
+    _hitbox.position = Vector2(67, 30 * facing)
     _blade.flip_v = facing > 0.0
     _glow.flip_v = _blade.flip_v
     _blade.offset = Vector2(65, 35 * facing)
@@ -67,21 +67,7 @@ func _physics_process(delta: float) -> void:
         set_process(false)
         set_physics_process(false)
         return
-    var previous: Transform2D = sprite.global_transform
     _shooting_behavior.advance(delta)
-    if _shooting_behavior.phase == _shooting_behavior.Phase.SWEEP:
-        var current: Transform2D = sprite.global_transform
-        var facing: float = 1.0 if sprite.flip_v else -1.0
-        var corners: PoolVector2Array = PoolVector2Array([Vector2(-24, -108 * facing), Vector2(158, -108 * facing), Vector2(158, 48 * facing), Vector2(-24, 48 * facing)])
-        var points: PoolVector2Array = PoolVector2Array()
-        _hitbox.global_transform = Transform2D(0.0, current.origin)
-        for corner in corners:
-            points.append(previous.xform(corner) - current.origin)
-            points.append(current.xform(corner) - current.origin)
-        _sweep_shape.points = Geometry.convex_hull_2d(points)
-        var motion: Vector2 = current.xform(Vector2(110, -30 * facing)) - previous.xform(Vector2(110, -30 * facing))
-        if motion.length_squared() > 0.001:
-            _hitbox.set_knockback(motion.normalized(), current_stats.knockback, current_stats.knockback_piercing)
 
 
 func _process(delta: float) -> void:
