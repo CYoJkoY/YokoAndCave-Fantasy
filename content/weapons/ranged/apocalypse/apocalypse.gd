@@ -30,8 +30,7 @@ func update_sprite_flipv() -> void:
     sprite.flip_v = false
 
 
-func _process(delta: float) -> void:
-    ._process(delta)
+func _process(_delta: float) -> void:
     _visuals.set_active(not _parent.dead and not _parent.cleaning_up)
 
 

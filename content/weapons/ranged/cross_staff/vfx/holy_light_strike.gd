@@ -106,6 +106,8 @@ func _process(delta: float) -> void:
 	if _elapsed < SUMMON_TIME:
 		_process_summon(_elapsed / SUMMON_TIME)
 	elif _elapsed < (SUMMON_TIME + strike_duration):
+		if not _pillar.visible:
+			_begin_strike()
 		_process_strike((_elapsed - SUMMON_TIME) / strike_duration)
 	elif _elapsed < SUMMON_TIME + strike_duration + fade_duration:
 		_process_fade((_elapsed - SUMMON_TIME - strike_duration) / fade_duration)
@@ -121,16 +123,17 @@ func _process_summon(progress: float) -> void:
 	_ground_bloom.modulate.a = 0.25 + ease_p * 0.20
 
 
-func _process_strike(progress: float) -> void:
-	if not _pillar.visible:
-		_pillar.visible = true
-		_impact_flare.visible = true
-		_shockwave.visible = true
-		_holy_dust.emitting = true
-		_holy_dust.restart()
-		_falling_sparks.emitting = true
-		_falling_sparks.restart()
+func _begin_strike() -> void:
+	_pillar.visible = true
+	_impact_flare.visible = true
+	_shockwave.visible = true
+	_holy_dust.emitting = true
+	_holy_dust.restart()
+	_falling_sparks.emitting = true
+	_falling_sparks.restart()
 
+
+func _process_strike(progress: float) -> void:
 	var strike_p: float = sin(progress * PI * 0.5)
 	_pillar.scale.y = min(1.0, 0.4 + strike_p * 0.6)
 	_pillar.scale.x = 1.0 + (1.0 - progress) * 0.25

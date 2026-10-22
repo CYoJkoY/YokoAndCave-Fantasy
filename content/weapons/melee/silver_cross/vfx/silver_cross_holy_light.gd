@@ -37,11 +37,11 @@ func _process_summon(progress: float) -> void:
 
 
 func _process_strike(progress: float) -> void:
-    ._process_strike(progress)
     var release: float = 1.0 - pow(1.0 - progress, 3.0)
     _pillar.scale = Vector2(1.0 + 0.25 * (1.0 - release), 1.0)
     _pillar.modulate.a = 0.85 - progress * 0.15
     _ground_seal.rotation = progress * 0.12
+    _ground_seal.scale = Vector2.ONE * (_base_seal_scale * (1.0 + sin(progress * PI) * 0.08))
     _ground_seal.modulate.a = 0.75 - progress * 0.2
     _ground_bloom.modulate.a = 0.45 - progress * 0.25
     _impact_flare.scale = Vector2.ONE * (0.35 + release * 0.80)

@@ -118,6 +118,21 @@ var fantasy_guaranteed_set_weapons_in_shop_hash: int = Keys.generate_hash("fanta
 var fantasy_weapon_hit_proc_hash: int = Keys.generate_hash("fantasy_weapon_hit_proc")
 var fantasy_blessed_hash: int = Keys.generate_hash("fantasy_blessed")
 
+func fa_format_damage_with_scaling_stats(damage: int, base_damage: int, scaling_stats: Array) -> String:
+    var text: String = "[color=%s]%s[/color]" % [Utils.ncl_get_signed_col(damage, base_damage), str(damage)]
+    if damage != base_damage:
+        text += " [color=%s]|%s[/color]" % [Utils.GRAY_COLOR_STR, str(base_damage)]
+    return text + " (" + WeaponService.get_scaling_stats_icon_text(scaling_stats) + ")"
+
+func fa_has_erosion(player_index: int) -> bool:
+    if !RunData.get_player_effect(fantasy_erosion_hash, player_index).empty():
+        return true
+    for weapon in RunData.get_player_weapons_ref(player_index):
+        for effect in weapon.effects:
+            if effect.get_id() == "fantasy_erosion":
+                return true
+    return false
+
 func fa_apply_direct_crit_kill_gold_rewards(player_index: int, was_crit: bool, was_kill: bool) -> void:
     if !was_crit or !was_kill:
         return

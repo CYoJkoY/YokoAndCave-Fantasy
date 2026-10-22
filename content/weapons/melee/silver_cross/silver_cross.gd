@@ -134,19 +134,29 @@ func on_weapon_hit_something(thing_hit: Node, damage_dealt: int, hitbox: Hitbox)
     var main = Utils.get_scene_node()
     if not is_instance_valid(main) or main._cleaning_up or _parent.dead or _parent.cleaning_up:
         return
-    var target: Enemy = null
-    var count: int = 0
-    for enemy in main._entity_spawner.get_all_enemies(false):
-        if not is_valid_holy_target(enemy):
-            continue
-        count += 1
-        if Utils.randi_range(1, count) == 1:
-            target = enemy
+    var target: Enemy = _get_random_holy_target(main._entity_spawner.get_all_enemies(false))
     if target == null:
         return
     var strike = HOLY_STRIKE.instance()
     add_child(strike)
     strike.start(self, target, main, _holy_effect)
+
+
+func _get_random_holy_target(enemies: Array) -> Enemy:
+    if enemies.empty():
+        return null
+    var candidate = enemies[Utils.randi_range(0, enemies.size() - 1)]
+    if is_valid_holy_target(candidate):
+        return candidate
+    var target: Enemy = null
+    var count: int = 0
+    for enemy in enemies:
+        if not is_valid_holy_target(enemy):
+            continue
+        count += 1
+        if Utils.randi_range(1, count) == 1:
+            target = enemy
+    return target
 
 
 func is_valid_holy_target(target) -> bool:

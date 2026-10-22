@@ -23,12 +23,7 @@ onready var timer: Timer = $"Timer"
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func should_add_on_spawn() -> bool:
     for player_index in range(RunData.get_player_count()):
-        if !RunData.get_player_effect(Utils.fantasy_erosion_hash, player_index).empty(): return true
-        
-        var player_weapons: Array = RunData.get_player_weapons_ref(player_index)
-        for weapon in player_weapons:
-            for effect in weapon.effects:
-                if effect.get_id() == "fantasy_erosion": return true
+        if Utils.fa_has_erosion(player_index): return true
 
     return false
 

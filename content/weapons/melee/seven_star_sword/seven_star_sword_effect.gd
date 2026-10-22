@@ -24,10 +24,6 @@ func get_radius(player_index: int) -> float:
 
 
 func get_args(player_index: int) -> Array:
-    var damage: int = get_damage(player_index)
-    var text: String = "[color=%s]%s[/color]" % [Utils.ncl_get_signed_col(damage, value), str(damage)]
-    if damage != value:
-        text += " [color=%s]|%s[/color]" % [Utils.GRAY_COLOR_STR, str(value)]
-    text += " (" + WeaponService.get_scaling_stats_icon_text(get_scaling_stats()) + ")"
+    var text: String = Utils.fa_format_damage_with_scaling_stats(get_damage(player_index), value, get_scaling_stats())
     var radius: String = Utils.ncl_get_num_text_with_scaling_stats(BASE_RADIUS, [[Keys.stat_range_hash, 0.5]], {"player_index": player_index})
     return [text, radius, str(RECOVERY), str(CROSS_RADIUS)]

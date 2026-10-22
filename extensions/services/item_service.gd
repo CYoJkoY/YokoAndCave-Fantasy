@@ -144,19 +144,7 @@ func _fantasy_can_spawn_erosion_related_item(item: ItemParentData, wave: int, pl
 
     if !is_erosion_related: return item
 
-    var can_spawn: bool = false
-    var item_effects: Array = RunData.get_player_effect(Utils.fantasy_erosion_hash, player_index)
-    if !item_effects.empty(): can_spawn = true
-
-    if !can_spawn:
-        for weapon in RunData.get_player_weapons_ref(player_index):
-            for effect in weapon.effects:
-                if effect.get_id() == "fantasy_erosion":
-                    can_spawn = true
-                    break
-            if can_spawn: break
-
-    if !can_spawn: return _get_rand_item_for_wave(wave, player_index, type, args)
+    if !Utils.fa_has_erosion(player_index): return _get_rand_item_for_wave(wave, player_index, type, args)
 
     return item
 
