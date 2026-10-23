@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=8 format=2]
+[gd_resource type="Resource" load_steps=10 format=2]
 
 [ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
 [ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/dead_hand_icon.webp" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://items/sets/legendary/legendary_set_data.tres" type="Resource" id=5]
 [ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/sets/fallen/fallen_set_data.tres" type="Resource" id=6]
 [ext_resource path="res://items/sets/blade/blade_set_data.tres" type="Resource" id=7]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/4/dead_hand_4_effect.tres" type="Resource" id=8]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/4/dead_hand_4_erosion.tres" type="Resource" id=9]
 
 [resource]
 script = ExtResource( 1 )
@@ -17,7 +19,7 @@ icon = ExtResource( 2 )
 name = "WEAPON_FANTASY_DEAD_HAND"
 tier = 3
 value = 267
-effects = [  ]
+effects = [ ExtResource( 8 ), ExtResource( 9 ) ]
 tracking_text = ""
 is_lockable = true
 unlock_codex_descr_after_get_it = 1

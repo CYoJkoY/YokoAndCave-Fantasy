@@ -1,11 +1,18 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://weapons/weapon.tscn" type="PackedScene" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/dead_hand_icon.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/dead_hand_layers1_2.webp" type="Texture" id=2]
 [ext_resource path="res://resources/shaders/outline.gdshader" type="Shader" id=3]
-[ext_resource path="res://weapons/melee/melee_weapon.gd" type="Script" id=9]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/dead_hand.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/dead_hand_shooting_behavior.gd" type="Script" id=5]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/vfx/textures/dead_hand_flame.webp" type="Texture" id=6]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/vfx/dead_hand_flame.gdshader" type="Shader" id=7]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/vfx/textures/dead_hand_sweep.webp" type="Texture" id=8]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/vfx/dead_hand_sweep.gdshader" type="Shader" id=9]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/vfx/textures/dead_hand_ember.webp" type="Texture" id=10]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/shared/weapon_afterimage_trail.gd" type="Script" id=11]
 
-[sub_resource type="ShaderMaterial" id=2]
+[sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
 shader = ExtResource( 3 )
 shader_param/width = 2.0
@@ -17,27 +24,108 @@ shader_param/outline_color_1 = Color( 0, 0, 0, 0 )
 shader_param/outline_color_2 = Color( 0, 0, 0, 0 )
 shader_param/outline_color_3 = Color( 0, 0, 0, 0 )
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=2]
 resource_local_to_scene = true
-radius = 47.2652
+radius = 285.0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 56, 38 )
+
+[sub_resource type="ShaderMaterial" id=4]
+resource_local_to_scene = true
+shader = ExtResource( 7 )
+
+[sub_resource type="ShaderMaterial" id=5]
+resource_local_to_scene = true
+shader = ExtResource( 9 )
+
+[sub_resource type="CanvasItemMaterial" id=6]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=7]
+offsets = PoolRealArray( 0, 0.25, 0.65, 1 )
+colors = PoolColorArray( 0.92, 0.78, 1, 0.85, 0.75, 0.38, 1, 0.7, 0.38, 0.10, 0.7, 0.4, 0.13, 0.01, 0.3, 0 )
+
+[sub_resource type="Curve" id=8]
+_data = [ Vector2( 0, 0.35 ), 0.0, 0.0, 0, 0, Vector2( 0.18, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
 [node name="DeadHand" instance=ExtResource( 1 )]
-script = ExtResource( 9 )
-outline_shader_mat = SubResource( 2 )
+script = ExtResource( 4 )
+outline_shader_mat = SubResource( 1 )
 
 [node name="Sprite" parent="." index="0"]
+z_index = 2
+z_as_relative = false
 texture = ExtResource( 2 )
+offset = Vector2( 44, 0 )
 
 [node name="Hitbox" parent="Sprite" index="0"]
 visible = false
 
+[node name="Collision" parent="Sprite/Hitbox" index="0"]
+position = Vector2( 44, 0 )
+shape = SubResource( 3 )
+
 [node name="Muzzle" parent="Sprite" index="1"]
-position = Vector2( 0, 0 )
+position = Vector2( 87, 0 )
 
 [node name="Attach" parent="Sprite" index="2"]
 position = Vector2( 0, 0 )
 
+[node name="Halo" type="Sprite" parent="Sprite" index="3"]
+show_behind_parent = true
+material = SubResource( 6 )
+modulate = Color( 0.65, 0.26, 1, 0.25 )
+texture = ExtResource( 6 )
+offset = Vector2( 76, 0 )
+scale = Vector2( 0.58, 0.58 )
+
+[node name="Flames" type="Sprite" parent="Sprite" index="4"]
+show_behind_parent = true
+material = SubResource( 4 )
+texture = ExtResource( 6 )
+offset = Vector2( 88, 0 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Embers" type="CPUParticles2D" parent="Sprite" index="5"]
+material = SubResource( 6 )
+position = Vector2( 74, 0 )
+emitting = false
+amount = 10
+lifetime = 0.34
+local_coords = false
+texture = ExtResource( 10 )
+emission_shape = 1
+emission_sphere_radius = 23.0
+direction = Vector2( -1, -0.35 )
+spread = 35.0
+gravity = Vector2( 0, -55 )
+initial_velocity = 36.0
+initial_velocity_random = 0.6
+angle = 15.0
+angle_random = 0.7
+scale_amount = 0.20
+scale_amount_random = 0.5
+scale_amount_curve = SubResource( 8 )
+color_ramp = SubResource( 7 )
+
 [node name="CollisionShape2D" parent="Range" index="0"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
+
+[node name="ShootingBehavior" parent="." index="4"]
+script = ExtResource( 5 )
+
+[node name="Sweep" type="Sprite" parent="." index="5"]
+visible = false
+z_index = 1
+z_as_relative = false
+material = SubResource( 5 )
+texture = ExtResource( 8 )
+
+[node name="Trail" type="Node2D" parent="." index="6"]
+material = SubResource( 6 )
+script = ExtResource( 11 )
+z_index = 1
+z_as_relative = false
 
 [editable path="Sprite/Hitbox"]
