@@ -1,20 +1,30 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=5 format=2]
 
 [ext_resource path="res://weapons/weapon_stats/ranged_weapon_stats.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/tidal_barrage/tidal_projectile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://weapons/ranged/laser_gun/gun_silenced_sniper1_shot_04.wav" type="AudioStream" id=3]
+[ext_resource path="res://weapons/ranged/laser_gun/gun_silenced_sniper1_shot_04v2.wav" type="AudioStream" id=4]
 
 [resource]
 script = ExtResource( 1 )
-cooldown = 2
+cooldown = 6
 damage = 12
-accuracy = 1.0
+accuracy = 0.88
 crit_chance = 0.1
 crit_damage = 3.0
 min_range = 0
-max_range = 450
+max_range = 600
 knockback = 2
 scaling_stats = [ [ "stat_ranged_damage", 1.0 ] ]
-shooting_sounds = [  ]
+shooting_sounds = [ ExtResource( 3 ), ExtResource( 4 ) ]
+sound_db_mod = -18
+recoil = 4
 recoil_duration = 0.01
+additional_cooldown_every_x_shots = 4
+additional_cooldown_multiplier = 8.6
 nb_projectiles = 5
+projectile_spread = 0.36
 piercing = 0
 bounce = 0
+projectile_speed = 1800
+projectile_scene = ExtResource( 2 )

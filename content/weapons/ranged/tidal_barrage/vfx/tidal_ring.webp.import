@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/annihilation_ray_layer5.webp-b4ed7c632ceaad655385303d2ae8a9d4.stex"
+path="res://.import/tidal_ring.webp-818f17a8d3b3117bb07387efa4a145fa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/annihilation_ray/annihilation_ray_layer5.webp"
-dest_files=[ "res://.import/annihilation_ray_layer5.webp-b4ed7c632ceaad655385303d2ae8a9d4.stex" ]
+source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/tidal_barrage/vfx/tidal_ring.webp"
+dest_files=[ "res://.import/tidal_ring.webp-818f17a8d3b3117bb07387efa4a145fa.stex" ]
 
 [params]
 
