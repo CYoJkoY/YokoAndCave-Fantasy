@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://projectiles/player_projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/phantom_projectile.gd" type="Script" id=2]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_front.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_spirit_glow.webp" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_wake.tscn" type="PackedScene" id=5]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_head.gdshader" type="Shader" id=6]
+
+[sub_resource type="CapsuleShape2D" id=1]
+resource_local_to_scene = true
+radius = 9.0
+height = 0.0
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 6 )
+
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[node name="PhantomProjectile" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+destroy_on_leaving_screen = false
+stop_delay = 17.0
+clear_material_when_pooled = false
+
+[node name="Sprite" parent="." index="0"]
+material = SubResource( 2 )
+position = Vector2( 0, 0 )
+scale = Vector2( 0.55, 0.85 )
+texture = ExtResource( 3 )
+offset = Vector2( -320, 0 )
+
+[node name="Collision" parent="Hitbox" index="0"]
+position = Vector2( 0, 0 )
+shape = SubResource( 1 )
+
+[node name="Wake" parent="." index="3" instance=ExtResource( 5 )]
+
+[node name="Glow" type="Sprite" parent="." index="4"]
+show_behind_parent = true
+material = SubResource( 3 )
+position = Vector2( -10, 0 )
+scale = Vector2( 0.9, 1 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, 0 )
+
+[editable path="Hitbox"]
