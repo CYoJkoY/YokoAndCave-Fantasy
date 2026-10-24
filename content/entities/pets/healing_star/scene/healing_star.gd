@@ -63,9 +63,6 @@ func init(zone_min_pos: Vector2, zone_max_pos: Vector2, p_players_ref: Array = [
 
 
 func _ready() -> void:
-    if sprite == null and has_node("Animation/Sprite"):
-        sprite = $Animation/Sprite
-
     _scale_tween = Tween.new()
     add_child(_scale_tween)
 
