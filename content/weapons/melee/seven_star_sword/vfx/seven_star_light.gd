@@ -126,7 +126,7 @@ func _draw() -> void:
         _draw_star(_points[0], 80.0, pow(max(0.0, 1.0 - _age / 0.25), 2.0))
         for i in range(_points.size() - 1):
             var local_age: float = _age - i * LINK_INTERVAL
-            if local_age <= 0.0:
+            if local_age <= 0.0 or local_age >= FIRST_HIT + FADE_DURATION:
                 continue
             var fade: float = pow(clamp(1.0 - (local_age - FIRST_HIT) / FADE_DURATION, 0.0, 1.0), 1.6)
             var reveal: float = clamp(local_age / FIRST_HIT, 0.0, 1.0)
@@ -167,19 +167,47 @@ func _draw_link(start: Vector2, finish: Vector2, reveal: float, fade: float, var
         return
     var normal: Vector2 = (finish - start).normalized().tangent()
     var steps: int = int(clamp(ceil(distance / 24.0), 6, 36))
-    var previous: Vector2 = start
+    var points: PoolVector2Array = PoolVector2Array([start])
+    var widths: PoolRealArray = PoolRealArray([0.7])
+    var pulse: float = 0.78 + fade * fade * 0.52
     for j in range(1, steps + 1):
         var t: float = min(float(j) / steps, reveal)
         var envelope: float = sin(t * PI)
-        var bend: float = sin(t * PI * 3.0 + variation * 2.1) * min(20.0, distance * 0.08)
-        var filament: float = sin(t * 53.0 + variation * 3.7 + _age * 36.0) * 3.5
+        var bend: float = (abs(fposmod(t * 4.0 + variation * 0.37, 2.0) - 1.0) * 2.0 - 1.0) * min(18.0, distance * 0.075)
+        var filament: float = sin(t * 53.0 + variation * 3.7 + _age * 36.0) * min(1.6, distance * 0.02)
         var point: Vector2 = start.linear_interpolate(finish, t) + normal * envelope * (bend + filament)
-        _draw_beam(previous, point, 20.0, Color(0.2, 0.55, 1.0, fade * 0.65))
-        _draw_beam(previous, point, 5.0, Color(0.8, 0.95, 1.0, fade))
-        previous = point
+        points.append(point)
+        widths.append((0.88 + sin(t * 17.0 + variation * 2.3) * 0.12) * (0.7 + envelope * 0.3))
         if t >= reveal:
             break
-    _draw_star(previous, 24.0, fade * (1.0 - reveal))
+    _draw_link_ribbon(points, widths, pulse, fade)
+    _draw_star(points[points.size() - 1], 24.0, fade * (1.0 - reveal))
+
+
+func _draw_link_ribbon(points: PoolVector2Array, widths: PoolRealArray, pulse: float, fade: float) -> void:
+    var count: int = points.size()
+    var glow: PoolVector2Array = PoolVector2Array()
+    var core: PoolVector2Array = PoolVector2Array()
+    var uvs: PoolVector2Array = PoolVector2Array([Vector2(0.5, 0.0), Vector2(0.5, 0.0), Vector2(0.5, 1.0), Vector2(0.5, 1.0)])
+    var glow_color: PoolColorArray = PoolColorArray([Color(0.2, 0.6, 1.0, fade * 0.7)])
+    var core_color: PoolColorArray = PoolColorArray([Color(0.9, 0.98, 1.0, fade)])
+    glow.resize(count * 2)
+    core.resize(count * 2)
+    for i in range(count):
+        var before: Vector2 = points[max(0, i - 1)]
+        var after: Vector2 = points[min(count - 1, i + 1)]
+        var side: Vector2 = (after - before).normalized().tangent()
+        var edge: Vector2 = (points[i] - before) if i == count - 1 else (after - points[i])
+        var joint_scale: float = 1.0 / max(0.75, side.dot(edge.normalized().tangent()))
+        side *= widths[i] * pulse * joint_scale
+        glow[i * 2] = points[i] - side * 12.0
+        glow[i * 2 + 1] = points[i] + side * 12.0
+        core[i * 2] = points[i] - side * 3.3
+        core[i * 2 + 1] = points[i] + side * 3.3
+    for i in range(count - 1):
+        var left: int = i * 2
+        draw_primitive(PoolVector2Array([glow[left], glow[left + 2], glow[left + 3], glow[left + 1]]), glow_color, uvs, BEAM)
+        draw_primitive(PoolVector2Array([core[left], core[left + 2], core[left + 3], core[left + 1]]), core_color, uvs, BEAM)
 
 
 func _draw_beam(a: Vector2, b: Vector2, width: float, color: Color) -> void:
