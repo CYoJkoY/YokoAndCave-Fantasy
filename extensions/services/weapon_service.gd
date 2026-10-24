@@ -70,6 +70,8 @@ func _fantasy_apply_structure_scaling_stat_effects(scaling_stats: Array, player_
 # ══════════════════════════════════════════ Weapon Runtime Effects ══════════════════════════════════════════ #
 func fantasy_reset_weapon_cooldown(weapon: Node) -> void:
     weapon._current_cooldown = 0
+    if weapon.has_method("fantasy_reset_attack_cooldown"):
+        weapon.fantasy_reset_attack_cooldown()
     weapon.tween_animation.remove(weapon.sprite, "self_modulate")
     weapon.sprite.self_modulate = Color("#70CFFF")
     weapon.tween_animation.interpolate_property(
