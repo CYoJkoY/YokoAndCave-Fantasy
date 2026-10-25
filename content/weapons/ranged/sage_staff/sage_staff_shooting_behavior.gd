@@ -1,6 +1,8 @@
 extends "res://weapons/shooting_behaviors/ranged_weapon_shooting_behavior.gd"
 
-const EMISSION_INTERVAL: float = 0.0625
+const EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/sage_staff_effect.gd")
+const EMISSION_INTERVAL: float = EFFECT.EMISSION_INTERVAL
+const GOLDEN_ANGLE: float = 2.39996323
 
 var _remaining: int = 0
 var _count: int = 0
@@ -8,7 +10,6 @@ var _elapsed: float = 0.0
 var _angle: float = 0.0
 var _attack_id: int = 0
 var _burst_stats: RangedWeaponStats
-var _sprite_position: Vector2
 
 
 func _ready() -> void:
@@ -30,7 +31,7 @@ func shoot(_distance: float) -> void:
     _elapsed = 0.0
     _angle = rand_range(-PI, PI)
     _attack_id = _get_next_attack_id()
-    _sprite_position = _parent.sprite.position
+    _parent.begin_cast()
     SoundManager.play(Utils.get_rand_element(_burst_stats.shooting_sounds), _burst_stats.sound_db_mod, 0.2)
     set_physics_process(true)
     _emit_orb()
@@ -43,14 +44,12 @@ func _physics_process(delta: float) -> void:
     _elapsed += delta
     while _remaining > 0 and _elapsed >= (_count - _remaining) * EMISSION_INTERVAL:
         _emit_orb()
-    var pulse: float = fmod(_elapsed, EMISSION_INTERVAL) / EMISSION_INTERVAL
-    _parent.sprite.position = _sprite_position + Vector2(-_burst_stats.recoil * (1.0 - pulse), 0.0)
     if _remaining == 0 and _elapsed >= _count * EMISSION_INTERVAL:
         _finish()
 
 
 func _emit_orb() -> void:
-    var angle: float = _angle + TAU * float(_count - _remaining) / float(_count)
+    var angle: float = _angle + GOLDEN_ANGLE * float(_count - _remaining)
     _ranged_spawn_projectile_args.effects = _parent.effects
     _ranged_spawn_projectile_args.from_player_index = _parent.player_index
     _ranged_spawn_projectile_args.knockback_direction = Vector2.RIGHT.rotated(angle)
@@ -58,12 +57,13 @@ func _emit_orb() -> void:
         _parent.muzzle.global_position, _burst_stats, angle, _parent, _ranged_spawn_projectile_args
     )
     projectile._hitbox.player_attack_id = _attack_id
+    _parent.on_orb_emitted(projectile.get_element())
     emit_signal("projectile_shot", projectile)
     _remaining -= 1
 
 
 func _finish() -> void:
-    _parent.sprite.position = _sprite_position
+    _parent.finish_cast()
     _remaining = 0
     _burst_stats = null
     set_physics_process(false)

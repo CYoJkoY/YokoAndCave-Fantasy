@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/vfx/sage_staff_chain.gd" type="Script" id=1]
+[ext_resource path="res://overlap/hitbox.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[node name="SageStaffChain" type="Node2D"]
+z_index = 2
+material = SubResource( 1 )
+script = ExtResource( 1 )
+chain_glow_color = Color( 0.62, 0.28, 1, 1 )
+chain_core_color = Color( 0.97, 0.9, 1, 1 )
+chain_star_color = Color( 0.8, 0.57, 1, 1 )
+chain_shard_color = Color( 0.83, 0.65, 1, 1 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 2 )]
+monitorable = false
+
+[node name="Collision" parent="Hitbox" index="0"]
+disabled = true
+
+[editable path="Hitbox"]

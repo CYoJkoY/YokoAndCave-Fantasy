@@ -1,13 +1,7 @@
-extends Node2D
+extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/shared/star_chain_visual.gd"
 
 const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
-const BEAM: Texture = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/seven_star_sword/vfx/textures/star_filament.webp")
-const STAR: Texture = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/seven_star_sword/vfx/textures/star_flare.webp")
-const SHARD: Texture = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/seven_star_sword/vfx/textures/star_shard.webp")
 const CROSS_HIT_DELAY: float = 0.07
-const FIRST_HIT: float = 0.045
-const LINK_INTERVAL: float = 0.035
-const FADE_DURATION: float = 0.30
 
 onready var _hitbox: Hitbox = $Hitbox
 onready var _cross: Node2D = $Cross
@@ -20,7 +14,6 @@ var _chain: bool = false
 var _targets: Array = []
 var _points: PoolVector2Array = PoolVector2Array()
 var _next_hit: int = 0
-var _age: float = 0.0
 var _lifetime: float = 0.44
 var _cross_hit: bool = false
 
@@ -123,18 +116,7 @@ func _draw() -> void:
     if _points.empty():
         return
     if _chain:
-        _draw_star(_points[0], 80.0, pow(max(0.0, 1.0 - _age / 0.25), 2.0))
-        for i in range(_points.size() - 1):
-            var local_age: float = _age - i * LINK_INTERVAL
-            if local_age <= 0.0 or local_age >= FIRST_HIT + FADE_DURATION:
-                continue
-            var fade: float = pow(clamp(1.0 - (local_age - FIRST_HIT) / FADE_DURATION, 0.0, 1.0), 1.6)
-            var reveal: float = clamp(local_age / FIRST_HIT, 0.0, 1.0)
-            _draw_link(_points[i], _points[i + 1], reveal, fade, i)
-            if local_age >= FIRST_HIT:
-                var burst_age: float = local_age - FIRST_HIT
-                _draw_star(_points[i + 1], 58.0 + burst_age * 95.0, fade)
-                _draw_sparks(_points[i + 1], burst_age, fade, i)
+        _draw_chain(_points)
     else:
         draw_set_transform(Vector2.ZERO, 0.0, _cross.scale)
         var flash: float = (1.0 - exp(-_age * 45.0)) * exp(-_age * 16.0)
@@ -159,76 +141,3 @@ func _draw_cross_sparks() -> void:
         _draw_beam(tail, point, 5.0 * fade, Color(0.15, 0.58, 1.0, fade * 0.55))
         _draw_beam(tail.linear_interpolate(point, 0.3), point, 1.5, Color(0.65, 0.95, 1.0, fade))
         _draw_star(point, 5.0 + fade * 3.0, fade * 0.7)
-
-
-func _draw_link(start: Vector2, finish: Vector2, reveal: float, fade: float, variation: int) -> void:
-    var distance: float = start.distance_to(finish)
-    if distance < 1.0:
-        return
-    var normal: Vector2 = (finish - start).normalized().tangent()
-    var steps: int = int(clamp(ceil(distance / 24.0), 6, 36))
-    var points: PoolVector2Array = PoolVector2Array([start])
-    var widths: PoolRealArray = PoolRealArray([0.7])
-    var pulse: float = 0.78 + fade * fade * 0.52
-    for j in range(1, steps + 1):
-        var t: float = min(float(j) / steps, reveal)
-        var envelope: float = sin(t * PI)
-        var bend: float = (abs(fposmod(t * 4.0 + variation * 0.37, 2.0) - 1.0) * 2.0 - 1.0) * min(18.0, distance * 0.075)
-        var filament: float = sin(t * 53.0 + variation * 3.7 + _age * 36.0) * min(1.6, distance * 0.02)
-        var point: Vector2 = start.linear_interpolate(finish, t) + normal * envelope * (bend + filament)
-        points.append(point)
-        widths.append((0.88 + sin(t * 17.0 + variation * 2.3) * 0.12) * (0.7 + envelope * 0.3))
-        if t >= reveal:
-            break
-    _draw_link_ribbon(points, widths, pulse, fade)
-    _draw_star(points[points.size() - 1], 24.0, fade * (1.0 - reveal))
-
-
-func _draw_link_ribbon(points: PoolVector2Array, widths: PoolRealArray, pulse: float, fade: float) -> void:
-    var count: int = points.size()
-    var glow: PoolVector2Array = PoolVector2Array()
-    var core: PoolVector2Array = PoolVector2Array()
-    var uvs: PoolVector2Array = PoolVector2Array([Vector2(0.5, 0.0), Vector2(0.5, 0.0), Vector2(0.5, 1.0), Vector2(0.5, 1.0)])
-    var glow_color: PoolColorArray = PoolColorArray([Color(0.2, 0.6, 1.0, fade * 0.7)])
-    var core_color: PoolColorArray = PoolColorArray([Color(0.9, 0.98, 1.0, fade)])
-    glow.resize(count * 2)
-    core.resize(count * 2)
-    for i in range(count):
-        var before: Vector2 = points[max(0, i - 1)]
-        var after: Vector2 = points[min(count - 1, i + 1)]
-        var side: Vector2 = (after - before).normalized().tangent()
-        var edge: Vector2 = (points[i] - before) if i == count - 1 else (after - points[i])
-        var joint_scale: float = 1.0 / max(0.75, side.dot(edge.normalized().tangent()))
-        side *= widths[i] * pulse * joint_scale
-        glow[i * 2] = points[i] - side * 12.0
-        glow[i * 2 + 1] = points[i] + side * 12.0
-        core[i * 2] = points[i] - side * 3.3
-        core[i * 2 + 1] = points[i] + side * 3.3
-    for i in range(count - 1):
-        var left: int = i * 2
-        draw_primitive(PoolVector2Array([glow[left], glow[left + 2], glow[left + 3], glow[left + 1]]), glow_color, uvs, BEAM)
-        draw_primitive(PoolVector2Array([core[left], core[left + 2], core[left + 3], core[left + 1]]), core_color, uvs, BEAM)
-
-
-func _draw_beam(a: Vector2, b: Vector2, width: float, color: Color) -> void:
-    var side: Vector2 = (b - a).normalized().tangent() * width * 0.5
-    draw_primitive(PoolVector2Array([a - side, b - side, b + side, a + side]),
-        PoolColorArray([color, color, color, color]),
-        PoolVector2Array([Vector2(0, 0), Vector2(1, 0), Vector2(1, 1), Vector2(0, 1)]), BEAM)
-
-
-func _draw_star(center: Vector2, size: float, alpha: float) -> void:
-    draw_texture_rect(STAR, Rect2(center - Vector2.ONE * size * 0.5, Vector2.ONE * size), false, Color(0.55, 0.85, 1.0, alpha))
-
-
-func _draw_sparks(center: Vector2, age: float, alpha: float, variation: int) -> void:
-    for i in range(7):
-        var angle: float = i * TAU / 7.0 + variation * 0.73
-        var direction: Vector2 = Vector2.RIGHT.rotated(angle)
-        var point: Vector2 = center + direction * (16.0 + (1.0 - exp(-age * 7.0)) * (40.0 + (i % 3) * 15.0))
-        var size: Vector2 = Vector2(8.0, 22.0) * (0.5 + alpha * 0.65)
-        draw_set_transform(point, angle + PI * 0.5, Vector2.ONE)
-        draw_texture_rect(SHARD, Rect2(-size * 0.5, size), false, Color(0.6, 0.9, 1.0, alpha))
-        draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
-        if i % 2 == 0:
-            _draw_star(center + direction.rotated(0.18) * (20.0 + age * 110.0), 10.0, alpha * 0.75)

@@ -1,22 +1,12 @@
-extends "res://weapons/ranged/ranged_weapon.gd"
+extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shared/orbit_weapon_pose.gd"
 
 const STRIKE_ATTACK: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shared/orbit_strike_attack.tscn")
 
 const FALLBACK_SOUND: AudioStream = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/myriad_thunder/myriad_thunder.wav")
 
-const BASE_ORBIT_RADIUS_X: float = 72.0
-const BASE_ORBIT_RADIUS_Y: float = 42.0
-const THRUST_DURATION: float = 0.48
-const THRUST_HEIGHT: float = 22.0
-const ORBIT_GROUP: String = "fantasy_orbit_strike_weapons"
-
 export(PackedScene) var strike_scene
 export(String) var targeting_effect_id
 
-var _time: float = 0.0
-var _orbit_phase: float = 0.0
-var _is_thrusting: bool = false
-var _thrust_elapsed: float = 0.0
 var _recoil_remaining: float = 0.0
 var _pending_targets: Array = []
 var _targeting_effect: Resource
@@ -24,24 +14,13 @@ var _targeting_effect: Resource
 
 func _ready() -> void:
     disable_target_tracking()
-    add_to_group(ORBIT_GROUP)
     for effect in effects:
         if effect.get_id() == targeting_effect_id:
             _targeting_effect = effect
             break
     assert(_targeting_effect != null, "Orbit strike targeting effect is missing")
     assert(strike_scene != null, "Orbit strike scene is missing")
-    visible = true
-    sprite.visible = true
-    var animation_node: Node = _parent.get_node_or_null("Animation")
-    if animation_node != null:
-        animation_node.z_index = 1
-    get_parent().z_index = 0
-    _update_orbit_position_and_motion(0.0)
-
-
-func attach(_attach_to: Vector2, _attach_idle_angle: float) -> void:
-    _update_orbit_position_and_motion(0.0)
+    _init_orbit_pose()
 
 
 func is_manual_aim() -> bool:
@@ -54,10 +33,6 @@ func get_direction() -> float:
 
 func get_direction_and_calculate_target() -> float:
     return rotation
-
-
-func update_sprite_flipv() -> void:
-    sprite.flip_v = false
 
 
 func _physics_process(delta: float) -> void:
@@ -79,62 +54,6 @@ func _physics_process(delta: float) -> void:
     _time += delta
     _update_orbit_position_and_motion(delta)
     _update_visual_effects(delta)
-
-
-func _update_orbit_position_and_motion(delta: float) -> void:
-    var orbiting_weapons: Array = []
-    for weapon in _parent.current_weapons:
-        if is_instance_valid(weapon) and weapon.is_in_group(ORBIT_GROUP):
-            orbiting_weapons.append(weapon)
-    if not orbiting_weapons.has(self):
-        orbiting_weapons.append(self)
-
-    var total_weapons: int = int(max(1, orbiting_weapons.size()))
-    var my_index: int = orbiting_weapons.find(self)
-    if my_index < 0:
-        my_index = 0
-
-    _orbit_phase += delta * 0.35
-
-    var angle: float = (float(my_index) / float(total_weapons)) * TAU - PI / 2.0 + _orbit_phase
-    var rx: float = BASE_ORBIT_RADIUS_X + min(total_weapons, 6) * 3.0
-    var ry: float = BASE_ORBIT_RADIUS_Y + min(total_weapons, 6) * 2.0
-    var local_center: Vector2 = Vector2.ZERO
-    var local_orbit_pos: Vector2 = local_center + Vector2(cos(angle) * rx, sin(angle) * ry)
-
-    var in_foreground: bool = sin(angle) > 0.05
-    z_index = 2 if in_foreground else 0
-    z_as_relative = true
-
-    var breath_y: float = sin(_time * 2.6 + float(my_index) * 1.3) * 5.5
-    var breath_sway: float = sin(_time * 1.8 + float(my_index) * 1.1) * 0.045
-    var breath_scale: float = 1.0 + sin(_time * 2.2 + float(my_index) * 0.9) * 0.025
-
-    var thrust_y: float = 0.0
-    var thrust_scale_bonus: float = 0.0
-    if _is_thrusting:
-        _thrust_elapsed += delta
-        if _thrust_elapsed < THRUST_DURATION:
-            var t: float = clamp(_thrust_elapsed / THRUST_DURATION, 0.0, 1.0)
-            var pulse: float = 0.0
-            if t < 0.35:
-                var u: float = t / 0.35
-                pulse = u * u * (3.0 - 2.0 * u)
-            else:
-                var v: float = (t - 0.35) / 0.65
-                var cos_fall: float = (cos(v * PI) + 1.0) * 0.5
-                pulse = pow(cos_fall, 1.25)
-            thrust_y = -_get_thrust_height() * pulse
-            thrust_scale_bonus = pulse * 0.07
-        else:
-            _is_thrusting = false
-
-    position = local_orbit_pos + Vector2(0, breath_y + thrust_y)
-    rotation = -PI / 2.0 + breath_sway
-
-    if is_instance_valid(sprite):
-        sprite.flip_v = false
-        sprite.scale = Vector2.ONE * (breath_scale + thrust_scale_bonus)
 
 
 func should_shoot() -> bool:
@@ -265,10 +184,6 @@ func _spawn_strike_visuals(target: Unit, main: Node) -> void:
     strike_vfx.set_pool_id(pool_id)
     _configure_strike_visuals(strike_vfx)
     strike_vfx.start_strike(target.global_position, target, 1.0, _get_strike_tint())
-
-
-func _get_thrust_height() -> float:
-    return THRUST_HEIGHT
 
 
 func _get_strike_tint() -> Color:

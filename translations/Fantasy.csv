@@ -1721,7 +1721,85 @@ EFFECT_FANTASY_BLACKTHORN_BOW,"On hit, releases {0} blackthorns along winding ar
 "EFFECT_FANTASY_KOU_B_HAND","Finger from afar: {0} chance to make an enemy climax and take flight, then slam down for damage equal to its max HP ({1} radius, losing {2} max HP itself). Reduced chance and self-damage against elites/bosses.","Doigté à distance : {0} de chances de faire jouir et décoller un ennemi, qui retombe en infligeant des dégâts égaux à ses PV max (rayon : {1}, perte de {2} de ses PV max). Chances et perte de PV réduites contre les élites/boss.","隔空扣B，{0}概率使敌人高潮起飞，落下造成其最大生命值的伤害（{1}范围，自身受损{2}最大生命值）。对精英/Boss的概率和自损效果减弱。","遠隔指技。{0}で敵を絶頂させて飛ばし、落下時にその敵の最大HP分のダメージを与える（半径{1}、自身は最大HPの{2}を失う）。エリート・ボスには発動確率と自身のHP損失が低下。","원격 손놀림: {0} 확률로 적을 절정에 이르게 해 띄운 뒤, 낙하 시 해당 적의 최대 체력만큼 피해를 줍니다 (반경 {1}, 자신은 최대 체력의 {2} 손실). 정예/보스는 발동 확률과 자신의 체력 손실이 감소합니다.","隔空扣B，{0}機率使敵人高潮起飛，落下造成其最大生命值的傷害（{1}範圍，自身受損{2}最大生命值）。對精英/Boss的機率和自損效果減弱。","Ласка на расстоянии: шанс {0} довести врага до оргазма и подбросить. При падении он наносит урон в размере своих макс. ОЗ (радиус {1}, сам теряет {2} макс. ОЗ). Для элиты/боссов шанс и потеря собственных ОЗ снижены.","Pieszczota na odległość: {0} szans na orgazm i podrzucenie wroga. Przy upadku zadaje obrażenia równe swoim maks. HP (promień {1}, sam traci {2} maks. HP). Elity/bossowie: mniejsza szansa i utrata własnego HP.","Caricias a distancia: {0} de probabilidad de llevar a un enemigo al clímax y hacerlo volar. Al caer, causa daño igual a su vida máxima (radio {1}, pierde {2} de su vida máxima). Menor probabilidad y pérdida de vida propia contra élites/jefes.","Carícias à distância: {0} de chance de levar um inimigo ao clímax e fazê-lo voar. Ao cair, causa dano igual à vida máxima dele (raio {1}, perde {2} da própria vida máxima). Chance e perda de vida própria reduzidas contra elites/chefes.","Fingern aus der Ferne: {0} Chance, einen Gegner zum Höhepunkt zu bringen und hochzuschleudern. Beim Aufprall verursacht er Schaden in Höhe seiner max. LP (Radius {1}, eigener Verlust: {2} max. LP). Chance und eigener LP-Verlust sind bei Elite/Bossen geringer.","Uzaktan parmak oyunu: {0} şansla düşmanı doruğa ulaştırıp havalandırır. Düşerken kendi azami canı kadar hasar verir ({1} yarıçap, kendisi azami canının {2} kadarını kaybeder). Seçkinler/bosslarda şans ve kendi can kaybı azalır.","Carezze a distanza: {0} di probabilità di portare un nemico al culmine e farlo volare. Cadendo infligge danni pari ai suoi PV massimi (raggio {1}, perde {2} dei propri PV massimi). Probabilità e perdita dei propri PV ridotte contro élite/boss."
 MENU_FANTASY_TRACKS,Fantasy Woodland Tracks,Musiques de la forêt fantastique,幻界树海曲目,幻想樹海の楽曲,환상 수해 음악,幻界樹海曲目,Музыка фантастического леса,Utwory fantastycznej puszczy,Música del bosque fantástico,Músicas da floresta fantástica,Musik des Fantasiewaldes,Fantastik Orman Parçaları,Brani della foresta fantastica
 WEAPON_FANTASY_SAGE_STAFF,Sage Staff,Bâton du sage,贤者之杖,賢者の杖,현자의 지팡이,賢者之杖,Посох мудреца,Kostur Mędrca,Bastón del sabio,Cajado do sábio,Weisenstab,Bilge Asası,Bastone del saggio
-EFFECT_FANTASY_SAGE_STAFF,"Every 0.0625s, summon an orb with one of six equally likely elements. Orbs scatter, hover, then lock on and launch straight; they can hit throughout. Attack Speed shortens the interval between volleys, down to one complete volley.\nWater: 30% decaying slow. Fire: 10 burns of 10 (+100% Elemental Damage).\nEarth: explosion in a 60 radius, same damage as the orb; excludes the direct target. Wind: +3 piercing, no damage loss, +50 knockback.\nThunder: +4 bounces with no damage loss. Light: +5% Attack Speed until wave end, once per orb hitting an enemy.","Toutes les 0,0625 s, invoque un orbe d’un des six éléments équiprobables. Les orbes se dispersent, flottent puis visent et partent en ligne droite ; ils peuvent toucher à chaque phase. La vitesse d’attaque réduit l’intervalle entre salves jusqu’à la durée d’une salve complète.\nEau : ralentissement dégressif de 30%. Feu : 10 brûlures de 10 (+100% dégâts élémentaires).\nTerre : explosion de rayon 60, dégâts de l’orbe, cible directe exclue. Vent : +3 perforations sans perte de dégâts, +50 recul.\nFoudre : +4 rebonds sans perte de dégâts. Lumière : +5% vitesse d’attaque jusqu’à la fin de la vague, une fois par orbe touchant un ennemi.",每0.0625秒召唤一颗等概率随机元素弹。弹幕散开、悬停后锁敌直射，全程可命中。攻速仅缩短波间隔，最低为召唤整波所需时间。\n水：30%衰减减速。火：10次燃烧，每次10（+100%元素伤害）。\n土：60半径爆炸，伤害同弹体，不重复伤害直击目标。风：额外穿透3次、无伤害衰减、+50击退。\n雷：额外弹射4次、无伤害衰减。光：命中敌人后+5%攻速至波次结束，每颗弹最多触发一次。,0.0625秒ごとに、等確率の6属性から1つの弾を召喚。拡散・滞空後に敵を狙って直進し、全段階で命中可能。攻撃速度は斉射の間隔を短縮するが、1斉射の召喚時間が下限。\n水：徐々に戻る30%減速。火：10回の燃焼、各10（+属性ダメージ100%）。\n土：半径60の爆発、弾と同じダメージ、直撃対象を除外。風：貫通+3、減衰なし、ノックバック+50。\n雷：跳弾+4、減衰なし。光：敵に命中するとウェーブ終了まで攻撃速度+5%、1弾につき1回。,"0.0625초마다 동일 확률의 6가지 원소 중 하나인 구체를 소환합니다. 퍼지고 머문 뒤 적을 겨냥해 직진하며 모든 단계에서 적중합니다. 공격 속도는 일제사격 사이의 간격만 줄이며 최소 간격은 전체 구체의 소환 시간입니다.\n물: 점차 회복되는 30% 둔화. 불: 10회 화상, 회당 10 (+원소 피해 100%).\n흙: 반경 60 폭발, 구체와 같은 피해, 직접 맞은 대상 제외. 바람: 관통 +3, 피해 감소 없음, 넉백 +50.\n번개: 도탄 +4, 피해 감소 없음. 빛: 적중 시 웨이브 종료까지 공격 속도 +5%, 구체당 1회.",每0.0625秒召喚一顆等機率隨機元素彈。彈幕散開、懸停後鎖敵直射，全程可命中。攻速僅縮短波間隔，最低為召喚整波所需時間。\n水：30%衰減減速。火：10次燃燒，每次10（+100%元素傷害）。\n土：60半徑爆炸，傷害同彈體，不重複傷害直擊目標。風：額外穿透3次、無傷害衰減、+50擊退。\n雷：額外彈射4次、無傷害衰減。光：命中敵人後+5%攻速至波次結束，每顆彈最多觸發一次。,"Каждые 0,0625 с призывает сферу одной из шести равновероятных стихий. Сферы разлетаются, зависают, затем летят прямо к выбранному врагу; наносят урон на всех этапах. Скорость атаки сокращает интервал между залпами до времени призыва полного залпа.\nВода: угасающее замедление 30%. Огонь: 10 тиков горения по 10 (+100% стихийного урона).\nЗемля: взрыв радиусом 60 с уроном сферы, без повторного урона прямой цели. Ветер: +3 пробития без ослабления, +50 отбрасывания.\nГром: +4 отскока без ослабления. Свет: +5% скорости атаки до конца волны, один раз за сферу при попадании во врага.","Co 0,0625 s przywołuje kulę jednego z sześciu równie prawdopodobnych żywiołów. Kule rozpraszają się, zawisają, a następnie lecą prosto w obrany cel; trafiają w każdej fazie. Szybkość ataku skraca odstęp między salwami do czasu przywołania pełnej salwy.\nWoda: zanikające spowolnienie 30%. Ogień: 10 podpaleń po 10 (+100% obrażeń żywiołowych).\nZiemia: wybuch o promieniu 60, obrażenia kuli, bez bezpośredniego celu. Wiatr: +3 przebicia bez utraty obrażeń, +50 odrzutu.\nPiorun: +4 odbicia bez utraty obrażeń. Światło: +5% szybkości ataku do końca fali, raz na kulę trafiającą wroga.","Cada 0,0625 s invoca un orbe de uno de seis elementos equiprobables. Se dispersan, flotan y salen en línea recta hacia un objetivo; pueden impactar en todas las fases. La velocidad de ataque reduce el intervalo entre salvas hasta el tiempo de invocación de una salva completa.\nAgua: ralentización decreciente del 30%. Fuego: 10 quemaduras de 10 (+100% daño elemental).\nTierra: explosión de radio 60 con el daño del orbe, excluye al objetivo directo. Viento: +3 perforaciones sin pérdida de daño, +50 retroceso.\nRayo: +4 rebotes sin pérdida de daño. Luz: +5% velocidad de ataque hasta el fin de la oleada, una vez por orbe que golpea a un enemigo.","A cada 0,0625 s, invoca um orbe de um dos seis elementos com chances iguais. Orbes se espalham, pairam e seguem em linha reta até o alvo; podem acertar em todas as fases. A velocidade de ataque reduz o intervalo entre salvas até o tempo de invocação de uma salva completa.\nÁgua: lentidão decrescente de 30%. Fogo: 10 queimaduras de 10 (+100% dano elemental).\nTerra: explosão de raio 60 com o dano do orbe, exclui o alvo direto. Vento: +3 perfurações sem perda de dano, +50 repulsão.\nTrovão: +4 ricochetes sem perda de dano. Luz: +5% velocidade de ataque até o fim da onda, uma vez por orbe que acerta um inimigo.","Alle 0,0625 s wird eine Kugel eines von sechs gleich wahrscheinlichen Elementen beschworen. Kugeln streuen, schweben und fliegen dann gerade zum Ziel; sie können in jeder Phase treffen. Angriffstempo verkürzt den Abstand zwischen Salven bis zur Beschwörungsdauer einer ganzen Salve.\nWasser: abklingende Verlangsamung um 30%. Feuer: 10 Brandtreffer mit je 10 (+100% Elementarschaden).\nErde: Explosion mit Radius 60 und Kugelschaden, ohne das direkt getroffene Ziel. Wind: +3 Durchschläge ohne Schadensverlust, +50 Rückstoß.\nDonner: +4 Abpraller ohne Schadensverlust. Licht: +5% Angriffstempo bis Wellenende, einmal pro Kugel bei einem Gegnertreffer.","Her 0,0625 sn’de eşit olasılıklı altı elementten bir küre çağırır. Küreler dağılır, havada durur ve hedefe düz ilerler; her aşamada vurabilir. Saldırı hızı, salvo aralığını tam bir salvonun çağrılma süresine kadar azaltır.\nSu: zamanla azalan %30 yavaşlatma. Ateş: 10 kez 10 (+%100 element hasarı) yanma.\nToprak: 60 yarıçaplı patlama, küreyle aynı hasar, doğrudan vurulan hedef hariç. Rüzgâr: hasar kaybı olmadan +3 delme, +50 geri itme.\nYıldırım: hasar kaybı olmadan +4 sekme. Işık: düşmana isabette dalga sonuna kadar +%5 saldırı hızı, küre başına bir kez.","Ogni 0,0625 s evoca una sfera di uno dei sei elementi equiprobabili. Le sfere si disperdono, fluttuano e poi partono dritte verso un bersaglio; possono colpire in ogni fase. La velocità d’attacco riduce l’intervallo fra salve fino al tempo di evocazione di una salva completa.\nAcqua: rallentamento decrescente del 30%. Fuoco: 10 ustioni da 10 (+100% danno elementale).\nTerra: esplosione di raggio 60 con il danno della sfera, bersaglio diretto escluso. Vento: +3 perforazioni senza perdita di danno, +50 respinta.\nTuono: +4 rimbalzi senza perdita di danno. Luce: +5% velocità d’attacco fino a fine ondata, una volta per sfera che colpisce un nemico."
+"EFFECT_FANTASY_SAGE_STAFF","Each volley releases random elemental orbs at {0}s intervals. They scatter, then fly toward a target.
+Water: {1}% slow that gradually fades.
+Fire: {2}
+Earth: explosion with radius {3} and the orb's damage (direct target excluded).
+Wind: +{4} piercing (0% damage loss), +{5} knockback.
+Thunder: first enemy hit chains to {6} more enemies (0% damage loss).
+Light: first enemy hit grants +{7}% Attack Speed until wave end.","Chaque salve libère des orbes élémentaires aléatoires toutes les {0} s. Ils se dispersent, puis foncent vers une cible.
+Eau : ralentissement de {1}% qui s'atténue progressivement.
+Feu : {2}
+Terre : explosion de rayon {3}, avec les dégâts de l'orbe (cible directe exclue).
+Vent : +{4} perforations (0% de perte de dégâts), +{5} recul.
+Foudre : au premier ennemi touché, chaîne vers {6} ennemis supplémentaires (0% de perte de dégâts).
+Lumière : le premier ennemi touché confère +{7}% de vitesse d'attaque jusqu'à la fin de la vague.","每轮以{0}秒间隔释放随机元素光团，散开后飞向目标。
+水：减速{1}%，效果逐渐减弱。
+火：{2}
+土：爆炸半径{3}，伤害与光团相同（直击目标除外）。
+风：穿透+{4}（0%衰减），击退+{5}。
+雷：首次命中敌人时链锁{6}个额外目标（0%衰减）。
+光：首次命中敌人时，攻速+{7}%，持续至本波结束。","各斉射で{0}秒ごとにランダムな属性の光球を放つ。光球は散開してから標的へ飛ぶ。
+水：{1}%の減速。効果は徐々に弱まる。
+火：{2}
+土：半径{3}で光球と同じダメージの爆発（直撃対象を除く）。
+風：貫通+{4}（減衰0%）、ノックバック+{5}。
+雷：最初の敵への命中で追加の敵{6}体へ連鎖（減衰0%）。
+光：最初の敵への命中で攻撃速度+{7}%。ウェーブ終了まで持続。","매 일제 사격마다 {0}초 간격으로 무작위 원소 구체를 발사합니다. 구체는 흩어진 뒤 표적을 향해 날아갑니다.
+물: {1}% 둔화. 효과가 점차 약해집니다.
+불: {2}
+땅: 반경 {3}에서 구체와 같은 피해로 폭발합니다(직접 맞은 대상 제외).
+바람: 관통 +{4}(피해 감소 0%), 밀치기 +{5}.
+번개: 적에게 처음 적중하면 추가 적 {6}명에게 연쇄됩니다(피해 감소 0%).
+빛: 적에게 처음 적중하면 웨이브 종료까지 공격 속도 +{7}%.","每輪以{0}秒間隔釋放隨機元素光團，散開後飛向目標。
+水：減速{1}%，效果逐漸減弱。
+火：{2}
+土：爆炸半徑{3}，傷害與光團相同（直擊目標除外）。
+風：穿透+{4}（0%衰減），擊退+{5}。
+雷：首次命中敵人時鏈鎖{6}個額外目標（0%衰減）。
+光：首次命中敵人時，攻速+{7}%，持續至本波結束。","Каждый залп выпускает сферы случайных стихий с интервалом {0} с. Они разлетаются, затем летят к цели.
+Вода: замедление на {1}%, которое постепенно ослабевает.
+Огонь: {2}
+Земля: взрыв радиусом {3} с уроном сферы (без цели прямого попадания).
+Ветер: +{4} пробитий (потеря урона 0%), +{5} отбрасывания.
+Молния: при первом попадании по врагу цепь к {6} дополнительным врагам (потеря урона 0%).
+Свет: первое попадание по врагу даёт +{7}% скорости атаки до конца волны.","Każda salwa wypuszcza kule losowych żywiołów co {0} s. Kule rozpraszają się, po czym lecą w stronę celu.
+Woda: spowolnienie o {1}%, które stopniowo słabnie.
+Ogień: {2}
+Ziemia: wybuch o promieniu {3} z obrażeniami kuli (bez celu trafionego bezpośrednio).
+Wiatr: +{4} przebić (utrata obrażeń 0%), +{5} odrzutu.
+Piorun: pierwsze trafienie wroga tworzy łańcuch do {6} dodatkowych wrogów (utrata obrażeń 0%).
+Światło: pierwsze trafienie wroga daje +{7}% szybkości ataku do końca fali.","Cada salva lanza orbes de elementos aleatorios a intervalos de {0} s. Se dispersan y luego vuelan hacia un objetivo.
+Agua: ralentización del {1}% que se desvanece gradualmente.
+Fuego: {2}
+Tierra: explosión de radio {3} con el daño del orbe (excluye al objetivo directo).
+Viento: +{4} perforaciones (0% de pérdida de daño), +{5} de retroceso.
+Trueno: el primer impacto contra un enemigo encadena a {6} enemigos adicionales (0% de pérdida de daño).
+Luz: el primer impacto contra un enemigo otorga +{7}% de velocidad de ataque hasta el fin de la oleada.","Cada salva lança orbes de elementos aleatórios em intervalos de {0} s. Eles se espalham e depois voam até um alvo.
+Água: lentidão de {1}% que diminui gradualmente.
+Fogo: {2}
+Terra: explosão de raio {3} com o dano do orbe (alvo direto excluído).
+Vento: +{4} perfurações (0% de perda de dano), +{5} de repulsão.
+Trovão: o primeiro acerto em um inimigo encadeia {6} inimigos adicionais (0% de perda de dano).
+Luz: o primeiro acerto em um inimigo concede +{7}% de velocidade de ataque até o fim da onda.","Jede Salve setzt im Abstand von {0} s Kugeln zufälliger Elemente frei. Sie schwärmen aus und fliegen dann auf ein Ziel zu.
+Wasser: {1}% Verlangsamung, die allmählich abklingt.
+Feuer: {2}
+Erde: Explosion mit Radius {3} und dem Schaden der Kugel (direktes Ziel ausgenommen).
+Wind: +{4} Durchschläge (0% Schadensverlust), +{5} Rückstoß.
+Donner: Der erste Gegnertreffer verkettet {6} weitere Gegner (0% Schadensverlust).
+Licht: Der erste Gegnertreffer gewährt +{7}% Angriffstempo bis zum Wellenende.","Her yaylım, {0} sn aralıklarla rastgele element küreleri salar. Küreler dağılır, sonra hedefe uçar.
+Su: giderek azalan %{1} yavaşlatma.
+Ateş: {2}
+Toprak: {3} yarıçapında, küreyle aynı hasarı veren patlama (doğrudan vurulan hedef hariç).
+Rüzgâr: +{4} delme (%0 hasar kaybı), +{5} geri itme.
+Yıldırım: bir düşmana ilk isabette {6} ek düşmana zincir (%0 hasar kaybı).
+Işık: bir düşmana ilk isabette dalga sonuna kadar +%{7} saldırı hızı.","Ogni raffica rilascia sfere di elementi casuali a intervalli di {0} s. Si disperdono, poi volano verso un bersaglio.
+Acqua: rallentamento del {1}% che svanisce gradualmente.
+Fuoco: {2}
+Terra: esplosione di raggio {3} con i danni della sfera (bersaglio diretto escluso).
+Vento: +{4} perforazioni (perdita di danno 0%), +{5} respinta.
+Tuono: al primo nemico colpito, catena verso {6} nemici aggiuntivi (perdita di danno 0%).
+Luce: il primo nemico colpito conferisce +{7}% velocità d'attacco fino a fine ondata."
 "WEAPON_FANTASY_SEVEN_STAR_SWORD","Seven-Star Holy Sword","Épée sacrée des sept étoiles","圣剑七星刀","七星の聖剣","칠성 성검","聖劍七星刀","Святой меч семи звёзд","Święty miecz siedmiu gwiazd","Espada sagrada de siete estrellas","Espada sagrada das sete estrelas","Heiliges Siebensternschwert","Yedi Yıldız Kutsal Kılıcı","Spada sacra delle sette stelle"
 "WEAPON_FANTASY_LONGINUS","Holy Lance Longinus","Lance sacrée de Longinus","圣枪朗基努斯","聖槍ロンギヌス","성창 롱기누스","聖槍朗基努斯","Святое копьё Лонгина","Święta włócznia Longinusa","Lanza sagrada de Longino","Lança sagrada de Longino","Heilige Lanze des Longinus","Kutsal Mızrak Longinus","Lancia sacra di Longino"
 "EFFECT_FANTASY_LONGINUS","Throws a holy spear that pierces enemies and leaves a golden trail for {1}s. Enemies touching the trail take {0} damage {2} times per second.","Lance une lance sacrée qui transperce les ennemis et laisse une traînée dorée pendant {1} s. Les ennemis touchant la traînée subissent {0} dégâts {2} fois par seconde.","投出贯穿敌人的圣枪，留下持续{1}秒的金色轨迹。触碰轨迹的敌人每秒受到{2}次{0}伤害。","敵を貫く聖槍を放ち、{1}秒間持続する黄金の軌跡を残す。軌跡に触れた敵は1秒に{2}回{0}ダメージを受ける。","적을 관통하는 성창을 던져 {1}초간 지속되는 황금 궤적을 남깁니다. 궤적에 닿은 적은 1초에 {2}회 {0} 피해를 받습니다.","投出貫穿敵人的聖槍，留下持續{1}秒的金色軌跡。觸碰軌跡的敵人每秒受到{2}次{0}傷害。","Бросает святое копьё, пронзающее врагов и оставляющее золотой след на {1} с. Враги, касающиеся следа, получают {0} урона {2} раза в секунду.","Rzuca świętą włócznię przebijającą wrogów i pozostawiającą złoty ślad na {1} s. Wrogowie dotykający śladu otrzymują {0} obrażeń {2} razy na sekundę.","Lanza una lanza sagrada que atraviesa a los enemigos y deja un rastro dorado durante {1} s. Los enemigos que tocan el rastro reciben {0} de daño {2} veces por segundo.","Lança uma lança sagrada que perfura os inimigos e deixa um rastro dourado por {1} s. Inimigos que tocam o rastro recebem {0} de dano {2} vezes por segundo.","Schleudert einen heiligen Speer, der Gegner durchbohrt und {1} s lang eine goldene Spur hinterlässt. Gegner, die die Spur berühren, erleiden {2}-mal pro Sekunde {0} Schaden.","Düşmanları delip geçen ve {1} sn boyunca altın bir iz bırakan kutsal bir mızrak fırlatır. İze dokunan düşmanlar saniyede {2} kez {0} hasar alır.","Scaglia una lancia sacra che trafigge i nemici e lascia una scia dorata per {1} s. I nemici che toccano la scia subiscono {0} danni {2} volte al secondo."
