@@ -76,7 +76,7 @@ func _physics_process(delta: float) -> void:
     _age += delta
     _swing_progress = smoothstep(0.0, 1.0, clamp((_age - CONFIG.ECHO_DELAY) / CONFIG.ECHO_DURATION, 0.0, 1.0))
     _swing_angle = _side * lerp(-CONFIG.ECHO_HALF_ANGLE, CONFIG.ECHO_HALF_ANGLE, _swing_progress)
-    _collision.position = Vector2.RIGHT.rotated(_swing_angle) * (_radius * 0.57 + 44.0 * _radius / 180.0)
+    _collision.position = Vector2.RIGHT.rotated(_swing_angle) * (_radius * 0.57 + 32.0 * _radius / 180.0)
     _collision.rotation = _swing_angle
     if _age >= CONFIG.ECHO_DELAY and _age < CONFIG.ECHO_DELAY + CONFIG.ECHO_DURATION:
         if not _ignited:

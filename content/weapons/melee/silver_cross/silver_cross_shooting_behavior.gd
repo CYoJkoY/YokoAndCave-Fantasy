@@ -24,7 +24,7 @@ func shoot(distance: float) -> void:
     _radius = max(0.0, min(distance, _parent.current_stats.max_range) - 140.0)
     _rest = _parent.sprite.position
     attack_angle = _parent.rotation
-    _side = -_side
+    _side = -1.0 if _parent.sprite.flip_v else 1.0
     _elapsed = 0.0
     _remainder = 0.0
     phase = Phase.WINDUP

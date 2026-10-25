@@ -293,6 +293,7 @@ pos_base_on_centerx = false
 
 [node name="MovementBehavior" type="Node2D" parent="."]
 script = ExtResource( 6 )
+prediction_color = Color( 1, 0, 0.101961, 1 )
 
 [node name="BurningTimer" type="Timer" parent="."]
 wait_time = 0.5

@@ -8,6 +8,12 @@ onready var COOLDOWN: float = _charging_shoot_attack_behavior.cooldown
 onready var current_projectiles_cooldown: float = 0.0
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
+func get_damage_value(dmg_value: int, from_player_index: int, armor_applied := true, dodgeable := true, is_crit := false, hitbox: Hitbox = null, is_burning := false) -> GetDamageValueResult:
+    var result: GetDamageValueResult = .get_damage_value(dmg_value, from_player_index, armor_applied, dodgeable, is_crit, hitbox, is_burning)
+    if _move_locked and result.value > 0:
+        result.value = max(1, int(result.value * 0.5))
+    return result
+
 func respawn() -> void:
     .respawn()
     current_projectiles_cooldown = 0.0

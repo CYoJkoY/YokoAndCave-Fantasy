@@ -57,12 +57,12 @@ outline_shader_mat = SubResource( 2 )
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )
-offset = Vector2( 65, -35 )
+offset = Vector2( 35, -35 )
 flip_v = false
 
 [node name="Hitbox" parent="Sprite" index="0"]
 visible = false
-position = Vector2( 67, 30 )
+position = Vector2( 37, 30 )
 
 [node name="Collision" parent="Sprite/Hitbox" index="0"]
 shape = SubResource( 3 )
@@ -79,18 +79,18 @@ shape = SubResource( 1 )
 [node name="Glow" type="Sprite" parent="Sprite" index="3"]
 material = SubResource( 6 )
 texture = ExtResource( 6 )
-offset = Vector2( 65, 35 )
+offset = Vector2( 35, 35 )
 flip_v = true
 
 [node name="LightBlade" type="Sprite" parent="Sprite" index="4"]
 material = SubResource( 5 )
 texture = ExtResource( 5 )
-offset = Vector2( 65, 35 )
+offset = Vector2( 35, 35 )
 flip_v = true
 
 [node name="Sparks" type="CPUParticles2D" parent="Sprite" index="5"]
 material = SubResource( 6 )
-position = Vector2( 110, 30 )
+position = Vector2( 80, 30 )
 emitting = false
 amount = 12
 lifetime = 0.20
@@ -109,7 +109,7 @@ color_ramp = SubResource( 7 )
 [node name="Impact" type="Sprite" parent="Sprite" index="6"]
 visible = false
 material = SubResource( 6 )
-position = Vector2( 110, 30 )
+position = Vector2( 80, 30 )
 texture = ExtResource( 11 )
 
 [node name="ShootingBehavior" parent="." index="4"]

@@ -10,6 +10,7 @@ uniform float core_strength : hint_range(1.0, 80.0) = 22.0;
 uniform float soft_strength : hint_range(0.1, 20.0) = 2.4;
 uniform float intensity : hint_range(0.0, 4.0) = 1.0;
 uniform float seed : hint_range(0.0, 100.0) = 0.0;
+uniform float tail_fade_length : hint_range(0.0, 1.0) = 0.0;
 
 float hash(vec2 p) {
 	return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
@@ -43,7 +44,11 @@ void fragment() {
 
 	float alpha = (core * 0.86 + soft * 0.13 + filaments * core * 0.72) * pulse * intensity;
 	float edge_fade = 1.0 - smoothstep(0.33, 0.5, abs(across));
-	alpha *= edge_fade;
+	float tail_fade = 1.0;
+	if (tail_fade_length > 0.0) {
+		tail_fade = smoothstep(0.0, tail_fade_length, uv.x);
+	}
+	alpha *= edge_fade * tail_fade;
 
 	COLOR = vec4(color * (1.0 + core * 1.05), alpha) * COLOR;
 }

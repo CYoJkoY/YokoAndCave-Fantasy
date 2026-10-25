@@ -37,6 +37,7 @@ script = ExtResource( 9 )
 outline_shader_mat = SubResource( 2 )
 
 [node name="Sprite" parent="." index="0"]
+position = Vector2( -10, 0 )
 texture = ExtResource( 2 )
 
 [node name="Hitbox" parent="Sprite" index="0"]
@@ -46,7 +47,7 @@ visible = false
 position = Vector2( 32, 0 )
 
 [node name="Attach" parent="Sprite" index="2"]
-position = Vector2( -4, 0 )
+position = Vector2( 0, 0 )
 
 [node name="DrawRig" type="Node2D" parent="Sprite" index="3"]
 material = SubResource( 4 )

@@ -38,7 +38,7 @@ resource_local_to_scene = true
 shader = ExtResource( 8 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 56, 38 )
+extents = Vector2( 68, 38 )
 
 [node name="DeadHandEcho" instance=ExtResource( 1 )]
 collision_layer = 8

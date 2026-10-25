@@ -36,11 +36,11 @@ func update_sprite_flipv() -> void:
         return
     var facing: float = 1.0 if Utils.is_facing_right(rotation_degrees) else -1.0
     sprite.flip_v = facing < 0.0
-    sprite.offset = Vector2(65, -35 * facing)
-    _hitbox.position = Vector2(67, 30 * facing)
+    sprite.offset = Vector2(35, -35 * facing)
+    _hitbox.position = Vector2(37, 30 * facing)
     _blade.flip_v = facing > 0.0
     _glow.flip_v = _blade.flip_v
-    _blade.offset = Vector2(65, 35 * facing)
+    _blade.offset = Vector2(35, 35 * facing)
     _glow.offset = _blade.offset
     _sparks.position.y = 30 * facing
     _impact.position.y = 30 * facing
@@ -93,7 +93,7 @@ func _process(delta: float) -> void:
 func prepare_swing(side: float, radius: float) -> void:
     _trail_fade = 0.0
     _trail.visible = false
-    var extent: float = (radius + 125.0) * 90.0 / 70.0
+    var extent: float = (radius + 95.0) * 90.0 / 70.0
     _trail.scale = Vector2.ONE * extent / 90.0
     _trail.material.set_shader_param("side", side)
     _trail.material.set_shader_param("progress", 0.0)
