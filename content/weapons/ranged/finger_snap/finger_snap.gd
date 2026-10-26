@@ -39,6 +39,14 @@ func should_shoot() -> bool:
     return is_instance_valid(_target)
 
 
+func get_direction_and_calculate_target() -> float:
+    return rotation
+
+
+func get_direction() -> float:
+    return rotation
+
+
 func _physics_process(delta: float) -> void:
     if not is_instance_valid(_parent) or _parent.dead or _parent.cleaning_up:
         _target = null
@@ -55,9 +63,6 @@ func _physics_process(delta: float) -> void:
 
 func _update_snap_motion(delta: float) -> void:
     if not _is_snapping:
-        if is_instance_valid(sprite):
-            sprite.rotation = _base_sprite_rotation
-            sprite.scale = Vector2.ONE
         return
 
     _snap_elapsed += delta
