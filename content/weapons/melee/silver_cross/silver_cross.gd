@@ -93,8 +93,7 @@ func _process(delta: float) -> void:
 func prepare_swing(side: float, radius: float) -> void:
     _trail_fade = 0.0
     _trail.visible = false
-    var extent: float = (radius + 95.0) * 90.0 / 70.0
-    _trail.scale = Vector2.ONE * extent / 90.0
+    _trail.scale = Vector2.ONE * (radius + 95.0) / 70.0
     _trail.material.set_shader_param("side", side)
     _trail.material.set_shader_param("progress", 0.0)
 
@@ -119,6 +118,11 @@ func end_swing() -> void:
 
 func set_charge(charge: float) -> void:
     _charge = charge
+
+
+func enable_hitbox() -> void:
+    _hitbox.active = true
+    .enable_hitbox()
 
 
 func disable_hitbox() -> void:

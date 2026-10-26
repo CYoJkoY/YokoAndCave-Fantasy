@@ -3,7 +3,6 @@ extends "res://weapons/shooting_behaviors/melee_weapon_shooting_behavior.gd"
 enum Phase { IDLE, WINDUP, SWEEP, RECOVER }
 
 const HALF_ANGLE: float = 1.25
-const MIN_SWING_DISTANCE: float = 120.0
 
 var phase: int = Phase.IDLE
 var attack_angle: float = 0.0
@@ -23,7 +22,8 @@ func shoot(distance: float) -> void:
     _duration = duration * 0.24
     _sweep_duration = duration * 0.38
     _recover_duration = duration - _duration - _sweep_duration
-    _radius = max(0.0, min(max(MIN_SWING_DISTANCE, distance), _parent.current_stats.max_range) - 88.0)
+    var swing_distance: float = min(_parent.current_stats.max_range, max(MIN_SWEEP_DISTANCE, distance))
+    _radius = max(0.0, swing_distance - 88.0)
     _rest = _parent.sprite.position
     attack_angle = _parent.rotation
     _side = -_side

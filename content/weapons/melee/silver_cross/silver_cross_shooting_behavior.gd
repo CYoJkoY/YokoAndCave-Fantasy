@@ -21,7 +21,8 @@ func shoot(distance: float) -> void:
     _duration = max(step, duration * 0.26)
     _sweep_duration = max(step * 4.0, duration * 0.32)
     _recover_duration = duration - _duration - _sweep_duration
-    _radius = max(0.0, min(distance, _parent.current_stats.max_range) - 140.0)
+    var swing_distance: float = min(_parent.current_stats.max_range, max(MIN_SWEEP_DISTANCE, distance))
+    _radius = max(0.0, swing_distance - 140.0)
     _rest = _parent.sprite.position
     attack_angle = _parent.rotation
     _side = -1.0 if _parent.sprite.flip_v else 1.0
@@ -75,7 +76,6 @@ func _next_phase() -> void:
     if phase == Phase.WINDUP:
         phase = Phase.SWEEP
         _duration = _sweep_duration
-        _parent._hitbox.active = true
         _parent.enable_hitbox()
         _parent.begin_swing(_rest)
         SoundManager.play(Utils.get_rand_element(_parent.current_stats.shooting_sounds), _parent.current_stats.sound_db_mod, 0.12)

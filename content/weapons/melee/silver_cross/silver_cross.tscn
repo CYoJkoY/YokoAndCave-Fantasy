@@ -31,7 +31,7 @@ radius = 47.2652
 
 [sub_resource type="RectangleShape2D" id=3]
 resource_local_to_scene = true
-extents = Vector2( 91, 78 )
+extents = Vector2( 132, 78 )
 
 [sub_resource type="ShaderMaterial" id=4]
 resource_local_to_scene = true
@@ -65,6 +65,7 @@ visible = false
 position = Vector2( 37, 30 )
 
 [node name="Collision" parent="Sprite/Hitbox" index="0"]
+position = Vector2( -41, 0 )
 shape = SubResource( 3 )
 
 [node name="Muzzle" parent="Sprite" index="1"]

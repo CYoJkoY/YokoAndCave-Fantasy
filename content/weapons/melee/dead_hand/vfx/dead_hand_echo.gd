@@ -32,7 +32,7 @@ func start(weapon: Weapon, main: Node, origin: Vector2, direction: float, side: 
     _main = main
     _side = side
     _swing_angle = -_side * CONFIG.ECHO_HALF_ANGLE
-    _radius = max(88.0, weapon.current_stats.max_range) * CONFIG.ECHO_RANGE_MULTIPLIER
+    _radius = min(max(88.0, weapon.current_stats.max_range) * CONFIG.ECHO_RANGE_MULTIPLIER, 180.0 * CONFIG.ECHO_MAX_SCALE)
     _collision.scale = Vector2.ONE * _radius / 180.0
     set_as_toplevel(true)
     global_transform = Transform2D(direction, origin)
@@ -110,7 +110,7 @@ func _update_visuals() -> void:
     var arrival: float = smoothstep(0.12, 0.95, charge)
     var scale_factor: float = _radius / 230.0
     var lift: Vector2 = Vector2.UP.rotated(-global_rotation) * smoothstep(0.0, 1.0, fade)
-    _sigil.scale = Vector2(1.0, 0.72) * scale_factor * (0.42 + 0.24 * charge + 0.10 * fade)
+    _sigil.scale = Vector2(1.0, 0.72) * (0.42 + 0.24 * charge + 0.10 * fade)
     _sigil.rotation = -global_rotation - _side * (0.12 * charge + 0.22 * _swing_progress)
     _sigil.modulate.a = opacity * smoothstep(0.0, 0.25, charge) * (0.55 + sin(charge * PI) * 0.25) * pow(1.0 - fade, 2.0)
     _mist.scale = Vector2.ONE * scale_factor * (0.70 + 0.175 * charge + fade * 0.10)

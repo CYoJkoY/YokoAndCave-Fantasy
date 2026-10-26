@@ -4,6 +4,7 @@ const ECHO_DELAY: float = 0.28
 const ECHO_DURATION: float = 0.22
 const ECHO_FADE: float = 0.52
 const ECHO_RANGE_MULTIPLIER: float = 1.90
+const ECHO_MAX_SCALE: float = 2.0
 const ECHO_HALF_ANGLE: float = 1.75
 
 
