@@ -96,9 +96,6 @@ func _spawn_muzzle_flash(direction: float, followup: bool, opacity: float) -> vo
     if opacity <= 0.0:
         return
     var main = Utils.get_scene_node()
-    var flash = main.get_node_from_pool(_flash_pool_id, main._effects)
-    if flash == null:
-        flash = FLASH_SCENE.instance()
-        main.add_effect(flash)
-        flash.set_meta("pool_id", _flash_pool_id)
+    var flash = FANTASY_PROJECTILE_VISUAL_UTILS.get_pooled_effect(FLASH_SCENE, main)
+    flash.set_meta("pool_id", _flash_pool_id)
     flash.play_flash(muzzle.global_position, direction, true, followup, main, opacity)

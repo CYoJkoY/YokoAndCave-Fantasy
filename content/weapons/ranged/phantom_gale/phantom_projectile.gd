@@ -1,5 +1,7 @@
 extends PlayerProjectile
 
+const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const MOTION = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_motion.gd")
 const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
 const IMPACT_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_impact.tscn")
 const COLORS = [Color("55ffe0"), Color("aa78ff"), Color("ff65b5")]
@@ -45,9 +47,7 @@ func shoot_ex(p_from: Node, pos: Vector2, p_velocity: Vector2, p_rotation: float
         _bounce = 0
         _piercing = 0
         _time_until_max_range = INF
-        if not _main.has_meta(TARGET_INDEX.META_KEY):
-            _main.set_meta(TARGET_INDEX.META_KEY, TARGET_INDEX.new())
-        _target_index = _main.get_meta(TARGET_INDEX.META_KEY)
+        _target_index = TARGET_INDEX.for_scene(_main)
     _sprite.visible = true
     _sprite.modulate = Color.white
     _sprite.modulate.a = ProgressData.settings.projectile_opacity
@@ -170,11 +170,7 @@ func _find_target() -> Node:
 
 
 func _update_sweep(previous: Vector2, current: Vector2) -> void:
-    var collision: CollisionShape2D = _hitbox._collision
-    var motion: Vector2 = current - previous
-    collision.global_position = (previous + current) * 0.5
-    collision.global_rotation = motion.angle() + PI * 0.5
-    collision.shape.height = motion.length()
+    MOTION.update_capsule_sweep(_hitbox._collision, previous, current)
 
 
 func _on_Hitbox_hit_something(thing_hit: Node, damage_dealt: int) -> void:
@@ -204,11 +200,8 @@ func stop() -> void:
 func _spawn_impact() -> void:
     if _main._cleaning_up or ProgressData.settings.projectile_opacity <= 0.0:
         return
-    var impact = _main.get_node_from_pool(_impact_pool_id, _main._effects)
-    if impact == null:
-        impact = IMPACT_SCENE.instance()
-        _main.add_effect(impact)
-        impact.set_meta("pool_id", _impact_pool_id)
+    var impact = VISUAL_UTILS.get_pooled_effect(IMPACT_SCENE, _main)
+    impact.set_meta("pool_id", _impact_pool_id)
     impact.play(global_position, rotation, is_echo, COLORS[_color_index], _main)
 
 

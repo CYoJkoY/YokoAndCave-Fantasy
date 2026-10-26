@@ -1,5 +1,6 @@
 extends "res://weapons/ranged/ranged_weapon.gd"
 
+const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
 const ASTROLABE_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/vfx/finger_snap_astrolabe.tscn")
 const BULLET_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/finger_snap_projectile/finger_snap_bullet.tscn")
 const MUZZLE_FLASH_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/vfx/finger_snap_muzzle_flash.tscn")
@@ -94,11 +95,11 @@ func _update_snap_motion(delta: float) -> void:
 
 func shoot() -> void:
     var main = Utils.get_scene_node()
-    if main == null or not is_instance_valid(main):
+    if not is_instance_valid(main) or main._cleaning_up:
         _is_shooting = false
         return
 
-    if _parent == null or current_stats == null:
+    if not is_instance_valid(_parent) or _parent.dead or _parent.cleaning_up or is_queued_for_deletion() or current_stats == null:
         _is_shooting = false
         return
 
@@ -113,24 +114,8 @@ func shoot() -> void:
 
     var target_pos = target.global_position
 
-    _nb_shots_taken += 1
-    var original_stats: RangedWeaponStats = null
-    for projectile_count in _stats_every_x_shots:
-        if _nb_shots_taken % projectile_count == 0:
-            original_stats = current_stats
-            current_stats = _stats_every_x_shots[projectile_count]
-            var hitbox_args := Hitbox.HitboxArgs.new().set_from_weapon_stats(current_stats)
-            _hitbox.set_damage(current_stats.damage, hitbox_args)
-
-    _current_cooldown = get_next_cooldown()
-
-    var attack_id: int = _shooting_behavior._get_next_attack_id()
-    _hitbox.player_attack_id = attack_id
-    _hitbox.ignored_objects.clear()
-
-    for effect in effects:
-        if effect.key_hash == Keys.reload_turrets_on_shoot_hash:
-            emit_signal("wanted_to_reset_turrets_cooldown")
+    var original_stats: RangedWeaponStats = WeaponService.fantasy_begin_custom_ranged_attack(self)
+    var attack_id: int = _hitbox.player_attack_id
 
     _is_snapping = true
     _snap_elapsed = 0.0
@@ -146,22 +131,13 @@ func shoot() -> void:
 
     _spawn_converging_bullet_ring(target_pos, attack_id)
 
-    WeaponService.fantasy_on_shoot(self)
-
-    if original_stats != null:
-        current_stats = original_stats
-        var hitbox_args := Hitbox.HitboxArgs.new().set_from_weapon_stats(current_stats)
-        _hitbox.set_damage(current_stats.damage, hitbox_args)
-
-    _is_shooting = false
+    tween.interpolate_callback(self, current_stats.recoil_duration * 2.0, "set_shooting", false)
+    tween.start()
+    WeaponService.fantasy_end_custom_ranged_attack(self, original_stats)
 
 
 func _spawn_muzzle_flash(main: Node, pos: Vector2, rot: float) -> void:
-    var flash = main.get_node_from_pool(_muzzle_flash_pool_id, main._effects)
-    if flash == null:
-        flash = MUZZLE_FLASH_SCENE.instance()
-        main.add_effect(flash)
-        flash.set_meta("pool_id", _muzzle_flash_pool_id)
+    var flash = VISUAL_UTILS.get_pooled_effect(MUZZLE_FLASH_SCENE, main)
     flash.play_flash(pos, rot, main, _muzzle_flash_pool_id)
 
 
@@ -174,19 +150,12 @@ func _apply_direct_hit(target: Node) -> void:
     if not is_instance_valid(target) or ("dead" in target and target.dead):
         return
 
-    var hitbox_args := Hitbox.HitboxArgs.new().set_from_weapon_stats(current_stats)
-    _hitbox.set_damage(current_stats.damage, hitbox_args)
-
     if target.has_method("hurt_area_entered_deferred"):
         target.hurt_area_entered_deferred(_hitbox)
 
 
 func _spawn_target_astrolabe(main: Node, target_pos: Vector2, target: Node, tier_val: int) -> void:
-    var astrolabe = main.get_node_from_pool(_astrolabe_pool_id, main._effects)
-    if astrolabe == null:
-        astrolabe = ASTROLABE_SCENE.instance()
-        main.add_effect(astrolabe)
-        astrolabe.set_meta("pool_id", _astrolabe_pool_id)
+    var astrolabe = VISUAL_UTILS.get_pooled_effect(ASTROLABE_SCENE, main)
     astrolabe.start_astrolabe(target_pos, target, tier_val, main, _astrolabe_pool_id)
 
 
@@ -207,6 +176,7 @@ func _spawn_converging_bullet_ring(target_pos: Vector2, attack_id: int) -> void:
     var bullet_stats: RangedWeaponStats = current_stats.duplicate()
     bullet_stats.projectile_scene = BULLET_SCENE
     bullet_stats.damage = final_bullet_dmg
+    bullet_stats.scaling_stats = _finger_snap_effect.scaling_stats
     var spawn_args := WeaponServiceSpawnProjectileArgs.new()
     spawn_args.effects = effects
     spawn_args.from_player_index = player_index

@@ -1,5 +1,6 @@
 extends PlayerProjectile
 
+const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
 const FISSURE_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/earthshatter_projectile/earthshatter_fissure.tscn")
 const SHARD_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/earthshatter_projectile/earthshatter_shard.tscn")
 const IMPACT_VFX_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/earthshatter_projectile/earthshatter_impact_vfx.tscn")
@@ -65,17 +66,11 @@ func _detonate(impact_dir: Vector2) -> void:
 	var base_dmg: int = _hitbox.damage
 
 	var vfx_pool_id: int = IMPACT_VFX_SCENE.get_instance_id()
-	var vfx = main.get_node_from_pool(vfx_pool_id, main._effects)
-	if vfx == null:
-		vfx = IMPACT_VFX_SCENE.instance()
-		main.add_effect(vfx)
+	var vfx = VISUAL_UTILS.get_pooled_effect(IMPACT_VFX_SCENE, main)
 	vfx.play(impact_pos, main, vfx_pool_id, int(_earthshatter_effect.value) - 1)
 
 	var fissure_pool_id: int = FISSURE_SCENE.get_instance_id()
-	var fissure = main.get_node_from_pool(fissure_pool_id, main._tile_map)
-	if fissure == null:
-		fissure = FISSURE_SCENE.instance()
-		main._tile_map.add_child(fissure)
+	var fissure = VISUAL_UTILS.get_pooled_ground_effect(FISSURE_SCENE, main)
 	var fissure_dmg: int = int(max(1, base_dmg * _earthshatter_effect.fissure_damage_percent / 100.0))
 	fissure.activate(
 		impact_pos,
@@ -94,10 +89,7 @@ func _detonate(impact_dir: Vector2) -> void:
 	var step_angle: float = TAU / float(count)
 
 	for i in range(count):
-		var shard = main.get_node_from_pool(shard_pool_id, main._effects)
-		if shard == null:
-			shard = SHARD_SCENE.instance()
-			main.add_effect(shard)
+		var shard = VISUAL_UTILS.get_pooled_effect(SHARD_SCENE, main)
 
 		var shard_angle: float = base_angle + i * step_angle + rand_range(-step_angle * 0.35, step_angle * 0.35)
 		var shard_dir: Vector2 = Vector2.RIGHT.rotated(shard_angle)

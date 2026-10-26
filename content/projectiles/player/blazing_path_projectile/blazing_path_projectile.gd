@@ -215,9 +215,5 @@ func _on_Hitbox_hit_something(thing_hit: Node, damage_dealt: int) -> void:
 
     var main = Utils.get_scene_node()
     var pool_id: int = HIT_SPLASH_SCENE.get_instance_id()
-    var splash = main.get_node_from_pool(pool_id, main._effects)
-    if splash == null:
-        splash = HIT_SPLASH_SCENE.instance()
-        main.add_effect(splash)
-        splash.set_meta("pool_id", pool_id)
+    var splash = FANTASY_PROJECTILE_VISUAL_UTILS.get_pooled_effect(HIT_SPLASH_SCENE, main)
     splash.play(global_position, main, pool_id)

@@ -1,5 +1,7 @@
 extends "res://projectiles/player_projectile.gd"
 
+const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const MOTION = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_motion.gd")
 const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
 const EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/sage_staff_effect.gd")
 const EXPLOSION_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/vfx/sage_earth_explosion.tscn")
@@ -62,9 +64,7 @@ func shoot_ex(p_from: Node, pos: Vector2, p_velocity: Vector2, p_rotation: float
     _flight_speed = max(1.0, p_velocity.length())
     _last_position = pos
     _main = Utils.get_scene_node()
-    if not _main.has_meta(TARGET_INDEX.META_KEY):
-        _main.set_meta(TARGET_INDEX.META_KEY, TARGET_INDEX.new())
-    _target_index = _main.get_meta(TARGET_INDEX.META_KEY)
+    _target_index = TARGET_INDEX.for_scene(_main)
 
     var orb_stats: RangedWeaponStats = p_weapon_stats as RangedWeaponStats
     match _element:
@@ -171,11 +171,7 @@ func _find_target() -> Node:
 
 
 func _update_sweep(previous: Vector2, current: Vector2) -> void:
-    var collision: CollisionShape2D = _hitbox._collision
-    var motion: Vector2 = current - previous
-    collision.global_position = (previous + current) * 0.5
-    collision.global_rotation = motion.angle() + PI * 0.5
-    collision.shape.height = motion.length()
+    MOTION.update_capsule_sweep(_hitbox._collision, previous, current)
 
 
 func _on_Hitbox_hit_something(thing_hit: Node, damage_dealt: int) -> void:
@@ -200,10 +196,7 @@ func _on_Hitbox_hit_something(thing_hit: Node, damage_dealt: int) -> void:
                     _light_triggered = true
                     TempStats.add_stat(Keys.stat_attack_speed_hash, EFFECT.LIGHT_ATTACK_SPEED, player_index)
         var pool_id: int = IMPACT.get_instance_id()
-        var impact = _main.get_node_from_pool(pool_id, _main._effects)
-        if impact == null:
-            impact = IMPACT.instance()
-            _main.add_effect(impact)
+        var impact = VISUAL_UTILS.get_pooled_effect(IMPACT, _main)
         impact.start(thing_hit.global_position, _element, rotation, impact_radius, _main, pool_id)
     if is_instance_valid(thing_hit):
         _ends_on_hit = true
@@ -233,22 +226,10 @@ func bounce(_thing_hit: Node) -> void:
 
 func _explode(thing_hit: Node) -> float:
     var weapon: Weapon = _hitbox.from
-    var args = WeaponServiceExplodeArgs.new()
+    var args = WeaponService.fantasy_explosion_args_from_hitbox(_hitbox, player_index)
     args.pos = thing_hit.global_position
-    args.damage = _hitbox.damage
-    args.scaling_stats = _hitbox.scaling_stats
-    args.accuracy = _hitbox.accuracy
-    args.crit_chance = _hitbox.crit_chance
-    args.crit_damage = _hitbox.crit_damage
-    args.burning_data = _hitbox.burning_data
-    args.from_player_index = player_index
-    args.is_healing = _hitbox.is_healing
     args.ignored_objects = [thing_hit]
-    args.damage_tracking_key_hash = _hitbox.damage_tracking_key_hash
-    var explosion = WeaponService.explode(_earth_explosion, args)
-    explosion._hitbox.player_attack_id = _hitbox.player_attack_id
-    explosion.connect("hit_something", weapon, "on_weapon_hit_something", [explosion._hitbox])
-    explosion.connect("killed_something", weapon, "on_killed_something", [explosion._hitbox])
+    var explosion = WeaponService.fantasy_spawn_weapon_explosion(_earth_explosion, args, weapon, _hitbox.player_attack_id)
     return explosion.scale.x * EFFECT.EXPLOSION_BASE_RADIUS
 
 

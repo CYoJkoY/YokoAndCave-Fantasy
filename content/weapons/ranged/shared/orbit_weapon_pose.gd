@@ -10,6 +10,8 @@ var _time: float = 0.0
 var _orbit_phase: float = 0.0
 var _is_thrusting: bool = false
 var _thrust_elapsed: float = 0.0
+var _orbit_index: int = 0
+var _orbit_count: int = 1
 
 
 func _init_orbit_pose() -> void:
@@ -20,10 +22,12 @@ func _init_orbit_pose() -> void:
     if animation_node != null:
         animation_node.z_index = 1
     get_parent().z_index = 0
+    _refresh_orbit_slots()
     _update_orbit_position_and_motion(0.0)
 
 
 func attach(_attach_to: Vector2, _attach_idle_angle: float) -> void:
+    _refresh_orbit_slots()
     _update_orbit_position_and_motion(0.0)
 
 
@@ -31,16 +35,26 @@ func update_sprite_flipv() -> void:
     sprite.flip_v = false
 
 
-func _update_orbit_position_and_motion(delta: float) -> void:
+func _exit_tree() -> void:
+    if is_instance_valid(_parent):
+        _refresh_orbit_slots(false)
+
+
+func _refresh_orbit_slots(include_self: bool = true) -> void:
     var orbiting_weapons: Array = []
     for weapon in _parent.current_weapons:
-        if is_instance_valid(weapon) and weapon.is_in_group(ORBIT_GROUP):
+        if is_instance_valid(weapon) and not weapon.is_queued_for_deletion() and weapon.is_in_group(ORBIT_GROUP) and (include_self or weapon != self):
             orbiting_weapons.append(weapon)
-    if not orbiting_weapons.has(self):
+    if include_self and not orbiting_weapons.has(self):
         orbiting_weapons.append(self)
+    for i in range(orbiting_weapons.size()):
+        orbiting_weapons[i]._orbit_index = i
+        orbiting_weapons[i]._orbit_count = orbiting_weapons.size()
 
-    var total_weapons: int = orbiting_weapons.size()
-    var my_index: int = orbiting_weapons.find(self)
+
+func _update_orbit_position_and_motion(delta: float) -> void:
+    var total_weapons: int = _orbit_count
+    var my_index: int = _orbit_index
 
     _orbit_phase += delta * 0.35
 

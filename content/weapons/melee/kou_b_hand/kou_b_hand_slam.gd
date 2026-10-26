@@ -152,7 +152,7 @@ func _apply_self_loss(thrown: Node) -> void:
 func _apply_impact(thrown: Node) -> void:
     if not is_instance_valid(_weapon) or _weapon._parent.dead or _weapon._parent.cleaning_up:
         return
-    var index = _main.get_meta(TARGET_INDEX.META_KEY)
+    var index = TARGET_INDEX.for_scene(_main)
     for enemy in index.candidates(_main, global_position, _impact_radius):
         if not is_instance_valid(_weapon) or _weapon.is_queued_for_deletion():
             break

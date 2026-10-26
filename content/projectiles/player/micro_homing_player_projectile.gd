@@ -78,9 +78,7 @@ func _find_best_homing_target(max_range: float, acquire_fov_deg: float) -> Node:
 	if main == null or main._entity_spawner == null:
 		return null
 
-	if not main.has_meta(TARGET_INDEX.META_KEY):
-		main.set_meta(TARGET_INDEX.META_KEY, TARGET_INDEX.new())
-	var target_index = main.get_meta(TARGET_INDEX.META_KEY)
+	var target_index = TARGET_INDEX.for_scene(main)
 	var current_direction: Vector2 = velocity.normalized()
 	var min_fov_dot: float = cos(deg2rad(acquire_fov_deg))
 	var best_target: Node = null

@@ -1,5 +1,6 @@
 extends "res://overlap/hitbox.gd"
 
+const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
 const VISUAL: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/silver_cross/vfx/silver_cross_holy_light.tscn")
 const STRIKE_DELAY: float = 0.05
 
@@ -27,15 +28,9 @@ func start(weapon: Weapon, target: Enemy, main: Node, holy_effect: Resource) -> 
     player_attack_id = weapon._hitbox.player_attack_id
     set_meta("fantasy_damage_color", Color("fff0b8"))
     connect("hit_something", weapon, "on_weapon_hit_something", [self])
-    connect("killed_something", weapon, "on_killed_something", [self])
-    connect("critically_hit_something", weapon, "_on_weapon_critically_hit_something")
-    connect("one_shot_something", weapon, "on_one_shot_something")
-    connect("added_gold_on_crit", weapon, "on_added_gold_on_crit")
+    WeaponService.fantasy_connect_hitbox_events(self, weapon)
     var pool_id: int = VISUAL.get_instance_id()
-    _visual = main.get_node_from_pool(pool_id, main._effects)
-    if not is_instance_valid(_visual):
-        _visual = VISUAL.instance()
-        main._effects.add_child(_visual)
+    _visual = VISUAL_UTILS.get_pooled_effect(VISUAL, main)
     _visual.set_pool_id(pool_id)
     _visual.start_strike(target.global_position, target, 1.0, Color.white)
     set_physics_process(true)

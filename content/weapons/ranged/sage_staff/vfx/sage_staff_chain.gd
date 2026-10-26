@@ -1,22 +1,10 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/shared/star_chain_visual.gd"
+extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/shared/star_chain_attack.gd"
 
 const ART = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/vfx/sage_staff_art.gd")
 const EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/sage_staff_effect.gd")
 const LINK_COUNT: int = EFFECT.CHAIN_COUNT
 
-onready var _hitbox: Hitbox = $Hitbox
-
-var _weapon: Weapon
-var _main: Node
 var _stats: RangedWeaponStats
-var _targets: Array = []
-var _points: PoolVector2Array = PoolVector2Array()
-var _next_hit: int = 0
-
-
-func _ready() -> void:
-    set_as_toplevel(true)
-    global_transform = Transform2D.IDENTITY
 
 
 func start(source, first_target: Enemy) -> void:
@@ -36,10 +24,7 @@ func start(source, first_target: Enemy) -> void:
     _hitbox.ignored_objects.append(first_target)
     _hitbox.set_meta("fantasy_damage_color", ART.COLORS[EFFECT.Element.THUNDER])
     _hitbox.connect("hit_something", self, "_on_hit")
-    _hitbox.connect("killed_something", _weapon, "on_killed_something", [_hitbox])
-    _hitbox.connect("critically_hit_something", _weapon, "_on_weapon_critically_hit_something")
-    _hitbox.connect("one_shot_something", _weapon, "on_one_shot_something")
-    _hitbox.connect("added_gold_on_crit", _weapon, "on_added_gold_on_crit")
+    WeaponService.fantasy_connect_hitbox_events(_hitbox, _weapon)
     var previous: Vector2 = first_target._hurtbox.global_position
     _points.append(previous)
     for _i in range(LINK_COUNT):
@@ -58,37 +43,21 @@ func start(source, first_target: Enemy) -> void:
         previous = nearest._hurtbox.global_position
         _points.append(previous)
     if _targets.empty():
-        queue_free()
+        _finish_attack()
+        return
     modulate.a = ProgressData.settings.explosion_opacity
 
 
-func _valid_target(target: Node) -> bool:
-    return is_instance_valid(target) and target is Enemy and not target.dead and not target._pending_die \
-        and not WeaponService.fantasy_should_ignore_tree_body(_weapon, target)
-
-
 func _physics_process(delta: float) -> void:
-    if not is_instance_valid(_weapon) or _weapon.is_queued_for_deletion() or _weapon._parent.dead \
-        or _weapon._parent.cleaning_up or _main._cleaning_up:
-        _hitbox.active = false
-        queue_free()
+    if not _source_is_active():
+        _finish_attack()
         return
     _age += delta
-    for i in range(_next_hit, _targets.size()):
-        if _valid_target(_targets[i]):
-            _points[i + 1] = _targets[i]._hurtbox.global_position
-    while _next_hit < _targets.size() and _age >= FIRST_HIT + _next_hit * LINK_INTERVAL:
-        var target: Node = _targets[_next_hit]
-        var previous: Vector2 = _points[_next_hit]
-        _next_hit += 1
-        if not _valid_target(target):
-            continue
-        _hitbox.global_position = target._hurtbox.global_position
-        _hitbox.set_knockback(previous.direction_to(_hitbox.global_position), _stats.knockback, _stats.knockback_piercing)
-        target.hurt_area_entered_deferred(_hitbox)
-    if _age >= FIRST_HIT + max(0, _targets.size() - 1) * LINK_INTERVAL + FADE_DURATION:
-        _hitbox.active = false
-        queue_free()
+    _advance_chain()
+    if is_queued_for_deletion():
+        return
+    if _age >= _get_chain_lifetime():
+        _finish_attack()
         return
     update()
 
@@ -101,3 +70,8 @@ func _on_hit(target: Node, damage: int) -> void:
 
 func _draw() -> void:
     _draw_chain(_points)
+
+
+func _hit_chain_target(target: Enemy, previous: Vector2) -> void:
+    _hitbox.set_knockback(previous.direction_to(target._hurtbox.global_position), _stats.knockback, _stats.knockback_piercing)
+    ._hit_chain_target(target, previous)

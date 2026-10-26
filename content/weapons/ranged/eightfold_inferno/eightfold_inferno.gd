@@ -172,7 +172,7 @@ func play_hit_feedback(hit_position: Vector2, is_critical: bool) -> void:
         _last_hit_vfx_time = now
         var scale_mult: float = 1.22 if is_critical else 1.0
         var main = Utils.get_scene_node()
-        var burst = _get_pooled_effect(HIT_BURST_SCENE, main, main._effects)
+        var burst = FANTASY_PROJECTILE_VISUAL_UTILS.get_pooled_effect(HIT_BURST_SCENE, main)
         burst.play(hit_position, main, HIT_BURST_SCENE.get_instance_id(), scale_mult, is_critical)
     if now - _last_hit_sound_time >= HIT_SOUND_INTERVAL:
         _last_hit_sound_time = now
@@ -183,17 +183,8 @@ func _spawn_cast_burst() -> void:
     var main = Utils.get_scene_node()
     if main == null or not is_instance_valid(main):
         return
-    var burst = _get_pooled_effect(CAST_BURST_SCENE, main, main._tile_map)
+    var burst = FANTASY_PROJECTILE_VISUAL_UTILS.get_pooled_ground_effect(CAST_BURST_SCENE, main)
     burst.play(get_cast_origin(), main, CAST_BURST_SCENE.get_instance_id())
-
-
-func _get_pooled_effect(scene: PackedScene, main: Node, container: Node) -> Node:
-    var pool_id: int = scene.get_instance_id()
-    var effect = main.get_node_from_pool(pool_id, container)
-    if effect == null:
-        effect = scene.instance()
-        container.add_child(effect)
-    return effect
 
 
 func get_cast_origin() -> Vector2:

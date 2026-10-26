@@ -100,11 +100,7 @@ func _spawn_trail() -> void:
     if not is_instance_valid(source) or not ("_hitbox" in source):
         return
 
-    _trail = main.get_node_from_pool(_trail_pool_id, main._effects)
-    if _trail == null:
-        _trail = TRAIL_SCENE.instance()
-        main.add_effect(_trail)
-        _trail.set_meta("pool_id", _trail_pool_id)
+    _trail = VISUAL_UTILS.get_pooled_effect(TRAIL_SCENE, main)
     _trail.connect("finished", self, "_on_trail_finished", [], CONNECT_ONESHOT)
     _trail.begin(source, main, _trail_pool_id, _opacity)
 
@@ -224,11 +220,7 @@ func _spawn_impact(position: Vector2, scale_mult: float, with_sound: bool) -> vo
     var main = Utils.get_scene_node()
     if main == null or not is_instance_valid(main):
         return
-    var impact = main.get_node_from_pool(_impact_pool_id, main._effects)
-    if impact == null:
-        impact = IMPACT_SCENE.instance()
-        main.add_effect(impact)
-        impact.set_meta("pool_id", _impact_pool_id)
+    var impact = VISUAL_UTILS.get_pooled_effect(IMPACT_SCENE, main)
     impact.play(position, main, _impact_pool_id, scale_mult, _opacity, with_sound)
 
 
@@ -238,11 +230,7 @@ func _spawn_spark(scale_mult: float) -> void:
     var main = Utils.get_scene_node()
     if main == null or not is_instance_valid(main):
         return
-    var spark = main.get_node_from_pool(_hit_spark_pool_id, main._effects)
-    if spark == null:
-        spark = HIT_SPARK_SCENE.instance()
-        main.add_effect(spark)
-        spark.set_meta("pool_id", _hit_spark_pool_id)
+    var spark = VISUAL_UTILS.get_pooled_effect(HIT_SPARK_SCENE, main)
     spark.play(global_position, main, _hit_spark_pool_id, scale_mult, _opacity)
 
 

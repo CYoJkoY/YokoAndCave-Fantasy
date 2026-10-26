@@ -1,5 +1,6 @@
 extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shared/orbit_weapon_pose.gd"
 
+const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
 const STRIKE_ATTACK: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shared/orbit_strike_attack.tscn")
 
 const FALLBACK_SOUND: AudioStream = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/myriad_thunder/myriad_thunder.wav")
@@ -94,13 +95,8 @@ func shoot() -> void:
     var targets: Array = _pending_targets
     _pending_targets = []
 
-    _nb_shots_taken += 1
-    _current_cooldown = get_next_cooldown()
+    var original_stats: RangedWeaponStats = WeaponService.fantasy_begin_custom_ranged_attack(self)
     _recoil_remaining = current_stats.recoil_duration * 2.0
-
-    for effect in effects:
-        if effect.key_hash == Keys.reload_turrets_on_shoot_hash:
-            emit_signal("wanted_to_reset_turrets_cooldown")
 
     _is_thrusting = true
     _thrust_elapsed = 0.0
@@ -113,7 +109,7 @@ func shoot() -> void:
     attack.connect("strike_started", self, "_spawn_strike_visuals", [main])
     attack.start(self, targets, main)
 
-    WeaponService.fantasy_on_shoot(self)
+    WeaponService.fantasy_end_custom_ranged_attack(self, original_stats)
 
     _is_shooting = _recoil_remaining > 0.0
     _on_cast_completed()
@@ -130,8 +126,9 @@ func _play_cast_sound() -> void:
 
 
 func _collect_targets(main: Node) -> Array:
+    var attack_stats: RangedWeaponStats = WeaponService.fantasy_get_next_ranged_attack_stats(self)
     var center: Vector2 = global_position
-    var max_range_sq: float = float(current_stats.max_range) * float(current_stats.max_range)
+    var max_range_sq: float = float(attack_stats.max_range) * float(attack_stats.max_range)
     var candidates: Array = []
     var in_range: Array = []
     for enemy in main._entity_spawner.get_all_enemies(false):
@@ -154,7 +151,7 @@ func _collect_targets(main: Node) -> Array:
             nearest_distance = distance
     candidates.erase(nearest)
     var targets: Array = [nearest]
-    var projectile_bonus: int = current_stats.nb_projectiles - stats.nb_projectiles
+    var projectile_bonus: int = attack_stats.nb_projectiles - stats.nb_projectiles
     var extra_count: int = int(min(max(0, _targeting_effect.value + projectile_bonus), candidates.size()))
     for i in range(extra_count):
         var selected_index: int = Utils.randi_range(i, candidates.size() - 1)
@@ -177,10 +174,7 @@ func is_valid_strike_target(target) -> bool:
 
 func _spawn_strike_visuals(target: Unit, main: Node) -> void:
     var pool_id: int = strike_scene.get_instance_id()
-    var strike_vfx: Node2D = main.get_node_from_pool(pool_id, main._effects)
-    if not is_instance_valid(strike_vfx):
-        strike_vfx = strike_scene.instance()
-        main._effects.add_child(strike_vfx)
+    var strike_vfx: Node2D = VISUAL_UTILS.get_pooled_effect(strike_scene, main)
     strike_vfx.set_pool_id(pool_id)
     _configure_strike_visuals(strike_vfx)
     strike_vfx.start_strike(target.global_position, target, 1.0, _get_strike_tint())

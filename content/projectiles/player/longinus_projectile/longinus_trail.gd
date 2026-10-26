@@ -1,5 +1,6 @@
 extends Node2D
 
+const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
 signal finished
 
 const TRAIL_EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/longinus/longinus_effect.gd")
@@ -204,11 +205,7 @@ func _apply_trail_damage() -> void:
 func _spawn_hit_spark(position: Vector2) -> void:
     if not is_instance_valid(_main):
         return
-    var spark = _main.get_node_from_pool(_hit_spark_pool_id, _main._effects)
-    if spark == null:
-        spark = HIT_SPARK_SCENE.instance()
-        _main.add_effect(spark)
-        spark.set_meta("pool_id", _hit_spark_pool_id)
+    var spark = VISUAL_UTILS.get_pooled_effect(HIT_SPARK_SCENE, _main)
     spark.play(position, _main, _hit_spark_pool_id, rand_range(0.42, 0.62), _visual_opacity)
 
 

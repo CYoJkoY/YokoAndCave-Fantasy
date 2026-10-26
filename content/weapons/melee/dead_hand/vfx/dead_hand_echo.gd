@@ -49,10 +49,7 @@ func start(weapon: Weapon, main: Node, origin: Vector2, direction: float, side: 
     set_meta("fantasy_damage_color", Color("dca6ff"))
     connect("hit_something", self, "_on_echo_hit")
     connect("hit_something", weapon, "on_weapon_hit_something", [self])
-    connect("killed_something", weapon, "on_killed_something", [self])
-    connect("critically_hit_something", weapon, "_on_weapon_critically_hit_something")
-    connect("one_shot_something", weapon, "on_one_shot_something")
-    connect("added_gold_on_crit", weapon, "on_added_gold_on_crit")
+    WeaponService.fantasy_connect_hitbox_events(self, weapon)
     _sweep.scale = Vector2.ONE * _radius / 230.0
     _sweep.material.set_shader_param("side", side)
     _sweep.material.set_shader_param("half_angle", CONFIG.ECHO_HALF_ANGLE)

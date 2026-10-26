@@ -192,11 +192,7 @@ func _spawn_hit_spark(pos: Vector2) -> void:
     var main = Utils.get_scene_node()
     if main == null or not is_instance_valid(main):
         return
-    var spark = main.get_node_from_pool(_hit_spark_pool_id, main._effects)
-    if spark == null:
-        spark = HIT_SPARK_SCENE.instance()
-        main.add_effect(spark)
-        spark.set_meta("pool_id", _hit_spark_pool_id)
+    var spark = FANTASY_PROJECTILE_VISUAL_UTILS.get_pooled_effect(HIT_SPARK_SCENE, main)
     spark.play_hit(pos, main, _hit_spark_pool_id)
 
 
@@ -204,11 +200,7 @@ func _spawn_disappear_spark(pos: Vector2) -> void:
     var main = Utils.get_scene_node()
     if main == null or not is_instance_valid(main):
         return
-    var spark = main.get_node_from_pool(_disappear_spark_pool_id, main._effects)
-    if spark == null:
-        spark = DISAPPEAR_SPARK_SCENE.instance()
-        main.add_effect(spark)
-        spark.set_meta("pool_id", _disappear_spark_pool_id)
+    var spark = FANTASY_PROJECTILE_VISUAL_UTILS.get_pooled_effect(DISAPPEAR_SPARK_SCENE, main)
     spark.play_disappear(pos, main, _disappear_spark_pool_id)
 
 

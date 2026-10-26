@@ -235,11 +235,7 @@ func _apply_internal_wind_force(enemy: Enemy) -> void:
         return
 
     var pool_id: int = WIND_FORCE_SCENE.get_instance_id()
-    var wind_force = main.get_node_from_pool(pool_id, main._effects)
-    if wind_force == null:
-        wind_force = WIND_FORCE_SCENE.instance()
-        main.add_effect(wind_force)
-        wind_force.set_meta("pool_id", pool_id)
+    var wind_force = FANTASY_PROJECTILE_VISUAL_UTILS.get_pooled_effect(WIND_FORCE_SCENE, main)
 
     var p_idx: int = _get_player_index()
     var tick_dmg: int = int(max(1, Utils.ncl_get_dmg_with_scaling_stats(wind_force_base_damage, wind_force_scaling_stats, p_idx)))
@@ -261,11 +257,7 @@ func _spawn_hit_splash(pos: Vector2, impact_rotation: float) -> void:
         return
 
     var pool_id: int = HIT_SPLASH_SCENE.get_instance_id()
-    var splash = main.get_node_from_pool(pool_id, main._effects)
-    if splash == null:
-        splash = HIT_SPLASH_SCENE.instance()
-        main.add_effect(splash)
-        splash.set_meta("pool_id", pool_id)
+    var splash = FANTASY_PROJECTILE_VISUAL_UTILS.get_pooled_effect(HIT_SPLASH_SCENE, main)
     splash.play(pos, impact_rotation, main, pool_id)
 
 

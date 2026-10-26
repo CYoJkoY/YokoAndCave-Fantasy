@@ -62,18 +62,8 @@ func update_sprite_flipv() -> void:
 func detonate_ray(pos: Vector2, source_hitbox: Hitbox) -> void:
     if _parent.cleaning_up or _parent.dead:
         return
-    var args = WeaponServiceExplodeArgs.new()
+    var args = WeaponService.fantasy_explosion_args_from_hitbox(source_hitbox, player_index)
     args.pos = pos
     args.damage = WeaponService.get_explosion_damage(_blast_stats, player_index)
     args.scaling_stats = _blast_stats.scaling_stats
-    args.accuracy = source_hitbox.accuracy
-    args.crit_chance = source_hitbox.crit_chance
-    args.crit_damage = source_hitbox.crit_damage
-    args.burning_data = source_hitbox.burning_data
-    args.from_player_index = player_index
-    args.is_healing = source_hitbox.is_healing
-    args.damage_tracking_key_hash = source_hitbox.damage_tracking_key_hash
-    var explosion = WeaponService.explode(_blast_effect, args)
-    explosion._hitbox.player_attack_id = source_hitbox.player_attack_id
-    explosion.connect("hit_something", self, "on_weapon_hit_something", [explosion._hitbox])
-    explosion.connect("killed_something", self, "on_killed_something", [explosion._hitbox])
+    WeaponService.fantasy_spawn_weapon_explosion(_blast_effect, args, self, source_hitbox.player_attack_id)

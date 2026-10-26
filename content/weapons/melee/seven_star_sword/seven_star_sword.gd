@@ -182,10 +182,7 @@ func release_star_chain() -> void:
     var main: Node = Utils.get_scene_node()
     if not is_instance_valid(main) or main._cleaning_up or _parent.dead or _parent.cleaning_up:
         return
-    var target_index = main.get_meta(TARGET_INDEX.META_KEY) if main.has_meta(TARGET_INDEX.META_KEY) else null
-    if target_index == null:
-        target_index = TARGET_INDEX.new()
-        main.set_meta(TARGET_INDEX.META_KEY, target_index)
+    var target_index = TARGET_INDEX.for_scene(main)
     var selected: Array = []
     var seen: int = 0
     var radius: float = _star_effect.get_radius(player_index)

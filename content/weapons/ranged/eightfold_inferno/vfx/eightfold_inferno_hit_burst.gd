@@ -89,14 +89,9 @@ func _process(delta: float) -> void:
 
 func _finish() -> void:
     _active = false
-    visible = false
-    set_process(false)
     _embers.emitting = false
     _flame_puffs.emitting = false
     _sparks.emitting = false
     var main: Node = _main
     _main = null
-    if is_instance_valid(main) and _pool_id >= 0:
-        main.add_node_to_pool(self, _pool_id)
-    else:
-        queue_free()
+    FANTASY_PROJECTILE_VISUAL_UTILS.release_effect(self, main, _pool_id)

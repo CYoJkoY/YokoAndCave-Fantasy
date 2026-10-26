@@ -25,6 +25,8 @@ var _muzzle_ring_base_scale: Vector2 = Vector2.ONE
 var _muzzle_beam_base_scale: Vector2 = Vector2.ONE
 
 onready var _aura: Sprite = $Sprite/Aura
+onready var _tip_fx: Node2D = $Sprite/TipFX
+onready var _muzzle_fx: Node2D = $Sprite/MuzzleFX
 onready var _tip_glow: Sprite = $Sprite/TipFX/TipGlow
 onready var _tip_star: Sprite = $Sprite/TipFX/TipStar
 onready var _charge_ring: Sprite = $Sprite/TipFX/ChargeRing
@@ -59,6 +61,7 @@ func _ready() -> void:
     for arc in _muzzle_arcs:
         arc.width_curve = VFX.TAPER_CURVE
     _hide_muzzle_fx()
+    _sync_opacity()
 
 
 func _process(delta: float) -> void:
@@ -68,6 +71,14 @@ func _process(delta: float) -> void:
     _update_tip_arcs(delta)
     _update_muzzle_flash(delta)
     _update_aim_beam(delta)
+    _sync_opacity()
+
+
+func _sync_opacity() -> void:
+    var opacity: float = ProgressData.settings.projectile_opacity
+    _tip_fx.modulate.a = opacity
+    _muzzle_fx.modulate.a = opacity
+    _aura.modulate.a = (_aura_base_alpha + _charge * 0.10 + 0.025 * sin(_time * 4.4)) * opacity
 
 
 func _update_charge(delta: float) -> void:
@@ -95,7 +106,6 @@ func _update_tip_visuals(delta: float) -> void:
         _charge_ring.visible = false
 
     _aura.rotation += delta * 0.55
-    _aura.modulate = Color(1.0, 0.84, 0.42, _aura_base_alpha + _charge * 0.10 + 0.025 * sin(_time * 4.4))
 
     if _kick > 0.0:
         _kick = max(0.0, _kick - delta * 7.5)
@@ -169,18 +179,18 @@ func _rebuild_muzzle_arcs() -> void:
         return
     var progress: float = 1.0 - clamp(_flash / MUZZLE_FLASH_DURATION, 0.0, 1.0)
     var length_scale: float = 1.0 - progress * 0.45
-    var arcs_glow: Array = [_muzzle_arcs[0], _muzzle_arcs[2]]
-    var arcs_core: Array = [_muzzle_arcs[1], _muzzle_arcs[3]]
-    for i in range(arcs_glow.size()):
+    for i in range(0, _muzzle_arcs.size(), 2):
+        var glow: Line2D = _muzzle_arcs[i]
+        var core: Line2D = _muzzle_arcs[i + 1]
         var start := Vector2(rand_range(2.0, 12.0), rand_range(-5.0, 5.0))
         var end := Vector2(rand_range(78.0, 172.0) * length_scale, rand_range(-46.0, 46.0))
         var points: PoolVector2Array = VFX.jagged_points(start, end, int(rand_range(5, 8)), rand_range(7.0, 16.0))
-        arcs_glow[i].points = points
-        arcs_core[i].points = points
-        arcs_glow[i].width = rand_range(9.0, 15.0)
-        arcs_core[i].width = rand_range(2.3, 3.8)
-        arcs_glow[i].visible = true
-        arcs_core[i].visible = true
+        glow.points = points
+        core.points = points
+        glow.width = rand_range(9.0, 15.0)
+        core.width = rand_range(2.3, 3.8)
+        glow.visible = true
+        core.visible = true
 
 
 func _update_aim_beam(delta: float) -> void:
@@ -196,8 +206,9 @@ func shoot() -> void:
     _flash = MUZZLE_FLASH_DURATION
     _muzzle_arc_timer = 0.0
     _kick = 1.0
-    _show_muzzle_fx()
-    _rebuild_muzzle_arcs()
+    _sync_opacity()
+    _update_muzzle_flash(0.0)
+    _muzzle_sparks.visible = true
     _muzzle_sparks.emitting = true
     _muzzle_sparks.restart()
 
@@ -206,22 +217,6 @@ func shoot() -> void:
         main._screenshaker.shake(1.35, 0.055)
     if is_instance_valid(muzzle):
         SoundManager2D.play(TASER_SOUND, muzzle.global_position, -7.0, 0.10)
-
-
-func _show_muzzle_fx() -> void:
-    _muzzle_flare.visible = true
-    _muzzle_glow.visible = true
-    _muzzle_ring.visible = true
-    _muzzle_beam.visible = true
-    _muzzle_flare.scale = _muzzle_flare_base_scale
-    _muzzle_glow.scale = _muzzle_glow_base_scale
-    _muzzle_ring.scale = _muzzle_ring_base_scale
-    _muzzle_beam.scale = _muzzle_beam_base_scale
-    _muzzle_flare.modulate = Color(1.0, 0.98, 0.88, 0.0)
-    _muzzle_glow.modulate = Color(1.0, 0.88, 0.45, 0.0)
-    _muzzle_ring.modulate = Color(1.0, 0.88, 0.52, 0.0)
-    _muzzle_beam.modulate = Color(1.0, 0.95, 0.7, 0.0)
-    _muzzle_sparks.visible = true
 
 
 func _hide_muzzle_fx() -> void:

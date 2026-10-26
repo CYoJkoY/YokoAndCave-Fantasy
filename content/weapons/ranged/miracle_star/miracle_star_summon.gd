@@ -46,10 +46,7 @@ func _ready() -> void:
     _laser_hitbox.active = false
     _laser_hitbox.set_meta("fantasy_damage_color", Color("e9e1ff"))
     _laser_hitbox.connect("hit_something", self, "_on_laser_hit")
-    _laser_hitbox.connect("killed_something", _weapon, "on_killed_something", [_laser_hitbox])
-    _laser_hitbox.connect("critically_hit_something", _weapon, "_on_weapon_critically_hit_something")
-    _laser_hitbox.connect("one_shot_something", _weapon, "on_one_shot_something")
-    _laser_hitbox.connect("added_gold_on_crit", _weapon, "on_added_gold_on_crit")
+    WeaponService.fantasy_connect_hitbox_events(_laser_hitbox, _weapon)
 
 
 func _exit_tree() -> void:

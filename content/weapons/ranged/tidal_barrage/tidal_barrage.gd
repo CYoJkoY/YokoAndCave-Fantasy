@@ -81,11 +81,8 @@ func _spawn_muzzle_ring() -> void:
     if VISUAL_UTILS.get_opacity() <= 0.0:
         return
     var main: Node = Utils.get_scene_node()
-    var ring = main.get_node_from_pool(_ring_pool_id, main._effects)
-    if ring == null:
-        ring = RING_SCENE.instance()
-        main.add_effect(ring)
-        ring.set_meta("pool_id", _ring_pool_id)
+    var ring = VISUAL_UTILS.get_pooled_effect(RING_SCENE, main)
+    ring.set_meta("pool_id", _ring_pool_id)
     var origin: Transform2D = muzzle.global_transform
     if sprite.flip_v:
         origin.y = -origin.y

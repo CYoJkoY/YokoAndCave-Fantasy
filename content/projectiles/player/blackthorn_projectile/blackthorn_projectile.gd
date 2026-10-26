@@ -1,5 +1,6 @@
 extends PlayerProjectile
 
+const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
 const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
 const TRAIL_HISTORY = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_trail_history.gd")
 const IMPACT_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/blackthorn_projectile/blackthorn_impact.tscn")
@@ -49,9 +50,7 @@ func shoot_ex(p_from: Node, pos: Vector2, p_velocity: Vector2, p_rotation: float
     _visual_state = _main.get_meta(VISUAL_STATE.META_KEY)
     _visual_state.refresh()
     if is_shard:
-        if not _main.has_meta(TARGET_INDEX.META_KEY):
-            _main.set_meta(TARGET_INDEX.META_KEY, TARGET_INDEX.new())
-        _target_index = _main.get_meta(TARGET_INDEX.META_KEY)
+        _target_index = TARGET_INDEX.for_scene(_main)
     _curl = rand_range(0.85, 1.15) * (-1.0 if randf() < 0.5 else 1.0)
     _history.clear()
     _history.push(pos if is_shard else pos - p_velocity.normalized() * 32.0)
@@ -190,11 +189,7 @@ func _on_Hitbox_hit_something(thing_hit: Node, damage_dealt: int) -> void:
 func _spawn_impact(impact_position: Vector2) -> void:
     var impact_scene: PackedScene = SHARD_IMPACT_SCENE if is_shard else IMPACT_SCENE
     var pool_id: int = impact_scene.get_instance_id()
-    var impact = _main.get_node_from_pool(pool_id, _main._effects)
-    if impact == null:
-        impact = impact_scene.instance()
-        _main.add_effect(impact)
-        impact.set_meta("pool_id", pool_id)
+    var impact = VISUAL_UTILS.get_pooled_effect(impact_scene, _main)
     impact.begin(impact_position, velocity.angle(), _main, pool_id, _opacity)
 
 

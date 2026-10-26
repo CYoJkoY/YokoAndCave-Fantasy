@@ -27,4 +27,5 @@ func shoot(_distance: float) -> void:
         projectile.configure_wave(i)
         emit_signal("projectile_shot", projectile)
 
-    weapon.set_shooting(false)
+    weapon.tween.interpolate_callback(weapon, weapon_stats.recoil_duration * 2.0, "set_shooting", false)
+    weapon.tween.start()

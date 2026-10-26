@@ -1,17 +1,7 @@
-extends "res://weapons/shooting_behaviors/melee_weapon_shooting_behavior.gd"
+extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/shared/phased_sweep_shooting_behavior.gd"
 
-enum Phase { IDLE, WINDUP, SWEEP, RECOVER }
-
-var phase: int = Phase.IDLE
-var attack_angle: float = 0.0
-var _elapsed: float = 0.0
-var _duration: float = 0.0
-var _sweep_duration: float = 0.0
-var _recover_duration: float = 0.0
-var _remainder: float = 0.0
 var _radius: float = 0.0
 var _side: float = -1.0
-var _rest: Vector2
 
 
 func shoot(distance: float) -> void:
@@ -23,31 +13,12 @@ func shoot(distance: float) -> void:
     _recover_duration = duration - _duration - _sweep_duration
     var swing_distance: float = min(_parent.current_stats.max_range, max(MIN_SWEEP_DISTANCE, distance))
     _radius = max(0.0, swing_distance - 140.0)
-    _rest = _parent.sprite.position
-    attack_angle = _parent.rotation
     _side = -1.0 if _parent.sprite.flip_v else 1.0
-    _elapsed = 0.0
-    _remainder = 0.0
-    phase = Phase.WINDUP
-    _parent.set_shooting(true)
-    _parent.disable_hitbox()
-    _parent._hitbox.player_attack_id = _get_next_attack_id()
+    _start_attack()
     _parent.prepare_swing(_side, _radius)
 
 
-func advance(delta: float) -> void:
-    if phase == Phase.IDLE:
-        return
-    if delta <= 0.0:
-        return
-    if _elapsed >= _duration:
-        _next_phase()
-        if phase == Phase.IDLE:
-            return
-    var next_time: float = _elapsed + delta + _remainder
-    _remainder = max(0.0, next_time - _duration)
-    _elapsed = min(next_time, _duration)
-    var t: float = _elapsed / _duration
+func _update_pose(t: float) -> void:
     var eased: float = t * t * (3.0 - 2.0 * t)
     if phase == Phase.WINDUP:
         var angle: float = -_side * PI * 0.5
@@ -71,32 +42,15 @@ func advance(delta: float) -> void:
         _parent.set_charge((1.0 - t) * 0.35)
 
 
-func _next_phase() -> void:
-    _elapsed = 0.0
-    if phase == Phase.WINDUP:
-        phase = Phase.SWEEP
-        _duration = _sweep_duration
-        _parent.enable_hitbox()
-        _parent.begin_swing(_rest)
-        SoundManager.play(Utils.get_rand_element(_parent.current_stats.shooting_sounds), _parent.current_stats.sound_db_mod, 0.12)
-    elif phase == Phase.SWEEP:
-        phase = Phase.RECOVER
-        _duration = _recover_duration
-        _parent.disable_hitbox()
-        _parent.end_swing()
-    else:
-        cancel_attack()
+func _on_sweep_started() -> void:
+    SoundManager.play(Utils.get_rand_element(_parent.current_stats.shooting_sounds), _parent.current_stats.sound_db_mod, 0.12)
+
+
+func _on_sweep_finished() -> void:
+    _parent.end_swing()
 
 
 func cancel_attack() -> void:
-    _parent.disable_hitbox()
-    _parent.set_shooting(false)
-    if phase == Phase.IDLE:
-        return
     if phase == Phase.SWEEP:
         _parent.end_swing()
-    phase = Phase.IDLE
-    _remainder = 0.0
-    _parent.sprite.position = _rest
-    _parent.sprite.rotation = 0.0
-    _parent.set_charge(0.0)
+    .cancel_attack()

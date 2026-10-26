@@ -1,6 +1,7 @@
 extends "res://weapons/melee/melee_weapon.gd"
 
 const SHOCKWAVE_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/tambourine/vfx/tambourine_shockwave.tscn")
+const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
 const HIT_SOUND: AudioStream = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/tambourine/audio/tambourine_hit.wav")
 const HIT_SOUND_INTERVAL_MS: int = 55
 const BLAST_INTERVAL: float = 0.03
@@ -68,7 +69,8 @@ func _trigger_shockwave(effect: Resource, impact_position: Vector2) -> void:
 
     var blast_offsets: Array = []
     var selection_radius_squared: float = float(effect.value2) * effect.value2
-    for enemy in main._entity_spawner.get_all_enemies(false):
+    var target_index = TARGET_INDEX.for_scene(main)
+    for enemy in target_index.candidates(main, impact_position, abs(float(effect.value2))):
         if not is_instance_valid(enemy) or enemy.dead:
             continue
         var offset: Vector2 = enemy.global_position - impact_position
@@ -129,8 +131,5 @@ func _advance_shockwaves(delta: float) -> void:
 
 func _spawn_shockwave(args: WeaponServiceExplodeArgs, tint: Color, attack_id: int) -> void:
     _blast_effect.scale = BASE_BLAST_SCALE * rand_range(1.0 - BLAST_SCALE_VARIATION, 1.0 + BLAST_SCALE_VARIATION)
-    var explosion: Node = WeaponService.explode(_blast_effect, args)
-    explosion._hitbox.player_attack_id = attack_id
+    var explosion: Node = WeaponService.fantasy_spawn_weapon_explosion(_blast_effect, args, self, attack_id)
     explosion.set_tint(tint)
-    explosion.connect("hit_something", self, "on_weapon_hit_something", [explosion._hitbox])
-    explosion.connect("killed_something", self, "on_killed_something", [explosion._hitbox])
