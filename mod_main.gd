@@ -29,6 +29,12 @@ func install_script_extensions() -> void:
         #          random_reload_when_picked_up_gold
         #          projectile_on_enemy_death
 
+        "ui/item_description.gd",
+        "ui/item_panel_ui.gd",
+        "ui/shop_item.gd",
+        "ui/synergy_panel.gd",
+        # SYSTEMS: Unique weapons
+
         "services/item_service.gd",
         # SYSTEMS: Job[ 2/6 ]
         # ITEMS: Erosion Items

@@ -1,5 +1,8 @@
 extends "res://singletons/item_service.gd"
 
+const FANTASY_UNIQUE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/unique_weapon_service.gd")
+
+var _fantasy_unique_weapons: Array = []
 var jobs: Array = []
 var jobs_by_stage: Dictionary = {0: [], 1: []}
 var _fantasy_added_starting_weapons: Array = []
@@ -10,6 +13,13 @@ func _ready() -> void:
 
 func init_unlocked_pool() -> void:
     .init_unlocked_pool()
+    _fantasy_unique_weapons.clear()
+    for tier_data in _tiers_data:
+        for weapon in tier_data[TierData.WEAPONS].duplicate():
+            if !FANTASY_UNIQUE.is_unique(weapon): continue
+            _fantasy_unique_weapons.append(weapon)
+            tier_data[TierData.WEAPONS].erase(weapon)
+            tier_data[TierData.ALL_ITEMS].erase(weapon)
     _fantasy_rebuild_mod_starting_weapons()
 
 func apply_item_effect_modifications(item: ItemParentData, player_index: int) -> ItemParentData:
@@ -31,12 +41,47 @@ func get_icon_for_duplicate_shop_item(character: CharacterData, player_items: Ar
     return icon
 
 func _get_rand_item_for_wave(wave: int, player_index: int, type: int, args: GetRandItemForWaveArgs) -> ItemParentData:
+    if type == TierData.WEAPONS and args.fixed_tier == -1:
+        var luck: float = Utils.get_stat(Keys.stat_luck_hash, player_index) / 100.0
+        var unique_chance: float = FANTASY_UNIQUE.chance(wave, luck)
+        if Utils.get_chance_success(unique_chance):
+            var unique_candidates: Array = _fantasy_get_unique_weapon_candidates(player_index, args)
+            if !unique_candidates.empty():
+                var set_bonus: float = max(0, (MAX_WAVE_ONE_WEAPON_GUARANTEED + 1 - RunData.current_wave) * (BONUS_CHANCE_SAME_WEAPON_SET / MAX_WAVE_ONE_WEAPON_GUARANTEED))
+                if Utils.get_chance_success(CHANCE_SAME_WEAPON_SET + set_bonus):
+                    unique_candidates = FANTASY_UNIQUE.prefer_sets(unique_candidates, RunData.get_player_sets(player_index))
+                return apply_item_effect_modifications(Utils.get_rand_element(unique_candidates), player_index)
     var item: ItemParentData =._get_rand_item_for_wave(wave, player_index, type, args)
     item = _fantasy_can_spawn_erosion_related_item(item, wave, player_index, type, args)
 
     return item
 
 # ══════════════════════════════════════════ Custom ══════════════════════════════════════════ #
+func _fantasy_get_unique_weapon_candidates(player_index: int, args: GetRandItemForWaveArgs) -> Array:
+    var candidates: Array = []
+    var owned_weapons: Array = RunData.get_player_weapons_ref(player_index)
+    var banned: Array = RunData.players_data[player_index].banned_items
+    var no_melee: bool = RunData.get_player_effect_bool(Keys.no_melee_weapons_hash, player_index)
+    var no_ranged: bool = RunData.get_player_effect_bool(Keys.no_ranged_weapons_hash, player_index)
+    var no_structures: bool = RunData.get_player_effect(Keys.remove_shop_items_hash, player_index).has(Keys.structure_hash)
+    var min_tier: int = RunData.get_player_effect(Keys.min_weapon_tier_hash, player_index)
+    var max_tier: int = RunData.get_player_effect(Keys.max_weapon_tier_hash, player_index)
+    var excluded_items: Array = args.excluded_items + RunData.get_player_locked_shop_items(player_index)
+    for weapon in _fantasy_unique_weapons:
+        if FANTASY_UNIQUE.get_owned_unique_weapon(weapon, owned_weapons) != null: continue
+        if weapon.tier < min_tier or weapon.tier > max_tier: continue
+        if no_melee and weapon.type == WeaponType.MELEE: continue
+        if no_ranged and weapon.type == WeaponType.RANGED: continue
+        if no_structures and EntityService.is_weapon_spawning_structure(weapon): continue
+        if banned.has(weapon.my_id) or banned.has(weapon.my_id_hash) or banned.has(weapon.weapon_id) or banned.has(weapon.weapon_id_hash): continue
+        var excluded: bool = false
+        for entry in excluded_items:
+            if entry[0] is WeaponData and entry[0].weapon_id == weapon.weapon_id:
+                excluded = true
+                break
+        if !excluded: candidates.append(weapon)
+    return candidates
+
 func _fantasy_rebuild_mod_starting_weapons() -> void:
     for added in _fantasy_added_starting_weapons:
         var character: CharacterData = added[0]

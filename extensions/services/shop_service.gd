@@ -3,6 +3,7 @@ extends Reference
 const BLESS_BUTTON_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/ui/bless/bless_button.tscn")
 const BLESS_BORDER_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/ui/bless/bless_border.tscn")
 const GOLDFISH_SOUND = preload("res://ui/sounds/goldfish.wav")
+const FANTASY_UNIQUE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/unique_weapon_service.gd")
 
 # ══════════════════════════════════════════ Shop Entry ══════════════════════════════════════════ #
 static func _fantasy_on_shop_ready(shop: BaseShop) -> void:
@@ -515,6 +516,7 @@ static func _fantasy_get_shop_set_weapon_count(shop_items: Array, player_index: 
 static func _fantasy_get_replaceable_shop_item_index(shop_items: Array, player_index: int, set_id_hash: int, locked_item_count: int) -> int:
     for i in range(locked_item_count, shop_items[player_index].size()):
         var item_data: ItemParentData = shop_items[player_index][i][0]
+        if FANTASY_UNIQUE.is_unique(item_data): continue
         if item_data is WeaponData and _fantasy_weapon_has_set(item_data, set_id_hash): continue
 
         return i

@@ -1,5 +1,7 @@
 extends "res://singletons/run_data.gd"
 
+const FANTASY_UNIQUE_RUN = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/unique_weapon_service.gd")
+
 signal on_soul_effect(damage_to_add, speed_to_add, player_index)
 
 var fantasy_resumed_from_state_in_shop: bool = false
@@ -7,6 +9,16 @@ var fantasy_pending_job_selections: Array = [[], [], [], []]
 const FANTASY_JOB_UI_LEVEL_BASE: int = -200000
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
+func add_weapon(weapon: WeaponData, player_index: int, is_selection: bool = false) -> WeaponData:
+    var owned: WeaponData = FANTASY_UNIQUE_RUN.get_owned_unique_weapon(weapon, get_player_weapons_ref(player_index))
+    if owned != null: return owned
+    return .add_weapon(weapon, player_index, is_selection)
+
+func has_weapon_slot_available(shop_weapon: WeaponData, player_index: int) -> bool:
+    if FANTASY_UNIQUE_RUN.get_owned_unique_weapon(shop_weapon, get_player_weapons_ref(player_index)) != null:
+        return false
+    return .has_weapon_slot_available(shop_weapon, player_index)
+
 func reset(restart: bool = false) -> void:
     .reset(restart)
     fantasy_resumed_from_state_in_shop = false
