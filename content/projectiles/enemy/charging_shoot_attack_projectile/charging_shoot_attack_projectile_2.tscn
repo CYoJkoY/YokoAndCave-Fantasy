@@ -1,31 +1,193 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://overlap/hitbox.tscn" type="PackedScene" id=1]
-[ext_resource path="res://projectiles/bullet_enemy/bullet_enemy_long.png" type="Texture" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/enemy_projectile_limit_range.gd" type="Script" id=3]
-[ext_resource path="res://resources/shaders/projectile_outline_shadermat.tres" type="Material" id=4]
+[ext_resource path="res://projectiles/projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/charging_shoot_attack_projectile/giant_bear_spike_0000.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/charging_shoot_attack_projectile/giant_bear_spike_0001.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/charging_shoot_attack_projectile/giant_bear_spike_0002.webp" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/charging_shoot_attack_projectile/giant_bear_spike_0003.webp" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/charging_shoot_attack_projectile/giant_bear_spike_0004.webp" type="Texture" id=6]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/charging_shoot_attack_projectile/giant_bear_spike_0005.webp" type="Texture" id=7]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/charging_shoot_attack_projectile/giant_bear_spike_0006.webp" type="Texture" id=8]
+[ext_resource path="res://projectiles/bullet_enemy/enemy_projectile.gd" type="Script" id=9]
+[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/charging_shoot_attack_projectile/giant_bear_spike_hitbox.gd" type="Script" id=10]
 
-[sub_resource type="CapsuleShape2D" id=1]
-height = 31.9999
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( -113.77778, 10.97695, -85.33333, 23.80787, -85.33333, 43.55445, -113.77778, 30.72353 )
 
-[node name="EnemyProjectile" type="Node2D"]
-script = ExtResource( 3 )
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( -135.11111, -4.13140, -81.77778, 19.92657, -81.77778, 57.22567, -135.11111, 33.16770 )
 
-[node name="Sprite" type="Sprite" parent="."]
-unique_name_in_owner = true
-material = ExtResource( 4 )
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( -133.33333, -1.13540, -43.98030, 30.14736, -43.98030, 63.88726, -47.41695, 64.05146, -50.85361, 64.10389, -54.29026, 64.11121, -57.72692, 64.09041, -61.16357, 64.00149, -64.60023, 62.78017, -133.33333, 31.77556 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( -43.98030, 30.14736, 0.29892, -34.65356, 3.70502, -38.97794, 7.11111, -41.88032, 7.11111, 5.98535, 3.70502, 12.93843, 0.29892, 18.94126, -23.54373, 54.23774, -26.94983, 58.48337, -30.35592, 60.40462, -33.76201, 61.85190, -37.16811, 62.87139, -40.57420, 63.52411, -43.98030, 63.88726 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( -127.11111, 2.76840, -43.98030, 31.27202, -43.98030, 62.76259, -47.44408, 62.99953, -50.90786, 63.09407, -54.37165, 63.11018, -57.83543, 63.06317, -61.29922, 62.91302, -64.76300, 61.60971, -127.11111, 33.48529 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( -43.98030, 31.27202, 0.02489, -32.46139, 3.40990, -36.96019, 6.79492, -40.02410, 10.17993, -42.59428, 13.56495, -44.69196, 16.94996, -46.34466, 20.33498, -47.58702, 20.33498, -15.12375, 0.02489, 17.56044, -23.67021, 52.63848, -27.05522, 56.81129, -30.44024, 58.85216, -33.82525, 60.41767, -37.21027, 61.55090, -40.59528, 62.30864, -43.98030, 62.76259 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 20.33498, -47.58702, 23.86166, -48.48927, 27.38835, -49.04019, 30.91504, -49.28276, 34.44173, -49.24070, 37.96842, -48.90962, 41.49510, -47.88743, 115.55556, -25.15104, 115.55556, 4.13873, 20.33498, -15.12375 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( -20.44444, 3.20073, -0.05473, -26.98403, 3.34355, -31.65941, 6.74184, -35.15036, 10.14012, -38.12283, 13.53841, -40.59238, 16.93669, -42.57922, 20.33498, -44.10881, 20.33498, -16.28316, -0.05473, 15.89182, -20.44444, 46.07659 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 20.33498, -44.10881, 23.86691, -45.24645, 27.39885, -45.95895, 30.93079, -46.27769, 34.46272, -46.21992, 37.99466, -45.78232, 41.52660, -44.73957, 136.88889, -15.46356, 136.88889, 9.64195, 20.33498, -16.28316 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 54.22222, -41.88811, 132.44444, -17.87406, 132.44444, 2.00114, 54.22222, -22.01291 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PoolVector2Array( 109.33333, -19.73880, 144.88889, -8.82333, 144.88889, 5.82155, 109.33333, -5.09392 )
+
+[sub_resource type="Animation" id=22]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Hitbox/Collision:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Hitbox/CollisionMiddle:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ null ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Hitbox/CollisionTip:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ null ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "shoot"
+length = 0.66
+step = 0.03
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.48, 0.51, 0.54, 0.57, 0.6, 0.63 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.48, 0.6, 0.66 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"values": [ { "args": [ ], "method": "disable_hitbox" }, { "args": [ ], "method": "enable_hitbox" }, { "args": [ ], "method": "disable_hitbox" }, { "args": [ ], "method": "stop" } ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Hitbox/Collision:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.48, 0.51, 0.54, 0.57, 0.6, 0.63 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ SubResource( 1 ), SubResource( 4 ), SubResource( 7 ), SubResource( 10 ), null, null, null ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Hitbox/CollisionMiddle:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.48, 0.51, 0.54, 0.57, 0.6, 0.63 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ null, null, SubResource( 8 ), SubResource( 11 ), SubResource( 14 ), null, null ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Hitbox/CollisionTip:shape")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.48, 0.51, 0.54, 0.57, 0.6, 0.63 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ null, null, null, SubResource( 12 ), SubResource( 15 ), SubResource( 18 ), SubResource( 21 ) ]
+}
+
+[node name="EnemyProjectile" instance=ExtResource( 1 )]
+scale = Vector2( 0.75, 0.75 )
+script = ExtResource( 9 )
+destroy_on_leaving_screen = false
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 0, 0 )
 texture = ExtResource( 2 )
 
-[node name="Hitbox" parent="." instance=ExtResource( 1 )]
-unique_name_in_owner = true
+[node name="Hitbox" parent="." index="1"]
 collision_layer = 16
+script = ExtResource( 10 )
 
 [node name="Collision" parent="Hitbox" index="0"]
-rotation = 1.57079
+position = Vector2( 0, 0 )
 shape = SubResource( 1 )
+disabled = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-unique_name_in_owner = true
+[node name="CollisionMiddle" type="CollisionShape2D" parent="Hitbox" index="1"]
+disabled = true
+
+[node name="CollisionTip" type="CollisionShape2D" parent="Hitbox" index="2"]
+disabled = true
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "shoot"
+anims/RESET = SubResource( 22 )
+anims/shoot = SubResource( 23 )
 
 [connection signal="hit_something" from="Hitbox" to="." method="_on_Hitbox_hit_something"]
 
