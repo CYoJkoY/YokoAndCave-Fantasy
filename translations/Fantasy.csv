@@ -162,83 +162,83 @@ Perde ancora più velocità ma guadagna ancora più PV massimi. Ucciderlo gli fa
 FANTASY_LITTLE_SLIME_NAME,Small Slime,Petit slime,小史莱姆,スモールスライム,작은 슬라임,小史萊姆,Малый слизень,Mały szlam,Slime pequeño,Slime pequeno,Kleiner Schleim,Küçük slime,Slime piccolo
 FANTASY_LITTLE_SLIME_BEHAVIOUR_DESCRIPTION,Slowly pursues the player,Poursuit lentement le joueur,缓慢追击玩家,ゆっくりプレイヤーを追跡する,플레이어를 천천히 추적합니다,緩慢追擊玩家,Медленно преследует игрока,Powoli ściga gracza,Persigue lentamente al jugador,Persegue lentamente o jogador,Verfolgt den Spieler langsam,Oyuncuyu yavaşça takip eder,Insegue lentamente il giocatore
 FANTASY_MEDIUM_SLIME_NAME,Medium Slime,Slime moyen,中史莱姆,ミディアムスライム,중간 슬라임,中史萊姆,Средний слизень,Średni szlam,Slime mediano,Slime médio,Mittlerer Schleim,Orta slime,Slime medio
-FANTASY_MEDIUM_SLIME_BEHAVIOUR_DESCRIPTION,Drops only gathered materials. Slowly pursues the player. Summons 1 small slime per second. Splits into 3 small slimes upon death. Evolves after 24 instances of either non-slime enemies dying or materials being picked up within a 150-unit range,Lâche uniquement les matériaux ramassés. Poursuit lentement le joueur. Invoque 1 petit slime par seconde. Se divise en 3 petits slimes à la mort. Évolue après 24 occurrences de morts d'ennemis non-slime ou de ramassage de matériaux dans un rayon de 150 unités,"仅掉落拾取的材料,缓慢追击玩家,每秒召唤1个小史莱姆,死亡时分裂成3个小史莱姆,150范围内死亡的非史莱姆系敌人与其拾取的材料之和达到24个则进化",拾得した素材のみを落とす.ゆっくりプレイヤーを追跡.毎秒1体のスモールスライムを召喚.死亡時に3体のスモールスライムに分裂.150ユニット範囲内で非スライム敵の死亡または素材の拾得が24回発生すると進化,획득한 재료만 떨어뜨립니다. 플레이어를 천천히 추적합니다. 매 초 작은 슬라임을 1마리 소환합니다. 사망 시 3마리의 작은 슬라임으로 분열합니다. 150 범위 내에서 비슬라임 적 사망 또는 재료 획득이 24회 발생하면 진화합니다,"僅掉落拾取的材料,緩慢追擊玩家,每秒召喚1個小史萊姆,死亡時分裂成3個小史萊姆,150範圍內死亡的非史萊姆系敵人與其拾取的材料之和達到24個則進化",Роняет только собранные материалы. Медленно преследует игрока. Призывает 1 малого слизня в секунду. При смерти разделяется на 3 малых слизней. Эволюционирует после 24 событий смерти не-слизней или подбора материалов в радиусе 150 единиц,Upuszcza tylko zebrane materiały. Powoli ściga gracza. Co sekundę przywołuje 1 małego szlama. Przy śmierci dzieli się na 3 małe szlamy. Ewoluuje po 24 przypadkach śmierci przeciwników niebędących szlamami lub zebrania materiałów w zasięgu 150 jednostek,Suelta solo los materiales recogidos. Persigue lentamente al jugador. Invoca 1 slime pequeño por segundo. Se divide en 3 slimes pequeños al morir. Evoluciona tras 24 instancias de muertes de enemigos no slime o recogida de materiales en un radio de 150 unidades,Solta apenas os materiais coletados. Persegue lentamente o jogador. Invoca 1 slime pequeno por segundo. Divide-se em 3 slimes pequenos ao morrer. Evolui após 24 ocorrências de mortes de inimigos não slime ou coleta de materiais em um raio de 150 unidades,Lässt nur gesammelte Materialien fallen. Verfolgt den Spieler langsam. Beschwört 1 kleinen Schleim pro Sekunde. Teilt sich beim Tod in 3 kleine Schleime. Entwickelt sich nach 24 Vorkommnissen von getöteten Nicht-Schleim-Gegnern oder aufgesammelten Materialien in einem Umkreis von 150 Einheiten,Yalnızca toplanan malzemeleri düşürür. Oyuncuyu yavaşça takip eder. Saniyede 1 küçük slime çağırır. Öldüğünde 3 küçük slime'a bölünür. 150 birim menzil içinde balçık olmayan düşman ölümleri veya malzeme toplamanın 24 kez gerçekleşmesinden sonra evrimleşir,Lascia cadere solo i materiali raccolti. Insegue lentamente il giocatore. Evoca 1 slime piccolo al secondo. Si divide in 3 slime piccoli alla morte. Si evolve dopo 24 occorrenze di nemici non slime uccisi o materiali raccolti entro un raggio di 150 unità
+FANTASY_MEDIUM_SLIME_BEHAVIOUR_DESCRIPTION,"Slowly pursues the player and regularly summons a small slime. Absorbs materials, which boost later material drops. Evolves into a large slime after absorbing materials and nearby non-slime deaths a total of 24 times. Splits into 3 small slimes when killed, but not when evolving.","Poursuit lentement le joueur et invoque régulièrement un petit slime. Absorbe des matériaux qui augmentent les prochains butins. Évolue en grand slime après un total de 24 absorptions de matériaux et morts d'ennemis non-slimes à proximité. Se divise en 3 petits slimes à la mort, mais pas lors de l'évolution.",缓慢追击玩家，定期召唤小史莱姆，并吸收材料用于加成后续掉落。吸收材料与附近非史莱姆敌人的死亡累计达到24次后，进化为大史莱姆。被击杀时分裂成3个小史莱姆，进化时不会分裂。,ゆっくりプレイヤーを追い、定期的に小スライムを召喚する。素材を吸収し、以後の素材ドロップを増やす。素材の吸収と近くのスライム以外の敵の死亡が合計24回になると大スライムに進化する。倒されると小スライム3体に分裂するが、進化時は分裂しない。,플레이어를 천천히 추적하며 주기적으로 작은 슬라임을 소환합니다. 재료를 흡수해 이후 재료 드롭을 늘립니다. 재료 흡수와 주변 비슬라임 적의 사망이 총 24회에 도달하면 큰 슬라임으로 진화합니다. 처치되면 작은 슬라임 3마리로 분열하지만 진화할 때는 분열하지 않습니다.,緩慢追擊玩家，定期召喚小史萊姆，並吸收材料用於加成後續掉落。吸收材料與附近非史萊姆敵人的死亡累計達到24次後，進化為大史萊姆。被擊殺時分裂成3個小史萊姆，進化時不會分裂。,"Медленно преследует игрока и регулярно призывает малого слизня. Поглощённые материалы увеличивают последующие выпадения. После суммарно 24 поглощений материалов и смертей не-слизней поблизости превращается в большого слизня. При убийстве делится на 3 малых слизней, при эволюции — нет.","Powoli ściga gracza i regularnie przywołuje małego szlama. Pochłania materiały, zwiększając późniejszą zdobycz. Ewoluuje w dużego szlama po łącznie 24 pochłonięciach materiałów i śmierciach pobliskich wrogów innych niż szlamy. Zabity dzieli się na 3 małe szlamy, ale nie dzieli się podczas ewolucji.","Persigue lentamente al jugador e invoca slimes pequeños. Absorbe materiales que aumentan los que se sueltan después. Evoluciona en un slime grande tras un total de 24 absorciones de materiales y muertes cercanas de enemigos no slime. Al morir se divide en 3 slimes pequeños, pero no al evolucionar.","Persegue lentamente o jogador e invoca slimes pequenos. Absorve materiais que aumentam os próximos materiais derrubados. Evolui para um slime grande após um total de 24 absorções de materiais e mortes próximas de inimigos não slime. Ao morrer divide-se em 3 slimes pequenos, mas não ao evoluir.","Verfolgt den Spieler langsam und beschwört regelmäßig einen kleinen Schleim. Absorbierte Materialien erhöhen spätere Materialbeute. Nach insgesamt 24 Materialaufnahmen und Toden naher Nicht-Schleim-Gegner entwickelt er sich zum großen Schleim. Beim Tod teilt er sich in 3 kleine Schleime, bei der Entwicklung nicht.",Oyuncuyu yavaşça takip eder ve düzenli olarak küçük slime çağırır. Emdiği malzemeler sonraki malzeme düşüşlerini artırır. Malzeme emme ve yakındaki slime olmayan düşman ölümleri toplam 24 olunca büyük slime'a evrimleşir. Öldürüldüğünde 3 küçük slime'a bölünür; evrim sırasında bölünmez.,"Insegue lentamente il giocatore ed evoca piccoli slime. Assorbe materiali che aumentano quelli lasciati cadere in seguito. Si evolve in uno slime grande dopo un totale di 24 assorbimenti di materiali e morti vicine di nemici non slime. Alla morte si divide in 3 piccoli slime, ma non durante l'evoluzione."
 FANTASY_BIG_SLIME_NAME,Big Slime,Gros slime,大史莱姆,ビッグスライム,큰 슬라임,大史萊姆,Большой слизень,Duży szlam,Slime grande,Slime grande,Großer Schleim,Büyük slime,Slime grande
-FANTASY_BIG_SLIME_BEHAVIOUR_DESCRIPTION,"No materials drop, slowly chases the player, summons 3 small slimes per second, splits into 2 medium slimes upon death, leaves a trail of slime residue lasting 5 seconds each second, slows player by 50% on contact","Ne lâche aucun matériau, poursuit lentement le joueur, invoque 3 petits slimes par seconde, se divise en 2 slimes moyens à la mort, laisse une traînée de résidu gluant durant 5 secondes chaque seconde, ralentit le joueur de 50% au contact","不掉落材料,缓慢追击玩家,每秒召唤3个小史莱姆,死亡时分裂成2个中史莱姆,每秒留下持续5秒的史莱姆粘液痕迹,玩家触碰时被减速50%","素材を落とさず,ゆっくりプレイヤーを追跡.毎秒3体のスモールスライムを召喚.死亡時に2体のミディアムスライムに分裂.毎秒持続5秒のスライム粘液の跡を残し,接触でプレイヤーを50%減速","재료를 떨어뜨리지 않고, 플레이어를 천천히 추적하며, 매 초 작은 슬라임 3마리를 소환하고, 사망 시 중간 슬라임 2마리로 분열하며, 매 초 5초간 지속되는 슬라임 잔여물 흔적을 남기고, 접촉 시 플레이어를 50% 감속시킵니다","不掉落材料,緩慢追擊玩家,每秒召喚3個小史萊姆,死亡時分裂成2個中史萊姆,每秒留下持續5秒的史萊姆黏液痕跡,玩家觸碰時被減速50%","Не роняет материалы, медленно преследует игрока, призывает 3 малых слизней в секунду, при смерти разделяется на 2 средних слизней, каждую секунду оставляет след из слизи длительностью 5 секунд, замедляет игрока на 50% при касании","Nie upuszcza materiałów, powoli ściga gracza, co sekundę przywołuje 3 małe szlamy, przy śmierci dzieli się na 2 średnie szlamy, co sekundę pozostawia ślad szlamu trwający 5 sekund, spowalnia gracza o 50% przy kontakcie","No suelta materiales, persigue lentamente al jugador, invoca 3 slimes pequeños por segundo, se divide en 2 slimes medianos al morir, deja un rastro de residuo de slime que dura 5 segundos cada segundo, ralentiza al jugador un 50% al contacto","Não solta materiais, persegue lentamente o jogador, invoca 3 slimes pequenos por segundo, divide-se em 2 slimes médios ao morrer, deixa um rastro de resíduo de slime que dura 5 segundos a cada segundo, reduz a velocidade do jogador em 50% ao contato","Lässt keine Materialien fallen, verfolgt den Spieler langsam, beschwört 3 kleine Schleime pro Sekunde, teilt sich beim Tod in 2 mittlere Schleime, hinterlässt jede Sekunde eine Schleimspur mit 5 Sekunden Dauer, verlangsamt den Spieler bei Kontakt um 50%","Malzeme düşürmez, oyuncuyu yavaşça kovalar, saniyede 3 küçük slime çağırır, öldüğünde 2 orta slime'a bölünür, her saniye 5 saniye süren slime kalıntısı izi bırakır, temasla oyuncuyu %50 yavaşlatır","Non lascia cadere materiali, insegue lentamente il giocatore, evoca 3 slime piccoli al secondo, si divide in 2 slime medi alla morte, lascia una scia di residuo di slime che dura 5 secondi ogni secondo, rallenta il giocatore del 50% al contatto"
+FANTASY_BIG_SLIME_BEHAVIOUR_DESCRIPTION,"No materials drop, slowly chases the player, summons 3 small slimes per second, splits into 2 medium slimes upon death, leaves a trail of slime residue lasting 5 seconds each second, slows player by 50% on contact. Every 3 seconds, also fires a ring of 8 outward-moving projectiles. Collected materials go into the reserve that boosts subsequent material drops, not its death drops.","Ne lâche aucun matériau, poursuit lentement le joueur, invoque 3 petits slimes par seconde, se divise en 2 slimes moyens à la mort, laisse une traînée de résidu gluant durant 5 secondes chaque seconde, ralentit le joueur de 50% au contact. Tire aussi toutes les 3 secondes un anneau de 8 projectiles vers l'extérieur. Les matériaux ramassés rejoignent la réserve qui augmente les prochains matériaux lâchés, sans tomber à sa mort.","不掉落材料,缓慢追击玩家,每秒召唤3个小史莱姆,死亡时分裂成2个中史莱姆,每秒留下持续5秒的史莱姆粘液痕迹,玩家触碰时被减速50%。每3秒向四周发射一圈8发弹幕。拾取的材料计入用于加成后续掉落的材料储备,不会在死亡时返还。","素材を落とさず,ゆっくりプレイヤーを追跡.毎秒3体のスモールスライムを召喚.死亡時に2体のミディアムスライムに分裂.毎秒持続5秒のスライム粘液の跡を残し,接触でプレイヤーを50%減速. さらに3秒ごとに外向きの弾を8発、輪状に発射する。拾った素材は以後の素材ドロップを増やす備蓄に入り、死亡時には落とさない。","재료를 떨어뜨리지 않고, 플레이어를 천천히 추적하며, 매 초 작은 슬라임 3마리를 소환하고, 사망 시 중간 슬라임 2마리로 분열하며, 매 초 5초간 지속되는 슬라임 잔여물 흔적을 남기고, 접촉 시 플레이어를 50% 감속시킵니다. 또한 3초마다 바깥으로 퍼지는 원형 탄막 8발을 발사합니다. 주운 재료는 이후 재료 드롭을 늘리는 비축분에 더해지며 사망 시 반환하지 않습니다.","不掉落材料,緩慢追擊玩家,每秒召喚3個小史萊姆,死亡時分裂成2個中史萊姆,每秒留下持續5秒的史萊姆黏液痕跡,玩家觸碰時被減速50%。每3秒向四周發射一圈8發彈幕。拾取的材料計入用於加成後續掉落的材料儲備,不會在死亡時返還。","Не роняет материалы, медленно преследует игрока, призывает 3 малых слизней в секунду, при смерти разделяется на 2 средних слизней, каждую секунду оставляет след из слизи длительностью 5 секунд, замедляет игрока на 50% при касании. Также каждые 3 секунды выпускает кольцо из 8 расходящихся снарядов. Собранные материалы идут в запас, увеличивающий последующее выпадение материалов, а не выпадают при смерти.","Nie upuszcza materiałów, powoli ściga gracza, co sekundę przywołuje 3 małe szlamy, przy śmierci dzieli się na 2 średnie szlamy, co sekundę pozostawia ślad szlamu trwający 5 sekund, spowalnia gracza o 50% przy kontakcie. Co 3 sekundy wystrzeliwuje też pierścień 8 rozchodzących się pocisków. Zebrane materiały trafiają do rezerwy zwiększającej kolejne upuszczane materiały, a nie wypadają po śmierci.","No suelta materiales, persigue lentamente al jugador, invoca 3 slimes pequeños por segundo, se divide en 2 slimes medianos al morir, deja un rastro de residuo de slime que dura 5 segundos cada segundo, ralentiza al jugador un 50% al contacto. También dispara un anillo de 8 proyectiles hacia fuera cada 3 segundos. Los materiales recogidos van a la reserva que aumenta los siguientes materiales soltados y no se sueltan al morir.","Não solta materiais, persegue lentamente o jogador, invoca 3 slimes pequenos por segundo, divide-se em 2 slimes médios ao morrer, deixa um rastro de resíduo de slime que dura 5 segundos a cada segundo, reduz a velocidade do jogador em 50% ao contato. Também dispara um anel de 8 projéteis para fora a cada 3 segundos. Os materiais coletados vão para a reserva que aumenta os próximos materiais derrubados e não caem na morte.","Lässt keine Materialien fallen, verfolgt den Spieler langsam, beschwört 3 kleine Schleime pro Sekunde, teilt sich beim Tod in 2 mittlere Schleime, hinterlässt jede Sekunde eine Schleimspur mit 5 Sekunden Dauer, verlangsamt den Spieler bei Kontakt um 50%. Feuert außerdem alle 3 Sekunden einen Ring aus 8 nach außen fliegenden Projektilen. Gesammelte Materialien gehen in die Reserve, die nachfolgende Materialbeute erhöht und werden beim Tod nicht fallen gelassen.","Malzeme düşürmez, oyuncuyu yavaşça kovalar, saniyede 3 küçük slime çağırır, öldüğünde 2 orta slime'a bölünür, her saniye 5 saniye süren slime kalıntısı izi bırakır, temasla oyuncuyu %50 yavaşlatır. Ayrıca her 3 saniyede dışa yayılan 8 mermilik bir halka ateşler. Topladığı malzemeler ölümde düşmez, sonraki malzeme düşüşlerini artıran rezerve eklenir.","Non lascia cadere materiali, insegue lentamente il giocatore, evoca 3 slime piccoli al secondo, si divide in 2 slime medi alla morte, lascia una scia di residuo di slime che dura 5 secondi ogni secondo, rallenta il giocatore del 50% al contatto. Ogni 3 secondi spara anche un anello di 8 proiettili verso l'esterno. I materiali raccolti vanno nella riserva che aumenta i successivi materiali lasciati cadere e non cadono alla morte."
 FANTASY_SLIME_KING_NAME,Slime King,Roi slime,史莱姆王,スライムキング,슬라임 킹,史萊姆王,Король слизней,Król szlamów,Rey Slime,Rei Slime,Schleimkönig,Slime Kralı,Re Slime
 FANTASY_SLIME_KING_BEHAVIOUR_DESCRIPTION,"Mutation 0:
-Slowly pursues the player. Every 3 seconds, it summons 3 Medium Slimes; every 5 seconds, it summons 1 Large Slime. Every 0.5 seconds, it leaves behind a Slime Trail that lasts for 10 seconds. Players who touch the trail are slowed by 50%.
+Slowly pursues the player. Every 3 seconds, it summons 3 Medium Slimes; every 5 seconds, it summons 1 Large Slime. Every 0.5 seconds, it leaves behind a Slime Trail that lasts for 5 seconds. Players who touch the trail are slowed by 50%.
 
 Mutation 1 (50% HP / 35 s)
-Builds upon Mutation 0. Additionally, it performs a long-distance dash toward the player every 5 seconds.","Mutation 0 :
-Poursuit lentement le joueur. Toutes les 3 secondes, il invoque 3 Slimes moyens ; toutes les 5 secondes, il invoque 1 Grand Slime. Toutes les 0,5 seconde, il laisse derrière lui une traînée de slime pendant 10 secondes. Les joueurs qui touchent la traînée sont ralentis de 50%.
+Builds upon Mutation 0. Additionally, it performs a long-distance dash toward the player every 5 seconds. On entering Mutation 1, immediately summons 4 additional large slimes.","Mutation 0 :
+Poursuit lentement le joueur. Toutes les 3 secondes, il invoque 3 Slimes moyens ; toutes les 5 secondes, il invoque 1 Grand Slime. Toutes les 0,5 seconde, il laisse derrière lui une traînée de slime pendant 5 secondes. Les joueurs qui touchent la traînée sont ralentis de 50%.
 
 Mutation 1 (50% PV / 35 s) :
-S'appuie sur la Mutation 0. De plus, il effectue une ruée à longue distance vers le joueur toutes les 5 secondes.","异变0:
-缓慢追击玩家,每3秒召唤3个中史莱姆,每5秒召唤1个大史莱姆,每0.5秒留下持续10秒的史莱姆粘液痕迹,玩家触碰时被减速50%
+S'appuie sur la Mutation 0. De plus, il effectue une ruée à longue distance vers le joueur toutes les 5 secondes. À l'entrée en Mutation 1, invoque immédiatement 4 grands slimes supplémentaires.","异变0:
+缓慢追击玩家,每3秒召唤3个中史莱姆,每5秒召唤1个大史莱姆,每0.5秒留下持续5秒的史莱姆粘液痕迹,玩家触碰时被减速50%
 
 异变1 (50%生命 / 35秒):
-在异变0的基础上,每5秒向玩家长距离冲刺","変異0:
-ゆっくりとプレイヤーを追跡する.3秒ごとにミディアムスライムを3体,5秒ごとにラージスライムを1体召喚する.0.5秒ごとに持続10秒のスライムの跡を残し,触れたプレイヤーを50%減速させる.
+在异变0的基础上,每5秒向玩家长距离冲刺。进入异变1时立即额外召唤4个大史莱姆。","変異0:
+ゆっくりとプレイヤーを追跡する.3秒ごとにミディアムスライムを3体,5秒ごとにラージスライムを1体召喚する.0.5秒ごとに持続5秒のスライムの跡を残し,触れたプレイヤーを50%減速させる.
 
 変異1 (HP50% / 35秒):
-変異0に加え,5秒ごとにプレイヤーに向かって長距離ダッシュを行う.","변이 0:
-플레이어를 천천히 추적합니다. 3초마다 중간 슬라임 3마리를, 5초마다 큰 슬라임 1마리를 소환합니다. 0.5초마다 10초간 지속되는 슬라임 흔적을 남기며, 흔적에 닿은 플레이어는 50% 감속됩니다.
+変異0に加え,5秒ごとにプレイヤーに向かって長距離ダッシュを行う. 変異1に入ると即座に大スライムを追加で4体召喚する。","변이 0:
+플레이어를 천천히 추적합니다. 3초마다 중간 슬라임 3마리를, 5초마다 큰 슬라임 1마리를 소환합니다. 0.5초마다 5초간 지속되는 슬라임 흔적을 남기며, 흔적에 닿은 플레이어는 50% 감속됩니다.
 
 변이 1 (체력 50% / 35초):
-변이 0에 더해, 5초마다 플레이어를 향해 장거리 돌진을 합니다.","異變0:
-緩慢追擊玩家,每3秒召喚3個中史萊姆,每5秒召喚1個大史萊姆,每0.5秒留下持續10秒的史萊姆黏液痕跡,玩家觸碰時被減速50%
+변이 0에 더해, 5초마다 플레이어를 향해 장거리 돌진을 합니다. 변이 1 진입 시 큰 슬라임 4마리를 즉시 추가 소환합니다.","異變0:
+緩慢追擊玩家,每3秒召喚3個中史萊姆,每5秒召喚1個大史萊姆,每0.5秒留下持續5秒的史萊姆黏液痕跡,玩家觸碰時被減速50%
 
 異變1 (50%生命 / 35秒):
-在異變0的基礎上,每5秒向玩家進行長距離衝刺","Мутация 0:
-Медленно преследует игрока. Каждые 3 секунды призывает 3 Средних слизней; каждые 5 секунд — 1 Большого слизня. Каждые 0,5 секунды оставляет След из слизи на 10 секунд. Игроки, коснувшиеся следа, замедляются на 50%.
+在異變0的基礎上,每5秒向玩家進行長距離衝刺。進入異變1時立即額外召喚4個大史萊姆。","Мутация 0:
+Медленно преследует игрока. Каждые 3 секунды призывает 3 Средних слизней; каждые 5 секунд — 1 Большого слизня. Каждые 0,5 секунды оставляет След из слизи на 5 секунд. Игроки, коснувшиеся следа, замедляются на 50%.
 
 Мутация 1 (50% ОЗ / 35 с):
-Основывается на Мутации 0. Дополнительно совершает длинный рывок к игроку каждые 5 секунд.","Mutacja 0:
-Powoli ściga gracza. Co 3 sekundy przywołuje 3 Średnie szlamy; co 5 sekund przywołuje 1 Dużego szlama. Co 0,5 sekundy pozostawia Ślad szlamu trwający 10 sekund. Gracze, którzy go dotkną, są spowalniani o 50%.
+Основывается на Мутации 0. Дополнительно совершает длинный рывок к игроку каждые 5 секунд. При переходе в Мутацию 1 сразу призывает ещё 4 больших слизней.","Mutacja 0:
+Powoli ściga gracza. Co 3 sekundy przywołuje 3 Średnie szlamy; co 5 sekund przywołuje 1 Dużego szlama. Co 0,5 sekundy pozostawia Ślad szlamu trwający 5 sekund. Gracze, którzy go dotkną, są spowalniani o 50%.
 
 Mutacja 1 (50% PŻ / 35 s):
-Opiera się na Mutacji 0. Dodatkowo co 5 sekund wykonuje daleki doskok w kierunku gracza.","Mutación 0:
-Persigue lentamente al jugador. Cada 3 segundos invoca 3 Slimes medianos; cada 5 segundos invoca 1 Slime grande. Cada 0.5 segundos deja un Rastro de slime que dura 10 segundos. Los jugadores que tocan el rastro son ralentizados un 50%.
+Opiera się na Mutacji 0. Dodatkowo co 5 sekund wykonuje daleki doskok w kierunku gracza. Po wejściu w Mutację 1 natychmiast przywołuje dodatkowe 4 duże szlamy.","Mutación 0:
+Persigue lentamente al jugador. Cada 3 segundos invoca 3 Slimes medianos; cada 5 segundos invoca 1 Slime grande. Cada 0.5 segundos deja un Rastro de slime que dura 5 segundos. Los jugadores que tocan el rastro son ralentizados un 50%.
 
 Mutación 1 (50% Vida / 35 s):
-Se basa en la Mutación 0. Además, realiza una embestida de larga distancia hacia el jugador cada 5 segundos.","Mutação 0:
-Persegue lentamente o jogador. A cada 3 segundos, invoca 3 Slimes Médios; a cada 5 segundos, invoca 1 Slime Grande. A cada 0,5 segundo, deixa um Rastro de Slime que dura 10 segundos. Jogadores que tocam o rastro são lentificados em 50%.
+Se basa en la Mutación 0. Además, realiza una embestida de larga distancia hacia el jugador cada 5 segundos. Al entrar en la Mutación 1, invoca inmediatamente 4 slimes grandes adicionales.","Mutação 0:
+Persegue lentamente o jogador. A cada 3 segundos, invoca 3 Slimes Médios; a cada 5 segundos, invoca 1 Slime Grande. A cada 0,5 segundo, deixa um Rastro de Slime que dura 5 segundos. Jogadores que tocam o rastro são lentificados em 50%.
 
 Mutação 1 (50% PV / 35 s):
-Baseia-se na Mutação 0. Além disso, realiza uma investida de longa distância contra o jogador a cada 5 segundos.","Mutation 0:
-Verfolgt den Spieler langsam. Alle 3 Sekunden beschwört es 3 Mittlere Schleime; alle 5 Sekunden beschwört es 1 Großen Schleim. Alle 0,5 Sekunden hinterlässt es eine Schleimspur mit 10 Sekunden Dauer. Spieler, die die Spur berühren, werden um 50% verlangsamt.
+Baseia-se na Mutação 0. Além disso, realiza uma investida de longa distância contra o jogador a cada 5 segundos. Ao entrar na Mutação 1, invoca imediatamente mais 4 slimes grandes.","Mutation 0:
+Verfolgt den Spieler langsam. Alle 3 Sekunden beschwört es 3 Mittlere Schleime; alle 5 Sekunden beschwört es 1 Großen Schleim. Alle 0,5 Sekunden hinterlässt es eine Schleimspur mit 5 Sekunden Dauer. Spieler, die die Spur berühren, werden um 50% verlangsamt.
 
 Mutation 1 (50% LP / 35 s):
-Baut auf Mutation 0 auf. Führt zusätzlich alle 5 Sekunden einen weiten Sturmangriff auf den Spieler aus.","Mutasyon 0:
-Oyuncuyu yavaşça takip eder. Her 3 saniyede 3 Orta Slime; her 5 saniyede 1 Büyük Slime çağırır. Her 0,5 saniyede 10 saniye süren bir Slime İzi bırakır. İze temas eden oyuncular %50 yavaşlar.
+Baut auf Mutation 0 auf. Führt zusätzlich alle 5 Sekunden einen weiten Sturmangriff auf den Spieler aus. Beschwört beim Eintritt in Mutation 1 sofort 4 zusätzliche große Schleime.","Mutasyon 0:
+Oyuncuyu yavaşça takip eder. Her 3 saniyede 3 Orta Slime; her 5 saniyede 1 Büyük Slime çağırır. Her 0,5 saniyede 5 saniye süren bir Slime İzi bırakır. İze temas eden oyuncular %50 yavaşlar.
 
 Mutasyon 1 (%50 Can / 35 sn):
-Mutasyon 0'ın üzerine kuruludur. Ek olarak her 5 saniyede bir oyuncuya doğru uzun menzilli bir atılma gerçekleştirir.","Mutazione 0:
-Insegue lentamente il giocatore. Ogni 3 secondi evoca 3 Slime medi; ogni 5 secondi evoca 1 Slime grande. Ogni 0,5 secondi lascia una Scia di slime che dura 10 secondi. I giocatori che toccano la scia vengono rallentati del 50%.
+Mutasyon 0'ın üzerine kuruludur. Ek olarak her 5 saniyede bir oyuncuya doğru uzun menzilli bir atılma gerçekleştirir. Mutasyon 1'e geçerken hemen 4 ek büyük slime çağırır.","Mutazione 0:
+Insegue lentamente il giocatore. Ogni 3 secondi evoca 3 Slime medi; ogni 5 secondi evoca 1 Slime grande. Ogni 0,5 secondi lascia una Scia di slime che dura 5 secondi. I giocatori che toccano la scia vengono rallentati del 50%.
 
 Mutazione 1 (50% PV / 35 s):
-Si basa sulla Mutazione 0. Inoltre, effettua uno scatto a lunga distanza verso il giocatore ogni 5 secondi."
+Si basa sulla Mutazione 0. Inoltre, effettua uno scatto a lunga distanza verso il giocatore ogni 5 secondi. All'ingresso nella Mutazione 1 evoca immediatamente altri 4 slime grandi."
 FANTASY_UNICORN_RABBIT_NAME,Unicorn Rabbit,Lapin licorne,独角兔,ユニコーンラビット,유니콘 토끼,獨角兔,Кролик-единорог,Króliczy jednorożec,Conejo unicornio,Coelho unicórnio,Einhornhase,Unicorn Tavşan,Coniglio unicorno
 FANTASY_UNICORN_RABBIT_BEHAVIOUR_DESCRIPTION,"Chases the character, deals damage on touch","Poursuit le personnage, inflige des dégâts au contact","追逐角色, 接触时造成伤害","キャラクターを追跡し,接触でダメージを与える","캐릭터를 쫓아가며, 접촉 시 피해를 줍니다","追逐角色,接觸時造成傷害","Преследует персонажа, наносит урон при касании","Goni postać, zadaje obrażenia przy dotknięciu","Persigue al personaje, inflige daño al contacto","Persegue o personagem, causa dano ao toque","Verfolgt den Charakter, verursacht Schaden bei Berührung","Karakteri kovalar, temasla hasar verir","Insegue il personaggio, infligge danni al contatto"
 FANTASY_WOLF_NAME,Wolf,Loup,狼,ウルフ,늑대,狼,Волк,Wilk,Lobo,Lobo,Wolf,Kurt,Lupo
-FANTASY_WOLF_BEHAVIOUR_DESCRIPTION,"Chases the character, dashes toward them every 0.75 seconds","Poursuit le personnage, fonce vers lui toutes les 0,75 seconde","追逐角色, 每0.75秒向角色冲刺","キャラクターを追跡し,0.75秒ごとにダッシュする","캐릭터를 쫓아가며, 0.75초마다 돌진합니다","追逐角色,每0.75秒向角色衝刺","Преследует персонажа, совершает рывок к нему каждые 0,75 секунды","Goni postać, co 0,75 sekundy wykonuje doskok","Persigue al personaje, se abalanza hacia él cada 0.75 segundos","Persegue o personagem, avança sobre ele a cada 0,75 segundos","Verfolgt den Charakter, stürmt alle 0,75 Sekunden auf ihn zu","Karakteri kovalar, her 0,75 saniyede bir ona doğru atılır","Insegue il personaggio, scatta verso di lui ogni 0,75 secondi"
+FANTASY_WOLF_BEHAVIOUR_DESCRIPTION,Chases the player and periodically dashes toward a random point near them.,Poursuit le joueur et fonce régulièrement vers un point aléatoire près de lui.,"追逐玩家,周期性向玩家附近的随机位置冲刺。",プレイヤーを追い、その近くのランダムな地点へ定期的に突進する。,플레이어를 추적하며 그 주변의 임의 지점으로 주기적으로 돌진합니다.,"追逐玩家,週期性向玩家附近的隨機位置衝刺。",Преследует игрока и периодически бросается к случайной точке рядом с ним.,Ściga gracza i okresowo szarżuje na losowy punkt w jego pobliżu.,Persigue al jugador y embiste hacia un punto aleatorio cercano.,Persegue o jogador e avança para um ponto aleatório próximo dele.,Verfolgt den Spieler und stürmt regelmäßig auf einen zufälligen Punkt in seiner Nähe zu.,Oyuncuyu takip eder ve yakınındaki rastgele bir noktaya atılır.,Insegue il giocatore e scatta verso un punto casuale vicino a lui.
 FANTASY_FLOWER_SPIRIT_NAME,Flower Spirit,Esprit fleur,花妖,フラワースピリット,꽃령,花妖,Цветочный дух,Kwiatowy duch,Espíritu floral,Espírito flor,Blumengeist,Çiçek Ruhu,Spirito dei fiori
 FANTASY_FLOWER_SPIRIT_BEHAVIOUR_DESCRIPTION,"Cannot move, will be attacked by lootworm, fires a laser toward the player every 3 seconds with a 1-second warning","Ne peut pas se déplacer, sera attaqué par le ver pillard, tire un laser vers le joueur toutes les 3 secondes avec un avertissement d'1 seconde","无法移动, 会被搜刮虫虫攻击, 每3秒朝玩家方向发射拥有1秒预警的激光","移動できず,ルートワームに攻撃される.3秒ごとに1秒の予兆とともにプレイヤーに向けてレーザーを発射する","이동할 수 없으며, 약탈벌레에게 공격받습니다. 3초마다 1초의 경고와 함께 플레이어를 향해 레이저를 발사합니다","無法移動,會被搜刮蟲蟲攻擊,每3秒朝玩家方向發射擁有1秒預警的雷射","Не может двигаться, будет атакован червем-грабителем, стреляет лазером в игрока каждые 3 секунды с предупреждением за 1 секунду","Nie może się poruszać, zostanie zaatakowany przez łupieżczego robaka, co 3 sekundy strzela laserem w kierunku gracza z 1-sekundowym ostrzeżeniem","No puede moverse, será atacado por el gusano saqueador, dispara un láser hacia el jugador cada 3 segundos con 1 segundo de advertencia","Não pode se mover, será atacado pelo verme saqueador, dispara um laser na direção do jogador a cada 3 segundos com um aviso de 1 segundo","Kann sich nicht bewegen, wird vom Plünderwurm angegriffen, feuert alle 3 Sekunden mit einer 1-sekündigen Warnung einen Laser auf den Spieler","Hareket edemez, yağmacı kurt tarafından saldırıya uğrar, 1 saniyelik uyarıyla her 3 saniyede bir oyuncuya lazer ateşler","Non può muoversi, verrà attaccato dal verme saccheggiatore, spara un laser verso il giocatore ogni 3 secondi con un preavviso di 1 secondo"
 FANTASY_SNAKE_NAME,Snake,Serpent,蛇,スネーク,뱀,蛇,Змея,Wąż,Serpiente,Serpente,Schlange,Yılan,Serpente
-FANTASY_SNAKE_BEHAVIOUR_DESCRIPTION,"Winds forward toward the character, dashing toward them every second","Serpente vers le personnage, fonçant sur lui chaque seconde","蜿蜒前行靠近角色, 每秒向角色冲刺","キャラクターに向かって蛇行しながら進み,毎秒ダッシュする","캐릭터를 향해 구불구불 이동하며, 매 초 돌진합니다","蜿蜒前行靠近角色,每秒向角色衝刺","Извиваясь, движется к персонажу, каждый секунду совершая рывок","Wije się w kierunku postaci, co sekundę doskakując","Serpentea hacia el personaje, abalanzándose sobre él cada segundo","Serpenteia em direção ao personagem, avançando a cada segundo","Schlängelt sich auf den Charakter zu, stürmt jede Sekunde auf ihn zu","Karaktere doğru kıvrılarak ilerler, her saniye ona atılır","Serpeggia verso il personaggio, scattando ogni secondo"
+FANTASY_SNAKE_BEHAVIOUR_DESCRIPTION,"Approaches the player along a winding path. When nearby, periodically dashes toward a random point on the map rather than aiming at the player.","S'approche du joueur en ondulant. À proximité, fonce régulièrement vers un point aléatoire de la carte sans viser le joueur.","蜿蜒靠近玩家,接近后周期性向地图上的随机位置冲刺,冲刺并不瞄准玩家。",蛇行しながらプレイヤーに近づく。近距離ではプレイヤーを狙わず、マップ上のランダムな地点へ定期的に突進する。,구불구불 움직이며 플레이어에게 접근합니다. 가까워지면 플레이어를 조준하지 않고 맵의 임의 지점을 향해 주기적으로 돌진합니다.,"蜿蜒靠近玩家,接近後週期性向地圖上的隨機位置衝刺,衝刺並不瞄準玩家。","Приближается к игроку извилистым путём. Оказавшись рядом, периодически делает рывок к случайной точке карты, не целясь в игрока.","Zbliża się do gracza krętą ścieżką. Z bliska okresowo szarżuje w stronę losowego punktu mapy, nie celując w gracza.","Se acerca al jugador serpenteando. Cuando está cerca, embiste periódicamente hacia un punto aleatorio del mapa sin apuntar al jugador.","Aproxima-se do jogador serpenteando. Quando está perto, avança periodicamente para um ponto aleatório do mapa, sem mirar no jogador.","Nähert sich dem Spieler auf gewundenem Weg. Stürmt aus der Nähe regelmäßig auf einen zufälligen Kartenpunkt zu, ohne auf den Spieler zu zielen.",Kıvrılarak oyuncuya yaklaşır. Yakındayken oyuncuyu hedeflemek yerine haritadaki rastgele bir noktaya doğru düzenli olarak atılır.,"Si avvicina al giocatore serpeggiando. Da vicino scatta periodicamente verso un punto casuale della mappa, senza mirare al giocatore."
 FANTASY_SWIFT_WOLF_NAME,Swift Wolf,Loup véloce,疾风狼,スイフトウルフ,질풍 늑대,疾風狼,Быстрый волк,Szybki wilk,Lobo veloz,Lobo veloz,Schneller Wolf,Çevik Kurt,Lupo veloce
 FANTASY_SWIFT_WOLF_BEHAVIOUR_DESCRIPTION,"Hunt the character, charging toward them rapidly every 0.5 seconds","Traque le personnage, chargeant rapidement vers lui toutes les 0,5 seconde","围猎角色, 每0.5秒快速冲向角色","キャラクターを狩り,0.5秒ごとに高速で突進する","캐릭터를 사냥하며, 0.5초마다 빠르게 돌진합니다","圍獵角色,每0.5秒快速衝向角色","Охотится на персонажа, быстро бросаясь на него каждые 0,5 секунды","Poluje na postać, szarżując szybko co 0,5 sekundy","Acecha al personaje, cargando rápidamente hacia él cada 0.5 segundos","Caça o personagem, investindo rapidamente a cada 0,5 segundos","Jagt den Charakter, stürmt alle 0,5 Sekunden schnell auf ihn zu","Karakteri avlar, her 0,5 saniyede bir hızla üzerine atılır","Caccia il personaggio, caricando rapidamente ogni 0,5 secondi"
 FANTASY_GOBLIN_JAVELIN_THROWER_NAME,Goblin Javelin Thrower,Gobelin lanceur de javelot,哥布林标枪手,ゴブリンジャベリン投げ,고블린 투창병,哥布林標槍手,Гоблин-копейщик,Goblin miotacz oszczepów,Duende lanzador de jabalina,Goblin lançador de dardo,Goblin-Speerwerfer,Goblin Cirit Atıcı,Goblin lanciatore di giavellotto
 FANTASY_GOBLIN_JAVELIN_THROWER_BEHAVIOUR_DESCRIPTION,"Runs away if the player is too close, Fires a slow projectile that may directly target the player or somewhere near","Fuit si le joueur est trop proche, tire un projectile lent ciblant directement le joueur ou à proximité","太接近时逃离角色, 发射一个可能瞄准玩家也可能瞄准玩家附近的缓慢投射物","プレイヤーが近づきすぎると逃げ出し,プレイヤーまたはその近くを狙う遅い投射物を発射する","플레이어가 너무 가까우면 도망가며, 플레이어나 그 주변을 직접 조준할 수 있는 느린 투사체를 발사합니다","太接近時逃離角色,發射一個可能瞄準玩家也可能瞄準玩家附近的緩慢投射物","Убегает, если игрок слишком близко, выпускает медленный снаряд, целясь прямо в игрока или рядом с ним","Ucieka, gdy gracz jest zbyt blisko, wystrzeliwuje wolny pocisk, który może celować bezpośrednio w gracza lub gdzieś w pobliżu","Huye si el jugador está demasiado cerca, dispara un proyectil lento que puede apuntar directamente al jugador o a algún lugar cercano","Foge se o jogador estiver muito perto, dispara um projétil lento que pode mirar diretamente no jogador ou em algum lugar próximo","Läuft weg, wenn der Spieler zu nahe ist, feuert ein langsames Projektil, das direkt auf den Spieler oder in die Nähe zielen kann","Oyuncu çok yakınsa kaçar, doğrudan oyuncuyu veya yakınını hedef alabilen yavaş bir mermi ateşler","Scappa se il giocatore è troppo vicino, spara un proiettile lento che può mirare direttamente al giocatore o nelle vicinanze"
 FANTASY_GOBLIN_PRIEST_NAME,Goblin Priest,Prêtre gobelin,哥布林祭司,ゴブリンプリースト,고블린 사제,哥布林祭司,Гоблин-жрец,Goblin kapłan,Sacerdote duende,Goblin sacerdote,Goblin-Priester,Goblin Rahibi,Goblin sacerdote
-FANTASY_GOBLIN_PRIEST_BEHAVIOUR_DESCRIPTION,"Runs away from the character, Heals enemies around it for 50(increasing by 5 each wave), Buffs other enemies' health by 75%, damage by 12%, and speed by 25%.Buffed enemies are outlined in red.","Fuit le personnage, soigne les ennemis alentour de 50 (augmente de 5 par vague), améliore les PV des autres ennemis de 75%, leurs dégâts de 12% et leur vitesse de 25%. Les ennemis améliorés sont cerclés de rouge.","逃离角色, 治疗周围的敌人50生命(每波敌袭增加5), 强化其他敌人生命值75%,伤害12%,速度25%,被强化的敌人会有红色轮廓","キャラクターから逃げ出し,周囲の敵のHPを50回復する(波ごとに5増加).他の敵のHPを75%,ダメージを12%,速度を25%強化する.強化された敵は赤く縁取られる.","캐릭터로부터 도망가며, 주변 적의 체력을 50 회복합니다(웨이브마다 5 증가). 다른 적의 체력을 75%, 피해를 12%, 속도를 25% 강화합니다. 강화된 적은 붉은 윤곽선으로 표시됩니다.","逃離角色,治療周圍的敵人50生命(每波敵襲增加5),強化其他敵人生命值75%,傷害12%,速度25%,被強化的敵人會有紅色輪廓","Убегает от персонажа, лечит окружающих врагов на 50 (увеличивается на 5 за волну), усиливает других врагов: здоровье на 75%, урон на 12%, скорость на 25%. Усиленные враги обведены красным.","Ucieka od postaci, leczy wrogów wokół o 50 (zwiększa się o 5 co falę), wzmacnia innych wrogów: zdrowie o 75%, obrażenia o 12%, prędkość o 25%. Wzmocnieni wrogowie są obrysowani na czerwono.","Huye del personaje, cura 50 de vida a los enemigos alrededor (aumenta en 5 por oleada), mejora la salud de otros enemigos en un 75%, el daño en un 12% y la velocidad en un 25%. Los enemigos mejorados se perfilan en rojo.","Foge do personagem, cura 50 de vida dos inimigos ao redor (aumentando em 5 a cada onda), fortalece a saúde de outros inimigos em 75%, dano em 12% e velocidade em 25%. Inimigos fortalecidos são contornados em vermelho.","Läuft vor dem Charakter weg, heilt umstehende Gegner um 50 (steigt jede Welle um 5), verstärkt die LP anderer Gegner um 75%, Schaden um 12% und Tempo um 25%. Verstärkte Gegner sind rot umrandet.","Karakterden kaçar, etrafındaki düşmanları 50 iyileştirir (her dalgada 5 artar), diğer düşmanların canını %75, hasarını %12 ve hızını %25 artırır. Güçlendirilmiş düşmanlar kırmızıyla belirtilir.","Scappa dal personaggio, cura i nemici circostanti di 50 (aumenta di 5 a ogni ondata), potenzia la salute degli altri nemici del 75%, i danni del 12% e la velocità del 25%. I nemici potenziati sono contornati di rosso."
+FANTASY_GOBLIN_PRIEST_BEHAVIOUR_DESCRIPTION,"Keeps its distance from the player, regularly healing nearby enemies and strengthening their health, damage, and speed. Healing grows stronger in later waves. Buffed enemies have a red outline and cannot be buffed again.","Garde ses distances avec le joueur, soigne régulièrement les ennemis proches et renforce leur vie, leurs dégâts et leur vitesse. Les soins augmentent au fil des vagues. Les ennemis renforcés ont un contour rouge et ne peuvent pas l'être à nouveau.",远离玩家，定期治疗附近的敌人，并强化它们的生命、伤害和速度。治疗量随波次增加，被强化的敌人会出现红色轮廓，不会重复强化。,プレイヤーと距離を取り、周囲の敵を定期的に回復し、体力・ダメージ・速度を強化する。回復量はウェーブが進むほど増える。強化された敵には赤い輪郭が付き、重ねて強化されることはない。,"플레이어와 거리를 유지하며 주변 적을 주기적으로 치유하고 체력, 피해량, 속도를 강화합니다. 치유량은 웨이브가 진행될수록 증가합니다. 강화된 적은 붉은 테두리가 생기며 다시 강화되지 않습니다.",遠離玩家，定期治療附近的敵人，並強化它們的生命、傷害和速度。治療量隨波次增加，被強化的敵人會出現紅色輪廓，不會重複強化。,"Держится подальше от игрока, регулярно лечит ближайших врагов и усиливает их здоровье, урон и скорость. Лечение растёт с каждой волной. Усиленные враги отмечены красным контуром и не получают повторного усиления.","Trzyma dystans od gracza, regularnie leczy pobliskich wrogów i wzmacnia ich zdrowie, obrażenia oraz prędkość. Leczenie rośnie wraz z falami. Wzmocnieni wrogowie mają czerwony obrys i nie mogą zostać wzmocnieni ponownie.","Mantiene la distancia con el jugador, cura periódicamente a los enemigos cercanos y mejora su vida, daño y velocidad. La curación aumenta con las oleadas. Los enemigos mejorados tienen un contorno rojo y no pueden recibir otra mejora.","Mantém distância do jogador, cura regularmente os inimigos próximos e fortalece sua vida, dano e velocidade. A cura aumenta com as ondas. Inimigos fortalecidos têm contorno vermelho e não podem ser fortalecidos novamente.","Hält Abstand zum Spieler, heilt regelmäßig nahe Gegner und erhöht ihre Gesundheit, ihren Schaden und ihr Tempo. Die Heilung nimmt mit den Wellen zu. Verstärkte Gegner haben einen roten Umriss und können nicht erneut verstärkt werden.","Oyuncudan uzak durur, yakındaki düşmanları düzenli olarak iyileştirir ve canlarını, hasarlarını ve hızlarını artırır. İyileştirme dalgalar ilerledikçe güçlenir. Güçlendirilmiş düşmanlar kırmızı çerçevelidir ve tekrar güçlendirilemez.","Mantiene le distanze dal giocatore, cura regolarmente i nemici vicini e ne potenzia vita, danni e velocità. La cura aumenta con le ondate. I nemici potenziati hanno un contorno rosso e non possono essere potenziati di nuovo."
 FANTASY_TREE_SPIRIT_NAME,Tree Spirit,Esprit arbre,树妖,ツリースピリット,나무령,樹妖,Древесный дух,Duch drzewa,Espíritu arbóreo,Espírito árvore,Baumgeist,Ağaç Ruhu,Spirito dell'albero
-FANTASY_TREE_SPIRIT_BEHAVIOUR_DESCRIPTION,"Cannot move, will be attacked by lootworm, fires a winding bullet cluster consisting of 24 bullets toward the player.","Ne peut pas se déplacer, sera attaqué par le ver pillard, tire un groupe de projectiles sinueux composé de 24 balles vers le joueur.","无法移动, 会被搜刮虫虫攻击, 朝玩家方向发射一个由24个子弹构成的蜿蜒子弹群","移動できず,ルートワームに攻撃される.24発の弾からなる蛇行する弾幕をプレイヤーに向けて発射する.","이동할 수 없으며, 약탈벌레에게 공격받습니다. 24개의 탄환으로 구성된 구불구불한 탄막을 플레이어를 향해 발사합니다.","無法移動,會被搜刮蟲蟲攻擊,朝玩家方向發射一個由24個子彈構成的蜿蜒子彈群","Не может двигаться, будет атакован червем-грабителем, стреляет извивающимся сгустком из 24 пуль в сторону игрока.","Nie może się poruszać, zostanie zaatakowany przez łupieżczego robaka, wystrzeliwuje w kierunku gracza wijącą się grupę 24 pocisków.","No puede moverse, será atacado por el gusano saqueador, dispara un grupo de proyectiles serpenteante de 24 balas hacia el jugador.","Não pode se mover, será atacado pelo verme saqueador, dispara um aglomerado sinuoso de 24 projéteis na direção do jogador.","Kann sich nicht bewegen, wird vom Plünderwurm angegriffen, feuert ein sich schlängelndes Geschossbündel aus 24 Kugeln auf den Spieler.","Hareket edemez, yağmacı kurt tarafından saldırıya uğrar, oyuncuya doğru 24 mermiden oluşan kıvrımlı bir mermi kümesi ateşler.","Non può muoversi, verrà attaccato dal verme saccheggiatore, spara un gruppo sinuoso di 24 proiettili verso il giocatore."
+FANTASY_TREE_SPIRIT_BEHAVIOUR_DESCRIPTION,"Cannot move, will be attacked by lootworm, fires a winding bullet cluster consisting of 16 bullets toward the player.","Ne peut pas se déplacer, sera attaqué par le ver pillard, tire un groupe de projectiles sinueux composé de 16 balles vers le joueur.","无法移动, 会被搜刮虫虫攻击, 朝玩家方向发射一个由16个子弹构成的蜿蜒子弹群","移動できず,ルートワームに攻撃される.16発の弾からなる蛇行する弾幕をプレイヤーに向けて発射する.","이동할 수 없으며, 약탈벌레에게 공격받습니다. 16개의 탄환으로 구성된 구불구불한 탄막을 플레이어를 향해 발사합니다.","無法移動,會被搜刮蟲蟲攻擊,朝玩家方向發射一個由16個子彈構成的蜿蜒子彈群","Не может двигаться, будет атакован червем-грабителем, стреляет извивающимся сгустком из 16 пуль в сторону игрока.","Nie może się poruszać, zostanie zaatakowany przez łupieżczego robaka, wystrzeliwuje w kierunku gracza wijącą się grupę 16 pocisków.","No puede moverse, será atacado por el gusano saqueador, dispara un grupo de proyectiles serpenteante de 16 balas hacia el jugador.","Não pode se mover, será atacado pelo verme saqueador, dispara um aglomerado sinuoso de 16 projéteis na direção do jogador.","Kann sich nicht bewegen, wird vom Plünderwurm angegriffen, feuert ein sich schlängelndes Geschossbündel aus 16 Kugeln auf den Spieler.","Hareket edemez, yağmacı kurt tarafından saldırıya uğrar, oyuncuya doğru 16 mermiden oluşan kıvrımlı bir mermi kümesi ateşler.","Non può muoversi, verrà attaccato dal verme saccheggiatore, spara un gruppo sinuoso di 16 proiettili verso il giocatore."
 FANTASY_SKELETON_SWORDSMAN_NAME,Skeleton Swordsman,Épéiste squelette,骷髅剑士,スケルトンソードマン,해골 검사,骷髏劍士,Скелет-мечник,Szkielet szermierz,Esqueleto espadachín,Esqueleto espadachim,Skelett-Schwertkämpfer,İskelet Kılıç Ustası,Guerriero scheletro con spada
 FANTASY_SKELETON_SWORDSMAN_BEHAVIOUR_DESCRIPTION,"Chases the player, briefly pauses before attacking, and attempts to slash nearby players once per second.","Poursuit le joueur, marque une brève pause avant d'attaquer, et tente de tailler les joueurs proches une fois par seconde.","追击玩家, 每秒试图挥砍周围的玩家, 攻击前会短暂静止","プレイヤーを追跡し,攻撃前に短く停止し,近くのプレイヤーを毎秒1回斬りつけようとする.","플레이어를 쫓아가며, 공격 전 잠시 멈추고, 근처 플레이어를 1초에 한 번 베려고 시도합니다.","追擊玩家,每秒試圖揮砍周圍的玩家,攻擊前會短暫靜止","Преследует игрока, ненадолго останавливается перед атакой, пытается рубить ближайших игроков раз в секунду.","Goni gracza, robi krótką pauzę przed atakiem i próbuje ciąć pobliskich graczy raz na sekundę.","Persigue al jugador, hace una breve pausa antes de atacar e intenta acuchillar a los jugadores cercanos una vez por segundo.","Persegue o jogador, faz uma breve pausa antes de atacar e tenta golpear jogadores próximos uma vez por segundo.","Verfolgt den Spieler, pausiert kurz vor dem Angriff und versucht, nahe Spieler einmal pro Sekunde zu schlitzen.","Oyuncuyu kovalar, saldırmadan önce kısa süre durur ve yakındaki oyuncuları saniyede bir kez kesmeye çalışır.","Insegue il giocatore, fa una breve pausa prima di attaccare e tenta di colpire con un fendente i giocatori vicini una volta al secondo."
 FANTASY_SKELETON_ARCHER_NAME,Skeleton Archer,Archer squelette,骷髅弓手,スケルトンアーチャー,해골 궁수,骷髏弓手,Скелет-лучник,Szkielet łucznik,Esqueleto arquero,Esqueleto arqueiro,Skelett-Bogenschütze,İskelet Okçu,Arciere scheletro
-FANTASY_SKELETON_ARCHER_BEHAVIOUR_DESCRIPTION,"Chases the player and fires an arrow toward them. This arrow summons smaller arrows on both perpendicular sides, which automatically disappear.","Poursuit le joueur et lui tire une flèche. Cette flèche fait apparaître de plus petites flèches sur ses deux côtés perpendiculaires, qui disparaissent automatiquement.","追击玩家, 朝玩家发射箭矢, 该箭矢可在两侧垂直方向召唤自动消失的小箭矢","プレイヤーを追跡し,矢を放つ.この矢は両側の垂直方向に小さな矢を召喚し,それらは自動的に消える.","플레이어를 쫓아가며 화살을 발사합니다. 이 화살은 양쪽 수직 방향으로 작은 화살을 소환하며, 이는 자동으로 사라집니다.","追擊玩家,朝玩家發射箭矢,該箭矢可在兩側垂直方向召喚自動消失的小箭矢","Преследует игрока и стреляет в него стрелой. Эта стрела вызывает маленькие стрелы по обеим перпендикулярным сторонам, которые автоматически исчезают.","Goni gracza i wystrzeliwuje w niego strzałę. Ta strzała przywołuje mniejsze strzały po obu prostopadłych bokach, które automatycznie znikają.","Persigue al jugador y le dispara una flecha. Esta flecha invoca flechas más pequeñas en ambos lados perpendiculares, que desaparecen automáticamente.","Persegue o jogador e dispara uma flecha contra ele. Esta flecha invoca flechas menores em ambos os lados perpendiculares, que desaparecem automaticamente.","Verfolgt den Spieler und feuert einen Pfeil auf ihn. Dieser Pfeil ruft auf beiden senkrechten Seiten kleinere Pfeile hervor, die automatisch verschwinden.","Oyuncuyu kovalar ve ona ok atar. Bu ok, dik açılarla her iki yanda kendiliğinden kaybolan daha küçük oklar çağırır.","Insegue il giocatore e gli scocca una freccia. Questa freccia evoca frecce più piccole su entrambi i lati perpendicolari, che scompaiono automaticamente."
+FANTASY_SKELETON_ARCHER_BEHAVIOUR_DESCRIPTION,Chases the player and fires a large arrow accompanied by 2 smaller arrows that weave from side to side in an increasingly wide pattern.,Poursuit le joueur et tire une grande flèche accompagnée de 2 petites qui oscillent de part et d'autre avec une amplitude croissante.,追击玩家，发射一支大箭，伴随两支在两侧交错摆动前进的小箭，摆动幅度逐渐增大。,プレイヤーを追い、大きな矢を放つ。2本の小さな矢が左右に交差するように揺れながら進み、揺れ幅が徐々に広がる。,"플레이어를 추적하며 큰 화살을 발사합니다. 작은 화살 2개가 양옆으로 엇갈려 흔들리며 나아가고, 흔들리는 폭이 점점 커집니다.",追擊玩家，發射一支大箭，伴隨兩支在兩側交錯擺動前進的小箭，擺動幅度逐漸增大。,"Преследует игрока и выпускает большую стрелу с двумя малыми, которые движутся вперёд, переплетаясь из стороны в сторону со всё большим размахом.","Ściga gracza i wystrzeliwuje dużą strzałę z 2 mniejszymi, które lecą naprzód, przeplatając się na boki z coraz większym wychyleniem.",Persigue al jugador y dispara una flecha grande acompañada de 2 pequeñas que avanzan entrecruzándose de lado a lado con una amplitud creciente.,"Persegue o jogador e dispara uma flecha grande acompanhada de 2 pequenas que avançam entrelaçando-se de um lado para o outro, com amplitude crescente.","Verfolgt den Spieler und schießt einen großen Pfeil mit 2 kleinen Begleitpfeilen, die sich seitlich kreuzen und dabei immer weiter ausschwingen.",Oyuncuyu takip eder ve yanında 2 küçük ok bulunan büyük bir ok atar. Küçük oklar giderek genişleyen hareketlerle iki yana salınarak ilerler.,Insegue il giocatore e scocca una freccia grande con 2 piccole che avanzano intrecciandosi da un lato all'altro con un'oscillazione sempre più ampia.
 FANTASY_MAPLE_WOLF_NAME,Maple Wolf,Loup érable,枫狼,メイプルウルフ,단풍 늑대,楓狼,Кленовый волк,Klonowy wilk,Lobo arce,Lobo de bordo,Ahornwolf,Akçaağaç Kurdu,Lupo d'acero
 FANTASY_MAPLE_WOLF_BEHAVIOUR_DESCRIPTION,"Maintain a certain distance while chasing the player, dash toward any player within range, and fire a maple-leaf-shaped bullet cluster consisting of six bullets.","Garde une certaine distance en poursuivant le joueur, fonce vers tout joueur à portée, et tire un groupe de balles en forme de feuille d'érable composé de six projectiles.","保持一定距离追击玩家, 冲向范围内玩家, 并产生由6个刀光构成的枫叶状刀光群","プレイヤーを追跡中は一定の距離を保ち,範囲内のプレイヤーにダッシュし,6つの弾で構成されるカエデの葉形の弾幕を発射する.","플레이어를 추적하는 동안 일정 거리를 유지하며, 범위 내 플레이어에게 돌진하고, 6개의 탄환으로 구성된 단풍잎 모양의 탄막을 발사합니다.","保持一定距離追擊玩家,衝向範圍內玩家,並產生由6個刀光構成的楓葉狀刀光群","Держится на определённом расстоянии, преследуя игрока, бросается на любого игрока в радиусе и выпускает группу пуль в форме кленового листа, состоящую из шести снарядов.","Utrzymuje pewien dystans podczas pościgu za graczem, doskakuje do dowolnego gracza w zasięgu i wystrzeliwuje grupę pocisków w kształcie liścia klonu, składającą się z sześciu kul.","Mantiene cierta distancia mientras persigue al jugador, se abalanza sobre cualquier jugador dentro del alcance y dispara un grupo de balas en forma de hoja de arce compuesto por seis proyectiles.","Mantém certa distância enquanto persegue o jogador, avança sobre qualquer jogador no alcance e dispara um aglomerado de projéteis em forma de folha de bordo composto por seis disparos.","Hält beim Verfolgen des Spielers einen gewissen Abstand, stürmt auf jeden Spieler in Reichweite zu und feuert ein ahornblattförmiges Geschossbündel aus sechs Kugeln ab.","Oyuncuyu kovalarken belirli bir mesafeyi korur, menzildeki herhangi bir oyuncuya atılır ve altı mermiden oluşan akçaağaç yaprağı şeklinde bir mermi kümesi ateşler.","Mantiene una certa distanza mentre insegue il giocatore, scatta verso qualsiasi giocatore nel raggio d'azione e spara un gruppo di proiettili a forma di foglia d'acero composto da sei colpi."
 FANTASY_VINE_STRANGER_NAME,Vine Stranger,Étrangleur de lianes,藤蔓怪人,ヴァインストレンジャー,덩굴 괴인,藤蔓怪人,Лозный странник,Winny obcy,Enredadera extraña,Trepadeira estranha,Ranken-Fremder,Sarmaşık Yabancı,Vite strana
@@ -248,11 +248,11 @@ FANTASY_LITTLE_ELF_BEHAVIOUR_DESCRIPTION,"Rapidly swings towards the player, fle
 FANTASY_SKELETON_KNIGHT_NAME,Skeleton Knight,Chevalier squelette,骷髅骑士,スケルトンナイト,해골 기사,骷髏騎士,Скелет-рыцарь,Szkielet rycerz,Caballero esqueleto,Cavaleiro esqueleto,Skelett-Ritter,İskelet Şövalye,Cavaliere scheletro
 FANTASY_SKELETON_KNIGHT_BEHAVIOUR_DESCRIPTION,"Moves randomly, initiates a long-distance dash toward the player every 4 seconds, generating sword flashes in random directions during the dash","Se déplace aléatoirement, initie une ruée à longue distance vers le joueur toutes les 4 secondes, générant des éclairs d'épée dans des directions aléatoires pendant la ruée","随机移动, 每4秒向玩家发起长距离冲刺, 冲刺过程中会产生随机方向的刀光","ランダムに移動し,4秒ごとにプレイヤーに向けて長距離ダッシュを開始し,ダッシュ中にランダムな方向へ剣閃を発生させる","무작위로 이동하며, 4초마다 플레이어를 향해 장거리 돌진을 시작하고, 돌진 중 무작위 방향으로 검기를 발생시킵니다","隨機移動,每4秒向玩家發起長距離衝刺,衝刺過程中會產生隨機方向的刀光","Двигается случайным образом, каждые 4 секунды начинает длинный рывок к игроку, создавая мечевые вспышки в случайных направлениях во время рывка","Porusza się losowo, co 4 sekundy inicjuje daleki doskok w kierunku gracza, generując podczas niego błyski miecza w losowych kierunkach","Se mueve aleatoriamente, inicia una embestida de larga distancia hacia el jugador cada 4 segundos, generando destellos de espada en direcciones aleatorias durante la embestida","Move-se aleatoriamente, inicia uma investida de longa distância contra o jogador a cada 4 segundos, gerando lampejos de espada em direções aleatórias durante a investida","Bewegt sich zufällig, leitet alle 4 Sekunden einen weiten Sturmangriff auf den Spieler ein, erzeugt während des Sturms Schwertblitze in zufällige Richtungen","Rastgele hareket eder, her 4 saniyede bir oyuncuya doğru uzun mesafeli bir atılım başlatır, atılım sırasında rastgele yönlerde kılıç parıltıları oluşturur","Si muove casualmente, ogni 4 secondi inizia uno scatto a lunga distanza verso il giocatore, generando lampi di spada in direzioni casuali durante lo scatto"
 FANTASY_GIANT_BEAR_NAME,Giant Bear,Ours géant,巨熊,ジャイアントベア,거대 곰,巨熊,Гигантский медведь,Olbrzymi niedźwiedź,Oso gigante,Urso gigante,Riesenbär,Dev Ayı,Orso gigante
-FANTASY_GIANT_BEAR_BEHAVIOUR_DESCRIPTION,"Slowly chase the player, dashing toward them every 2 seconds and firing 3 short-range spread bullets in sequence during each dash","Poursuit lentement le joueur, fonçant vers lui toutes les 2 secondes et tirant 3 balles à dispersion à courte portée successivement pendant chaque ruée","缓慢追击玩家, 每2秒冲向玩家, 冲刺过程中先后发射3次短距离的扩散子弹","ゆっくりとプレイヤーを追跡し,2秒ごとにダッシュし,各ダッシュ中に短距離拡散弾を3発連続で発射する","플레이어를 천천히 쫓으며, 2초마다 돌진하고, 각 돌진 중 단거리 확산탄을 3발 연속으로 발사합니다","緩慢追擊玩家,每2秒衝向玩家,衝刺過程中先後發射3次短距離的擴散子彈","Медленно преследует игрока, совершая рывок каждые 2 секунды и выпуская 3 короткодистанционные разлетающиеся пули последовательно во время каждого рывка","Powoli goni gracza, doskakując co 2 sekundy i wystrzeliwując kolejno 3 krótkozasięgowe pociski rozproszone podczas każdego doskoku","Persigue lentamente al jugador, abalanzándose cada 2 segundos y disparando 3 balas de dispersión de corto alcance en secuencia durante cada embestida","Persegue lentamente o jogador, avançando a cada 2 segundos e disparando 3 projéteis de dispersão de curto alcance em sequência durante cada investida","Verfolgt den Spieler langsam, stürmt alle 2 Sekunden auf ihn zu und feuert bei jedem Sturm nacheinander 3 kurzreichweitige Streugeschosse ab","Oyuncuyu yavaşça kovalar, her 2 saniyede bir ona doğru atılır ve her atılım sırasında sırayla 3 kısa menzilli dağılan mermi ateşler","Insegue lentamente il giocatore, scattando ogni 2 secondi e sparando 3 proiettili a corto raggio in sequenza durante ogni scatto"
+FANTASY_GIANT_BEAR_BEHAVIOUR_DESCRIPTION,"Wanders slowly and charges at nearby players. During each charge, fires 2 volleys of 3 outward-spreading projectiles and takes 50% less damage.","Erre lentement et charge les joueurs proches. Pendant chaque charge, tire 2 salves de 3 projectiles vers l'extérieur et subit 50% de dégâts en moins.","缓慢游荡,向附近玩家冲刺。每次冲刺发射2轮向外扩散的弹幕,每轮3发；冲刺期间受到的伤害减半。",ゆっくり徘徊し、近くのプレイヤーに突進する。突進中は外向きの弾を3発ずつ2回発射し、受けるダメージが50%減少する。,"천천히 배회하다 가까운 플레이어에게 돌진합니다. 돌진 중 바깥으로 퍼지는 투사체를 3발씩 2회 발사하며, 받는 피해가 50% 감소합니다.","緩慢遊蕩,向附近玩家衝刺。每次衝刺發射2輪向外擴散的彈幕,每輪3發；衝刺期間受到的傷害減半。",Медленно бродит и бросается на ближайших игроков. Во время рывка выпускает 2 залпа по 3 расходящихся снаряда и получает на 50% меньше урона.,Powoli wędruje i szarżuje na pobliskich graczy. Podczas szarży wystrzeliwuje 2 salwy po 3 rozchodzące się pociski i otrzymuje o 50% mniej obrażeń.,Vaga lentamente y embiste a los jugadores cercanos. Durante cada embestida dispara 2 ráfagas de 3 proyectiles hacia fuera y recibe un 50% menos de daño.,"Vagueia lentamente e avança contra jogadores próximos. Durante cada investida, dispara 2 rajadas de 3 projéteis para fora e recebe 50% menos dano.",Wandert langsam umher und stürmt auf nahe Spieler zu. Feuert dabei 2 Salven mit je 3 nach außen fliegenden Projektilen und erleidet 50% weniger Schaden.,Yavaşça dolaşır ve yakındaki oyunculara atılır. Her atılımda dışa yayılan 3 mermilik 2 salvo ateşler ve %50 daha az hasar alır.,Vaga lentamente e carica i giocatori vicini. Durante ogni carica spara 2 raffiche di 3 proiettili verso l'esterno e subisce il 50% di danni in meno.
 FANTASY_LITTLE_DEMON_NAME,Little Demon,Petit démon,小恶魔,リトルデーモン,꼬마 악마,小惡魔,Маленький демон,Mały demon,Demonio pequeño,Pequeno demônio,Kleiner Dämon,Küçük Şeytan,Piccolo demone
 FANTASY_LITTLE_DEMON_BEHAVIOUR_DESCRIPTION,"Pursue the player, firing two bullets every 1.5 seconds that appear from the left and right sides of the map and travel toward each other","Poursuit le joueur, tirant deux balles toutes les 1,5 seconde qui apparaissent des côtés gauche et droit de la carte et se dirigent l'une vers l'autre","追击玩家, 每1.5秒发射两个从地图左右两侧出现的相对而行的子弹","プレイヤーを追跡し,1.5秒ごとにマップの左右両端から現れ互いに向かって進む2発の弾を発射する","플레이어를 추적하며, 1.5초마다 맵의 좌우 양쪽에서 나타나 서로를 향해 이동하는 두 개의 탄환을 발사합니다","追擊玩家,每1.5秒發射兩個從地圖左右兩側出現的相對而行的子彈","Преследует игрока, каждые 1,5 секунды выпуская две пули, появляющиеся с левой и правой сторон карты и летящие навстречу друг другу","Goni gracza, co 1,5 sekundy wystrzeliwując dwa pociski pojawiające się z lewej i prawej strony mapy i lecące ku sobie","Persigue al jugador, disparando dos balas cada 1.5 segundos que aparecen desde los lados izquierdo y derecho del mapa y viajan una hacia la otra","Persegue o jogador, disparando dois projéteis a cada 1,5 segundos que surgem dos lados esquerdo e direito do mapa e viajam um na direção do outro","Verfolgt den Spieler, feuert alle 1,5 Sekunden zwei Kugeln ab, die von der linken und rechten Seite der Karte erscheinen und aufeinander zufliegen","Oyuncuyu takip eder, haritanın sol ve sağ taraflarından beliren ve birbirine doğru ilerleyen iki mermiyi her 1,5 saniyede bir ateşler","Insegue il giocatore, sparando due proiettili ogni 1,5 secondi che appaiono dai lati sinistro e destro della mappa e viaggiano l'uno verso l'altro"
 FANTASY_CRYSTALLINE_ELEMENTS_NAME,Crystalline Elements,Éléments cristallins,元素结晶,クリスタルエレメント,수정 원소,元素結晶,Кристаллические элементы,Krystaliczne żywioły,Elementos cristalinos,Elementos cristalinos,Kristallelemente,Kristal Elementler,Elementi cristallini
-FANTASY_CRYSTALLINE_ELEMENTS_BEHAVIOUR_DESCRIPTION,"Teleports randomly within a range of 700 every 3 seconds, and each second summons a hexagonal cluster of six blade flashes around itself that contracts inward.","Se téléporte aléatoirement dans un rayon de 700 toutes les 3 secondes, et chaque seconde invoque un groupe hexagonal de six éclairs de lame autour de lui qui se contracte vers l'intérieur.","每3秒在700范围内随机传送,每秒在周围召唤由6个刀光构成的向内收缩的六边形刀光群","3秒ごとに範囲700内でランダムにテレポートし,毎秒6つの剣閃からなる六角形の閃光群を自身の周囲に召喚し,内側に収縮する.","3초마다 700 범위 내에서 무작위로 순간이동하며, 매 초 주변에 6개의 검기로 구성된 육각형 무리를 소환하여 안쪽으로 수축시킵니다.","每3秒在700範圍內隨機傳送,每秒在周圍召喚由6個刀光構成的向內收縮的六邊形刀光群","Телепортируется случайным образом в радиусе 700 каждые 3 секунды, и каждую секунду призывает вокруг себя шестиугольную группу из шести мечевых вспышек, которая сжимается внутрь.","Teleportuje się losowo w zasięgu 700 co 3 sekundy, a co sekundę przywołuje wokół siebie sześciokątną grupę sześciu błysków ostrza, która kurczy się do wewnątrz.","Se teletransporta aleatoriamente en un radio de 700 cada 3 segundos, y cada segundo invoca un grupo hexagonal de seis destellos de espada a su alrededor que se contrae hacia adentro.","Teletransporta-se aleatoriamente num raio de 700 a cada 3 segundos e, a cada segundo, invoca um aglomerado hexagonal de seis lampejos de lâmina ao seu redor que se contrai para dentro.","Teleportiert sich alle 3 Sekunden zufällig in einem Umkreis von 700 und beschwört jede Sekunde eine sechseckige Gruppe von sechs Klingenblitzen um sich herum, die sich nach innen zusammenzieht.","Her 3 saniyede bir 700 menzil içinde rastgele ışınlanır ve her saniye etrafında, içe doğru büzülen altı kılıç parıltısından oluşan altıgen bir küme çağırır.","Si teletrasporta casualmente entro un raggio di 700 ogni 3 secondi, e ogni secondo evoca un gruppo esagonale di sei lampi di lama intorno a sé che si contrae verso l'interno."
+FANTASY_CRYSTALLINE_ELEMENTS_BEHAVIOUR_DESCRIPTION,"Teleports around the map every 3 seconds, marking its destination with a red circle beforehand. Regularly summons 6 blades that close in around itself.","Se téléporte sur la carte toutes les 3 secondes, en annonçant sa destination par un cercle rouge. Invoque régulièrement 6 lames qui convergent vers lui.",每3秒在地图上随机传送，落点会提前出现红圈预警。定期在周围召唤6道向内收拢的刀光。,3秒ごとにマップ上をランダムに転移し、転移先には事前に赤い円が表示される。周囲に内側へ迫る6本の刃を定期的に召喚する。,3초마다 맵의 임의 위치로 순간이동하며 도착 지점에 미리 붉은 원이 표시됩니다. 주위에 안쪽으로 모이는 칼날 6개를 주기적으로 소환합니다.,每3秒在地圖上隨機傳送，落點會提前出現紅圈預警。定期在周圍召喚6道向內收攏的刀光。,"Каждые 3 секунды телепортируется по карте, заранее отмечая место красным кругом. Регулярно создаёт вокруг себя 6 сходящихся клинков.","Co 3 sekundy teleportuje się po mapie, wcześniej oznaczając cel czerwonym okręgiem. Regularnie przywołuje wokół siebie 6 ostrzy lecących do środka.",Se teletransporta por el mapa cada 3 segundos y marca antes el destino con un círculo rojo. Invoca periódicamente 6 cuchillas que convergen a su alrededor.,"Teletransporta-se pelo mapa a cada 3 segundos, marcando o destino com um círculo vermelho antes. Invoca regularmente 6 lâminas que convergem ao seu redor.","Teleportiert sich alle 3 Sekunden über die Karte und markiert das Ziel vorher mit einem roten Kreis. Beschwört regelmäßig 6 Klingen, die sich um ihn herum nach innen bewegen.",Her 3 saniyede haritada rastgele bir yere ışınlanır; hedef önceden kırmızı daireyle gösterilir. Çevresinde içe doğru ilerleyen 6 bıçak çağırır.,"Si teletrasporta sulla mappa ogni 3 secondi, segnalando prima la destinazione con un cerchio rosso. Evoca regolarmente 6 lame che convergono intorno a sé."
 INFO_POS_STAT_FANTASY_HOLY,"Increases damage dealt to cursed enemies by {0}, increases the probability of enemies dropping souls by {1}.","Augmente les dégâts infligés aux ennemis maudits de {0}, augmente la probabilité que les ennemis lâchent des âmes de {1}.",额外增加对被诅咒敌人造成的伤害{0}，增加敌人掉魂的概率{1}。,呪われた敵に与えるダメージが{0}増加し、敵が魂を落とす確率が{1}増加する。,"저주받은 적에게 주는 피해가 {0} 증가하고, 적이 영혼을 떨어뜨릴 확률이 {1} 증가합니다.",額外增加對被詛咒敵人造成的傷害{0}，增加敵人掉魂的機率{1}。,"Увеличивает урон по проклятым врагам на {0}, повышает вероятность выпадения душ из врагов на {1}.","Zwiększa obrażenia zadawane przeklętym wrogom o {0}, zwiększa szansę na upuszczenie dusz przez wrogów o {1}.","Aumenta el daño infligido a enemigos malditos en un {0}, aumenta la probabilidad de que los enemigos suelten almas en un {1}.","Aumenta o dano causado a inimigos amaldiçoados em {0}, aumenta a probabilidade de inimigos derrubarem almas em {1}.","Erhöht den Schaden gegen verfluchte Feinde um {0}, erhöht die Wahrscheinlichkeit, dass Feinde Seelen fallen lassen, um {1}.","Lanetli düşmanlara verilen hasarı {0} artırır, düşmanların ruh düşürme olasılığını {1} artırır.","Aumenta i danni inflitti ai nemici maledetti di {0}, aumenta la probabilità che i nemici lascino cadere anime di {1}."
 INFO_NEG_STAT_FANTASY_HOLY,Inactive when negative.,Inactif si négatif.,负数时不生效。,マイナス時は無効.,음수일 때 비활성화됩니다.,負數時不生效。,Не действует при отрицательном значении.,"Nieaktywny, gdy ujemny.",Inactivo cuando es negativo.,Inativo quando negativo.,Inaktiv bei negativem Wert.,Negatif olduğunda etkin değildir.,Inattivo se negativo.
 INFO_POS_STAT_FANTASY_SOUL,"Special drop, only drops when the Holy stat is positive. Upon pickup, grants an additional +10% Damage ({0} % Damage) and +10% Attack Speed ({1} % Attack Speed), lasting 2 seconds each. Can consume souls to bless items or weapons, removing all of their negative effects.","Objet spécial, n'apparaît que lorsque la statistique Sacrée est positive. Au ramassage, confère +10 % de dégâts supplémentaires ({0} % de dégâts) et +10 % de vitesse d'attaque ({1} % de vitesse d'attaque), d'une durée de 2 secondes chacun. Permet de consommer des âmes pour bénir des objets ou des armes, éliminant ainsi tous leurs effets négatifs.","特殊掉落物，仅在神圣属性为正时掉落。拾取后%伤害额外增加10({0} %伤害)，%攻击速度额外增加10({1} %攻击速度)，每个持续2秒。可消耗魂来为道具或武器进行祝福，进而消除其全部的负面效果。","特殊ドロップアイテム。神聖ステータスが正の場合にのみドロップする。拾うと%ダメージが追加で10増加({0} %ダメージ)、%攻撃速度が追加で10増加({1} %攻撃速度)、それぞれ2秒間持続する。ソウルを消費してアイテムや武器を祝福し、すべてのマイナス効果を取り除くことができる。","특수 드롭 아이템으로, 신성 능력치가 양수일 때만 드롭됩니다. 획득 시 % 피해가 추가로 10 증가({0} % 피해), % 공격 속도가 추가로 10 증가({1} % 공격 속도)하며 각각 2초 동안 지속됩니다. 영혼을 소모하여 아이템이나 무기를 축복하고 모든 부정적인 효과를 제거할 수 있습니다.","特殊掉落物，僅在神聖屬性為正時掉落。拾取後%傷害額外增加10({0} %傷害)，%攻擊速度額外增加10({1} %攻擊速度)，每個持續2秒。可消耗魂來為道具或武器進行祝福，進而消除其全部的負面效果。","Особый предмет, выпадает только при положительном значении характеристики Святости. При подборе дает дополнительно +10% к урону ({0} % урона) и +10% к скорости атаки ({1} % скорости атаки), действие каждого длится 2 секунды. Души можно тратить на благословение предметов или оружия, снимая все их отрицательные эффекты.","Specjalny łup, pojawia się tylko wtedy, gdy statystyka Świętości jest dodatnia. Po podniesieniu zapewnia dodatkowe +10% do obrażeń ({0} % obrażeń) i +10% do prędkości ataku ({1} % prędkości ataku), każde trwające 2 sekundy. Można zużywać dusze, aby błogosławić przedmioty lub broń, usuwając wszystkie ich negatywne efekty.","Objeto especial, solo aparece cuando la estadística Sacra es positiva. Al recogerlo, otorga un +10 % de daño adicional ({0} % de daño) y un +10 % de velocidad de ataque ({1} % de velocidad de ataque) durante 2 segundos cada uno. Se pueden consumir almas para bendecir objetos o armas, eliminando todos sus efectos negativos.","Item especial, só é obtido quando o atributo Sagrado é positivo. Ao coletar, concede +10% de Dano adicional ({0} % de Dano) e +10% de Velocidade de Ataque ({1} % de Velocidade de Ataque), durando 2 segundos cada. É possível consumir almas para abençoar itens ou armas, removendo todos os seus efeitos negativos.","Spezieller Drop, wird nur fallen gelassen, wenn der Heilig-Wert positiv ist. Beim Aufheben wird der %-Schaden zusätzlich um 10 erhöht ({0} % Schaden) und das %-Angriffstempo um 10 ({1} % Angriffstempo), jeweils für 2 Sekunden. Seelen können verbraucht werden, um Gegenstände oder Waffen zu segnen und all ihre negativen Effekte zu entfernen.","Özel ganimet, yalnızca Kutsal niteliği pozitif olduğunda düşer. Toplandığında ilave +%10 Hasar ({0} % Hasar) ve +%10 Saldırı Hızı ({1} % Saldırı Hızı) sağlar, her biri 2 saniye sürer. Eşyaları veya silahları kutsamak ve tüm olumsuz etkilerini kaldırmak için ruhlar tüketilebilir.","Oggetto speciale, rilasciato solo quando la statistica Sacra è positiva. Quando raccolto, conferisce un +10% ai Danni aggiuntivo ({0} % Danni) e un +10% alla Velocità d'attacco ({1} % Velocità d'attacco), ciascuno della durata di 2 secondi. È possibile consumare anime per benedire oggetti o armi, rimuovendo tutti i loro effetti negativi."
@@ -437,55 +437,55 @@ FANTASY_WOLF_TOTEM_NAME,Wolf God,Dieu loup,狼神,狼神,늑대 신,狼神,Во�
 EFFECT_FANTASY_PET_WOLF_TOTEM,Summons a Wolf God to deal {2} ({3}) damage to up to 8 enemies with the highest health every {0}s. Killing an enemy resets all pets' cooldowns (not including Wolf God),Invoque un Dieu loup pour infliger {2} ({3}) dégâts à jusqu'à 8 ennemis ayant le plus de PV toutes les {0}s. Tuer un ennemi réinitialise le temps de recharge de tous les familiers (sauf Dieu loup),"召唤狼神跟随玩家, 每{0}秒对场上至多8个生命值最高的敌人造成{2}({3})伤害, 杀死敌人时, 立即重置所有宠物的冷却时间(不包括狼神)","狼神を召喚し,{0}秒ごとに最もHPの高い敵最大8体に{2}({3})ダメージを与える.敵を倒すと,狼神を除く全ペットのクールダウンがリセットされる",늑대 신을 소환하여 {0}초마다 가장 체력이 높은 최대 8명의 적에게 {2}({3}) 피해를 줍니다. 적을 처치하면 늑대 신을 제외한 모든 펫의 재사용 대기 시간이 초기화됩니다,"召喚狼神跟隨玩家,每{0}秒對場上至多8個生命值最高的敵人造成{2}({3})傷害,殺死敵人時,立即重置所有寵物的冷卻時間(不包括狼神)","Призывает Бога-волка, наносящего {2} ({3}) урона до 8 врагам с наибольшим здоровьем каждые {0} с. Убийство врага сбрасывает перезарядку всех питомцев (кроме Бога-волка)","Przywołuje Wilczego Boga, który co {0} s zadaje {2} ({3}) obrażeń maks. 8 wrogom z najwyższym zdrowiem. Zabicie wroga resetuje czas odnowienia wszystkich pupili (nie Wilczego Boga)",Invoca un Dios lobo para infligir {2} ({3}) de daño a hasta 8 enemigos con la vida más alta cada {0}s. Matar a un enemigo reinicia el enfriamiento de todas las mascotas (sin incluir al Dios lobo),Invoca um Deus Lobo que causa {2} ({3}) de dano a até 8 inimigos com a vida mais alta a cada {0}s. Matar um inimigo reinicia a recarga de todos os pets (exceto o Deus Lobo),"Beschwört einen Wolfsgott, der alle {0}s {2} ({3}) Schaden an bis zu 8 Gegnern mit den höchsten LP verursacht. Das Töten eines Gegners setzt die Abklingzeit aller Haustiere zurück (außer Wolfsgott)","Her {0} saniyede en yüksek cana sahip 8 düşmana {2} ({3}) hasar vermesi için bir Kurt Tanrı çağırır. Bir düşman öldürmek, Kurt Tanrı hariç tüm evcil hayvanların bekleme süresini sıfırlar",Evoca un Dio Lupo per infliggere {2} ({3}) danni a un massimo di 8 nemici con la salute più alta ogni {0}s. Uccidere un nemico azzera la ricarica di tutti i famigli (escluso il Dio Lupo)
 FANTASY_WORLD_TREE_NAME,World Tree,Arbre-Monde,世界树,世界樹,세계수,世界樹,Мировое Древо,Drzewo Świata,Árbol del Mundo,Árvore do Mundo,Weltenbaum,Dünya Ağacı,Albero del Mondo
 FANTASY_WORLD_TREE_BEHAVIOUR_DESCRIPTION,"Mutation 0:
-Immobilized. The player is forced to spawn at the exact center of the map. If the player does not move in time, they will be pushed aside by the World Tree and take collision damage. A massive amount of leaf projectiles will continuously and slowly fall from the top of the screen; their spawn points and drifting angles are randomized.
+Remains at the map center. Players too close to its spawn can be pushed aside and take contact damage. Leaves continuously fall from above with random spawn positions and drifting angles.
 
 Mutation 1 (50% HP / 40 s):
 The attack pattern shifts: the entity repeatedly summons flower-shaped patterns consisting of six petals in the surrounding area. Simultaneously, it fires five light beams outward at equal angular intervals.","Mutation 0 :
-Immobilisé. Le joueur est forcé d'apparaître exactement au centre de la carte. S'il ne s'écarte pas à temps, il sera repoussé par l'Arbre-Monde et subira des dégâts de collision. Une quantité massive de projectiles en forme de feuille tombera continuellement et lentement du haut de l'écran ; leurs points d'apparition et angles de dérive sont aléatoires.
+Reste au centre de la carte. Les joueurs trop proches de son apparition peuvent être repoussés et subir des dégâts de contact. Des feuilles tombent continuellement d'en haut avec des positions et angles aléatoires.
 
 Mutation 1 (50% PV / 40 s) :
 Le schéma d'attaque change : l'entité invoque à plusieurs reprises des motifs floraux composés de six pétales dans la zone environnante. Simultanément, elle émet cinq faisceaux lumineux à intervalles angulaires égaux.","异变0:
-无法移动,强制出生在地图最中央,如果玩家不及时移动会被世界树挤开并且受到碰撞伤害,地图正上方持续缓慢落下大量落叶弹幕,落叶出现的位置和飘落的角度随机
+固定在地图中心,出生时过于靠近的玩家可能被挤开并受到碰撞伤害。地图上方持续落下叶片弹幕,出现位置与飘落角度随机。
 
 异变1 (50%生命 / 40秒):
 攻击方式变为在周围反复召唤六片花瓣构成的花型弹幕,同时自身向外发射五条等角度间隔的光束","変異0:
-移動不可.プレイヤーはマップの正確な中央に強制配置される.プレイヤーがすぐに移動しない場合,世界樹に押しのけられ衝突ダメージを受ける.画面上部から大量の葉の投射物が継続的かつゆっくりと降り注ぐ.発生位置と漂う角度はランダム.
+マップ中央に留まる。出現位置に近すぎるプレイヤーは押しのけられ、接触ダメージを受けることがある。上方から葉の弾幕が降り続け、出現位置と角度はランダム。
 
 変異1 (HP50% / 40秒):
 攻撃パターンが変化:エンティティは周囲に6枚の花弁からなる花形パターンを繰り返し召喚する.同時に,等角度間隔で5本の光線を外側に発射する.","변이 0:
-고정됨. 플레이어는 맵의 정확한 중앙에서 생성되도록 강제됩니다. 플레이어가 제때 이동하지 않으면 세계수에 밀려나며 충돌 피해를 받습니다. 엄청난 양의 잎 투사체가 화면 상단에서 지속적으로 천천히 떨어집니다. 생성 위치와 표류 각도는 무작위입니다.
+맵 중앙에 고정됩니다. 출현 지점에 너무 가까운 플레이어는 밀려나며 접촉 피해를 받을 수 있습니다. 위에서 잎 탄막이 계속 내려오며 생성 위치와 낙하 각도는 무작위입니다.
 
 변이 1 (체력 50% / 40초):
 공격 패턴이 변경됩니다: 개체가 주변 지역에 여섯 개의 꽃잎으로 구성된 꽃 모양 패턴을 반복적으로 소환합니다. 동시에, 동일한 각도 간격으로 다섯 개의 광선을 바깥으로 발사합니다.","異變0:
-無法移動,強制出生在地圖最中央,如果玩家不及時移動會被世界樹擠開並且受到碰撞傷害,地圖正上方持續緩慢落下大量落葉彈幕,落葉出現的位置和飄落的角度隨機
+固定在地圖中心,出生時過於靠近的玩家可能被擠開並受到碰撞傷害。地圖上方持續落下葉片彈幕,出現位置與飄落角度隨機。
 
 異變1 (50%生命 / 40秒):
 攻擊方式變為在周圍反覆召喚六片花瓣構成的花型彈幕,同時自身向外發射五條等角度間隔的光束","Мутация 0:
-Обездвижено. Игрок принудительно появляется точно в центре карты. Если не уйти вовремя, Мировое Древо оттолкнет его и нанесет урон столкновением. Огромное количество листьев-снарядов будет непрерывно и медленно падать с верхней части экрана; точки появления и углы дрейфа случайны.
+Остаётся в центре карты. Игроков рядом с местом появления может оттолкнуть и ранить касанием. Сверху непрерывно падают листья-снаряды со случайными точками появления и углами падения.
 
 Мутация 1 (50% ОЗ / 40 с):
 Смена атаки: сущность многократно призывает вокруг себя цветочные узоры из шести лепестков. Одновременно испускает пять световых лучей наружу через равные угловые промежутки.","Mutacja 0:
-Unieruchomione. Gracz jest zmuszony pojawić się dokładnie na środku mapy. Jeśli gracz nie odsunie się na czas, zostanie odepchnięty przez Drzewo Świata i otrzyma obrażenia od kolizji. Ogromna ilość pocisków w kształcie liści będzie stale i powoli spadać z góry ekranu; ich punkty pojawienia się i kąty dryfu są losowe.
+Pozostaje na środku mapy. Gracze zbyt blisko miejsca pojawienia się mogą zostać odepchnięci i otrzymać obrażenia kontaktowe. Z góry stale spadają liście o losowych miejscach pojawienia się i kątach lotu.
 
 Mutacja 1 (50% PŻ / 40 s):
 Zmiana ataku: istota wielokrotnie przywołuje w okolicy wzory w kształcie kwiatów złożone z sześciu płatków. Jednocześnie wystrzeliwuje na zewnątrz pięć promieni świetlnych w równych odstępach kątowych.","Mutación 0:
-Inmovilizado. El jugador es forzado a aparecer en el centro exacto del mapa. Si no se aparta a tiempo, será empujado por el Árbol del Mundo y recibirá daño por colisión. Una cantidad masiva de proyectiles de hojas caerán continua y lentamente desde la parte superior de la pantalla; sus puntos de aparición y ángulos de deriva son aleatorios.
+Permanece en el centro del mapa. Los jugadores demasiado cerca de su aparición pueden ser empujados y recibir daño de contacto. Caen hojas continuamente desde arriba con posiciones y ángulos aleatorios.
 
 Mutación 1 (50% Vida / 40 s):
 El patrón de ataque cambia: la entidad invoca repetidamente patrones en forma de flor compuestos por seis pétalos en el área circundante. Simultáneamente, dispara cinco rayos de luz hacia afuera en intervalos angulares iguales.","Mutação 0:
-Imobilizada. O jogador é forçado a surgir exatamente no centro do mapa. Se o jogador não se mover a tempo, será empurrado pela Árvore do Mundo e sofrerá dano de colisão. Uma quantidade massiva de projéteis de folha cairá contínua e lentamente do topo da tela; seus pontos de surgimento e ângulos de deriva são aleatórios.
+Permanece no centro do mapa. Jogadores muito próximos do local de surgimento podem ser empurrados e sofrer dano de contato. Folhas caem continuamente de cima com posições e ângulos aleatórios.
 
 Mutação 1 (50% PV / 40 s):
 O padrão de ataque muda: a entidade repetidamente invoca padrões em forma de flor compostos por seis pétalas na área ao redor. Simultaneamente, dispara cinco feixes de luz para fora em intervalos angulares iguais.","Mutation 0:
-Bewegungsunfähig. Der Spieler wird gezwungen, genau in der Mitte der Karte zu erscheinen. Weicht der Spieler nicht rechtzeitig zurück, wird er vom Weltenbaum beiseite geschoben und erleidet Kollisionsschaden. Eine gewaltige Menge an Blattprojektilen fällt kontinuierlich und langsam vom oberen Bildschirmrand; ihre Erscheinungspunkte und Driftwinkel sind zufällig.
+Bleibt im Kartenmittelpunkt. Spieler zu nahe am Erscheinungsort können weggeschoben werden und Kontaktschaden erleiden. Von oben fallen ständig Blätter mit zufälligen Startpositionen und Fallwinkeln.
 
 Mutation 1 (50% LP / 40 s):
 Das Angriffsmuster ändert sich: Die Entität beschwört wiederholt blütenförmige Muster aus sechs Blütenblättern in der Umgebung. Gleichzeitig feuert sie fünf Lichtstrahlen in gleichmäßigen Winkelabständen nach außen.","Mutasyon 0:
-Hareketsiz. Oyuncu tam haritanın ortasında doğmaya zorlanır. Oyuncu zamanında hareket etmezse Dünya Ağacı tarafından itilir ve çarpışma hasarı alır. Ekranın üstünden sürekli ve yavaşça büyük miktarda yaprak mermisi düşer; çıkış noktaları ve süzülme açıları rastgeledir.
+Haritanın merkezinde kalır. Doğduğu noktaya çok yakın oyuncular itilebilir ve temas hasarı alabilir. Yukarıdan rastgele konum ve açılarla sürekli yapraklar düşer.
 
 Mutasyon 1 (%50 Can / 40 sn):
 Saldırı düzeni değişir: varlık, çevredeki alanda altı yapraktan oluşan çiçek şeklindeki desenleri tekrar tekrar çağırır. Aynı anda, eşit açısal aralıklarla dışarıya doğru beş ışık huzmesi ateşler.","Mutazione 0:
-Immobilizzato. Il giocatore è costretto a generarsi esattamente al centro della mappa. Se non si sposta in tempo, verrà spinto via dall'Albero del Mondo e subirà danni da collisione. Una quantità massiccia di proiettili a forma di foglia cadrà continuamente e lentamente dalla parte superiore dello schermo; i loro punti di comparsa e gli angoli di deriva sono casuali.
+Rimane al centro della mappa. I giocatori troppo vicini alla comparsa possono essere spinti via e subire danni da contatto. Dall'alto cadono continuamente foglie con posizioni e angoli casuali.
 
 Mutazione 1 (50% PV / 40 s):
 Lo schema d'attacco cambia: l'entità evoca ripetutamente motivi floreali composti da sei petali nell'area circostante. Contemporaneamente, spara cinque raggi di luce verso l'esterno a intervalli angolari uguali."
@@ -608,7 +608,7 @@ STAT_FANTASY_CRIT_DAMAGE,% Crit Damage,% Dégâts critiques,%暴击伤害,%ク�
 JOB_FANTASY_DIVINE_ARCHER,Divine Archer,Archer divin,神弓手,神弓使い,신성한 궁수,神弓手,Божественный лучник,Boski łucznik,Arquero divino,Arqueiro divino,Göttlicher Bogenschütze,İlahi Okçu,Arciere divino
 JOB_FANTASY_WIND_WALKER,Wind Walker,Marchevent,风行者,風の行者,바람 걷는 자,風行者,Ходящий по ветру,Chodzący z wiatrem,Caminante del viento,Andarilho do vento,Windgänger,Rüzgar Yürüyücüsü,Camminatore del vento
 JOB_FANTASY_CANNONIER,Cannonier,Canonnier,炮手,砲手,포수,炮手,Канонир,Kanonier,Cañonero,Canhoneiro,Kanonier,Topçu,Cannoniere
-EFFECT_FANTASY_SPECIFIC_SET_WEAPON_BONUSES,{0}{1} for every {4} weapon of type {2} you have[{3}],{0}{1} pour chaque {4} arme de type {2} que vous possédez[{3}],每持有{4}把{2}类武器{0}{1}[{3}],所持する{2}タイプの武器{4}本ごとに{0}{1}[{3}],보유한 {2} 유형 무기 {4}개마다 {0}{1}[{3}],每持有{4}把{2}類武器{0}{1}[{3}],{0}{1} за каждое {4} оружие типа {2} у вас[{3}],{0}{1} za każde {4} broni typu {2} którą posiadasz[{3}],{0}{1} por cada {4} arma de tipo {2} que tengas[{3}],{0}{1} para cada {4} arma do tipo {2} que você tem[{3}],{0}{1} für jede {4} Waffe des Typs {2}, die du besitzt[{3}],"Sahip olduğun her {4} {2} tipi silah için {0}{1}[{3}],{0}{1} per ogni {4} arma di tipo {2} in tuo possesso[{3}]"
+EFFECT_FANTASY_SPECIFIC_SET_WEAPON_BONUSES,{0}{1} for every {4} weapon of type {2} you have[{3}],{0}{1} pour chaque {4} arme de type {2} que vous possédez[{3}],每持有{4}把{2}类武器{0}{1}[{3}],所持する{2}タイプの武器{4}本ごとに{0}{1}[{3}],보유한 {2} 유형 무기 {4}개마다 {0}{1}[{3}],每持有{4}把{2}類武器{0}{1}[{3}],{0}{1} за каждое {4} оружие типа {2} у вас[{3}],{0}{1} za każde {4} broni typu {2} którą posiadasz[{3}],{0}{1} por cada {4} arma de tipo {2} que tengas[{3}],{0}{1} para cada {4} arma do tipo {2} que você tem[{3}],"{0}{1} für jede {4} Waffe des Typs {2}, die du besitzt[{3}]",Sahip olduğun her {4} {2} tipi silah için {0}{1}[{3}],{0}{1} per ogni {4} arma di tipo {2} in tuo possesso[{3}]
 JOB_FANTASY_FIREARMS_MASTER,Firearms Master,Maître des armes à feu,枪械大师,火器の達人,화기 달인,槍械大師,Мастер огнестрела,Mistrz broni palnej,Maestro de armas de fuego,Mestre em armas de fogo,Feuerwaffenmeister,Ateşli Silah Ustası,Maestro delle armi da fuoco
 JOB_FANTASY_FIRE_MAGE,Fire Mage,Mage de feu,火法师,炎の魔道士,화염 마법사,火法師,Огненный маг,Mag ognia,Mago de fuego,Mago de fogo,Feuermagier,Ateş Büyücüsü,Mago del fuoco
 JOB_FANTASY_LIGHTNING_MAGE,Lightning Mage,Mage de foudre,雷法师,雷の魔道士,번개 마법사,雷法師,Маг молний,Mag piorunów,Mago de rayo,Mago do raio,Blitzmagier,Yıldırım Büyücüsü,Mago del fulmine
@@ -655,166 +655,166 @@ COOP_S2_JOB,S2 Job Pool,Réserve de métiers S2,二阶职业池,S2職業プー�
 JOB,Job,Métier,职业,職業,직업,職業,Работа,Praca,Oficio,Ofício,Job,İş,Classe
 FANTASY_TWIN_BLAZE_NAME,Blaze,Brasier,炎,ブレイズ,블레이즈,炎,Вспышка,Blask,Llama,Chama,Lohe,Alev,Fiamma
 FANTASY_TWIN_BLAZE_BEHAVIOUR_DESCRIPTION,"Mutation 0:
-Moves randomly. Upon death or mutation, causes Frost to mutate. Fires 4 serpentine flame projectiles with warning per second. After firing twice, fires a ring of 12 outward-spreading flame projectiles around itself
+Moves randomly. Upon death or mutation, causes Frost to mutate. Fires 4 serpentine flame projectiles with warning per second. After firing twice, fires a ring of 12 outward-spreading flame projectiles around itself.
 
-Mutation 1 (67% HP / 25 s):
-Movement changes to chasing the player, 12 flame projectiles now contract inward","Mutation 0 :
+Mutation 1 (50% HP / 40 s):
+Moves around the player at a distance. Each serpentine volley now contains 6 flame projectiles. After two volleys, fires 12 flames inward from a ring around the player.","Mutation 0 :
 Se déplace aléatoirement. À la mort ou à la mutation, fait muter Frost. Tire 4 projectiles de flammes serpentines avec avertissement par seconde. Après deux tirs, lance un anneau de 12 projectiles enflammés se propageant vers l'extérieur.
 
-Mutation 1 (67% PV / 25 s) :
-Le déplacement passe à la poursuite du joueur, les 12 projectiles enflammés se contractent maintenant vers l'intérieur.","异变0:
-随机移动,死亡或异变时会导致霜发生异变,每秒发射4道蜿蜒前进的带有预警的火焰弹幕,发射两次后,向周围发射一圈12个向外扩散的火焰弹幕
+Mutation 1 (50% PV / 40 s) :
+Se déplace autour du joueur à distance. Chaque salve serpentine contient désormais 6 flammes. Après deux salves, tire 12 flammes vers l'intérieur depuis un anneau autour du joueur.","异变0:
+随机移动,死亡或异变时会导致霜发生异变,每秒发射4道蜿蜒前进的带有预警的火焰弹幕,发射两次后,向周围发射一圈12个向外扩散的火焰弹幕。
 
-异变1 (67%生命 / 25秒):
-移动方式变为追击玩家,12个火焰弹幕变为向内收缩","変異0:
+异变1 (50%生命 / 40秒):
+保持距离围绕玩家移动,每轮蜿蜒火焰增加至6道。发射两轮后,从玩家周围召唤12道向内收缩的火焰。","変異0:
 ランダムに移動.死亡または変異時にフロストを変異させる.毎秒,警告付きで蛇行する炎の投射物を4発発射する.2回発射後,自身の周囲に12発の外側に広がる炎の投射物の輪を放つ.
 
-変異1 (HP67% / 25秒):
-移動がプレイヤーの追跡に変わり,12発の炎の投射物が内側に収縮する.","변이 0:
+変異1 (HP50% / 40秒):
+距離を保ってプレイヤーの周囲を移動する。蛇行する炎が1回につき6発に増える。2回発射後、プレイヤーを囲む輪から内向きに12発の炎を放つ。","변이 0:
 무작위로 이동합니다. 사망하거나 변이되면 프로스트가 변이합니다. 매초 경고와 함께 구불거리는 화염 투사체 4개를 발사합니다. 두 번 발사한 후, 주변에 바깥쪽으로 퍼지는 12개의 화염 투사체 고리를 발사합니다.
 
-변이 1 (체력 67% / 25초):
-이동 방식이 플레이어 추적으로 변경되고, 12개의 화염 투사체가 이제 안쪽으로 수축합니다.","異變0:
-隨機移動,死亡或異變時會導致霜發生異變,每秒發射4道蜿蜒前進的帶有預警的火焰彈幕,發射兩次後,向周圍發射一圈12個向外擴散的火焰彈幕
+변이 1 (체력 50% / 40초):
+거리를 유지하며 플레이어 주위를 움직입니다. 구불거리는 화염은 한 번에 6발로 증가합니다. 두 번 발사한 후 플레이어 주변 고리에서 안쪽으로 화염 12발을 발사합니다.","異變0:
+隨機移動,死亡或異變時會導致霜發生異變,每秒發射4道蜿蜒前進的帶有預警的火焰彈幕,發射兩次後,向周圍發射一圈12個向外擴散的火焰彈幕。
 
-異變1 (67%生命 / 25秒):
-移動方式變為追擊玩家,12個火焰彈幕變為向內收縮","Мутация 0:
+異變1 (50%生命 / 40秒):
+保持距離圍繞玩家移動,每輪蜿蜒火焰增加至6道。發射兩輪後,從玩家周圍召喚12道向內收縮的火焰。","Мутация 0:
 Двигается случайно. При смерти или мутации вызывает мутацию Фрост. Выпускает 4 извивающихся огненных снаряда с предупреждением в секунду. После двух выстрелов создает кольцо из 12 расходящихся наружу огненных снарядов вокруг себя.
 
-Мутация 1 (67% ОЗ / 25 с):
-Движение меняется на преследование игрока, 12 огненных снарядов теперь сжимаются внутрь.","Mutacja 0:
+Мутация 1 (50% ОЗ / 40 с):
+Движется вокруг игрока на расстоянии. В каждом извивающемся залпе теперь 6 огненных снарядов. После двух залпов выпускает 12 огней внутрь кольца вокруг игрока.","Mutacja 0:
 Porusza się losowo. Po śmierci lub mutacji powoduje mutację Frost. Wystrzeliwuje 4 wijące się pociski ogniste z ostrzeżeniem na sekundę. Po dwukrotnym strzale tworzy wokół siebie pierścień z 12 rozchodzących się na zewnątrz ognistych pocisków.
 
-Mutacja 1 (67% PŻ / 25 s):
-Ruch zmienia się na ściganie gracza, 12 ognistych pocisków teraz kurczy się do wewnątrz.","Mutación 0:
+Mutacja 1 (50% PŻ / 40 s):
+Porusza się wokół gracza, zachowując dystans. Każda wijąca się salwa zawiera teraz 6 płomieni. Po dwóch salwach wystrzeliwuje 12 płomieni do środka pierścienia wokół gracza.","Mutación 0:
 Se mueve aleatoriamente. Al morir o mutar, hace que Frost mute. Dispara 4 proyectiles de fuego serpentinos con advertencia por segundo. Después de disparar dos veces, lanza un anillo de 12 proyectiles de fuego que se expanden hacia afuera a su alrededor.
 
-Mutación 1 (67% Vida / 25 s):
-El movimiento cambia a perseguir al jugador, los 12 proyectiles de fuego ahora se contraen hacia adentro.","Mutação 0:
+Mutación 1 (50% Vida / 40 s):
+Se mueve alrededor del jugador manteniendo distancia. Cada ráfaga serpentina contiene ahora 6 llamas. Tras dos ráfagas, dispara 12 llamas hacia dentro desde un anillo alrededor del jugador.","Mutação 0:
 Move-se aleatoriamente. Ao morrer ou ao sofrer mutação, faz com que Frost sofra mutação. Dispara 4 projéteis de fogo serpentinos com aviso por segundo. Depois de atirar duas vezes, dispara um anel de 12 projéteis de fogo que se expandem para fora ao seu redor.
 
-Mutação 1 (67% PV / 25 s):
-O movimento muda para perseguir o jogador, os 12 projéteis de fogo agora se contraem para dentro.","Mutation 0:
+Mutação 1 (50% PV / 40 s):
+Move-se ao redor do jogador mantendo distância. Cada rajada serpentina passa a ter 6 chamas. Após duas rajadas, dispara 12 chamas para dentro de um anel ao redor do jogador.","Mutation 0:
 Bewegt sich zufällig. Verursacht bei Tod oder Mutation die Mutation von Frost. Feuert pro Sekunde 4 schlängelnde Flammenprojektile mit Warnung ab. Nach zwei Salven feuert es einen Ring aus 12 sich ausbreitenden Flammenprojektilen um sich herum ab.
 
-Mutation 1 (67% LP / 25 s):
-Bewegung ändert sich auf Verfolgung des Spielers, die 12 Flammenprojektile ziehen sich jetzt nach innen zusammen.","Mutasyon 0:
+Mutation 1 (50% LP / 40 s):
+Bewegt sich mit Abstand um den Spieler. Jede schlängelnde Salve enthält nun 6 Flammen. Nach zwei Salven fliegen 12 Flammen von einem Ring um den Spieler nach innen.","Mutasyon 0:
 Rastgele hareket eder. Ölümü veya mutasyonu üzerine Frost'un mutasyona uğramasına neden olur. Saniyede uyarı ile 4 kıvrımlı alev mermisi ateşler. İki kez ateş ettikten sonra, etrafında dışa doğru yayılan 12 alev mermisinden oluşan bir halka ateşler.
 
-Mutasyon 1 (%67 Can / 25 sn):
-Hareketi oyuncuyu kovalamaya dönüşür, 12 alev mermisi şimdi içe doğru büzülür.","Mutazione 0:
+Mutasyon 1 (%50 Can / 40 sn):
+Mesafeyi koruyarak oyuncunun çevresinde hareket eder. Her kıvrımlı salvo artık 6 alev içerir. İki salvodan sonra oyuncunun çevresindeki halkadan içe doğru 12 alev ateşler.","Mutazione 0:
 Si muove casualmente. Alla morte o alla mutazione, fa mutare Frost. Spara 4 proiettili di fiamma serpentini con preavviso al secondo. Dopo aver sparato due volte, emette un anello di 12 proiettili di fiamma che si diffondono verso l'esterno intorno a sé.
 
-Mutazione 1 (67% PV / 25 s):
-Il movimento cambia in inseguimento del giocatore, i 12 proiettili di fiamma ora si contraggono verso l'interno."
+Mutazione 1 (50% PV / 40 s):
+Si muove intorno al giocatore mantenendo le distanze. Ogni raffica serpentina contiene ora 6 fiamme. Dopo due raffiche spara 12 fiamme verso l'interno da un anello attorno al giocatore."
 FANTASY_TWIN_FROST_NAME,Frost,Givre,霜,フロスト,프로스트,霜,Мороз,Mór,Helada,Geada,Frost,Ayaz,Gelo
 FANTASY_TWIN_FROST_BEHAVIOUR_DESCRIPTION,"Mutation 0:
 Moves away from the player. Upon death or mutation, causes Blaze to mutate. Summons a large snowflake projectile formed by 24 blade beams centered on the player every 2 seconds
 
-Mutation 1 (67% HP / 25 s):
-Movement changes to chasing the player. After summoning the large snowflake projectile, randomly spawns 3 frost formations on the field that last for 2 seconds, slowing the player by 75% upon contact","Mutation 0 :
+Mutation 1 (50% HP / 40 s):
+Moves around the player at a distance. After each snowflake barrage, creates 3 random frost fields lasting 2 seconds. Contact reduces movement speed by 25%.","Mutation 0 :
 S'éloigne du joueur. À la mort ou à la mutation, fait muter Flame. Invoque un grand projectile en forme de flocon de neige formé de 24 rayons de lame centré sur le joueur toutes les 2 secondes.
 
-Mutation 1 (67% PV / 25 s) :
-Le déplacement passe à la poursuite du joueur. Après avoir invoqué le grand projectile flocon, fait apparaître aléatoirement 3 formations de givre au sol durant 2 secondes, ralentissant le joueur de 75% au contact.","异变0:
+Mutation 1 (50% PV / 40 s) :
+Se déplace autour du joueur à distance. Après chaque barrage en flocon, crée 3 zones de givre aléatoires durant 2 secondes. Le contact réduit la vitesse de déplacement de 25%.","异变0:
 远离玩家,死亡或异变时会导致炎发生异变,每2秒以玩家为中心召唤由24道刀光组合而成的大型雪花弹幕
 
-异变1 (67%生命 / 25秒):
-移动方式变为追击玩家,在召唤大型雪花弹幕后,会在场上随机召唤3个持续2秒的霜冻法阵,玩家触碰时减速75%","変異0:
+异变1 (50%生命 / 40秒):
+保持距离围绕玩家移动。每次雪花弹幕后,在场上随机生成3个持续2秒的霜冻法阵,接触时移动速度降低25%。","変異0:
 プレイヤーから遠ざかる.死亡時または変異時に炎を変異させる.2秒ごとに,24本の剣閃で構成されたプレイヤー中心の大きな雪の結晶の投射物を召喚する.
 
-変異1 (HP67% / 25秒):
-移動がプレイヤーの追跡に変わる.大きな雪の結晶を召喚した後,フィールド上に2秒間持続する霜の陣を3つランダムに発生させ,接触したプレイヤーを75%減速させる.","변이 0:
+変異1 (HP50% / 40秒):
+距離を保ってプレイヤーの周囲を移動する。雪の結晶弾幕の後、ランダムな場所に2秒持続する凍結陣を3つ作る。接触すると移動速度が25%低下する。","변이 0:
 플레이어로부터 멀어집니다. 사망하거나 변이되면 블레이즈가 변이합니다. 2초마다 플레이어를 중심으로 24개의 검기로 구성된 큰 눈송이 투사체를 소환합니다.
 
-변이 1 (체력 67% / 25초):
-이동 방식이 플레이어 추적으로 변경됩니다. 큰 눈송이 투사체를 소환한 후, 필드에 2초간 지속되는 서리 진형을 무작위로 3개 생성하고, 접촉 시 플레이어를 75% 감속시킵니다.","異變0:
+변이 1 (체력 50% / 40초):
+거리를 유지하며 플레이어 주위를 움직입니다. 눈꽃 탄막마다 무작위 위치에 2초간 지속되는 서리 장판 3개를 생성합니다. 접촉하면 이동 속도가 25% 감소합니다.","異變0:
 遠離玩家,死亡或異變時會導致炎發生異變,每2秒以玩家為中心召喚由24道刀光組合而成的大型雪花彈幕
 
-異變1 (67%生命 / 25秒):
-移動方式變為追擊玩家,在召喚大型雪花彈幕後,會在場上隨機召喚3個持續2秒的霜凍法陣,玩家觸碰時減速75%","Мутация 0:
+異變1 (50%生命 / 40秒):
+保持距離圍繞玩家移動。每次雪花彈幕後,在場上隨機生成3個持續2秒的霜凍法陣,接觸時移動速度降低25%。","Мутация 0:
 Удаляется от игрока. При смерти или мутации вызывает мутацию Вспышки. Призывает большой снаряд-снежинку, образованный 24 лезвиями-лучами с центром в игроке, каждые 2 секунды.
 
-Мутация 1 (67% ОЗ / 25 с):
-Движение меняется на преследование игрока. После призыва большого снаряда-снежинки случайно создает на поле 3 ледяные формации на 2 секунды, замедляя игрока на 75% при касании.","Mutacja 0:
+Мутация 1 (50% ОЗ / 40 с):
+Движется вокруг игрока на расстоянии. После каждого залпа-снежинки создаёт 3 случайных морозных поля на 2 секунды. Касание снижает скорость передвижения на 25%.","Mutacja 0:
 Odsuwa się od gracza. Po śmierci lub mutacji powoduje mutację Flame. Co 2 sekundy przywołuje duży pocisk w kształcie płatka śniegu utworzony z 24 promieni ostrza wycentrowanych na graczu.
 
-Mutacja 1 (67% PŻ / 25 s):
-Ruch zmienia się na ściganie gracza. Po przywołaniu dużego pocisku śnieżynki losowo tworzy na polu 3 formacje mrozu trwające 2 sekundy, spowalniając gracza o 75% przy kontakcie.","Mutación 0:
+Mutacja 1 (50% PŻ / 40 s):
+Porusza się wokół gracza z dystansu. Po każdej śnieżynce tworzy 3 losowe pola mrozu trwające 2 sekundy. Kontakt zmniejsza prędkość ruchu o 25%.","Mutación 0:
 Se aleja del jugador. Al morir o al mutar, hace que Llama mute. Invoca un gran proyectil de copo de nieve formado por 24 rayos de hoja centrados en el jugador cada 2 segundos.
 
-Mutación 1 (67% Vida / 25 s):
-El movimiento cambia a perseguir al jugador. Después de invocar el gran proyectil de copo de nieve, genera aleatoriamente 3 formaciones de escarcha en el campo que duran 2 segundos, ralentizando al jugador un 75% al contacto.","Mutação 0:
+Mutación 1 (50% Vida / 40 s):
+Se mueve alrededor del jugador manteniendo distancia. Tras cada descarga de copo de nieve, crea 3 campos de escarcha aleatorios que duran 2 segundos. El contacto reduce la velocidad de movimiento un 25%.","Mutação 0:
 Afasta-se do jogador. Ao morrer ou ao sofrer mutação, faz Chama sofrer mutação. Invoca um grande projétil de floco de neve formado por 24 feixes de lâmina centrados no jogador a cada 2 segundos.
 
-Mutação 1 (67% PV / 25 s):
-O movimento muda para perseguir o jogador. Depois de invocar o grande projétil de floco de neve, gera aleatoriamente 3 formações de gelo no campo que duram 2 segundos, reduzindo a velocidade do jogador em 75% ao contato.","Mutation 0:
+Mutação 1 (50% PV / 40 s):
+Move-se ao redor do jogador mantendo distância. Após cada rajada de floco de neve, cria 3 campos de gelo aleatórios que duram 2 segundos. O contato reduz a velocidade de movimento em 25%.","Mutation 0:
 Entfernt sich vom Spieler. Verursacht bei Tod oder Mutation die Mutation von Flamme. Beschwört alle 2 Sekunden ein großes Schneeflockenprojektil, das aus 24 Klingenstrahlen besteht und auf den Spieler zentriert ist.
 
-Mutation 1 (67% LP / 25 s):
-Bewegung ändert sich auf Verfolgung des Spielers. Nach dem Beschwören des großen Schneeflockenprojektils erscheinen zufällig 3 Frostformationen auf dem Feld, die 2 Sekunden andauern und den Spieler bei Kontakt um 75% verlangsamen.","Mutasyon 0:
+Mutation 1 (50% LP / 40 s):
+Bewegt sich mit Abstand um den Spieler. Erzeugt nach jedem Schneeflockenbeschuss 3 zufällig platzierte Frostfelder für 2 Sekunden. Kontakt verringert das Bewegungstempo um 25%.","Mutasyon 0:
 Oyuncudan uzaklaşır. Ölümü veya mutasyonu üzerine Alev'in mutasyona uğramasına neden olur. Her 2 saniyede bir, oyuncuyu merkez alan 24 kılıç huzmesinden oluşan büyük kar tanesi mermisi çağırır.
 
-Mutasyon 1 (%67 Can / 25 sn):
-Hareketi oyuncuyu kovalamaya dönüşür. Büyük kar tanesi mermisini çağırdıktan sonra, alanda 2 saniye süren 3 ayaz oluşumu rastgele belirir ve temas halinde oyuncuyu %75 yavaşlatır.","Mutazione 0:
+Mutasyon 1 (%50 Can / 40 sn):
+Mesafeyi koruyarak oyuncunun çevresinde hareket eder. Her kar tanesi saldırısından sonra rastgele konumlarda 2 saniye süren 3 buz alanı oluşturur. Temas hareket hızını %25 azaltır.","Mutazione 0:
 Si allontana dal giocatore. Alla morte o alla mutazione, fa mutare Fiamma. Evoca un grande proiettile a forma di fiocco di neve formato da 24 raggi di lama centrati sul giocatore ogni 2 secondi.
 
-Mutazione 1 (67% PV / 25 s):
-Il movimento cambia in inseguimento del giocatore. Dopo aver evocato il grande proiettile fiocco di neve, genera casualmente sul campo 3 formazioni di gelo che durano 2 secondi, rallentando il giocatore del 75% al contatto."
+Mutazione 1 (50% PV / 40 s):
+Si muove intorno al giocatore mantenendo le distanze. Dopo ogni raffica a fiocco di neve crea 3 campi di gelo casuali che durano 2 secondi. Il contatto riduce la velocità di movimento del 25%."
 FANTASY_GOBLIN_TANK_NAME,Goblin Tank,Tank gobelin,哥布林坦克,ゴブリンタンク,고블린 탱크,哥布林坦克,Гоблин-танк,Goblin czołg,Tanque duende,Tanque goblin,Goblin-Panzer,Goblin Tank,Carro goblin
 FANTASY_GOBLIN_TANK_BEHAVIOUR_DESCRIPTION,"Mutation 0:
-Chases the player. Every 5 seconds, fires 1 blade wave toward the player. At the end of the blade wave, scatters 8 bullets and summons either a Goblin Javelin Thrower or a Goblin Priest. Upon death, summons 9 Goblin Javelin Throwers
+Chases the player. Every 3 seconds, fires 1 blade wave toward the player. At the end of the blade wave, scatters 8 bullets and summons either a Goblin Javelin Thrower or a Goblin Priest. Upon death, summons 9 Goblin Javelin Throwers
 
 Mutation 1 (50% HP / 40 s):
-Now fires 3 blade waves in succession, but no longer summons goblins","Mutation 0 :
-Poursuit le joueur. Toutes les 5 secondes, lance 1 vague de lames vers le joueur. À la fin de la vague, disperse 8 balles et invoque soit un Gobelin lanceur de javelot, soit un Prêtre gobelin. À la mort, invoque 9 Gobelins lanceurs de javelot.
+Moves faster and fires 5 volleys of 2 blade waves, then enters a 5-second attack cooldown. Each blade wave scatters 4 bullets and no longer summons goblins. Still summons 9 Goblin Javelin Throwers on death.","Mutation 0 :
+Poursuit le joueur. Toutes les 3 secondes, lance 1 vague de lames vers le joueur. À la fin de la vague, disperse 8 balles et invoque soit un Gobelin lanceur de javelot, soit un Prêtre gobelin. À la mort, invoque 9 Gobelins lanceurs de javelot.
 
 Mutation 1 (50% PV / 40 s) :
-Lance maintenant 3 vagues de lames successives, mais n'invoque plus de gobelins.","异变0:
-追击玩家,每5秒朝玩家发射1道前进的刀光,刀光末尾处散射8个子弹并召唤1只哥布林标枪手或哥布林祭司,死亡时召唤9只哥布林标枪手
+Se déplace plus vite et tire 5 salves de 2 vagues de lames, puis recharge pendant 5 secondes. Chaque vague disperse 4 balles sans invoquer de gobelins. Invoque toujours 9 Gobelins lanceurs de javelot à la mort.","异变0:
+追击玩家,每3秒朝玩家发射1道前进的刀光,刀光末尾处散射8个子弹并召唤1只哥布林标枪手或哥布林祭司,死亡时召唤9只哥布林标枪手
 
 异变1 (50%生命 / 40秒):
-现在刀光变为3连发,但不会再召唤哥布林","変異0:
-プレイヤーを追跡する.5秒ごとにプレイヤーに向けて1本のブレードウェーブを放つ.ウェーブの終端で8発の弾を散布し,ゴブリンジャベリン投げまたはゴブリンプリーストを1体召喚する.死亡時,9体のゴブリンジャベリン投げを召喚する.
+移速提高,每轮同时发射2道刀光,连续5轮后进入5秒攻击冷却。每道刀光散射4发子弹,不再通过刀光召唤哥布林；死亡时仍召唤9只哥布林标枪手。","変異0:
+プレイヤーを追跡する.3秒ごとにプレイヤーに向けて1本のブレードウェーブを放つ.ウェーブの終端で8発の弾を散布し,ゴブリンジャベリン投げまたはゴブリンプリーストを1体召喚する.死亡時,9体のゴブリンジャベリン投げを召喚する.
 
 変異1 (HP50% / 40秒):
-ブレードウェーブが3連続で発射されるようになるが,ゴブリンを召喚しなくなる.","변이 0:
-플레이어를 추격합니다. 5초마다 플레이어에게 1개의 검기를 발사합니다. 검기 끝에서 8개의 탄환을 흩뿌리고 고블린 투창병 또는 고블린 사제를 1마리 소환합니다. 사망 시 고블린 투창병 9마리를 소환합니다.
+移動速度が上がり、2本の刃の波を5回連続で放った後、5秒の攻撃クールダウンに入る。各波は4発の弾を散らすが、ゴブリンは召喚しない。死亡時は引き続きゴブリン投槍兵を9体召喚する。","변이 0:
+플레이어를 추격합니다. 3초마다 플레이어에게 1개의 검기를 발사합니다. 검기 끝에서 8개의 탄환을 흩뿌리고 고블린 투창병 또는 고블린 사제를 1마리 소환합니다. 사망 시 고블린 투창병 9마리를 소환합니다.
 
 변이 1 (체력 50% / 40초):
-이제 검기가 3연발로 발사되지만 고블린은 더 이상 소환하지 않습니다.","異變0:
-追擊玩家,每5秒朝玩家發射1道前進的刀光,刀光末尾處散射8個子彈並召喚1隻哥布林標槍手或哥布林祭司,死亡時召喚9隻哥布林標槍手
+이동 속도가 증가하고 검기 2개씩 5회 발사한 뒤 5초간 공격을 쉽니다. 검기마다 탄환 4개를 흩뿌리며 고블린은 소환하지 않습니다. 사망 시에는 여전히 고블린 투창병 9마리를 소환합니다.","異變0:
+追擊玩家,每3秒朝玩家發射1道前進的刀光,刀光末尾處散射8個子彈並召喚1隻哥布林標槍手或哥布林祭司,死亡時召喚9隻哥布林標槍手
 
 異變1 (50%生命 / 40秒):
-現在刀光變為3連發,但不會再召喚哥布林","Мутация 0:
-Преследует игрока. Каждые 5 секунд выпускает 1 лезвийную волну в игрока. В конце волны разбрасывает 8 пуль и призывает либо Гоблина-копейщика, либо Гоблина-жреца. При смерти призывает 9 Гоблинов-копейщиков.
+移速提高,每輪同時發射2道刀光,連續5輪後進入5秒攻擊冷卻。每道刀光散射4發子彈,不再透過刀光召喚哥布林；死亡時仍召喚9隻哥布林標槍手。","Мутация 0:
+Преследует игрока. Каждые 3 секунд выпускает 1 лезвийную волну в игрока. В конце волны разбрасывает 8 пуль и призывает либо Гоблина-копейщика, либо Гоблина-жреца. При смерти призывает 9 Гоблинов-копейщиков.
 
 Мутация 1 (50% ОЗ / 40 с):
-Теперь выпускает 3 волны подряд, но больше не призывает гоблинов.","Mutacja 0:
-Ściga gracza. Co 5 sekund wystrzeliwuje 1 falę ostrzy w stronę gracza. Na końcu fali rozrzuca 8 pocisków i przywołuje albo Goblina miotacza oszczepów, albo Goblina kapłana. Po śmierci przywołuje 9 Goblinów miotaczy oszczepów.
+Двигается быстрее и выпускает 5 залпов по 2 лезвийные волны, затем перезаряжается 5 секунд. Каждая волна разбрасывает 4 пули и больше не призывает гоблинов. При смерти по-прежнему призывает 9 Гоблинов-копейщиков.","Mutacja 0:
+Ściga gracza. Co 3 sekund wystrzeliwuje 1 falę ostrzy w stronę gracza. Na końcu fali rozrzuca 8 pocisków i przywołuje albo Goblina miotacza oszczepów, albo Goblina kapłana. Po śmierci przywołuje 9 Goblinów miotaczy oszczepów.
 
 Mutacja 1 (50% PŻ / 40 s):
-Teraz wystrzeliwuje 3 fale ostrzy z rzędu, ale nie przywołuje już goblinów.","Mutación 0:
-Persigue al jugador. Cada 5 segundos, dispara 1 onda de hoja hacia el jugador. Al final de la onda, dispersa 8 balas e invoca un Lanzador de jabalina goblin o un Sacerdote goblin. Al morir, invoca 9 Lanzadores de jabalina goblin.
+Porusza się szybciej i strzela 5 salwami po 2 fale ostrzy, po czym odnawia atak przez 5 sekund. Każda fala rozrzuca 4 pociski i nie przywołuje goblinów. Po śmierci nadal przywołuje 9 Goblinów miotaczy oszczepów.","Mutación 0:
+Persigue al jugador. Cada 3 segundos, dispara 1 onda de hoja hacia el jugador. Al final de la onda, dispersa 8 balas e invoca un Lanzador de jabalina goblin o un Sacerdote goblin. Al morir, invoca 9 Lanzadores de jabalina goblin.
 
 Mutación 1 (50% Vida / 40 s):
-Ahora dispara 3 ondas de hoja sucesivas, pero ya no invoca goblins.","Mutação 0:
-Persegue o jogador. A cada 5 segundos, dispara 1 onda de lâmina na direção do jogador. No final da onda, dispersa 8 balas e invoca um Goblin Lançador de Dardo ou um Goblin Sacerdote. Ao morrer, invoca 9 Goblins Lançadores de Dardo.
+Se mueve más rápido y dispara 5 ráfagas de 2 ondas de hoja, seguidas de 5 segundos de enfriamiento. Cada onda dispersa 4 balas y ya no invoca goblins. Al morir sigue invocando 9 Lanzadores de jabalina goblin.","Mutação 0:
+Persegue o jogador. A cada 3 segundos, dispara 1 onda de lâmina na direção do jogador. No final da onda, dispersa 8 balas e invoca um Goblin Lançador de Dardo ou um Goblin Sacerdote. Ao morrer, invoca 9 Goblins Lançadores de Dardo.
 
 Mutação 1 (50% PV / 40 s):
-Agora dispara 3 ondas de lâmina em sucessão, mas não invoca mais goblins.","Mutation 0:
-Verfolgt den Spieler. Feuert alle 5 Sekunden 1 Klingenwelle auf den Spieler. Am Ende der Welle werden 8 Kugeln verstreut und entweder ein Goblin-Speerwerfer oder ein Goblin-Priester beschworen. Beim Tod werden 9 Goblin-Speerwerfer beschworen.
+Move-se mais rápido e dispara 5 rajadas de 2 ondas de lâmina, seguidas de 5 segundos de recarga. Cada onda dispersa 4 balas e não invoca mais goblins. Ainda invoca 9 Goblins Lançadores de Dardo ao morrer.","Mutation 0:
+Verfolgt den Spieler. Feuert alle 3 Sekunden 1 Klingenwelle auf den Spieler. Am Ende der Welle werden 8 Kugeln verstreut und entweder ein Goblin-Speerwerfer oder ein Goblin-Priester beschworen. Beim Tod werden 9 Goblin-Speerwerfer beschworen.
 
 Mutation 1 (50% LP / 40 s):
-Feuert jetzt 3 Klingenwellen hintereinander, beschwört aber keine Goblins mehr.","Mutasyon 0:
-Oyuncuyu kovalar. Her 5 saniyede bir oyuncuya 1 kılıç dalgası ateşler. Dalganın sonunda 8 mermi saçar ve bir Goblin Cirit Atıcı veya Goblin Rahibi çağırır. Öldüğünde 9 Goblin Cirit Atıcı çağırır.
+Bewegt sich schneller und feuert 5 Salven mit je 2 Klingenwellen, danach folgen 5 Sekunden Angriffsabklingzeit. Jede Welle verstreut 4 Kugeln und beschwört keine Goblins mehr. Beim Tod erscheinen weiterhin 9 Goblin-Speerwerfer.","Mutasyon 0:
+Oyuncuyu kovalar. Her 3 saniyede bir oyuncuya 1 kılıç dalgası ateşler. Dalganın sonunda 8 mermi saçar ve bir Goblin Cirit Atıcı veya Goblin Rahibi çağırır. Öldüğünde 9 Goblin Cirit Atıcı çağırır.
 
 Mutasyon 1 (%50 Can / 40 sn):
-Artık art arda 3 kılıç dalgası ateşler, ancak goblin çağırmaz.","Mutazione 0:
-Insegue il giocatore. Ogni 5 secondi, spara 1 onda di lama verso il giocatore. Alla fine dell'onda, disperde 8 proiettili ed evoca un Goblin lanciatore di giavellotto o un Goblin sacerdote. Alla morte, evoca 9 Goblin lanciatori di giavellotto.
+Daha hızlı hareket eder ve 2 kılıç dalgalı 5 salvo ateşledikten sonra 5 saniye bekler. Her dalga 4 mermi saçar ve artık goblin çağırmaz. Öldüğünde hâlâ 9 Goblin Cirit Atıcı çağırır.","Mutazione 0:
+Insegue il giocatore. Ogni 3 secondi, spara 1 onda di lama verso il giocatore. Alla fine dell'onda, disperde 8 proiettili ed evoca un Goblin lanciatore di giavellotto o un Goblin sacerdote. Alla morte, evoca 9 Goblin lanciatori di giavellotto.
 
 Mutazione 1 (50% PV / 40 s):
-Ora spara 3 onde di lama in successione, ma non evoca più goblin."
+Si muove più velocemente e spara 5 raffiche di 2 onde di lama, seguite da 5 secondi di ricarica. Ogni onda disperde 4 proiettili e non evoca più goblin. Alla morte evoca ancora 9 Goblin lanciatori di giavellotto."
 FANTASY_NECROMANCER_NAME,Necromancer,Nécromancien,死灵法师,ネクロマンサー,네크로맨서,死靈法師,Некромант,Nekromanta,Nigromante,Necromante,Nekromant,Nekromanser,Negromante
 FANTASY_NECROMANCER_BEHAVIOUR_DESCRIPTION,"Mutation 0:
 Stay away from players, summon 3 Skeleton Swordsmen every second.
@@ -910,177 +910,151 @@ Mutazione 2 (33% PV / 60 s):
 Non evoca più scheletri. L'attacco diventa sparare 5 proiettili a forma di bulbo oculare al giocatore al secondo ed evocare 10 bulbi oculari che circondano il giocatore ogni secondo."
 FANTASY_FALLEN_KNIGHT_NAME,Fallen Knight,Chevalier déchu,堕落骑士,フォールンナイト,타락한 기사,墮落騎士,Падший рыцарь,Upadły rycerz,Caballero caído,Cavaleiro caído,Gefallener Ritter,Düşmüş Şövalye,Cavaliere caduto
 FANTASY_FALLEN_KNIGHT_BEHAVIOUR_DESCRIPTION,"Mutation 0:
-Chases the player. Every 2 seconds, alternates between:
-- Firing a arrow-shaped projectile at the player that expands from its tail end;
-- Firing two semicircular waves of projectiles at the player, with the second wave filling the gaps of the first
+Chases the player, alternating between an expanding arrow-shaped barrage and two successive fan-shaped volleys aimed in the same direction.
 
 Mutation 1 (60% HP / 35s):
-Stops moving but performs a dash at the player every second. After each dash, fires an arrow-shaped projectile. After every three dashes, pauses for 3 seconds.","Mutation 0 :
-Poursuit le joueur. Toutes les 2 secondes, alterne entre :
-- Lancer un projectile en forme de flèche sur le joueur qui s'étend depuis son extrémité arrière ;
-- Lancer deux vagues semi-circulaires de projectiles sur le joueur, la seconde vague remplissant les espaces de la première.
+Stops walking and repeatedly charges at the player, firing an arrow-shaped barrage after each charge. Takes a longer pause after every three charges.","Mutation 0 :
+Poursuit le joueur et alterne entre un barrage en flèche qui s'élargit et deux éventails successifs tirés dans la même direction.
 
 Mutation 1 (60% PV / 35s) :
-Arrête de bouger mais effectue une ruée vers le joueur chaque seconde. Après chaque ruée, lance un projectile en forme de flèche. Toutes les trois ruées, fait une pause de 3 secondes.","异变0:
-追击玩家,每2秒交替使用:
-- 对玩家发射一个箭头形弹幕,且弹幕会以尾端为中心不断扩大;
-- 对玩家发射两圈半圆形弹幕,第二圈子弹叠加在第一圈的空隙间
+Cesse de marcher et charge le joueur à répétition, lançant un barrage en flèche après chaque charge. Marque une pause plus longue toutes les trois charges.","异变0:
+追击玩家，交替发射扩大的箭头形弹幕和连续两轮扇形弹幕，两轮扇形弹幕朝向相同。
 
 异变1(60%生命 / 35秒):
-停止移动,但是每秒对玩家使用冲刺.每次冲刺结束后都回发射一次箭头弹幕.每冲刺三次,停顿3秒","変異0:
-プレイヤーを追跡する.2秒ごとに以下を交互に行う:
-- 尾部から拡大する矢型の投射物をプレイヤーに向けて発射する;
-- プレイヤーに半円状の投射物の波を2回発射し,2回目の波が1回目の隙間を埋める.
+停止普通移动，连续向玩家冲刺，每次冲刺结束后发射箭头形弹幕。每冲刺三次，会停顿更久。","変異0:
+プレイヤーを追い、拡大する矢型弾幕と、同じ方向に続けて放つ2回の扇状弾幕を交互に使う。
 
 変異1 (HP60% / 35秒):
-移動を停止するが,毎秒プレイヤーに突進する.各突進後,矢型の投射物を発射する.3回突進するごとに3秒間停止する.","변이 0:
-플레이어를 추격합니다. 2초마다 다음 패턴을 번갈아 사용합니다:
-- 꼬리 끝에서부터 팽창하는 화살 모양 투사체를 플레이어에게 발사
-- 플레이어에게 두 개의 반원형 투사체 파동을 발사하며, 두 번째 파동이 첫 번째 파동의 틈을 메움
+通常移動をやめ、プレイヤーに繰り返し突進する。突進後は矢型弾幕を放ち、3回ごとに長めの間を置く。","변이 0:
+플레이어를 추적하며 확장되는 화살형 탄막과 같은 방향으로 연속 발사하는 두 차례의 부채꼴 탄막을 번갈아 사용합니다.
 
 변이 1 (체력 60% / 35초):
-이동을 멈추지만 매 초 플레이어에게 돌진합니다. 매 돌진 후 화살 모양 투사체를 발사합니다. 세 번의 돌진마다 3초간 정지합니다.","異變0:
-追擊玩家,每2秒交替使用:
-- 對玩家發射一個箭頭形彈幕,且彈幕會以尾端為中心不斷擴大;
-- 對玩家發射兩圈半圓形彈幕,第二圈子彈疊加在第一圈的空隙間
+일반 이동을 멈추고 플레이어에게 연속 돌진하며, 돌진이 끝날 때마다 화살형 탄막을 발사합니다. 세 번 돌진한 뒤에는 더 오래 쉽니다.","異變0:
+追擊玩家，交替發射擴大的箭頭形彈幕和連續兩輪扇形彈幕，兩輪扇形彈幕朝向相同。
 
 異變1(60%生命 / 35秒):
-停止移動,但是每秒對玩家使用衝刺.每次衝刺結束後都回發射一次箭頭彈幕.每衝刺三次,停頓3秒","Мутация 0:
-Преследует игрока. Каждые 2 секунды чередует:
-- Выстрел в игрока стреловидным снарядом, который расширяется от хвоста;
-- Выпускает две полукруглые волны снарядов в игрока, вторая волна заполняет промежутки первой.
+停止普通移動，連續向玩家衝刺，每次衝刺結束後發射箭頭形彈幕。每衝刺三次，會停頓更久。","Мутация 0:
+Преследует игрока, чередуя расширяющийся стреловидный залп и два последовательных веера в одном направлении.
 
 Мутация 1 (60% ОЗ / 35 с):
-Перестает двигаться, но каждую секунду совершает рывок к игроку. После каждого рывка стреляет стреловидным снарядом. После каждых трех рывков делает паузу на 3 секунды.","Mutacja 0:
-Ściga gracza. Co 2 sekundy na przemian:
-- Wystrzeliwuje w gracza pocisk w kształcie strzały, który rozszerza się od końca;
-- Wystrzeliwuje dwie półkoliste fale pocisków w gracza, przy czym druga fala wypełnia luki pierwszej.
+Перестаёт ходить и атакует игрока рывками, после каждого выпуская стреловидный залп. После каждых трёх рывков делает более долгую паузу.","Mutacja 0:
+Ściga gracza, naprzemiennie strzelając rozszerzającą się strzałą i dwoma kolejnymi wachlarzami w tym samym kierunku.
 
 Mutacja 1 (60% PŻ / 35 s):
-Przestaje się poruszać, ale co sekundę wykonuje doskok na gracza. Po każdym doskoku strzela pociskiem w kształcie strzały. Po każdych trzech doskokach robi 3-sekundową pauzę.","Mutación 0:
-Persigue al jugador. Cada 2 segundos, alterna entre:
-- Disparar un proyectil en forma de flecha al jugador que se expande desde su extremo posterior;
-- Disparar dos ondas semicirculares de proyectiles al jugador, con la segunda onda llenando los huecos de la primera.
+Przestaje chodzić i wielokrotnie szarżuje na gracza, po każdej szarży strzelając strzałowym wzorem. Co trzy szarże robi dłuższą przerwę.","Mutación 0:
+Persigue al jugador, alternando una descarga de flecha expansiva con dos abanicos consecutivos en la misma dirección.
 
 Mutación 1 (60% Vida / 35s):
-Deja de moverse pero realiza una embestida al jugador cada segundo. Después de cada embestida, dispara un proyectil en forma de flecha. Después de cada tres embestidas, hace una pausa de 3 segundos.","Mutação 0:
-Persegue o jogador. A cada 2 segundos, alterna entre:
-- Disparar um projétil em forma de flecha no jogador que se expande a partir da sua extremidade traseira;
-- Disparar duas ondas semicirculares de projéteis no jogador, com a segunda onda preenchendo as lacunas da primeira.
+Deja de caminar y embiste repetidamente al jugador, disparando una descarga de flecha tras cada embestida. Hace una pausa más larga cada tres embestidas.","Mutação 0:
+Persegue o jogador, alternando uma rajada de flecha expansiva com dois leques consecutivos na mesma direção.
 
 Mutação 1 (60% PV / 35s):
-Para de se mover, mas realiza uma investida contra o jogador a cada segundo. Após cada investida, dispara um projétil em forma de flecha. A cada três investidas, faz uma pausa de 3 segundos.","Mutation 0:
-Verfolgt den Spieler. Alle 2 Sekunden wechselt zwischen:
-- Abfeuern eines pfeilförmigen Projektils auf den Spieler, das sich vom Heck her ausdehnt;
-- Abfeuern von zwei halbkreisförmigen Projektilwellen auf den Spieler, wobei die zweite Welle die Lücken der ersten füllt.
+Para de caminhar e investe repetidamente contra o jogador, disparando uma rajada em flecha após cada investida. Faz uma pausa maior a cada três investidas.","Mutation 0:
+Verfolgt den Spieler und wechselt zwischen einem sich ausweitenden Pfeilmuster und zwei aufeinanderfolgenden Fächersalven in dieselbe Richtung.
 
 Mutation 1 (60% LP / 35 s):
-Hört auf sich zu bewegen, führt aber jede Sekunde einen Sturmangriff auf den Spieler aus. Nach jedem Sturmangriff wird ein pfeilförmiges Projektil abgefeuert. Nach jeweils drei Sturmangriffen pausiert es 3 Sekunden.","Mutasyon 0:
-Oyuncuyu kovalar. Her 2 saniyede bir şunları sırayla yapar:
-- Oyuncuya kuyruk ucundan genişleyen ok şeklinde bir mermi ateşler;
-- Oyuncuya yarım daire şeklinde iki mermi dalgası ateşler, ikinci dalga birincinin boşluklarını doldurur.
+Geht nicht mehr und stürmt wiederholt auf den Spieler zu. Feuert nach jedem Sturmangriff ein Pfeilmuster und pausiert nach jeweils drei Angriffen länger.","Mutasyon 0:
+Oyuncuyu takip eder; genişleyen ok biçimli saldırı ile aynı yöne art arda atılan iki yelpaze salvosunu sırayla kullanır.
 
 Mutasyon 1 (%60 Can / 35 sn):
-Hareket etmeyi bırakır ancak her saniye oyuncuya atılır. Her atılıştan sonra ok şeklinde bir mermi ateşler. Her üç atılışta bir 3 saniye duraklar.","Mutazione 0:
-Insegue il giocatore. Ogni 2 secondi, alterna:
-- Sparare un proiettile a forma di freccia al giocatore che si espande dalla coda;
-- Sparare due ondate semicircolari di proiettili al giocatore, con la seconda ondata che riempie gli spazi della prima.
+Yürümeyi bırakır ve oyuncuya art arda atılır; her atılımın ardından ok biçimli saldırı yapar. Her üç atılımdan sonra daha uzun bekler.","Mutazione 0:
+Insegue il giocatore, alternando una raffica a freccia espansiva con due ventagli consecutivi nella stessa direzione.
 
 Mutazione 1 (60% PV / 35 s):
-Smette di muoversi ma esegue uno scatto verso il giocatore ogni secondo. Dopo ogni scatto, spara un proiettile a forma di freccia. Dopo ogni tre scatti, si ferma per 3 secondi."
+Smette di camminare e carica ripetutamente il giocatore, sparando una raffica a freccia dopo ogni carica. Fa una pausa più lunga ogni tre cariche."
 FANTASY_DRAGON_NAME,Dragon,Dragon,龙,ドラゴン,드래곤,龍,Дракон,Smok,Dragón,Dragão,Drache,Ejderha,Drago
 FANTASY_DRAGON_BEHAVIOUR_DESCRIPTION,"Mutation 0:
-Moves randomly, fires 3 Dragon Breaths in the direction of movement every 0.25 seconds, and pauses for 4 seconds after every 5 Dragon Breath casts
+Moves randomly, stopping to aim at the player and warn of its breath attack before releasing three flames. Pauses after every five attacks.
 
 Mutation 1 (50% HP / 25s):
-Summons a Dragon Tail composed of 10 bullets that spins around itself. The interval of Dragon Breath casts is changed to 0.16 seconds, the number of Dragon Breaths per cast is changed to 1, with an extended travel range
+Gains a rotating tail of 10 projectiles. Breath attacks become faster but release only one flame at a time, still pausing after every five attacks.
 
 Mutation 2 (25% HP / 50s):
-Stops moving, and dashes towards the player every 2 seconds. It continuously fires the Dragon Breath from Mutation 0 while dashing. The Dragon Tail remains active, while the Dragon Breath effect from Mutation 1 is disabled","Mutation 0 :
-Se déplace aléatoirement, lance 3 Souffles du Dragon dans la direction du déplacement toutes les 0,25 seconde, et fait une pause de 4 secondes après chaque série de 5 Souffles du Dragon.
+Stops walking and charges at the player, continuously breathing flames along its path. The attack area is shown before charging, and the rotating tail remains.","Mutation 0 :
+Se déplace aléatoirement, s'arrête pour viser le joueur et annonce son souffle avant de lancer trois flammes. Fait une pause toutes les cinq attaques.
 
 Mutation 1 (50% PV / 25s) :
-Invoque une Queue de Dragon composée de 10 projectiles qui tourne autour de lui. L'intervalle des Souffles du Dragon passe à 0,16 seconde, le nombre de Souffles par lancer à 1, avec une portée étendue.
+Gagne une queue tournante de 10 projectiles. Le souffle devient plus rapide mais ne lance qu'une flamme à la fois, avec toujours une pause toutes les cinq attaques.
 
 Mutation 2 (25% PV / 50s) :
-Cesse de se déplacer et fonce vers le joueur toutes les 2 secondes. Il lance continuellement le Souffle du Dragon de la Mutation 0 pendant la ruée. La Queue de Dragon reste active, tandis que l'effet du Souffle du Dragon de la Mutation 1 est désactivé.","异变0:
-随机移动,每0.25秒朝移动方向发射3个龙息,每5次龙息后,停顿4秒
+Cesse de marcher et charge le joueur en soufflant des flammes sur son passage. La zone d'attaque est annoncée avant la charge et la queue tournante reste.","异变0:
+随机移动，攻击时停下并瞄准玩家，预警后喷出三道龙息。每攻击五次后会稍作停顿。
 
 异变1 (50%生命 / 25秒):
-召唤由10个子弹组成的龙尾,围绕自身旋转,龙息的间隔改为0.16秒,数量改为1个,但距离更远
+召唤由10发子弹组成的旋转龙尾。龙息变为单道，攻击更加频繁，仍会在每五次攻击后停顿。
 
 异变2 (25%生命 / 50秒):
-停止移动,每2秒对玩家使用冲刺.冲刺时会不断发射异变0的龙息,龙尾依旧存在,但异变1的龙息消失","変異0:
-ランダムに移動し,0.25秒ごとに移動方向に3つのドラゴンブレスを発射する.5回のドラゴンブレスごとに4秒間停止する.
+停止普通移动，改为向玩家冲刺，沿途不断喷吐龙息。冲刺前会预警攻击范围，旋转龙尾仍然存在。","変異0:
+ランダムに移動し、攻撃時は止まってプレイヤーを狙う。予告の後に3本の龍息を放ち、5回攻撃するごとに少し休む。
 
 変異1 (HP50% / 25秒):
-自身の周りを回転する10発の弾で構成されたドラゴンテイルを召喚する.ドラゴンブレスの間隔が0.16秒に,1回あたりのブレス数が1に変更され,射程が延長される.
+10発の弾でできた回転する尾を召喚する。龍息は1本ずつになり、攻撃が速くなる。5回ごとの休止は続く。
 
 変異2 (HP25% / 50秒):
-移動を停止し,2秒ごとにプレイヤーに突進する.突進中は変異0のドラゴンブレスを連続で発射する.ドラゴンテイルは維持されるが,変異1のドラゴンブレス効果は無効化される.","변이 0:
-무작위로 이동하며, 0.25초마다 이동 방향으로 3회의 드래곤 브레스를 발사하고, 5회 발사 후 4초간 정지합니다.
+通常移動をやめてプレイヤーに突進し、進路に沿って龍息を吐き続ける。突進前に攻撃範囲が表示され、回転する尾も残る。","변이 0:
+무작위로 이동하다 공격할 때 멈춰 플레이어를 조준하고, 예고 후 브레스 세 줄기를 내뿜습니다. 다섯 번 공격한 뒤 잠시 쉽니다.
 
 변이 1 (체력 50% / 25초):
-자신의 주위를 회전하는 10개의 탄환으로 구성된 드래곤 테일을 소환합니다. 드래곤 브레스의 간격이 0.16초, 발사 횟수가 1회로 변경되며, 사거리가 증가합니다.
+투사체 10개로 된 회전 꼬리를 소환합니다. 브레스는 한 줄기로 바뀌고 더 자주 공격하지만, 다섯 번 공격한 뒤 쉬는 패턴은 유지됩니다.
 
 변이 2 (체력 25% / 50초):
-이동을 멈추고 2초마다 플레이어에게 돌진합니다. 돌진 중에는 변이 0의 드래곤 브레스를 계속 발사합니다. 드래곤 테일은 유지되나, 변이 1의 드래곤 브레스 효과는 사라집니다.","異變0:
-隨機移動,每0.25秒朝移動方向發射3個龍息,每5次龍息後,停頓4秒
+일반 이동을 멈추고 플레이어에게 돌진하며 경로를 따라 브레스를 계속 내뿜습니다. 돌진 전에 공격 범위가 표시되고 회전 꼬리도 유지됩니다.","異變0:
+隨機移動，攻擊時停下並瞄準玩家，預警後噴出三道龍息。每攻擊五次後會稍作停頓。
 
 異變1 (50%生命 / 25秒):
-召喚由10個子彈組成的龍尾,圍繞自身旋轉,龍息的間隔改為0.16秒,數量改為1個,但距離更遠
+召喚由10發子彈組成的旋轉龍尾。龍息變為單道，攻擊更加頻繁，仍會在每五次攻擊後停頓。
 
 異變2 (25%生命 / 50秒):
-停止移動,每2秒對玩家使用衝刺.衝刺時會不斷發射異變0的龍息,龍尾依舊存在,但異變1的龍息消失","Мутация 0:
-Двигается случайно, каждые 0,25 сек. выпускает 3 Дыхания Дракона в направлении движения и делает паузу на 4 сек. после каждых 5 залпов.
+停止普通移動，改為向玩家衝刺，沿途不斷噴吐龍息。衝刺前會預警攻擊範圍，旋轉龍尾仍然存在。","Мутация 0:
+Двигается случайно, останавливается, чтобы прицелиться в игрока, и после предупреждения выпускает три струи пламени. После каждых пяти атак делает паузу.
 
 Мутация 1 (50% ОЗ / 25с):
-Призывает Хвост Дракона из 10 пуль, вращающийся вокруг него. Интервал Дыханий Дракона меняется на 0,16 сек., количество за раз — на 1, с увеличенной дальностью.
+Создаёт вращающийся хвост из 10 снарядов. Дыхание становится чаще, но выпускает только одну струю пламени. Пауза после каждых пяти атак сохраняется.
 
 Мутация 2 (25% ОЗ / 50с):
-Перестает двигаться и совершает рывок к игроку каждые 2 секунды. Во время рывка непрерывно выпускает Дыхание Дракона из Мутации 0. Хвост Дракона активен, эффект Дыхания Дракона из Мутации 1 отключен.","Mutacja 0:
-Porusza się losowo, co 0,25 sekundy strzela 3 Smoczymi Oddechami w kierunku ruchu i robi 4-sekundową pauzę po każdych 5 strzałach.
+Перестаёт ходить и бросается на игрока, непрерывно извергая пламя вдоль пути. Область атаки показывается заранее, а вращающийся хвост сохраняется.","Mutacja 0:
+Porusza się losowo, zatrzymuje się, by wycelować w gracza, i po ostrzeżeniu wypuszcza trzy strumienie ognia. Co pięć ataków robi przerwę.
 
 Mutacja 1 (50% PŻ / 25 s):
-Przywołuje Smoczy Ogon złożony z 10 pocisków wirujących wokół niego. Odstęp między Smoczymi Oddechami zmienia się na 0,16 s, liczba na jeden strzał na 1, o zwiększonym zasięgu.
+Tworzy wirujący ogon z 10 pocisków. Atakuje oddechem częściej, ale tylko jednym strumieniem ognia. Nadal robi przerwę co pięć ataków.
 
 Mutacja 2 (25% PŻ / 50 s):
-Przestaje się ruszać i co 2 sekundy doskakuje do gracza. Podczas doskoku nieprzerwanie pluje Smoczym Oddechem z Mutacji 0. Smoczy Ogon pozostaje, ale efekt Oddechu z Mutacji 1 jest wyłączony.","Mutación 0:
-Se mueve aleatoriamente, dispara 3 Alientos de Dragón en la dirección del movimiento cada 0.25 segundos, y hace una pausa de 4 segundos después de cada 5 disparos.
+Przestaje chodzić i szarżuje na gracza, nieustannie ziejąc ogniem wzdłuż drogi. Obszar ataku jest zapowiadany przed szarżą, a wirujący ogon pozostaje.","Mutación 0:
+Se mueve aleatoriamente y se detiene para apuntar al jugador. Tras avisar, exhala tres llamaradas. Hace una pausa cada cinco ataques.
 
 Mutación 1 (50% Vida / 25s):
-Invoca una Cola de Dragón compuesta de 10 balas que gira a su alrededor. El intervalo del Aliento de Dragón cambia a 0.16 segundos, el número por disparo a 1, con alcance extendido.
+Invoca una cola giratoria de 10 proyectiles. Ataca con el aliento más a menudo, pero con una sola llamarada, y sigue pausando cada cinco ataques.
 
 Mutación 2 (25% Vida / 50s):
-Deja de moverse y embiste al jugador cada 2 segundos. Dispara continuamente el Aliento de Dragón de la Mutación 0 mientras embiste. La Cola de Dragón sigue activa, pero el efecto del Aliento de la Mutación 1 se desactiva.","Mutação 0:
-Move-se aleatoriamente, dispara 3 Sopro do Dragão na direção do movimento a cada 0,25 segundos e pausa por 4 segundos após cada 5 rajadas.
+Deja de caminar y embiste al jugador, exhalando llamas por el camino. El área de ataque se muestra antes de la embestida y la cola giratoria permanece.","Mutação 0:
+Move-se aleatoriamente e para para mirar no jogador. Após o aviso, solta três labaredas. Faz uma pausa a cada cinco ataques.
 
 Mutação 1 (50% PV / 25s):
-Invoca uma Cauda de Dragão composta por 10 balas que gira ao seu redor. O intervalo dos Sopros do Dragão muda para 0,16 segundos, o número por disparo para 1, com alcance estendido.
+Invoca uma cauda giratória de 10 projéteis. O sopro fica mais frequente, mas solta apenas uma labareda por vez, ainda pausando a cada cinco ataques.
 
 Mutação 2 (25% PV / 50s):
-Para de se mover e avança contra o jogador a cada 2 segundos. Dispara continuamente o Sopro do Dragão da Mutação 0 durante a investida. A Cauda de Dragão permanece ativa, enquanto o efeito do Sopro da Mutação 1 é desativado.","Mutation 0:
-Bewegt sich zufällig, feuert alle 0,25 Sekunden 3 Drachenodem in Bewegungsrichtung und pausiert 4 Sekunden nach jeweils 5 Drachenodem-Einsätzen.
+Para de caminhar e investe contra o jogador, soltando chamas pelo caminho. A área do ataque é mostrada antes da investida e a cauda giratória permanece.","Mutation 0:
+Bewegt sich zufällig und hält an, um auf den Spieler zu zielen. Kündigt den Atemangriff an und stößt drei Flammen aus. Pausiert nach jeweils fünf Angriffen.
 
 Mutation 1 (50% LP / 25 s):
-Beschwört einen Drachenschweif aus 10 Kugeln, der sich um sich selbst dreht. Das Intervall des Drachenodems wird auf 0,16 Sekunden geändert, die Anzahl pro Einsatz auf 1, mit erhöhter Reichweite.
+Erzeugt einen rotierenden Schweif aus 10 Projektilen. Der Atemangriff wird schneller, stößt aber nur noch eine Flamme aus. Pausiert weiterhin nach je fünf Angriffen.
 
 Mutation 2 (25% LP / 50 s):
-Hört auf sich zu bewegen und stürmt alle 2 Sekunden auf den Spieler zu. Dabei feuert es kontinuierlich den Drachenodem von Mutation 0. Der Drachenschweif bleibt aktiv, während der Drachenodem-Effekt von Mutation 1 deaktiviert ist.","Mutasyon 0:
-Rastgele hareket eder, her 0,25 saniyede bir hareket yönünde 3 Ejderha Nefesi ateşler ve her 5 Ejderha Nefesinden sonra 4 saniye duraklar.
+Geht nicht mehr und stürmt auf den Spieler zu, während er entlang des Weges ständig Flammen ausstößt. Der Angriffsbereich wird vorher angezeigt und der rotierende Schweif bleibt.","Mutasyon 0:
+Rastgele hareket eder, saldırırken durup oyuncuya nişan alır ve uyarıdan sonra üç alev püskürtür. Her beş saldırıdan sonra kısa bir ara verir.
 
 Mutasyon 1 (%50 Can / 25 sn):
-Etrafında dönen 10 mermiden oluşan bir Ejderha Kuyruğu çağırır. Ejderha Nefesi aralığı 0,16 saniyeye düşer, atış başına sayı 1 olur, menzili artar.
+10 mermilik dönen bir kuyruk oluşturur. Nefes saldırısı sıklaşır ancak tek alev atar; her beş saldırıdan sonraki ara devam eder.
 
 Mutasyon 2 (%25 Can / 50 sn):
-Hareket etmeyi bırakır ve her 2 saniyede bir oyuncuya doğru atılır. Atılma sırasında Mutasyon 0'daki Ejderha Nefesini sürekli ateşler. Ejderha Kuyruğu kalır, ancak Mutasyon 1'deki Ejderha Nefesi etkisi kaybolur.","Mutazione 0:
-Si muove casualmente, spara 3 Soffi di Drago nella direzione del movimento ogni 0,25 secondi e si ferma per 4 secondi dopo ogni 5 emissioni.
+Yürümeyi bırakıp oyuncuya atılır ve yolu boyunca sürekli alev püskürtür. Saldırı alanı atılımdan önce gösterilir ve dönen kuyruk kalır.","Mutazione 0:
+Si muove casualmente e si ferma per mirare al giocatore. Dopo un avviso soffia tre fiamme. Fa una pausa ogni cinque attacchi.
 
 Mutazione 1 (50% PV / 25 s):
-Evoca una Coda di Drago composta da 10 proiettili che gli ruota intorno. L'intervallo dei Soffi di Drago diventa 0,16 secondi, il numero per emissione diventa 1, con gittata estesa.
+Evoca una coda rotante di 10 proiettili. Il soffio diventa più frequente ma emette una sola fiamma, mantenendo la pausa ogni cinque attacchi.
 
 Mutazione 2 (25% PV / 50 s):
-Smette di muoversi e scatta verso il giocatore ogni 2 secondi. Durante lo scatto spara continuamente il Soffio di Drago della Mutazione 0. La Coda di Drago rimane attiva, mentre l'effetto del Soffio della Mutazione 1 è disabilitato."
+Smette di camminare e carica il giocatore, soffiando fiamme lungo il percorso. L'area d'attacco è mostrata prima della carica e la coda rotante rimane."
 FANTASY_GREAT_DEMON_LORD_NAME,Great Demon Lord,Grand seigneur démon,大恶魔领主,大魔王,대악마 군주,大惡魔領主,Великий повелитель демонов,Wielki Władca Demonów,Gran Señor Demonio,Grande Lorde Demônio,Großer Dämonenfürst,Büyük Şeytan Lordu,Grande Signore Demone
 FANTASY_GREAT_DEMON_LORD_BEHAVIOUR_DESCRIPTION,"Mutation 0:
 Chases the player, uses a dash toward the player every 3 seconds. When dashing starts, fires 1 crescent-shaped projectile in the facing direction; after dashing ends, fires 3 projectiles toward the player
@@ -1217,7 +1191,7 @@ FANTASY_ELDER_SHADOW_NAME,Elder Shadow,Ombre ancienne,旧日虚影,エルダー�
 FANTASY_ELDER_SHADOW_BEHAVIOUR_DESCRIPTION,"A persistent clock array exists on the field: with the very center of the map as the pivot, 12 cardinal directions are marked, forming hour and minute hands. Both hands light up once per second for 0.5 seconds, dealing damage to the player while lit. The minute hand rotates clockwise once per light-up; the hour hand rotates only once every 12 light-ups
 
 Mutation 0:
-Moves in a winding path chasing the player. When it gets within a certain range of the player, it teleports to the opposite side of the arena
+Chases the player along a winding path. Within 100 range, teleports across the player to a point 500 units beyond them, limited by the arena bounds.
 
 Mutation 1 (75% HP / 20s):
 Movement changes: it teleports clockwise between the positions pointed to by the tips of the minute hand. Each teleport is followed by firing 6 bullets aimed at the player
@@ -1229,7 +1203,7 @@ Mutation 3 (25% HP / 60s):
 Stays at the center of the map. Gears that move upward in a winding pattern now appear from the bottom of the screen. Its healing effect now ignores range but only affects the Great Demon Lord","Un réseau d'horloge persistant existe sur le terrain : avec le centre exact de la carte comme pivot, 12 directions cardinales sont marquées, formant les aiguilles des heures et des minutes. Les deux aiguilles s'allument une fois par seconde pendant 0,5 seconde, infligeant des dégâts au joueur lorsqu'elles sont allumées. La grande aiguille tourne d'un pas dans le sens horaire à chaque allumage ; la petite aiguille ne tourne qu'une fois tous les 12 allumages.
 
 Mutation 0 :
-Se déplace en zigzag à la poursuite du joueur. Lorsqu'il arrive à une certaine portée du joueur, il se téléporte du côté opposé de l'arène.
+Poursuit le joueur en ondulant. À moins de 100 unités, se téléporte de l'autre côté du joueur, à 500 unités de celui-ci, dans les limites de l'arène.
 
 Mutation 1 (75% PV / 20s) :
 Le déplacement change : il se téléporte dans le sens horaire entre les positions indiquées par les pointes de la grande aiguille. Chaque téléportation est suivie du tir de 6 balles visant le joueur.
@@ -1241,7 +1215,7 @@ Mutation 3 (25% PV / 60s) :
 Reste au centre de la carte. Des engrenages qui montent en zigzag apparaissent maintenant du bas de l'écran. Son effet de soin ignore la portée mais n'affecte plus que le Grand Seigneur Démon.","场上始终存在时钟阵列:以地图最中心为圆心,规划出12个正方向,分为时针和分针,时针和分针均为每秒点亮1次,持续0.5秒,在点亮期间可对玩家造成伤害,分针每次点亮都会顺时针转动1次,时针每点亮12次才会转动1次
 
 异变0:
-蜿蜒前行追逐玩家,在靠近玩家一定范围后会瞬移到对面方向
+蜿蜒追逐玩家,靠近至100范围内时穿过玩家瞬移到其另一侧500距离处,落点受地图边界限制。
 
 异变1 (75%生命 / 20秒):
 移动方式变为在各个分针顶端指向的位置之间按顺时针瞬移,每次瞬移都会发射6个射向玩家的子弹
@@ -1253,7 +1227,7 @@ Reste au centre de la carte. Des engrenages qui montent en zigzag apparaissent m
 停留在地图中心,地图下方会有向上移动的蜿蜒运动的齿轮弹幕,现在无视距离只恢复大恶魔领主的生命","フィールド上には常に時計のアレイが存在する:マップの正確な中心を軸に,12の正方向が刻まれ,時針と分針を形成.両針とも毎秒1回,0.5秒間光り,光っている間にプレイヤーにダメージを与える.分針は光るたびに時計回りに1目盛り回転,時針は12回光るごとに1回のみ回転.
 
 変異0:
-蛇行しつつプレイヤーを追跡.プレイヤーに一定範囲まで近づくと,アリーナの反対側にテレポートする.
+蛇行してプレイヤーを追う。距離100以内になると、プレイヤーを挟んだ反対側の500離れた地点へ転移する。転移先はマップの境界内に制限される。
 
 変異1 (HP75% / 20秒):
 移動方法が変わり,分針の先端が指す位置の間を時計回りにテレポートする.各テレポート後,プレイヤーを狙った6発の弾を発射.
@@ -1265,7 +1239,7 @@ Reste au centre de la carte. Des engrenages qui montent en zigzag apparaissent m
 マップ中央に留まる.画面下部から蛇行しながら上昇する歯車の弾幕が出現する.回復効果が距離無視となるが,大魔王にのみ影響する.","필드에는 지속적인 시계 배열이 존재합니다: 지도 중앙을 중심으로 12개의 기본 방향이 표시되어 시침과 분침을 형성합니다. 두 바늘은 매초 0.5초 동안 점등되며, 점등된 동안 플레이어에게 피해를 줍니다. 분침은 매 점등마다 시계 방향으로 1회전하고, 시침은 12회 점등마다 1회전합니다.
 
 변이 0:
-구불거리며 플레이어를 쫓습니다. 플레이어 일정 범위 내에 접근하면 경기장 반대편으로 순간이동합니다.
+구불거리며 플레이어를 추적합니다. 100 범위 안에 접근하면 플레이어를 넘어 반대편 500 거리로 순간이동하며, 도착 지점은 맵 경계 안으로 제한됩니다.
 
 변이 1 (체력 75% / 20초):
 이동 방식이 분침 끝이 가리키는 위치 사이를 시계 방향으로 순간이동하는 것으로 변경됩니다. 각 순간이동 후 플레이어를 겨냥한 6발의 탄환을 발사합니다.
@@ -1277,7 +1251,7 @@ Reste au centre de la carte. Des engrenages qui montent en zigzag apparaissent m
 지도 중앙에 머뭅니다. 화면 하단에서 구불거리며 상승하는 톱니바퀴 탄막이 나타납니다. 치유 효과가 이제 사거리를 무시하고 대악마 군주에게만 적용됩니다.","場上始終存在時鐘陣列:以地圖最中央為圓心,規劃出12個正方向,分為時針和分針,時針和分針均為每秒點亮1次,持續0.5秒,在點亮期間可對玩家造成傷害,分針每次點亮都會順時針轉動1次,時針每點亮12次才會轉動1次
 
 異變0:
-蜿蜒前行追逐玩家,在靠近玩家一定範圍後會瞬移到對面方向
+蜿蜒追逐玩家,靠近至100範圍內時穿過玩家瞬移到其另一側500距離處,落點受地圖邊界限制。
 
 異變1 (75%生命 / 20秒):
 移動方式變為在各個分針頂端指向的位置之間按順時針瞬移,每次瞬移都會發射6個射向玩家的子彈
@@ -1289,7 +1263,7 @@ Reste au centre de la carte. Des engrenages qui montent en zigzag apparaissent m
 停留在地圖中心,地圖下方會有向上移動的蜿蜒運動的齒輪彈幕,現在無視距離只恢復大惡魔領主的生命","Постоянный часовой массив существует на поле: с центром карты в качестве оси отмечены 12 сторон света, образующие часовую и минутную стрелки. Обе стрелки загораются раз в секунду на 0,5 секунды, нанося урон игроку, пока горят. Минутная стрелка поворачивается по часовой стрелке раз в загорание; часовая — только раз в 12 загораний.
 
 Мутация 0:
-Двигается извилистым путем, преследуя игрока. Когда оказывается в определенном радиусе от игрока, телепортируется на противоположную сторону арены.
+Преследует игрока извилистым путём. На расстоянии 100 телепортируется за игрока, на 500 единиц от него, в пределах арены.
 
 Мутация 1 (75% ОЗ / 20с):
 Движение меняется: телепортируется по часовой стрелке между позициями, на которые указывают кончики минутной стрелки. Каждая телепортация сопровождается выстрелом 6 пуль, целящихся в игрока.
@@ -1301,7 +1275,7 @@ Reste au centre de la carte. Des engrenages qui montent en zigzag apparaissent m
 Остается в центре карты. Снизу экрана появляются шестерни, движущиеся вверх извилистым образом. Эффект лечения теперь игнорирует расстояние, но действует только на Великого повелителя демонов.","Na polu istnieje stały mechanizm zegarowy: z samym środkiem mapy jako osią zaznaczono 12 kierunków kardynalnych, tworząc wskazówkę godzinową i minutową. Obie wskazówki zapalają się raz na sekundę na 0,5 sekundy, zadając obrażenia graczowi, gdy są zapalone. Wskazówka minutowa obraca się o krok zgodnie z ruchem wskazówek zegara przy każdym zapaleniu; wskazówka godzinowa obraca się tylko raz na 12 zapaleń.
 
 Mutacja 0:
-Porusza się krętą ścieżką, goniąc gracza. Gdy znajdzie się w pewnym zasięgu od gracza, teleportuje się na przeciwną stronę areny.
+Ściga gracza krętą ścieżką. W zasięgu 100 teleportuje się na drugą stronę gracza, 500 jednostek od niego, z ograniczeniem do granic areny.
 
 Mutacja 1 (75% PŻ / 20s):
 Ruch się zmienia: teleportuje się zgodnie z ruchem wskazówek zegara pomiędzy pozycjami, na które wskazują końce wskazówek minutowej. Po każdej teleportacji strzela 6 kulami wymierzonymi w gracza.
@@ -1313,7 +1287,7 @@ Mutacja 3 (25% PŻ / 60s):
 Pozostaje na środku mapy. Z dołu ekranu pojawiają się teraz koła zębate poruszające się w górę krętym wzorcem. Jego efekt leczenia ignoruje teraz zasięg, ale dotyczy tylko Wielkiego Władcy Demonów.","Existe una matriz de reloj persistente en el campo: con el centro exacto del mapa como pivote, se marcan 12 direcciones cardinales, formando agujas horarias y minuteras. Ambas agujas se iluminan una vez por segundo durante 0.5 segundos, infligiendo daño al jugador mientras están iluminadas. La minutera gira un paso en sentido horario por cada iluminación; la horaria gira solo una vez cada 12 iluminaciones.
 
 Mutación 0:
-Se mueve en un camino serpenteante persiguiendo al jugador. Cuando se acerca a cierto rango del jugador, se teletransporta al lado opuesto de la arena.
+Persigue al jugador serpenteando. Al acercarse a 100 unidades, se teletransporta al otro lado del jugador, a 500 unidades de él, dentro de los límites de la arena.
 
 Mutación 1 (75% Vida / 20s):
 El movimiento cambia: se teletransporta en sentido horario entre las posiciones señaladas por las puntas de la minutera. Cada teletransporte es seguido del disparo de 6 balas dirigidas al jugador.
@@ -1325,7 +1299,7 @@ Mutación 3 (25% Vida / 60s):
 Permanece en el centro del mapa. Ahora aparecen engranajes que se mueven hacia arriba en un patrón serpenteante desde la parte inferior de la pantalla. Su efecto de curación ahora ignora el alcance pero solo afecta al Gran Señor Demonio.","Um mecanismo de relógio persistente existe no campo: com o centro exato do mapa como pivô, 12 direções cardeais são marcadas, formando os ponteiros das horas e dos minutos. Ambos os ponteiros acendem uma vez por segundo por 0,5 segundos, causando dano ao jogador enquanto acesos. O ponteiro dos minutos gira um passo no sentido horário a cada acendimento; o das horas gira apenas uma vez a cada 12 acendimentos.
 
 Mutação 0:
-Move-se em um caminho sinuoso perseguindo o jogador. Quando chega a um certo alcance do jogador, teletransporta-se para o lado oposto da arena.
+Persegue o jogador serpenteando. Ao chegar a 100 unidades, teletransporta-se para o outro lado do jogador, a 500 unidades dele, dentro dos limites da arena.
 
 Mutação 1 (75% PV / 20s):
 O movimento muda: teletransporta-se em sentido horário entre as posições apontadas pelas pontas do ponteiro dos minutos. Cada teletransporte é seguido por 6 tiros mirados no jogador.
@@ -1337,7 +1311,7 @@ Mutação 3 (25% PV / 60s):
 Permanece no centro do mapa. Engrenagens que se movem para cima em um padrão sinuoso agora aparecem na parte inferior da tela. Seu efeito de cura agora ignora o alcance, mas afeta apenas o Grande Lorde Demônio.","Ein dauerhaftes Uhrwerk-Array existiert auf dem Feld: Mit der genauen Mitte der Karte als Drehpunkt sind 12 Himmelsrichtungen markiert, die Stunden- und Minutenzeiger bilden. Beide Zeiger leuchten einmal pro Sekunde für 0,5 Sekunden auf und verursachen Schaden am Spieler, während sie leuchten. Der Minutenzeiger dreht sich bei jedem Aufleuchten im Uhrzeigersinn um einen Schritt; der Stundenzeiger dreht sich nur einmal alle 12 Aufleuchten.
 
 Mutation 0:
-Bewegt sich auf einem gewundenen Pfad und jagt den Spieler. Wenn es dem Spieler zu nahe kommt, teleportiert es sich auf die gegenüberliegende Seite der Arena.
+Verfolgt den Spieler auf gewundenem Weg. Teleportiert sich bei 100 Abstand auf die andere Seite des Spielers, 500 Einheiten von ihm entfernt, begrenzt durch die Arenaränder.
 
 Mutation 1 (75% LP / 20 s):
 Bewegungsänderung: Es teleportiert sich im Uhrzeigersinn zwischen den Positionen, auf die die Spitzen des Minutenzeigers zeigen. Nach jedem Teleport feuert es 6 Kugeln auf den Spieler.
@@ -1349,7 +1323,7 @@ Mutation 3 (25% LP / 60 s):
 Bleibt im Zentrum der Karte. Zahnräder, die in einem gewundenen Muster nach oben steigen, erscheinen jetzt am unteren Bildschirmrand. Seine Heilwirkung ignoriert nun die Reichweite, betrifft aber nur den Großen Dämonenfürsten.","Alanda sürekli bir saat dizilimi bulunur: haritanın tam merkezi eksen alınarak 12 ana yön işaretlenir, akrep ve yelkovanı oluşturur. Her iki ibre de saniyede bir 0,5 saniyeliğine yanar ve yandıkları sürece oyuncuya hasar verir. Yelkovan her yanmada saat yönünde bir adım döner; akrep ise yalnızca her 12 yanmada bir döner.
 
 Mutasyon 0:
-Oyuncuyu kovalarken kıvrımlı bir yolda ilerler. Oyuncuya belirli bir mesafeye yaklaştığında, arenanın karşı tarafına ışınlanır.
+Oyuncuyu kıvrılarak takip eder. 100 menzile girince oyuncunun öbür tarafına, ondan 500 birim uzağa ışınlanır; hedef arena sınırları içinde tutulur.
 
 Mutasyon 1 (%75 Can / 20 sn):
 Hareketi değişir: yelkovanın ucunun gösterdiği konumlar arasında saat yönünde ışınlanır. Her ışınlanmanın ardından oyuncuya yönelik 6 mermi ateşler.
@@ -1361,7 +1335,7 @@ Mutasyon 3 (%25 Can / 60 sn):
 Haritanın merkezinde durur. Ekranın altından şimdi yukarı doğru kıvrımlı hareket eden dişliler belirir. İyileştirme etkisi artık menzili yok sayar ancak yalnızca Büyük Şeytan Lordu'nu etkiler.","Un array di orologio persiste sul campo: con il centro esatto della mappa come perno, sono segnate 12 direzioni cardinali, che formano le lancette delle ore e dei minuti. Entrambe le lancette si illuminano una volta al secondo per 0,5 secondi, infliggendo danni al giocatore mentre sono accese. La lancetta dei minuti ruota in senso orario ad ogni accensione; quella delle ore ruota solo una volta ogni 12 accensioni.
 
 Mutazione 0:
-Si muove in un percorso tortuoso inseguendo il giocatore. Quando arriva a una certa distanza dal giocatore, si teletrasporta sul lato opposto dell'arena.
+Insegue il giocatore serpeggiando. Entro 100 unità si teletrasporta oltre il giocatore, a 500 unità da lui, entro i confini dell'arena.
 
 Mutazione 1 (75% PV / 20 s):
 Il movimento cambia: si teletrasporta in senso orario tra le posizioni indicate dalle punte della lancetta dei minuti. Ogni teletrasporto è seguito da 6 proiettili mirati al giocatore.
@@ -1377,7 +1351,7 @@ EFFECT_FANTASY_CHANGE_WEAPON_EVERY_KILLED_ENEMIES,This weapon transforms into {1
 CHARACTER_FANTASY_BRAVE,Brave,Courageux,勇者,ブレイブ,용사,勇者,Храбрец,Odważny,Valiente,Corajoso,Mutiger,Cesur,Coraggioso
 EFFECT_FANTASY_CANTCOMBINE,Cannot be upgraded via combining,Ne peut pas être amélioré par fusion,无法通过合成升级,合成によるアップグレード不可,합성을 통해 업그레이드할 수 없습니다,無法透過合成升級,Нельзя улучшить объединением,Nie można ulepszyć przez łączenie,No se puede mejorar mediante combinación,Não pode ser melhorado por combinação,Kann nicht durch Kombinieren aufgewertet werden,Birleştirme yoluyla yükseltilemez,Non può essere potenziato tramite unione
 FANTASY_BELIEVER_NAME,Believer,Croyant,信仰者,ビリーバー,신자,信仰者,Верующий,Wierzący,Creyente,Fiel,Gläubiger,İnanan,Credente
-FANTASY_BELIEVER_BEHAVIOUR_DESCRIPTION,"Wanders around, drops a fair number of materials and gives 1 holy on death.","Erre sans but, laisse tomber un bon nombre de matériaux et donne 1 Sainteté à la mort.","四处游荡,死亡时掉落大量材料并给予1点神圣","徘徊し,死亡時にかなりの量の素材を落とし1ホーリーを与える.","돌아다니며, 사망 시 상당량의 재료를 드롭하고 1 신성을 부여합니다.","四處遊蕩,死亡時掉落大量材料並給予1點神聖","Бродит вокруг, роняет изрядное количество материалов и даёт 1 Святости при смерти.","Wędruje bez celu, po śmierci upuszcza sporą ilość materiałów i daje 1 punkt Świętości.","Deambula por ahí, suelta una buena cantidad de materiales y otorga 1 de Sagrado al morir.","Vaga por aí, solta um bom número de materiais e concede 1 de Sagrado ao morrer.","Wandert umher, lässt beim Tod eine gute Menge an Materialien fallen und gibt 1 Heilig.","Etrafta gezinir, ölünce epey malzeme düşürür ve 1 Kutsallık verir.","Vaga in giro, lascia cadere una discreta quantità di materiali e conferisce 1 Sacro alla morte."
+FANTASY_BELIEVER_BEHAVIOUR_DESCRIPTION,"Wanders around and drops materials on death. When killed by a player, grants that player 1 Holy; in co-op, only the killer receives it.","Erre et lâche des matériaux à la mort. Si un joueur le tue, ce joueur gagne 1 Saint ; en coopération, seul l'auteur du coup fatal le reçoit.","四处游荡,死亡时掉落材料。被玩家击杀时给予击杀者1点神圣,合作模式下仅击杀者获得。",徘徊し、死亡時に素材を落とす。プレイヤーに倒されると、そのプレイヤーにホーリーを1付与する。協力プレイでは倒したプレイヤーのみが獲得する。,배회하며 사망 시 재료를 떨어뜨립니다. 플레이어가 처치하면 처치한 플레이어에게 신성 1을 부여합니다. 협동 모드에서도 처치자만 받습니다.,"四處遊蕩,死亡時掉落材料。被玩家擊殺時給予擊殺者1點神聖,合作模式下僅擊殺者獲得。","Бродит и роняет материалы при смерти. Если убит игроком, даёт ему 1 Святости; в кооперативе награду получает только убийца.",Wędruje i upuszcza materiały po śmierci. Zabity przez gracza daje mu 1 Świętości; w kooperacji otrzymuje ją tylko zabójca.,"Vaga y suelta materiales al morir. Si lo mata un jugador, otorga 1 de Sagrado a ese jugador; en cooperativo, solo lo recibe quien lo mata.","Vagueia e solta materiais ao morrer. Quando morto por um jogador, concede 1 de Sagrado a ele; no cooperativo, apenas quem o matou recebe.","Wandert umher und lässt beim Tod Materialien fallen. Wird er von einem Spieler getötet, erhält dieser 1 Heilig; im Koop erhält nur der tödlich treffende Spieler den Bonus.",Dolaşır ve ölünce malzeme düşürür. Bir oyuncu öldürdüğünde o oyuncuya 1 Kutsal verir; eşli oyunda yalnızca öldüren oyuncu kazanır.,"Vaga e lascia materiali alla morte. Se ucciso da un giocatore, gli conferisce 1 Sacro; in cooperativa lo riceve solo chi lo uccide."
 CHARACTER_FANTASY_SAGE,Sage,Sage,贤者,賢者,현자,賢者,Мудрец,Mędrzec,Sabio,Sábio,Weiser,Bilge,Saggio
 CHARACTER_FANTASY_THIEF,Thief,Voleur,盗贼,盗賊,도적,盜賊,Вор,Złodziej,Ladrón,Ladrão,Dieb,Hırsız,Ladro
 EFFECT_FANTASY_MATERIAL_LOSS_ON_HIT,Lose {0} materials when hit,Perd {0} matériaux en cas de coup,每次受伤失去{0}材料,被弾時に素材を{0}失う,피격 시 재료 {0}개를 잃습니다,每次受傷失去{0}材料,Теряете {0} материалов при ударе,Traci {0} materiałów przy trafieniu,Pierde {0} materiales al recibir un golpe,Perde {0} materiais ao receber dano,Verliere {0} Materialien bei Treffer,Vurulduğunda {0} malzeme kaybet,Perdi {0} materiali quando colpito
@@ -1717,8 +1691,8 @@ EFFECT_FANTASY_BLOODSTAINED_BANNER_TARGETS,Bloodlight strikes the nearest enemy 
 EFFECT_FANTASY_BLOODSTAINED_BANNER_SACRIFICE,Lose 1 HP per attack.,Perd 1 PV par attaque.,攻击时扣1生命值,攻撃時にHPを1失う,공격 시 HP 1 소모,攻擊時扣1生命值,Теряете 1 ОЗ за атаку.,Tracisz 1 PŻ za atak.,Pierdes 1 PV por ataque.,Perde 1 PV por ataque.,Verliere 1 LP pro Angriff.,Saldırı başına 1 Can kaybedersin.,Perdi 1 PV per attacco.
 EFFECT_FANTASY_BLOODSTAINED_BANNER_EROSION,Hits apply {1} erosion damage.,Applique {1} dégâts d’érosion à l’impact.,命中施加{1}侵蚀伤害,命中時に{1}の侵食ダメージを付与,명중 시 {1} 침식 피해 부여,命中施加{1}侵蝕傷害,При попадании: {1} урона эрозией.,Trafienie nakłada {1} obrażeń od erozji.,Aplica {1} de daño por erosión al impactar.,Aplica {1} de dano de erosão ao acertar.,Treffer verursachen {1} Erosionsschaden.,İsabette {1} erozyon hasarı uygular.,All’impatto applica {1} danni da erosione.
 EFFECT_FANTASY_BLACKTHORN_BOW,"On hit, releases {0} blackthorns along winding arcs that gently home in on nearby enemies, dealing {1} ({3}) damage each. The enemy hit by the main arrow is excluded only from their first target search.","À chaque coup, libère {0} épines noires qui suivent des arcs sinueux et poursuivent doucement les ennemis proches, infligeant chacune {1} ({3}) dégâts. L’ennemi touché par la flèche principale est exclu uniquement de leur première recherche de cible.",命中时散出 {0} 枚黑棘，沿弧线盘旋并轻度追踪附近敌人，每枚造成 {1}（{3}）伤害。 子箭仅在首次索敌时排除主箭命中的敌人。,命中時に黒棘を{0}本放ち、弧を描きながら近くの敵を緩やかに追尾する。1本につき{1}（{3}）ダメージ。 子矢は最初の索敵時のみ、親矢が命中した敵を対象から除外する。,적중 시 검은 가시 {0}개를 방출합니다. 가시는 곡선을 그리며 주변 적을 약하게 추적하고 각각 {1} ({3}) 피해를 줍니다. 자식 화살은 첫 표적 탐색에서만 주 화살에 맞은 적을 제외합니다.,命中時散出 {0} 枚黑棘，沿弧線盤旋並輕度追蹤附近敵人，每枚造成 {1}（{3}）傷害。 子箭僅在首次索敵時排除主箭命中的敵人。,"При попадании выпускает {0} чёрных шипов, которые летят по извилистым дугам и плавно наводятся на ближайших врагов, нанося по {1} ({3}) урона. Враг, поражённый основной стрелой, исключается только при первом поиске цели шипами.","Przy trafieniu uwalnia {0} czarnych cierni, które lecą krętymi łukami i łagodnie naprowadzają się na pobliskich wrogów, zadając po {1} ({3}) obrażeń. Wróg trafiony główną strzałą jest pomijany tylko przy pierwszym wyszukiwaniu celu przez ciernie.","Al impactar, libera {0} espinas negras que trazan arcos sinuosos y siguen suavemente a enemigos cercanos, causando {1} ({3}) de daño cada una. El enemigo alcanzado por la flecha principal se excluye solo de su primera búsqueda de objetivo.","Ao acertar, libera {0} espinhos negros que percorrem arcos sinuosos e seguem suavemente inimigos próximos, causando {1} ({3}) de dano cada. O inimigo atingido pela flecha principal é excluído apenas da primeira busca de alvo dos espinhos.","Bei Treffer werden {0} Schwarzdornen freigesetzt, die in gewundenen Bögen sanft nahe Gegner verfolgen und jeweils {1} ({3}) Schaden verursachen. Der vom Hauptpfeil getroffene Gegner wird nur bei der ersten Zielsuche der Dornen ausgeschlossen.",İsabet halinde kıvrımlı yaylar çizerek yakındaki düşmanlara hafifçe yönelen {0} kara diken saçar. Her biri {1} ({3}) hasar verir. Ana okun vurduğu düşman yalnızca dikenlerin ilk hedef aramasında hariç tutulur.,"A segno rilascia {0} spine nere che percorrono archi sinuosi e inseguono dolcemente i nemici vicini, infliggendo {1} ({3}) danni ciascuna. Il nemico colpito dalla freccia principale viene escluso solo dalla prima ricerca del bersaglio delle spine."
-"WEAPON_FANTASY_KOU_B_HAND","Kou B Hand","Main Kou B","扣B手","扣Bハンド","Kou B 손","扣B手","Рука Коу Би","Dłoń Kou B","Mano Kou B","Mão Kou B","Kou-B-Hand","Kou B Eli","Mano Kou B"
-"EFFECT_FANTASY_KOU_B_HAND","Finger from afar: {0} chance to make an enemy climax and take flight, then slam down for damage equal to its max HP ({1} radius, losing {2} max HP itself). Reduced chance and self-damage against elites/bosses.","Doigté à distance : {0} de chances de faire jouir et décoller un ennemi, qui retombe en infligeant des dégâts égaux à ses PV max (rayon : {1}, perte de {2} de ses PV max). Chances et perte de PV réduites contre les élites/boss.","隔空扣B，{0}概率使敌人高潮起飞，落下造成其最大生命值的伤害（{1}范围，自身受损{2}最大生命值）。对精英/Boss的概率和自损效果减弱。","遠隔指技。{0}で敵を絶頂させて飛ばし、落下時にその敵の最大HP分のダメージを与える（半径{1}、自身は最大HPの{2}を失う）。エリート・ボスには発動確率と自身のHP損失が低下。","원격 손놀림: {0} 확률로 적을 절정에 이르게 해 띄운 뒤, 낙하 시 해당 적의 최대 체력만큼 피해를 줍니다 (반경 {1}, 자신은 최대 체력의 {2} 손실). 정예/보스는 발동 확률과 자신의 체력 손실이 감소합니다.","隔空扣B，{0}機率使敵人高潮起飛，落下造成其最大生命值的傷害（{1}範圍，自身受損{2}最大生命值）。對精英/Boss的機率和自損效果減弱。","Ласка на расстоянии: шанс {0} довести врага до оргазма и подбросить. При падении он наносит урон в размере своих макс. ОЗ (радиус {1}, сам теряет {2} макс. ОЗ). Для элиты/боссов шанс и потеря собственных ОЗ снижены.","Pieszczota na odległość: {0} szans na orgazm i podrzucenie wroga. Przy upadku zadaje obrażenia równe swoim maks. HP (promień {1}, sam traci {2} maks. HP). Elity/bossowie: mniejsza szansa i utrata własnego HP.","Caricias a distancia: {0} de probabilidad de llevar a un enemigo al clímax y hacerlo volar. Al caer, causa daño igual a su vida máxima (radio {1}, pierde {2} de su vida máxima). Menor probabilidad y pérdida de vida propia contra élites/jefes.","Carícias à distância: {0} de chance de levar um inimigo ao clímax e fazê-lo voar. Ao cair, causa dano igual à vida máxima dele (raio {1}, perde {2} da própria vida máxima). Chance e perda de vida própria reduzidas contra elites/chefes.","Fingern aus der Ferne: {0} Chance, einen Gegner zum Höhepunkt zu bringen und hochzuschleudern. Beim Aufprall verursacht er Schaden in Höhe seiner max. LP (Radius {1}, eigener Verlust: {2} max. LP). Chance und eigener LP-Verlust sind bei Elite/Bossen geringer.","Uzaktan parmak oyunu: {0} şansla düşmanı doruğa ulaştırıp havalandırır. Düşerken kendi azami canı kadar hasar verir ({1} yarıçap, kendisi azami canının {2} kadarını kaybeder). Seçkinler/bosslarda şans ve kendi can kaybı azalır.","Carezze a distanza: {0} di probabilità di portare un nemico al culmine e farlo volare. Cadendo infligge danni pari ai suoi PV massimi (raggio {1}, perde {2} dei propri PV massimi). Probabilità e perdita dei propri PV ridotte contro élite/boss."
+"WEAPON_FANTASY_KOU_B_HAND","Massage Hand","Main de massage","按摩手","マッサージハンド","마사지 손","按摩手","Массажная рука","Masująca dłoń","Mano de masaje","Mão de massagem","Massagehand","Masaj Eli","Mano massaggiante"
+"EFFECT_FANTASY_KOU_B_HAND","Massage from afar: {0} chance to make an enemy feel good and take flight, then slam down for damage equal to its max HP ({1} radius, losing {2} max HP itself). Reduced chance and self-damage against elites/bosses.","Massage à distance : {0} de chances de détendre et faire décoller un ennemi, qui retombe en infligeant des dégâts égaux à ses PV max (rayon : {1}, perte de {2} de ses PV max). Chances et perte de PV réduites contre les élites/boss.","隔空按摩，{0}概率使敌人舒服起飞，落下造成其最大生命值的伤害（{1}范围，自身受损{2}最大生命值）。对精英/Boss的概率和自损效果减弱。","遠隔マッサージ。{0}で敵を心地よくさせて飛ばし、落下時にその敵の最大HP分のダメージを与える（半径{1}、自身は最大HPの{2}を失う）。エリート・ボスには発動確率と自身のHP損失が低下。","원격 마사지: {0} 확률로 적을 기분 좋게 해 띄운 뒤, 낙하 시 해당 적의 최대 체력만큼 피해를 줍니다 (반경 {1}, 자신은 최대 체력의 {2} 손실). 정예/보스는 발동 확률과 자신의 체력 손실이 감소합니다.","隔空按摩，{0}機率使敵人舒服起飛，落下造成其最大生命值的傷害（{1}範圍，自身受損{2}最大生命值）。對精英/Boss的機率和自損效果減弱。","Массаж на расстоянии: шанс {0} доставить врагу удовольствие и подбросить. При падении он наносит урон в размере своих макс. ОЗ (радиус {1}, сам теряет {2} макс. ОЗ). Для элиты/боссов шанс и потеря собственных ОЗ снижены.","Masaż na odległość: {0} szans na odprężenie i podrzucenie wroga. Przy upadku zadaje obrażenia równe swoim maks. HP (promień {1}, sam traci {2} maks. HP). Elity/bossowie: mniejsza szansa i utrata własnego HP.","Masaje a distancia: {0} de probabilidad de hacer que un enemigo se sienta bien y hacerlo volar. Al caer, causa daño igual a su vida máxima (radio {1}, pierde {2} de su vida máxima). Menor probabilidad y pérdida de vida propia contra élites/jefes.","Massagem à distância: {0} de chance de fazer um inimigo se sentir bem e fazê-lo voar. Ao cair, causa dano igual à vida máxima dele (raio {1}, perde {2} da própria vida máxima). Chance e perda de vida própria reduzidas contra elites/chefes.","Massage aus der Ferne: {0} Chance, einem Gegner Wohlbefinden zu verschaffen und hochzuschleudern. Beim Aufprall verursacht er Schaden in Höhe seiner max. LP (Radius {1}, eigener Verlust: {2} max. LP). Chance und eigener LP-Verlust sind bei Elite/Bossen geringer.","Uzaktan masaj: {0} şansla düşmanı rahatlatıp havalandırır. Düşerken kendi azami canı kadar hasar verir ({1} yarıçap, kendisi azami canının {2} kadarını kaybeder). Seçkinler/bosslarda şans ve kendi can kaybı azalır.","Massaggio a distanza: {0} di probabilità di far sentire bene un nemico e farlo volare. Cadendo infligge danni pari ai suoi PV massimi (raggio {1}, perde {2} dei propri PV massimi). Probabilità e perdita dei propri PV ridotte contro élite/boss."
 MENU_FANTASY_TRACKS,Fantasy Woodland Tracks,Musiques de la forêt fantastique,幻界树海曲目,幻想樹海の楽曲,환상 수해 음악,幻界樹海曲目,Музыка фантастического леса,Utwory fantastycznej puszczy,Música del bosque fantástico,Músicas da floresta fantástica,Musik des Fantasiewaldes,Fantastik Orman Parçaları,Brani della foresta fantastica
 WEAPON_FANTASY_SAGE_STAFF,Sage Staff,Bâton du sage,贤者之杖,賢者の杖,현자의 지팡이,賢者之杖,Посох мудреца,Kostur Mędrca,Bastón del sabio,Cajado do sábio,Weisenstab,Bilge Asası,Bastone del saggio
 "EFFECT_FANTASY_SAGE_STAFF","Each volley releases random elemental orbs at {0}s intervals. They scatter, then fly toward a target.
@@ -1823,4 +1797,4 @@ FANTASY_EROSION_SPEED,% Erosion speed,% Vitesse d'érosion,%侵蚀速度,% 侵�
 "EFFECT_FANTASY_DEAD_HAND","After each swing, a larger cursed ghostflame hand sweeps the same location after {0}s, dealing {1} damage.","Après chaque coup, une plus grande main de flammes spectrales maudites balaie le même endroit après {0} s et inflige {1} dégâts.","每次挥击后，{0}秒后在原位置召唤更大范围的诅咒幽焰之手再次挥击，造成{1}伤害。","振り終えて{0}秒後、同じ位置に広範囲の呪われた幽炎の手が現れて再び薙ぎ払い、{1}ダメージを与える。","휘두른 뒤 {0}초 후 같은 위치에 더 넓은 범위의 저주받은 유령 불꽃 손이 나타나 다시 휘둘러 {1} 피해를 줍니다.","每次揮擊後，{0}秒後在原位置召喚更大範圍的詛咒幽焰之手再次揮擊，造成{1}傷害。","Через {0} с после каждого взмаха на том же месте появляется большая рука проклятого призрачного пламени и наносит {1} урона широким взмахом.","Po każdym zamachu, po {0} s większa dłoń przeklętego widmowego ognia wykonuje zamach w tym samym miejscu, zadając {1} obrażeń.","Tras cada barrido, una mano más grande de fuego espectral maldito barre el mismo lugar después de {0} s e inflige {1} de daño.","Após cada golpe, uma mão maior de chamas espectrais amaldiçoadas varre o mesmo local após {0}s, causando {1} de dano.","Nach jedem Schwung fegt nach {0} s eine größere Hand aus verfluchtem Geisterfeuer über dieselbe Stelle und verursacht {1} Schaden.","Her savuruştan {0} sn sonra aynı konumda daha geniş alanı tarayan lanetli hayalet alev eli belirir ve {1} hasar verir.","Dopo ogni fendente, una mano più grande di fiamme spettrali maledette colpisce lo stesso punto dopo {0} s, infliggendo {1} danni."
 "EFFECT_FANTASY_DEAD_HAND_EROSION","Ghostflame hits have a {0}% chance to apply {1} Erosion damage.","Les coups de flammes spectrales ont {0}% de chances d’appliquer {1} dégâts d’Érosion.","幽焰挥击命中时有{0}%概率施加{1}侵蚀伤害。","幽炎の薙ぎ払いが命中すると、{0}%の確率で{1}の侵蝕ダメージを付与する。","유령 불꽃 공격 적중 시 {0}% 확률로 {1} 침식 피해를 부여합니다.","幽焰揮擊命中時有{0}%機率施加{1}侵蝕傷害。","Попадания призрачного пламени с вероятностью {0}% накладывают {1} урона эрозией.","Trafienia widmowym ogniem mają {0}% szans na nałożenie {1} obrażeń erozji.","Los golpes de fuego espectral tienen un {0}% de probabilidad de aplicar {1} de daño de Erosión.","Acertos das chamas espectrais têm {0}% de chance de aplicar {1} de dano de Erosão.","Treffer des Geisterfeuers verursachen mit {0}% Wahrscheinlichkeit {1} Erosionsschaden.","Hayalet alev isabetleri %{0} ihtimalle {1} Aşınma hasarı uygular.","I colpi delle fiamme spettrali hanno il {0}% di probabilità di applicare {1} danni da Erosione."
 WEAPON_CLASS_FANTASY_UNIQUE,Unique,Unique,独武,固有武器,고유 무기,獨武,Уникальное,Unikatowa,Única,Única,Einzigartig,Eşsiz,Unica
-WEAPON_CLASS_FANTASY_UNIQUE_DESCRIPTION,You can only own one,Vous ne pouvez en posséder qu’une,只能拥有一把,1本しか所持できない,하나만 보유할 수 있습니다,只能擁有一把,Можно иметь только одно,Możesz posiadać tylko jedną,Solo puedes tener una,Você só pode possuir uma,Du kannst nur eine besitzen,Yalnızca bir tane sahip olabilirsin,Puoi possederne solo una
+WEAPON_CLASS_FANTASY_UNIQUE_DESCRIPTION,You can only own one of each unique weapon,Vous ne pouvez posséder qu’un exemplaire de chaque arme unique,每种独武只能拥有一把,各固有武器は1本しか所持できない,각 고유 무기는 하나만 보유할 수 있습니다,每種獨武只能擁有一把,Можно иметь только один экземпляр каждого уникального оружия,Możesz posiadać tylko jeden egzemplarz każdej unikatowej broni,Solo puedes tener una de cada arma única,Você só pode possuir uma de cada arma única,Du kannst von jeder einzigartigen Waffe nur ein Exemplar besitzen,Her eşsiz silahtan yalnızca bir tane sahip olabilirsin,Puoi possedere solo un esemplare di ogni arma unica

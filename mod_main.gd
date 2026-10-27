@@ -32,7 +32,7 @@ func install_script_extensions() -> void:
         "ui/item_description.gd",
         "ui/item_panel_ui.gd",
         "ui/shop_item.gd",
-        "ui/synergy_panel.gd",
+        "ui/synergy_container.gd",
         # SYSTEMS: Unique weapons
 
         "services/item_service.gd",
