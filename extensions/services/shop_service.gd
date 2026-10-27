@@ -43,41 +43,8 @@ static func _fantasy_shop_enter_synthesis(update_stats: FuncRef, get_gear_contai
                 "source_id": Keys.empty_hash,
             }
 
-        for item in player_items:
-            for effect in item.effects:
-                if effect.get_id() != "fantasy_shop_enter_synthesis": continue
-                var pid: String = Utils.fa_get_synthesis_pity_id(effect.materials, effect.result_id_hash)
-                if syntheses.has(pid): break
-                var item_source_id: int = item.my_id_hash
-                if _fantasy_synthesis_materials_has_gear(effect.materials, item_source_id):
-                    item_source_id = Keys.empty_hash
-                syntheses[pid] = {
-                    "value": effect.value,
-                    "materials": effect.materials,
-                    "result_id": effect.result_id_hash,
-                    "pity_chance_step": effect.pity_chance_step,
-                    "cursed_materials": effect.cursed_materials,
-                    "source_id": item_source_id,
-                }
-                break
-
-        for weapon in player_weapons:
-            for effect in weapon.effects:
-                if effect.get_id() != "fantasy_shop_enter_synthesis": continue
-                var pid: String = Utils.fa_get_synthesis_pity_id(effect.materials, effect.result_id_hash)
-                if syntheses.has(pid): break
-                var weapon_source_id: int = weapon.my_id_hash
-                if _fantasy_synthesis_materials_has_gear(effect.materials, weapon_source_id):
-                    weapon_source_id = Keys.empty_hash
-                syntheses[pid] = {
-                    "value": effect.value,
-                    "materials": effect.materials,
-                    "result_id": effect.result_id_hash,
-                    "pity_chance_step": effect.pity_chance_step,
-                    "cursed_materials": effect.cursed_materials,
-                    "source_id": weapon_source_id,
-                }
-                break
+        _fantasy_collect_gear_syntheses(player_items, syntheses)
+        _fantasy_collect_gear_syntheses(player_weapons, syntheses)
 
         for pid in syntheses:
             var synthesis: Dictionary = syntheses[pid]
@@ -103,6 +70,25 @@ static func _fantasy_shop_enter_synthesis(update_stats: FuncRef, get_gear_contai
             var player_gear_container: PlayerGearContainer = get_gear_container.call_func(player_index)
             player_gear_container.set_weapons_data(RunData.get_player_weapons(player_index))
             player_gear_container.set_items_data(RunData.get_player_items(player_index))
+
+static func _fantasy_collect_gear_syntheses(gears: Array, syntheses: Dictionary) -> void:
+    for gear in gears:
+        for effect in gear.effects:
+            if effect.get_id() != "fantasy_shop_enter_synthesis": continue
+            var pid: String = Utils.fa_get_synthesis_pity_id(effect.materials, effect.result_id_hash)
+            if syntheses.has(pid): break
+            var source_id: int = gear.my_id_hash
+            if _fantasy_synthesis_materials_has_gear(effect.materials, source_id):
+                source_id = Keys.empty_hash
+            syntheses[pid] = {
+                "value": effect.value,
+                "materials": effect.materials,
+                "result_id": effect.result_id_hash,
+                "pity_chance_step": effect.pity_chance_step,
+                "cursed_materials": effect.cursed_materials,
+                "source_id": source_id,
+            }
+            break
 
 static func _fantasy_synthesis_materials_has_gear(synthesis_materials: Array, gear_id: int) -> bool:
     for material in synthesis_materials:
