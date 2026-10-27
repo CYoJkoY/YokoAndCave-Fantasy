@@ -20,6 +20,7 @@ export(float) var wander_speed: float = 160.0
 export(float) var pickup_range: float = 48.0
 
 var stored_healing: int = 0
+var _healing_shares: Dictionary = {}
 var _current_state: int = State.WANDER
 var _current_target = null
 var _wander_target_pos: Vector2 = Vector2.ZERO
@@ -107,7 +108,7 @@ func _setup_advanced_visuals() -> void:
         _offset.add_child(sat)
         _satellites.append(sat)
 
-    for _i in range(2):
+    for _i in range(max(2, RunData.get_player_count())):
         _wisp_pool.append(_create_wisp_visual())
     for _i in range(12):
         _mote_pool.append(_create_pooled_sprite(TEXTURE_STAR_SMALL, 7))
@@ -288,7 +289,7 @@ func _collect_target() -> void:
         return
 
     target.global_position = p.global_position
-    if consumable_type == "fruit":
+    if consumable_type == "fruit" or consumable_type == "box":
         p.fa_begin_healing_star_collection(self)
         target.pickup(player_index)
         p.fa_end_healing_star_collection(self)
@@ -392,6 +393,13 @@ func fa_store_healing(amount: int) -> void:
     if stored_healing <= 0:
         _heal_tick_timer = 0.0
     stored_healing += amount
+    var teammate_count: int = players_ref.size() - 1
+    for recipient in players_ref:
+        var share: float = 1.0
+        if teammate_count > 0:
+            share = 0.7 if recipient.player_index == player_index else 0.3 / teammate_count
+        var recipient_index: int = recipient.player_index
+        _healing_shares[recipient_index] = _healing_shares.get(recipient_index, 0.0) + amount * share
     _update_aura()
 
 
@@ -399,32 +407,65 @@ func _process_healing_stream(delta: float) -> void:
     if stored_healing <= 0:
         return
 
-    var p = _get_player()
-    if !is_instance_valid(p) or p.dead:
-        return
-
-    var max_hp: float = p.max_stats.health
-    var current_hp: float = p.current_stats.health
-    var missing_hp: float = max_hp - current_hp
-
-    if missing_hp <= 0.0:
-        _heal_tick_timer = 0.0
-        return
-
     _heal_tick_timer -= delta
-    if _heal_tick_timer <= 0.0:
-        _heal_tick_timer = HEAL_TICK_INTERVAL
-        if RunData.get_player_effect_bool(Keys.no_heal_hash, player_index) \
-            or RunData.get_player_effect(Keys.torture_hash, player_index) > 0:
-            return
+    if _heal_tick_timer > 0.0:
+        return
+    _heal_tick_timer = HEAL_TICK_INTERVAL
 
-        var rate_per_tick: int = int(max(1, ceil(max_hp * 0.05)))
-        var heal_chunk: int = int(min(rate_per_tick, min(missing_hp, stored_healing)))
+    var injured: Array = []
+    for p in players_ref:
+        if _can_receive_healing(p) and p.current_stats.health < p.max_stats.health:
+            injured.append(p)
+    injured.sort_custom(self, "_healing_priority")
 
-        if heal_chunk > 0:
-            stored_healing -= heal_chunk
-            _update_aura()
-            _spawn_healing_wisp(p, heal_chunk)
+    var previous_stored_healing: int = stored_healing
+    for p in injured:
+        var missing_hp: int = int(max(0, p.max_stats.health - p.current_stats.health))
+        var rate_per_tick: int = int(max(1, ceil(p.max_stats.health * 0.05)))
+        var requested: int = int(min(rate_per_tick, missing_hp))
+        var funding: Array = []
+        var healing: int = _take_healing_share(p.player_index, requested, 0, funding)
+        for donor in players_ref:
+            if healing >= requested:
+                break
+            if donor.player_index == p.player_index:
+                continue
+            var reserve: int = 0
+            if donor.player_index == player_index:
+                if donor.dead or donor.current_stats.health < donor.max_stats.health:
+                    continue
+                reserve = int(ceil(donor.max_stats.health * 0.2))
+            elif _can_receive_healing(donor) and donor.current_stats.health < donor.max_stats.health:
+                continue
+            healing += _take_healing_share(donor.player_index, requested - healing, reserve, funding)
+        if healing > 0:
+            _spawn_healing_wisp(p, funding)
+    if stored_healing != previous_stored_healing:
+        _update_aura()
+
+
+func _can_receive_healing(p: Player) -> bool:
+    return is_instance_valid(p) and !p.dead \
+        and !RunData.get_player_effect_bool(Keys.no_heal_hash, p.player_index) \
+        and RunData.get_player_effect(Keys.torture_hash, p.player_index) <= 0
+
+
+func _healing_priority(a: Player, b: Player) -> bool:
+    var a_ratio: float = float(a.current_stats.health) / max(1.0, a.max_stats.health)
+    var b_ratio: float = float(b.current_stats.health) / max(1.0, b.max_stats.health)
+    if a_ratio == b_ratio:
+        return a.player_index < b.player_index
+    return a_ratio < b_ratio
+
+
+func _take_healing_share(source_index: int, requested: int, reserve: int, funding: Array) -> int:
+    var available: int = int(max(0, floor(_healing_shares.get(source_index, 0.0) + 0.000001) - reserve))
+    var taken: int = int(min(requested, available))
+    if taken > 0:
+        _healing_shares[source_index] -= taken
+        stored_healing -= taken
+        funding.append([source_index, taken])
+    return taken
 
 
 # ══════════════════════════════════════════ Visuals & Aesthetic Polish ══════════════════════════ #
@@ -523,7 +564,7 @@ func _play_pickup_bounce() -> void:
 
 # ══════════════════════════════════════════ Starlight Healing Wisps ═════════════════════════════ #
 
-func _spawn_healing_wisp(p: Player, healing: int) -> void:
+func _spawn_healing_wisp(p: Player, funding: Array) -> void:
     if !is_instance_valid(p):
         return
 
@@ -535,7 +576,7 @@ func _spawn_healing_wisp(p: Player, healing: int) -> void:
             wisp_container = candidate
             break
     if wisp_container == null:
-        _deliver_wisp_healing(p, healing)
+        _deliver_wisp_healing(p, funding)
         return
     wisp_container.global_position = start_pos
     wisp_container.scale = Vector2.ONE
@@ -553,7 +594,7 @@ func _spawn_healing_wisp(p: Player, healing: int) -> void:
         "p0": start_pos,
         "p1": mid_control,
         "player": p,
-        "healing": healing,
+        "funding": funding,
         "progress": 0.0,
         "speed": 3.6,
         "trail_timer": 0.0
@@ -566,14 +607,14 @@ func _update_dynamic_wisps(delta: float) -> void:
     while i >= 0:
         var w = _active_wisps[i]
         if !is_instance_valid(w.node):
+            _deliver_wisp_healing(null, w.funding)
             _active_wisps.remove(i)
             i -= 1
             continue
 
         w.progress += delta * w.speed
         if w.progress >= 1.0 or !is_instance_valid(w.player):
-            if is_instance_valid(w.player):
-                _deliver_wisp_healing(w.player, w.healing)
+            _deliver_wisp_healing(w.player, w.funding)
             w.node.visible = false
             _active_wisps.remove(i)
         else:
@@ -594,16 +635,37 @@ func _update_dynamic_wisps(delta: float) -> void:
         i -= 1
 
 
-func _deliver_wisp_healing(p: Player, healing: int) -> void:
-    if !is_instance_valid(p) or p.dead:
-        return
-    var actual_healed: int = p.on_healing_effect(healing)
-    if actual_healed < healing:
-        stored_healing += healing - actual_healed
+func _deliver_wisp_healing(p: Player, funding: Array) -> void:
+    var healing: int = 0
+    var owner: Player = _get_player()
+    var recall_owner_share: bool = is_instance_valid(p) and p.player_index != player_index \
+        and (!is_instance_valid(owner) or owner.dead or owner.current_stats.health < owner.max_stats.health)
+    for source in funding:
+        var source_index: int = source[0]
+        var funded_amount: int = source[1]
+        if source_index != player_index or !recall_owner_share:
+            healing += funded_amount
+
+    var actual_healed: int = 0
+    if healing > 0 and _can_receive_healing(p):
+        actual_healed = p.on_healing_effect(healing)
+    var consumed: int = actual_healed
+    var total_refund: int = 0
+    for source in funding:
+        var source_index: int = source[0]
+        var funded_amount: int = source[1]
+        var used: int = 0 if source_index == player_index and recall_owner_share else int(min(consumed, funded_amount))
+        consumed -= used
+        var refund: int = funded_amount - used
+        if refund > 0:
+            _healing_shares[source_index] += refund
+            total_refund += refund
+    stored_healing += total_refund
     if actual_healed > 0:
         RunData.add_tracked_value(player_index, _tracking_key_hash, actual_healed)
         _spawn_player_heal_ripple(p.global_position)
-    _update_aura()
+    if total_refund > 0:
+        _update_aura()
 
 
 func _spawn_wisp_stardust(pos: Vector2) -> void:
