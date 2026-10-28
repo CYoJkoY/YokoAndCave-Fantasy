@@ -3,6 +3,7 @@ extends "res://main.gd"
 const FANTASY_UPGRADE_HOOKS = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/upgrade_hooks.gd")
 const FANTASY_LIGHTNING_CHAIN_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/lightning_chain_service.gd")
 const FANTASY_ENEMY_SPEED_MODIFIER_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/enemy_speed_modifier_service.gd")
+const FANTASY_FOREST_ATMOSPHERE = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/forest_atmosphere.gd")
 
 const FANTASY_END_WAVE_BEFORE_REWARDS: String = "before_wave_rewards"
 const FANTASY_END_WAVE_BEFORE_END_RUN_SCENE: String = "before_end_run_scene"
@@ -19,6 +20,10 @@ func _ready() -> void:
     _fantasy_queue_job_upgrades()
     _fantasy_start_time_bonus_current_health_damage_timer()
     _fantasy_start_enemy_spawn_timers()
+    if ZoneService.get_zone_data(RunData.current_zone).name == "ZONE_FANTASY":
+        var atmosphere = FANTASY_FOREST_ATMOSPHERE.new()
+        atmosphere.entities_container = _entities_container
+        _tile_map.add_child(atmosphere)
 
 func on_bonus_gold_changed(value: int) -> void:
     .on_bonus_gold_changed(value)
