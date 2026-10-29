@@ -1,5 +1,7 @@
 extends "res://weapons/shooting_behaviors/ranged_weapon_shooting_behavior.gd"
 
+const RECOVERY_DURATION: float = 0.6
+
 
 func shoot(_distance: float) -> void:
     var weapon = _parent
@@ -27,5 +29,5 @@ func shoot(_distance: float) -> void:
         projectile.configure_wave(i)
         emit_signal("projectile_shot", projectile)
 
-    weapon.tween.interpolate_callback(weapon, weapon_stats.recoil_duration * 2.0, "set_shooting", false)
+    weapon.tween.interpolate_callback(weapon, RECOVERY_DURATION, "set_shooting", false)
     weapon.tween.start()

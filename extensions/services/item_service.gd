@@ -5,7 +5,6 @@ const FANTASY_UNIQUE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/serv
 var _fantasy_unique_weapons: Array = []
 var jobs: Array = []
 var jobs_by_stage: Dictionary = {0: [], 1: []}
-var _fantasy_added_starting_weapons: Array = []
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func _ready() -> void:
@@ -20,7 +19,6 @@ func init_unlocked_pool() -> void:
             _fantasy_unique_weapons.append(weapon)
             tier_data[TierData.WEAPONS].erase(weapon)
             tier_data[TierData.ALL_ITEMS].erase(weapon)
-    _fantasy_rebuild_mod_starting_weapons()
 
 func apply_item_effect_modifications(item: ItemParentData, player_index: int) -> ItemParentData:
     var new_item: ItemParentData =.apply_item_effect_modifications(item, player_index)
@@ -81,44 +79,6 @@ func _fantasy_get_unique_weapon_candidates(player_index: int, args: GetRandItemF
                 break
         if !excluded: candidates.append(weapon)
     return candidates
-
-func _fantasy_rebuild_mod_starting_weapons() -> void:
-    for added in _fantasy_added_starting_weapons:
-        var character: CharacterData = added[0]
-        var weapon: WeaponData = added[1]
-        if is_instance_valid(character):
-            character.starting_weapons.erase(weapon)
-    _fantasy_added_starting_weapons.clear()
-
-    var mod_weapons: Array = []
-    for weapon in weapons:
-        if weapon is WeaponData and weapon.resource_path.begins_with("res://mods-unpacked/Yoko-Fantasy/"):
-            mod_weapons.append(weapon)
-
-    for character in characters:
-        if !(character is CharacterData):
-            continue
-        for weapon in mod_weapons:
-            if !_fantasy_can_be_starting_weapon(character, weapon):
-                continue
-            character.starting_weapons.append(weapon)
-            _fantasy_added_starting_weapons.append([character, weapon])
-
-func _fantasy_can_be_starting_weapon(character: CharacterData, weapon: WeaponData) -> bool:
-    if weapon.tier != ItemParentData.Tier.COMMON:
-        return false
-    if character.starting_weapons.has(weapon):
-        return false
-
-    for effect in character.effects:
-        if effect.value <= 0:
-            continue
-        if effect.key == "no_melee_weapons" and weapon.type == WeaponType.MELEE:
-            return false
-        if effect.key == "no_ranged_weapons" and weapon.type == WeaponType.RANGED:
-            return false
-
-    return true
 
 func _fantasy_extra_curse_item(item: ItemParentData, player_index: int) -> ItemParentData:
     if item.is_cursed: return item

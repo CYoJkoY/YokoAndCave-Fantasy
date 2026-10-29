@@ -35,6 +35,9 @@ func install_script_extensions() -> void:
         "ui/synergy_container.gd",
         # SYSTEMS: Unique weapons
 
+        "ui/weapon_selection.gd",
+        # SYSTEMS: Starting weapons
+
         "services/item_service.gd",
         # SYSTEMS: Job[ 2/6 ]
         # ITEMS: Erosion Items

@@ -3,6 +3,7 @@ extends "res://projectiles/player_projectile.gd"
 const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
 
 const PATH_SEGMENTS: int = 42
+const MAX_RANGE_BONUS: int = 250
 const TIP_SCALE: Vector2 = Vector2(0.64, 0.42)
 const DAMAGE_RADIUS: float = 30.0
 const TRAVEL_MIN_TIME: float = 0.46
@@ -90,6 +91,7 @@ func shoot_ex(p_from: Node,
     .shoot_ex(p_from, pos, p_velocity, p_rotation, p_weapon_stats, damage_tracking_key,
         effects, hitbox_args, knockback_direction)
 
+    _max_range = min(_max_range, p_from.stats.max_range + MAX_RANGE_BONUS)
     velocity = Vector2.ZERO
     rotation = 0.0
     _hitbox.ignored_objects.clear()
