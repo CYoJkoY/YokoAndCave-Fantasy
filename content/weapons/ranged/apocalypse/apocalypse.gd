@@ -1,7 +1,10 @@
 extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shared/floating_spell_weapon.gd"
 
+const MAX_RANGE_BONUS: int = 50
+
 onready var _visuals: Node2D = $ApocalypseField
 
+var _field_radius: float = 0.0
 var _pulse_targets: Array = []
 
 
@@ -11,7 +14,9 @@ func _ready() -> void:
 
 func init_stats(at_wave_begin: bool = true) -> void:
     .init_stats(at_wave_begin)
-    $ApocalypseField.set_radius(float(current_stats.max_range))
+    _field_radius = min(current_stats.max_range, stats.max_range + MAX_RANGE_BONUS)
+    _range_shape.shape.radius = _field_radius + DETECTION_RANGE
+    $ApocalypseField.set_radius(_field_radius)
 
 
 func is_manual_aim() -> bool:
@@ -38,7 +43,7 @@ func should_shoot() -> bool:
     if not WeaponService.fantasy_can_start_attack(self):
         return false
     _pulse_targets.clear()
-    var radius_squared: float = pow(float(current_stats.max_range), 2.0)
+    var radius_squared: float = _field_radius * _field_radius
     for target in _targets_in_range:
         if is_instance_valid(target) and target is Enemy and not target.dead and not target._pending_die:
             if global_position.distance_squared_to(target.global_position) <= radius_squared:
@@ -54,7 +59,7 @@ func emit_erosion_pulse(attack_id: int) -> void:
     _hitbox.ignored_objects.clear()
     _hitbox.active = true
     _visuals.play_pulse()
-    var radius_squared: float = pow(float(current_stats.max_range), 2.0)
+    var radius_squared: float = _field_radius * _field_radius
     for target in _pulse_targets:
         if not is_instance_valid(target) or target.dead or target._pending_die:
             continue

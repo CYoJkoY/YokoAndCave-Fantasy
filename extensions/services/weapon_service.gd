@@ -172,10 +172,11 @@ func fantasy_on_killed_something(weapon: Node) -> void:
     _fantasy_change_weapon_every_killed_enemies(weapon)
 
 func fantasy_on_weapon_hit(weapon: Node, thing_hit: Node, damage_dealt: int, hitbox: Hitbox) -> void:
-    if hitbox == null:
+    if hitbox == null or not is_instance_valid(thing_hit) or not (thing_hit is Enemy):
         return
 
-    _fantasy_weapon_hit_proc(weapon, thing_hit, damage_dealt)
+    if damage_dealt > 0:
+        _fantasy_weapon_hit_proc(weapon, thing_hit)
     _fantasy_lightning_chain_on_hit(weapon, thing_hit)
 
 func fantasy_on_weapon_critically_hit(weapon: Node) -> void:
@@ -223,10 +224,7 @@ func _fantasy_reload_when_critically_hit(weapon: Node) -> void:
 
         fantasy_reset_weapon_cooldown(weapon)
 
-func _fantasy_weapon_hit_proc(weapon: Node, thing_hit: Node, damage_dealt: int) -> void:
-    if damage_dealt <= 0 or !(thing_hit is Enemy) or !is_instance_valid(thing_hit):
-        return
-
+func _fantasy_weapon_hit_proc(weapon: Node, thing_hit: Node) -> void:
     var effect_items: Array = RunData.get_player_effect(Utils.fantasy_weapon_hit_proc_hash, weapon.player_index)
     for effect_item in effect_items:
         var chance: float = effect_item[0]
@@ -256,12 +254,13 @@ func _fantasy_weapon_has_set(weapon: Node, set_id_hash: int) -> bool:
     return false
 
 func _fantasy_lightning_chain_on_hit(weapon: Node, thing_hit: Node) -> void:
-    var main: Main = Utils.get_scene_node()
-    if main == null or !(thing_hit is Enemy) or !is_instance_valid(thing_hit):
-        return
-
     var effect_items: Array = RunData.get_player_effect(Utils.fantasy_lightning_chain_on_hit_hash, weapon.player_index)
     var params_list: Array = FANTASY_LIGHTNING_CHAIN_SERVICE.collect_triggered_hit_params(weapon.effects, effect_items, weapon.player_index)
+    if params_list.empty():
+        return
+    var main: Main = Utils.get_scene_node()
+    if main == null:
+        return
     for params in params_list:
         var arc_damage: int = FANTASY_LIGHTNING_CHAIN_SERVICE.spawn_lightning_chain(
             main,

@@ -46,7 +46,7 @@ func _valid_target(target: Node) -> bool:
 
 
 func _get_chain_lifetime() -> float:
-    return FIRST_HIT + max(0, _targets.size() - 1) * LINK_INTERVAL + FADE_DURATION
+    return FIRST_HIT + max(0, _targets.size() - 1) * LINK_INTERVAL + chain_hold_duration + FADE_DURATION
 
 
 func _finish_attack() -> void:

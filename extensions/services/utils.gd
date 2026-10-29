@@ -117,6 +117,7 @@ var fantasy_gain_item_on_reroll_hash: int = Keys.generate_hash("fantasy_gain_ite
 var fantasy_guaranteed_set_weapons_in_shop_hash: int = Keys.generate_hash("fantasy_guaranteed_set_weapons_in_shop")
 var fantasy_weapon_hit_proc_hash: int = Keys.generate_hash("fantasy_weapon_hit_proc")
 var fantasy_blessed_hash: int = Keys.generate_hash("fantasy_blessed")
+var fantasy_heal_per_second_hash: int = Keys.generate_hash("fantasy_heal_per_second")
 
 func fa_format_damage_with_scaling_stats(damage: int, base_damage: int, scaling_stats: Array) -> String:
     var text: String = "[color=%s]%s[/color]" % [Utils.ncl_get_signed_col(damage, base_damage), str(damage)]
@@ -319,6 +320,11 @@ func fa_is_negative_effect(effect: Effect) -> bool:
     if effect == null or effect.custom_key == "fantasy_blessed" or effect.custom_key_hash == fantasy_blessed_hash:
         return false
 
+    if effect.key_hash == Keys.torture_hash and effect.value > 0:
+        return true
+    if effect is StatCapEffect and effect.set_cap_to_current_stat in ["stat_max_hp", "stat_speed"]:
+        return true
+
     var sign_0: int = effect.get_sign(effect.effect_sign, effect.value)
     if not effect._custom_args_added:
         effect._add_custom_args()
@@ -375,6 +381,13 @@ func fa_bless_item(item_data: ItemParentData) -> ItemParentData:
     var new_effects: Array = []
     for effect in item_data.effects:
         if fa_is_negative_effect(effect):
+            if effect.key_hash == Keys.torture_hash and effect.value > 0:
+                var healing_effect: Effect = effect.duplicate()
+                healing_effect.key = "fantasy_heal_per_second"
+                healing_effect.key_hash = fantasy_heal_per_second_hash
+                healing_effect.text_key = "EFFECT_FANTASY_HEAL_PER_SECOND"
+                healing_effect.effect_sign = Sign.POSITIVE
+                new_effects.append(healing_effect)
             continue
         new_effects.append(effect.duplicate())
     new_effects.append(fa_create_blessed_effect())

@@ -21,6 +21,8 @@ shader_param/delay = 0.020
 material = SubResource( 1 )
 z_index = 2
 script = ExtResource( 1 )
+chain_hold_duration = 0.35
+chain_width_scale = 1.7
 
 [node name="Hitbox" parent="." instance=ExtResource( 2 )]
 monitorable = false

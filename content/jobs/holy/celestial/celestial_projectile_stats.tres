@@ -14,5 +14,5 @@ nb_projectiles = 1
 piercing = 0
 bounce = 0
 can_bounce = false
-projectile_speed = 650
+projectile_speed = 910
 projectile_scene = ExtResource( 2 )

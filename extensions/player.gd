@@ -14,6 +14,7 @@ var _fantasy_clock_tower_hat_material: ShaderMaterial = null
 var _fantasy_clock_tower_hat_in_area: bool = false
 var _fantasy_is_clock_tower_guardian_character: bool = false
 var _fantasy_active_soul_effects: Array = []
+var _fantasy_soul_effect_id: int = 0
 
 const FANTASY_CLOCK_TOWER_HAT_PATH: String = "res://mods-unpacked/Yoko-Fantasy/content/characters/clock_tower_guardian/clock_tower_guardian_hat.webp"
 const FANTASY_CLOCK_TOWER_HAT_TWEEN_TIME: float = 0.35
@@ -25,6 +26,8 @@ var _fa_healing_star_receiver = null
 func _ready() -> void:
     _fantasy_decaying_slow_enemy_when_below_hp_ready()
     _fantasy_is_clock_tower_guardian_character = _fantasy_is_clock_tower_guardian()
+    if RunData.get_player_effect(Utils.fantasy_heal_per_second_hash, player_index) > 0 and _one_second_timer.is_stopped():
+        _one_second_timer.start()
 
 func _physics_process(_delta: float) -> void:
     _fantasy_update_clock_tower_hat_color()
@@ -39,6 +42,12 @@ func _on_LoseHealthTimer_timeout() -> void:
     if _fantasy_lose_hp_per_second_min_hp(): return
     if _fantasy_lose_hp_per_second_stop_threshold(): return
     ._on_LoseHealthTimer_timeout()
+
+func _on_OneSecondTimer_timeout() -> void:
+    ._on_OneSecondTimer_timeout()
+    var healing: int = RunData.get_player_effect(Utils.fantasy_heal_per_second_hash, player_index)
+    if healing > 0 and not dead and not cleaning_up and current_stats.health < max_stats.health:
+        var _healed: int = on_healing_effect(healing)
 
 func take_damage(value: int, args: TakeDamageArgs) -> Array:
     var take_damage_array: Array =.take_damage(value, args)
@@ -405,12 +414,16 @@ func _fantasy_lose_hp_per_second_stop_threshold() -> bool:
 
 # ══════════════════════════════════════════ Method ══════════════════════════════════════════ #
 func fa_on_soul_effect(damage_to_add: int, speed_to_add: int) -> void:
+    if _fantasy_active_soul_effects.size() >= 10:
+        _fantasy_remove_soul_effect(_fantasy_active_soul_effects[0])
+    _fantasy_soul_effect_id += 1
     var soul_effect: Dictionary = {
+        "id": _fantasy_soul_effect_id,
         "damage": damage_to_add,
         "speed": speed_to_add,
     }
     _fantasy_active_soul_effects.append(soul_effect)
-    var soul_duration: float = 2.0 + RunData.get_player_effect(Utils.fantasy_soul_duration_hash, player_index)
+    var soul_duration: float = 2.5 + RunData.get_player_effect(Utils.fantasy_soul_duration_hash, player_index)
     var timer: SceneTreeTimer = get_tree().create_timer(soul_duration, false)
     var _e: int = timer.connect("timeout", self , "fa_on_soul_effect_timer_timeout", [soul_effect])
 

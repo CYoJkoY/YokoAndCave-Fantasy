@@ -7,6 +7,8 @@ const FIRST_HIT: float = 0.045
 const LINK_INTERVAL: float = 0.035
 const FADE_DURATION: float = 0.30
 
+export(float) var chain_hold_duration = 0.0
+export(float) var chain_width_scale = 1.0
 export(Color) var chain_glow_color = Color(0.2, 0.6, 1.0)
 export(Color) var chain_core_color = Color(0.9, 0.98, 1.0)
 export(Color) var chain_star_color = Color(0.55, 0.85, 1.0)
@@ -18,16 +20,16 @@ var _age: float = 0.0
 func _draw_chain(points: PoolVector2Array) -> void:
     if points.empty():
         return
-    _draw_star(points[0], 80.0, pow(max(0.0, 1.0 - _age / 0.25), 2.0))
+    _draw_star(points[0], 80.0, pow(clamp(1.0 - (_age - chain_hold_duration) / 0.25, 0.0, 1.0), 2.0))
     for i in range(points.size() - 1):
         var local_age: float = _age - i * LINK_INTERVAL
-        if local_age <= 0.0 or local_age >= FIRST_HIT + FADE_DURATION:
+        if local_age <= 0.0 or local_age >= FIRST_HIT + chain_hold_duration + FADE_DURATION:
             continue
-        var fade: float = pow(clamp(1.0 - (local_age - FIRST_HIT) / FADE_DURATION, 0.0, 1.0), 1.6)
+        var fade: float = pow(clamp(1.0 - (local_age - FIRST_HIT - chain_hold_duration) / FADE_DURATION, 0.0, 1.0), 1.6)
         var reveal: float = clamp(local_age / FIRST_HIT, 0.0, 1.0)
         _draw_link(points[i], points[i + 1], reveal, fade, i)
         if local_age >= FIRST_HIT:
-            var burst_age: float = local_age - FIRST_HIT
+            var burst_age: float = min(local_age - FIRST_HIT, FADE_DURATION)
             _draw_star(points[i + 1], 58.0 + burst_age * 95.0, fade)
             _draw_sparks(points[i + 1], burst_age, fade, i)
 
@@ -71,7 +73,7 @@ func _draw_link_ribbon(points: PoolVector2Array, widths: PoolRealArray, pulse: f
         var side: Vector2 = (after - before).normalized().tangent()
         var edge: Vector2 = (points[i] - before) if i == count - 1 else (after - points[i])
         var joint_scale: float = 1.0 / max(0.75, side.dot(edge.normalized().tangent()))
-        side *= widths[i] * pulse * joint_scale
+        side *= widths[i] * pulse * joint_scale * chain_width_scale
         glow[i * 2] = points[i] - side * 12.0
         glow[i * 2 + 1] = points[i] + side * 12.0
         core[i * 2] = points[i] - side * 3.3

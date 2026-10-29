@@ -86,6 +86,7 @@ func install_script_extensions() -> void:
         #          xp_on_consumable
         #          lose_hp_per_second_min_hp
         #          lose_hp_per_second_stop_threshold
+        #          heal_per_second
 
         "services/weapon_service.gd",
         # STATS: Crit Damage, %Pet Attack Speed

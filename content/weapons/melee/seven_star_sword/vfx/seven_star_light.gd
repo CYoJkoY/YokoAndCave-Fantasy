@@ -8,7 +8,7 @@ onready var _main_cut: Sprite = $Cross/MainCut
 onready var _echo_cut: Sprite = $Cross/EchoCut
 
 var _chain: bool = false
-var _lifetime: float = 0.44
+var _lifetime: float = 0.80
 var _cross_hit: bool = false
 
 

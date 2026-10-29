@@ -4,9 +4,10 @@ const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantas
 
 const TRAIL_HISTORY = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_trail_history.gd")
 
-export(float) var initial_float_speed: float = 170.0
-export(float) var min_target_speed: float = 680.0
+export(float) var initial_float_speed: float = 238.0
+export(float) var min_target_speed: float = 952.0
 export(float) var arm_delay: float = 0.15
+export(float) var acceleration_duration: float = 0.45
 
 const TRAIL_MAX_POINTS: int = 22
 const TRAIL_MIN_DIST: float = 2.0
@@ -83,7 +84,8 @@ func _physics_process(delta: float) -> void:
         turn_speed += clamp(1.0 - distance / 300.0, 0.0, 1.0) * 4.0
     _process_micro_homing(delta, turn_speed, Utils.LARGE_NUMBER, 180.0, 180.0)
 
-    _current_speed = lerp(_current_speed, _top_speed, clamp(delta * 3.2, 0.0, 1.0))
+    var speed_progress: float = smoothstep(0.0, acceleration_duration, _flight_time)
+    _current_speed = lerp(initial_float_speed, _top_speed, speed_progress)
     velocity = velocity.normalized() * _current_speed
     rotation = velocity.angle()
 
@@ -126,10 +128,6 @@ func _update_trail() -> void:
     var to_local_transform: Transform2D = _trail_line.global_transform.affine_inverse()
     for i in range(_history.count):
         _trail_line.set_point_position(i, to_local_transform.xform(_history.newest(i)))
-
-
-func _find_best_homing_target(_max_range: float, _acquire_fov_deg: float) -> Node:
-    return Utils.fa_get_highest_health_enemy(Utils.get_scene_node()._entity_spawner.get_all_enemies(false))
 
 
 func _return_to_pool() -> void:

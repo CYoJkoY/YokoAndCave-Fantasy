@@ -136,6 +136,7 @@ static func init_effects() -> Dictionary:
             Utils.fantasy_gain_item_on_reroll_hash: [],
             Utils.fantasy_guaranteed_set_weapons_in_shop_hash: [],
             Utils.fantasy_weapon_hit_proc_hash: [],
+            Utils.fantasy_heal_per_second_hash: 0,
 
         }
 

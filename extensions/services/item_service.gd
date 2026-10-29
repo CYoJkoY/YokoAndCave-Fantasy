@@ -159,12 +159,13 @@ func _fantasy_get_stat_description_text(stat_description: String, stat_hash: int
         Utils.stat_fantasy_holy_hash:
             var stat_holy: float = Utils.average_all_player_stats(Utils.stat_fantasy_holy_hash)
             var damage_bonus: int = int(stat_holy)
-            var chance_drop_soul: int = int(stat_holy / (stat_holy + 50.0) * 100)
+            var chance_drop_soul: int = int(stat_holy / (stat_holy + 50.0) * 50)
             stat_description = Text.text(key, [str(damage_bonus), str(chance_drop_soul)])
 
         Utils.stat_fantasy_soul_hash:
             var bonus: int = 10 + RunData.get_player_effect(Utils.fantasy_soul_bonus_hash, player_index)
-            stat_description = Text.text(key, [str(bonus), str(bonus)])
+            var duration: float = 2.5 + RunData.get_player_effect(Utils.fantasy_soul_duration_hash, player_index)
+            stat_description = Text.text(key, [str(bonus), str(bonus), str(duration)])
 
     return stat_description
 
