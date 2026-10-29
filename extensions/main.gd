@@ -23,6 +23,7 @@ func _ready() -> void:
     if ZoneService.get_zone_data(RunData.current_zone).name == "ZONE_FANTASY":
         var atmosphere = FANTASY_FOREST_ATMOSPHERE.new()
         atmosphere.entities_container = _entities_container
+        atmosphere.players = _players
         _tile_map.add_child(atmosphere)
 
 func on_bonus_gold_changed(value: int) -> void:

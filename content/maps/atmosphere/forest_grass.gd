@@ -8,7 +8,7 @@ var _flattened: bool = false
 func _ready() -> void:
     var area = Area2D.new()
     area.collision_layer = 0
-    area.collision_mask = Utils.PLAYER_BIT
+    area.collision_mask = Utils.PLAYER_BIT | Utils.ENEMIES_BIT | Utils.PETS_BIT
     area.monitorable = false
     var collision = CollisionShape2D.new()
     var circle = CircleShape2D.new()

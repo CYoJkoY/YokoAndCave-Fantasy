@@ -20,18 +20,24 @@ const GRASS_SHADER = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmo
 const GLOW_SHADER = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/forest_glow.shader")
 const TINT_SHADER = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/forest_tint.shader")
 const PARTICLES = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/forest_particles.tscn")
+const BORDER = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/spiritwood_border.gd")
 
 var entities_container: YSort
+var players: Array = []
 var _random = RandomNumberGenerator.new()
 var _grass_material: ShaderMaterial
 var _elapsed: float = 0.0
 var _light_patches: Array = []
+var _border: Node2D
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func _ready() -> void:
     name = "FantasyForestAtmosphere"
     _random.randomize()
     var bounds: Rect2 = ZoneService.get_current_zone_rect()
+    _border = BORDER.new()
+    add_child(_border)
+    _border.create_border(bounds, entities_container)
     _create_grass(bounds)
     _create_lighting(bounds)
     var particles = PARTICLES.instance()
@@ -43,6 +49,8 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
     _elapsed += delta
+    _border.update_wind(_elapsed)
+    _border.update_occlusion(players, delta)
     _grass_material.set_shader_param("elapsed", _elapsed)
     for patch in _light_patches:
         patch.age += delta
