@@ -14,7 +14,7 @@ keys,en,fr,zh,ja,ko,zh_TW,ru,pl,es,pt,de,tr,it
 "JOB_FANTASY_SEER","Seer","Voyant","窥见者","予見者","예지자","窺見者","Провидец","Wieszcz","Vidente","Vidente","Seher","Kâhin","Veggente"
 "JOB_FANTASY_WILDBORN","Wildborn","Né Sauvage","荒野信徒","荒野の信徒","야생 신도","荒野信徒","Дитя Дикой Природы","Dzikie Dziecię","Nacido de la Naturaleza","Nascido da Selva","Wildgeborener","Vahşi Doğmuş","Nato Selvaggio"
 "JOB_FANTASY_HERETIC","Heretic","Hérétique","邪道信徒","邪道の信徒","이단자","邪道信徒","Еретик","Heretyk","Hereje","Herege","Ketzer","Sapkın","Eretico"
-JOB_HOLY,Holy,Saint,神圣,ホーリー,신성,神聖,Святость,Świętość,Sagrado,Sagrado,Heilig,Kutsal,Sacro
+JOB_HOLY,Job: Holy {0},Métier : Saint {0},职业: 神圣 {0},職業: ホーリー {0},직업: 신성 {0},職業:神聖 {0},Работа: Святость {0},Praca: Świętość {0},Oficio: Sagrado {0},Ofício: Sagrado {0},Job: Heilig {0},İş: Kutsal {0},Classe: Sacro {0}
 "JOB_FANTASY_STARCALLER","Starcaller","Invocateur d'étoiles","唤星者","スターコーラー","스타콜러","喚星者","Звездочёт","Gwiezdny Przywoływacz","Invocador de Estrellas","Invocador de Estrelas","Sternrufer","Yıldız Çağıran","Invocatore di Stelle"
 "JOB_FANTASY_SANCTIFIER","Sanctifier","Sanctificateur","圣道信徒","聖道の信徒","성도의 신자","聖道信徒","Освятитель","Uświęciciel","Santificador","Santificador","Heiliger","Kutsayıcı","Santificatore"
 EFFECT_FANTASY_SOUL_DURATION,{0} seconds to soul buff duration,{0} secondes à la durée du bonus des âmes,魂增益持续时间{0}秒,ソウルの強化効果の持続時間{0}秒,영혼 강화 효과 지속 시간 {0}초,魂增益持續時間{0}秒,{0} сек. к длительности усиления от душ,{0} sek. do czasu trwania wzmocnienia dusz,{0} segundos a la duración de las mejoras de alma,{0} segundos à duração do bônus das almas,{0} Sekunden Dauer der Seelenverstärkung,Ruh güçlendirmesi süresi {0} saniye,{0} secondi alla durata del potenziamento delle anime

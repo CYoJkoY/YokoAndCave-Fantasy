@@ -74,7 +74,7 @@ New mechanic
    └── Localization       → translations/
 ```
 
-`manifest.json` is authoritative for version **1.1.0**, dependencies, and compatibility. The release workflow rejects tags that do not match the manifest.
+`manifest.json` is authoritative for version **1.0.0**, dependencies, and compatibility. The release workflow rejects tags that do not match the manifest.
 
 <a href="https://cyojkoy.github.io/Payment/"><img src="assets/readme/support-cta.svg" alt="Support Yoko-Fantasy" width="900" style="max-width:100%;height:auto;"></a>
 
