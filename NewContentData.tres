@@ -438,7 +438,7 @@ translation_keys_needing_percent = {
 "effect_fantasy_time_bonus_current_health_damage": [ 1, 2 ],
 "effect_fantasy_xp_on_consumable": [ 0 ],
 "effect_reload_when_critically_hit": [ 0 ],
-"info_pos_stat_fantasy_holy": [ 0, 1, 2 ],
+"info_pos_stat_fantasy_holy": [ 0, 1 ],
 "info_pos_stat_fantasy_soul": [ 0, 1 ],
 "stat_fantasy_crit_damage": [ 0 ]
 }

@@ -31,7 +31,7 @@ func on_bonus_gold_changed(value: int) -> void:
     if value != 0: _ui_bonus_gold.show()
 
 func on_upgrade_selected(upgrade_data: UpgradeData, upgrade: UpgradesUI.UpgradeToProcess) -> void:
-    FANTASY_UPGRADE_HOOKS.fa_handle_selected_upgrade_hooks(upgrade_data, upgrade.player_index, "normal_upgrade")
+    FANTASY_UPGRADE_HOOKS.fa_handle_selected_upgrade_hooks(upgrade_data)
     .on_upgrade_selected(upgrade_data, upgrade)
     _fantasy_add_job(upgrade_data, upgrade.player_index)
 
