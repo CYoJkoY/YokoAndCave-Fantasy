@@ -5,9 +5,9 @@ static func get_id() -> String:
     return "fantasy_soul_effect"
 
 func apply(player_index: int) -> void:
-    if Utils.get_scene_node()._cleaning_up: return
-
     Utils.ncl_quiet_add_stat(Utils.stat_fantasy_soul_hash, value, player_index)
+
+    if Utils.get_scene_node()._cleaning_up: return
 
     var bonus: int = 10 + RunData.get_player_effect(Utils.fantasy_soul_bonus_hash, player_index)
 
