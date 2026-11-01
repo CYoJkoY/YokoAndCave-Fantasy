@@ -1,21 +1,21 @@
 extends Node2D
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const SECONDARY_DAMAGE = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/secondary_damage.gd")
+const SECONDARY_DAMAGE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/secondary_damage.gd")
 
 const SHARD_TEXTURES = [
-	preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_1.webp"),
-	preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_2.webp"),
-	preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_3.webp"),
-	preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_4.webp"),
-	preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_5.webp"),
-	preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_6.webp"),
-	preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_7.webp"),
-	preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_8.webp"),
-	preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_9.webp"),
-	preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_10.webp"),
-	preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_11.webp")
+	preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_1.webp"),
+	preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_2.webp"),
+	preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_3.webp"),
+	preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_4.webp"),
+	preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_5.webp"),
+	preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_6.webp"),
+	preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_7.webp"),
+	preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_8.webp"),
+	preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_9.webp"),
+	preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_10.webp"),
+	preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_11.webp")
 ]
 
 var _lifetime: float = 0.32

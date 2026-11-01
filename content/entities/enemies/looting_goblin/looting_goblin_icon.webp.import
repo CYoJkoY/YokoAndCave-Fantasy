@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/looting_goblin_icon.webp-f80aaa7ea10f3c9f6c7ebecf3418bc06.stex"
+path="res://.import/looting_goblin_icon.webp-31a0759a0a832e25e1435c7b5d48d416.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/looting_goblin/looting_goblin_icon.webp"
-dest_files=[ "res://.import/looting_goblin_icon.webp-f80aaa7ea10f3c9f6c7ebecf3418bc06.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/looting_goblin/looting_goblin_icon.webp"
+dest_files=[ "res://.import/looting_goblin_icon.webp-31a0759a0a832e25e1435c7b5d48d416.stex" ]
 
 [params]
 

@@ -1,8 +1,8 @@
 extends Node2D
 
-const FlyingBladeMotion = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/motion_math.gd")
-const TEXTURE_SLASH_CRESCENT = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/visuals/textures/slash_arc_rift.webp")
-const TEXTURE_STAR_GLINT = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/visuals/textures/star_glint_4pt.webp")
+const FlyingBladeMotion = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/motion_math.gd")
+const TEXTURE_SLASH_CRESCENT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/visuals/textures/slash_arc_rift.webp")
+const TEXTURE_STAR_GLINT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/visuals/textures/star_glint_4pt.webp")
 
 const SEGMENTS = 12
 

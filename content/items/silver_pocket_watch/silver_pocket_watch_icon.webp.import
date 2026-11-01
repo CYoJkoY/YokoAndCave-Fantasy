@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/silver_pocket_watch_icon.webp-4068d0975e7656d00817c9ef3193ef14.stex"
+path="res://.import/silver_pocket_watch_icon.webp-d913df524dcf907def9ac9651eec0217.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/silver_pocket_watch/silver_pocket_watch_icon.webp"
-dest_files=[ "res://.import/silver_pocket_watch_icon.webp-4068d0975e7656d00817c9ef3193ef14.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/silver_pocket_watch/silver_pocket_watch_icon.webp"
+dest_files=[ "res://.import/silver_pocket_watch_icon.webp-d913df524dcf907def9ac9651eec0217.stex" ]
 
 [params]
 

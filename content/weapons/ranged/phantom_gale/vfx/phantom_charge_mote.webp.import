@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/phantom_charge_mote.webp-92314109881e06edd1249fa65f3651e4.stex"
+path="res://.import/phantom_charge_mote.webp-e19c34e3a783db0b2ec0556eb2e0df3f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_charge_mote.webp"
-dest_files=[ "res://.import/phantom_charge_mote.webp-92314109881e06edd1249fa65f3651e4.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_charge_mote.webp"
+dest_files=[ "res://.import/phantom_charge_mote.webp-e19c34e3a783db0b2ec0556eb2e0df3f.stex" ]
 
 [params]
 

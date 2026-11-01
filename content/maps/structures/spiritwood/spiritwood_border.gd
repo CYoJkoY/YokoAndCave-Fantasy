@@ -6,36 +6,36 @@ const OCCLUDED_ALPHA: float = 0.35
 const OCCLUSION_FADE_SPEED: float = 5.0
 const OCCLUSION_MARGIN: float = 6.0
 
-const FOLIAGE_SHADER = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/spirit_foliage.shader")
-const SPIRIT_POOL = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/spirit_pool.webp")
-const MOTE = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/textures/forest_mote.png")
+const FOLIAGE_SHADER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/spirit_foliage.shader")
+const SPIRIT_POOL = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/spirit_pool.webp")
+const MOTE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/textures/forest_mote.png")
 const TREES = [
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/trees_tree_01.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/trees_tree_02.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/trees_tree_03.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/trees_tree_04.webp")
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/trees_tree_01.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/trees_tree_02.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/trees_tree_03.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/trees_tree_04.webp")
 ]
 const PLANTS = [
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/plants_01_spirit_fern.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/plants_02_lantern_herb.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/plants_03_moon_mushrooms.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/plants_08_twisted_sapling.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/plants_plant_01_curled_fern.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/plants_plant_02_fan_leaf.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/plants_plant_03_pod.webp")
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/plants_01_spirit_fern.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/plants_02_lantern_herb.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/plants_03_moon_mushrooms.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/plants_08_twisted_sapling.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/plants_plant_01_curled_fern.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/plants_plant_02_fan_leaf.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/plants_plant_03_pod.webp")
 ]
-const SPIRIT_MARK_STONE = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/accents_06_spirit_mark_stone.webp")
-const GHOST_CRYSTAL_MOSS = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/accents_07_ghost_crystal_moss.webp")
-const CRYSTAL_ROCK = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/accents_rock_02_crystal.webp")
+const SPIRIT_MARK_STONE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/accents_06_spirit_mark_stone.webp")
+const GHOST_CRYSTAL_MOSS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/accents_07_ghost_crystal_moss.webp")
+const CRYSTAL_ROCK = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/accents_rock_02_crystal.webp")
 const SPIRIT_SPRING_TEXTURES = [SPIRIT_MARK_STONE, GHOST_CRYSTAL_MOSS, CRYSTAL_ROCK]
 const ACCENTS = [
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/accents_04_hollow_spirit_stump.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/accents_05_rootbound_rock.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/accents_04_hollow_spirit_stump.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/accents_05_rootbound_rock.webp"),
     SPIRIT_MARK_STONE,
     GHOST_CRYSTAL_MOSS,
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/accents_rock_01_moss.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/accents_rock_01_moss.webp"),
     CRYSTAL_ROCK,
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/accents_rock_03_standing.webp")
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/accents_rock_03_standing.webp")
 ]
 const PLANT_VARIANTS = [0, 1, 2, 3, 4, 4, 5, 5, 6, 6]
 const SCENERY_TEXTURES = [TREES, PLANTS, ACCENTS]

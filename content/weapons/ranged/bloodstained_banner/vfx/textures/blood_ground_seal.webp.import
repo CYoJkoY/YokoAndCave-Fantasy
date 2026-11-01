@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blood_ground_seal.webp-54f47f3d8ae13718ac3ffac04b02923e.stex"
+path="res://.import/blood_ground_seal.webp-38e7ce29d871016ad2400d34aad6b115.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/bloodstained_banner/vfx/textures/blood_ground_seal.webp"
-dest_files=[ "res://.import/blood_ground_seal.webp-54f47f3d8ae13718ac3ffac04b02923e.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/bloodstained_banner/vfx/textures/blood_ground_seal.webp"
+dest_files=[ "res://.import/blood_ground_seal.webp-38e7ce29d871016ad2400d34aad6b115.stex" ]
 
 [params]
 

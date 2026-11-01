@@ -1,13 +1,13 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://projectiles/player_projectile.tscn" type="PackedScene" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/longinus_spear.gd" type="Script" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_spear.webp" type="Texture" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_glow.webp" type="Texture" id=4]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_flare.webp" type="Texture" id=5]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_spark.webp" type="Texture" id=6]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/shaders/longinus_trail.gdshader" type="Shader" id=7]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/shaders/longinus_lightning.gdshader" type="Shader" id=8]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/longinus_spear.gd" type="Script" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_spear.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_glow.webp" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_flare.webp" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_spark.webp" type="Texture" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/shaders/longinus_trail.gdshader" type="Shader" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/shaders/longinus_lightning.gdshader" type="Shader" id=8]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1

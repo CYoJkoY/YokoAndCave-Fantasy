@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/little_demon.webp-c3e60983973c79ce7b4d63570b49fdd9.stex"
+path="res://.import/little_demon.webp-c245782f67f27cac23e3b6d247b0226b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/little_demon/little_demon.webp"
-dest_files=[ "res://.import/little_demon.webp-c3e60983973c79ce7b4d63570b49fdd9.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/little_demon/little_demon.webp"
+dest_files=[ "res://.import/little_demon.webp-c245782f67f27cac23e3b6d247b0226b.stex" ]
 
 [params]
 

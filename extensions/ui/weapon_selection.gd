@@ -27,4 +27,4 @@ func _get_unlocked_elements(player_index: int) -> Array:
 
 # ══════════════════════════════════════════ Custom ══════════════════════════════════════════ #
 func _fantasy_get_additional_starting_weapons(player_index: int) -> Array:
-    return ProgressData.get_dlc_data("Yoko-Fantasy").get_additional_starting_weapons(RunData.get_player_character(player_index))
+    return ProgressData.get_dlc_data("YokoAndCave-Fantasy").get_additional_starting_weapons(RunData.get_player_character(player_index))

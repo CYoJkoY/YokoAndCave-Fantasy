@@ -1,6 +1,6 @@
 extends "res://weapons/shooting_behaviors/ranged_weapon_shooting_behavior.gd"
 
-const AUDIO = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/harp/harp_audio.gd")
+const AUDIO = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/harp/harp_audio.gd")
 var _harp_audio: Node
 
 

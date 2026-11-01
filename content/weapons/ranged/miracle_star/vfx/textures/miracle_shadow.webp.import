@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/miracle_shadow.webp-32b518c08a448fa8f452053b92310fe3.stex"
+path="res://.import/miracle_shadow.webp-23b57fa29976c1965b623dd5078b7ed6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/miracle_star/vfx/textures/miracle_shadow.webp"
-dest_files=[ "res://.import/miracle_shadow.webp-32b518c08a448fa8f452053b92310fe3.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/textures/miracle_shadow.webp"
+dest_files=[ "res://.import/miracle_shadow.webp-23b57fa29976c1965b623dd5078b7ed6.stex" ]
 
 [params]
 

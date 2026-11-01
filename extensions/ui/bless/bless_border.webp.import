@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bless_border.webp-183ac4db0c9e3de099a40e1b19c1ec34.stex"
+path="res://.import/bless_border.webp-531988df534cc2f12242f5d0c2749a80.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/extensions/ui/bless/bless_border.webp"
-dest_files=[ "res://.import/bless_border.webp-183ac4db0c9e3de099a40e1b19c1ec34.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/extensions/ui/bless/bless_border.webp"
+dest_files=[ "res://.import/bless_border.webp-531988df534cc2f12242f5d0c2749a80.stex" ]
 
 [params]
 

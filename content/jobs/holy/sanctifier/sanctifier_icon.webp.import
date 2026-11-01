@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sanctifier_icon.webp-391387f15a519a4a60863cc097697990.stex"
+path="res://.import/sanctifier_icon.webp-1fb3a500b58e1f63c5f2ec3ec6f99fed.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/holy/sanctifier/sanctifier_icon.webp"
-dest_files=[ "res://.import/sanctifier_icon.webp-391387f15a519a4a60863cc097697990.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/holy/sanctifier/sanctifier_icon.webp"
+dest_files=[ "res://.import/sanctifier_icon.webp-1fb3a500b58e1f63c5f2ec3ec6f99fed.stex" ]
 
 [params]
 

@@ -1,4 +1,4 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/cross_staff/vfx/holy_light_strike.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/cross_staff/vfx/holy_light_strike.gd"
 
 
 func _ready() -> void:

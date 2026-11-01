@@ -1,6 +1,6 @@
 extends "res://weapons/melee/melee_weapon.gd"
 
-const STAR_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/miracle_star/miracle_star_summon.tscn")
+const STAR_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/miracle_star_summon.tscn")
 
 
 func _ready() -> void:

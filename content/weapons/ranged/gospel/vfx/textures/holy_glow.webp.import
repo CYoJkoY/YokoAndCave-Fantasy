@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/holy_glow.webp-9a098abd4e30af6efc3ca51547661757.stex"
+path="res://.import/holy_glow.webp-2924ebf97805d2352a8fb8fad4c5f41f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/vfx/textures/holy_glow.webp"
-dest_files=[ "res://.import/holy_glow.webp-9a098abd4e30af6efc3ca51547661757.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/vfx/textures/holy_glow.webp"
+dest_files=[ "res://.import/holy_glow.webp-2924ebf97805d2352a8fb8fad4c5f41f.stex" ]
 
 [params]
 

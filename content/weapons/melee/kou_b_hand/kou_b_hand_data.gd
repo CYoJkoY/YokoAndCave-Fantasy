@@ -1,6 +1,6 @@
 extends "res://items/global/weapon_data.gd"
 
-const SHOOTING_BEHAVIOR = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_shooting_behavior.gd")
+const SHOOTING_BEHAVIOR = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_shooting_behavior.gd")
 
 
 func get_weapon_stats_text(player_index: int, hide_if_non_unlock_in_codex: bool = false) -> String:

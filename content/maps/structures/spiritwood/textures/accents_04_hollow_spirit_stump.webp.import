@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/accents_04_hollow_spirit_stump.webp-04bd6d6c721bee6cb64720110794b2d4.stex"
+path="res://.import/accents_04_hollow_spirit_stump.webp-96674fe7a2bd015bb631c5cbb089b644.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/accents_04_hollow_spirit_stump.webp"
-dest_files=[ "res://.import/accents_04_hollow_spirit_stump.webp-04bd6d6c721bee6cb64720110794b2d4.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/accents_04_hollow_spirit_stump.webp"
+dest_files=[ "res://.import/accents_04_hollow_spirit_stump.webp-96674fe7a2bd015bb631c5cbb089b644.stex" ]
 
 [params]
 

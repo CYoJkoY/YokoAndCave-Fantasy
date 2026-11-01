@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/god_ray_00.webp-a452a195f7dba28cc15d1e29c701ceb5.stex"
+path="res://.import/god_ray_00.webp-5d34378571c8f9adfcf49bebf06690ea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/textures/god_ray_00.webp"
-dest_files=[ "res://.import/god_ray_00.webp-a452a195f7dba28cc15d1e29c701ceb5.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/textures/god_ray_00.webp"
+dest_files=[ "res://.import/god_ray_00.webp-5d34378571c8f9adfcf49bebf06690ea.stex" ]
 
 [params]
 

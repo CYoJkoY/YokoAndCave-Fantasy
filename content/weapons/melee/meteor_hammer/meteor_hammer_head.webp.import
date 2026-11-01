@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/meteor_hammer_head.webp-646ea6bfc09961f951fa9630942e9caf.stex"
+path="res://.import/meteor_hammer_head.webp-a3eecf1f5501c09bd4450f3376866593.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/meteor_hammer/meteor_hammer_head.webp"
-dest_files=[ "res://.import/meteor_hammer_head.webp-646ea6bfc09961f951fa9630942e9caf.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/meteor_hammer/meteor_hammer_head.webp"
+dest_files=[ "res://.import/meteor_hammer_head.webp-a3eecf1f5501c09bd4450f3376866593.stex" ]
 
 [params]
 

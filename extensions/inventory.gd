@@ -1,7 +1,7 @@
 extends "res://ui/menus/shop/inventory.gd"
 
-const FANTASY_SHOP_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/shop_service.gd")
-const FANTASY_INVENTORY_VISUALS = preload("res://mods-unpacked/Yoko-Fantasy/extensions/ui/unique/visuals.gd")
+const FANTASY_SHOP_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/shop_service.gd")
+const FANTASY_INVENTORY_VISUALS = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/ui/unique/visuals.gd")
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func get_elements_with_count(elements: Array) -> Array:

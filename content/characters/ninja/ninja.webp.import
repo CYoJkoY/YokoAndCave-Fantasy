@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ninja.webp-ed4ad6f880d346a57f58c418722b527b.stex"
+path="res://.import/ninja.webp-13372b4b17bf396808d2c0f026d0a20c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/characters/ninja/ninja.webp"
-dest_files=[ "res://.import/ninja.webp-ed4ad6f880d346a57f58c418722b527b.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/ninja/ninja.webp"
+dest_files=[ "res://.import/ninja.webp-13372b4b17bf396808d2c0f026d0a20c.stex" ]
 
 [params]
 

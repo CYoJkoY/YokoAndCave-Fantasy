@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/plants_03_moon_mushrooms.webp-e28e2c2aa640d381790dafc24f4a1b83.stex"
+path="res://.import/plants_03_moon_mushrooms.webp-f5855f114245b432f6937412da6f5b7f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/plants_03_moon_mushrooms.webp"
-dest_files=[ "res://.import/plants_03_moon_mushrooms.webp-e28e2c2aa640d381790dafc24f4a1b83.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/plants_03_moon_mushrooms.webp"
+dest_files=[ "res://.import/plants_03_moon_mushrooms.webp-f5855f114245b432f6937412da6f5b7f.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/maple_wolf_king_idle.webp-9eeda14a987de4c7221d38ec5a4b9d3d.stex"
+path="res://.import/maple_wolf_king_idle.webp-efcf7d87242d860a4217c7108d5b89c7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/maple_wolf_king/maple_wolf_king_idle.webp"
-dest_files=[ "res://.import/maple_wolf_king_idle.webp-9eeda14a987de4c7221d38ec5a4b9d3d.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/maple_wolf_king/maple_wolf_king_idle.webp"
+dest_files=[ "res://.import/maple_wolf_king_idle.webp-efcf7d87242d860a4217c7108d5b89c7.stex" ]
 
 [params]
 

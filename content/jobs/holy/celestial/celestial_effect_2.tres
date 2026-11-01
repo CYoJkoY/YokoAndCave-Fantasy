@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=5 format=2]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/extensions/effects/projectile_on_enemy_death/projectile_on_enemy_death_effect.gd" type="Script" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/jobs/holy/celestial/celestial_projectile_stats.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/projectile_on_enemy_death/projectile_on_enemy_death_effect.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/holy/celestial/celestial_projectile_stats.tres" type="Resource" id=2]
 [ext_resource path="res://items/global/custom_arg.gd" type="Script" id=3]
 
 [sub_resource type="Resource" id=1]

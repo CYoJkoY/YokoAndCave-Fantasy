@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/swift_wolf.webp-7f20a308301cfa5b4bd6cbd0f12896f6.stex"
+path="res://.import/swift_wolf.webp-1abbe1f600fa4879ec1b1052408ee1ee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/swift_wolf/swift_wolf.webp"
-dest_files=[ "res://.import/swift_wolf.webp-7f20a308301cfa5b4bd6cbd0f12896f6.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/swift_wolf/swift_wolf.webp"
+dest_files=[ "res://.import/swift_wolf.webp-1abbe1f600fa4879ec1b1052408ee1ee.stex" ]
 
 [params]
 

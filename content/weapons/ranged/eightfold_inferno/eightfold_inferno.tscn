@@ -2,14 +2,14 @@
 
 [ext_resource path="res://weapons/weapon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/shaders/outline.gdshader" type="Shader" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/eightfold_inferno/eightfold_inferno_layers4_5.webp" type="Texture" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/eightfold_inferno/eightfold_inferno_layer6.webp" type="Texture" id=4]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/eightfold_inferno/vfx/textures/inferno_glow.webp" type="Texture" id=5]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/eightfold_inferno/vfx/textures/inferno_flare.webp" type="Texture" id=6]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/eightfold_inferno/vfx/textures/inferno_ember.webp" type="Texture" id=7]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/eightfold_inferno/vfx/shaders/inferno_weapon_flame.gdshader" type="Shader" id=8]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/eightfold_inferno/eightfold_inferno.gd" type="Script" id=9]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/eightfold_inferno/eightfold_inferno_shooting_behavior.gd" type="Script" id=10]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/eightfold_inferno/eightfold_inferno_layers4_5.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/eightfold_inferno/eightfold_inferno_layer6.webp" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/eightfold_inferno/vfx/textures/inferno_glow.webp" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/eightfold_inferno/vfx/textures/inferno_flare.webp" type="Texture" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/eightfold_inferno/vfx/textures/inferno_ember.webp" type="Texture" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/eightfold_inferno/vfx/shaders/inferno_weapon_flame.gdshader" type="Shader" id=8]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/eightfold_inferno/eightfold_inferno.gd" type="Script" id=9]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/eightfold_inferno/eightfold_inferno_shooting_behavior.gd" type="Script" id=10]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true

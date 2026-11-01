@@ -1,9 +1,9 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shared/orbit_weapon_pose.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/shared/orbit_weapon_pose.gd"
 
-const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
-const STRIKE_ATTACK: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shared/orbit_strike_attack.tscn")
+const VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
+const STRIKE_ATTACK: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/shared/orbit_strike_attack.tscn")
 
-const FALLBACK_SOUND: AudioStream = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/myriad_thunder/myriad_thunder.wav")
+const FALLBACK_SOUND: AudioStream = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/myriad_thunder/myriad_thunder.wav")
 
 export(PackedScene) var strike_scene
 export(String) var targeting_effect_id

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/shamisen_note_2.webp-2d67396c9a1552b44fbe950b89e953bc.stex"
+path="res://.import/shamisen_note_2.webp-6a5a918cb98e1b711aca409ca02eb409.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_note_2.webp"
-dest_files=[ "res://.import/shamisen_note_2.webp-2d67396c9a1552b44fbe950b89e953bc.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_note_2.webp"
+dest_files=[ "res://.import/shamisen_note_2.webp-6a5a918cb98e1b711aca409ca02eb409.stex" ]
 
 [params]
 

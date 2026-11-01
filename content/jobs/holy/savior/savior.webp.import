@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/savior.webp-99b244cf4ed5322b6dc198a290398a2f.stex"
+path="res://.import/savior.webp-02d0f5cd143b2355e0cf0493a45abb35.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/holy/savior/savior.webp"
-dest_files=[ "res://.import/savior.webp-99b244cf4ed5322b6dc198a290398a2f.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/holy/savior/savior.webp"
+dest_files=[ "res://.import/savior.webp-02d0f5cd143b2355e0cf0493a45abb35.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hex_bug_icon.webp-55d3287dc8070459e01134095299bd4c.stex"
+path="res://.import/hex_bug_icon.webp-020f30aba4d5b3603f66527289b9a88f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/hex_bug/hex_bug_icon.webp"
-dest_files=[ "res://.import/hex_bug_icon.webp-55d3287dc8070459e01134095299bd4c.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/hex_bug/hex_bug_icon.webp"
+dest_files=[ "res://.import/hex_bug_icon.webp-020f30aba4d5b3603f66527289b9a88f.stex" ]
 
 [params]
 

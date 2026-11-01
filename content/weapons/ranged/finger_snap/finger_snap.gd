@@ -1,9 +1,9 @@
 extends "res://weapons/ranged/ranged_weapon.gd"
 
-const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
-const ASTROLABE_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/vfx/finger_snap_astrolabe.tscn")
-const BULLET_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/finger_snap_projectile/finger_snap_bullet.tscn")
-const MUZZLE_FLASH_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/vfx/finger_snap_muzzle_flash.tscn")
+const VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
+const ASTROLABE_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/finger_snap/vfx/finger_snap_astrolabe.tscn")
+const BULLET_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/finger_snap_projectile/finger_snap_bullet.tscn")
+const MUZZLE_FLASH_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/finger_snap/vfx/finger_snap_muzzle_flash.tscn")
 onready var _astrolabe_pool_id: int = ASTROLABE_SCENE.get_instance_id()
 onready var _muzzle_flash_pool_id: int = MUZZLE_FLASH_SCENE.get_instance_id()
 

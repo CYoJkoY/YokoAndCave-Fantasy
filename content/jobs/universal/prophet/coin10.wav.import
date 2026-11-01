@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/coin10.wav-12c6dc66b6dbdea03022beaf1477392e.sample"
+path="res://.import/coin10.wav-534a4213170139f41a2696a1913f50ef.sample"
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/universal/prophet/coin10.wav"
-dest_files=[ "res://.import/coin10.wav-12c6dc66b6dbdea03022beaf1477392e.sample" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/prophet/coin10.wav"
+dest_files=[ "res://.import/coin10.wav-534a4213170139f41a2696a1913f50ef.sample" ]
 
 [params]
 

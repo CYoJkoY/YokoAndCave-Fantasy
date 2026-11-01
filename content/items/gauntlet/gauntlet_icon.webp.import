@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gauntlet_icon.webp-54f7c4754cad0488f108d107c71ba75a.stex"
+path="res://.import/gauntlet_icon.webp-49cbff9e194a30ac4e90c0fa0998cf9f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/gauntlet/gauntlet_icon.webp"
-dest_files=[ "res://.import/gauntlet_icon.webp-54f7c4754cad0488f108d107c71ba75a.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/gauntlet/gauntlet_icon.webp"
+dest_files=[ "res://.import/gauntlet_icon.webp-49cbff9e194a30ac4e90c0fa0998cf9f.stex" ]
 
 [params]
 

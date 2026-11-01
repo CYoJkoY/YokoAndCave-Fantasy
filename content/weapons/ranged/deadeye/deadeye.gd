@@ -1,8 +1,8 @@
 extends "res://weapons/ranged/ranged_weapon.gd"
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const FLASH_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/deadeye/vfx/deadeye_flash.tscn")
+const FLASH_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/deadeye/vfx/deadeye_flash.tscn")
 const FOLLOWUP_SOUND: AudioStream = preload("res://weapons/ranged/pistol/gun_pistol_shot_02.wav")
 
 onready var _flash_pool_id: int = FLASH_SCENE.get_instance_id()

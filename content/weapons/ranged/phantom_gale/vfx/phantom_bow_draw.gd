@@ -1,7 +1,7 @@
 extends Node2D
 
-const LIGHT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_front.webp")
-const MOTE = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_charge_mote.webp")
+const LIGHT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_front.webp")
+const MOTE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_charge_mote.webp")
 const CYAN = Color("6edfff")
 const VIOLET = Color("a796ff")
 

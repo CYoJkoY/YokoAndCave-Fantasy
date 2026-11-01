@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/prism_tower_body.webp-6f3db0c817802b7da738d6964b2d3ae1.stex"
+path="res://.import/prism_tower_body.webp-9738c9910050275ba7a84896aee4009b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/prism_tower/prism_tower_body.webp"
-dest_files=[ "res://.import/prism_tower_body.webp-6f3db0c817802b7da738d6964b2d3ae1.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/prism_tower/prism_tower_body.webp"
+dest_files=[ "res://.import/prism_tower_body.webp-9738c9910050275ba7a84896aee4009b.stex" ]
 
 [params]
 

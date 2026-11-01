@@ -1,8 +1,8 @@
 extends Node2D
 
-const EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/sage_staff_effect.gd")
+const EFFECT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/sage_staff/sage_staff_effect.gd")
 
-const ART = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/vfx/sage_staff_art.gd")
+const ART = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/sage_staff/vfx/sage_staff_art.gd")
 const RELEASE_DURATION: float = 0.80
 const ECHO_DURATION: float = 0.95
 const MAX_ECHOES: int = 24

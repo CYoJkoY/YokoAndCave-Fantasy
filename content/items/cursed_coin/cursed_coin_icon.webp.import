@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cursed_coin_icon.webp-d3c80bc26511e9ab8b5c0da0808c2e51.stex"
+path="res://.import/cursed_coin_icon.webp-8b9411e6fc3617ea29c21940d58299aa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/cursed_coin/cursed_coin_icon.webp"
-dest_files=[ "res://.import/cursed_coin_icon.webp-d3c80bc26511e9ab8b5c0da0808c2e51.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/cursed_coin/cursed_coin_icon.webp"
+dest_files=[ "res://.import/cursed_coin_icon.webp-8b9411e6fc3617ea29c21940d58299aa.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sacrificial_offering_icon.webp-ecdbf2e8566a77150e5154cf9c577d2d.stex"
+path="res://.import/sacrificial_offering_icon.webp-72b51375ff39d1dd821685c93c08a562.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/sacrificial_offering/sacrificial_offering_icon.webp"
-dest_files=[ "res://.import/sacrificial_offering_icon.webp-ecdbf2e8566a77150e5154cf9c577d2d.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/sacrificial_offering/sacrificial_offering_icon.webp"
+dest_files=[ "res://.import/sacrificial_offering_icon.webp-72b51375ff39d1dd821685c93c08a562.stex" ]
 
 [params]
 

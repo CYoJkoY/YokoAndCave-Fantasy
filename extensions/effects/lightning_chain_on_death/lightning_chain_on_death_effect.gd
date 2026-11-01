@@ -1,4 +1,4 @@
-extends "res://mods-unpacked/Yoko-Fantasy/extensions/effects/lightning_chain_effect.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/lightning_chain_effect.gd"
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════ #
 func _init() -> void:

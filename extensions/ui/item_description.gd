@@ -1,6 +1,6 @@
 extends "res://ui/menus/shop/item_description.gd"
 
-const FANTASY_DESCRIPTION_VISUALS = preload("res://mods-unpacked/Yoko-Fantasy/extensions/ui/unique/visuals.gd")
+const FANTASY_DESCRIPTION_VISUALS = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/ui/unique/visuals.gd")
 
 func set_item(item_data: ItemParentData, player_index: int, item_count: int = 1) -> void:
     FANTASY_DESCRIPTION_VISUALS.clear(_name)

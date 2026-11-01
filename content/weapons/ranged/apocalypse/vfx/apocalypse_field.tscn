@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/apocalypse/vfx/apocalypse_field.gd" type="Script" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/apocalypse/vfx/textures/curse_field.webp" type="Texture" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/apocalypse/vfx/textures/curse_mist.webp" type="Texture" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/apocalypse/vfx/textures/curse_bloom.webp" type="Texture" id=4]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/apocalypse/vfx/textures/curse_mote.webp" type="Texture" id=5]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/apocalypse/vfx/apocalypse_field.gdshader" type="Shader" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/vfx/apocalypse_field.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/vfx/textures/curse_field.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/vfx/textures/curse_mist.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/vfx/textures/curse_bloom.webp" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/vfx/textures/curse_mote.webp" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/vfx/apocalypse_field.gdshader" type="Shader" id=6]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true

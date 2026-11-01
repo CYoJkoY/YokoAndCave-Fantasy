@@ -1,6 +1,6 @@
 extends "res://singletons/utils.gd"
 
-const CLOCK_TOWER_CONFIG = preload("res://mods-unpacked/Yoko-Fantasy/extensions/effects/clock_tower_area/clock_tower_area_config.tres")
+const CLOCK_TOWER_CONFIG = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/clock_tower_area/clock_tower_area_config.tres")
 
 # Enemy Stats
 const FANTASY_ENEMY_HP: int = 0
@@ -290,7 +290,7 @@ func fa_get_synthesis_pity_bonus_chance(pity_id: String, pity_chance_step: float
 func fa_spawn_soul(num: int, pos: Vector2, spread: int) -> void:
     var main: Main = get_scene_node()
     for _i in range(num):
-        var consumable_to_spawn: ConsumableData = ProgressData.get_dlc_data("Yoko-Fantasy").soul_data
+        var consumable_to_spawn: ConsumableData = ProgressData.get_dlc_data("YokoAndCave-Fantasy").soul_data
         var consumable: Consumable = main.get_node_from_pool(main._consumable_pool_id, main._consumables_container)
         if consumable == null:
             consumable = main.consumable_scene.instance()

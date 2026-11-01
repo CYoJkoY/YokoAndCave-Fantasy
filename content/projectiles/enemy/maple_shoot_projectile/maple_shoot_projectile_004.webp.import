@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/maple_shoot_projectile_004.webp-5e120507203288cf6b1b371d5697641f.stex"
+path="res://.import/maple_shoot_projectile_004.webp-183c5b046b010e4440c176bad2686483.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/maple_shoot_projectile/maple_shoot_projectile_004.webp"
-dest_files=[ "res://.import/maple_shoot_projectile_004.webp-5e120507203288cf6b1b371d5697641f.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/enemy/maple_shoot_projectile/maple_shoot_projectile_004.webp"
+dest_files=[ "res://.import/maple_shoot_projectile_004.webp-183c5b046b010e4440c176bad2686483.stex" ]
 
 [params]
 

@@ -1,11 +1,11 @@
 extends Node2D
 
-const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 signal finished
 
-const TRAIL_EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/longinus/longinus_effect.gd")
-const VFX = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/longinus_vfx_utils.gd")
-const HIT_SPARK_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/longinus_hit_spark.tscn")
+const TRAIL_EFFECT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/longinus/longinus_effect.gd")
+const VFX = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/longinus_vfx_utils.gd")
+const HIT_SPARK_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/longinus_hit_spark.tscn")
 const TRAIL_LIFETIME: float = TRAIL_EFFECT.TRAIL_LIFETIME
 const TICK_INTERVAL: float = 1.0 / TRAIL_EFFECT.TICKS_PER_SECOND
 const HIT_RADIUS: float = 29.0

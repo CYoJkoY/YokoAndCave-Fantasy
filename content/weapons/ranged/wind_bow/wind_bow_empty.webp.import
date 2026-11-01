@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wind_bow_empty.webp-d7d8ed96dd4fee1b06f70ee84f9b0179.stex"
+path="res://.import/wind_bow_empty.webp-dfa06ba0692bd3d7b7ccfde089f6ceb8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/wind_bow/wind_bow_empty.webp"
-dest_files=[ "res://.import/wind_bow_empty.webp-d7d8ed96dd4fee1b06f70ee84f9b0179.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/wind_bow/wind_bow_empty.webp"
+dest_files=[ "res://.import/wind_bow_empty.webp-dfa06ba0692bd3d7b7ccfde089f6ceb8.stex" ]
 
 [params]
 

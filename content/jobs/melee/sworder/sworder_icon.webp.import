@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sworder_icon.webp-b77670ea2d3e19ba29858d4b8216ce23.stex"
+path="res://.import/sworder_icon.webp-758642658d64a816385d71f00755d919.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/melee/sworder/sworder_icon.webp"
-dest_files=[ "res://.import/sworder_icon.webp-b77670ea2d3e19ba29858d4b8216ce23.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/melee/sworder/sworder_icon.webp"
+dest_files=[ "res://.import/sworder_icon.webp-758642658d64a816385d71f00755d919.stex" ]
 
 [params]
 

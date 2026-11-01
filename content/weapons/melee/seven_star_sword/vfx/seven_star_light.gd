@@ -1,6 +1,6 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/shared/star_chain_attack.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/shared/star_chain_attack.gd"
 
-const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
+const TARGET_INDEX = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_target_index.gd")
 const CROSS_HIT_DELAY: float = 0.07
 
 onready var _cross: Node2D = $Cross

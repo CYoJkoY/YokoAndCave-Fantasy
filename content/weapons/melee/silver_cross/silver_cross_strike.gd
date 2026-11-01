@@ -1,7 +1,7 @@
 extends "res://overlap/hitbox.gd"
 
-const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
-const VISUAL: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/silver_cross/vfx/silver_cross_holy_light.tscn")
+const VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
+const VISUAL: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/silver_cross/vfx/silver_cross_holy_light.tscn")
 const STRIKE_DELAY: float = 0.05
 
 var _target: Enemy

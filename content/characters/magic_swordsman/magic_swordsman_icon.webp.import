@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/magic_swordsman_icon.webp-ced4035d720179b94fe6f955fb6798f1.stex"
+path="res://.import/magic_swordsman_icon.webp-f6248f85e40859cf57374d36faa7f7fc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/characters/magic_swordsman/magic_swordsman_icon.webp"
-dest_files=[ "res://.import/magic_swordsman_icon.webp-ced4035d720179b94fe6f955fb6798f1.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/magic_swordsman/magic_swordsman_icon.webp"
+dest_files=[ "res://.import/magic_swordsman_icon.webp-f6248f85e40859cf57374d36faa7f7fc.stex" ]
 
 [params]
 

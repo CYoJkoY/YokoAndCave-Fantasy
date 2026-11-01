@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kunai_shoot.webp-2fcb06c9710fb0dd3cfe63bd9c2e1aeb.stex"
+path="res://.import/kunai_shoot.webp-32e91dec1d782a7f0517a5e1482e73ca.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/kunai/kunai_shoot.webp"
-dest_files=[ "res://.import/kunai_shoot.webp-2fcb06c9710fb0dd3cfe63bd9c2e1aeb.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/kunai/kunai_shoot.webp"
+dest_files=[ "res://.import/kunai_shoot.webp-32e91dec1d782a7f0517a5e1482e73ca.stex" ]
 
 [params]
 

@@ -1,7 +1,7 @@
 extends MeleeWeapon
 
-const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
-const STRIKE_RIPPLE_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/handbell_orb_projectile/handbell_hit_ripple.tscn")
+const VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
+const STRIKE_RIPPLE_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/handbell_orb_projectile/handbell_hit_ripple.tscn")
 onready var _strike_ripple_pool_id: int = STRIKE_RIPPLE_SCENE.get_instance_id()
 
 var _vibration_time: float = 0.0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/soul_icon.webp-8df206e5619f4aa9513e6a658a6b4bb9.stex"
+path="res://.import/soul_icon.webp-30357cd76525da13d099ed1db8f02fde.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/stats/soul/soul_icon.webp"
-dest_files=[ "res://.import/soul_icon.webp-8df206e5619f4aa9513e6a658a6b4bb9.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/stats/soul/soul_icon.webp"
+dest_files=[ "res://.import/soul_icon.webp-30357cd76525da13d099ed1db8f02fde.stex" ]
 
 [params]
 

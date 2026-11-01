@@ -1,6 +1,6 @@
 extends Node
 
-const GRADIENT = preload("res://mods-unpacked/Yoko-Fantasy/extensions/ui/unique/gradient.gdshader")
+const GRADIENT = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/ui/unique/gradient.gdshader")
 
 var target: Control
 var original_material: Material

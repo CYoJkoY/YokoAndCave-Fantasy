@@ -1,9 +1,9 @@
 extends Node2D
 
-const MAIN_HALO = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_thrust_impact.webp")
-const ECHO_HALO = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_halo.webp")
-const MAIN_SPARK = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_feather.webp")
-const ECHO_SPARK = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_spark.webp")
+const MAIN_HALO = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_thrust_impact.webp")
+const ECHO_HALO = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_halo.webp")
+const MAIN_SPARK = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_feather.webp")
+const ECHO_SPARK = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_spark.webp")
 const DURATION: float = 0.28
 
 var _main: Node

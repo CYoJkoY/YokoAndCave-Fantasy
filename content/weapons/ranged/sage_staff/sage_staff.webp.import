@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sage_staff.webp-e853a2a4ac6a2afec6a2a919e2251fb6.stex"
+path="res://.import/sage_staff.webp-edd1e1eea3c30c954bfc5351435df178.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/sage_staff.webp"
-dest_files=[ "res://.import/sage_staff.webp-e853a2a4ac6a2afec6a2a919e2251fb6.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/sage_staff/sage_staff.webp"
+dest_files=[ "res://.import/sage_staff.webp-edd1e1eea3c30c954bfc5351435df178.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/accents_05_rootbound_rock.webp-f6fc4f7bd02b6204744e85afa4f53b9d.stex"
+path="res://.import/accents_05_rootbound_rock.webp-cda21d6bef1ba0420a89e63d88469484.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/accents_05_rootbound_rock.webp"
-dest_files=[ "res://.import/accents_05_rootbound_rock.webp-f6fc4f7bd02b6204744e85afa4f53b9d.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/accents_05_rootbound_rock.webp"
+dest_files=[ "res://.import/accents_05_rootbound_rock.webp-cda21d6bef1ba0420a89e63d88469484.stex" ]
 
 [params]
 

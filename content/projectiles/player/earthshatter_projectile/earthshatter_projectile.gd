@@ -1,10 +1,10 @@
 extends PlayerProjectile
 
-const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
-const FISSURE_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/earthshatter_projectile/earthshatter_fissure.tscn")
-const SHARD_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/earthshatter_projectile/earthshatter_shard.tscn")
-const IMPACT_VFX_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/earthshatter_projectile/earthshatter_impact_vfx.tscn")
-const EARTHSHATTER_EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/earthshatter/earthshatter_effect.gd")
+const VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
+const FISSURE_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/earthshatter_projectile/earthshatter_fissure.tscn")
+const SHARD_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/earthshatter_projectile/earthshatter_shard.tscn")
+const IMPACT_VFX_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/earthshatter_projectile/earthshatter_impact_vfx.tscn")
+const EARTHSHATTER_EFFECT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/earthshatter/earthshatter_effect.gd")
 
 var _earthshatter_effect: Resource
 

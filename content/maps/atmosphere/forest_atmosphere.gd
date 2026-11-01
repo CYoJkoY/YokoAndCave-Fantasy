@@ -1,26 +1,26 @@
 extends Node2D
 
-const GRASS = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/forest_grass.gd")
+const GRASS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/forest_grass.gd")
 const GRASS_TEXTURES = [
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/textures/grass_01.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/textures/grass_02.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/textures/grass_03.webp")
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/textures/grass_01.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/textures/grass_02.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/textures/grass_03.webp")
 ]
 const FLATTENED_TEXTURES = [
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/textures/grass_flattened_01.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/textures/grass_flattened_02.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/textures/grass_flattened_03.webp")
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/textures/grass_flattened_01.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/textures/grass_flattened_02.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/textures/grass_flattened_03.webp")
 ]
 const RAY_TEXTURES = [
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/textures/god_ray_00.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/textures/god_ray_01.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/textures/god_ray_02.webp")
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/textures/god_ray_00.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/textures/god_ray_01.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/textures/god_ray_02.webp")
 ]
-const GRASS_SHADER = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/forest_grass.shader")
-const GLOW_SHADER = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/forest_glow.shader")
-const TINT_SHADER = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/forest_tint.shader")
-const PARTICLES = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/forest_particles.tscn")
-const BORDER = preload("res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/spiritwood_border.gd")
+const GRASS_SHADER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/forest_grass.shader")
+const GLOW_SHADER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/forest_glow.shader")
+const TINT_SHADER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/forest_tint.shader")
+const PARTICLES = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/forest_particles.tscn")
+const BORDER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/spiritwood_border.gd")
 
 var entities_container: YSort
 var players: Array = []

@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/annihilation_fire.wav-838416ab4f544ebde818f6aa3d107755.sample"
+path="res://.import/annihilation_fire.wav-76c3d28cbeb8c6796a728dd6e01b380d.sample"
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/annihilation_ray/vfx/annihilation_fire.wav"
-dest_files=[ "res://.import/annihilation_fire.wav-838416ab4f544ebde818f6aa3d107755.sample" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/annihilation_ray/vfx/annihilation_fire.wav"
+dest_files=[ "res://.import/annihilation_fire.wav-76c3d28cbeb8c6796a728dd6e01b380d.sample" ]
 
 [params]
 

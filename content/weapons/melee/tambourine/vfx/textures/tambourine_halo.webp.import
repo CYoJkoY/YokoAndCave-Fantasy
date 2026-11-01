@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tambourine_halo.webp-7e152ced5e346805e735c6b08e6a832a.stex"
+path="res://.import/tambourine_halo.webp-68c610a85276f793f563a8af42fd12e9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/tambourine/vfx/textures/tambourine_halo.webp"
-dest_files=[ "res://.import/tambourine_halo.webp-7e152ced5e346805e735c6b08e6a832a.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/tambourine/vfx/textures/tambourine_halo.webp"
+dest_files=[ "res://.import/tambourine_halo.webp-68c610a85276f793f563a8af42fd12e9.stex" ]
 
 [params]
 

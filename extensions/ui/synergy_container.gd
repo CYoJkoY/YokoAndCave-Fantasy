@@ -1,6 +1,6 @@
 extends "res://ui/menus/shop/synergy_container.gd"
 
-const FANTASY_UNIQUE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/unique_weapon_service.gd")
+const FANTASY_UNIQUE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/unique_weapon_service.gd")
 
 func set_synergies_text(item_data: ItemParentData, player_index: int) -> void:
     .set_synergies_text(item_data, player_index)

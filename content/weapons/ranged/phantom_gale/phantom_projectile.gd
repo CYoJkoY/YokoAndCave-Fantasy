@@ -1,9 +1,9 @@
 extends PlayerProjectile
 
-const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
-const MOTION = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_motion.gd")
-const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
-const IMPACT_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_impact.tscn")
+const VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
+const MOTION = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_motion.gd")
+const TARGET_INDEX = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_target_index.gd")
+const IMPACT_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_impact.tscn")
 const COLORS = [Color("55ffe0"), Color("aa78ff"), Color("ff65b5")]
 
 export(bool) var is_echo: bool = false

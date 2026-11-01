@@ -1,6 +1,6 @@
 extends Pet
 
-const FANTASY_VISUAL_PARTS_SYNC = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/visual_parts_sync.gd")
+const FANTASY_VISUAL_PARTS_SYNC = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/visual_parts_sync.gd")
 
 enum State {
     WANDER,
@@ -11,8 +11,8 @@ const TRACKING_ID: String = "item_fantasy_healing_star"
 const CLAIM_META: String = "fa_healing_star_claimed"
 const HEAL_TICK_INTERVAL: float = 0.30
 
-const TEXTURE_GLOW = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/healing_star/particles/particle_radial_glow.webp")
-const TEXTURE_STAR_SMALL = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/healing_star/particles/particle_star_small.webp")
+const TEXTURE_GLOW = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/particles/particle_radial_glow.webp")
+const TEXTURE_STAR_SMALL = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/particles/particle_star_small.webp")
 
 export(float) var max_speed: float = 640.0
 export(float) var acceleration: float = 1500.0

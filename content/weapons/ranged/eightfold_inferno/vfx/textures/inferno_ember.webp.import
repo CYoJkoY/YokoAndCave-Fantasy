@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/inferno_ember.webp-4adb06b06de0f0addd5ed7ea5b21be84.stex"
+path="res://.import/inferno_ember.webp-2e4d6297f25f4a68ce88768c71a94089.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/eightfold_inferno/vfx/textures/inferno_ember.webp"
-dest_files=[ "res://.import/inferno_ember.webp-4adb06b06de0f0addd5ed7ea5b21be84.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/eightfold_inferno/vfx/textures/inferno_ember.webp"
+dest_files=[ "res://.import/inferno_ember.webp-2e4d6297f25f4a68ce88768c71a94089.stex" ]
 
 [params]
 

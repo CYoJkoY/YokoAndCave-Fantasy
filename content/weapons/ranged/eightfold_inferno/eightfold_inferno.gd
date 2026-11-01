@@ -1,9 +1,9 @@
 extends "res://weapons/ranged/ranged_weapon.gd"
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const CAST_BURST_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/eightfold_inferno/vfx/eightfold_inferno_cast_burst.tscn")
-const HIT_BURST_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/eightfold_inferno/vfx/eightfold_inferno_hit_burst.tscn")
+const CAST_BURST_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/eightfold_inferno/vfx/eightfold_inferno_cast_burst.tscn")
+const HIT_BURST_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/eightfold_inferno/vfx/eightfold_inferno_hit_burst.tscn")
 
 const HIT_SOUNDS = [
     preload("res://resources/sounds/burn/fireball_impact_burn_01.wav"),

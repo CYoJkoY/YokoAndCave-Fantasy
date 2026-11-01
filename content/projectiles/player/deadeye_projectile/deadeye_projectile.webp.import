@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/deadeye_projectile.webp-e93999d88765fdd3afd688347184c74a.stex"
+path="res://.import/deadeye_projectile.webp-7641c6260556b523485c2ed1bf35f771.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/deadeye_projectile/deadeye_projectile.webp"
-dest_files=[ "res://.import/deadeye_projectile.webp-e93999d88765fdd3afd688347184c74a.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/deadeye_projectile/deadeye_projectile.webp"
+dest_files=[ "res://.import/deadeye_projectile.webp-7641c6260556b523485c2ed1bf35f771.stex" ]
 
 [params]
 

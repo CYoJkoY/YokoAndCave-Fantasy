@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/silver_cross_arc.webp-aeed07672947e9052d7872f7c1b90711.stex"
+path="res://.import/silver_cross_arc.webp-dc4446d0e77a7f48cb07e31d994800cd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/silver_cross/silver_cross_arc.webp"
-dest_files=[ "res://.import/silver_cross_arc.webp-aeed07672947e9052d7872f7c1b90711.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/silver_cross/silver_cross_arc.webp"
+dest_files=[ "res://.import/silver_cross_arc.webp-dc4446d0e77a7f48cb07e31d994800cd.stex" ]
 
 [params]
 

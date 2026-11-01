@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/salted_duck_egg_icon.webp-2aaa61d2cd373a532e4dfa6f12639716.stex"
+path="res://.import/salted_duck_egg_icon.webp-41fb0789e6c28268e193ddca017ec646.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/salted_duck_egg/salted_duck_egg_icon.webp"
-dest_files=[ "res://.import/salted_duck_egg_icon.webp-2aaa61d2cd373a532e4dfa6f12639716.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/salted_duck_egg/salted_duck_egg_icon.webp"
+dest_files=[ "res://.import/salted_duck_egg_icon.webp-41fb0789e6c28268e193ddca017ec646.stex" ]
 
 [params]
 

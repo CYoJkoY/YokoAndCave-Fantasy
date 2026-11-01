@@ -1,8 +1,8 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/micro_homing_player_projectile.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/micro_homing_player_projectile.gd"
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const TRAIL_HISTORY = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_trail_history.gd")
+const TRAIL_HISTORY = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_trail_history.gd")
 
 export(float) var initial_float_speed: float = 238.0
 export(float) var min_target_speed: float = 952.0

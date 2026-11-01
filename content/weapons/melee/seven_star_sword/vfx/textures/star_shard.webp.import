@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/star_shard.webp-a63acf68bee3e47dceba8bcac2c83df1.stex"
+path="res://.import/star_shard.webp-655a183a6ee53202197fc22c06bfb983.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/seven_star_sword/vfx/textures/star_shard.webp"
-dest_files=[ "res://.import/star_shard.webp-a63acf68bee3e47dceba8bcac2c83df1.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/vfx/textures/star_shard.webp"
+dest_files=[ "res://.import/star_shard.webp-655a183a6ee53202197fc22c06bfb983.stex" ]
 
 [params]
 

@@ -1,6 +1,6 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/shared/sweep_weapon.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/shared/sweep_weapon.gd"
 
-const EXPLOSION_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/crusader_hammer/vfx/crusader_hammer_explosion.tscn")
+const EXPLOSION_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/crusader_hammer/vfx/crusader_hammer_explosion.tscn")
 
 onready var _rune: Sprite = $Sprite/Rune
 

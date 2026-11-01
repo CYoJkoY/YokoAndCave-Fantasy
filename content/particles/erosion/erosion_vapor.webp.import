@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/erosion_vapor.webp-af529585e2afa5f2fe5f525e4fd42261.stex"
+path="res://.import/erosion_vapor.webp-702d83a724035507708ddd9884eaee9b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/particles/erosion/erosion_vapor.webp"
-dest_files=[ "res://.import/erosion_vapor.webp-af529585e2afa5f2fe5f525e4fd42261.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/particles/erosion/erosion_vapor.webp"
+dest_files=[ "res://.import/erosion_vapor.webp-702d83a724035507708ddd9884eaee9b.stex" ]
 
 [params]
 

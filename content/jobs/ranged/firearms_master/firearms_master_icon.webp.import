@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/firearms_master_icon.webp-eb718c01a3c412b8d1a98ebb7293bdb7.stex"
+path="res://.import/firearms_master_icon.webp-41ed275df59f96a1fff39aec6472aad4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/ranged/firearms_master/firearms_master_icon.webp"
-dest_files=[ "res://.import/firearms_master_icon.webp-eb718c01a3c412b8d1a98ebb7293bdb7.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/ranged/firearms_master/firearms_master_icon.webp"
+dest_files=[ "res://.import/firearms_master_icon.webp-41ed275df59f96a1fff39aec6472aad4.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/frost_crystal_mesh.webp-d74b3911dfeae6673f9135ac2313625e.stex"
+path="res://.import/frost_crystal_mesh.webp-562050312fd0570925eff88e7e24dc97.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/frost_crystal_mesh.webp"
-dest_files=[ "res://.import/frost_crystal_mesh.webp-d74b3911dfeae6673f9135ac2313625e.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/frost_crystal_mesh.webp"
+dest_files=[ "res://.import/frost_crystal_mesh.webp-562050312fd0570925eff88e7e24dc97.stex" ]
 
 [params]
 

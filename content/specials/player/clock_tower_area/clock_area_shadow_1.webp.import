@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/clock_area_shadow_1.webp-4db8fc77170f4a316efd9cf6ee9ad04b.stex"
+path="res://.import/clock_area_shadow_1.webp-f7d997bd433747509ffbd818d5db7b02.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/specials/player/clock_tower_area/clock_area_shadow_1.webp"
-dest_files=[ "res://.import/clock_area_shadow_1.webp-4db8fc77170f4a316efd9cf6ee9ad04b.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/specials/player/clock_tower_area/clock_area_shadow_1.webp"
+dest_files=[ "res://.import/clock_area_shadow_1.webp-f7d997bd433747509ffbd818d5db7b02.stex" ]
 
 [params]
 

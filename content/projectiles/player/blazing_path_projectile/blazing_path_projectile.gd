@@ -1,10 +1,10 @@
 extends PlayerProjectile
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const TRAIL_HISTORY = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_trail_history.gd")
+const TRAIL_HISTORY = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_trail_history.gd")
 
-const HIT_SPLASH_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/blazing_path_projectile/blazing_path_hit_splash.tscn")
+const HIT_SPLASH_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/blazing_path_projectile/blazing_path_hit_splash.tscn")
 const FLUTTER_STEP_SIN_1: float = 0.434965534
 const FLUTTER_STEP_COS_1: float = 0.900447102
 const FLUTTER_STEP_SIN_2: float = 0.717356091

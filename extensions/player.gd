@@ -1,6 +1,6 @@
 extends "res://entities/units/player/player.gd"
 
-const FANTASY_ENEMY_SPEED_MODIFIER_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/enemy_speed_modifier_service.gd")
+const FANTASY_ENEMY_SPEED_MODIFIER_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/enemy_speed_modifier_service.gd")
 
 var decaying_slow_enemy_when_below_hp_triggers: Dictionary = {}
 var _fantasy_active_decaying_slow_sources: Dictionary = {}
@@ -16,7 +16,7 @@ var _fantasy_is_clock_tower_guardian_character: bool = false
 var _fantasy_active_soul_effects: Array = []
 var _fantasy_soul_effect_id: int = 0
 
-const FANTASY_CLOCK_TOWER_HAT_PATH: String = "res://mods-unpacked/Yoko-Fantasy/content/characters/clock_tower_guardian/clock_tower_guardian_hat.webp"
+const FANTASY_CLOCK_TOWER_HAT_PATH: String = "res://mods-unpacked/YokoAndCave-Fantasy/content/characters/clock_tower_guardian/clock_tower_guardian_hat.webp"
 const FANTASY_CLOCK_TOWER_HAT_TWEEN_TIME: float = 0.35
 const FANTASY_CLOCK_TOWER_HAT_IN_AREA_EFFECT: float = 1.0
 
@@ -283,7 +283,7 @@ func fa_apply_decaying_slow_to_enemy(enemy: Enemy, source_id: String, slow_perce
         _fantasy_decaying_slow_enemy_counts[enemy] = 0
 
     _fantasy_decaying_slow_enemy_counts[enemy] += 1
-    enemy.sprite.material = load("res://mods-unpacked/Yoko-Fantasy/extensions/effects/decaying_slow_enemy_when_below_hp/decaying_slow_enemy_when_below_hp_shader.tres")
+    enemy.sprite.material = load("res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/decaying_slow_enemy_when_below_hp/decaying_slow_enemy_when_below_hp_shader.tres")
 
 func fa_remove_decaying_slow_source(source_id: String) -> void:
     var enemies: Array = _fantasy_decaying_slow_source_enemies.get(source_id, [])

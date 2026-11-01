@@ -1,7 +1,7 @@
 extends Node
 
-const MYMODNAME_MOD_DIR: String = "Yoko-Fantasy/"
-const MYMODNAME_LOG: String = "Yoko-Fantasy"
+const MYMODNAME_MOD_DIR: String = "YokoAndCave-Fantasy/"
+const MYMODNAME_LOG: String = "YokoAndCave-Fantasy"
 
 var dir: String = ""
 var ext_dir: String = ""

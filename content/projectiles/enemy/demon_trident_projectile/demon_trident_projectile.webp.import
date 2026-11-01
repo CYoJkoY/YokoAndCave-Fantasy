@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/demon_trident_projectile.webp-0687a9baaa8ba62c8d98def6566c9877.stex"
+path="res://.import/demon_trident_projectile.webp-4e741387327cc1bb0c4aaadd31811346.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/demon_trident_projectile/demon_trident_projectile.webp"
-dest_files=[ "res://.import/demon_trident_projectile.webp-0687a9baaa8ba62c8d98def6566c9877.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/enemy/demon_trident_projectile/demon_trident_projectile.webp"
+dest_files=[ "res://.import/demon_trident_projectile.webp-4e741387327cc1bb0c4aaadd31811346.stex" ]
 
 [params]
 

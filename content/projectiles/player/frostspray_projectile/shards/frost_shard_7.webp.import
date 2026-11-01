@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/frost_shard_7.webp-4b23bcd6cee20331b6e1cdc4e112674f.stex"
+path="res://.import/frost_shard_7.webp-f9e65a8d1b3f6ef332ad12bc6e3367cd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_7.webp"
-dest_files=[ "res://.import/frost_shard_7.webp-4b23bcd6cee20331b6e1cdc4e112674f.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/shards/frost_shard_7.webp"
+dest_files=[ "res://.import/frost_shard_7.webp-f9e65a8d1b3f6ef332ad12bc6e3367cd.stex" ]
 
 [params]
 

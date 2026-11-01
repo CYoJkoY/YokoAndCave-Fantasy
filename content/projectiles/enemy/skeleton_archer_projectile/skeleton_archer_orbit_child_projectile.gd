@@ -1,4 +1,4 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/enemy_projectile_limit_time.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/enemy/enemy_projectile_limit_time.gd"
 
 var _orbit_angle: float = 0.0
 var _orbit_radius: float = 50.0

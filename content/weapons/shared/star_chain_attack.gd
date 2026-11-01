@@ -1,4 +1,4 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/shared/star_chain_visual.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/shared/star_chain_visual.gd"
 
 onready var _hitbox: Hitbox = $Hitbox
 

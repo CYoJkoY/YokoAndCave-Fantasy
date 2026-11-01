@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/economist_icon.webp-4402cf89c732cdf63bde4b6fd2d8a61b.stex"
+path="res://.import/economist_icon.webp-806721ee185c223adc1f5967e9816ae9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/universal/economist/economist_icon.webp"
-dest_files=[ "res://.import/economist_icon.webp-4402cf89c732cdf63bde4b6fd2d8a61b.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/economist/economist_icon.webp"
+dest_files=[ "res://.import/economist_icon.webp-806721ee185c223adc1f5967e9816ae9.stex" ]
 
 [params]
 

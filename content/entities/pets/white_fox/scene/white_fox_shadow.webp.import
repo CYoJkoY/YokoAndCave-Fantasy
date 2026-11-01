@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/white_fox_shadow.webp-b5ac69e13ae51987e758e0f259a1df99.stex"
+path="res://.import/white_fox_shadow.webp-41551292ac0bf968f475f96961c44ad2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/white_fox/scene/white_fox_shadow.webp"
-dest_files=[ "res://.import/white_fox_shadow.webp-b5ac69e13ae51987e758e0f259a1df99.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/white_fox/scene/white_fox_shadow.webp"
+dest_files=[ "res://.import/white_fox_shadow.webp-41551292ac0bf968f475f96961c44ad2.stex" ]
 
 [params]
 

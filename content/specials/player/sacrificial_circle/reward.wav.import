@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/reward.wav-586f6dbd7c27d98503ce7a805a045cf7.sample"
+path="res://.import/reward.wav-958ebf89be7a831a471c26e6a7c237bf.sample"
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/specials/player/sacrificial_circle/reward.wav"
-dest_files=[ "res://.import/reward.wav-586f6dbd7c27d98503ce7a805a045cf7.sample" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/specials/player/sacrificial_circle/reward.wav"
+dest_files=[ "res://.import/reward.wav-958ebf89be7a831a471c26e6a7c237bf.sample" ]
 
 [params]
 

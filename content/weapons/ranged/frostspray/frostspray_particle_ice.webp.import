@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/frostspray_particle_ice.webp-92b830de6739392d70e0892cb578b947.stex"
+path="res://.import/frostspray_particle_ice.webp-ffb71f7bead7ae32d0d0c3b54c11dc27.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/frostspray/frostspray_particle_ice.webp"
-dest_files=[ "res://.import/frostspray_particle_ice.webp-92b830de6739392d70e0892cb578b947.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/frostspray/frostspray_particle_ice.webp"
+dest_files=[ "res://.import/frostspray_particle_ice.webp-ffb71f7bead7ae32d0d0c3b54c11dc27.stex" ]
 
 [params]
 

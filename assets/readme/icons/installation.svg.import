@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/installation.svg-17ec23753e1936a938c980f1fd82fc8f.stex"
+path="res://.import/installation.svg-353d2229a755f399efb05ea0a77d3b29.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/assets/readme/icons/installation.svg"
-dest_files=[ "res://.import/installation.svg-17ec23753e1936a938c980f1fd82fc8f.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/assets/readme/icons/installation.svg"
+dest_files=[ "res://.import/installation.svg-353d2229a755f399efb05ea0a77d3b29.stex" ]
 
 [params]
 

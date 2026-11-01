@@ -3,11 +3,11 @@
 [ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
 [ext_resource path="res://dlcs/dlc_1/sets/musical/musical_set_data.tres" type="Resource" id=2]
 [ext_resource path="res://items/sets/support/support_set_data.tres" type="Resource" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/handbell/handbell_icon.webp" type="Texture" id=4]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/handbell/handbell.tscn" type="PackedScene" id=5]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/handbell/2/handbell_2_stats.tres" type="Resource" id=6]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/handbell/3/handbell_3_data.tres" type="Resource" id=7]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/handbell/2/handbell_2_effect_1.tres" type="Resource" id=8]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/handbell/handbell_icon.webp" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/handbell/handbell.tscn" type="PackedScene" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/handbell/2/handbell_2_stats.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/handbell/3/handbell_3_data.tres" type="Resource" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/handbell/2/handbell_2_effect_1.tres" type="Resource" id=8]
 
 [resource]
 script = ExtResource( 1 )

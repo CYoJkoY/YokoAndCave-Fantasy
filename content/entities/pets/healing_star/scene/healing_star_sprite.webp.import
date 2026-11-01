@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/healing_star_sprite.webp-709ef97f7aaf60f1bb0857a606237001.stex"
+path="res://.import/healing_star_sprite.webp-4f01e47cd106edb22209078428599f80.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/healing_star/scene/healing_star_sprite.webp"
-dest_files=[ "res://.import/healing_star_sprite.webp-709ef97f7aaf60f1bb0857a606237001.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/scene/healing_star_sprite.webp"
+dest_files=[ "res://.import/healing_star_sprite.webp-4f01e47cd106edb22209078428599f80.stex" ]
 
 [params]
 

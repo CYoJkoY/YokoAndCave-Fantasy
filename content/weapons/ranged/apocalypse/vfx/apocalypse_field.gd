@@ -1,7 +1,7 @@
 extends Node2D
 
-const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
-const BLOOM = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/apocalypse/vfx/textures/curse_bloom.webp")
+const VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
+const BLOOM = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/vfx/textures/curse_bloom.webp")
 
 onready var _field: Sprite = $Field
 onready var _core: Sprite = $Core

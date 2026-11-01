@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blazing_path.webp-5c9f1973ac09c8e7029470c4af4076c1.stex"
+path="res://.import/blazing_path.webp-10cf03fae1bf4813d9edb58094357a7a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/blazing_path/blazing_path.webp"
-dest_files=[ "res://.import/blazing_path.webp-5c9f1973ac09c8e7029470c4af4076c1.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/blazing_path/blazing_path.webp"
+dest_files=[ "res://.import/blazing_path.webp-10cf03fae1bf4813d9edb58094357a7a.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/trail_soft_gradient.webp-5cfff0e7a94c02c0ca3d870a683264ae.stex"
+path="res://.import/trail_soft_gradient.webp-9814773d85e01727a330cc0960f2c015.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/visuals/textures/trail_soft_gradient.webp"
-dest_files=[ "res://.import/trail_soft_gradient.webp-5cfff0e7a94c02c0ca3d870a683264ae.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/visuals/textures/trail_soft_gradient.webp"
+dest_files=[ "res://.import/trail_soft_gradient.webp-9814773d85e01727a330cc0960f2c015.stex" ]
 
 [params]
 

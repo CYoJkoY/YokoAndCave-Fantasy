@@ -1,6 +1,6 @@
 extends "res://weapons/ranged/ranged_weapon.gd"
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
 var _release_age: float = 1.0
 var _draw_cooldown: float = 1.0

@@ -1,6 +1,6 @@
 extends Reference
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
 const META_KEY: String = "fantasy_blackthorn_visual_state"
 const MAIN_IMPACTS_PER_WINDOW: int = 8

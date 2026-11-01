@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dragon_projectile_003.webp-b727936dd757313c6d61bbfb1a6cad41.stex"
+path="res://.import/dragon_projectile_003.webp-fda6f21a3064f7178f6401a3ca09973b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/dragon_projectile/dragon_projectile_003.webp"
-dest_files=[ "res://.import/dragon_projectile_003.webp-b727936dd757313c6d61bbfb1a6cad41.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/enemy/dragon_projectile/dragon_projectile_003.webp"
+dest_files=[ "res://.import/dragon_projectile_003.webp-fda6f21a3064f7178f6401a3ca09973b.stex" ]
 
 [params]
 

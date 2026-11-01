@@ -1,9 +1,9 @@
 extends Node2D
 
-const EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/sage_staff_effect.gd")
+const EFFECT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/sage_staff/sage_staff_effect.gd")
 const Element = EFFECT.Element
 
-const ART = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/vfx/sage_staff_art.gd")
+const ART = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/sage_staff/vfx/sage_staff_art.gd")
 const DURATIONS: Array = [0.56, 0.48, 0.60, 0.46, 0.32, 0.64]
 const PARTICLE_COUNTS: Array = [10, 12, 9, 8, 6, 10]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/goblin_tank_screen.webp-a93ad41a89aaae7341a5ed6f091bc120.stex"
+path="res://.import/goblin_tank_screen.webp-b6d3dad469136bb94dff58a3189313a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/goblin_tank/goblin_tank_screen.webp"
-dest_files=[ "res://.import/goblin_tank_screen.webp-a93ad41a89aaae7341a5ed6f091bc120.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/goblin_tank/goblin_tank_screen.webp"
+dest_files=[ "res://.import/goblin_tank_screen.webp-b6d3dad469136bb94dff58a3189313a6.stex" ]
 
 [params]
 

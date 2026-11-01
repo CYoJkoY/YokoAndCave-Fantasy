@@ -1,9 +1,9 @@
 [gd_resource type="Resource" load_steps=5 format=2]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/healing_star/healing_star_data.tres" type="Resource" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/healing_star/healing_star_icon.webp" type="Texture" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/fantasy_pet_data.gd" type="Script" id=4]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/healing_star/healing_star_screen.webp" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/healing_star/healing_star_data.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/healing_star_icon.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/fantasy_pet_data.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/healing_star_screen.webp" type="Texture" id=5]
 
 [resource]
 script = ExtResource( 4 )

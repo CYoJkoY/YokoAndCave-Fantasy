@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/unicorn_rabbit_icon.webp-b70144da8159dd2a91addd8ee66ae426.stex"
+path="res://.import/unicorn_rabbit_icon.webp-6b876b3cdf13f3fab14828026d0e20e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/unicorn_rabbit/unicorn_rabbit_icon.webp"
-dest_files=[ "res://.import/unicorn_rabbit_icon.webp-b70144da8159dd2a91addd8ee66ae426.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/unicorn_rabbit/unicorn_rabbit_icon.webp"
+dest_files=[ "res://.import/unicorn_rabbit_icon.webp-6b876b3cdf13f3fab14828026d0e20e6.stex" ]
 
 [params]
 

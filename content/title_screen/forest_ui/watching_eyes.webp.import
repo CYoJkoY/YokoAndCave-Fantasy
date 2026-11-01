@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/watching_eyes.webp-7adddd63ec0935c59452dc47d3e46d9d.stex"
+path="res://.import/watching_eyes.webp-0009220ac51629b80ffed2bfec5d8716.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/title_screen/forest_ui/watching_eyes.webp"
-dest_files=[ "res://.import/watching_eyes.webp-7adddd63ec0935c59452dc47d3e46d9d.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/title_screen/forest_ui/watching_eyes.webp"
+dest_files=[ "res://.import/watching_eyes.webp-0009220ac51629b80ffed2bfec5d8716.stex" ]
 
 [params]
 

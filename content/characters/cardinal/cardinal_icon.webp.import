@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cardinal_icon.webp-08587bb5727d566d0816f1b5f12cf215.stex"
+path="res://.import/cardinal_icon.webp-1c78e048992cd2d076cfb4c5c0eaed15.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/characters/cardinal/cardinal_icon.webp"
-dest_files=[ "res://.import/cardinal_icon.webp-08587bb5727d566d0816f1b5f12cf215.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/cardinal/cardinal_icon.webp"
+dest_files=[ "res://.import/cardinal_icon.webp-1c78e048992cd2d076cfb4c5c0eaed15.stex" ]
 
 [params]
 

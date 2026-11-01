@@ -1,10 +1,10 @@
 [gd_resource type="Resource" load_steps=6 format=2]
 
 [ext_resource path="res://zones/wave_group_data.gd" type="Script" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/zones/groups/020/unit_6.tres" type="Resource" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/zones/groups/020/unit_9.tres" type="Resource" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/zones/groups/020/unit_8.tres" type="Resource" id=4]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/zones/groups/020/unit_7.tres" type="Resource" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/zones/groups/020/unit_6.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/zones/groups/020/unit_9.tres" type="Resource" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/zones/groups/020/unit_8.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/zones/groups/020/unit_7.tres" type="Resource" id=5]
 
 [resource]
 script = ExtResource( 1 )

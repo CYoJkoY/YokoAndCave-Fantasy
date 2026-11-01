@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bowstring_icon.webp-5f00c16bf85d56f5491898a4248495d1.stex"
+path="res://.import/bowstring_icon.webp-fd429e4df344b605084acdfe11826240.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/bowstring/bowstring_icon.webp"
-dest_files=[ "res://.import/bowstring_icon.webp-5f00c16bf85d56f5491898a4248495d1.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/bowstring/bowstring_icon.webp"
+dest_files=[ "res://.import/bowstring_icon.webp-fd429e4df344b605084acdfe11826240.stex" ]
 
 [params]
 

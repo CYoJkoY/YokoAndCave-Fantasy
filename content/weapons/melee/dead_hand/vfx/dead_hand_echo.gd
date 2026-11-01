@@ -1,6 +1,6 @@
 extends "res://overlap/hitbox.gd"
 
-const CONFIG = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/dead_hand_effect.gd")
+const CONFIG = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/dead_hand/dead_hand_effect.gd")
 const ECHO_SOUND: AudioStream = preload("res://weapons/melee_sounds/whoosh_swish_high_big_02.wav")
 
 onready var _sigil: Sprite = $Sigil

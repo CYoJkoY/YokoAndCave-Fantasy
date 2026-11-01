@@ -1,6 +1,6 @@
 extends "res://weapons/melee/melee_weapon.gd"
 
-const ECHO: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/vfx/dead_hand_echo.tscn")
+const ECHO: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/dead_hand/vfx/dead_hand_echo.tscn")
 const SWEEP_FADE_DURATION: float = 0.24
 
 onready var _flames: Sprite = $Sprite/Flames

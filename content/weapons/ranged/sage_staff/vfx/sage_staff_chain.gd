@@ -1,7 +1,7 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/shared/star_chain_attack.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/shared/star_chain_attack.gd"
 
-const ART = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/vfx/sage_staff_art.gd")
-const EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/sage_staff_effect.gd")
+const ART = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/sage_staff/vfx/sage_staff_art.gd")
+const EFFECT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/sage_staff/sage_staff_effect.gd")
 const LINK_COUNT: int = EFFECT.CHAIN_COUNT
 
 var _stats: RangedWeaponStats

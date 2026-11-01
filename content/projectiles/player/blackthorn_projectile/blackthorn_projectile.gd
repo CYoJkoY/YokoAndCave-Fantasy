@@ -1,11 +1,11 @@
 extends PlayerProjectile
 
-const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
-const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
-const TRAIL_HISTORY = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_trail_history.gd")
-const IMPACT_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/blackthorn_projectile/blackthorn_impact.tscn")
-const SHARD_IMPACT_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/blackthorn_projectile/blackthorn_shard_impact.tscn")
-const VISUAL_STATE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/blackthorn_projectile/blackthorn_visual_state.gd")
+const VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
+const TARGET_INDEX = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_target_index.gd")
+const TRAIL_HISTORY = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_trail_history.gd")
+const IMPACT_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/blackthorn_projectile/blackthorn_impact.tscn")
+const SHARD_IMPACT_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/blackthorn_projectile/blackthorn_shard_impact.tscn")
+const VISUAL_STATE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/blackthorn_projectile/blackthorn_visual_state.gd")
 const TRAIL_INTERVAL: float = 1.0 / 20.0
 const SCATTER_DURATION: float = 0.12
 const HOMING_RANGE: float = 480.0

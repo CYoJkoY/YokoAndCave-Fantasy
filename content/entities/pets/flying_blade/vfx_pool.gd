@@ -1,8 +1,8 @@
 extends Node2D
 
-const SlashSparkVisual = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/visuals/slash_spark_visual.gd")
-const SlashHitFlashVisual = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/visuals/slash_hit_flash_visual.gd")
-const SlashRibbonVisual = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/visuals/slash_ribbon_visual.gd")
+const SlashSparkVisual = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/visuals/slash_spark_visual.gd")
+const SlashHitFlashVisual = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/visuals/slash_hit_flash_visual.gd")
+const SlashRibbonVisual = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/visuals/slash_ribbon_visual.gd")
 
 const FRAGMENT_POOL_SIZE = 32
 const AFTERIMAGE_POOL_SIZE = 24

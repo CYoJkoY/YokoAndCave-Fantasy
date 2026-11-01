@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nightingale_icon.webp-f21bfd83df821555d4e58530c225ecad.stex"
+path="res://.import/nightingale_icon.webp-12eb7bc8cb8b807451908c870ef551af.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/nightingale/nightingale_icon.webp"
-dest_files=[ "res://.import/nightingale_icon.webp-f21bfd83df821555d4e58530c225ecad.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/nightingale/nightingale_icon.webp"
+dest_files=[ "res://.import/nightingale_icon.webp-12eb7bc8cb8b807451908c870ef551af.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/longinus_spear.webp-3cfaeba2edff8f606b06bae6ae9a64d6.stex"
+path="res://.import/longinus_spear.webp-ed02287620c6669e38f77d6841409da4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_spear.webp"
-dest_files=[ "res://.import/longinus_spear.webp-3cfaeba2edff8f606b06bae6ae9a64d6.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_spear.webp"
+dest_files=[ "res://.import/longinus_spear.webp-ed02287620c6669e38f77d6841409da4.stex" ]
 
 [params]
 

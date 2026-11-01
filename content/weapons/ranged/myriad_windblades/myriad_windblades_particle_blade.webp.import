@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/myriad_windblades_particle_blade.webp-4bab54f51490dc1c11d7c49ca453344c.stex"
+path="res://.import/myriad_windblades_particle_blade.webp-432d8812277ba722c3c7ed00a9bd409c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/myriad_windblades/myriad_windblades_particle_blade.webp"
-dest_files=[ "res://.import/myriad_windblades_particle_blade.webp-4bab54f51490dc1c11d7c49ca453344c.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/myriad_windblades/myriad_windblades_particle_blade.webp"
+dest_files=[ "res://.import/myriad_windblades_particle_blade.webp-432d8812277ba722c3c7ed00a9bd409c.stex" ]
 
 [params]
 

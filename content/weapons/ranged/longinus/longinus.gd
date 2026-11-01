@@ -1,6 +1,6 @@
 extends "res://weapons/ranged/ranged_weapon.gd"
 
-const VFX = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/longinus_vfx_utils.gd")
+const VFX = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/longinus_vfx_utils.gd")
 
 const TASER_SOUND = preload("res://weapons/ranged/taser/taser.wav")
 

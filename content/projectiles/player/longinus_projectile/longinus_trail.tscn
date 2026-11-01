@@ -1,13 +1,13 @@
 [gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/longinus_trail.gd" type="Script" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/shaders/longinus_trail.gdshader" type="Shader" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/shaders/longinus_lightning.gdshader" type="Shader" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_glow.webp" type="Texture" id=4]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_spark.webp" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/longinus_trail.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/shaders/longinus_trail.gdshader" type="Shader" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/shaders/longinus_lightning.gdshader" type="Shader" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_glow.webp" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_spark.webp" type="Texture" id=5]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/longinus_trail_visual.gd" type="Script" id=6]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/lightning_taper_curve.tres" type="Curve" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/longinus_trail_visual.gd" type="Script" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/lightning_taper_curve.tres" type="Curve" id=7]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1

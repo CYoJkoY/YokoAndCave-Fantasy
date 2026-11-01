@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/accountant_icon.webp-abe650db755fc6b8fd1259789f04b0d3.stex"
+path="res://.import/accountant_icon.webp-4a466421db78fda6d2d6a7e2d3929c13.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/universal/accountant/accountant_icon.webp"
-dest_files=[ "res://.import/accountant_icon.webp-abe650db755fc6b8fd1259789f04b0d3.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/accountant/accountant_icon.webp"
+dest_files=[ "res://.import/accountant_icon.webp-4a466421db78fda6d2d6a7e2d3929c13.stex" ]
 
 [params]
 

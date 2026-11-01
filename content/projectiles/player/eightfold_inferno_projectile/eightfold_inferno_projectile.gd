@@ -1,6 +1,6 @@
 extends "res://projectiles/player_projectile.gd"
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
 const PATH_SEGMENTS: int = 42
 const MAX_RANGE_BONUS: int = 250

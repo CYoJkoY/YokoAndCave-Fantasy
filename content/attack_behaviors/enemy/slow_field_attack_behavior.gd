@@ -2,7 +2,7 @@ extends AttackBehavior
 
 enum SpawnPosition {Self, Random}
 
-export(PackedScene) var slow_field_scene = preload("res://mods-unpacked/Yoko-Fantasy/content/specials/enemy/slime_trail/slime_trail.tscn")
+export(PackedScene) var slow_field_scene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/specials/enemy/slime_trail/slime_trail.tscn")
 var slow_field_pool_id: int = Keys.empty_hash
 export(int) var cooldown = 60
 export(float) var slow_field_duration = 5.0

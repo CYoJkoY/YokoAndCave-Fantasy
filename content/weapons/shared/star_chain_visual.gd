@@ -1,8 +1,8 @@
 extends Node2D
 
-const BEAM: Texture = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/seven_star_sword/vfx/textures/star_filament.webp")
-const STAR: Texture = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/seven_star_sword/vfx/textures/star_flare.webp")
-const SHARD: Texture = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/seven_star_sword/vfx/textures/star_shard.webp")
+const BEAM: Texture = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/vfx/textures/star_filament.webp")
+const STAR: Texture = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/vfx/textures/star_flare.webp")
+const SHARD: Texture = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/vfx/textures/star_shard.webp")
 const FIRST_HIT: float = 0.045
 const LINK_INTERVAL: float = 0.035
 const FADE_DURATION: float = 0.30

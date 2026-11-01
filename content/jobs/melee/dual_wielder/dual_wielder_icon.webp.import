@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dual_wielder_icon.webp-2b83421519c98ac97dae688fd3093155.stex"
+path="res://.import/dual_wielder_icon.webp-5476e23ea43f45cbc49614c8db1c8135.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/melee/dual_wielder/dual_wielder_icon.webp"
-dest_files=[ "res://.import/dual_wielder_icon.webp-2b83421519c98ac97dae688fd3093155.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/melee/dual_wielder/dual_wielder_icon.webp"
+dest_files=[ "res://.import/dual_wielder_icon.webp-5476e23ea43f45cbc49614c8db1c8135.stex" ]
 
 [params]
 

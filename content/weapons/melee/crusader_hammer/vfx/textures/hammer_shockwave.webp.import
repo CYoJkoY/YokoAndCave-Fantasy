@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hammer_shockwave.webp-776259317e449258e76836e269dfc875.stex"
+path="res://.import/hammer_shockwave.webp-bae0c993f2d5b1cf91fef8e0b931a139.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/crusader_hammer/vfx/textures/hammer_shockwave.webp"
-dest_files=[ "res://.import/hammer_shockwave.webp-776259317e449258e76836e269dfc875.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/crusader_hammer/vfx/textures/hammer_shockwave.webp"
+dest_files=[ "res://.import/hammer_shockwave.webp-bae0c993f2d5b1cf91fef8e0b931a139.stex" ]
 
 [params]
 

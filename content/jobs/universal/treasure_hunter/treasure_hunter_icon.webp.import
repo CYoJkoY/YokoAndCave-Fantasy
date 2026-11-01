@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/treasure_hunter_icon.webp-8fd4f8b222620fbbde3194b2d23416b3.stex"
+path="res://.import/treasure_hunter_icon.webp-5c551b09e4d97a492b5686551053f191.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/universal/treasure_hunter/treasure_hunter_icon.webp"
-dest_files=[ "res://.import/treasure_hunter_icon.webp-8fd4f8b222620fbbde3194b2d23416b3.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/treasure_hunter/treasure_hunter_icon.webp"
+dest_files=[ "res://.import/treasure_hunter_icon.webp-5c551b09e4d97a492b5686551053f191.stex" ]
 
 [params]
 

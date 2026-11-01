@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enchanter_icon.webp-75d8caf7b5ad6d8ff5599f69831c73b9.stex"
+path="res://.import/enchanter_icon.webp-f0d05b00d9c2fe2d5e6edc3a4093799d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/universal/enchanter/enchanter_icon.webp"
-dest_files=[ "res://.import/enchanter_icon.webp-75d8caf7b5ad6d8ff5599f69831c73b9.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/enchanter/enchanter_icon.webp"
+dest_files=[ "res://.import/enchanter_icon.webp-f0d05b00d9c2fe2d5e6edc3a4093799d.stex" ]
 
 [params]
 

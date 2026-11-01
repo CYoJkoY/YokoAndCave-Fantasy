@@ -18,9 +18,9 @@ class Scheduler:
     const BLASTS_PER_FRAME: int = 12
     const BLAST_INTERVAL: float = 0.03
     const DAMAGE_DURATION: float = 0.06
-    const VISUAL_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/tambourine/vfx/tambourine_shockwave_visual.tscn")
-    const VISUAL_SCRIPT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/tambourine/vfx/tambourine_shockwave_visual.gd")
-    const VISUAL_SHADER: Shader = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/tambourine/vfx/shaders/tambourine_shockwave.gdshader")
+    const VISUAL_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/tambourine/vfx/tambourine_shockwave_visual.tscn")
+    const VISUAL_SCRIPT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/tambourine/vfx/tambourine_shockwave_visual.gd")
+    const VISUAL_SHADER: Shader = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/tambourine/vfx/shaders/tambourine_shockwave.gdshader")
 
     var _sequences: Array = []
     var _next_sequence: int = 0

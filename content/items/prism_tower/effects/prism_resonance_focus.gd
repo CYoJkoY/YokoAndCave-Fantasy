@@ -1,6 +1,6 @@
 extends Node2D
 
-const ShapeUtils = preload("res://mods-unpacked/Yoko-Fantasy/content/items/prism_tower/effects/prism_effect_shape_utils.gd")
+const ShapeUtils = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/items/prism_tower/effects/prism_effect_shape_utils.gd")
 
 onready var _line_a: Line2D = $LineA
 onready var _line_b: Line2D = $LineB

@@ -1,8 +1,8 @@
 extends Node2D
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const SECONDARY_DAMAGE = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/secondary_damage.gd")
+const SECONDARY_DAMAGE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/secondary_damage.gd")
 
 const PRIMARY_SLASH_DURATION: float = 0.085
 const SECONDARY_SLASH_DURATION: float = 0.075

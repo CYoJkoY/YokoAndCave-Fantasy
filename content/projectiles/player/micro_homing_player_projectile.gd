@@ -1,6 +1,6 @@
 extends PlayerProjectile
 
-const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
+const TARGET_INDEX = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_target_index.gd")
 
 const HOMING_REACQUIRE_INTERVAL_MIN: float = 0.08
 const HOMING_REACQUIRE_INTERVAL_MAX: float = 0.12

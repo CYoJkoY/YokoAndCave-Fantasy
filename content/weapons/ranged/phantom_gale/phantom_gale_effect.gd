@@ -1,6 +1,6 @@
 extends NullEffect
 
-const ECHO_STATS = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/phantom_echo_stats.tres")
+const ECHO_STATS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/phantom_echo_stats.tres")
 
 
 static func get_id() -> String:

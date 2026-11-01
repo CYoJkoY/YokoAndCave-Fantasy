@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dragon_icon.webp-685785faaba24e5b8e2a8d1b00c52b3e.stex"
+path="res://.import/dragon_icon.webp-7e986e8a39f3e496beeb37307e373a6d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/dragon/dragon_icon.webp"
-dest_files=[ "res://.import/dragon_icon.webp-685785faaba24e5b8e2a8d1b00c52b3e.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/dragon/dragon_icon.webp"
+dest_files=[ "res://.import/dragon_icon.webp-7e986e8a39f3e496beeb37307e373a6d.stex" ]
 
 [params]
 

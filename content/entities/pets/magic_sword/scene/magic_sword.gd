@@ -1,6 +1,6 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/flying_blade_pet.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/flying_blade_pet.gd"
 
-const FANTASY_VISUAL_PARTS_SYNC = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/visual_parts_sync.gd")
+const FANTASY_VISUAL_PARTS_SYNC = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/visual_parts_sync.gd")
 
 onready var _parts_offset: Node2D = $Animation/Offset
 

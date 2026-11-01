@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/phantom_thrust_impact.webp-d55383eb9f52849f59e21e6739e5a5ef.stex"
+path="res://.import/phantom_thrust_impact.webp-380fa2830826d39a71fa6e5259b52c24.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_thrust_impact.webp"
-dest_files=[ "res://.import/phantom_thrust_impact.webp-d55383eb9f52849f59e21e6739e5a5ef.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_thrust_impact.webp"
+dest_files=[ "res://.import/phantom_thrust_impact.webp-380fa2830826d39a71fa6e5259b52c24.stex" ]
 
 [params]
 

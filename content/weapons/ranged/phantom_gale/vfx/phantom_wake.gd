@@ -1,9 +1,9 @@
 extends Node2D
 
-const HISTORY = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_trail_history.gd")
-const MAIN_TEXTURE = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_streak.webp")
-const MAIN_MATERIAL = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_streak_material.tres")
-const MAIN_SPARK = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_feather.webp")
+const HISTORY = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_trail_history.gd")
+const MAIN_TEXTURE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_streak.webp")
+const MAIN_MATERIAL = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_streak_material.tres")
+const MAIN_SPARK = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_feather.webp")
 const MAIN_COLORS = [Color("6bdfff"), Color("9c8aff"), Color("e9ffff")]
 
 var _history = HISTORY.new(96, true)

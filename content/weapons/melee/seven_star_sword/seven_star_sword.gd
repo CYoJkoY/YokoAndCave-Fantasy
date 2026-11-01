@@ -1,7 +1,7 @@
 extends "res://weapons/melee/melee_weapon.gd"
 
-const LIGHT: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/seven_star_sword/vfx/seven_star_light.tscn")
-const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
+const LIGHT: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/vfx/seven_star_light.tscn")
+const TARGET_INDEX = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_target_index.gd")
 const ATTACK_INTERVAL: int = 7
 
 onready var _edge: Sprite = $Sprite/Edge

@@ -1,6 +1,6 @@
 extends MyMenuButton
 
-var job_menu_scene = load("res://mods-unpacked/Yoko-Fantasy/extensions/jobs/job_menu.tscn")
+var job_menu_scene = load("res://mods-unpacked/YokoAndCave-Fantasy/extensions/jobs/job_menu.tscn")
 var current_scene: Node = null
 var global_scene: Node = null
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/slave.webp-4953a0f1424f398338b235acf64120e7.stex"
+path="res://.import/slave.webp-4864bdb11f982fb1384da6669f00256c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/characters/slave/slave.webp"
-dest_files=[ "res://.import/slave.webp-4953a0f1424f398338b235acf64120e7.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/slave/slave.webp"
+dest_files=[ "res://.import/slave.webp-4864bdb11f982fb1384da6669f00256c.stex" ]
 
 [params]
 

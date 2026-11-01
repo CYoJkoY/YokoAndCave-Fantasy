@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/purple_flames.webp-60450378e8a453cd4e284f44f0617ad7.stex"
+path="res://.import/purple_flames.webp-842428a78dd4bc75d39522ecd37c11b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/great_demon_lord/purple_flames.webp"
-dest_files=[ "res://.import/purple_flames.webp-60450378e8a453cd4e284f44f0617ad7.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/great_demon_lord/purple_flames.webp"
+dest_files=[ "res://.import/purple_flames.webp-842428a78dd4bc75d39522ecd37c11b0.stex" ]
 
 [params]
 

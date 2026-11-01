@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/shoulder_armor_icon.webp-47819b3506ed2735c9db58f0a25c7a36.stex"
+path="res://.import/shoulder_armor_icon.webp-55567166e8dc33d56d994908176dca0d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/shoulder_armor/shoulder_armor_icon.webp"
-dest_files=[ "res://.import/shoulder_armor_icon.webp-47819b3506ed2735c9db58f0a25c7a36.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/shoulder_armor/shoulder_armor_icon.webp"
+dest_files=[ "res://.import/shoulder_armor_icon.webp-55567166e8dc33d56d994908176dca0d.stex" ]
 
 [params]
 

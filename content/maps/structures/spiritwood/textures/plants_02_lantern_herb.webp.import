@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/plants_02_lantern_herb.webp-c42bf7ae740b7dd1aeea5c6024dad859.stex"
+path="res://.import/plants_02_lantern_herb.webp-3ec9b451c9956e0abfaf01e9e80dd4b9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/plants_02_lantern_herb.webp"
-dest_files=[ "res://.import/plants_02_lantern_herb.webp-c42bf7ae740b7dd1aeea5c6024dad859.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/plants_02_lantern_herb.webp"
+dest_files=[ "res://.import/plants_02_lantern_herb.webp-3ec9b451c9956e0abfaf01e9e80dd4b9.stex" ]
 
 [params]
 

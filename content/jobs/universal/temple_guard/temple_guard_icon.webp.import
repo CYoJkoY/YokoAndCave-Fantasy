@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/temple_guard_icon.webp-39c9fe7ac057738ad704526956c9040a.stex"
+path="res://.import/temple_guard_icon.webp-eb7cbb6b74ee120121ce25091c5c4acf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/universal/temple_guard/temple_guard_icon.webp"
-dest_files=[ "res://.import/temple_guard_icon.webp-39c9fe7ac057738ad704526956c9040a.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/temple_guard/temple_guard_icon.webp"
+dest_files=[ "res://.import/temple_guard_icon.webp-eb7cbb6b74ee120121ce25091c5c4acf.stex" ]
 
 [params]
 

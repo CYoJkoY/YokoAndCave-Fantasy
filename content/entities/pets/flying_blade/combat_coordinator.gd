@@ -1,7 +1,7 @@
 extends Node2D
 
-const FlyingBladeTargetSensor = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/target_sensor.gd")
-const FlyingBladeVfxPool = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/vfx_pool.gd")
+const FlyingBladeTargetSensor = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/target_sensor.gd")
+const FlyingBladeVfxPool = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/vfx_pool.gd")
 
 const ROLE_MAIN = "main"
 const ROLE_SATELLITE = "satellite"

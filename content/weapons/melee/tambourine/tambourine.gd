@@ -1,9 +1,9 @@
 extends "res://weapons/melee/melee_weapon.gd"
 
-const SHOCKWAVE_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/tambourine/vfx/tambourine_shockwave.tscn")
-const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
-const SHOCKWAVE_SCHEDULER = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/tambourine/tambourine_scheduler.gd")
-const HIT_SOUND: AudioStream = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/tambourine/audio/tambourine_hit.wav")
+const SHOCKWAVE_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/tambourine/vfx/tambourine_shockwave.tscn")
+const TARGET_INDEX = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_target_index.gd")
+const SHOCKWAVE_SCHEDULER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/tambourine/tambourine_scheduler.gd")
+const HIT_SOUND: AudioStream = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/tambourine/audio/tambourine_hit.wav")
 const HIT_SOUND_INTERVAL_MS: int = 55
 const BASE_BLAST_SCALE: float = 0.4
 const BLAST_SCALE_VARIATION: float = 0.2

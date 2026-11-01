@@ -1,6 +1,6 @@
 extends Reference
 
-const TAPER_CURVE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/lightning_taper_curve.tres")
+const TAPER_CURVE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/lightning_taper_curve.tres")
 
 const DAMAGE_COLOR: Color = Color("#ffd76a")
 

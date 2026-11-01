@@ -1,10 +1,10 @@
 extends "res://projectiles/player_projectile.gd"
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const FLASH_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/deadeye/vfx/deadeye_flash.tscn")
-const FOLLOWUP_TEXTURE: Texture = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/deadeye_projectile/deadeye_followup.webp")
-const NORMAL_TEXTURE: Texture = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/deadeye_projectile/deadeye_projectile.webp")
+const FLASH_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/deadeye/vfx/deadeye_flash.tscn")
+const FOLLOWUP_TEXTURE: Texture = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/deadeye_projectile/deadeye_followup.webp")
+const NORMAL_TEXTURE: Texture = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/deadeye_projectile/deadeye_projectile.webp")
 
 onready var _flash_pool_id: int = FLASH_SCENE.get_instance_id()
 

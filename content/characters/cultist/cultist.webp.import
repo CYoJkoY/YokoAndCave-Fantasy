@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cultist.webp-21fc8d2ff41d60206cf1caf3ae7c149d.stex"
+path="res://.import/cultist.webp-43fd0e46e2c9cfe2d3655b0eec371c0d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/characters/cultist/cultist.webp"
-dest_files=[ "res://.import/cultist.webp-21fc8d2ff41d60206cf1caf3ae7c149d.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/cultist/cultist.webp"
+dest_files=[ "res://.import/cultist.webp-43fd0e46e2c9cfe2d3655b0eec371c0d.stex" ]
 
 [params]
 

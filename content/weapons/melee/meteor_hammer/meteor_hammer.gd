@@ -1,6 +1,6 @@
 extends "res://weapons/melee/melee_weapon.gd"
 
-const CHAIN_TEXTURE: Texture = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/meteor_hammer/meteor_hammer_chain_link.webp")
+const CHAIN_TEXTURE: Texture = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/meteor_hammer/meteor_hammer_chain_link.webp")
 const CHAIN_CURVE_STEPS: int = 12
 const MAX_CHAIN_LINKS: int = 64
 const LINK_PITCH: float = 17.0

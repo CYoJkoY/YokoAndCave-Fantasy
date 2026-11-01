@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wolf_totem_icon.webp-c06c4d5ee137481978ef11daab9d1ef7.stex"
+path="res://.import/wolf_totem_icon.webp-b426087510fc266ba23f2699f7f6b16e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/wolf_totem/wolf_totem_icon.webp"
-dest_files=[ "res://.import/wolf_totem_icon.webp-c06c4d5ee137481978ef11daab9d1ef7.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/wolf_totem/wolf_totem_icon.webp"
+dest_files=[ "res://.import/wolf_totem_icon.webp-b426087510fc266ba23f2699f7f6b16e.stex" ]
 
 [params]
 

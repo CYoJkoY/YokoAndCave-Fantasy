@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/earthshatter_shockwave.webp-10a807e584f4aaeeb6715257fa0992de.stex"
+path="res://.import/earthshatter_shockwave.webp-0f8ab3ce874c3e7271a07d676ac324f1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/earthshatter_projectile/textures/earthshatter_shockwave.webp"
-dest_files=[ "res://.import/earthshatter_shockwave.webp-10a807e584f4aaeeb6715257fa0992de.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/earthshatter_projectile/textures/earthshatter_shockwave.webp"
+dest_files=[ "res://.import/earthshatter_shockwave.webp-0f8ab3ce874c3e7271a07d676ac324f1.stex" ]
 
 [params]
 

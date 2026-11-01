@@ -2,7 +2,7 @@ extends Node2D
 
 const META_KEY: String = "fantasy_kou_b_hand_airborne"
 const HITBOX: PackedScene = preload("res://overlap/hitbox.tscn")
-const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
+const TARGET_INDEX = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_target_index.gd")
 const FLIGHT_DURATION: float = 0.78
 const IMPACT_DURATION: float = 0.22
 

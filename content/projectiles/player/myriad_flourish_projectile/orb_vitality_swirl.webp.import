@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/orb_vitality_swirl.webp-5b41db1b953a30362f76f2b7983d7130.stex"
+path="res://.import/orb_vitality_swirl.webp-3a5f62bd5ebc1bb95fdb14fa4ccb4952.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_flourish_projectile/orb_vitality_swirl.webp"
-dest_files=[ "res://.import/orb_vitality_swirl.webp-5b41db1b953a30362f76f2b7983d7130.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_flourish_projectile/orb_vitality_swirl.webp"
+dest_files=[ "res://.import/orb_vitality_swirl.webp-3a5f62bd5ebc1bb95fdb14fa4ccb4952.stex" ]
 
 [params]
 

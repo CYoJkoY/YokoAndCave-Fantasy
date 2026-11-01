@@ -3,7 +3,7 @@ extends NullEffect
 enum Element { WATER, FIRE, EARTH, WIND, THUNDER, LIGHT }
 enum Phase { SCATTER, HOVER, FLIGHT }
 
-const BURNING_DATA = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/sage_staff_burning_data.tres")
+const BURNING_DATA = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/sage_staff/sage_staff_burning_data.tres")
 const SCATTER_DURATION: float = 0.32
 const HOVER_DURATION: float = 0.18
 const EXPLOSION_BASE_RADIUS: float = 147.34

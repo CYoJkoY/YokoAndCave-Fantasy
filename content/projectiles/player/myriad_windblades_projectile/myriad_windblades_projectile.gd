@@ -1,14 +1,14 @@
 extends PlayerProjectile
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const TRAIL_HISTORY = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_trail_history.gd")
+const TRAIL_HISTORY = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_trail_history.gd")
 
-const HIT_SPLASH_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_windblades_projectile/myriad_windblades_hit_splash.tscn")
-const WIND_FORCE_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_windblades_projectile/wind_force_effect.tscn")
-const MYRIAD_WINDBLADES_EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/myriad_windblades/myriad_windblades_effect.gd")
-const AFTERIMAGE_CORE_TEXTURE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_windblades_projectile/windblade_crescent_core.webp")
-const AFTERIMAGE_GLOW_TEXTURE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_windblades_projectile/windblade_crescent_glow.webp")
+const HIT_SPLASH_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_windblades_projectile/myriad_windblades_hit_splash.tscn")
+const WIND_FORCE_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_windblades_projectile/wind_force_effect.tscn")
+const MYRIAD_WINDBLADES_EFFECT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/myriad_windblades/myriad_windblades_effect.gd")
+const AFTERIMAGE_CORE_TEXTURE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_windblades_projectile/windblade_crescent_core.webp")
+const AFTERIMAGE_GLOW_TEXTURE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_windblades_projectile/windblade_crescent_glow.webp")
 
 const TRAIL_SAMPLE_COUNT: int = 20
 const TRAIL_SAMPLE_SPACING: float = 7.0

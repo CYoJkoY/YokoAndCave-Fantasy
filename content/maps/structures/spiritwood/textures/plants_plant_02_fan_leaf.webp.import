@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/plants_plant_02_fan_leaf.webp-8c55215bcec46f02a66e7d34d5236cce.stex"
+path="res://.import/plants_plant_02_fan_leaf.webp-0b6e945e1210c528adaa956909630fa1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/plants_plant_02_fan_leaf.webp"
-dest_files=[ "res://.import/plants_plant_02_fan_leaf.webp-8c55215bcec46f02a66e7d34d5236cce.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/plants_plant_02_fan_leaf.webp"
+dest_files=[ "res://.import/plants_plant_02_fan_leaf.webp-0b6e945e1210c528adaa956909630fa1.stex" ]
 
 [params]
 

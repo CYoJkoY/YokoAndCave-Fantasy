@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://weapons/weapon.tscn" type="PackedScene" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/gospel.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/gospel.webp" type="Texture" id=2]
 [ext_resource path="res://resources/shaders/outline.gdshader" type="Shader" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/gospel.gd" type="Script" id=9]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/gospel_shooting_behavior.gd" type="Script" id=4]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/vfx/gospel_light.tscn" type="PackedScene" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/gospel.gd" type="Script" id=9]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/gospel_shooting_behavior.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/vfx/gospel_light.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ShaderMaterial" id=2]
 resource_local_to_scene = true

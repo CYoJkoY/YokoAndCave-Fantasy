@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/twin_frost_icon.webp-419a8ff67ef626a7f934de798bfb9ac9.stex"
+path="res://.import/twin_frost_icon.webp-5361e8acc8b7b8ed82acd0793124f737.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/twin_frost/twin_frost_icon.webp"
-dest_files=[ "res://.import/twin_frost_icon.webp-419a8ff67ef626a7f934de798bfb9ac9.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/twin_frost/twin_frost_icon.webp"
+dest_files=[ "res://.import/twin_frost_icon.webp-5361e8acc8b7b8ed82acd0793124f737.stex" ]
 
 [params]
 

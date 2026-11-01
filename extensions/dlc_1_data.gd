@@ -1,6 +1,6 @@
 extends "res://dlcs/dlc_1/dlc_1_data.gd"
 
-const HEALING_STAR_SCENE_PATH: String = "res://mods-unpacked/Yoko-Fantasy/content/entities/pets/healing_star/scene/healing_star.tscn"
+const HEALING_STAR_SCENE_PATH: String = "res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/scene/healing_star.tscn"
 
 func curse_item(item_data: ItemParentData, player_index: int, turn_randomization_off: bool = false, min_modifier: float = 0.0) -> ItemParentData:
     var already_cursed: bool = item_data.is_cursed

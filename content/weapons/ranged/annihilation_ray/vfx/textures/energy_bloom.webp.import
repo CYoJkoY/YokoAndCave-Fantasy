@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/energy_bloom.webp-9e0166e1bca959e6d2ce8d58208f3def.stex"
+path="res://.import/energy_bloom.webp-e0913a47aa81791194e68cf5d516a9f7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/annihilation_ray/vfx/textures/energy_bloom.webp"
-dest_files=[ "res://.import/energy_bloom.webp-9e0166e1bca959e6d2ce8d58208f3def.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/annihilation_ray/vfx/textures/energy_bloom.webp"
+dest_files=[ "res://.import/energy_bloom.webp-e0913a47aa81791194e68cf5d516a9f7.stex" ]
 
 [params]
 

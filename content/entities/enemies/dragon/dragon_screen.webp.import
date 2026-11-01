@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dragon_screen.webp-b9afd4460a71a2eb8ae362b0856e658b.stex"
+path="res://.import/dragon_screen.webp-1656d6976f9b904a9a713afb6c1a3a81.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/dragon/dragon_screen.webp"
-dest_files=[ "res://.import/dragon_screen.webp-b9afd4460a71a2eb8ae362b0856e658b.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/dragon/dragon_screen.webp"
+dest_files=[ "res://.import/dragon_screen.webp-1656d6976f9b904a9a713afb6c1a3a81.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/believer.webp-b0cca200639f884a6c68d1eb33272006.stex"
+path="res://.import/believer.webp-c568ebb6827030def8ab95d247a13057.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/believer/believer.webp"
-dest_files=[ "res://.import/believer.webp-b0cca200639f884a6c68d1eb33272006.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/believer/believer.webp"
+dest_files=[ "res://.import/believer.webp-c568ebb6827030def8ab95d247a13057.stex" ]
 
 [params]
 

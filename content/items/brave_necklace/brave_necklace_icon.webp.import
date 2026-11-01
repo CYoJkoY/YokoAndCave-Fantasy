@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/brave_necklace_icon.webp-08ab72d800b8c828d776b3af0c48efd3.stex"
+path="res://.import/brave_necklace_icon.webp-3c2dc4f174dc17a9447e13a00e682acb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/brave_necklace/brave_necklace_icon.webp"
-dest_files=[ "res://.import/brave_necklace_icon.webp-08ab72d800b8c828d776b3af0c48efd3.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/brave_necklace/brave_necklace_icon.webp"
+dest_files=[ "res://.import/brave_necklace_icon.webp-3c2dc4f174dc17a9447e13a00e682acb.stex" ]
 
 [params]
 

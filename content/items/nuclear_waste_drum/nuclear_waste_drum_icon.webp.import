@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nuclear_waste_drum_icon.webp-662b8cd3990de888087fc71dece63987.stex"
+path="res://.import/nuclear_waste_drum_icon.webp-de15034e9d753cfaaead6f08dc743a3b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/nuclear_waste_drum/nuclear_waste_drum_icon.webp"
-dest_files=[ "res://.import/nuclear_waste_drum_icon.webp-662b8cd3990de888087fc71dece63987.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/nuclear_waste_drum/nuclear_waste_drum_icon.webp"
+dest_files=[ "res://.import/nuclear_waste_drum_icon.webp-de15034e9d753cfaaead6f08dc743a3b.stex" ]
 
 [params]
 

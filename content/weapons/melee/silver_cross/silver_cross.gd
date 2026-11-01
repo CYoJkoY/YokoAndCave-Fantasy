@@ -1,6 +1,6 @@
 extends "res://weapons/melee/melee_weapon.gd"
 
-const HOLY_STRIKE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/silver_cross/silver_cross_strike.tscn")
+const HOLY_STRIKE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/silver_cross/silver_cross_strike.tscn")
 
 onready var _blade: Sprite = $Sprite/LightBlade
 onready var _glow: Sprite = $Sprite/Glow

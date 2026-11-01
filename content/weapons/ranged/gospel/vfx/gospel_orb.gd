@@ -1,8 +1,8 @@
 extends Node2D
 
-const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
-const GLOW = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/vfx/textures/holy_glow.webp")
-const MOTE = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/vfx/textures/holy_mote.webp")
+const VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
+const GLOW = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/vfx/textures/holy_glow.webp")
+const MOTE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/vfx/textures/holy_mote.webp")
 const BODY_RADIUS: float = 32.0
 
 var attack_ready: bool = true

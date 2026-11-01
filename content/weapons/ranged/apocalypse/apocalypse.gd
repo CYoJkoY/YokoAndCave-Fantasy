@@ -1,4 +1,4 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shared/floating_spell_weapon.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/shared/floating_spell_weapon.gd"
 
 const MAX_RANGE_BONUS: int = 50
 

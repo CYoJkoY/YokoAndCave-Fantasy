@@ -1,6 +1,6 @@
 extends Node2D
 
-const BEAM_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/miracle_star/vfx/miracle_star_beam.tscn")
+const BEAM_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/miracle_star_beam.tscn")
 const STAR_GROUP: String = "fantasy_miracle_stars"
 const ASCENT_DURATION: float = 2.25
 const TARGET_RETRY: float = 0.16

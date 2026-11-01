@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/goblin_priest_screen.webp-faa7fdc3a6aaec6743f87ad5a74a4c9b.stex"
+path="res://.import/goblin_priest_screen.webp-163f2d03f5de679d3f8caccb261c3a02.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/goblin_priest/goblin_priest_screen.webp"
-dest_files=[ "res://.import/goblin_priest_screen.webp-faa7fdc3a6aaec6743f87ad5a74a4c9b.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/goblin_priest/goblin_priest_screen.webp"
+dest_files=[ "res://.import/goblin_priest_screen.webp-163f2d03f5de679d3f8caccb261c3a02.stex" ]
 
 [params]
 

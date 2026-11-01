@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/scabbard_icon.webp-68cea4de643b6ee137f78338a2986925.stex"
+path="res://.import/scabbard_icon.webp-8acd9b1d09e2c004d3c2ed24e5849736.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/scabbard/scabbard_icon.webp"
-dest_files=[ "res://.import/scabbard_icon.webp-68cea4de643b6ee137f78338a2986925.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/scabbard/scabbard_icon.webp"
+dest_files=[ "res://.import/scabbard_icon.webp-8acd9b1d09e2c004d3c2ed24e5849736.stex" ]
 
 [params]
 

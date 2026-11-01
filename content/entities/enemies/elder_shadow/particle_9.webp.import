@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/particle_9.webp-77728060012cf4f5f7a7b2ed046f43d2.stex"
+path="res://.import/particle_9.webp-8352b02edb9df6148d8d8c3dec4885fd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/elder_shadow/particle_9.webp"
-dest_files=[ "res://.import/particle_9.webp-77728060012cf4f5f7a7b2ed046f43d2.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/elder_shadow/particle_9.webp"
+dest_files=[ "res://.import/particle_9.webp-8352b02edb9df6148d8d8c3dec4885fd.stex" ]
 
 [params]
 

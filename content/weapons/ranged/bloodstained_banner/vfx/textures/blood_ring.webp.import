@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blood_ring.webp-c0918757540903427c3ac7933b89b8aa.stex"
+path="res://.import/blood_ring.webp-218aa8f6e23f5400f5fba3468f12fbc0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/bloodstained_banner/vfx/textures/blood_ring.webp"
-dest_files=[ "res://.import/blood_ring.webp-c0918757540903427c3ac7933b89b8aa.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/bloodstained_banner/vfx/textures/blood_ring.webp"
+dest_files=[ "res://.import/blood_ring.webp-218aa8f6e23f5400f5fba3468f12fbc0.stex" ]
 
 [params]
 

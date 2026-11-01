@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bogborn.webp-23b6e4b78f32e41048e057b364a5ff06.stex"
+path="res://.import/bogborn.webp-1d1771accf0ab07d61847cb45476bb37.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/curse/bogborn/bogborn.webp"
-dest_files=[ "res://.import/bogborn.webp-23b6e4b78f32e41048e057b364a5ff06.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/curse/bogborn/bogborn.webp"
+dest_files=[ "res://.import/bogborn.webp-1d1771accf0ab07d61847cb45476bb37.stex" ]
 
 [params]
 

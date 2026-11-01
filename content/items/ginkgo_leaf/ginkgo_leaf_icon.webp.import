@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ginkgo_leaf_icon.webp-c4256106c0cccbb68bae3a483d35e010.stex"
+path="res://.import/ginkgo_leaf_icon.webp-1b5efb533582d301150027d9f5800347.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/ginkgo_leaf/ginkgo_leaf_icon.webp"
-dest_files=[ "res://.import/ginkgo_leaf_icon.webp-c4256106c0cccbb68bae3a483d35e010.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/ginkgo_leaf/ginkgo_leaf_icon.webp"
+dest_files=[ "res://.import/ginkgo_leaf_icon.webp-1b5efb533582d301150027d9f5800347.stex" ]
 
 [params]
 

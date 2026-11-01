@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/crow_screen.webp-f18be2ceab27fb722501082f41913b7f.stex"
+path="res://.import/crow_screen.webp-524ee1b6ce42129f7d24b643c8ba4aaa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/crow/crow_screen.webp"
-dest_files=[ "res://.import/crow_screen.webp-f18be2ceab27fb722501082f41913b7f.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/crow/crow_screen.webp"
+dest_files=[ "res://.import/crow_screen.webp-524ee1b6ce42129f7d24b643c8ba4aaa.stex" ]
 
 [params]
 

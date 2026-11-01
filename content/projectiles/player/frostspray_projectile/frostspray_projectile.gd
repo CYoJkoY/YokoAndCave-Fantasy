@@ -1,12 +1,12 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/micro_homing_player_projectile.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/micro_homing_player_projectile.gd"
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const TRAIL_HISTORY = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_trail_history.gd")
+const TRAIL_HISTORY = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_trail_history.gd")
 
-const HIT_SPLASH_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/frostspray_hit_splash.tscn")
-const SHARD_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/frostspray_shard.tscn")
-const FROSTSPRAY_EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/frostspray/frostspray_effect.gd")
+const HIT_SPLASH_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/frostspray_hit_splash.tscn")
+const SHARD_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/frostspray_shard.tscn")
+const FROSTSPRAY_EFFECT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/frostspray/frostspray_effect.gd")
 
 const DEFAULT_SHARD_COUNT: int = 4
 const DEFAULT_SHARD_DAMAGE_RATIO: float = 0.45

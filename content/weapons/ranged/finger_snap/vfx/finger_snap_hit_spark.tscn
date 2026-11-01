@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/vfx/finger_snap_hit_spark.gd" type="Script" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/vfx/textures/star_cross_flare.webp" type="Texture" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/vfx/textures/star_burst_shard.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/finger_snap/vfx/finger_snap_hit_spark.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/finger_snap/vfx/textures/star_cross_flare.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/finger_snap/vfx/textures/star_burst_shard.webp" type="Texture" id=3]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/periodic_radius_damage.webp-f73ac0faf0251470d16ae8c7880f7b72.stex"
+path="res://.import/periodic_radius_damage.webp-79efd27f02dc83471314bd167ae8ae42.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/effect_behaviors/player/periodic_radius_damage/periodic_radius_damage.webp"
-dest_files=[ "res://.import/periodic_radius_damage.webp-f73ac0faf0251470d16ae8c7880f7b72.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/effect_behaviors/player/periodic_radius_damage/periodic_radius_damage.webp"
+dest_files=[ "res://.import/periodic_radius_damage.webp-79efd27f02dc83471314bd167ae8ae42.stex" ]
 
 [params]
 

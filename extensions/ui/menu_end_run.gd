@@ -1,6 +1,6 @@
 extends "res://ui/menus/pages/menu_end_run.gd"
 
-const FANTASY_CONFIRMATION_MENU = preload("res://mods-unpacked/Yoko-Fantasy/extensions/ui/confirmation_menu.gd")
+const FANTASY_CONFIRMATION_MENU = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/ui/confirmation_menu.gd")
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func init() -> void:

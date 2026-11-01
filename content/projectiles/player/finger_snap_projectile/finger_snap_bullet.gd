@@ -1,11 +1,11 @@
 extends PlayerProjectile
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const TRAIL_HISTORY = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_trail_history.gd")
+const TRAIL_HISTORY = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_trail_history.gd")
 
-const HIT_SPARK_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/vfx/finger_snap_hit_spark.tscn")
-const DISAPPEAR_SPARK_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/vfx/finger_snap_disappear_spark.tscn")
+const HIT_SPARK_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/finger_snap/vfx/finger_snap_hit_spark.tscn")
+const DISAPPEAR_SPARK_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/finger_snap/vfx/finger_snap_disappear_spark.tscn")
 onready var _hit_spark_pool_id: int = HIT_SPARK_SCENE.get_instance_id()
 onready var _disappear_spark_pool_id: int = DISAPPEAR_SPARK_SCENE.get_instance_id()
 

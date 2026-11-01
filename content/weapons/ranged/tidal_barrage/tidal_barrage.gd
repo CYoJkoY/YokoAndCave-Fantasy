@@ -1,7 +1,7 @@
 extends "res://weapons/ranged/ranged_weapon.gd"
 
-const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
-const RING_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/tidal_barrage/vfx/tidal_ring.tscn")
+const VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
+const RING_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/tidal_barrage/vfx/tidal_ring.tscn")
 const READY_FLASH_DURATION: float = 0.30
 
 var _reload_pending: bool = false

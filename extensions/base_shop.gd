@@ -1,6 +1,6 @@
 extends "res://ui/menus/shop/base_shop.gd"
 
-const FANTASY_BASE_SHOP_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/shop_service.gd")
+const FANTASY_BASE_SHOP_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/shop_service.gd")
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func fill_shop_items(player_locked_items: Array, player_index: int, just_entered_shop: bool = false) -> void:

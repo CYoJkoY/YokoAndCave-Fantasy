@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/curse_field.webp-5da8861a884474b78c82543c1c59e54f.stex"
+path="res://.import/curse_field.webp-ec1c57c91908ded9da3f5bc7212583aa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/apocalypse/vfx/textures/curse_field.webp"
-dest_files=[ "res://.import/curse_field.webp-5da8861a884474b78c82543c1c59e54f.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/vfx/textures/curse_field.webp"
+dest_files=[ "res://.import/curse_field.webp-ec1c57c91908ded9da3f5bc7212583aa.stex" ]
 
 [params]
 

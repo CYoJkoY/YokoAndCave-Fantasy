@@ -1,6 +1,6 @@
 extends "res://weapons/ranged/ranged_weapon.gd"
 
-const EXPLOSION_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/annihilation_ray/vfx/annihilation_impact.tscn")
+const EXPLOSION_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/annihilation_ray/vfx/annihilation_impact.tscn")
 
 var _clock: float = 0.0
 var _release_age: float = 1.0

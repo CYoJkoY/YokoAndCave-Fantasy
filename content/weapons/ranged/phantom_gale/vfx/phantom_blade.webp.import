@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/phantom_blade.webp-13bbcac205d17665d819c811ce8c7f2b.stex"
+path="res://.import/phantom_blade.webp-5308b8512ac2471085005f4f38e42a71.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_blade.webp"
-dest_files=[ "res://.import/phantom_blade.webp-13bbcac205d17665d819c811ce8c7f2b.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_blade.webp"
+dest_files=[ "res://.import/phantom_blade.webp-5308b8512ac2471085005f4f38e42a71.stex" ]
 
 [params]
 

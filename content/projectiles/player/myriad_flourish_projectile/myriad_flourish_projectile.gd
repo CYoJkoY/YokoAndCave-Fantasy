@@ -1,13 +1,13 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/micro_homing_player_projectile.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/micro_homing_player_projectile.gd"
 
-const FANTASY_CHAIN_TARGET_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/chain_target_service.gd")
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_CHAIN_TARGET_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/chain_target_service.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const TRAIL_HISTORY = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_trail_history.gd")
+const TRAIL_HISTORY = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_trail_history.gd")
 
-const HIT_SPLASH_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_flourish_projectile/myriad_flourish_hit_splash.tscn")
-const PETAL_DART_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_flourish_projectile/myriad_flourish_petal.tscn")
-const MYRIAD_FLOURISH_EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/myriad_flourish/myriad_flourish_effect.gd")
+const HIT_SPLASH_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_flourish_projectile/myriad_flourish_hit_splash.tscn")
+const PETAL_DART_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_flourish_projectile/myriad_flourish_petal.tscn")
+const MYRIAD_FLOURISH_EFFECT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/myriad_flourish/myriad_flourish_effect.gd")
 const DEFAULT_PETAL_COUNT: int = 3
 const DEFAULT_PETAL_DAMAGE_RATIO: float = 0.45
 const DEFAULT_SLOW_PERCENT: float = 35.0

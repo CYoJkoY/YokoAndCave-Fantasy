@@ -1,10 +1,10 @@
 [gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://resources/shaders/flash.gdshader" type="Shader" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/magic_sword/scene/magic_sword.gd" type="Script" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/magic_sword/scene/magic_sword.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/magic_sword/scene/magic_sword.gd" type="Script" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/magic_sword/scene/magic_sword.webp" type="Texture" id=3]
 [ext_resource path="res://entities/units/movement_behaviors/movement_behavior.gd" type="Script" id=4]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/magic_sword/magic_sword_stats.tres" type="Resource" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/magic_sword/magic_sword_stats.tres" type="Resource" id=5]
 [ext_resource path="res://overlap/hitbox.gd" type="Script" id=6]
 [ext_resource path="res://resources/shaders/outline.gdshader" type="Shader" id=7]
 [ext_resource path="res://particles/curse/curse_enemy_particles.tscn" type="PackedScene" id=8]
@@ -29,8 +29,8 @@
 [ext_resource path="res://entities/units/unit/crit_sounds/bullet_impact_metal_light_03.wav" type="AudioStream" id=27]
 [ext_resource path="res://entities/units/unit/hurt_sounds/punch_general_body_impact_06.wav" type="AudioStream" id=28]
 [ext_resource path="res://entities/units/target_behavior/target_behavior.gd" type="Script" id=29]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/magic_sword/scene/magic_sword_shadow.webp" type="Texture" id=31]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/magic_sword/magic_sword_tuning.tres" type="Resource" id=32]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/magic_sword/scene/magic_sword_shadow.webp" type="Texture" id=31]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/magic_sword/magic_sword_tuning.tres" type="Resource" id=32]
 
 [sub_resource type="PhysicsMaterial" id=6]
 friction = 0.0

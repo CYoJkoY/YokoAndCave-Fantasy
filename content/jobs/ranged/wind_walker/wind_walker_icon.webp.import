@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wind_walker_icon.webp-1721be6731aae13175f3b8b95cd29c62.stex"
+path="res://.import/wind_walker_icon.webp-e357e3544a343f5da8f1d98993147755.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/ranged/wind_walker/wind_walker_icon.webp"
-dest_files=[ "res://.import/wind_walker_icon.webp-1721be6731aae13175f3b8b95cd29c62.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/ranged/wind_walker/wind_walker_icon.webp"
+dest_files=[ "res://.import/wind_walker_icon.webp-e357e3544a343f5da8f1d98993147755.stex" ]
 
 [params]
 

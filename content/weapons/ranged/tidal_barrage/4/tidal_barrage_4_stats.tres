@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=5 format=2]
 
 [ext_resource path="res://weapons/weapon_stats/ranged_weapon_stats.gd" type="Script" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/tidal_barrage/tidal_projectile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/tidal_barrage/tidal_projectile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://weapons/ranged/laser_gun/gun_silenced_sniper1_shot_04.wav" type="AudioStream" id=3]
 [ext_resource path="res://weapons/ranged/laser_gun/gun_silenced_sniper1_shot_04v2.wav" type="AudioStream" id=4]
 

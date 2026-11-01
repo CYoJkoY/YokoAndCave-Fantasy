@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/goblin_slayer.webp-453d9af337ab5eb856f9460bfb4d931c.stex"
+path="res://.import/goblin_slayer.webp-a8fe77170730f67be671c0ca22725942.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/characters/goblin_slayer/goblin_slayer.webp"
-dest_files=[ "res://.import/goblin_slayer.webp-453d9af337ab5eb856f9460bfb4d931c.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/goblin_slayer/goblin_slayer.webp"
+dest_files=[ "res://.import/goblin_slayer.webp-a8fe77170730f67be671c0ca22725942.stex" ]
 
 [params]
 

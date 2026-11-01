@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sage.webp-365a7638095091e9e535d058d97ed815.stex"
+path="res://.import/sage.webp-57d57e721ad97bb88ea745bae6510fc1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/characters/sage/sage.webp"
-dest_files=[ "res://.import/sage.webp-365a7638095091e9e535d058d97ed815.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/sage/sage.webp"
+dest_files=[ "res://.import/sage.webp-57d57e721ad97bb88ea745bae6510fc1.stex" ]
 
 [params]
 

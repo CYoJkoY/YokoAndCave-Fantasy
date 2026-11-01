@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/finger_snap.webp-1013368ab8bdb71752135c7e4629b1af.stex"
+path="res://.import/finger_snap.webp-d05348984ebad8fd3ea779efcee27bae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/finger_snap.webp"
-dest_files=[ "res://.import/finger_snap.webp-1013368ab8bdb71752135c7e4629b1af.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/finger_snap/finger_snap.webp"
+dest_files=[ "res://.import/finger_snap.webp-d05348984ebad8fd3ea779efcee27bae.stex" ]
 
 [params]
 

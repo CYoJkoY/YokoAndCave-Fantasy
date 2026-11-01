@@ -1,6 +1,6 @@
 extends "res://singletons/item_service.gd"
 
-const FANTASY_UNIQUE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/unique_weapon_service.gd")
+const FANTASY_UNIQUE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/unique_weapon_service.gd")
 
 var _fantasy_unique_weapons: Array = []
 var jobs: Array = []
@@ -93,7 +93,7 @@ func _fantasy_extra_curse_item(item: ItemParentData, player_index: int) -> ItemP
     return item
 
 func _fantasy_get_jobs_by_stage() -> void:
-    jobs = ProgressData.get_dlc_data("Yoko-Fantasy").jobs
+    jobs = ProgressData.get_dlc_data("YokoAndCave-Fantasy").jobs
     for job in jobs:
         var job_stage: int = job.stage
         jobs_by_stage[job_stage].append(job)

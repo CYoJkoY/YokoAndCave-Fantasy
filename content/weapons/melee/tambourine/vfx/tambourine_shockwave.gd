@@ -1,6 +1,6 @@
 extends "res://projectiles/player_explosion.gd"
 
-const SHOCKWAVE_SCHEDULER = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/tambourine/tambourine_scheduler.gd")
+const SHOCKWAVE_SCHEDULER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/tambourine/tambourine_scheduler.gd")
 const DAMAGE_NUMBER_COLOR: Color = Color("f5e6be")
 
 var _scheduler: Node

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/crimson_holy_shroud_icon.webp-a038258fe64521d03ca782c812893b78.stex"
+path="res://.import/crimson_holy_shroud_icon.webp-3e55b1917ebde60d28db77f46f07d361.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/crimson_holy_shroud/crimson_holy_shroud_icon.webp"
-dest_files=[ "res://.import/crimson_holy_shroud_icon.webp-a038258fe64521d03ca782c812893b78.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/crimson_holy_shroud/crimson_holy_shroud_icon.webp"
+dest_files=[ "res://.import/crimson_holy_shroud_icon.webp-3e55b1917ebde60d28db77f46f07d361.stex" ]
 
 [params]
 

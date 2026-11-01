@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/missionary_icon.webp-3424171d2727a077b06ca82014956064.stex"
+path="res://.import/missionary_icon.webp-154fcc97fc4dddfd352cfa110e48c991.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/holy/missionary/missionary_icon.webp"
-dest_files=[ "res://.import/missionary_icon.webp-3424171d2727a077b06ca82014956064.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/holy/missionary/missionary_icon.webp"
+dest_files=[ "res://.import/missionary_icon.webp-154fcc97fc4dddfd352cfa110e48c991.stex" ]
 
 [params]
 

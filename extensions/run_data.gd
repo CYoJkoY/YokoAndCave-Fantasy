@@ -1,6 +1,6 @@
 extends "res://singletons/run_data.gd"
 
-const FANTASY_UNIQUE_RUN = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/unique_weapon_service.gd")
+const FANTASY_UNIQUE_RUN = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/unique_weapon_service.gd")
 
 signal on_soul_effect(damage_to_add, speed_to_add, player_index)
 

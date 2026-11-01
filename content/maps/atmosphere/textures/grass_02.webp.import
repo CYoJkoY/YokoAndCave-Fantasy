@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grass_02.webp-7d1287a19080c370e634e195e897f350.stex"
+path="res://.import/grass_02.webp-55baa8c0fd3c00244fdfb491de4af677.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/maps/atmosphere/textures/grass_02.webp"
-dest_files=[ "res://.import/grass_02.webp-7d1287a19080c370e634e195e897f350.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/textures/grass_02.webp"
+dest_files=[ "res://.import/grass_02.webp-55baa8c0fd3c00244fdfb491de4af677.stex" ]
 
 [params]
 

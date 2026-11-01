@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/annihilation_ray_icon.webp-3b47e8dec87530c38d69f67d74c56167.stex"
+path="res://.import/annihilation_ray_icon.webp-99afd3b25bce0351b9d3e211a30081e5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/annihilation_ray/annihilation_ray_icon.webp"
-dest_files=[ "res://.import/annihilation_ray_icon.webp-3b47e8dec87530c38d69f67d74c56167.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/annihilation_ray/annihilation_ray_icon.webp"
+dest_files=[ "res://.import/annihilation_ray_icon.webp-99afd3b25bce0351b9d3e211a30081e5.stex" ]
 
 [params]
 

@@ -1,7 +1,7 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shared/floating_spell_weapon.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/shared/floating_spell_weapon.gd"
 
-const ORB_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/vfx/gospel_orb.tscn")
-const ORBIT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/gospel_orbit.gd")
+const ORB_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/vfx/gospel_orb.tscn")
+const ORBIT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/gospel_orbit.gd")
 const ORB_COUNT: int = 6
 const RETARGET_INTERVAL: float = 0.04
 const PASS_INTERVAL: float = 0.14

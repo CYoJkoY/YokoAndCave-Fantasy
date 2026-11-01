@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/great_demon_lord.webp-46a68b3e1bce28bd5f6197e95c43ce74.stex"
+path="res://.import/great_demon_lord.webp-1da3c15f973ba702b87828da383d7b38.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/great_demon_lord/great_demon_lord.webp"
-dest_files=[ "res://.import/great_demon_lord.webp-46a68b3e1bce28bd5f6197e95c43ce74.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/great_demon_lord/great_demon_lord.webp"
+dest_files=[ "res://.import/great_demon_lord.webp-1da3c15f973ba702b87828da383d7b38.stex" ]
 
 [params]
 

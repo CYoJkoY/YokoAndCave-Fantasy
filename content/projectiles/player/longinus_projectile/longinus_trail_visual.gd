@@ -1,6 +1,6 @@
 extends Node2D
 
-const VFX = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/longinus_projectile/longinus_vfx_utils.gd")
+const VFX = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/longinus_vfx_utils.gd")
 const BRANCH_INTERVAL_MIN: float = 0.05
 const BRANCH_INTERVAL_MAX: float = 0.11
 const HEAD_PLUME_DURATION: float = 0.55

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/botanist_icon.webp-c887ee721c64a056e2525efee05bdfeb.stex"
+path="res://.import/botanist_icon.webp-fe8de64da1f2f358db710b13b81cd2a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/universal/botanist/botanist_icon.webp"
-dest_files=[ "res://.import/botanist_icon.webp-c887ee721c64a056e2525efee05bdfeb.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/botanist/botanist_icon.webp"
+dest_files=[ "res://.import/botanist_icon.webp-fe8de64da1f2f358db710b13b81cd2a8.stex" ]
 
 [params]
 

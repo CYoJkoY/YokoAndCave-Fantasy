@@ -1,7 +1,7 @@
 extends Reference
 
-const BINDING = preload("res://mods-unpacked/Yoko-Fantasy/extensions/ui/unique/gradient_binding.gd")
-const RULES = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/unique_weapon_service.gd")
+const BINDING = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/ui/unique/gradient_binding.gd")
+const RULES = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/unique_weapon_service.gd")
 
 static func clear(control: Control) -> void:
     var binding: Node = control.get_node_or_null("FantasyUniqueGradient")

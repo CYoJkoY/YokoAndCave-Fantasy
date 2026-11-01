@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/slime_projectile.webp-43aa82ca20a8a45de0e79958c3b71bef.stex"
+path="res://.import/slime_projectile.webp-62d5c634f7b2932da7b79a539ec8d7df.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/slime_projectile/slime_projectile.webp"
-dest_files=[ "res://.import/slime_projectile.webp-43aa82ca20a8a45de0e79958c3b71bef.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/enemy/slime_projectile/slime_projectile.webp"
+dest_files=[ "res://.import/slime_projectile.webp-62d5c634f7b2932da7b79a539ec8d7df.stex" ]
 
 [params]
 

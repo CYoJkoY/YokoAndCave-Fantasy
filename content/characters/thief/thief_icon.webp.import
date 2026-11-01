@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/thief_icon.webp-fd98fb6f7aa9b1ff90bd24a4e67177fe.stex"
+path="res://.import/thief_icon.webp-4c770520e9cd8bdbc1cbfec1a4fc21ae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/characters/thief/thief_icon.webp"
-dest_files=[ "res://.import/thief_icon.webp-fd98fb6f7aa9b1ff90bd24a4e67177fe.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/thief/thief_icon.webp"
+dest_files=[ "res://.import/thief_icon.webp-4c770520e9cd8bdbc1cbfec1a4fc21ae.stex" ]
 
 [params]
 

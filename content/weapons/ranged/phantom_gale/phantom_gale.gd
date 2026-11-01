@@ -1,6 +1,6 @@
 extends "res://weapons/ranged/ranged_weapon.gd"
 
-const ECHO_STATS = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/phantom_gale/phantom_echo_stats.tres")
+const ECHO_STATS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/phantom_echo_stats.tres")
 
 var _age: float = 0.0
 var _release_age: float = 1.0

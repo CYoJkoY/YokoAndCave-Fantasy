@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/myriad_thunder_icon.webp-fc1b50e400291ab6ed55edab02577cba.stex"
+path="res://.import/myriad_thunder_icon.webp-cc27d95cbcfdf6ead361c22a33c31fee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/myriad_thunder/myriad_thunder_icon.webp"
-dest_files=[ "res://.import/myriad_thunder_icon.webp-fc1b50e400291ab6ed55edab02577cba.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/myriad_thunder/myriad_thunder_icon.webp"
+dest_files=[ "res://.import/myriad_thunder_icon.webp-cc27d95cbcfdf6ead361c22a33c31fee.stex" ]
 
 [params]
 

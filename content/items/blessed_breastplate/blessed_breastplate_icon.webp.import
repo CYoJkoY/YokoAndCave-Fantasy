@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blessed_breastplate_icon.webp-92709e35c36387c70da2564d75c27535.stex"
+path="res://.import/blessed_breastplate_icon.webp-db986e43c215a785c318a8c13ac7752c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/blessed_breastplate/blessed_breastplate_icon.webp"
-dest_files=[ "res://.import/blessed_breastplate_icon.webp-92709e35c36387c70da2564d75c27535.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/blessed_breastplate/blessed_breastplate_icon.webp"
+dest_files=[ "res://.import/blessed_breastplate_icon.webp-db986e43c215a785c318a8c13ac7752c.stex" ]
 
 [params]
 

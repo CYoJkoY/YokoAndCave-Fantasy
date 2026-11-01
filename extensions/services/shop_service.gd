@@ -1,9 +1,9 @@
 extends Reference
 
-const BLESS_BUTTON_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/ui/bless/bless_button.tscn")
-const BLESS_BORDER_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/ui/bless/bless_border.tscn")
+const BLESS_BUTTON_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/ui/bless/bless_button.tscn")
+const BLESS_BORDER_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/ui/bless/bless_border.tscn")
 const GOLDFISH_SOUND = preload("res://ui/sounds/goldfish.wav")
-const FANTASY_UNIQUE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/unique_weapon_service.gd")
+const FANTASY_UNIQUE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/unique_weapon_service.gd")
 
 # ══════════════════════════════════════════ Shop Entry ══════════════════════════════════════════ #
 static func _fantasy_on_shop_ready(shop: BaseShop) -> void:

@@ -1,4 +1,4 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/shared/phased_sweep_shooting_behavior.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/shared/phased_sweep_shooting_behavior.gd"
 
 var _radius: float = 0.0
 var _side: float = -1.0

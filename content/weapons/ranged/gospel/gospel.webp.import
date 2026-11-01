@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gospel.webp-ae75168f54595c2e78e6f39561b67ac2.stex"
+path="res://.import/gospel.webp-149939ec9c77c614a143a6929ddf0f2f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/gospel.webp"
-dest_files=[ "res://.import/gospel.webp-ae75168f54595c2e78e6f39561b67ac2.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/gospel.webp"
+dest_files=[ "res://.import/gospel.webp-149939ec9c77c614a143a6929ddf0f2f.stex" ]
 
 [params]
 

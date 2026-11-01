@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/abyssal_cultist_icon.webp-77f9bba9cbb6dfa86d36ac2cb0667f59.stex"
+path="res://.import/abyssal_cultist_icon.webp-bb88b3f97df1482a416fb03564004d86.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/universal/abyssal_cultist/abyssal_cultist_icon.webp"
-dest_files=[ "res://.import/abyssal_cultist_icon.webp-77f9bba9cbb6dfa86d36ac2cb0667f59.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/abyssal_cultist/abyssal_cultist_icon.webp"
+dest_files=[ "res://.import/abyssal_cultist_icon.webp-bb88b3f97df1482a416fb03564004d86.stex" ]
 
 [params]
 

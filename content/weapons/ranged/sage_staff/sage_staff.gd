@@ -1,4 +1,4 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shared/orbit_weapon_pose.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/shared/orbit_weapon_pose.gd"
 
 onready var _focus: Node2D = $Sprite/Focus
 

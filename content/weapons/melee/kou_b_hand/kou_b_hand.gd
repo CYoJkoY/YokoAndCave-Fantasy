@@ -1,10 +1,10 @@
 extends "res://weapons/melee/melee_weapon.gd"
 
-const VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
-const SLAM = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_slam.gd")
-const SPLASH_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/kou_b_hand/vfx/kou_b_hand_splash.tscn")
-const HEARTS_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/kou_b_hand/vfx/kou_b_hand_hearts.tscn")
-const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
+const VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
+const SLAM = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_slam.gd")
+const SPLASH_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/vfx/kou_b_hand_splash.tscn")
+const HEARTS_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/vfx/kou_b_hand_hearts.tscn")
+const TARGET_INDEX = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_target_index.gd")
 const TARGET_RANGE: float = 320.0
 
 var _next_splash_time: int = 0

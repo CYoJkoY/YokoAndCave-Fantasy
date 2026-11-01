@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dead_hand_ember.webp-64e746b0fae55722817af451f57cbd01.stex"
+path="res://.import/dead_hand_ember.webp-06ced5ea447ff06cf5727a20f90ff665.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/dead_hand/vfx/textures/dead_hand_ember.webp"
-dest_files=[ "res://.import/dead_hand_ember.webp-64e746b0fae55722817af451f57cbd01.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/dead_hand/vfx/textures/dead_hand_ember.webp"
+dest_files=[ "res://.import/dead_hand_ember.webp-06ced5ea447ff06cf5727a20f90ff665.stex" ]
 
 [params]
 

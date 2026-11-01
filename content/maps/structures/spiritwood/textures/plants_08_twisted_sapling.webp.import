@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/plants_08_twisted_sapling.webp-7a4121917c7d120a1e85cb1c3bac3857.stex"
+path="res://.import/plants_08_twisted_sapling.webp-247096e415e0877b83f724f62c78c1b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/maps/structures/spiritwood/textures/plants_08_twisted_sapling.webp"
-dest_files=[ "res://.import/plants_08_twisted_sapling.webp-7a4121917c7d120a1e85cb1c3bac3857.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/textures/plants_08_twisted_sapling.webp"
+dest_files=[ "res://.import/plants_08_twisted_sapling.webp-247096e415e0877b83f724f62c78c1b7.stex" ]
 
 [params]
 

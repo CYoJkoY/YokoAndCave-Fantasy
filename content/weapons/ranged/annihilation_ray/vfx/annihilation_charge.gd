@@ -1,6 +1,6 @@
 extends Node2D
 
-const MOTE = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/annihilation_ray/vfx/textures/energy_mote.webp")
+const MOTE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/annihilation_ray/vfx/textures/energy_mote.webp")
 
 var _clock: float = 0.0
 var _charge: float = 0.0

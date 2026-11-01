@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/slime_king_screen.webp-8dd5f93904674786d9ce9ad3b182e384.stex"
+path="res://.import/slime_king_screen.webp-aa663fa4ffabf79b5028589396eb7e44.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/slime_king/slime_king_screen.webp"
-dest_files=[ "res://.import/slime_king_screen.webp-8dd5f93904674786d9ce9ad3b182e384.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/slime_king/slime_king_screen.webp"
+dest_files=[ "res://.import/slime_king_screen.webp-aa663fa4ffabf79b5028589396eb7e44.stex" ]
 
 [params]
 

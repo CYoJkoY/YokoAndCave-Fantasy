@@ -1,6 +1,6 @@
 extends "res://ui/menus/shop/shop_item.gd"
 
-const FANTASY_SHOP_VISUALS = preload("res://mods-unpacked/Yoko-Fantasy/extensions/ui/unique/visuals.gd")
+const FANTASY_SHOP_VISUALS = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/ui/unique/visuals.gd")
 
 func _set_panel_lock_style() -> void:
     var panel: Control = _item_description.icon_panel if RunData.is_coop_run else _panel

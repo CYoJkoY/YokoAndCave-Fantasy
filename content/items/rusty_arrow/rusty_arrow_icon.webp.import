@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rusty_arrow_icon.webp-1417d0912ced04230f8998bdda35cabf.stex"
+path="res://.import/rusty_arrow_icon.webp-ad8f8c7af5fa9ffb3c94a0230cf06f54.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/rusty_arrow/rusty_arrow_icon.webp"
-dest_files=[ "res://.import/rusty_arrow_icon.webp-1417d0912ced04230f8998bdda35cabf.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/rusty_arrow/rusty_arrow_icon.webp"
+dest_files=[ "res://.import/rusty_arrow_icon.webp-ad8f8c7af5fa9ffb3c94a0230cf06f54.stex" ]
 
 [params]
 

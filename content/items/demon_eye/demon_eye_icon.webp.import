@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/demon_eye_icon.webp-b21e0a4aad0dff5dd9fd2f9bfb2d3203.stex"
+path="res://.import/demon_eye_icon.webp-75b13e827e6f25379087b1f09d1ec146.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/demon_eye/demon_eye_icon.webp"
-dest_files=[ "res://.import/demon_eye_icon.webp-b21e0a4aad0dff5dd9fd2f9bfb2d3203.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/demon_eye/demon_eye_icon.webp"
+dest_files=[ "res://.import/demon_eye_icon.webp-75b13e827e6f25379087b1f09d1ec146.stex" ]
 
 [params]
 

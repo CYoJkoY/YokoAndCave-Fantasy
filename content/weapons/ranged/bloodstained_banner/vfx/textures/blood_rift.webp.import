@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blood_rift.webp-fc4badf8290aafb0aacb68230236fe08.stex"
+path="res://.import/blood_rift.webp-3b7e1f5e90f538a7a12da17143943df9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/bloodstained_banner/vfx/textures/blood_rift.webp"
-dest_files=[ "res://.import/blood_rift.webp-fc4badf8290aafb0aacb68230236fe08.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/bloodstained_banner/vfx/textures/blood_rift.webp"
+dest_files=[ "res://.import/blood_rift.webp-3b7e1f5e90f538a7a12da17143943df9.stex" ]
 
 [params]
 

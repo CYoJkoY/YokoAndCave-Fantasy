@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vine_stranger_icon.webp-12cd43bdf7f8f07c013435917ce53a56.stex"
+path="res://.import/vine_stranger_icon.webp-79f86b965c7d7d417af2b3493335974e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/vine_stranger/vine_stranger_icon.webp"
-dest_files=[ "res://.import/vine_stranger_icon.webp-12cd43bdf7f8f07c013435917ce53a56.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/vine_stranger/vine_stranger_icon.webp"
+dest_files=[ "res://.import/vine_stranger_icon.webp-79f86b965c7d7d417af2b3493335974e.stex" ]
 
 [params]
 

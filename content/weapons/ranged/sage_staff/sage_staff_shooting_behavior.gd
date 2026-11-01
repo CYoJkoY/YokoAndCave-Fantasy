@@ -1,6 +1,6 @@
 extends "res://weapons/shooting_behaviors/ranged_weapon_shooting_behavior.gd"
 
-const EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sage_staff/sage_staff_effect.gd")
+const EFFECT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/sage_staff/sage_staff_effect.gd")
 const EMISSION_INTERVAL: float = EFFECT.EMISSION_INTERVAL
 const GOLDEN_ANGLE: float = 2.39996323
 

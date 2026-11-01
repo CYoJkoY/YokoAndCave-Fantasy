@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rusted_blade_swing.webp-b2ed83825c1608cf567c5b3aba05f3fc.stex"
+path="res://.import/rusted_blade_swing.webp-e33581ba4982ffd5de3730c71ab560a5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/rusted_blade/rusted_blade_swing.webp"
-dest_files=[ "res://.import/rusted_blade_swing.webp-b2ed83825c1608cf567c5b3aba05f3fc.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/rusted_blade/rusted_blade_swing.webp"
+dest_files=[ "res://.import/rusted_blade_swing.webp-e33581ba4982ffd5de3730c71ab560a5.stex" ]
 
 [params]
 

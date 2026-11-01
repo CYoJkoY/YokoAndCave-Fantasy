@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/miracle_star_crystal_bottom_left.webp-89b2d384ae57988c8471bd22a35170d8.stex"
+path="res://.import/miracle_star_crystal_bottom_left.webp-1d0d8426246fe14518ebbecaa3563896.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/miracle_star/miracle_star_crystal_bottom_left.webp"
-dest_files=[ "res://.import/miracle_star_crystal_bottom_left.webp-89b2d384ae57988c8471bd22a35170d8.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/miracle_star_crystal_bottom_left.webp"
+dest_files=[ "res://.import/miracle_star_crystal_bottom_left.webp-1d0d8426246fe14518ebbecaa3563896.stex" ]
 
 [params]
 

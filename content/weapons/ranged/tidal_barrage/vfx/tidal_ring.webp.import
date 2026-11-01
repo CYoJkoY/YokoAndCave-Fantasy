@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tidal_ring.webp-818f17a8d3b3117bb07387efa4a145fa.stex"
+path="res://.import/tidal_ring.webp-95af6fb19195d616426ce9426d431af6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/tidal_barrage/vfx/tidal_ring.webp"
-dest_files=[ "res://.import/tidal_ring.webp-818f17a8d3b3117bb07387efa4a145fa.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/tidal_barrage/vfx/tidal_ring.webp"
+dest_files=[ "res://.import/tidal_ring.webp-95af6fb19195d616426ce9426d431af6.stex" ]
 
 [params]
 

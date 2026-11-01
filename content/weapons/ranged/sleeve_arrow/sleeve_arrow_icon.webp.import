@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sleeve_arrow_icon.webp-c6e4099bb8b50d0ed42eb757c476e1e6.stex"
+path="res://.import/sleeve_arrow_icon.webp-9358eb7ff9a58c253b041fd772cccf92.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sleeve_arrow/sleeve_arrow_icon.webp"
-dest_files=[ "res://.import/sleeve_arrow_icon.webp-c6e4099bb8b50d0ed42eb757c476e1e6.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/sleeve_arrow/sleeve_arrow_icon.webp"
+dest_files=[ "res://.import/sleeve_arrow_icon.webp-9358eb7ff9a58c253b041fd772cccf92.stex" ]
 
 [params]
 

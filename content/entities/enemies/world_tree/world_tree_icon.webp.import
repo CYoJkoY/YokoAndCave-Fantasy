@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/world_tree_icon.webp-2bd92e24f629229ab3b035a4064d8939.stex"
+path="res://.import/world_tree_icon.webp-796d883590c0c5807371686383fd86bd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/world_tree/world_tree_icon.webp"
-dest_files=[ "res://.import/world_tree_icon.webp-2bd92e24f629229ab3b035a4064d8939.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/world_tree/world_tree_icon.webp"
+dest_files=[ "res://.import/world_tree_icon.webp-796d883590c0c5807371686383fd86bd.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/skeleton_knight.webp-956b770ea10f37d1214223d9ce5b9777.stex"
+path="res://.import/skeleton_knight.webp-7d3c972f51a514074e950d64ca1ef0b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/skeleton_knight/skeleton_knight.webp"
-dest_files=[ "res://.import/skeleton_knight.webp-956b770ea10f37d1214223d9ce5b9777.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/skeleton_knight/skeleton_knight.webp"
+dest_files=[ "res://.import/skeleton_knight.webp-7d3c972f51a514074e950d64ca1ef0b0.stex" ]
 
 [params]
 

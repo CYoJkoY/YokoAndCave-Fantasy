@@ -1,6 +1,6 @@
 extends "res://singletons/weapon_service.gd"
 
-const FANTASY_LIGHTNING_CHAIN_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/lightning_chain_service.gd")
+const FANTASY_LIGHTNING_CHAIN_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/lightning_chain_service.gd")
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func init_base_stats(from_stats: WeaponStats, player_index: int, args: WeaponServiceInitStatsArgs = _init_stats_args_service, is_structure:=false, is_special_spawn:=false, is_pet:=false) -> WeaponStats:

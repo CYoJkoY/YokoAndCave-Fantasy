@@ -1,6 +1,6 @@
 extends "res://visual_effects/floating_text/floating_text_manager.gd"
 
-const EROSION_TEXT_MATERIAL = preload("res://mods-unpacked/Yoko-Fantasy/content/visual_effects/erosion_damage_text.tres")
+const EROSION_TEXT_MATERIAL = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/visual_effects/erosion_damage_text.tres")
 const TAMBOURINE_TEXT_INTERVAL: float = 0.08
 
 var _fantasy_erosion_text_pending: bool = false

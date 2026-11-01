@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/giant_bear_spike_0002.webp-1b3f494f50804cf95f9386d096df9b93.stex"
+path="res://.import/giant_bear_spike_0002.webp-2342a3d9737e066c5a2fdd1dfe7bac5a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/charging_shoot_attack_projectile/giant_bear_spike_0002.webp"
-dest_files=[ "res://.import/giant_bear_spike_0002.webp-1b3f494f50804cf95f9386d096df9b93.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/enemy/charging_shoot_attack_projectile/giant_bear_spike_0002.webp"
+dest_files=[ "res://.import/giant_bear_spike_0002.webp-2342a3d9737e066c5a2fdd1dfe7bac5a.stex" ]
 
 [params]
 

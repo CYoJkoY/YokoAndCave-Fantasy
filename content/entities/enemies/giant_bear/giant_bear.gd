@@ -1,7 +1,7 @@
 extends Enemy
 
-const STAND_SPRITE = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/giant_bear/giant_bear_stand.webp")
-const STAND_FOUR_SPRITE = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/giant_bear/giant_bear_stand_four.webp")
+const STAND_SPRITE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/giant_bear/giant_bear_stand.webp")
+const STAND_FOUR_SPRITE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/giant_bear/giant_bear_stand_four.webp")
 
 onready var _charging_shoot_attack_behavior: ShootingAttackBehavior = $"ChargingShootAttackBehavior"
 onready var COOLDOWN: float = _charging_shoot_attack_behavior.cooldown

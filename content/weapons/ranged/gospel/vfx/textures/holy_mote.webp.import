@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/holy_mote.webp-efd0c33948cfe49d5068095081291298.stex"
+path="res://.import/holy_mote.webp-ef2db690aebcf821f46dfa8c7ebef29f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/vfx/textures/holy_mote.webp"
-dest_files=[ "res://.import/holy_mote.webp-efd0c33948cfe49d5068095081291298.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/vfx/textures/holy_mote.webp"
+dest_files=[ "res://.import/holy_mote.webp-ef2db690aebcf821f46dfa8c7ebef29f.stex" ]
 
 [params]
 

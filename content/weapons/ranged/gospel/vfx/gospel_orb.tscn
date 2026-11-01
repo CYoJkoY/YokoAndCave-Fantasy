@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/vfx/gospel_orb.gd" type="Script" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/vfx/textures/holy_orb.webp" type="Texture" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/vfx/textures/holy_glow.webp" type="Texture" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/vfx/textures/holy_mote.webp" type="Texture" id=4]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/vfx/gospel_orb.gdshader" type="Shader" id=5]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/gospel/vfx/gospel_glow.gdshader" type="Shader" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/vfx/gospel_orb.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/vfx/textures/holy_orb.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/vfx/textures/holy_glow.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/vfx/textures/holy_mote.webp" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/vfx/gospel_orb.gdshader" type="Shader" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/vfx/gospel_glow.gdshader" type="Shader" id=7]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/slash_arc_rift.webp-d5a97ddae861244e01b956d0652ca558.stex"
+path="res://.import/slash_arc_rift.webp-d2787500c93f37ea372b8b896fd86f83.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/visuals/textures/slash_arc_rift.webp"
-dest_files=[ "res://.import/slash_arc_rift.webp-d5a97ddae861244e01b956d0652ca558.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/visuals/textures/slash_arc_rift.webp"
+dest_files=[ "res://.import/slash_arc_rift.webp-d2787500c93f37ea372b8b896fd86f83.stex" ]
 
 [params]
 

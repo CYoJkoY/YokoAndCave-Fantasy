@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/muzzle.webp-421a9666e22f27d068bc446a7481875b.stex"
+path="res://.import/muzzle.webp-8c4ba0e17712418d4b7dafc689fe4e82.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/deadeye/vfx/textures/muzzle.webp"
-dest_files=[ "res://.import/muzzle.webp-421a9666e22f27d068bc446a7481875b.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/deadeye/vfx/textures/muzzle.webp"
+dest_files=[ "res://.import/muzzle.webp-8c4ba0e17712418d4b7dafc689fe4e82.stex" ]
 
 [params]
 

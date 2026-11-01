@@ -1,4 +1,4 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shared/orbit_strike_weapon.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/shared/orbit_strike_weapon.gd"
 
 onready var _visuals: Node2D = $Sprite/BannerEffects
 

@@ -1,7 +1,7 @@
 extends "res://projectiles/player_projectile.gd"
 
-const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
-const CHAIN_EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shamisen/shamisen_effect.tres")
+const TARGET_INDEX = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_target_index.gd")
+const CHAIN_EFFECT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/shamisen/shamisen_effect.tres")
 const NOTE_LIFETIME: float = 5.0
 const CHAIN_SPEED: float = 2200.0
 const CHAIN_LEG_LIFETIME: float = 0.65

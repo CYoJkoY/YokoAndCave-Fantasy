@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hammer_spark.webp-3b8bfc50ec1a966f7fd776532183e609.stex"
+path="res://.import/hammer_spark.webp-7a6a40a0d2fb2508cb79899f5a54f715.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/crusader_hammer/vfx/textures/hammer_spark.webp"
-dest_files=[ "res://.import/hammer_spark.webp-3b8bfc50ec1a966f7fd776532183e609.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/crusader_hammer/vfx/textures/hammer_spark.webp"
+dest_files=[ "res://.import/hammer_spark.webp-7a6a40a0d2fb2508cb79899f5a54f715.stex" ]
 
 [params]
 
