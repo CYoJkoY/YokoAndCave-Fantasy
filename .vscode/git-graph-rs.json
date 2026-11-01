@@ -1,22 +1,22 @@
 {
     "issueLinkingConfig": {
         "issue": "#(\\d+)",
-        "url": "https://github.com/CYoJkoY/Yoko-Fantasy/issues/$1"
+        "url": "https://github.com/CYoJkoY/YokoAndCave-Fantasy/issues/$1"
     },
     "pinnedBranches": [],
     "pinnedCommits": [],
     "pullRequestConfig": {
         "provider": "github",
+        "custom": null,
         "hostRootUrl": "https://github.com",
         "sourceRemote": "origin",
         "sourceOwner": "CYoJkoY",
-        "sourceRepo": "Yoko-Fantasy",
+        "sourceRepo": "YokoAndCave-Fantasy",
         "destRemote": "origin",
         "destOwner": "CYoJkoY",
-        "destRepo": "Yoko-Fantasy",
+        "destRepo": "YokoAndCave-Fantasy",
         "destProjectId": "",
-        "destBranch": "main",
-        "custom": null
+        "destBranch": "main"
     },
-    "exportedAt": 1790846013896
+    "exportedAt": 1793570369904
 }
