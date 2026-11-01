@@ -1,61 +1,84 @@
-[gd_resource type="Resource" load_steps=52 format=2]
+[gd_resource type="Resource" load_steps=73 format=2]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/characters/apostle/apostle_data.tres" type="Resource" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/rotten_plant/rotten_plant_data.tres" type="Resource" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/characters/paladin/paladin_data.tres" type="Resource" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/FantasyNewContent.gd" type="Script" id=4]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/characters/magic_swordsman/magic_swordsman_data.tres" type="Resource" id=5]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/overgrowth/overgrowth_data.tres" type="Resource" id=6]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/nuclear_waste_drum/nuclear_waste_drum_data.tres" type="Resource" id=7]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/characters/cultist/cultist_data.tres" type="Resource" id=8]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/forbidden_spell/forbidden_spell_data.tres" type="Resource" id=9]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/rusty_arrow/rusty_arrow_data.tres" type="Resource" id=10]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/magic_sword/magic_sword_data.tres" type="Resource" id=11]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/sacrificial_offering/sacrificial_offering_data.tres" type="Resource" id=12]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/hex_bug/hex_bug_data.tres" type="Resource" id=13]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/magic_sword/magic_sword_item.tres" type="Resource" id=14]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/extensions/effects/cursed_kill_healing/cursed_kill_healing_effect.gd" type="Script" id=15]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/characters/cardinal/cardinal_data.tres" type="Resource" id=16]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/extensions/effects/curse_all_on_reroll/curse_all_on_reroll_effect.gd" type="Script" id=17]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/jobs/elemental/dark_mage/dark_mage_data.tres" type="Resource" id=23]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/jobs/universal/abyssal_cultist/abyssal_cultist_data.tres" type="Resource" id=48]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/extensions/effects/shop_enter_stat_curse/shop_enter_stat_curse_effect.gd" type="Script" id=83]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/cursed_fire/cursed_fire_data.tres" type="Resource" id=85]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/demon_hunter_blade/demon_hunter_blade_data.tres" type="Resource" id=86]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/demon_eye/demon_eye_used_data.tres" type="Resource" id=87]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/demon_eye/demon_eye_data.tres" type="Resource" id=88]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/characters/brave/brave_data.tres" type="Resource" id=114]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/black_mud/black_mud_data.tres" type="Resource" id=132]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/contract/contract_data.tres" type="Resource" id=139]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/cursed_coin/cursed_coin_data.tres" type="Resource" id=144]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/extensions/effects/extra_curse_enemy/extra_curse_enemy_effect.gd" type="Script" id=151]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/extensions/effects/extra_curse_item/extra_curse_item_effect.gd" type="Script" id=152]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/sets/fallen/fallen_set_data.tres" type="Resource" id=166]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/handbell/1/handbell_data.tres" type="Resource" id=167]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/handbell/2/handbell_2_data.tres" type="Resource" id=168]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/handbell/3/handbell_3_data.tres" type="Resource" id=169]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/handbell/4/handbell_4_data.tres" type="Resource" id=170]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/1/finger_snap_data.tres" type="Resource" id=175]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/2/finger_snap_2_data.tres" type="Resource" id=176]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/3/finger_snap_3_data.tres" type="Resource" id=177]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/4/finger_snap_4_data.tres" type="Resource" id=178]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/apostle/apostle_data.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/rotten_plant/rotten_plant_data.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/paladin/paladin_data.tres" type="Resource" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/FantasyNewContent.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/magic_swordsman/magic_swordsman_data.tres" type="Resource" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/overgrowth/overgrowth_data.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/nuclear_waste_drum/nuclear_waste_drum_data.tres" type="Resource" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/cultist/cultist_data.tres" type="Resource" id=8]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/forbidden_spell/forbidden_spell_data.tres" type="Resource" id=9]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/rusty_arrow/rusty_arrow_data.tres" type="Resource" id=10]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/magic_sword/magic_sword_data.tres" type="Resource" id=11]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/sacrificial_offering/sacrificial_offering_data.tres" type="Resource" id=12]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/hex_bug/hex_bug_data.tres" type="Resource" id=13]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/magic_sword/magic_sword_item.tres" type="Resource" id=14]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/cursed_kill_healing/cursed_kill_healing_effect.gd" type="Script" id=15]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/cardinal/cardinal_data.tres" type="Resource" id=16]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/curse_all_on_reroll/curse_all_on_reroll_effect.gd" type="Script" id=17]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/elemental/dark_mage/dark_mage_data.tres" type="Resource" id=23]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/abyssal_cultist/abyssal_cultist_data.tres" type="Resource" id=48]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/shop_enter_stat_curse/shop_enter_stat_curse_effect.gd" type="Script" id=83]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/cursed_fire/cursed_fire_data.tres" type="Resource" id=85]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/demon_hunter_blade/demon_hunter_blade_data.tres" type="Resource" id=86]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/demon_eye/demon_eye_used_data.tres" type="Resource" id=87]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/demon_eye/demon_eye_data.tres" type="Resource" id=88]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/brave/brave_data.tres" type="Resource" id=114]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/black_mud/black_mud_data.tres" type="Resource" id=132]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/contract/contract_data.tres" type="Resource" id=139]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/cursed_coin/cursed_coin_data.tres" type="Resource" id=144]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/extra_curse_enemy/extra_curse_enemy_effect.gd" type="Script" id=151]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/extra_curse_item/extra_curse_item_effect.gd" type="Script" id=152]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/sets/fallen/fallen_set_data.tres" type="Resource" id=166]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/handbell/1/handbell_data.tres" type="Resource" id=167]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/handbell/2/handbell_2_data.tres" type="Resource" id=168]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/handbell/3/handbell_3_data.tres" type="Resource" id=169]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/handbell/4/handbell_4_data.tres" type="Resource" id=170]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/finger_snap/1/finger_snap_data.tres" type="Resource" id=175]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/finger_snap/2/finger_snap_2_data.tres" type="Resource" id=176]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/finger_snap/3/finger_snap_3_data.tres" type="Resource" id=177]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/finger_snap/4/finger_snap_4_data.tres" type="Resource" id=178]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/jobs/curse/heretic/heretic_data.tres" type="Resource" id=179]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/jobs/curse/bogborn/bogborn_data.tres" type="Resource" id=180]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/jobs/curse/wildborn/wildborn_data.tres" type="Resource" id=181]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/jobs/curse/seer/seer_data.tres" type="Resource" id=182]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/curse/heretic/heretic_data.tres" type="Resource" id=179]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/curse/bogborn/bogborn_data.tres" type="Resource" id=180]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/curse/wildborn/wildborn_data.tres" type="Resource" id=181]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/curse/seer/seer_data.tres" type="Resource" id=182]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/extensions/effects/curse_per_accuracy_loss/curse_per_accuracy_loss_effect.gd" type="Script" id=183]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/curse_per_accuracy_loss/curse_per_accuracy_loss_effect.gd" type="Script" id=183]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/jobs/universal/performer/performer_data.tres" type="Resource" id=184]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/performer/performer_data.tres" type="Resource" id=184]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/harp/1/harp_data.tres" type="Resource" id=185]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/harp/2/harp_2_data.tres" type="Resource" id=186]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/harp/3/harp_3_data.tres" type="Resource" id=187]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/harp/4/harp_4_data.tres" type="Resource" id=188]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/harp/1/harp_data.tres" type="Resource" id=185]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/harp/2/harp_2_data.tres" type="Resource" id=186]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/harp/3/harp_3_data.tres" type="Resource" id=187]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/harp/4/harp_4_data.tres" type="Resource" id=188]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shamisen/3/shamisen_3_data.tres" type="Resource" id=189]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shamisen/4/shamisen_4_data.tres" type="Resource" id=190]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/shamisen/3/shamisen_3_data.tres" type="Resource" id=189]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/shamisen/4/shamisen_4_data.tres" type="Resource" id=190]
+
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/myriad_thunder/1/myriad_thunder_data.tres" type="Resource" id=191]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/blazing_path/1/blazing_path_data.tres" type="Resource" id=192]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/earthshatter/1/earthshatter_data.tres" type="Resource" id=193]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/myriad_windblades/1/myriad_windblades_data.tres" type="Resource" id=194]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/frostspray/1/frostspray_data.tres" type="Resource" id=195]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/myriad_flourish/1/myriad_flourish_data.tres" type="Resource" id=196]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/cross_staff/1/cross_staff_data.tres" type="Resource" id=197]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/holy_battleaxe/1/holy_battleaxe_data.tres" type="Resource" id=198]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/1/kou_b_hand_1_data.tres" type="Resource" id=199]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/kunai/1/kunai_data.tres" type="Resource" id=200]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/moonlight_rapier/1/moonlight_rapier_data.tres" type="Resource" id=201]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/sleeve_arrow/1/sleeve_arrow_data.tres" type="Resource" id=202]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/village_special_sword/1/village_special_sword_data.tres" type="Resource" id=203]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/wind_bow/1/wind_bow_data.tres" type="Resource" id=204]
+[ext_resource path="res://dlcs/dlc_1/weapons/ranged/javelin/1/javelin_data.tres" type="Resource" id=223]
+[ext_resource path="res://dlcs/dlc_1/weapons/ranged/flute/1/flute_data.tres" type="Resource" id=224]
+[ext_resource path="res://dlcs/dlc_1/weapons/melee/spoon/1/spoon_data.tres" type="Resource" id=225]
+[ext_resource path="res://dlcs/dlc_1/weapons/melee/brick/1/brick_data.tres" type="Resource" id=226]
+[ext_resource path="res://dlcs/dlc_1/weapons/melee/lute/1/lute_data.tres" type="Resource" id=227]
+
+[ext_resource path="res://dlcs/dlc_1/weapons/melee/sickle/1/sickle_data.tres" type="Resource" id=228]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/bard/bard_data.tres" type="Resource" id=229]
 
 [resource]
 script = ExtResource( 4 )
@@ -63,7 +86,7 @@ my_id = ""
 groups_in_all_zones = [  ]
 music_tracks = [  ]
 backgrounds = [  ]
-characters = [ ExtResource( 114 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 16 ) ]
+characters = [ ExtResource( 114 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 229 ) ]
 entities = [ ExtResource( 14 ) ]
 elites = [  ]
 bosses = [  ]
@@ -116,3 +139,60 @@ scene_effect_behaviors = [  ]
 enemy_effect_behaviors = [  ]
 player_effect_behaviors = [  ]
 jobs = [ ExtResource( 23 ), ExtResource( 48 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 184 ) ]
+dlc_additional_starting_weapons = {
+"character_well_rounded": [ ExtResource( 175 ), ExtResource( 167 ), ExtResource( 185 ) ],
+"character_brawler": [ ExtResource( 175 ) ],
+"character_mage": [ ExtResource( 175 ) ],
+"character_chunky": [ ExtResource( 167 ) ],
+"character_old": [ ExtResource( 175 ), ExtResource( 167 ), ExtResource( 185 ) ],
+"character_lucky": [ ExtResource( 167 ), ExtResource( 185 ), ExtResource( 175 ) ],
+"character_multitasker": [ ExtResource( 167 ) ],
+"character_loud": [ ExtResource( 175 ), ExtResource( 167 ) ],
+"character_gladiator": [ ExtResource( 167 ) ],
+"character_saver": [ ExtResource( 175 ), ExtResource( 167 ) ],
+"character_sick": [ ExtResource( 175 ) ],
+"character_farmer": [ ExtResource( 167 ), ExtResource( 185 ) ],
+"character_speedy": [ ExtResource( 167 ) ],
+"character_entrepreneur": [ ExtResource( 167 ), ExtResource( 175 ) ],
+"character_engineer": [ ExtResource( 167 ) ],
+"character_streamer": [ ExtResource( 167 ), ExtResource( 185 ) ],
+"character_cyborg": [ ExtResource( 185 ) ],
+"character_glutton": [ ExtResource( 167 ) ],
+"character_jack": [ ExtResource( 175 ), ExtResource( 185 ) ],
+"character_lich": [ ExtResource( 167 ), ExtResource( 185 ) ],
+"character_apprentice": [ ExtResource( 175 ) ],
+"character_cryptid": [ ExtResource( 167 ) ],
+"character_fisherman": [ ExtResource( 175 ), ExtResource( 167 ) ],
+"character_golem": [ ExtResource( 167 ) ],
+"character_king": [ ExtResource( 176 ), ExtResource( 168 ), ExtResource( 186 ) ],
+"character_renegade": [ ExtResource( 175 ), ExtResource( 185 ) ],
+"character_one_arm": [ ExtResource( 167 ) ],
+"character_soldier": [ ExtResource( 175 ), ExtResource( 185 ) ],
+"character_masochist": [ ExtResource( 167 ) ],
+"character_knight": [ ExtResource( 167 ) ],
+"character_demon": [ ExtResource( 167 ) ],
+"character_vagabond": [ ExtResource( 175 ), ExtResource( 167 ), ExtResource( 185 ) ],
+"character_technomage": [ ExtResource( 175 ) ],
+"character_vampire": [ ExtResource( 167 ) ],
+"character_wounded": [ ExtResource( 175 ), ExtResource( 185 ) ],
+"character_curious": [ ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 201 ), ExtResource( 204 ) ],
+"character_builder": [ ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 185 ), ExtResource( 200 ), ExtResource( 202 ), ExtResource( 204 ) ],
+"character_captain": [ ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 167 ), ExtResource( 198 ), ExtResource( 201 ), ExtResource( 204 ) ],
+"character_creature": [ ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 175 ), ExtResource( 185 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ) ],
+"character_chef": [ ExtResource( 197 ), ExtResource( 167 ), ExtResource( 185 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 203 ), ExtResource( 204 ) ],
+"character_druid": [ ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 175 ), ExtResource( 167 ), ExtResource( 185 ) ],
+"character_dwarf": [ ExtResource( 167 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 201 ), ExtResource( 203 ) ],
+"character_gangster": [ ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 203 ), ExtResource( 204 ) ],
+"character_diver": [ ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 204 ) ],
+"character_hiker": [ ExtResource( 197 ), ExtResource( 167 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 201 ), ExtResource( 203 ), ExtResource( 204 ) ],
+"character_buccaneer": [ ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 185 ), ExtResource( 198 ), ExtResource( 201 ), ExtResource( 203 ), ExtResource( 204 ) ],
+"character_ogre": [ ExtResource( 167 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 203 ) ],
+"character_romantic": [ ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 175 ), ExtResource( 185 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ) ],
+"character_fantasy_sage": [ ExtResource( 223 ) ],
+"character_fantasy_princess": [ ExtResource( 224 ), ExtResource( 223 ), ExtResource( 225 ), ExtResource( 175 ), ExtResource( 167 ), ExtResource( 185 ) ],
+"character_fantasy_priest": [ ExtResource( 228 ), ExtResource( 167 ), ExtResource( 185 ) ],
+"character_fantasy_elf": [ ExtResource( 185 ) ],
+"character_fantasy_slave": [ ExtResource( 226 ), ExtResource( 223 ) ],
+"character_fantasy_goblin_slayer": [ ExtResource( 223 ), ExtResource( 227 ), ExtResource( 228 ), ExtResource( 167 ) ],
+"character_fantasy_nun": [ ExtResource( 223 ), ExtResource( 228 ), ExtResource( 167 ), ExtResource( 185 ) ]
+}

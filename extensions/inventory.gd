@@ -1,6 +1,7 @@
 extends "res://ui/menus/shop/inventory.gd"
 
-const FANTASY_SHOP_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/shop_service.gd")
+const FANTASY_SHOP_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/shop_service.gd")
+const FANTASY_INVENTORY_VISUALS = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/ui/unique/visuals.gd")
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func get_elements_with_count(elements: Array) -> Array:
@@ -34,5 +35,7 @@ func add_element(element: ItemParentData, check_for_duplicates: bool = false, so
 
 func _spawn_element(element: Resource, _display_banned: float = 0, animated_entrance = false) -> InventoryElement:
     var instance: InventoryElement = ._spawn_element(element, _display_banned, animated_entrance)
+    if FANTASY_INVENTORY_VISUALS.RULES.is_unique(element):
+        FANTASY_INVENTORY_VISUALS.apply(instance, true)
     FANTASY_SHOP_SERVICE._fantasy_apply_bless_mark(instance)
     return instance

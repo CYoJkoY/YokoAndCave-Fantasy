@@ -1,9 +1,10 @@
-[gd_resource type="Resource" load_steps=5 format=2]
+[gd_resource type="Resource" load_steps=6 format=2]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/wolf_totem/wolf_totem_stats.tres" type="Resource" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/wolf_totem/wolf_totem_data.tres" type="Resource" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/wolf_totem/wolf_totem_icon.webp" type="Texture" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/fantasy_pet_data.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/wolf_totem/wolf_totem_stats.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/wolf_totem/wolf_totem_data.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/wolf_totem/wolf_totem_icon.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/fantasy_pet_data.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/wolf_totem/wolf_totem_screen.webp" type="Texture" id=5]
 
 [resource]
 script = ExtResource( 4 )
@@ -21,6 +22,7 @@ unlock_codex_descr_after_get_it = 1
 is_cursed = false
 curse_factor = 0.0
 stats = ExtResource( 1 )
+screen_example = ExtResource( 5 )
 behaviour_description = "FANTASY_TACTICAL_GLOBAL_PET_BEHAVIOUR"
 fantasy_affected_player_stats = [ "stat_percent_damage", "stat_crit_chance", "stat_fantasy_crit_damage", "stat_fantasy_pet_attack_speed", "stat_speed", "damage_against_bosses" ]
 show_hp = false

@@ -1,14 +1,14 @@
 [gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://resources/shaders/outline.gdshader" type="Shader" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/big_slime/big_slime_stats.tres" type="Resource" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/big_slime/big_slime.gd" type="Script" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/big_slime/big_slime.webp" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/big_slime/big_slime_stats.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/big_slime/big_slime.gd" type="Script" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/big_slime/big_slime.webp" type="Texture" id=4]
 [ext_resource path="res://entities/units/enemies/attack_behaviors/spawning_attack_behavior.gd" type="Script" id=6]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/little_slime/little_slime.tscn" type="PackedScene" id=7]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/attack_behaviors/enemy/slow_field_attack_behavior.gd" type="Script" id=8]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/little_slime/little_slime.tscn" type="PackedScene" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/attack_behaviors/enemy/slow_field_attack_behavior.gd" type="Script" id=8]
 [ext_resource path="res://entities/units/enemies/attack_behaviors/shooting_attack_behavior.gd" type="Script" id=9]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/slime_projectile/slime_projectile.tscn" type="PackedScene" id=10]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/enemy/slime_projectile/slime_projectile.tscn" type="PackedScene" id=10]
 [ext_resource path="res://resources/shaders/flash.gdshader" type="Shader" id=11]
 [ext_resource path="res://overlap/hitbox.tscn" type="PackedScene" id=12]
 [ext_resource path="res://entities/units/movement_behaviors/follow_target_movement_behavior.gd" type="Script" id=13]
@@ -253,7 +253,7 @@ stats = ExtResource( 2 )
 flash_mat = SubResource( 1 )
 enemy_id = "fantasy_big_slime"
 can_pick_up_materials = true
-die_to_spawn_path = "res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/medium_slime/medium_slime.tscn"
+die_to_spawn_path = "res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/medium_slime/medium_slime.tscn"
 nb_spawns_on_death = 2
 
 [node name="Animation" type="Node2D" parent="."]

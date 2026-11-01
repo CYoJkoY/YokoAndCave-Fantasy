@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/world_tree_leaf_projectile.webp-e9b914cbca63862e5e9644f49d8890a2.stex"
+path="res://.import/world_tree_leaf_projectile.webp-15e1efda1d21f620dd2af916200e1639.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/world_tree_projectile/world_tree_leaf_projectile.webp"
-dest_files=[ "res://.import/world_tree_leaf_projectile.webp-e9b914cbca63862e5e9644f49d8890a2.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/enemy/world_tree_projectile/world_tree_leaf_projectile.webp"
+dest_files=[ "res://.import/world_tree_leaf_projectile.webp-15e1efda1d21f620dd2af916200e1639.stex" ]
 
 [params]
 

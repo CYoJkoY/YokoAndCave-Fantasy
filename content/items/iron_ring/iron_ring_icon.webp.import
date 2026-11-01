@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/iron_ring_icon.webp-25dc95e2508eab36f482d99675c1e8c1.stex"
+path="res://.import/iron_ring_icon.webp-ff68226e3443b1d35742939ba2c9d586.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/iron_ring/iron_ring_icon.webp"
-dest_files=[ "res://.import/iron_ring_icon.webp-25dc95e2508eab36f482d99675c1e8c1.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/iron_ring/iron_ring_icon.webp"
+dest_files=[ "res://.import/iron_ring_icon.webp-ff68226e3443b1d35742939ba2c9d586.stex" ]
 
 [params]
 

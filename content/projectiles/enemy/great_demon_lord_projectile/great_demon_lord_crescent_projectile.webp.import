@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/great_demon_lord_crescent_projectile.webp-5ce3398ae8919007cd786b61a92bc9d4.stex"
+path="res://.import/great_demon_lord_crescent_projectile.webp-8d3e89818d32affbd80f2967760776b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/great_demon_lord_projectile/great_demon_lord_crescent_projectile.webp"
-dest_files=[ "res://.import/great_demon_lord_crescent_projectile.webp-5ce3398ae8919007cd786b61a92bc9d4.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/enemy/great_demon_lord_projectile/great_demon_lord_crescent_projectile.webp"
+dest_files=[ "res://.import/great_demon_lord_crescent_projectile.webp-8d3e89818d32affbd80f2967760776b7.stex" ]
 
 [params]
 

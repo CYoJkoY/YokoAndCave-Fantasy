@@ -1,6 +1,6 @@
 extends Boss
 
-const FANTASY_VISUAL_PARTS_SYNC = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/visual_parts_sync.gd")
+const FANTASY_VISUAL_PARTS_SYNC = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/visual_parts_sync.gd")
 
 onready var _crescent_shooting_attack_behavior: ShootingAttackBehavior = $"CrescentShootingAttackBehavior"
 onready var _projectile_shooting_attack_behavior: ShootingAttackBehavior = $"ProjectileShootingAttackBehavior"

@@ -1,12 +1,12 @@
 [gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://resources/shaders/outline.gdshader" type="Shader" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/medium_slime/medium_slime_stats.tres" type="Resource" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/medium_slime/medium_slime.webp" type="Texture" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/medium_slime/medium_slime.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/medium_slime/medium_slime_stats.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/medium_slime/medium_slime.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/medium_slime/medium_slime.gd" type="Script" id=4]
 [ext_resource path="res://resources/shaders/flash.gdshader" type="Shader" id=5]
 [ext_resource path="res://entities/units/enemies/attack_behaviors/spawning_attack_behavior.gd" type="Script" id=6]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/little_slime/little_slime.tscn" type="PackedScene" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/little_slime/little_slime.tscn" type="PackedScene" id=7]
 [ext_resource path="res://overlap/hitbox.tscn" type="PackedScene" id=8]
 [ext_resource path="res://entities/units/movement_behaviors/follow_target_movement_behavior.gd" type="Script" id=9]
 [ext_resource path="res://entities/units/enemies/attack_behaviors/shoot.tres" type="Animation" id=10]
@@ -252,10 +252,10 @@ dodge_sounds = [ ExtResource( 24 ), ExtResource( 20 ) ]
 stats = ExtResource( 2 )
 flash_mat = SubResource( 1 )
 enemy_id = "fantasy_medium_slime"
-evolution_target_path = "res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/big_slime/big_slime.tscn"
+evolution_target_path = "res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/big_slime/big_slime.tscn"
 evovle_needed = 24
 can_pick_up_materials = true
-die_to_spawn_path = "res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/little_slime/little_slime.tscn"
+die_to_spawn_path = "res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/little_slime/little_slime.tscn"
 nb_spawns_on_death = 3
 
 [node name="Animation" type="Node2D" parent="."]

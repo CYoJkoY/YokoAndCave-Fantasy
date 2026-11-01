@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/myriad_flourish_particle_sprout.webp-7d529fb7670f74f0f5a24d091443cda5.stex"
+path="res://.import/myriad_flourish_particle_sprout.webp-47cf0971a1b9bfe1ce70988f894a6b0d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/myriad_flourish/myriad_flourish_particle_sprout.webp"
-dest_files=[ "res://.import/myriad_flourish_particle_sprout.webp-7d529fb7670f74f0f5a24d091443cda5.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/myriad_flourish/myriad_flourish_particle_sprout.webp"
+dest_files=[ "res://.import/myriad_flourish_particle_sprout.webp-47cf0971a1b9bfe1ce70988f894a6b0d.stex" ]
 
 [params]
 

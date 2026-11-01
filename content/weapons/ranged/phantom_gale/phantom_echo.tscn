@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/phantom_projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_blade.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/vfx/phantom_halo.webp" type="Texture" id=3]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[node name="PhantomEcho" instance=ExtResource( 1 )]
+is_echo = true
+stop_delay = 32.0
+
+[node name="Sprite" parent="." index="0"]
+material = SubResource( 1 )
+scale = Vector2( 0.3, 0.25 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, 0 )
+
+[node name="Glow" parent="." index="4"]
+material = SubResource( 1 )
+position = Vector2( 0, 0 )
+scale = Vector2( 0.45, 0.3 )
+texture = ExtResource( 3 )
+offset = Vector2( 0, 0 )
+
+[editable path="Hitbox"]

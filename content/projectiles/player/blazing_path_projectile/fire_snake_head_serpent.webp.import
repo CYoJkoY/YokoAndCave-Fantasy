@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fire_snake_head_serpent.webp-fdfaaf393a430deb4d724802f1fdb64a.stex"
+path="res://.import/fire_snake_head_serpent.webp-bce8c439c7eeef085e86592a4c00f732.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/blazing_path_projectile/fire_snake_head_serpent.webp"
-dest_files=[ "res://.import/fire_snake_head_serpent.webp-fdfaaf393a430deb4d724802f1fdb64a.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/blazing_path_projectile/fire_snake_head_serpent.webp"
+dest_files=[ "res://.import/fire_snake_head_serpent.webp-bce8c439c7eeef085e86592a4c00f732.stex" ]
 
 [params]
 

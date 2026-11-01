@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/laser_shoot_enemy_projectile_end.webp-11ada39b8c6fa5f60212a060c1c8184b.stex"
+path="res://.import/laser_shoot_enemy_projectile_end.webp-1766c4a3eb48e510d591a2fd4e03dc1e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/laser_shoot_enemy_projectile/laser_shoot_enemy_projectile_end.webp"
-dest_files=[ "res://.import/laser_shoot_enemy_projectile_end.webp-11ada39b8c6fa5f60212a060c1c8184b.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/enemy/laser_shoot_enemy_projectile/laser_shoot_enemy_projectile_end.webp"
+dest_files=[ "res://.import/laser_shoot_enemy_projectile_end.webp-1766c4a3eb48e510d591a2fd4e03dc1e.stex" ]
 
 [params]
 

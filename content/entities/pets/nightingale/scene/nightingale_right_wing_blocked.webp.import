@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nightingale_right_wing_blocked.webp-29ab7da307f7e9182466c0c127c3ffdc.stex"
+path="res://.import/nightingale_right_wing_blocked.webp-b68d3923c95d638b50ea554601d4ad41.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/nightingale/scene/nightingale_right_wing_blocked.webp"
-dest_files=[ "res://.import/nightingale_right_wing_blocked.webp-29ab7da307f7e9182466c0c127c3ffdc.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/nightingale/scene/nightingale_right_wing_blocked.webp"
+dest_files=[ "res://.import/nightingale_right_wing_blocked.webp-b68d3923c95d638b50ea554601d4ad41.stex" ]
 
 [params]
 

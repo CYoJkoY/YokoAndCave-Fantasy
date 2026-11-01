@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/earthshatter_projectile/earthshatter_shard.gd" type="Script" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/earthshatter_projectile/textures/earthshatter_shard_1.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/earthshatter_projectile/earthshatter_shard.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/earthshatter_projectile/textures/earthshatter_shard_1.webp" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 9.6

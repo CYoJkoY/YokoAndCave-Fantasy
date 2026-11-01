@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/egyptian_cat_icon.webp-c16ac429754c504ab56d92c67f554c53.stex"
+path="res://.import/egyptian_cat_icon.webp-e28d36dce539f6684575c031977a7f05.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/egyptian_cat/egyptian_cat_icon.webp"
-dest_files=[ "res://.import/egyptian_cat_icon.webp-c16ac429754c504ab56d92c67f554c53.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/egyptian_cat/egyptian_cat_icon.webp"
+dest_files=[ "res://.import/egyptian_cat_icon.webp-e28d36dce539f6684575c031977a7f05.stex" ]
 
 [params]
 

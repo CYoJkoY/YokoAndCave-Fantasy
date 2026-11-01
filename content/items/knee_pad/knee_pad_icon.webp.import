@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/knee_pad_icon.webp-4753790aa60d88be7bd6949b392aeade.stex"
+path="res://.import/knee_pad_icon.webp-954096aa56c9feb73754d273d0ef4fb4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/knee_pad/knee_pad_icon.webp"
-dest_files=[ "res://.import/knee_pad_icon.webp-4753790aa60d88be7bd6949b392aeade.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/knee_pad/knee_pad_icon.webp"
+dest_files=[ "res://.import/knee_pad_icon.webp-954096aa56c9feb73754d273d0ef4fb4.stex" ]
 
 [params]
 

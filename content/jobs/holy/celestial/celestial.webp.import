@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/celestial.webp-0a1cecec5baa592bc776a16dfa59d565.stex"
+path="res://.import/celestial.webp-e7219fd00ad86612e1e787d4f30aab8d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/holy/celestial/celestial.webp"
-dest_files=[ "res://.import/celestial.webp-0a1cecec5baa592bc776a16dfa59d565.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/holy/celestial/celestial.webp"
+dest_files=[ "res://.import/celestial.webp-e7219fd00ad86612e1e787d4f30aab8d.stex" ]
 
 [params]
 

@@ -1,12 +1,12 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/micro_homing_player_projectile.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/micro_homing_player_projectile.gd"
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const TRAIL_HISTORY = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_trail_history.gd")
+const TRAIL_HISTORY = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_trail_history.gd")
 
-const HIT_SPLASH_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/frostspray_hit_splash.tscn")
-const SHARD_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/frostspray_shard.tscn")
-const FROSTSPRAY_EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/frostspray/frostspray_effect.gd")
+const HIT_SPLASH_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/frostspray_hit_splash.tscn")
+const SHARD_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/frostspray_shard.tscn")
+const FROSTSPRAY_EFFECT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/frostspray/frostspray_effect.gd")
 
 const DEFAULT_SHARD_COUNT: int = 4
 const DEFAULT_SHARD_DAMAGE_RATIO: float = 0.45
@@ -134,11 +134,7 @@ func _on_Hitbox_hit_something(thing_hit: Node, damage_dealt: int) -> void:
 		return
 
 	var splash_pool_id: int = HIT_SPLASH_SCENE.get_instance_id()
-	var splash = main.get_node_from_pool(splash_pool_id, main._effects)
-	if splash == null:
-		splash = HIT_SPLASH_SCENE.instance()
-		main.add_effect(splash)
-		splash.set_meta("pool_id", splash_pool_id)
+	var splash = FANTASY_PROJECTILE_VISUAL_UTILS.get_pooled_effect(HIT_SPLASH_SCENE, main)
 	splash.play(global_position, main, splash_pool_id)
 
 	var impact_dir: Vector2 = _clean_velocity
@@ -159,11 +155,7 @@ func _on_Hitbox_hit_something(thing_hit: Node, damage_dealt: int) -> void:
 	indices.shuffle()
 
 	for i in range(count):
-		var shard = main.get_node_from_pool(shard_pool_id, main._effects)
-		if shard == null:
-			shard = SHARD_SCENE.instance()
-			main.add_effect(shard)
-			shard.set_meta("pool_id", shard_pool_id)
+		var shard = FANTASY_PROJECTILE_VISUAL_UTILS.get_pooled_effect(SHARD_SCENE, main)
 
 		var sector_idx = indices[i]
 		var min_ang = -half_spread + sector_idx * sector_size

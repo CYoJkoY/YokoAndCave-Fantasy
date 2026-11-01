@@ -1,6 +1,6 @@
 extends "res://singletons/utils.gd"
 
-const CLOCK_TOWER_CONFIG = preload("res://mods-unpacked/Yoko-Fantasy/extensions/effects/clock_tower_area/clock_tower_area_config.tres")
+const CLOCK_TOWER_CONFIG = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/clock_tower_area/clock_tower_area_config.tres")
 
 # Enemy Stats
 const FANTASY_ENEMY_HP: int = 0
@@ -102,9 +102,7 @@ var fantasy_sacrificial_circle_hash: int = Keys.generate_hash("fantasy_sacrifici
 var fantasy_clock_tower_area_hash: int = Keys.generate_hash("fantasy_clock_tower_area")
 var fantasy_dance_hash: int = Keys.generate_hash("fantasy_dance")
 var fantasy_shop_enter_synthesis_hash: int = Keys.generate_hash("fantasy_shop_enter_synthesis")
-var fantasy_projectiles_every_x_melee_shoot_hash: int = Keys.generate_hash("fantasy_projectiles_every_x_melee_shoot")
 var fantasy_reload_when_critically_hit_hash: int = Keys.generate_hash("reload_when_critically_hit")
-var fantasy_synthesis_pity_data_hash: int = Keys.generate_hash("fantasy_synthesis_pity_data")
 var fantasy_lightning_chain_on_hit_hash: int = Keys.generate_hash("fantasy_lightning_chain_on_hit")
 var fantasy_lightning_chain_on_death_hash: int = Keys.generate_hash("fantasy_lightning_chain_on_death")
 var fantasy_add_stat_when_pickup_consumable_hash: int = Keys.generate_hash("fantasy_add_stat_when_pickup_consumable")
@@ -117,6 +115,22 @@ var fantasy_gain_item_on_reroll_hash: int = Keys.generate_hash("fantasy_gain_ite
 var fantasy_guaranteed_set_weapons_in_shop_hash: int = Keys.generate_hash("fantasy_guaranteed_set_weapons_in_shop")
 var fantasy_weapon_hit_proc_hash: int = Keys.generate_hash("fantasy_weapon_hit_proc")
 var fantasy_blessed_hash: int = Keys.generate_hash("fantasy_blessed")
+var fantasy_heal_per_second_hash: int = Keys.generate_hash("fantasy_heal_per_second")
+
+func fa_format_damage_with_scaling_stats(damage: int, base_damage: int, scaling_stats: Array) -> String:
+    var text: String = "[color=%s]%s[/color]" % [Utils.ncl_get_signed_col(damage, base_damage), str(damage)]
+    if damage != base_damage:
+        text += " [color=%s]|%s[/color]" % [Utils.GRAY_COLOR_STR, str(base_damage)]
+    return text + " (" + WeaponService.get_scaling_stats_icon_text(scaling_stats) + ")"
+
+func fa_has_erosion(player_index: int) -> bool:
+    if !RunData.get_player_effect(fantasy_erosion_hash, player_index).empty():
+        return true
+    for weapon in RunData.get_player_weapons_ref(player_index):
+        for effect in weapon.effects:
+            if effect.get_id() == "fantasy_erosion":
+                return true
+    return false
 
 func fa_apply_direct_crit_kill_gold_rewards(player_index: int, was_crit: bool, was_kill: bool) -> void:
     if !was_crit or !was_kill:
@@ -276,7 +290,7 @@ func fa_get_synthesis_pity_bonus_chance(pity_id: String, pity_chance_step: float
 func fa_spawn_soul(num: int, pos: Vector2, spread: int) -> void:
     var main: Main = get_scene_node()
     for _i in range(num):
-        var consumable_to_spawn: ConsumableData = ProgressData.get_dlc_data("Yoko-Fantasy").soul_data
+        var consumable_to_spawn: ConsumableData = ProgressData.get_dlc_data("YokoAndCave-Fantasy").soul_data
         var consumable: Consumable = main.get_node_from_pool(main._consumable_pool_id, main._consumables_container)
         if consumable == null:
             consumable = main.consumable_scene.instance()
@@ -303,6 +317,11 @@ func fa_is_item_blessed(item_data: ItemParentData) -> bool:
 func fa_is_negative_effect(effect: Effect) -> bool:
     if effect == null or effect.custom_key == "fantasy_blessed" or effect.custom_key_hash == fantasy_blessed_hash:
         return false
+
+    if effect.key_hash == Keys.torture_hash and effect.value > 0:
+        return true
+    if effect is StatCapEffect and effect.set_cap_to_current_stat in ["stat_max_hp", "stat_speed"]:
+        return true
 
     var sign_0: int = effect.get_sign(effect.effect_sign, effect.value)
     if not effect._custom_args_added:
@@ -360,6 +379,13 @@ func fa_bless_item(item_data: ItemParentData) -> ItemParentData:
     var new_effects: Array = []
     for effect in item_data.effects:
         if fa_is_negative_effect(effect):
+            if effect.key_hash == Keys.torture_hash and effect.value > 0:
+                var healing_effect: Effect = effect.duplicate()
+                healing_effect.key = "fantasy_heal_per_second"
+                healing_effect.key_hash = fantasy_heal_per_second_hash
+                healing_effect.text_key = "EFFECT_FANTASY_HEAL_PER_SECOND"
+                healing_effect.effect_sign = Sign.POSITIVE
+                new_effects.append(healing_effect)
             continue
         new_effects.append(effect.duplicate())
     new_effects.append(fa_create_blessed_effect())

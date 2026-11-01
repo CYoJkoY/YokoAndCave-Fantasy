@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/perfumer_icon.webp-7c9fa9a1187d4a62e24371589b3b8785.stex"
+path="res://.import/perfumer_icon.webp-bb3ff7cc13d76f4583b0ab3aecf5aaa0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/universal/perfumer/perfumer_icon.webp"
-dest_files=[ "res://.import/perfumer_icon.webp-7c9fa9a1187d4a62e24371589b3b8785.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/perfumer/perfumer_icon.webp"
+dest_files=[ "res://.import/perfumer_icon.webp-bb3ff7cc13d76f4583b0ab3aecf5aaa0.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/windblade_impact_cut.webp-5e3450aab4cb0bef1d5c81961bbc4794.stex"
+path="res://.import/windblade_impact_cut.webp-54064a242192a2c318e47bb20ca5eb23.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_windblades_projectile/windblade_impact_cut.webp"
-dest_files=[ "res://.import/windblade_impact_cut.webp-5e3450aab4cb0bef1d5c81961bbc4794.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_windblades_projectile/windblade_impact_cut.webp"
+dest_files=[ "res://.import/windblade_impact_cut.webp-54064a242192a2c318e47bb20ca5eb23.stex" ]
 
 [params]
 

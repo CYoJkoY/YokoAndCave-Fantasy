@@ -1,14 +1,14 @@
 extends PlayerProjectile
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const TRAIL_HISTORY = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_trail_history.gd")
+const TRAIL_HISTORY = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_trail_history.gd")
 
-const HIT_SPLASH_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_windblades_projectile/myriad_windblades_hit_splash.tscn")
-const WIND_FORCE_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_windblades_projectile/wind_force_effect.tscn")
-const MYRIAD_WINDBLADES_EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/myriad_windblades/myriad_windblades_effect.gd")
-const AFTERIMAGE_CORE_TEXTURE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_windblades_projectile/windblade_crescent_core.webp")
-const AFTERIMAGE_GLOW_TEXTURE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_windblades_projectile/windblade_crescent_glow.webp")
+const HIT_SPLASH_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_windblades_projectile/myriad_windblades_hit_splash.tscn")
+const WIND_FORCE_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_windblades_projectile/wind_force_effect.tscn")
+const MYRIAD_WINDBLADES_EFFECT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/myriad_windblades/myriad_windblades_effect.gd")
+const AFTERIMAGE_CORE_TEXTURE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_windblades_projectile/windblade_crescent_core.webp")
+const AFTERIMAGE_GLOW_TEXTURE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_windblades_projectile/windblade_crescent_glow.webp")
 
 const TRAIL_SAMPLE_COUNT: int = 20
 const TRAIL_SAMPLE_SPACING: float = 7.0
@@ -235,11 +235,7 @@ func _apply_internal_wind_force(enemy: Enemy) -> void:
         return
 
     var pool_id: int = WIND_FORCE_SCENE.get_instance_id()
-    var wind_force = main.get_node_from_pool(pool_id, main._effects)
-    if wind_force == null:
-        wind_force = WIND_FORCE_SCENE.instance()
-        main.add_effect(wind_force)
-        wind_force.set_meta("pool_id", pool_id)
+    var wind_force = FANTASY_PROJECTILE_VISUAL_UTILS.get_pooled_effect(WIND_FORCE_SCENE, main)
 
     var p_idx: int = _get_player_index()
     var tick_dmg: int = int(max(1, Utils.ncl_get_dmg_with_scaling_stats(wind_force_base_damage, wind_force_scaling_stats, p_idx)))
@@ -261,11 +257,7 @@ func _spawn_hit_splash(pos: Vector2, impact_rotation: float) -> void:
         return
 
     var pool_id: int = HIT_SPLASH_SCENE.get_instance_id()
-    var splash = main.get_node_from_pool(pool_id, main._effects)
-    if splash == null:
-        splash = HIT_SPLASH_SCENE.instance()
-        main.add_effect(splash)
-        splash.set_meta("pool_id", pool_id)
+    var splash = FANTASY_PROJECTILE_VISUAL_UTILS.get_pooled_effect(HIT_SPLASH_SCENE, main)
     splash.play(pos, impact_rotation, main, pool_id)
 
 

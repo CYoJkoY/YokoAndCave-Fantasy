@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/magic_sword_icon.webp-f19c56d89e064abe5dbc88f6f68d5b86.stex"
+path="res://.import/magic_sword_icon.webp-d89fc0ccda84f88e37d5dbbbd4edeba0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/magic_sword/magic_sword_icon.webp"
-dest_files=[ "res://.import/magic_sword_icon.webp-f19c56d89e064abe5dbc88f6f68d5b86.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/magic_sword/magic_sword_icon.webp"
+dest_files=[ "res://.import/magic_sword_icon.webp-d89fc0ccda84f88e37d5dbbbd4edeba0.stex" ]
 
 [params]
 

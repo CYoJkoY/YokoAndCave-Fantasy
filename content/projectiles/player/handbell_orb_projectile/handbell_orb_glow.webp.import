@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/handbell_orb_glow.webp-483e865b05ffa0dfc4f7afa18bc76fb9.stex"
+path="res://.import/handbell_orb_glow.webp-39b8a5c9ce8c01924799c5c0fa2fe3e3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/handbell_orb_projectile/handbell_orb_glow.webp"
-dest_files=[ "res://.import/handbell_orb_glow.webp-483e865b05ffa0dfc4f7afa18bc76fb9.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/handbell_orb_projectile/handbell_orb_glow.webp"
+dest_files=[ "res://.import/handbell_orb_glow.webp-39b8a5c9ce8c01924799c5c0fa2fe3e3.stex" ]
 
 [params]
 

@@ -28,12 +28,9 @@ func start(weapon: Weapon, targets: Array, main: Node) -> void:
     damage_tracking_key_hash = weapon._hitbox.damage_tracking_key_hash
     effects = weapon.effects.duplicate()
     projectiles_on_hit = weapon._hitbox.projectiles_on_hit.duplicate()
-    player_attack_id = weapon._shooting_behavior._get_next_attack_id()
+    player_attack_id = weapon._hitbox.player_attack_id
     connect("hit_something", self, "_on_hit_something")
-    connect("killed_something", weapon, "on_killed_something", [self])
-    connect("critically_hit_something", weapon, "_on_weapon_critically_hit_something")
-    connect("one_shot_something", weapon, "on_one_shot_something")
-    connect("added_gold_on_crit", weapon, "on_added_gold_on_crit")
+    WeaponService.fantasy_connect_hitbox_events(self, weapon)
     set_physics_process(true)
     _advance(0.0)
 

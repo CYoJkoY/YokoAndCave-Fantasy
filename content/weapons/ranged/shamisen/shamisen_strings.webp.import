@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/shamisen_strings.webp-78c844ab0fcd8949aae039103ae0b571.stex"
+path="res://.import/shamisen_strings.webp-df7a086a08cd11abd59a3092ea8e6e31.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shamisen/shamisen_strings.webp"
-dest_files=[ "res://.import/shamisen_strings.webp-78c844ab0fcd8949aae039103ae0b571.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/shamisen/shamisen_strings.webp"
+dest_files=[ "res://.import/shamisen_strings.webp-df7a086a08cd11abd59a3092ea8e6e31.stex" ]
 
 [params]
 

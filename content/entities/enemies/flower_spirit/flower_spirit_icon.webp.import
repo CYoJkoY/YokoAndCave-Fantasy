@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flower_spirit_icon.webp-13943893077f99761ac81704b0ddfbe1.stex"
+path="res://.import/flower_spirit_icon.webp-df0b80c83849268a1015d5a6ac455dda.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/flower_spirit/flower_spirit_icon.webp"
-dest_files=[ "res://.import/flower_spirit_icon.webp-13943893077f99761ac81704b0ddfbe1.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/flower_spirit/flower_spirit_icon.webp"
+dest_files=[ "res://.import/flower_spirit_icon.webp-df0b80c83849268a1015d5a6ac455dda.stex" ]
 
 [params]
 

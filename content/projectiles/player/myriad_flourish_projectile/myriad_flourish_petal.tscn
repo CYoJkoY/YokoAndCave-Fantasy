@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_flourish_projectile/myriad_flourish_petal.gd" type="Script" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_flourish_projectile/vfx_petal_dart.webp" type="Texture" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_flourish_projectile/vfx_sparkle_dust.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_flourish_projectile/myriad_flourish_petal.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_flourish_projectile/vfx_petal_dart.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_flourish_projectile/vfx_sparkle_dust.webp" type="Texture" id=3]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1

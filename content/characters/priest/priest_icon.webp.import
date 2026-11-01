@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/priest_icon.webp-06cb8a6dfb4dafe58683534ecc408cf1.stex"
+path="res://.import/priest_icon.webp-4b79b0db098914d7467194b7a569546a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/characters/priest/priest_icon.webp"
-dest_files=[ "res://.import/priest_icon.webp-06cb8a6dfb4dafe58683534ecc408cf1.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/priest/priest_icon.webp"
+dest_files=[ "res://.import/priest_icon.webp-4b79b0db098914d7467194b7a569546a.stex" ]
 
 [params]
 

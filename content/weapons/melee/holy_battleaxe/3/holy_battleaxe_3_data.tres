@@ -2,14 +2,14 @@
 
 [ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
 [ext_resource path="res://items/sets/heavy/heavy_set_data.tres" type="Resource" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/sets/holy/holy_set_data.tres" type="Resource" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/holy_battleaxe/3/holy_battleaxe_3_stats.tres" type="Resource" id=4]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/holy_battleaxe/3/holy_battleaxe_3_effect_1.tres" type="Resource" id=5]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/holy_battleaxe/holy_battleaxe.tscn" type="PackedScene" id=6]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/holy_battleaxe/holy_battleaxe_icon.webp" type="Texture" id=7]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/holy_battleaxe/3/holy_battleaxe_3_effect_2.tres" type="Resource" id=8]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/holy_battleaxe/4/holy_battleaxe_4_data.tres" type="Resource" id=9]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/sets/sacred/sacred_set_data.tres" type="Resource" id=10]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/sets/holy/holy_set_data.tres" type="Resource" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/holy_battleaxe/3/holy_battleaxe_3_stats.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/holy_battleaxe/3/holy_battleaxe_3_effect_1.tres" type="Resource" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/holy_battleaxe/holy_battleaxe.tscn" type="PackedScene" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/holy_battleaxe/holy_battleaxe_icon.webp" type="Texture" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/holy_battleaxe/3/holy_battleaxe_3_effect_2.tres" type="Resource" id=8]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/holy_battleaxe/4/holy_battleaxe_4_data.tres" type="Resource" id=9]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/sets/sacred/sacred_set_data.tres" type="Resource" id=10]
 
 [resource]
 script = ExtResource( 1 )

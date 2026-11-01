@@ -1,8 +1,9 @@
 extends Reference
 
-const BLESS_BUTTON_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/ui/bless/bless_button.tscn")
-const BLESS_BORDER_SCENE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/ui/bless/bless_border.tscn")
+const BLESS_BUTTON_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/ui/bless/bless_button.tscn")
+const BLESS_BORDER_SCENE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/ui/bless/bless_border.tscn")
 const GOLDFISH_SOUND = preload("res://ui/sounds/goldfish.wav")
+const FANTASY_UNIQUE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/unique_weapon_service.gd")
 
 # ══════════════════════════════════════════ Shop Entry ══════════════════════════════════════════ #
 static func _fantasy_on_shop_ready(shop: BaseShop) -> void:
@@ -42,41 +43,8 @@ static func _fantasy_shop_enter_synthesis(update_stats: FuncRef, get_gear_contai
                 "source_id": Keys.empty_hash,
             }
 
-        for item in player_items:
-            for effect in item.effects:
-                if effect.get_id() != "fantasy_shop_enter_synthesis": continue
-                var pid: String = Utils.fa_get_synthesis_pity_id(effect.materials, effect.result_id_hash)
-                if syntheses.has(pid): break
-                var item_source_id: int = item.my_id_hash
-                if _fantasy_synthesis_materials_has_gear(effect.materials, item_source_id):
-                    item_source_id = Keys.empty_hash
-                syntheses[pid] = {
-                    "value": effect.value,
-                    "materials": effect.materials,
-                    "result_id": effect.result_id_hash,
-                    "pity_chance_step": effect.pity_chance_step,
-                    "cursed_materials": effect.cursed_materials,
-                    "source_id": item_source_id,
-                }
-                break
-
-        for weapon in player_weapons:
-            for effect in weapon.effects:
-                if effect.get_id() != "fantasy_shop_enter_synthesis": continue
-                var pid: String = Utils.fa_get_synthesis_pity_id(effect.materials, effect.result_id_hash)
-                if syntheses.has(pid): break
-                var weapon_source_id: int = weapon.my_id_hash
-                if _fantasy_synthesis_materials_has_gear(effect.materials, weapon_source_id):
-                    weapon_source_id = Keys.empty_hash
-                syntheses[pid] = {
-                    "value": effect.value,
-                    "materials": effect.materials,
-                    "result_id": effect.result_id_hash,
-                    "pity_chance_step": effect.pity_chance_step,
-                    "cursed_materials": effect.cursed_materials,
-                    "source_id": weapon_source_id,
-                }
-                break
+        _fantasy_collect_gear_syntheses(player_items, syntheses)
+        _fantasy_collect_gear_syntheses(player_weapons, syntheses)
 
         for pid in syntheses:
             var synthesis: Dictionary = syntheses[pid]
@@ -103,6 +71,25 @@ static func _fantasy_shop_enter_synthesis(update_stats: FuncRef, get_gear_contai
             player_gear_container.set_weapons_data(RunData.get_player_weapons(player_index))
             player_gear_container.set_items_data(RunData.get_player_items(player_index))
 
+static func _fantasy_collect_gear_syntheses(gears: Array, syntheses: Dictionary) -> void:
+    for gear in gears:
+        for effect in gear.effects:
+            if effect.get_id() != "fantasy_shop_enter_synthesis": continue
+            var pid: String = Utils.fa_get_synthesis_pity_id(effect.materials, effect.result_id_hash)
+            if syntheses.has(pid): break
+            var source_id: int = gear.my_id_hash
+            if _fantasy_synthesis_materials_has_gear(effect.materials, source_id):
+                source_id = Keys.empty_hash
+            syntheses[pid] = {
+                "value": effect.value,
+                "materials": effect.materials,
+                "result_id": effect.result_id_hash,
+                "pity_chance_step": effect.pity_chance_step,
+                "cursed_materials": effect.cursed_materials,
+                "source_id": source_id,
+            }
+            break
+
 static func _fantasy_synthesis_materials_has_gear(synthesis_materials: Array, gear_id: int) -> bool:
     for material in synthesis_materials:
         if material[0] == gear_id:
@@ -119,7 +106,7 @@ static func _fantasy_has_synthesis_materials(
         var material_id: int = material[0]
         required_materials[material_id] = required_materials.get(material_id, 0) + material[1]
 
-    if source_gear_id != Keys.empty_hash and !required_materials.has(source_gear_id):
+    if source_gear_id != Keys.empty_hash:
         required_materials[source_gear_id] = 1
 
     for material_id in required_materials:
@@ -143,12 +130,7 @@ static func _fantasy_synthesis(
         Utils.ncl_remove_gear_by_id(material_id, player_index, material_count)
 
     if source_gear_id != Keys.empty_hash:
-        var source_removed: bool = false
-        for material in synthesis_materials:
-            if material[0] == source_gear_id:
-                source_removed = true
-                break
-        if !source_removed: Utils.ncl_remove_gear_by_id(source_gear_id, player_index)
+        Utils.ncl_remove_gear_by_id(source_gear_id, player_index)
 
     _fantasy_add_synthesis_result(synthesis_result_id, player_index, result_is_cursed)
 
@@ -230,20 +212,20 @@ static func _fantasy_on_popup_bless_pressed(
     if item_data == null:
         return
 
-    var in_inventory: bool = false
-    for w in RunData.get_player_weapons(player_index):
-        if w == item_data:
-            in_inventory = true
+    var owned_gear: Array = RunData.get_player_weapons(player_index) if item_data is WeaponData else RunData.get_player_items(player_index)
+    var item_index: int = owned_gear.find(item_data)
+    if item_index == -1:
+        for i in owned_gear.size():
+            var owned_item: ItemParentData = owned_gear[i]
+            var same_item: bool = ItemService.is_same_weapon(owned_item, item_data) if item_data is WeaponData else ItemService.is_same_item(owned_item, item_data)
+            if not same_item: continue
+            item_index = i
             break
-    if not in_inventory:
-        for it in RunData.get_player_items(player_index):
-            if it == item_data:
-                in_inventory = true
-                break
-    if not in_inventory:
+    if item_index == -1:
         _fantasy_cleanup_popup(shop, item_popup, player_index)
         return
 
+    item_data = owned_gear[item_index]
     var blessing: Dictionary = Utils.fa_get_bless_info(item_data, player_index)
     if not blessing.can_bless:
         return
@@ -257,15 +239,14 @@ static func _fantasy_on_popup_bless_pressed(
         var tracked_value: int = item_data.tracked_value
         var dmg_dealt_last_wave: int = item_data.dmg_dealt_last_wave
         var tracked_value_added_this_wave: int = item_data.tracked_value_added_this_wave
-        RunData.remove_weapon(item_data, player_index)
+        RunData.remove_weapon_by_index(item_index, player_index)
         var added_weapon: WeaponData = RunData.add_weapon(blessed_gear as WeaponData, player_index)
         added_weapon.tracked_value = tracked_value
         added_weapon.dmg_dealt_last_wave = dmg_dealt_last_wave
         added_weapon.tracked_value_added_this_wave = tracked_value_added_this_wave
         player_gear_container.set_weapons_data(RunData.get_player_weapons(player_index))
     elif item_data is ItemData:
-        RunData.remove_item(item_data, player_index)
-        RunData.add_item(blessed_gear as ItemData, player_index)
+        RunData.fa_replace_item(item_data as ItemData, blessed_gear as ItemData, player_index)
         player_gear_container.set_items_data(RunData.get_player_items(player_index))
 
     update_stats.call_func(player_index)
@@ -341,7 +322,7 @@ static func _fantasy_apply_bless_mark(element: InventoryElement) -> void:
 # ══════════════════════════════════════════ Custom ══════════════════════════════════════════ #
 static func _fantasy_shop_enter_stat_curse(update_stats: FuncRef, get_gear_container: FuncRef) -> void:
     for player_index in range(RunData.get_player_count()):
-        var effect_items: Array = RunData.get_player_effect(Utils.fantasy_shop_enter_stat_curse_hash, player_index)
+        var effect_items: Array = RunData.get_player_effect(Utils.fantasy_shop_enter_stat_curse_hash, player_index).duplicate()
         for effect in effect_items:
             if !Utils.get_chance_success(effect[2] / 100.0): continue
 
@@ -380,9 +361,7 @@ static func _fantasy_shop_enter_stat_curse(update_stats: FuncRef, get_gear_conta
                     updated_any_gear = true
 
                 elif new_gear is ItemData:
-                    RunData.remove_item(gear, player_index)
-                    if gear.replaced_by: RunData.remove_item(gear.replaced_by, player_index)
-                    RunData.add_item(new_gear, player_index)
+                    RunData.fa_replace_item(gear as ItemData, new_gear as ItemData, player_index)
                     updated_any_gear = true
 
             if updated_any_gear:
@@ -515,6 +494,7 @@ static func _fantasy_get_shop_set_weapon_count(shop_items: Array, player_index: 
 static func _fantasy_get_replaceable_shop_item_index(shop_items: Array, player_index: int, set_id_hash: int, locked_item_count: int) -> int:
     for i in range(locked_item_count, shop_items[player_index].size()):
         var item_data: ItemParentData = shop_items[player_index][i][0]
+        if FANTASY_UNIQUE.is_unique(item_data): continue
         if item_data is WeaponData and _fantasy_weapon_has_set(item_data, set_id_hash): continue
 
         return i

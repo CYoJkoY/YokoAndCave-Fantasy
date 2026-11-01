@@ -1,0 +1,71 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://projectiles/player_projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/annihilation_ray/annihilation_beam.gd" type="Script" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/annihilation_ray/vfx/textures/beam_envelope.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/annihilation_ray/vfx/annihilation_beam.gdshader" type="Shader" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/annihilation_ray/vfx/textures/energy_bloom.webp" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/annihilation_ray/vfx/textures/energy_streak.webp" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+resource_local_to_scene = true
+extents = Vector2( 400, 11 )
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.3, 1 )
+colors = PoolColorArray( 1, 0.92, 1, 0.9, 0.67, 0.35, 1, 0.75, 0.35, 0.08, 0.85, 0 )
+
+[sub_resource type="Curve" id=5]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[node name="AnnihilationBeam" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+destroy_on_leaving_screen = false
+clear_material_when_pooled = false
+
+[node name="Sprite" parent="." index="0"]
+material = SubResource( 2 )
+position = Vector2( 400, 0 )
+texture = ExtResource( 3 )
+
+[node name="Collision" parent="Hitbox" index="0"]
+position = Vector2( 400, 0 )
+shape = SubResource( 1 )
+
+[node name="Wake" type="Sprite" parent="." index="3"]
+show_behind_parent = true
+material = SubResource( 3 )
+texture = ExtResource( 3 )
+
+[node name="Flare" type="Sprite" parent="." index="4"]
+material = SubResource( 3 )
+texture = ExtResource( 5 )
+
+[node name="Sparks" type="CPUParticles2D" parent="." index="5"]
+material = SubResource( 3 )
+emitting = false
+amount = 14
+lifetime = 0.29
+one_shot = true
+explosiveness = 1.0
+texture = ExtResource( 6 )
+direction = Vector2( 1, 0 )
+spread = 24.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 320.0
+initial_velocity_random = 0.6
+damping = 380.0
+scale_amount = 0.2
+scale_amount_random = 0.6
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 4 )
+flags_align_y = false
+
+[editable path="Hitbox"]

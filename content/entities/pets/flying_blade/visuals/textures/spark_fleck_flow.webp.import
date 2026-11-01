@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spark_fleck_flow.webp-d4618e71ca0e498f4b2df244a0d53a4e.stex"
+path="res://.import/spark_fleck_flow.webp-3bfc01138c5efbaf5255882962914136.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/visuals/textures/spark_fleck_flow.webp"
-dest_files=[ "res://.import/spark_fleck_flow.webp-d4618e71ca0e498f4b2df244a0d53a4e.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/visuals/textures/spark_fleck_flow.webp"
+dest_files=[ "res://.import/spark_fleck_flow.webp-3bfc01138c5efbaf5255882962914136.stex" ]
 
 [params]
 

@@ -55,6 +55,7 @@ static func init_stats(all_null_values: bool = false) -> Dictionary:
             Utils.stat_fantasy_crit_damage_hash: 0,
             Utils.gain_stat_fantasy_crit_damage_hash: 0,
             Utils.stat_fantasy_pet_attack_speed_hash: 0,
+            Utils.fantasy_erosion_speed_hash: 0,
 
         }
 
@@ -86,7 +87,6 @@ static func init_effects() -> Dictionary:
             Utils.fantasy_xp_on_consumable_hash: [],
             Utils.fantasy_fractional_xp_hash: 0.0,
             Utils.fantasy_erosion_can_crit_hash: 0,
-            Utils.fantasy_erosion_speed_hash: 0,
             Utils.fantasy_extra_elites_next_wave_hash: 0,
             Utils.fantasy_extra_curse_item_hash: [],
             Utils.fantasy_soul_bonus_hash: 0,
@@ -136,6 +136,7 @@ static func init_effects() -> Dictionary:
             Utils.fantasy_gain_item_on_reroll_hash: [],
             Utils.fantasy_guaranteed_set_weapons_in_shop_hash: [],
             Utils.fantasy_weapon_hit_proc_hash: [],
+            Utils.fantasy_heal_per_second_hash: 0,
 
         }
 

@@ -1,6 +1,6 @@
 extends "res://ui/menus/shop/coop_shop.gd"
 
-const FANTASY_COOP_SHOP_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/shop_service.gd")
+const FANTASY_COOP_SHOP_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/shop_service.gd")
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func _ready() -> void:

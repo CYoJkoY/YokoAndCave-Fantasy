@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/textures/forest_mote.png" type="Texture" id=1]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.4, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 0.65, 1, 1, 1, 0 )
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 1 )
+colors = PoolColorArray( 0.85, 1, 0.55, 1, 0.3, 0.65, 0.25, 1 )
+
+[node name="ForestMotes" type="CPUParticles2D"]
+material = SubResource( 1 )
+amount = 26
+lifetime = 12.0
+preprocess = 12.0
+randomness = 0.17
+lifetime_randomness = 0.32
+texture = ExtResource( 1 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1024, 768 )
+spread = 180.0
+gravity = Vector2( 0, -2 )
+initial_velocity = 12.0
+initial_velocity_random = 0.28
+angle = 720.0
+angle_random = 1.0
+scale_amount = 0.16
+scale_amount_random = 0.68
+color_ramp = SubResource( 2 )
+color_initial_ramp = SubResource( 3 )

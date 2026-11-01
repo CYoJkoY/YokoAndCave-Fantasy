@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://entities/structures/turret/turret.tscn" type="PackedScene" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/prism_tower/prism_tower_body.webp" type="Texture" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/prism_tower/structure/prism_tower.gd" type="Script" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/prism_tower/structure/prism_tower_shoot_animation.tres" type="Animation" id=4]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/prism_tower/structure/prism_tower_idle_animation.tres" type="Animation" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/prism_tower/prism_tower_body.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/prism_tower/structure/prism_tower.gd" type="Script" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/prism_tower/structure/prism_tower_shoot_animation.tres" type="Animation" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/prism_tower/structure/prism_tower_idle_animation.tres" type="Animation" id=5]
 [ext_resource path="res://particles/sprites/particle_30.png" type="Texture" id=6]
 
 [sub_resource type="CircleShape2D" id=1]

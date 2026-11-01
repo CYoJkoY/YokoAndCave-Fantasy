@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/harp_flecks.webp-35013c1ae2a88f35a4b89c7d68acac09.stex"
+path="res://.import/harp_flecks.webp-868eb9bca719543d73c10c1b7f0fd5ab.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/harp_projectile/harp_flecks.webp"
-dest_files=[ "res://.import/harp_flecks.webp-35013c1ae2a88f35a4b89c7d68acac09.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/harp_projectile/harp_flecks.webp"
+dest_files=[ "res://.import/harp_flecks.webp-868eb9bca719543d73c10c1b7f0fd5ab.stex" ]
 
 [params]
 

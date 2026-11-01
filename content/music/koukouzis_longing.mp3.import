@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/koukouzis_longing.mp3-f7fc9eb5e434c29ca03d7a4c2bfe26c2.mp3str"
+path="res://.import/koukouzis_longing.mp3-b3347e06738d4a92a5d911e7e04a1c88.mp3str"
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/music/koukouzis_longing.mp3"
-dest_files=[ "res://.import/koukouzis_longing.mp3-f7fc9eb5e434c29ca03d7a4c2bfe26c2.mp3str" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/music/koukouzis_longing.mp3"
+dest_files=[ "res://.import/koukouzis_longing.mp3-b3347e06738d4a92a5d911e7e04a1c88.mp3str" ]
 
 [params]
 

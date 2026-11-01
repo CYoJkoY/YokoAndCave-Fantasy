@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/crystalline_elements_projectile.webp-63e9cb0107e41f50ba0b2e95255e434f.stex"
+path="res://.import/crystalline_elements_projectile.webp-4f66d693e88e059580260330ce330f3b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/crystalline_elements_projectile/crystalline_elements_projectile.webp"
-dest_files=[ "res://.import/crystalline_elements_projectile.webp-63e9cb0107e41f50ba0b2e95255e434f.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/enemy/crystalline_elements_projectile/crystalline_elements_projectile.webp"
+dest_files=[ "res://.import/crystalline_elements_projectile.webp-4f66d693e88e059580260330ce330f3b.stex" ]
 
 [params]
 

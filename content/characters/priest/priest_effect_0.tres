@@ -1,8 +1,8 @@
 [gd_resource type="Resource" load_steps=6 format=2]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/extensions/effects/periodic_radius_damage/periodic_radius_damage_effect.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/periodic_radius_damage/periodic_radius_damage_effect.gd" type="Script" id=1]
 [ext_resource path="res://items/global/custom_arg.gd" type="Script" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/visual_effects/holy_light_hit/holy_light_hit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/visual_effects/holy_light_hit/holy_light_hit.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )

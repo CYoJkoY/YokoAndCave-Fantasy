@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gardener_icon.webp-efd998c2a009d659b1550bd440594ec8.stex"
+path="res://.import/gardener_icon.webp-41d9e53399c4c0345de37cd634d0ec69.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/universal/gardener/gardener_icon.webp"
-dest_files=[ "res://.import/gardener_icon.webp-efd998c2a009d659b1550bd440594ec8.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/gardener/gardener_icon.webp"
+dest_files=[ "res://.import/gardener_icon.webp-41d9e53399c4c0345de37cd634d0ec69.stex" ]
 
 [params]
 

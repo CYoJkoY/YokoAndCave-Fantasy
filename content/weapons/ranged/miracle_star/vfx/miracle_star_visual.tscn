@@ -1,0 +1,221 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/miracle_star_visual.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/miracle_star_body.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/miracle_star_light8.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/miracle_star_light2.webp" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/miracle_star_crystal_top_left.webp" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/miracle_star_crystal_top_right.webp" type="Texture" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/miracle_star_crystal_bottom_right.webp" type="Texture" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/miracle_star_crystal_bottom_left.webp" type="Texture" id=8]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/textures/miracle_halo.webp" type="Texture" id=9]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/textures/miracle_aura.webp" type="Texture" id=10]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/textures/miracle_flare.webp" type="Texture" id=11]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/textures/miracle_mote.webp" type="Texture" id=12]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/miracle_crystal.gdshader" type="Shader" id=13]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/miracle_halo.gdshader" type="Shader" id=14]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/miracle_transfer.gdshader" type="Shader" id=15]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/textures/miracle_beam.webp" type="Texture" id=16]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 13 )
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.18, 0.48, 0.76, 1 )
+colors = PoolColorArray( 0.72, 0.90, 1, 0, 0.72, 0.90, 1, 0.65, 1, 0.76, 0.93, 0.55, 1, 0.92, 0.66, 0.4, 0.78, 1, 0.95, 0 )
+
+[sub_resource type="Curve" id=5]
+_data = [ Vector2( 0, 0.1 ), 0.0, 0.0, 0, 0, Vector2( 0.3, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="ShaderMaterial" id=6]
+resource_local_to_scene = true
+shader = ExtResource( 13 )
+
+[sub_resource type="ShaderMaterial" id=7]
+resource_local_to_scene = true
+shader = ExtResource( 13 )
+
+[sub_resource type="ShaderMaterial" id=8]
+resource_local_to_scene = true
+shader = ExtResource( 13 )
+
+[sub_resource type="ShaderMaterial" id=9]
+resource_local_to_scene = true
+shader = ExtResource( 13 )
+
+[sub_resource type="ShaderMaterial" id=10]
+resource_local_to_scene = true
+shader = ExtResource( 14 )
+
+[sub_resource type="ShaderMaterial" id=11]
+resource_local_to_scene = true
+shader = ExtResource( 15 )
+shader_param/hue = 0.0
+
+[sub_resource type="ShaderMaterial" id=12]
+resource_local_to_scene = true
+shader = ExtResource( 15 )
+shader_param/hue = 0.24
+
+[sub_resource type="ShaderMaterial" id=13]
+resource_local_to_scene = true
+shader = ExtResource( 15 )
+shader_param/hue = 0.48
+
+[sub_resource type="ShaderMaterial" id=14]
+resource_local_to_scene = true
+shader = ExtResource( 15 )
+shader_param/hue = 0.72
+
+[node name="Visual" type="Node2D"]
+modulate = Color( 1, 1, 1, 0 )
+script = ExtResource( 1 )
+
+[node name="Radiance" type="Node2D" parent="."]
+
+[node name="Aura" type="Sprite" parent="Radiance"]
+scale = Vector2( 0.94, 0.94 )
+material = SubResource( 3 )
+texture = ExtResource( 10 )
+
+[node name="Rays" type="Sprite" parent="Radiance"]
+scale = Vector2( 1.30, 1.30 )
+material = SubResource( 3 )
+texture = ExtResource( 4 )
+
+[node name="Halo" type="Sprite" parent="Radiance"]
+modulate = Color( 1, 1, 1, 0.52 )
+material = SubResource( 2 )
+texture = ExtResource( 9 )
+
+[node name="InnerHalo" type="Sprite" parent="Radiance"]
+modulate = Color( 1, 1, 1, 0.44 )
+material = SubResource( 10 )
+texture = ExtResource( 9 )
+
+[node name="Motes" type="CPUParticles2D" parent="Radiance"]
+material = SubResource( 3 )
+emitting = false
+amount = 26
+lifetime = 2.4
+local_coords = false
+texture = ExtResource( 12 )
+emission_shape = 1
+emission_sphere_radius = 102.0
+direction = Vector2( 0, -1 )
+spread = 28.0
+gravity = Vector2( 0, -5 )
+initial_velocity = 9.0
+initial_velocity_random = 0.55
+angle = 180.0
+angle_random = 1.0
+angular_velocity = 22.0
+scale_amount = 0.28
+scale_amount_random = 0.65
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 4 )
+
+[node name="Conduits" type="Node2D" parent="."]
+
+[node name="TopLeft" type="Sprite" parent="Conduits"]
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 1, 0.5 )
+material = SubResource( 11 )
+texture = ExtResource( 16 )
+
+[node name="TopRight" type="Sprite" parent="Conduits"]
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 1, 0.5 )
+material = SubResource( 12 )
+texture = ExtResource( 16 )
+
+[node name="BottomRight" type="Sprite" parent="Conduits"]
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 1, 0.5 )
+material = SubResource( 13 )
+texture = ExtResource( 16 )
+
+[node name="BottomLeft" type="Sprite" parent="Conduits"]
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 1, 0.5 )
+material = SubResource( 14 )
+texture = ExtResource( 16 )
+
+[node name="Core" type="Node2D" parent="."]
+scale = Vector2( 0.72, 0.72 )
+
+[node name="Body" type="Sprite" parent="Core"]
+material = SubResource( 1 )
+texture = ExtResource( 2 )
+
+[node name="Facets" type="Sprite" parent="Core"]
+material = SubResource( 3 )
+texture = ExtResource( 3 )
+
+[node name="Orbit" type="Node2D" parent="."]
+
+[node name="TopLeft" type="Sprite" parent="Orbit"]
+material = SubResource( 6 )
+scale = Vector2( 0.72, 0.72 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 16, 18, 56, 55 )
+
+[node name="Glint" type="Sprite" parent="Orbit/TopLeft"]
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 0.34, 0.34 )
+material = SubResource( 3 )
+texture = ExtResource( 11 )
+
+[node name="TopRight" type="Sprite" parent="Orbit"]
+material = SubResource( 7 )
+scale = Vector2( 0.72, 0.72 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 183, 16, 55, 56 )
+
+[node name="Glint" type="Sprite" parent="Orbit/TopRight"]
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 0.34, 0.34 )
+material = SubResource( 3 )
+texture = ExtResource( 11 )
+
+[node name="BottomRight" type="Sprite" parent="Orbit"]
+material = SubResource( 8 )
+scale = Vector2( 0.72, 0.72 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 184, 183, 56, 55 )
+
+[node name="Glint" type="Sprite" parent="Orbit/BottomRight"]
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 0.34, 0.34 )
+material = SubResource( 3 )
+texture = ExtResource( 11 )
+
+[node name="BottomLeft" type="Sprite" parent="Orbit"]
+material = SubResource( 9 )
+scale = Vector2( 0.72, 0.72 )
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 18, 184, 55, 56 )
+
+[node name="Glint" type="Sprite" parent="Orbit/BottomLeft"]
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 0.34, 0.34 )
+material = SubResource( 3 )
+texture = ExtResource( 11 )
+
+[node name="Corona" type="Sprite" parent="Radiance"]
+scale = Vector2( 0.90, 0.16 )
+material = SubResource( 3 )
+texture = ExtResource( 11 )
+z_index = 1

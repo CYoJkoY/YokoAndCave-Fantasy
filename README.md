@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Yoko-Fantasy</h1>
+  <h1>YokoAndCave-Fantasy</h1>
   <p><strong>A systems-heavy fantasy expansion for Brotato, combining content with mechanics attached to existing game systems.</strong></p>
   <p>Jobs · Souls · Holy · Erosion · Combat · Enemies · Worlds · UI</p>
   <p>
@@ -16,7 +16,7 @@
 
 ## <img src="assets/readme/icons/overview.svg" width="20" height="20" alt=""> What it is
 
-Yoko-Fantasy is a content and gameplay expansion for Brotato. It targets mechanics that need more than a resource definition but do not justify a separate gameplay framework.
+YokoAndCave-Fantasy is a content and gameplay expansion for Brotato. It targets mechanics that need more than a resource definition but do not justify a separate gameplay framework.
 
 ```text
 Content resources → NewContent registration → Targeted extensions → Brotato runtime
@@ -74,12 +74,12 @@ New mechanic
    └── Localization       → translations/
 ```
 
-`manifest.json` is authoritative for version **1.1.0**, dependencies, and compatibility. The release workflow rejects tags that do not match the manifest.
+`manifest.json` is authoritative for version **1.0.0**, dependencies, and compatibility. The release workflow rejects tags that do not match the manifest.
 
-<a href="https://cyojkoy.github.io/Payment/"><img src="assets/readme/support-cta.svg" alt="Support Yoko-Fantasy" width="900" style="max-width:100%;height:auto;"></a>
+<a href="https://cyojkoy.github.io/Payment/"><img src="assets/readme/support-cta.svg" alt="Support YokoAndCave-Fantasy" width="900" style="max-width:100%;height:auto;"></a>
 
 Development support: **https://cyojkoy.github.io/Payment/**
 
 ## License
 
-Yoko-Fantasy is distributed under the [Custom License](LICENSE).
+YokoAndCave-Fantasy is distributed under the [Custom License](LICENSE).

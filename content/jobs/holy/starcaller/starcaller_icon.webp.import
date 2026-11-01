@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/starcaller_icon.webp-d3a8718c4bbb772d3882d85c41b4859c.stex"
+path="res://.import/starcaller_icon.webp-1e36febecd3d6d6e67995a7cae81f96d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/holy/starcaller/starcaller_icon.webp"
-dest_files=[ "res://.import/starcaller_icon.webp-d3a8718c4bbb772d3882d85c41b4859c.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/holy/starcaller/starcaller_icon.webp"
+dest_files=[ "res://.import/starcaller_icon.webp-1e36febecd3d6d6e67995a7cae81f96d.stex" ]
 
 [params]
 

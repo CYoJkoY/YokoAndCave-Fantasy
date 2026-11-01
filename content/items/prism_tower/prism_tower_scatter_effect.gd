@@ -1,6 +1,6 @@
 extends Effect
 
-const FANTASY_CHAIN_TARGET_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/chain_target_service.gd")
+const FANTASY_CHAIN_TARGET_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/chain_target_service.gd")
 
 export(int) var base_chain_targets = 3
 export(Array) var targets_scaling_stats = [["stat_fantasy_holy", 0.1]]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/holy_battleaxe.webp-9ec4f62b40bf1f40391a948eb8564a28.stex"
+path="res://.import/holy_battleaxe.webp-a1e79f2e9fed1f9212fe19b975e0e181.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/holy_battleaxe/holy_battleaxe.webp"
-dest_files=[ "res://.import/holy_battleaxe.webp-9ec4f62b40bf1f40391a948eb8564a28.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/holy_battleaxe/holy_battleaxe.webp"
+dest_files=[ "res://.import/holy_battleaxe.webp-a1e79f2e9fed1f9212fe19b975e0e181.stex" ]
 
 [params]
 

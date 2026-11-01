@@ -1,6 +1,7 @@
 extends MeleeWeapon
 
-const STRIKE_RIPPLE_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/handbell_orb_projectile/handbell_hit_ripple.tscn")
+const VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
+const STRIKE_RIPPLE_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/handbell_orb_projectile/handbell_hit_ripple.tscn")
 onready var _strike_ripple_pool_id: int = STRIKE_RIPPLE_SCENE.get_instance_id()
 
 var _vibration_time: float = 0.0
@@ -56,9 +57,5 @@ func _spawn_strike_shockwave(at_pos: Vector2) -> void:
 	var main = Utils.get_scene_node()
 	if main == null or not is_instance_valid(main):
 		return
-	var ripple = main.get_node_from_pool(_strike_ripple_pool_id, main._effects)
-	if ripple == null:
-		ripple = STRIKE_RIPPLE_SCENE.instance()
-		main.add_effect(ripple)
-		ripple.set_meta("pool_id", _strike_ripple_pool_id)
+	var ripple = VISUAL_UTILS.get_pooled_effect(STRIKE_RIPPLE_SCENE, main)
 	ripple.play(at_pos, main, _strike_ripple_pool_id, false)

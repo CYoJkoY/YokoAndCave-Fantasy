@@ -1,9 +1,10 @@
 extends "res://weapons/melee/melee_weapon.gd"
 
-const SLAM = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_slam.gd")
-const SPLASH_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/kou_b_hand/vfx/kou_b_hand_splash.tscn")
-const HEARTS_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/kou_b_hand/vfx/kou_b_hand_hearts.tscn")
-const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
+const VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
+const SLAM = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_slam.gd")
+const SPLASH_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/vfx/kou_b_hand_splash.tscn")
+const HEARTS_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/vfx/kou_b_hand_hearts.tscn")
+const TARGET_INDEX = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_target_index.gd")
 const TARGET_RANGE: float = 320.0
 
 var _next_splash_time: int = 0
@@ -79,35 +80,25 @@ func on_weapon_hit_something(thing_hit: Node, damage_dealt: int, hitbox: Hitbox)
     if not thing_hit.dead and not thing_hit._pending_die and not thing_hit.has_meta(SLAM.META_KEY) and Utils.get_chance_success(chance):
         target = _find_slam_target(main, thing_hit, origin)
 
-    if ProgressData.settings.visual_effects:
-        var now: int = OS.get_ticks_msec()
-        if now >= _next_splash_time or target != null:
-            _next_splash_time = now + 65
-            var splash_id: int = SPLASH_SCENE.get_instance_id()
-            var splash = main.get_node_from_pool(splash_id, main._effects)
-            if splash == null:
-                splash = SPLASH_SCENE.instance()
-                main.add_effect(splash)
-            splash.play(thing_hit, main, splash_id, 1.10 if target != null else 1.0)
+    var now: int = OS.get_ticks_msec()
+    if now >= _next_splash_time or target != null:
+        _next_splash_time = now + 65
+        var splash_id: int = SPLASH_SCENE.get_instance_id()
+        var splash = VISUAL_UTILS.get_pooled_effect(SPLASH_SCENE, main)
+        splash.play(thing_hit, main, splash_id, 1.10 if target != null else 1.0)
 
     if target == null:
         return
     var slam = SLAM.new()
     main.add_effect(slam)
     slam.begin(thing_hit, target, self, main, _climax_effect)
-    if ProgressData.settings.visual_effects:
-        var hearts_id: int = HEARTS_SCENE.get_instance_id()
-        var hearts = main.get_node_from_pool(hearts_id, main._effects)
-        if hearts == null:
-            hearts = HEARTS_SCENE.instance()
-            main.add_effect(hearts)
-        hearts.play(thing_hit, main, hearts_id)
+    var hearts_id: int = HEARTS_SCENE.get_instance_id()
+    var hearts = VISUAL_UTILS.get_pooled_effect(HEARTS_SCENE, main)
+    hearts.play(thing_hit, main, hearts_id)
 
 
 func _find_slam_target(main: Node, source: Node, origin: Vector2) -> Node:
-    if not main.has_meta(TARGET_INDEX.META_KEY):
-        main.set_meta(TARGET_INDEX.META_KEY, TARGET_INDEX.new())
-    var index = main.get_meta(TARGET_INDEX.META_KEY)
+    var index = TARGET_INDEX.for_scene(main)
     var nearest: Node = null
     var nearest_distance: float = TARGET_RANGE * TARGET_RANGE
     for enemy in index.candidates(main, origin, TARGET_RANGE):

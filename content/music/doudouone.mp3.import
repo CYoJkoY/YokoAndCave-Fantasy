@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/doudouone.mp3-b9488d3148bdaf0bddc56db61a92a42d.mp3str"
+path="res://.import/doudouone.mp3-c4388a145fcc5773d16a6ab3843f180d.mp3str"
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/music/doudouone.mp3"
-dest_files=[ "res://.import/doudouone.mp3-b9488d3148bdaf0bddc56db61a92a42d.mp3str" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/music/doudouone.mp3"
+dest_files=[ "res://.import/doudouone.mp3-c4388a145fcc5773d16a6ab3843f180d.mp3str" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tuner_icon.webp-72f27db8d1f654ec1d0b0f0188cfb0af.stex"
+path="res://.import/tuner_icon.webp-42b2df8aae46aa3f7536b2ab25c14106.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/luck/tuner/tuner_icon.webp"
-dest_files=[ "res://.import/tuner_icon.webp-72f27db8d1f654ec1d0b0f0188cfb0af.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/luck/tuner/tuner_icon.webp"
+dest_files=[ "res://.import/tuner_icon.webp-42b2df8aae46aa3f7536b2ab25c14106.stex" ]
 
 [params]
 

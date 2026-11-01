@@ -1,4 +1,4 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shared/orbit_strike_weapon.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/shared/orbit_strike_weapon.gd"
 
 const CAST_VFX_DURATION: float = 0.36
 

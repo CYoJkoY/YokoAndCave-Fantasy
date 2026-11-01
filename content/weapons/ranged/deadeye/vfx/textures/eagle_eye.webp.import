@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/eagle_eye.webp-8372eb461366439176e5b8bbc2a7d57e.stex"
+path="res://.import/eagle_eye.webp-427be059902ceb4d9e0b2b8f24aed301.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/deadeye/vfx/textures/eagle_eye.webp"
-dest_files=[ "res://.import/eagle_eye.webp-8372eb461366439176e5b8bbc2a7d57e.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/deadeye/vfx/textures/eagle_eye.webp"
+dest_files=[ "res://.import/eagle_eye.webp-427be059902ceb4d9e0b2b8f24aed301.stex" ]
 
 [params]
 

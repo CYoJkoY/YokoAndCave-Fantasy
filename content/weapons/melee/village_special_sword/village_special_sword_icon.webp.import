@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/village_special_sword_icon.webp-f18dc71d96c188c05f8a30b478181b98.stex"
+path="res://.import/village_special_sword_icon.webp-8f53880f1233ae2b5ff373d29aa7c55b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/village_special_sword/village_special_sword_icon.webp"
-dest_files=[ "res://.import/village_special_sword_icon.webp-f18dc71d96c188c05f8a30b478181b98.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/village_special_sword/village_special_sword_icon.webp"
+dest_files=[ "res://.import/village_special_sword_icon.webp-8f53880f1233ae2b5ff373d29aa7c55b.stex" ]
 
 [params]
 

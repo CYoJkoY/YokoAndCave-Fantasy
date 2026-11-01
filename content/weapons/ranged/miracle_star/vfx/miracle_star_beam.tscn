@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/miracle_star_beam.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/textures/miracle_beam.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/textures/miracle_flare.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/textures/miracle_mote.webp" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/miracle_beam.gdshader" type="Shader" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/vfx/textures/miracle_aura.webp" type="Texture" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/miracle_star_light2.webp" type="Texture" id=8]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 6 )
+
+[sub_resource type="CanvasItemMaterial" id=2]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.25, 1 )
+colors = PoolColorArray( 1, 0.97, 0.84, 0.9, 0.78, 0.9, 1, 0.6, 1, 0.67, 0.88, 0 )
+
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[node name="Beam" type="Node2D"]
+material = SubResource( 2 )
+z_index = 19
+z_as_relative = false
+script = ExtResource( 1 )
+
+[node name="Afterglow" type="Sprite" parent="."]
+scale = Vector2( 1, 2.3 )
+material = SubResource( 2 )
+texture = ExtResource( 2 )
+
+[node name="Shaft" type="Sprite" parent="."]
+scale = Vector2( 1, 1.35 )
+material = SubResource( 1 )
+texture = ExtResource( 2 )
+
+[node name="Muzzle" type="Sprite" parent="."]
+scale = Vector2( 0.66, 0.22 )
+material = SubResource( 2 )
+texture = ExtResource( 3 )
+
+[node name="Impact" type="Node2D" parent="."]
+
+[node name="Aura" type="Sprite" parent="Impact"]
+scale = Vector2( 0.48, 0.48 )
+material = SubResource( 2 )
+texture = ExtResource( 7 )
+
+[node name="Rays" type="Sprite" parent="Impact"]
+scale = Vector2( 0.62, 0.62 )
+rotation = 0.2
+material = SubResource( 2 )
+texture = ExtResource( 8 )
+
+[node name="Flare" type="Sprite" parent="Impact"]
+scale = Vector2( 0.46, 0.46 )
+material = SubResource( 2 )
+texture = ExtResource( 3 )
+
+[node name="Sparks" type="CPUParticles2D" parent="Impact"]
+material = SubResource( 2 )
+emitting = false
+amount = 10
+lifetime = 0.30
+one_shot = true
+explosiveness = 1.0
+local_coords = false
+texture = ExtResource( 5 )
+direction = Vector2( 0, -1 )
+spread = 65.0
+gravity = Vector2( 0, 18 )
+initial_velocity = 95.0
+initial_velocity_random = 0.6
+damping = 70.0
+scale_amount = 0.25
+scale_amount_random = 0.5
+scale_amount_curve = SubResource( 4 )
+color_ramp = SubResource( 3 )

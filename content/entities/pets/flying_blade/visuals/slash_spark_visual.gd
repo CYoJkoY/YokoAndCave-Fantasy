@@ -1,6 +1,6 @@
 extends Node2D
 
-const TEXTURE_EMBER = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/visuals/textures/spark_fleck_flow.webp")
+const TEXTURE_EMBER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/visuals/textures/spark_fleck_flow.webp")
 
 var _material: CanvasItemMaterial = null
 var _sprite: Sprite = null

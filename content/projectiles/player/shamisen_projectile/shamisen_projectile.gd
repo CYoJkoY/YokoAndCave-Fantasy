@@ -1,7 +1,7 @@
 extends "res://projectiles/player_projectile.gd"
 
-const TARGET_INDEX = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_target_index.gd")
-const CHAIN_EFFECT = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shamisen/shamisen_effect.tres")
+const TARGET_INDEX = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_target_index.gd")
+const CHAIN_EFFECT = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/shamisen/shamisen_effect.tres")
 const NOTE_LIFETIME: float = 5.0
 const CHAIN_SPEED: float = 2200.0
 const CHAIN_LEG_LIFETIME: float = 0.65
@@ -42,9 +42,7 @@ func shoot_ex(p_from: Node, pos: Vector2, p_velocity: Vector2, p_rotation: float
     var launch_speed: float = p_velocity.length() * max(0.15, _flight_distance / 400.0)
     _flight_duration = min(NOTE_LIFETIME, 3.0 * _flight_distance / launch_speed)
     _main = Utils.get_scene_node()
-    if not _main.has_meta(TARGET_INDEX.META_KEY):
-        _main.set_meta(TARGET_INDEX.META_KEY, TARGET_INDEX.new())
-    _target_index = _main.get_meta(TARGET_INDEX.META_KEY)
+    _target_index = TARGET_INDEX.for_scene(_main)
     _hitbox.ignored_objects.clear()
     .shoot_ex(p_from, pos, p_velocity, p_rotation, p_weapon_stats,
         damage_tracking_key, effects, hitbox_args, knockback_direction)

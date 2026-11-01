@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mechanic_icon.webp-77331f8002b47d5a7eddda1a1331851c.stex"
+path="res://.import/mechanic_icon.webp-8148b684c153cb766c7fe6c30e964a46.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/engineering/mechanic/mechanic_icon.webp"
-dest_files=[ "res://.import/mechanic_icon.webp-77331f8002b47d5a7eddda1a1331851c.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/engineering/mechanic/mechanic_icon.webp"
+dest_files=[ "res://.import/mechanic_icon.webp-8148b684c153cb766c7fe6c30e964a46.stex" ]
 
 [params]
 

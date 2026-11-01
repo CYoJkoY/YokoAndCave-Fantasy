@@ -13,12 +13,10 @@ func _ready():
 
 func respawn() -> void:
     .respawn()
-    _boost_collision.set_deferred("disabled", false)
     entities_in_zone = [[], []]
 
 func die(args := Entity.DieArgs.new()) -> void:
     .die(args)
-    _boost_collision.set_deferred("disabled", true)
     entities_in_zone = [[], []]
 
 func _on_BoostZone_body_entered(body: Node) -> void:

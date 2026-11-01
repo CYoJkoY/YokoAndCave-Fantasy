@@ -6,9 +6,9 @@ enum SatelliteState {
     RETURN
 }
 
-const MotionStreakVisual = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/visuals/motion_streak_visual.gd")
-const FlyingBladeMotion = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/motion_math.gd")
-const FlyingBladeCombatCoordinator = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/combat_coordinator.gd")
+const MotionStreakVisual = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/visuals/motion_streak_visual.gd")
+const FlyingBladeMotion = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/motion_math.gd")
+const FlyingBladeCombatCoordinator = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/combat_coordinator.gd")
 const COMBAT_ROLE = "satellite"
 
 var owner_pet: Node = null

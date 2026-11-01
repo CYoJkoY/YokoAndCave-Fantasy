@@ -1,9 +1,9 @@
 extends Node2D
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const STAFF_TEXTURE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/harp_projectile/harp_staff.webp")
-const FLECK_TEXTURE = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/harp_projectile/harp_flecks.webp")
+const STAFF_TEXTURE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/harp_projectile/harp_staff.webp")
+const FLECK_TEXTURE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/harp_projectile/harp_flecks.webp")
 const TRAIL_LIFETIME: float = 0.55
 const MAX_SAMPLES: int = 20
 const GHOST_COUNT: int = 5

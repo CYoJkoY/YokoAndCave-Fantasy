@@ -1,8 +1,8 @@
 extends Boss
 
-const FANTASY_VISUAL_PARTS_SYNC = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/visual_parts_sync.gd")
+const FANTASY_VISUAL_PARTS_SYNC = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/visual_parts_sync.gd")
 
-const PARTICLES = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/elder_shadow/elder_shadow_particles.tscn")
+const PARTICLES = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/elder_shadow/elder_shadow_particles.tscn")
 
 export(PackedScene) var clocks_scene = null
 export(Resource) var heal_sound

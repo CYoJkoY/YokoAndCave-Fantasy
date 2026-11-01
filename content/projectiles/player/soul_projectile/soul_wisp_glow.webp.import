@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/soul_wisp_glow.webp-158fa19404e08542c36761962fe3af81.stex"
+path="res://.import/soul_wisp_glow.webp-00ace5ed33402a469de578f98bdc736b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/soul_projectile/soul_wisp_glow.webp"
-dest_files=[ "res://.import/soul_wisp_glow.webp-158fa19404e08542c36761962fe3af81.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/soul_projectile/soul_wisp_glow.webp"
+dest_files=[ "res://.import/soul_wisp_glow.webp-00ace5ed33402a469de578f98bdc736b.stex" ]
 
 [params]
 

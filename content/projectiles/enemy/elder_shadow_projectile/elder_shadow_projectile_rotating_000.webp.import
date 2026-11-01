@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/elder_shadow_projectile_rotating_000.webp-00205e1d817dd7161999f80da024429d.stex"
+path="res://.import/elder_shadow_projectile_rotating_000.webp-de94b2e9cd97c61bbb780cd2e6e4ea00.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/elder_shadow_projectile/elder_shadow_projectile_rotating_000.webp"
-dest_files=[ "res://.import/elder_shadow_projectile_rotating_000.webp-00205e1d817dd7161999f80da024429d.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/enemy/elder_shadow_projectile/elder_shadow_projectile_rotating_000.webp"
+dest_files=[ "res://.import/elder_shadow_projectile_rotating_000.webp-de94b2e9cd97c61bbb780cd2e6e4ea00.stex" ]
 
 [params]
 

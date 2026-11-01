@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/visual_effects/holy_light_hit/holy_light_hit.gd" type="Script" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/visual_effects/holy_light_hit/holy_light.webp" type="Texture" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/visual_effects/holy_light_hit/holy_light_hit_shader.tres" type="Material" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/visual_effects/holy_light_hit/holy_light_hit.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/visual_effects/holy_light_hit/holy_light.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/visual_effects/holy_light_hit/holy_light_hit_shader.tres" type="Material" id=3]
 
 [node name="HolyLightHitEffect" type="Node2D"]
 visible = false

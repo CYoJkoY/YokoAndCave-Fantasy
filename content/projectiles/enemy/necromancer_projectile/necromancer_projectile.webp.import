@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/necromancer_projectile.webp-d8da6a19cf007d897ed879522483d28d.stex"
+path="res://.import/necromancer_projectile.webp-e83fbb5f39d6d8ac55b587a81b0401d9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/necromancer_projectile/necromancer_projectile.webp"
-dest_files=[ "res://.import/necromancer_projectile.webp-d8da6a19cf007d897ed879522483d28d.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/enemy/necromancer_projectile/necromancer_projectile.webp"
+dest_files=[ "res://.import/necromancer_projectile.webp-e83fbb5f39d6d8ac55b587a81b0401d9.stex" ]
 
 [params]
 

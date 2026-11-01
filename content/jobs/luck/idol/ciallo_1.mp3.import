@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/ciallo_1.mp3-1e3e9c6f8ea1a8be88a446be361973c7.mp3str"
+path="res://.import/ciallo_1.mp3-a4e56f322b74885c936cfa255c6ecf82.mp3str"
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/luck/idol/ciallo_1.mp3"
-dest_files=[ "res://.import/ciallo_1.mp3-1e3e9c6f8ea1a8be88a446be361973c7.mp3str" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/luck/idol/ciallo_1.mp3"
+dest_files=[ "res://.import/ciallo_1.mp3-a4e56f322b74885c936cfa255c6ecf82.mp3str" ]
 
 [params]
 

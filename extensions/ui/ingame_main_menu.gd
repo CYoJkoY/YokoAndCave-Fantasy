@@ -1,7 +1,7 @@
 extends "res://ui/menus/ingame/ingame_main_menu.gd"
 
 # ui_job
-const BUTTON_SHOW_JOB = preload("res://mods-unpacked/Yoko-Fantasy/extensions/jobs/button_show_job_scene.tscn")
+const BUTTON_SHOW_JOB = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/jobs/button_show_job_scene.tscn")
 
 onready var h_container: HBoxContainer = _items_container.get_node("HBoxContainer")
 onready var sort_inventory_but: SortInventoryButton = h_container.get_node("Sort_Inventory_button")

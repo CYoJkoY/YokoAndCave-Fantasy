@@ -1,8 +1,8 @@
 extends Node2D
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const Palette = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/bloodstained_banner/vfx/blood_palette.gd")
+const Palette = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/bloodstained_banner/vfx/blood_palette.gd")
 const DURATION: float = 0.86
 
 onready var _ground_layer: Node2D = $GroundLayer

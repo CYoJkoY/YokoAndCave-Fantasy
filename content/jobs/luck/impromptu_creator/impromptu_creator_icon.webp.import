@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/impromptu_creator_icon.webp-a5a49249b2e8c38315d1bcf25fea1aba.stex"
+path="res://.import/impromptu_creator_icon.webp-95381e6efc9658fa3712ab5e3f252bc2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/luck/impromptu_creator/impromptu_creator_icon.webp"
-dest_files=[ "res://.import/impromptu_creator_icon.webp-a5a49249b2e8c38315d1bcf25fea1aba.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/luck/impromptu_creator/impromptu_creator_icon.webp"
+dest_files=[ "res://.import/impromptu_creator_icon.webp-95381e6efc9658fa3712ab5e3f252bc2.stex" ]
 
 [params]
 

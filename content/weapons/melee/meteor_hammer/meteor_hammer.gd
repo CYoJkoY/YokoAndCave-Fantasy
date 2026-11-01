@@ -1,16 +1,14 @@
 extends "res://weapons/melee/melee_weapon.gd"
 
-const CHAIN_TEXTURE: Texture = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/meteor_hammer/meteor_hammer_chain_link.webp")
+const CHAIN_TEXTURE: Texture = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/meteor_hammer/meteor_hammer_chain_link.webp")
 const CHAIN_CURVE_STEPS: int = 12
 const MAX_CHAIN_LINKS: int = 64
 const LINK_PITCH: float = 17.0
 const HANDLE_SOCKET: Vector2 = Vector2(-14, -14)
 const HEAD_SOCKET: Vector2 = Vector2(-13, 14)
-const HEAD_RADIUS: float = 34.0
 
 onready var head: Sprite = $Sprite/Head
 onready var _swing_trail: Node2D = $SwingTrail
-onready var _sweep_shape: CapsuleShape2D = $Sprite/Hitbox/Collision.shape
 
 var head_position: Vector2
 var _head_velocity: Vector2 = Vector2.ZERO
@@ -33,8 +31,6 @@ func _ready() -> void:
         if effect.custom_key == "meteor_hammer_kill_cooldown":
             _kill_cooldown_effect = effect
             break
-    _hitbox.active = false
-    _sweep_shape.radius = HEAD_RADIUS
     head.set_as_toplevel(true)
 
 
@@ -124,14 +120,13 @@ func _physics_process(delta: float) -> void:
             _head_velocity = _head_velocity.slide(idle_direction)
     var tension: float = _shooting_behavior.get_chain_tension()
     _update_head_transform(delta, tension)
-    _update_sweep(previous_head)
     var chain_changed: bool = _update_chain(delta, tension)
     _last_anchor = get_chain_anchor()
     _last_owner_position = global_position
     _impact_time = max(0.0, _impact_time - delta)
-    var flash: float = _impact_time / 0.10 if ProgressData.settings.visual_effects else 0.0
+    var flash: float = _impact_time / 0.10
     head.self_modulate = Color(1.0 + flash * 0.3, 1.0 + flash * 0.25, 1.0 + flash * 0.15)
-    var trail_opacity: float = ProgressData.settings.explosion_opacity if ProgressData.settings.visual_effects else 0.0
+    var trail_opacity: float = ProgressData.settings.explosion_opacity
     _swing_trail.advance(head, _hitbox.active and _shooting_behavior.is_damage_phase(), delta, trail_opacity)
     if chain_changed or global_transform != _chain_draw_transform:
         update()
@@ -153,17 +148,7 @@ func _update_head_transform(delta: float = 0.0, tension: float = 0.0) -> void:
             _head_angular_velocity *= damping
             head.global_rotation += _head_angular_velocity * step
     muzzle.global_position = head_position
-
-
-func _update_sweep(previous_head: Vector2) -> void:
-    if not _hitbox.active or not _shooting_behavior.is_damage_phase():
-        return
-    var motion: Vector2 = head_position - previous_head
-    if motion.length_squared() > 0.001:
-        _hitbox.set_knockback(motion.normalized(), current_stats.knockback, current_stats.knockback_piercing)
-    _hitbox.global_position = (head_position + previous_head) * 0.5
-    _hitbox.global_rotation = motion.angle() + PI / 2.0
-    _sweep_shape.height = motion.length()
+    _hitbox.global_position = head_position
 
 
 func _reset_chain() -> void:

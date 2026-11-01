@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/land_lord_icon.webp-74caed25c85794e8afc8b1fdd6b69e96.stex"
+path="res://.import/land_lord_icon.webp-5a5bcf4767d0a609d825b1486c3c570d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/universal/land_lord/land_lord_icon.webp"
-dest_files=[ "res://.import/land_lord_icon.webp-74caed25c85794e8afc8b1fdd6b69e96.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/land_lord/land_lord_icon.webp"
+dest_files=[ "res://.import/land_lord_icon.webp-5a5bcf4767d0a609d825b1486c3c570d.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/background_tree_c.webp-0d462739889139b9fc8ec1a35f44adbd.stex"
+path="res://.import/background_tree_c.webp-f488bd4002f68506a17d45f7230a839f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/title_screen/forest_ui/background_tree_c.webp"
-dest_files=[ "res://.import/background_tree_c.webp-0d462739889139b9fc8ec1a35f44adbd.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/title_screen/forest_ui/background_tree_c.webp"
+dest_files=[ "res://.import/background_tree_c.webp-f488bd4002f68506a17d45f7230a839f.stex" ]
 
 [params]
 

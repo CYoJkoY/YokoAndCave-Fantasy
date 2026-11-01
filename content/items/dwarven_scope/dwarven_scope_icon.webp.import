@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dwarven_scope_icon.webp-cc0fd7af7bd33a660fe415af2b963bb1.stex"
+path="res://.import/dwarven_scope_icon.webp-b10eed1c34594d3a111ac29dfa9bb2a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/dwarven_scope/dwarven_scope_icon.webp"
-dest_files=[ "res://.import/dwarven_scope_icon.webp-cc0fd7af7bd33a660fe415af2b963bb1.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/dwarven_scope/dwarven_scope_icon.webp"
+dest_files=[ "res://.import/dwarven_scope_icon.webp-b10eed1c34594d3a111ac29dfa9bb2a0.stex" ]
 
 [params]
 

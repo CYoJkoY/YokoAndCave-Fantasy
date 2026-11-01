@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/little_elf_icon.webp-a7da19063e835fc1445ec9b63780ba43.stex"
+path="res://.import/little_elf_icon.webp-a0c4b06c0cc67a2b4dc1623b6b8c6342.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/little_elf/little_elf_icon.webp"
-dest_files=[ "res://.import/little_elf_icon.webp-a7da19063e835fc1445ec9b63780ba43.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/little_elf/little_elf_icon.webp"
+dest_files=[ "res://.import/little_elf_icon.webp-a0c4b06c0cc67a2b4dc1623b6b8c6342.stex" ]
 
 [params]
 

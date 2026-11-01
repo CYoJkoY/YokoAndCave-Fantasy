@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/shockwave_ring.webp-f458916f77bcc01ac05c24d7a358fdcf.stex"
+path="res://.import/shockwave_ring.webp-1a34a1d3389e2201228cddcb17b74ae4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/finger_snap/vfx/textures/shockwave_ring.webp"
-dest_files=[ "res://.import/shockwave_ring.webp-f458916f77bcc01ac05c24d7a358fdcf.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/finger_snap/vfx/textures/shockwave_ring.webp"
+dest_files=[ "res://.import/shockwave_ring.webp-1a34a1d3389e2201228cddcb17b74ae4.stex" ]
 
 [params]
 

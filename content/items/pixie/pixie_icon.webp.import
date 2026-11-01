@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pixie_icon.webp-0f27f08650f3422be745e1d9be0d3b45.stex"
+path="res://.import/pixie_icon.webp-512d290ad80ca9ccc99271cedd923999.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/pixie/pixie_icon.webp"
-dest_files=[ "res://.import/pixie_icon.webp-0f27f08650f3422be745e1d9be0d3b45.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/pixie/pixie_icon.webp"
+dest_files=[ "res://.import/pixie_icon.webp-512d290ad80ca9ccc99271cedd923999.stex" ]
 
 [params]
 

@@ -1,10 +1,10 @@
 extends Node
 
 const NOTES = [
-    preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/harp/harp_pluck.wav"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/harp/harp_pluck_e.wav"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/harp/harp_pluck_g.wav"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/harp/harp_pluck_a.wav")
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/harp/harp_pluck.wav"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/harp/harp_pluck_e.wav"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/harp/harp_pluck_g.wav"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/harp/harp_pluck_a.wav")
 ]
 const PHRASES = [[0, 2, 1, 3, 2, 1], [1, 2, 3, 2, 0, 2], [0, 1, 2, 1, 3, 2]]
 const SPACING = [0.17, 0.23, 0.18, 0.28, 0.19, 0.38]

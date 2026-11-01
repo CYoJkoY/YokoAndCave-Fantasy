@@ -1,6 +1,6 @@
 extends "res://zones/wave_manager.gd"
 
-const EXTRA_ENEMIES_GROUP_DATA = preload("res://mods-unpacked/Yoko-Fantasy/extensions/effects/extra_enemies_each_wave_by_stat/extra_enemies_each_wave_by_stat_group.tres")
+const EXTRA_ENEMIES_GROUP_DATA = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/extra_enemies_each_wave_by_stat/extra_enemies_each_wave_by_stat_group.tres")
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func init(p_wave_timer: Timer, zone_data: ZoneData, wave_data: Resource) -> void:

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/forbidden_spell_icon.webp-e24cbe787d913f94277020c2a85ffaf5.stex"
+path="res://.import/forbidden_spell_icon.webp-797f63a8768335367781e5b832680e25.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/forbidden_spell/forbidden_spell_icon.webp"
-dest_files=[ "res://.import/forbidden_spell_icon.webp-e24cbe787d913f94277020c2a85ffaf5.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/forbidden_spell/forbidden_spell_icon.webp"
+dest_files=[ "res://.import/forbidden_spell_icon.webp-797f63a8768335367781e5b832680e25.stex" ]
 
 [params]
 

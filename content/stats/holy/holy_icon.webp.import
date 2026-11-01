@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/holy_icon.webp-a565f9210709645b99100c3912d8f13f.stex"
+path="res://.import/holy_icon.webp-9827c8770207d394950f705bede3bca7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/stats/holy/holy_icon.webp"
-dest_files=[ "res://.import/holy_icon.webp-a565f9210709645b99100c3912d8f13f.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/stats/holy/holy_icon.webp"
+dest_files=[ "res://.import/holy_icon.webp-9827c8770207d394950f705bede3bca7.stex" ]
 
 [params]
 

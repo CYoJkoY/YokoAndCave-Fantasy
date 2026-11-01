@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/skeleton_swordsman_icon.webp-a403118b3c0c4a20f0b76a61bd00be44.stex"
+path="res://.import/skeleton_swordsman_icon.webp-ef7de3e9ae24325254dfa4b5af6261b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/skeleton_swordsman/skeleton_swordsman_icon.webp"
-dest_files=[ "res://.import/skeleton_swordsman_icon.webp-a403118b3c0c4a20f0b76a61bd00be44.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/skeleton_swordsman/skeleton_swordsman_icon.webp"
+dest_files=[ "res://.import/skeleton_swordsman_icon.webp-ef7de3e9ae24325254dfa4b5af6261b3.stex" ]
 
 [params]
 

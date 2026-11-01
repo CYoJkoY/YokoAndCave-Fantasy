@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/red_eyes.webp-a6c202e4bb581fabddf6f89f7b67ca9f.stex"
+path="res://.import/red_eyes.webp-aaee2dd32e07f7477c022f5ee492e317.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/great_demon_lord/red_eyes.webp"
-dest_files=[ "res://.import/red_eyes.webp-a6c202e4bb581fabddf6f89f7b67ca9f.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/great_demon_lord/red_eyes.webp"
+dest_files=[ "res://.import/red_eyes.webp-aaee2dd32e07f7477c022f5ee492e317.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fire_mage_icon.webp-affda731dfd735ca716d90e38ca4f013.stex"
+path="res://.import/fire_mage_icon.webp-4ef0723523116757f3cbe70656cd4d24.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/elemental/fire_mage/fire_mage_icon.webp"
-dest_files=[ "res://.import/fire_mage_icon.webp-affda731dfd735ca716d90e38ca4f013.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/elemental/fire_mage/fire_mage_icon.webp"
+dest_files=[ "res://.import/fire_mage_icon.webp-4ef0723523116757f3cbe70656cd4d24.stex" ]
 
 [params]
 

@@ -1,11 +1,11 @@
 [gd_resource type="Resource" load_steps=7 format=2]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/kunai/2/kunai_2_stats.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/kunai/2/kunai_2_stats.tres" type="Resource" id=1]
 [ext_resource path="res://items/global/weapon_data.gd" type="Script" id=2]
 [ext_resource path="res://items/sets/precise/precise_set_data.tres" type="Resource" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/kunai/kunai.tscn" type="PackedScene" id=4]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/kunai/3/kunai_3_data.tres" type="Resource" id=5]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/kunai/kunai_icon.webp" type="Texture" id=8]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/kunai/kunai.tscn" type="PackedScene" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/kunai/3/kunai_3_data.tres" type="Resource" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/kunai/kunai_icon.webp" type="Texture" id=8]
 
 [resource]
 script = ExtResource( 2 )

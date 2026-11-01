@@ -7,7 +7,7 @@
 [ext_resource path="res://weapons/ranged/crossbow/bow_crossbow_arrow_shoot_type1_01.wav" type="AudioStream" id=5]
 [ext_resource path="res://weapons/ranged/crossbow/bow_crossbow_arrow_shoot_type1_05.wav" type="AudioStream" id=6]
 [ext_resource path="res://weapons/ranged/crossbow/bow_crossbow_arrow_shoot_type1_02.wav" type="AudioStream" id=7]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/sleeve_arrow/sleeve_arrow_empty.webp" type="Texture" id=8]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/sleeve_arrow/sleeve_arrow_empty.webp" type="Texture" id=8]
 
 [resource]
 script = ExtResource( 2 )

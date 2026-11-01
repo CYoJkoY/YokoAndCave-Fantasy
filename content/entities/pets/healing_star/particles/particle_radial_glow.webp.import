@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/particle_radial_glow.webp-69f3980c92563db7c0d73062a6ec8211.stex"
+path="res://.import/particle_radial_glow.webp-1c650d5b3bf6dce3d36168195c8195b6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/healing_star/particles/particle_radial_glow.webp"
-dest_files=[ "res://.import/particle_radial_glow.webp-69f3980c92563db7c0d73062a6ec8211.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/particles/particle_radial_glow.webp"
+dest_files=[ "res://.import/particle_radial_glow.webp-1c650d5b3bf6dce3d36168195c8195b6.stex" ]
 
 [params]
 

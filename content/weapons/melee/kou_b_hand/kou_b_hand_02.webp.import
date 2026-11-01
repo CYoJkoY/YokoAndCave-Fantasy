@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kou_b_hand_02.webp-bf0ed00a380764d614790a10087fb27d.stex"
+path="res://.import/kou_b_hand_02.webp-f7bbdf9a8f998a335bc97c3cbfc40c65.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_02.webp"
-dest_files=[ "res://.import/kou_b_hand_02.webp-bf0ed00a380764d614790a10087fb27d.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_02.webp"
+dest_files=[ "res://.import/kou_b_hand_02.webp-f7bbdf9a8f998a335bc97c3cbfc40c65.stex" ]
 
 [params]
 

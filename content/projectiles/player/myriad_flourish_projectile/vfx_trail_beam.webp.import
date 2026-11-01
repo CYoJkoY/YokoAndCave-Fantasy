@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vfx_trail_beam.webp-7bb4099b387999e7c0336fad49c716f0.stex"
+path="res://.import/vfx_trail_beam.webp-351579b681c98556355213cd0d1e8b6b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_flourish_projectile/vfx_trail_beam.webp"
-dest_files=[ "res://.import/vfx_trail_beam.webp-7bb4099b387999e7c0336fad49c716f0.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_flourish_projectile/vfx_trail_beam.webp"
+dest_files=[ "res://.import/vfx_trail_beam.webp-351579b681c98556355213cd0d1e8b6b.stex" ]
 
 [params]
 

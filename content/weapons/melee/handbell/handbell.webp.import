@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/handbell.webp-47717091212a5aa4dfd3837987c12104.stex"
+path="res://.import/handbell.webp-e4af49bd6328f2d27afa50ae017b56b4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/handbell/handbell.webp"
-dest_files=[ "res://.import/handbell.webp-47717091212a5aa4dfd3837987c12104.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/handbell/handbell.webp"
+dest_files=[ "res://.import/handbell.webp-e4af49bd6328f2d27afa50ae017b56b4.stex" ]
 
 [params]
 

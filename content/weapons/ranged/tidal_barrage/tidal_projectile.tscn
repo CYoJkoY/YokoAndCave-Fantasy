@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://projectiles/bullet/bullet_projectile.tscn" type="PackedScene" id=1]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+render_mode unshaded;
+
+void fragment() {
+    vec4 bullet = texture(TEXTURE, UV);
+    COLOR = vec4(bullet.b, bullet.r, bullet.g, bullet.a) * COLOR;
+}
+"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[node name="TidalProjectile" instance=ExtResource( 1 )]
+clear_material_when_pooled = false
+
+[node name="Sprite" parent="." index="0"]
+material = SubResource( 2 )
+

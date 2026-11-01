@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/world_tree_seed_icon.webp-2b56489ec01393f3701b123f96beccbf.stex"
+path="res://.import/world_tree_seed_icon.webp-7ab921f79d75258e995a11ddc0893c8e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/world_tree_seed/world_tree_seed_icon.webp"
-dest_files=[ "res://.import/world_tree_seed_icon.webp-2b56489ec01393f3701b123f96beccbf.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/world_tree_seed/world_tree_seed_icon.webp"
+dest_files=[ "res://.import/world_tree_seed_icon.webp-7ab921f79d75258e995a11ddc0893c8e.stex" ]
 
 [params]
 

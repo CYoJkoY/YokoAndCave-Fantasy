@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/snake.webp-943253aa83ca9d9e27a6b91d7df4f761.stex"
+path="res://.import/snake.webp-ba721e0be688073e90286c0e817a5940.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/snake/snake.webp"
-dest_files=[ "res://.import/snake.webp-943253aa83ca9d9e27a6b91d7df4f761.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/snake/snake.webp"
+dest_files=[ "res://.import/snake.webp-ba721e0be688073e90286c0e817a5940.stex" ]
 
 [params]
 

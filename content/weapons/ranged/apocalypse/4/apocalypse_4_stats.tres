@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://weapons/weapon_stats/ranged_weapon_stats.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+cooldown = 34
+damage = 1
+accuracy = 1.0
+crit_chance = 0.03
+crit_damage = 1.5
+min_range = 0
+max_range = 300
+knockback = 0
+scaling_stats = [ [ "stat_curse", 0.01 ] ]
+shooting_sounds = [  ]
+recoil_duration = 0.1
+recoil = 0
+nb_projectiles = 1
+piercing = 0
+bounce = 0

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/annihilation_ray/annihilation_ray_effect.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+text_key = "EFFECT_FANTASY_ANNIHILATION_RAY"
+value = 1
+effect_sign = 3

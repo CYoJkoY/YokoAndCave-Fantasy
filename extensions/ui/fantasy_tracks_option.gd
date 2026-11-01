@@ -1,6 +1,6 @@
 extends Node
 
-const FANTASY_TRACKS_ID: String = "Yoko-Fantasy"
+const FANTASY_TRACKS_ID: String = "YokoAndCave-Fantasy"
 
 var fantasy_tracks_button: CheckButton
 

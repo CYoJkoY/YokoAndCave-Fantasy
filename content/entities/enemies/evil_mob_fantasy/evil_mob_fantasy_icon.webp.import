@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/evil_mob_fantasy_icon.webp-bedd31f18805449fd8664ebbf78dd162.stex"
+path="res://.import/evil_mob_fantasy_icon.webp-abb33fe828f9c973415104c7aedaadcf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/evil_mob_fantasy/evil_mob_fantasy_icon.webp"
-dest_files=[ "res://.import/evil_mob_fantasy_icon.webp-bedd31f18805449fd8664ebbf78dd162.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/evil_mob_fantasy/evil_mob_fantasy_icon.webp"
+dest_files=[ "res://.import/evil_mob_fantasy_icon.webp-abb33fe828f9c973415104c7aedaadcf.stex" ]
 
 [params]
 

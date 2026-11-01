@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/skeleton_archer_arrow.webp-27a38e81a312281ec8795333b32a5980.stex"
+path="res://.import/skeleton_archer_arrow.webp-6b3b95f2803a80eec5823525a1548291.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/skeleton_archer/skeleton_archer_arrow.webp"
-dest_files=[ "res://.import/skeleton_archer_arrow.webp-27a38e81a312281ec8795333b32a5980.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/skeleton_archer/skeleton_archer_arrow.webp"
+dest_files=[ "res://.import/skeleton_archer_arrow.webp-6b3b95f2803a80eec5823525a1548291.stex" ]
 
 [params]
 

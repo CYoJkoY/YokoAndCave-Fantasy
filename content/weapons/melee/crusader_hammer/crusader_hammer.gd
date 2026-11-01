@@ -1,6 +1,6 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/shared/sweep_weapon.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/shared/sweep_weapon.gd"
 
-const EXPLOSION_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/crusader_hammer/vfx/crusader_hammer_explosion.tscn")
+const EXPLOSION_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/crusader_hammer/vfx/crusader_hammer_explosion.tscn")
 
 onready var _rune: Sprite = $Sprite/Rune
 
@@ -49,17 +49,8 @@ func on_weapon_hit_something(thing_hit: Node, damage_dealt: int, hitbox: Hitbox)
     .on_weapon_hit_something(thing_hit, damage_dealt, hitbox)
     if hitbox != _hitbox or not Utils.get_chance_success(_hammer_effect.value / 100.0):
         return
-    var args = WeaponServiceExplodeArgs.new()
+    var args = WeaponService.fantasy_explosion_args_from_hitbox(_hitbox, player_index)
     args.pos = thing_hit.global_position
     args.damage = WeaponService.get_explosion_damage(_blast_stats, player_index)
     args.scaling_stats = _blast_stats.scaling_stats
-    args.accuracy = _hitbox.accuracy
-    args.crit_chance = _hitbox.crit_chance
-    args.crit_damage = _hitbox.crit_damage
-    args.burning_data = _hitbox.burning_data
-    args.from_player_index = player_index
-    args.is_healing = _hitbox.is_healing
-    var explosion = WeaponService.explode(_blast_effect, args)
-    explosion._hitbox.player_attack_id = _hitbox.player_attack_id
-    explosion.connect("hit_something", self, "on_weapon_hit_something", [explosion._hitbox])
-    explosion.connect("killed_something", self, "on_killed_something", [explosion._hitbox])
+    WeaponService.fantasy_spawn_weapon_explosion(_blast_effect, args, self, _hitbox.player_attack_id)

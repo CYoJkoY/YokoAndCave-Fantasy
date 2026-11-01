@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/harp_strings_mask.webp-87506defe3a909b77b8fcde88ee40e53.stex"
+path="res://.import/harp_strings_mask.webp-8f4a310795f0aa89bc722383fac85c93.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/harp/harp_strings_mask.webp"
-dest_files=[ "res://.import/harp_strings_mask.webp-87506defe3a909b77b8fcde88ee40e53.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/harp/harp_strings_mask.webp"
+dest_files=[ "res://.import/harp_strings_mask.webp-8f4a310795f0aa89bc722383fac85c93.stex" ]
 
 [params]
 

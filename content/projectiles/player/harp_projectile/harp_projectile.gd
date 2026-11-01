@@ -1,12 +1,12 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/micro_homing_player_projectile.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/micro_homing_player_projectile.gd"
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
 const NOTES = [
-    preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/harp_projectile/harp_note_eighth.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/harp_projectile/harp_note_beamed.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/harp_projectile/harp_note_treble_clef.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/harp_projectile/harp_note_bass_clef.webp")
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/harp_projectile/harp_note_eighth.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/harp_projectile/harp_note_beamed.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/harp_projectile/harp_note_treble_clef.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/harp_projectile/harp_note_bass_clef.webp")
 ]
 const COLORS = [Color(0.46, 0.86, 1.0), Color(1.0, 0.67, 0.3), Color(0.83, 0.48, 1.0), Color(1.0, 0.86, 0.48)]
 const LAUNCH_ANGLES = [-0.12, 0.55, -0.72, 0.18]

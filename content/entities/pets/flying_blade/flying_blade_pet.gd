@@ -13,11 +13,11 @@ const Z_MOTION_TRAIL = 16
 const Z_SLASH_BODY = 22
 const Z_SLASH_CORE = 23
 const Z_HIT_FLASH = 24
-const SlashRibbonVisual = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/visuals/slash_ribbon_visual.gd")
-const MotionStreakVisual = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/visuals/motion_streak_visual.gd")
-const GuardBladeSatellite = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/guard_blade_satellite.gd")
-const FlyingBladeCombatCoordinator = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/combat_coordinator.gd")
-const FlyingBladeMotion = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/motion_math.gd")
+const SlashRibbonVisual = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/visuals/slash_ribbon_visual.gd")
+const MotionStreakVisual = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/visuals/motion_streak_visual.gd")
+const GuardBladeSatellite = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/guard_blade_satellite.gd")
+const FlyingBladeCombatCoordinator = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/combat_coordinator.gd")
+const FlyingBladeMotion = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/motion_math.gd")
 
 export(String) var damage_tracking_id = ""
 export(Resource) var tuning = null

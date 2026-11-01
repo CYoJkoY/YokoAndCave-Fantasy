@@ -1,9 +1,9 @@
-extends "res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/micro_homing_player_projectile.gd"
+extends "res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/micro_homing_player_projectile.gd"
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
-const HIT_RIPPLE_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/handbell_orb_projectile/handbell_hit_ripple.tscn")
-const FLIGHT_PULSE_SCENE: PackedScene = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/handbell_orb_projectile/handbell_flight_pulse.tscn")
+const HIT_RIPPLE_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/handbell_orb_projectile/handbell_hit_ripple.tscn")
+const FLIGHT_PULSE_SCENE: PackedScene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/handbell_orb_projectile/handbell_flight_pulse.tscn")
 onready var _hit_ripple_pool_id: int = HIT_RIPPLE_SCENE.get_instance_id()
 onready var _flight_pulse_pool_id: int = FLIGHT_PULSE_SCENE.get_instance_id()
 
@@ -54,11 +54,7 @@ func _spawn_flight_pulse() -> void:
     var main = Utils.get_scene_node()
     if main == null or not is_instance_valid(main):
         return
-    var pulse = main.get_node_from_pool(_flight_pulse_pool_id, main._effects)
-    if pulse == null:
-        pulse = FLIGHT_PULSE_SCENE.instance()
-        main.add_effect(pulse)
-        pulse.set_meta("pool_id", _flight_pulse_pool_id)
+    var pulse = FANTASY_PROJECTILE_VISUAL_UTILS.get_pooled_effect(FLIGHT_PULSE_SCENE, main)
     pulse.play(global_position, main, _flight_pulse_pool_id)
 
 
@@ -71,9 +67,5 @@ func _spawn_hit_vfx(at_pos: Vector2) -> void:
     var main = Utils.get_scene_node()
     if main == null or not is_instance_valid(main):
         return
-    var ripple = main.get_node_from_pool(_hit_ripple_pool_id, main._effects)
-    if ripple == null:
-        ripple = HIT_RIPPLE_SCENE.instance()
-        main.add_effect(ripple)
-        ripple.set_meta("pool_id", _hit_ripple_pool_id)
+    var ripple = FANTASY_PROJECTILE_VISUAL_UTILS.get_pooled_effect(HIT_RIPPLE_SCENE, main)
     ripple.play(at_pos, main, _hit_ripple_pool_id)

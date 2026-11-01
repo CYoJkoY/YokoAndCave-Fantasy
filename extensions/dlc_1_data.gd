@@ -1,6 +1,6 @@
 extends "res://dlcs/dlc_1/dlc_1_data.gd"
 
-const HEALING_STAR_SCENE_PATH: String = "res://mods-unpacked/Yoko-Fantasy/content/entities/pets/healing_star/scene/healing_star.tscn"
+const HEALING_STAR_SCENE_PATH: String = "res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/scene/healing_star.tscn"
 
 func curse_item(item_data: ItemParentData, player_index: int, turn_randomization_off: bool = false, min_modifier: float = 0.0) -> ItemParentData:
     var already_cursed: bool = item_data.is_cursed
@@ -37,6 +37,8 @@ func _fantasy_curse_item(cursed_item_data: ItemParentData, turn_randomization_of
                 new_effect.weapon_stats = _boost_weapon_stats_damage(new_effect.weapon_stats, effect_modifier)
             ["fantasy_damage_clamp", _, _]:
                 new_effect.value2 = Utils.ncl_curse_effect_value(new_effect.value2, effect_modifier, {"is_negative": true, "step": 1})
+            ["fantasy_longinus", _, _]:
+                new_effect.holy_scaling *= 1.0 + effect_modifier
             ["fantasy_erosion", _, _]:
                 new_effect.scaling_stats = _boost_scaling_sats(new_effect.scaling_stats.duplicate(), effect_modifier)
                 new_effect.chance = Utils.ncl_curse_effect_value(new_effect.chance, effect_modifier)

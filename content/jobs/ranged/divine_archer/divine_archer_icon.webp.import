@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/divine_archer_icon.webp-c966c36cd19356005485211f56f0a131.stex"
+path="res://.import/divine_archer_icon.webp-6e33ca218d581f763d5dd04dadfe37ce.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/ranged/divine_archer/divine_archer_icon.webp"
-dest_files=[ "res://.import/divine_archer_icon.webp-c966c36cd19356005485211f56f0a131.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/ranged/divine_archer/divine_archer_icon.webp"
+dest_files=[ "res://.import/divine_archer_icon.webp-6e33ca218d581f763d5dd04dadfe37ce.stex" ]
 
 [params]
 

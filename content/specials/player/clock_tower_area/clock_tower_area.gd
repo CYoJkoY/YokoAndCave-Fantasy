@@ -1,8 +1,8 @@
 extends Area2D
 
-const FANTASY_ENEMY_SPEED_MODIFIER_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/enemy_speed_modifier_service.gd")
+const FANTASY_ENEMY_SPEED_MODIFIER_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/enemy_speed_modifier_service.gd")
 
-const EFFECT_REFRESH_INTERVAL: float = 0.2
+const EFFECT_REFRESH_INTERVAL: float = 0.5
 
 export (float) var base_radius: float
 export (float) var source_radius: float = 236.0
@@ -110,10 +110,18 @@ func set_area_radius(radius: float) -> void:
     var visual_scale: float = safe_radius / source_radius
     $Visual.scale = Vector2.ONE * visual_scale
     collision.shape.radius = safe_radius
+    _flatten_grass()
+
+
+func _flatten_grass() -> void:
+    var radius_squared: float = base_radius * base_radius
+    for grass in get_tree().get_nodes_in_group("fantasy_standing_grass"):
+        if grass.global_position.distance_squared_to(global_position) <= radius_squared:
+            grass.flatten()
 
 
 func _refresh_area_radius() -> void:
-    var new_radius: float = Utils.fa_get_clock_tower_area_radius(area_base_range, area_range_rate, player_index)
+    var new_radius: float = max(Utils.fa_get_clock_tower_area_radius(area_base_range, area_range_rate, player_index), 1.0)
     if abs(new_radius - base_radius) < 0.1:
         return
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hammer_radiance.webp-e7fa5106d2ece2c6827519b7e98b1085.stex"
+path="res://.import/hammer_radiance.webp-4c7898c3ddcc5e714cef9afb8ae5e1d5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/crusader_hammer/vfx/textures/hammer_radiance.webp"
-dest_files=[ "res://.import/hammer_radiance.webp-e7fa5106d2ece2c6827519b7e98b1085.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/crusader_hammer/vfx/textures/hammer_radiance.webp"
+dest_files=[ "res://.import/hammer_radiance.webp-4c7898c3ddcc5e714cef9afb8ae5e1d5.stex" ]
 
 [params]
 

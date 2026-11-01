@@ -1,0 +1,33 @@
+[gd_resource type="Resource" load_steps=10 format=2]
+
+[ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/apocalypse_icon.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/apocalypse.tscn" type="PackedScene" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/4/apocalypse_4_stats.tres" type="Resource" id=4]
+[ext_resource path="res://items/sets/legendary/legendary_set_data.tres" type="Resource" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/sets/fallen/fallen_set_data.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/apocalypse_erosion.tres" type="Resource" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/apocalypse_speed.tres" type="Resource" id=8]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/apocalypse_attack.tres" type="Resource" id=9]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "weapon_fantasy_apocalypse_4"
+unlocked_by_default = true
+can_be_looted = true
+icon = ExtResource( 2 )
+name = "WEAPON_FANTASY_APOCALYPSE"
+tier = 3
+value = 367
+effects = [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ) ]
+tracking_text = ""
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+weapon_id = "weapon_fantasy_apocalypse"
+type = 1
+sets = [ ExtResource( 5 ), ExtResource( 6 ) ]
+scene = ExtResource( 3 )
+stats = ExtResource( 4 )
+add_to_chars_as_starting = [  ]

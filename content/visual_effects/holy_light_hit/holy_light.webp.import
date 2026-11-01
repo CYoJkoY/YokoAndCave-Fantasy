@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/holy_light.webp-da3057fc3a0a02f83dca75043af9a890.stex"
+path="res://.import/holy_light.webp-91b28b04b95d23df3e067fcaea5432fb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/visual_effects/holy_light_hit/holy_light.webp"
-dest_files=[ "res://.import/holy_light.webp-da3057fc3a0a02f83dca75043af9a890.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/visual_effects/holy_light_hit/holy_light.webp"
+dest_files=[ "res://.import/holy_light.webp-91b28b04b95d23df3e067fcaea5432fb.stex" ]
 
 [params]
 

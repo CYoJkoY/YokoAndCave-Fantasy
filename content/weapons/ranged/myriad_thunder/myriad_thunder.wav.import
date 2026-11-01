@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/myriad_thunder.wav-3c487e7812654f2c743b2200c029c1c5.sample"
+path="res://.import/myriad_thunder.wav-4b61211f5ec0cfdd95715aaf3277aa86.sample"
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/myriad_thunder/myriad_thunder.wav"
-dest_files=[ "res://.import/myriad_thunder.wav-3c487e7812654f2c743b2200c029c1c5.sample" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/myriad_thunder/myriad_thunder.wav"
+dest_files=[ "res://.import/myriad_thunder.wav-4b61211f5ec0cfdd95715aaf3277aa86.sample" ]
 
 [params]
 

@@ -1,6 +1,6 @@
 extends "res://ui/menus/ingame/upgrades_ui.gd"
 
-const FANTASY_UPGRADE_HOOKS = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/upgrade_hooks.gd")
+const FANTASY_UPGRADE_HOOKS = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/upgrade_hooks.gd")
 
 signal fantasy_jobs_processed
 
@@ -46,7 +46,7 @@ func _fantasy_show_next_job_options() -> bool:
 func _fantasy_on_job_selected(job_data: UpgradeData, player_index: int) -> void:
     _player_is_choosing[player_index] = false
 
-    FANTASY_UPGRADE_HOOKS.fa_handle_selected_upgrade_hooks(job_data, player_index, "fantasy_job")
+    FANTASY_UPGRADE_HOOKS.fa_handle_selected_upgrade_hooks(job_data)
     RunData.apply_item_effects(job_data, player_index)
     RunData.fa_add_job(job_data, player_index)
 

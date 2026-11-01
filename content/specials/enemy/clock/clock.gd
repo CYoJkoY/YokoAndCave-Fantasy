@@ -1,7 +1,7 @@
 extends Node2D
 
 export(bool) var with_prediction = false
-export(PackedScene) var prediction_line_scene = preload("res://mods-unpacked/Yoko-Fantasy/content/specials/enemy/prediction_line/prediction_line.tscn")
+export(PackedScene) var prediction_line_scene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/specials/enemy/prediction_line/prediction_line.tscn")
 export(Color) var prediction_line_color = Color("#3E68DA")
 export(float) var prediction_line_width = 40.0
 export(int) var prediction_line_points_num = 64

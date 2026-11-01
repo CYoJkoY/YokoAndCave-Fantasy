@@ -1,7 +1,7 @@
 extends Node
 
-const MYMODNAME_MOD_DIR: String = "Yoko-Fantasy/"
-const MYMODNAME_LOG: String = "Yoko-Fantasy"
+const MYMODNAME_MOD_DIR: String = "YokoAndCave-Fantasy/"
+const MYMODNAME_LOG: String = "YokoAndCave-Fantasy"
 
 var dir: String = ""
 var ext_dir: String = ""
@@ -28,6 +28,15 @@ func install_script_extensions() -> void:
         #          time_bonus_current_health_damage
         #          random_reload_when_picked_up_gold
         #          projectile_on_enemy_death
+
+        "ui/item_description.gd",
+        "ui/item_panel_ui.gd",
+        "ui/shop_item.gd",
+        "ui/synergy_container.gd",
+        # SYSTEMS: Unique weapons
+
+        "ui/weapon_selection.gd",
+        # SYSTEMS: Starting weapons
 
         "services/item_service.gd",
         # SYSTEMS: Job[ 2/6 ]
@@ -80,6 +89,7 @@ func install_script_extensions() -> void:
         #          xp_on_consumable
         #          lose_hp_per_second_min_hp
         #          lose_hp_per_second_stop_threshold
+        #          heal_per_second
 
         "services/weapon_service.gd",
         # STATS: Crit Damage, %Pet Attack Speed

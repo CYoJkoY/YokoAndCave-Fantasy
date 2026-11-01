@@ -1,6 +1,6 @@
 extends "res://singletons/weapon_service.gd"
 
-const FANTASY_LIGHTNING_CHAIN_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/lightning_chain_service.gd")
+const FANTASY_LIGHTNING_CHAIN_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/lightning_chain_service.gd")
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func init_base_stats(from_stats: WeaponStats, player_index: int, args: WeaponServiceInitStatsArgs = _init_stats_args_service, is_structure:=false, is_special_spawn:=false, is_pet:=false) -> WeaponStats:
@@ -68,8 +68,63 @@ func _fantasy_apply_structure_scaling_stat_effects(scaling_stats: Array, player_
     return new_scaling_stats
 
 # ══════════════════════════════════════════ Weapon Runtime Effects ══════════════════════════════════════════ #
+func fantasy_connect_hitbox_events(hitbox: Hitbox, weapon: Weapon) -> void:
+    hitbox.connect("killed_something", weapon, "on_killed_something", [hitbox])
+    hitbox.connect("critically_hit_something", weapon, "_on_weapon_critically_hit_something")
+    hitbox.connect("one_shot_something", weapon, "on_one_shot_something")
+    hitbox.connect("added_gold_on_crit", weapon, "on_added_gold_on_crit")
+
+func fantasy_explosion_args_from_hitbox(source: Hitbox, player_index: int) -> WeaponServiceExplodeArgs:
+    var args = WeaponServiceExplodeArgs.new()
+    args.damage = source.damage
+    args.scaling_stats = source.scaling_stats
+    args.accuracy = source.accuracy
+    args.crit_chance = source.crit_chance
+    args.crit_damage = source.crit_damage
+    args.burning_data = source.burning_data
+    args.from_player_index = player_index
+    args.is_healing = source.is_healing
+    args.damage_tracking_key_hash = source.damage_tracking_key_hash
+    return args
+
+func fantasy_spawn_weapon_explosion(effect: ExplodingEffect, args: WeaponServiceExplodeArgs, weapon: Weapon, attack_id: int) -> Node:
+    var explosion = explode(effect, args)
+    explosion._hitbox.player_attack_id = attack_id
+    explosion.connect("hit_something", weapon, "on_weapon_hit_something", [explosion._hitbox])
+    explosion.connect("killed_something", weapon, "on_killed_something", [explosion._hitbox])
+    return explosion
+
+func fantasy_get_next_ranged_attack_stats(weapon: Node) -> RangedWeaponStats:
+    var attack_stats: RangedWeaponStats = weapon.current_stats
+    for shot_interval in weapon._stats_every_x_shots:
+        if (weapon._nb_shots_taken + 1) % shot_interval == 0:
+            attack_stats = weapon._stats_every_x_shots[shot_interval]
+    return attack_stats
+
+func fantasy_begin_custom_ranged_attack(weapon: Node) -> RangedWeaponStats:
+    var original_stats: RangedWeaponStats = weapon.current_stats
+    weapon.current_stats = fantasy_get_next_ranged_attack_stats(weapon)
+    weapon._nb_shots_taken += 1
+    weapon._current_cooldown = weapon.get_next_cooldown()
+    if weapon.current_stats != original_stats:
+        weapon._hitbox.set_damage(weapon.current_stats.damage, Hitbox.HitboxArgs.new().set_from_weapon_stats(weapon.current_stats))
+    weapon._hitbox.player_attack_id = weapon._shooting_behavior._get_next_attack_id()
+    weapon._hitbox.ignored_objects.clear()
+    for effect in weapon.effects:
+        if effect.key_hash == Keys.reload_turrets_on_shoot_hash:
+            weapon.emit_signal("wanted_to_reset_turrets_cooldown")
+    return original_stats
+
+func fantasy_end_custom_ranged_attack(weapon: Node, original_stats: RangedWeaponStats) -> void:
+    if weapon.current_stats != original_stats:
+        weapon.current_stats = original_stats
+        weapon._hitbox.set_damage(original_stats.damage, Hitbox.HitboxArgs.new().set_from_weapon_stats(original_stats))
+    fantasy_on_shoot(weapon)
+
 func fantasy_reset_weapon_cooldown(weapon: Node) -> void:
     weapon._current_cooldown = 0
+    if weapon.has_method("fantasy_reset_attack_cooldown"):
+        weapon.fantasy_reset_attack_cooldown()
     weapon.tween_animation.remove(weapon.sprite, "self_modulate")
     weapon.sprite.self_modulate = Color("#70CFFF")
     weapon.tween_animation.interpolate_property(
@@ -117,10 +172,11 @@ func fantasy_on_killed_something(weapon: Node) -> void:
     _fantasy_change_weapon_every_killed_enemies(weapon)
 
 func fantasy_on_weapon_hit(weapon: Node, thing_hit: Node, damage_dealt: int, hitbox: Hitbox) -> void:
-    if hitbox == null:
+    if hitbox == null or not is_instance_valid(thing_hit) or not (thing_hit is Enemy):
         return
 
-    _fantasy_weapon_hit_proc(weapon, thing_hit, damage_dealt)
+    if damage_dealt > 0:
+        _fantasy_weapon_hit_proc(weapon, thing_hit)
     _fantasy_lightning_chain_on_hit(weapon, thing_hit)
 
 func fantasy_on_weapon_critically_hit(weapon: Node) -> void:
@@ -168,10 +224,7 @@ func _fantasy_reload_when_critically_hit(weapon: Node) -> void:
 
         fantasy_reset_weapon_cooldown(weapon)
 
-func _fantasy_weapon_hit_proc(weapon: Node, thing_hit: Node, damage_dealt: int) -> void:
-    if damage_dealt <= 0 or !(thing_hit is Enemy) or !is_instance_valid(thing_hit):
-        return
-
+func _fantasy_weapon_hit_proc(weapon: Node, thing_hit: Node) -> void:
     var effect_items: Array = RunData.get_player_effect(Utils.fantasy_weapon_hit_proc_hash, weapon.player_index)
     for effect_item in effect_items:
         var chance: float = effect_item[0]
@@ -201,12 +254,13 @@ func _fantasy_weapon_has_set(weapon: Node, set_id_hash: int) -> bool:
     return false
 
 func _fantasy_lightning_chain_on_hit(weapon: Node, thing_hit: Node) -> void:
-    var main: Main = Utils.get_scene_node()
-    if main == null or !(thing_hit is Enemy) or !is_instance_valid(thing_hit):
-        return
-
     var effect_items: Array = RunData.get_player_effect(Utils.fantasy_lightning_chain_on_hit_hash, weapon.player_index)
     var params_list: Array = FANTASY_LIGHTNING_CHAIN_SERVICE.collect_triggered_hit_params(weapon.effects, effect_items, weapon.player_index)
+    if params_list.empty():
+        return
+    var main: Main = Utils.get_scene_node()
+    if main == null:
+        return
     for params in params_list:
         var arc_damage: int = FANTASY_LIGHTNING_CHAIN_SERVICE.spawn_lightning_chain(
             main,

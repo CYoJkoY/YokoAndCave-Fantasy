@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fake_brave_sword_icon.webp-0bcb1a4a314393610c1538457969a28e.stex"
+path="res://.import/fake_brave_sword_icon.webp-f7634e90174fd6d9249e53ee945fae44.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/fake_brave_sword/fake_brave_sword_icon.webp"
-dest_files=[ "res://.import/fake_brave_sword_icon.webp-0bcb1a4a314393610c1538457969a28e.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/fake_brave_sword/fake_brave_sword_icon.webp"
+dest_files=[ "res://.import/fake_brave_sword_icon.webp-f7634e90174fd6d9249e53ee945fae44.stex" ]
 
 [params]
 

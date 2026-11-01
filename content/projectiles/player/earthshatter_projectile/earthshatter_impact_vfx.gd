@@ -1,6 +1,6 @@
 extends Node2D
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
 const IMPACT_SOUND = preload("res://projectiles/rocket/explosion_small_no_tail_01.wav")
 const DURATION: float = 0.32

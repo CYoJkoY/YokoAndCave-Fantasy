@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blackthorn_shard_impact_atlas.webp-381d060c55e360d574c94cf82bd02fdd.stex"
+path="res://.import/blackthorn_shard_impact_atlas.webp-72942b02d2fc7c9f85bba8d860101c13.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/blackthorn_projectile/blackthorn_shard_impact_atlas.webp"
-dest_files=[ "res://.import/blackthorn_shard_impact_atlas.webp-381d060c55e360d574c94cf82bd02fdd.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/blackthorn_projectile/blackthorn_shard_impact_atlas.webp"
+dest_files=[ "res://.import/blackthorn_shard_impact_atlas.webp-72942b02d2fc7c9f85bba8d860101c13.stex" ]
 
 [params]
 

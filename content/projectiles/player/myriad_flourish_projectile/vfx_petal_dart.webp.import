@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vfx_petal_dart.webp-a15a827b60a557a440e85df4e7085c6f.stex"
+path="res://.import/vfx_petal_dart.webp-a7928ed1590f878c1e32370c3afe4f41.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_flourish_projectile/vfx_petal_dart.webp"
-dest_files=[ "res://.import/vfx_petal_dart.webp-a15a827b60a557a440e85df4e7085c6f.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_flourish_projectile/vfx_petal_dart.webp"
+dest_files=[ "res://.import/vfx_petal_dart.webp-a7928ed1590f878c1e32370c3afe4f41.stex" ]
 
 [params]
 

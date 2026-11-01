@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/paladin_icon.webp-1816b1f60afdba7d86b839f0f8157351.stex"
+path="res://.import/paladin_icon.webp-50fbdacae31101e7f3099861ff9c9f08.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/characters/paladin/paladin_icon.webp"
-dest_files=[ "res://.import/paladin_icon.webp-1816b1f60afdba7d86b839f0f8157351.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/paladin/paladin_icon.webp"
+dest_files=[ "res://.import/paladin_icon.webp-50fbdacae31101e7f3099861ff9c9f08.stex" ]
 
 [params]
 

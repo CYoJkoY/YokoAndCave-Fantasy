@@ -1,8 +1,9 @@
 extends "res://main.gd"
 
-const FANTASY_UPGRADE_HOOKS = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/upgrade_hooks.gd")
-const FANTASY_LIGHTNING_CHAIN_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/lightning_chain_service.gd")
-const FANTASY_ENEMY_SPEED_MODIFIER_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/enemy_speed_modifier_service.gd")
+const FANTASY_UPGRADE_HOOKS = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/upgrade_hooks.gd")
+const FANTASY_LIGHTNING_CHAIN_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/lightning_chain_service.gd")
+const FANTASY_ENEMY_SPEED_MODIFIER_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/enemy_speed_modifier_service.gd")
+const FANTASY_FOREST_ATMOSPHERE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/forest_atmosphere.gd")
 
 const FANTASY_END_WAVE_BEFORE_REWARDS: String = "before_wave_rewards"
 const FANTASY_END_WAVE_BEFORE_END_RUN_SCENE: String = "before_end_run_scene"
@@ -19,13 +20,18 @@ func _ready() -> void:
     _fantasy_queue_job_upgrades()
     _fantasy_start_time_bonus_current_health_damage_timer()
     _fantasy_start_enemy_spawn_timers()
+    if ZoneService.get_zone_data(RunData.current_zone).name == "ZONE_FANTASY":
+        var atmosphere = FANTASY_FOREST_ATMOSPHERE.new()
+        atmosphere.entities_container = _entities_container
+        atmosphere.players = _players
+        _tile_map.add_child(atmosphere)
 
 func on_bonus_gold_changed(value: int) -> void:
     .on_bonus_gold_changed(value)
     if value != 0: _ui_bonus_gold.show()
 
 func on_upgrade_selected(upgrade_data: UpgradeData, upgrade: UpgradesUI.UpgradeToProcess) -> void:
-    FANTASY_UPGRADE_HOOKS.fa_handle_selected_upgrade_hooks(upgrade_data, upgrade.player_index, "normal_upgrade")
+    FANTASY_UPGRADE_HOOKS.fa_handle_selected_upgrade_hooks(upgrade_data)
     .on_upgrade_selected(upgrade_data, upgrade)
     _fantasy_add_job(upgrade_data, upgrade.player_index)
 
@@ -204,7 +210,7 @@ func _fantasy_decaying_slow_enemy(enemy: Enemy) -> void:
 func _fantasy_twin_connect(enemy: Enemy) -> void:
     match [enemy.enemy_id, summoned_twins.has(enemy.pool_id)]:
         ["fantasy_twin_blaze", false]:
-            var scene: PackedScene = load("res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/twin_frost/twin_frost.tscn")
+            var scene: PackedScene = load("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/twin_frost/twin_frost.tscn")
             summoned_twins.append(scene.get_instance_id())
             var args: EntitySpawner.SpawnEntityArgs = EntitySpawner.SpawnEntityArgs.new(enemy.global_position, EntityType.BOSS)
             var _new_enemy: Enemy = _entity_spawner.spawn_entity(scene, args)
@@ -216,7 +222,7 @@ func _fantasy_twin_connect(enemy: Enemy) -> void:
             var _error_twin_dead_change_state_connect_2: int = _new_enemy.connect("died", enemy, "fa_died_change_state")
 
         ["fantasy_twin_frost", false]:
-            var scene: PackedScene = load("res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/twin_blaze/twin_blaze.tscn")
+            var scene: PackedScene = load("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/twin_blaze/twin_blaze.tscn")
             summoned_twins.append(scene.get_instance_id())
             var args: EntitySpawner.SpawnEntityArgs = EntitySpawner.SpawnEntityArgs.new(enemy.global_position, EntityType.BOSS)
             var _new_enemy: Enemy = _entity_spawner.spawn_entity(scene, args)
@@ -286,7 +292,7 @@ func _fantasy_sacrificial_circle(players: Array) -> void:
         if sacrificial_circles.empty(): continue
 
         for sacrificial_circle in sacrificial_circles:
-            var sacrificial_circle_node: Area2D = load("res://mods-unpacked/Yoko-Fantasy/content/specials/player/sacrificial_circle/sacrificial_circle.tscn").instance()
+            var sacrificial_circle_node: Area2D = load("res://mods-unpacked/YokoAndCave-Fantasy/content/specials/player/sacrificial_circle/sacrificial_circle.tscn").instance()
             var center_pos: Vector2 = ZoneService.get_map_center()
             _materials_container.add_child(sacrificial_circle_node.init(self , player_index, center_pos, sacrificial_circle))
 
@@ -300,7 +306,7 @@ func _fantasy_clock_tower_area(players: Array) -> void:
             var base_range: int = clock_tower_area[0]
             var range_rate: float = clock_tower_area[1] / 100.0
             var total_range: float = Utils.fa_get_clock_tower_area_radius(base_range, range_rate, player_index)
-            var clock_tower_area_node: Area2D = load("res://mods-unpacked/Yoko-Fantasy/content/specials/player/clock_tower_area/clock_tower_area.tscn").instance()
+            var clock_tower_area_node: Area2D = load("res://mods-unpacked/YokoAndCave-Fantasy/content/specials/player/clock_tower_area/clock_tower_area.tscn").instance()
             var center_pos: Vector2 = ZoneService.get_map_center()
             _materials_container.add_child(clock_tower_area_node.init(self , player_index, center_pos, total_range, base_range, range_rate))
 

@@ -1,18 +1,18 @@
 extends Node2D
 
-const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/Yoko-Fantasy/content/utils/projectile_visual_utils.gd")
+const FANTASY_PROJECTILE_VISUAL_UTILS = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/utils/projectile_visual_utils.gd")
 
 const NOTES = [
-    preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_note_1.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_note_2.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_note_3.webp")
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_note_1.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_note_2.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_note_3.webp")
 ]
-const HALO = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/harp_projectile/harp_halo.webp")
-const NOTE_SHADER = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_note.gdshader")
-const ENERGY_SHADER = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_energy.gdshader")
-const FLOW_SHADER = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_flow.gdshader")
-const TETHER_SHADER = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_tether.gdshader")
-const IMPACT_SHADER = preload("res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_impact.gdshader")
+const HALO = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/harp_projectile/harp_halo.webp")
+const NOTE_SHADER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_note.gdshader")
+const ENERGY_SHADER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_energy.gdshader")
+const FLOW_SHADER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_flow.gdshader")
+const TETHER_SHADER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_tether.gdshader")
+const IMPACT_SHADER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/shamisen_projectile/shamisen_impact.gdshader")
 const COLORS = [Color(0.68, 0.36, 1.0), Color(0.46, 0.57, 1.0), Color(0.78, 0.43, 1.0)]
 const LINK_CAPACITY: int = 4
 const LINK_POINTS: int = 10

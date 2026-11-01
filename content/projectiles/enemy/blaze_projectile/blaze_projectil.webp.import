@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blaze_projectil.webp-ba23a94002450ef66851e4870f0ff1f0.stex"
+path="res://.import/blaze_projectil.webp-6d6f282cdd5d01294a9cfdfb4dc82253.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/enemy/blaze_projectile/blaze_projectil.webp"
-dest_files=[ "res://.import/blaze_projectil.webp-ba23a94002450ef66851e4870f0ff1f0.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/enemy/blaze_projectile/blaze_projectil.webp"
+dest_files=[ "res://.import/blaze_projectil.webp-6d6f282cdd5d01294a9cfdfb4dc82253.stex" ]
 
 [params]
 

@@ -1,11 +1,11 @@
 extends "res://entities/structures/turret/turret.gd"
 
-const FANTASY_CHAIN_TARGET_SERVICE = preload("res://mods-unpacked/Yoko-Fantasy/extensions/services/chain_target_service.gd")
+const FANTASY_CHAIN_TARGET_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/chain_target_service.gd")
 
-const BEAM_SCENE_PATH = "res://mods-unpacked/Yoko-Fantasy/content/items/prism_tower/effects/prism_beam.tscn"
-const HOLY_COLUMN_SCENE_PATH = "res://mods-unpacked/Yoko-Fantasy/content/items/prism_tower/effects/prism_holy_column.tscn"
-const RESONANCE_FOCUS_SCENE_PATH = "res://mods-unpacked/Yoko-Fantasy/content/items/prism_tower/effects/prism_resonance_focus.tscn"
-const RESONANCE_BURST_SCENE_PATH = "res://mods-unpacked/Yoko-Fantasy/content/items/prism_tower/effects/prism_resonance_burst.tscn"
+const BEAM_SCENE_PATH = "res://mods-unpacked/YokoAndCave-Fantasy/content/items/prism_tower/effects/prism_beam.tscn"
+const HOLY_COLUMN_SCENE_PATH = "res://mods-unpacked/YokoAndCave-Fantasy/content/items/prism_tower/effects/prism_holy_column.tscn"
+const RESONANCE_FOCUS_SCENE_PATH = "res://mods-unpacked/YokoAndCave-Fantasy/content/items/prism_tower/effects/prism_resonance_focus.tscn"
+const RESONANCE_BURST_SCENE_PATH = "res://mods-unpacked/YokoAndCave-Fantasy/content/items/prism_tower/effects/prism_resonance_burst.tscn"
 var MAIN_BEAM_COLOR: Color = Color("#fff0a6")
 var MAIN_GLOW_COLOR: Color = Color(0.65, 0.35, 1.0, 0.32)
 var SCATTER_COLORS: Array = [

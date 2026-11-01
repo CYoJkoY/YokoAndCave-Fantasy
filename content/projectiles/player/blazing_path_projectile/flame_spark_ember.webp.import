@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flame_spark_ember.webp-56bdb38993bf2adedc47611042e1dd8c.stex"
+path="res://.import/flame_spark_ember.webp-8e932e2c5ad3b14bd77effb665483ad8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/blazing_path_projectile/flame_spark_ember.webp"
-dest_files=[ "res://.import/flame_spark_ember.webp-56bdb38993bf2adedc47611042e1dd8c.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/blazing_path_projectile/flame_spark_ember.webp"
+dest_files=[ "res://.import/flame_spark_ember.webp-8e932e2c5ad3b14bd77effb665483ad8.stex" ]
 
 [params]
 

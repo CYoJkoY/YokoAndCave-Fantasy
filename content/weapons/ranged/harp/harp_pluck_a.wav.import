@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/harp_pluck_a.wav-cc44b75455a4c8400f1fa1f7271ed245.sample"
+path="res://.import/harp_pluck_a.wav-cd6a0f91fbcc429a41f513cac150b71d.sample"
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/harp/harp_pluck_a.wav"
-dest_files=[ "res://.import/harp_pluck_a.wav-cc44b75455a4c8400f1fa1f7271ed245.sample" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/harp/harp_pluck_a.wav"
+dest_files=[ "res://.import/harp_pluck_a.wav-cd6a0f91fbcc429a41f513cac150b71d.sample" ]
 
 [params]
 

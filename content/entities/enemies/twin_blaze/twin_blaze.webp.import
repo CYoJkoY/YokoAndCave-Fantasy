@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/twin_blaze.webp-39d683fa516471a4dc5093830b624b5e.stex"
+path="res://.import/twin_blaze.webp-c61d6a7c0bf144c281a47451f5bb3447.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/twin_blaze/twin_blaze.webp"
-dest_files=[ "res://.import/twin_blaze.webp-39d683fa516471a4dc5093830b624b5e.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/twin_blaze/twin_blaze.webp"
+dest_files=[ "res://.import/twin_blaze.webp-c61d6a7c0bf144c281a47451f5bb3447.stex" ]
 
 [params]
 

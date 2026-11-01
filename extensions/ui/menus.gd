@@ -1,6 +1,6 @@
 extends "res://ui/menus/menus.gd"
 
-const FANTASY_TRACKS_OPTION = preload("res://mods-unpacked/Yoko-Fantasy/extensions/ui/fantasy_tracks_option.gd")
+const FANTASY_TRACKS_OPTION = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/ui/fantasy_tracks_option.gd")
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func _ready() -> void:

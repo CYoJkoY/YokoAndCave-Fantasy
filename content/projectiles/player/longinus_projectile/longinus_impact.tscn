@@ -1,0 +1,461 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/longinus_flash.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_glow.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_flare.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_ring.webp" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_spark.webp" type="Texture" id=5]
+
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/shaders/longinus_lightning.gdshader" type="Shader" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/lightning_taper_curve.tres" type="Curve" id=7]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.4, 0.55 ), -0.8, 0.0, 0, 0, Vector2( 1, 0 ), -1.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.18, 0.6, 1 )
+colors = PoolColorArray( 1, 1, 0.92, 1, 1, 0.9, 0.5, 0.95, 1, 0.62, 0.12, 0.5, 1, 0.4, 0.03, 0 )
+
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0, 0.8 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -1.2, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=5]
+offsets = PoolRealArray( 0, 0.3, 1 )
+colors = PoolColorArray( 1, 0.95, 0.7, 0.8, 1, 0.7, 0.16, 0.4, 1, 0.45, 0.03, 0 )
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 6 )
+shader_param/core_color = Color( 1, 0.96, 0.74, 1 )
+shader_param/glow_color = Color( 1, 0.52, 0.04, 0.62 )
+shader_param/intensity = 0.9
+shader_param/core_width = 0.34
+shader_param/glow_softness = 0.72
+
+[sub_resource type="ShaderMaterial" id=7]
+shader = ExtResource( 6 )
+shader_param/core_color = Color( 1, 0.98, 0.88, 1 )
+shader_param/glow_color = Color( 1, 0.68, 0.14, 1 )
+shader_param/intensity = 1.2
+shader_param/core_width = 0.14
+shader_param/glow_softness = 0.2
+
+[sub_resource type="Animation" id=20]
+resource_name = "flash"
+length = 0.42
+tracks/0/type = "value"
+tracks/0/path = NodePath("Glow:scale")
+tracks/0/interp = 1
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.035, 0.07, 0.105, 0.14, 0.175, 0.21, 0.245, 0.28, 0.315, 0.35, 0.385, 0.42 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.55, 0.55 ), Vector2( 0.9061053, 0.9061053 ), Vector2( 1.203009, 1.203009 ), Vector2( 1.446094, 1.446094 ), Vector2( 1.640741, 1.640741 ), Vector2( 1.792332, 1.792332 ), Vector2( 1.90625, 1.90625 ), Vector2( 1.987876, 1.987876 ), Vector2( 2.042593, 2.042593 ), Vector2( 2.075781, 2.075781 ), Vector2( 2.092824, 2.092824 ), Vector2( 2.099103, 2.099103 ), Vector2( 2.1, 2.1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Glow:modulate")
+tracks/1/interp = 1
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.035, 0.07, 0.105, 0.14, 0.175, 0.21, 0.245, 0.28, 0.315, 0.35, 0.385, 0.42 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.90, 0.52, 0.48 ), Color( 1, 0.90, 0.52, 0.4033333 ), Color( 1, 0.90, 0.52, 0.3333333 ), Color( 1, 0.90, 0.52, 0.27 ), Color( 1, 0.90, 0.52, 0.2133333 ), Color( 1, 0.90, 0.52, 0.1633333 ), Color( 1, 0.90, 0.52, 0.12 ), Color( 1, 0.90, 0.52, 0.08333333 ), Color( 1, 0.90, 0.52, 0.05333333 ), Color( 1, 0.90, 0.52, 0.03 ), Color( 1, 0.90, 0.52, 0.01333333 ), Color( 1, 0.90, 0.52, 0.003333333 ), Color( 1, 0.90, 0.52, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Glow:rotation")
+tracks/2/interp = 1
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.42 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Flare:scale")
+tracks/3/interp = 1
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.035, 0.07, 0.105, 0.14, 0.175, 0.21, 0.245, 0.28, 0.315, 0.35, 0.385, 0.42 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.35, 0.35 ), Vector2( 0.6601563, 0.6601563 ), Vector2( 0.91875, 0.91875 ), Vector2( 1.130469, 1.130469 ), Vector2( 1.3, 1.3 ), Vector2( 1.432031, 1.432031 ), Vector2( 1.53125, 1.53125 ), Vector2( 1.602344, 1.602344 ), Vector2( 1.65, 1.65 ), Vector2( 1.678906, 1.678906 ), Vector2( 1.69375, 1.69375 ), Vector2( 1.699219, 1.699219 ), Vector2( 1.7, 1.7 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Flare:modulate")
+tracks/4/interp = 1
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.035, 0.07, 0.105, 0.14, 0.175, 0.21, 0.245, 0.28, 0.315, 0.35, 0.385, 0.42 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.98, 0.86, 0.92 ), Color( 1, 0.98, 0.86, 0.8144864 ), Color( 1, 0.98, 0.86, 0.7127448 ), Color( 1, 0.98, 0.86, 0.6149978 ), Color( 1, 0.98, 0.86, 0.5215069 ), Color( 1, 0.98, 0.86, 0.4325849 ), Color( 1, 0.98, 0.86, 0.3486148 ), Color( 1, 0.98, 0.86, 0.2700798 ), Color( 1, 0.98, 0.86, 0.1976142 ), Color( 1, 0.98, 0.86, 0.1321003 ), Color( 1, 0.98, 0.86, 0.07488177 ), Color( 1, 0.98, 0.86, 0.02837488 ), Color( 1, 0.98, 0.86, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Flare:rotation")
+tracks/5/interp = 1
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.42 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 0.588 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Star:scale")
+tracks/6/interp = 1
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.035, 0.07, 0.105, 0.14, 0.175, 0.21, 0.245, 0.28, 0.315, 0.35, 0.385, 0.42 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.38, 0.38 ), Vector2( 0.5982581, 0.5982581 ), Vector2( 0.7802315, 0.7802315 ), Vector2( 0.9292187, 0.9292187 ), Vector2( 1.048519, 1.048519 ), Vector2( 1.141429, 1.141429 ), Vector2( 1.21125, 1.21125 ), Vector2( 1.261279, 1.261279 ), Vector2( 1.294815, 1.294815 ), Vector2( 1.315156, 1.315156 ), Vector2( 1.325602, 1.325602 ), Vector2( 1.32945, 1.32945 ), Vector2( 1.33, 1.33 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Star:modulate")
+tracks/7/interp = 1
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.035, 0.07, 0.105, 0.14, 0.175, 0.21, 0.245, 0.28, 0.315, 0.35, 0.385, 0.42 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 0.92, 0.86 ), Color( 1, 1, 0.92, 0.7226389 ), Color( 1, 1, 0.92, 0.5972222 ), Color( 1, 1, 0.92, 0.48375 ), Color( 1, 1, 0.92, 0.3822222 ), Color( 1, 1, 0.92, 0.2926389 ), Color( 1, 1, 0.92, 0.215 ), Color( 1, 1, 0.92, 0.1493056 ), Color( 1, 1, 0.92, 0.09555556 ), Color( 1, 1, 0.92, 0.05375 ), Color( 1, 1, 0.92, 0.02388889 ), Color( 1, 1, 0.92, 0.005972222 ), Color( 1, 1, 0.92, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Star:rotation")
+tracks/8/interp = 1
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.42 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 0.84 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("RingA:scale")
+tracks/9/interp = 1
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.01333333, 0.02666667, 0.04, 0.05333333, 0.06666667, 0.08, 0.09333333, 0.1066667, 0.12, 0.1333333, 0.1466667, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.18, 0.18 ), Vector2( 0.3675, 0.3675 ), Vector2( 0.555, 0.555 ), Vector2( 0.7425, 0.7425 ), Vector2( 0.93, 0.93 ), Vector2( 1.1175, 1.1175 ), Vector2( 1.305, 1.305 ), Vector2( 1.4925, 1.4925 ), Vector2( 1.68, 1.68 ), Vector2( 1.8675, 1.8675 ), Vector2( 2.055, 2.055 ), Vector2( 2.2425, 2.2425 ), Vector2( 2.43, 2.43 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("RingA:modulate")
+tracks/10/interp = 1
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.01333333, 0.02666667, 0.04, 0.05333333, 0.06666667, 0.08, 0.09333333, 0.1066667, 0.12, 0.1333333, 0.1466667, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.86, 0.46, 0.78 ), Color( 1, 0.86, 0.46, 0.715 ), Color( 1, 0.86, 0.46, 0.65 ), Color( 1, 0.86, 0.46, 0.585 ), Color( 1, 0.86, 0.46, 0.52 ), Color( 1, 0.86, 0.46, 0.455 ), Color( 1, 0.86, 0.46, 0.39 ), Color( 1, 0.86, 0.46, 0.325 ), Color( 1, 0.86, 0.46, 0.26 ), Color( 1, 0.86, 0.46, 0.195 ), Color( 1, 0.86, 0.46, 0.13 ), Color( 1, 0.86, 0.46, 0.065 ), Color( 1, 0.86, 0.46, 0 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("RingA:rotation")
+tracks/11/interp = 1
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.42 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("RingB:scale")
+tracks/12/interp = 1
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.01333333, 0.02666667, 0.04, 0.05333333, 0.06666667, 0.08, 0.09333333, 0.1066667, 0.12, 0.1333333, 0.1466667, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.12, 0.12 ), Vector2( 0.2325, 0.2325 ), Vector2( 0.345, 0.345 ), Vector2( 0.4575, 0.4575 ), Vector2( 0.57, 0.57 ), Vector2( 0.6825, 0.6825 ), Vector2( 0.795, 0.795 ), Vector2( 0.9075, 0.9075 ), Vector2( 1.02, 1.02 ), Vector2( 1.1325, 1.1325 ), Vector2( 1.245, 1.245 ), Vector2( 1.3575, 1.3575 ), Vector2( 1.47, 1.47 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("RingB:modulate")
+tracks/13/interp = 1
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.01333333, 0.02666667, 0.04, 0.05333333, 0.06666667, 0.08, 0.09333333, 0.1066667, 0.12, 0.1333333, 0.1466667, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.58, 0.10, 0.62 ), Color( 1, 0.58, 0.10, 0.5209722 ), Color( 1, 0.58, 0.10, 0.4305556 ), Color( 1, 0.58, 0.10, 0.34875 ), Color( 1, 0.58, 0.10, 0.2755556 ), Color( 1, 0.58, 0.10, 0.2109722 ), Color( 1, 0.58, 0.10, 0.155 ), Color( 1, 0.58, 0.10, 0.1076389 ), Color( 1, 0.58, 0.10, 0.06888889 ), Color( 1, 0.58, 0.10, 0.03875 ), Color( 1, 0.58, 0.10, 0.01722222 ), Color( 1, 0.58, 0.10, 0.004305556 ), Color( 1, 0.58, 0.10, 0 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("RingB:rotation")
+tracks/14/interp = 1
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.42 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, -0.462 ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("ArcRoot:modulate")
+tracks/15/interp = 1
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.17 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="LonginusImpact" type="Node2D"]
+z_index = 6
+script = ExtResource( 1 )
+impact = true
+
+[node name="Glow" type="Sprite" parent="."]
+material = SubResource( 1 )
+scale = Vector2( 0.55, 0.55 )
+texture = ExtResource( 2 )
+modulate = Color( 1, 0.9, 0.52, 0.48 )
+
+[node name="Flare" type="Sprite" parent="."]
+material = SubResource( 1 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 3 )
+modulate = Color( 1, 0.98, 0.86, 0.92 )
+
+[node name="RingA" type="Sprite" parent="."]
+material = SubResource( 1 )
+scale = Vector2( 0.18, 0.18 )
+texture = ExtResource( 4 )
+modulate = Color( 1, 0.86, 0.46, 0.78 )
+
+[node name="RingB" type="Sprite" parent="."]
+material = SubResource( 1 )
+scale = Vector2( 0.12, 0.12 )
+texture = ExtResource( 4 )
+modulate = Color( 1, 0.58, 0.1, 0.62 )
+
+[node name="Star" type="Sprite" parent="."]
+material = SubResource( 1 )
+scale = Vector2( 0.38, 0.38 )
+texture = ExtResource( 5 )
+modulate = Color( 1, 1, 0.92, 0.86 )
+
+[node name="ArcRoot" type="Node2D" parent="."]
+
+[node name="Particles" type="Node2D" parent="."]
+
+[node name="Sparks" type="CPUParticles2D" parent="Particles"]
+material = SubResource( 1 )
+emitting = false
+amount = 22
+lifetime = 0.38
+one_shot = true
+explosiveness = 0.92
+local_coords = false
+texture = ExtResource( 5 )
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2( 0, -1 )
+spread = 180.0
+gravity = Vector2( 0, 150 )
+initial_velocity = 270.0
+initial_velocity_random = 0.6
+scale_amount = 0.18
+scale_amount_random = 0.12
+scale_amount_curve = SubResource( 2 )
+color_ramp = SubResource( 3 )
+
+[node name="Motes" type="CPUParticles2D" parent="Particles"]
+material = SubResource( 1 )
+emitting = false
+amount = 14
+lifetime = 0.62
+one_shot = true
+explosiveness = 0.55
+local_coords = false
+texture = ExtResource( 2 )
+emission_shape = 1
+emission_sphere_radius = 18.0
+direction = Vector2( 0, -1 )
+spread = 180.0
+gravity = Vector2( 0, -24 )
+initial_velocity = 54.0
+initial_velocity_random = 0.7
+scale_amount = 0.10
+scale_amount_random = 0.08
+scale_amount_curve = SubResource( 4 )
+color_ramp = SubResource( 5 )
+
+[node name="Arc0" type="Node2D" parent="ArcRoot"]
+
+[node name="Glow" type="Line2D" parent="ArcRoot/Arc0"]
+material = SubResource( 6 )
+modulate = Color( 1, 0.64, 0.18, 0.62 )
+texture = ExtResource( 2 )
+texture_mode = 2
+width = 14
+width_curve = ExtResource( 7 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+z_index = 2
+
+[node name="Core" type="Line2D" parent="ArcRoot/Arc0"]
+material = SubResource( 7 )
+modulate = Color( 1, 0.98, 0.78, 0.95 )
+texture = ExtResource( 2 )
+texture_mode = 2
+width = 3.4
+width_curve = ExtResource( 7 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+z_index = 3
+
+[node name="Arc1" type="Node2D" parent="ArcRoot"]
+
+[node name="Glow" type="Line2D" parent="ArcRoot/Arc1"]
+material = SubResource( 6 )
+modulate = Color( 1, 0.64, 0.18, 0.62 )
+texture = ExtResource( 2 )
+texture_mode = 2
+width = 14
+width_curve = ExtResource( 7 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+z_index = 2
+
+[node name="Core" type="Line2D" parent="ArcRoot/Arc1"]
+material = SubResource( 7 )
+modulate = Color( 1, 0.98, 0.78, 0.95 )
+texture = ExtResource( 2 )
+texture_mode = 2
+width = 3.4
+width_curve = ExtResource( 7 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+z_index = 3
+
+[node name="Arc2" type="Node2D" parent="ArcRoot"]
+
+[node name="Glow" type="Line2D" parent="ArcRoot/Arc2"]
+material = SubResource( 6 )
+modulate = Color( 1, 0.64, 0.18, 0.62 )
+texture = ExtResource( 2 )
+texture_mode = 2
+width = 14
+width_curve = ExtResource( 7 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+z_index = 2
+
+[node name="Core" type="Line2D" parent="ArcRoot/Arc2"]
+material = SubResource( 7 )
+modulate = Color( 1, 0.98, 0.78, 0.95 )
+texture = ExtResource( 2 )
+texture_mode = 2
+width = 3.4
+width_curve = ExtResource( 7 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+z_index = 3
+
+[node name="Arc3" type="Node2D" parent="ArcRoot"]
+
+[node name="Glow" type="Line2D" parent="ArcRoot/Arc3"]
+material = SubResource( 6 )
+modulate = Color( 1, 0.64, 0.18, 0.62 )
+texture = ExtResource( 2 )
+texture_mode = 2
+width = 14
+width_curve = ExtResource( 7 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+z_index = 2
+
+[node name="Core" type="Line2D" parent="ArcRoot/Arc3"]
+material = SubResource( 7 )
+modulate = Color( 1, 0.98, 0.78, 0.95 )
+texture = ExtResource( 2 )
+texture_mode = 2
+width = 3.4
+width_curve = ExtResource( 7 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+z_index = 3
+
+[node name="Arc4" type="Node2D" parent="ArcRoot"]
+
+[node name="Glow" type="Line2D" parent="ArcRoot/Arc4"]
+material = SubResource( 6 )
+modulate = Color( 1, 0.64, 0.18, 0.62 )
+texture = ExtResource( 2 )
+texture_mode = 2
+width = 14
+width_curve = ExtResource( 7 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+z_index = 2
+
+[node name="Core" type="Line2D" parent="ArcRoot/Arc4"]
+material = SubResource( 7 )
+modulate = Color( 1, 0.98, 0.78, 0.95 )
+texture = ExtResource( 2 )
+texture_mode = 2
+width = 3.4
+width_curve = ExtResource( 7 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+z_index = 3
+
+[node name="Arc5" type="Node2D" parent="ArcRoot"]
+
+[node name="Glow" type="Line2D" parent="ArcRoot/Arc5"]
+material = SubResource( 6 )
+modulate = Color( 1, 0.64, 0.18, 0.62 )
+texture = ExtResource( 2 )
+texture_mode = 2
+width = 14
+width_curve = ExtResource( 7 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+z_index = 2
+
+[node name="Core" type="Line2D" parent="ArcRoot/Arc5"]
+material = SubResource( 7 )
+modulate = Color( 1, 0.98, 0.78, 0.95 )
+texture = ExtResource( 2 )
+texture_mode = 2
+width = 3.4
+width_curve = ExtResource( 7 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+z_index = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/flash = SubResource( 20 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]

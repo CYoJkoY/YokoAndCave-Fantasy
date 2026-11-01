@@ -1,15 +1,49 @@
 extends "res://singletons/run_data.gd"
 
+const FANTASY_UNIQUE_RUN = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/unique_weapon_service.gd")
+
 signal on_soul_effect(damage_to_add, speed_to_add, player_index)
 
 var fantasy_resumed_from_state_in_shop: bool = false
+var _fantasy_blessed_replacement: ItemData = null
 var fantasy_pending_job_selections: Array = [[], [], [], []]
 const FANTASY_JOB_UI_LEVEL_BASE: int = -200000
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
+func add_item(item: ItemData, player_index: int, is_selection: bool = false) -> void:
+    if item == _fantasy_blessed_replacement:
+        _fantasy_blessed_replacement = null
+        item = Utils.fa_bless_item(item) as ItemData
+    .add_item(item, player_index, is_selection)
+
+func remove_item(item: ItemData, player_index: int, by_id: bool = false) -> void:
+    var owned_item: ItemData = null
+    for candidate in get_player_items_ref(player_index):
+        var matches: bool = candidate.my_id_hash == item.my_id_hash if by_id else ItemService.is_same_item(candidate, item)
+        if !matches: continue
+        owned_item = candidate
+        break
+    if owned_item == null: return
+
+    var previous_replacement: ItemData = _fantasy_blessed_replacement
+    _fantasy_blessed_replacement = owned_item.replaced_by if Utils.fa_is_item_blessed(owned_item) else null
+    .remove_item(owned_item, player_index, by_id)
+    _fantasy_blessed_replacement = previous_replacement
+
+func add_weapon(weapon: WeaponData, player_index: int, is_selection: bool = false) -> WeaponData:
+    var owned: WeaponData = FANTASY_UNIQUE_RUN.get_owned_unique_weapon(weapon, get_player_weapons_ref(player_index))
+    if owned != null: return owned
+    return .add_weapon(weapon, player_index, is_selection)
+
+func has_weapon_slot_available(shop_weapon: WeaponData, player_index: int) -> bool:
+    if FANTASY_UNIQUE_RUN.get_owned_unique_weapon(shop_weapon, get_player_weapons_ref(player_index)) != null:
+        return false
+    return .has_weapon_slot_available(shop_weapon, player_index)
+
 func reset(restart: bool = false) -> void:
     .reset(restart)
     fantasy_resumed_from_state_in_shop = false
+    _fantasy_blessed_replacement = null
     fantasy_pending_job_selections = [[], [], [], []]
 
 func continue_current_run_in_shop() -> void:
@@ -110,6 +144,18 @@ func _fantasy_update_limited_item_bonuses(player_index: int) -> void:
         effects[stat] += bonus
 
 # ══════════════════════════════════════════ Method ══════════════════════════════════════════ #
+func fa_replace_item(item: ItemData, replacement: ItemData, player_index: int) -> void:
+    var items: Array = get_player_items_ref(player_index)
+    var item_index: int = items.find(item)
+    assert(item_index != -1)
+    assert(item.my_id_hash == replacement.my_id_hash and item.tier == replacement.tier)
+
+    unapply_item_effects(item, player_index)
+    items[item_index] = replacement
+    apply_item_effects(replacement, player_index)
+    update_item_related_effects(player_index)
+    LinkedStats.reset_player(player_index)
+
 func fa_add_job(job: UpgradeData, player_index: int) -> void:
     var job_slot: int = fa_get_next_job_slot(job.stage, player_index)
     if job_slot == -1: return

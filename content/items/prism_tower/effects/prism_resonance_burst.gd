@@ -1,6 +1,6 @@
 extends Node2D
 
-const ShapeUtils = preload("res://mods-unpacked/Yoko-Fantasy/content/items/prism_tower/effects/prism_effect_shape_utils.gd")
+const ShapeUtils = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/items/prism_tower/effects/prism_effect_shape_utils.gd")
 const DURATION = 0.26
 
 var PRISM_COLORS: Array = [

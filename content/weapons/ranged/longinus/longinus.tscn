@@ -1,0 +1,287 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://weapons/weapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/longinus/longinus.webp" type="Texture" id=2]
+[ext_resource path="res://resources/shaders/outline.gdshader" type="Shader" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/longinus/longinus.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_glow.webp" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_flare.webp" type="Texture" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_ring.webp" type="Texture" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/textures/longinus_spark.webp" type="Texture" id=8]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/longinus_projectile/shaders/longinus_lightning.gdshader" type="Shader" id=9]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 3 )
+shader_param/width = 2.0
+shader_param/alpha = 1.0
+shader_param/desaturation = 0.0
+shader_param/texture_size = Vector2( 0, 0 )
+shader_param/outline_color_0 = Color( 0, 0, 0, 0 )
+shader_param/outline_color_1 = Color( 0, 0, 0, 0 )
+shader_param/outline_color_2 = Color( 0, 0, 0, 0 )
+shader_param/outline_color_3 = Color( 0, 0, 0, 0 )
+
+[sub_resource type="CircleShape2D" id=2]
+resource_local_to_scene = true
+radius = 47.2652
+
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 9 )
+shader_param/core_color = Color( 1, 0.96, 0.76, 1 )
+shader_param/glow_color = Color( 1, 0.48, 0.03, 0.7 )
+shader_param/flicker_speed = 24.0
+shader_param/flicker_amount = 0.4
+shader_param/core_width = 0.24
+shader_param/glow_softness = 0.55
+shader_param/intensity = 0.95
+shader_param/seed = 1.0
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = ExtResource( 9 )
+shader_param/core_color = Color( 1, 0.95, 0.68, 1 )
+shader_param/glow_color = Color( 1, 0.44, 0.02, 0.7 )
+shader_param/flicker_speed = 30.0
+shader_param/flicker_amount = 0.45
+shader_param/core_width = 0.32
+shader_param/glow_softness = 0.75
+shader_param/intensity = 0.9
+shader_param/seed = 3.0
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 9 )
+shader_param/core_color = Color( 1, 1, 0.93, 1 )
+shader_param/glow_color = Color( 1, 0.55, 0.06, 0.7 )
+shader_param/flicker_speed = 38.0
+shader_param/flicker_amount = 0.28
+shader_param/core_width = 0.13
+shader_param/glow_softness = 0.2
+shader_param/intensity = 1.15
+shader_param/seed = 6.0
+
+[sub_resource type="Curve" id=7]
+_data = [ Vector2( 0, 0.3 ), 0.0, 0.0, 0, 0, Vector2( 0.7, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.72 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=8]
+offsets = PoolRealArray( 0, 0.25, 0.8, 1 )
+colors = PoolColorArray( 1, 0.7, 0.12, 0, 1, 0.85, 0.3, 0.5, 1, 1, 0.8, 0.8, 1, 1, 1, 1 )
+
+[sub_resource type="Curve" id=9]
+_data = [ Vector2( 0, 0.55 ), 0.0, 0.0, 0, 0, Vector2( 0.35, 0.45 ), -0.4, 0.0, 0, 0, Vector2( 1, 0 ), -1.2, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=10]
+offsets = PoolRealArray( 0, 0.25, 0.7, 1 )
+colors = PoolColorArray( 1, 1, 0.9, 0.8, 1, 0.84, 0.38, 0.6, 1, 0.55, 0.08, 0.3, 1, 0.4, 0.03, 0 )
+
+[node name="Longinus" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+outline_shader_mat = SubResource( 1 )
+
+[node name="Sprite" parent="."]
+position = Vector2( 42, 0 )
+texture = ExtResource( 2 )
+
+[node name="Hitbox" parent="Sprite"]
+visible = false
+
+[node name="Muzzle" parent="Sprite"]
+position = Vector2( 74, 0 )
+
+[node name="Attach" parent="Sprite"]
+position = Vector2( 0, 0 )
+
+[node name="Aura" type="Sprite" parent="Sprite"]
+show_behind_parent = true
+material = SubResource( 3 )
+scale = Vector2( 1.6, 0.8 )
+texture = ExtResource( 5 )
+modulate = Color( 1, 0.84, 0.42, 0.24 )
+z_index = -1
+
+[node name="TipFX" type="Node2D" parent="Sprite"]
+position = Vector2( 73, 0 )
+z_index = 2
+
+[node name="TipGlow" type="Sprite" parent="Sprite/TipFX"]
+material = SubResource( 3 )
+scale = Vector2( 0.65, 0.65 )
+texture = ExtResource( 5 )
+modulate = Color( 1, 0.94, 0.58, 0.5 )
+
+[node name="TipStar" type="Sprite" parent="Sprite/TipFX"]
+material = SubResource( 3 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 6 )
+modulate = Color( 1, 0.99, 0.92, 0.5 )
+
+[node name="ChargeRing" type="Sprite" parent="Sprite/TipFX"]
+visible = false
+material = SubResource( 3 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 7 )
+modulate = Color( 1, 0.86, 0.45, 0 )
+
+[node name="AimBeam" type="Line2D" parent="Sprite/TipFX"]
+visible = false
+material = SubResource( 3 )
+width = 5.0
+width_curve = SubResource( 7 )
+default_color = Color( 1, 1, 1, 1 )
+gradient = SubResource( 8 )
+points = PoolVector2Array( 0, 0, 112, 0 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+
+[node name="Motes" type="CPUParticles2D" parent="Sprite/TipFX"]
+material = SubResource( 3 )
+amount = 9
+lifetime = 0.7
+local_coords = false
+texture = ExtResource( 8 )
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2( 0, -1 )
+spread = 180.0
+gravity = Vector2( 0, -12 )
+initial_velocity = 18.0
+initial_velocity_random = 0.7
+scale_amount = 0.08
+scale_amount_random = 0.06
+scale_amount_curve = SubResource( 9 )
+color_ramp = SubResource( 10 )
+
+[node name="Arcs" type="Node2D" parent="Sprite/TipFX"]
+
+[node name="Arc0" type="Line2D" parent="Sprite/TipFX/Arcs"]
+material = SubResource( 4 )
+texture = ExtResource( 5 )
+texture_mode = 2
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+
+[node name="Arc1" type="Line2D" parent="Sprite/TipFX/Arcs"]
+material = SubResource( 4 )
+texture = ExtResource( 5 )
+texture_mode = 2
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+
+[node name="Arc2" type="Line2D" parent="Sprite/TipFX/Arcs"]
+material = SubResource( 4 )
+texture = ExtResource( 5 )
+texture_mode = 2
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+
+[node name="MuzzleFX" type="Node2D" parent="Sprite"]
+position = Vector2( 74, 0 )
+z_index = 4
+
+[node name="Flare" type="Sprite" parent="Sprite/MuzzleFX"]
+visible = false
+material = SubResource( 3 )
+scale = Vector2( 0.65, 0.65 )
+texture = ExtResource( 6 )
+modulate = Color( 1, 0.98, 0.88, 0 )
+
+[node name="Glow" type="Sprite" parent="Sprite/MuzzleFX"]
+visible = false
+material = SubResource( 3 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 5 )
+modulate = Color( 1, 0.88, 0.45, 0 )
+
+[node name="Ring" type="Sprite" parent="Sprite/MuzzleFX"]
+visible = false
+material = SubResource( 3 )
+scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 7 )
+modulate = Color( 1, 0.88, 0.52, 0 )
+
+[node name="Beam" type="Sprite" parent="Sprite/MuzzleFX"]
+visible = false
+material = SubResource( 3 )
+position = Vector2( 76, 0 )
+scale = Vector2( 2.6, 0.42 )
+texture = ExtResource( 5 )
+modulate = Color( 1, 0.95, 0.7, 0 )
+
+[node name="Sparks" type="CPUParticles2D" parent="Sprite/MuzzleFX"]
+visible = false
+material = SubResource( 3 )
+emitting = false
+amount = 18
+lifetime = 0.35
+one_shot = true
+explosiveness = 0.92
+local_coords = false
+texture = ExtResource( 8 )
+emission_shape = 1
+emission_sphere_radius = 6.0
+direction = Vector2( 1, 0 )
+spread = 42.0
+gravity = Vector2( 0, 60 )
+initial_velocity = 260.0
+initial_velocity_random = 0.55
+scale_amount = 0.13
+scale_amount_random = 0.09
+scale_amount_curve = SubResource( 9 )
+color_ramp = SubResource( 10 )
+
+[node name="Arcs" type="Node2D" parent="Sprite/MuzzleFX"]
+
+[node name="ArcGlowA" type="Line2D" parent="Sprite/MuzzleFX/Arcs"]
+visible = false
+material = SubResource( 5 )
+texture = ExtResource( 5 )
+texture_mode = 2
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+
+[node name="ArcCoreA" type="Line2D" parent="Sprite/MuzzleFX/Arcs"]
+visible = false
+material = SubResource( 6 )
+texture = ExtResource( 5 )
+texture_mode = 2
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+
+[node name="ArcGlowB" type="Line2D" parent="Sprite/MuzzleFX/Arcs"]
+visible = false
+material = SubResource( 5 )
+texture = ExtResource( 5 )
+texture_mode = 2
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+
+[node name="ArcCoreB" type="Line2D" parent="Sprite/MuzzleFX/Arcs"]
+visible = false
+material = SubResource( 6 )
+texture = ExtResource( 5 )
+texture_mode = 2
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 3
+
+[node name="CollisionShape2D" parent="Range"]
+shape = SubResource( 2 )
+
+[editable path="Sprite/Hitbox"]

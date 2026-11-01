@@ -1,6 +1,6 @@
 extends ShootingAttackBehavior
 
-export(PackedScene) var prediction_line_scene = preload("res://mods-unpacked/Yoko-Fantasy/content/specials/enemy/prediction_line/prediction_line.tscn")
+export(PackedScene) var prediction_line_scene = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/specials/enemy/prediction_line/prediction_line.tscn")
 var prediction_line_pool_id: int = Keys.empty_hash
 export(float) var prediction_line_time = 3.0
 export(float) var prediction_line_precision = 0.1

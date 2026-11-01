@@ -1,0 +1,120 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://weapons/weapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/seven_star_sword_layers2_4_6_5.webp" type="Texture" id=2]
+[ext_resource path="res://resources/shaders/outline.gdshader" type="Shader" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/seven_star_sword.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/seven_star_sword_shooting_behavior.gd" type="Script" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/seven_star_sword_layer3.webp" type="Texture" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/seven_star_sword_layers10_9_8.webp" type="Texture" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/vfx/seven_star_blade.gdshader" type="Shader" id=8]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/vfx/seven_star_halo.gdshader" type="Shader" id=9]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/vfx/textures/star_flare.webp" type="Texture" id=10]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/shared/weapon_afterimage_trail.gd" type="Script" id=11]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 3 )
+shader_param/width = 2.0
+shader_param/alpha = 1.0
+shader_param/desaturation = 0.0
+shader_param/texture_size = Vector2( 0, 0 )
+shader_param/outline_color_0 = Color( 0, 0, 0, 0 )
+shader_param/outline_color_1 = Color( 0, 0, 0, 0 )
+shader_param/outline_color_2 = Color( 0, 0, 0, 0 )
+shader_param/outline_color_3 = Color( 0, 0, 0, 0 )
+
+[sub_resource type="CircleShape2D" id=2]
+resource_local_to_scene = true
+radius = 380.0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 92.5, 42.5 )
+
+[sub_resource type="ShaderMaterial" id=4]
+resource_local_to_scene = true
+shader = ExtResource( 8 )
+
+[sub_resource type="ShaderMaterial" id=5]
+resource_local_to_scene = true
+shader = ExtResource( 9 )
+
+[sub_resource type="CanvasItemMaterial" id=6]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=7]
+offsets = PoolRealArray( 0, 0.3, 1 )
+colors = PoolColorArray( 0.8, 0.97, 1, 0.8, 0.25, 0.68, 1, 0.5, 0.1, 0.3, 1, 0 )
+
+[sub_resource type="Curve" id=8]
+_data = [ Vector2( 0, 0.8 ), 0.0, 0.0, 0, 0, Vector2( 0.15, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=9]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.1 ), 0.0, 0.0, 0, 0 ]
+
+[node name="SevenStarSword" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+outline_shader_mat = SubResource( 1 )
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 2 )
+offset = Vector2( 52, 0 )
+
+[node name="Hitbox" parent="Sprite" index="0"]
+visible = false
+
+[node name="Collision" parent="Sprite/Hitbox" index="0"]
+position = Vector2( 42.5, 0 )
+shape = SubResource( 3 )
+
+[node name="Muzzle" parent="Sprite" index="1"]
+position = Vector2( 114, 0 )
+
+[node name="Attach" parent="Sprite" index="2"]
+position = Vector2( 0, 0 )
+
+[node name="Halo" type="Sprite" parent="Sprite" index="3"]
+material = SubResource( 5 )
+texture = ExtResource( 6 )
+offset = Vector2( 52, 0 )
+
+[node name="Edge" type="Sprite" parent="Sprite" index="4"]
+material = SubResource( 4 )
+texture = ExtResource( 6 )
+offset = Vector2( 52, 0 )
+
+[node name="Runes" type="Sprite" parent="Sprite" index="5"]
+material = SubResource( 6 )
+texture = ExtResource( 7 )
+offset = Vector2( 52, 0 )
+
+[node name="Sparks" type="CPUParticles2D" parent="Sprite" index="6"]
+material = SubResource( 6 )
+position = Vector2( 108, 0 )
+emitting = false
+amount = 14
+lifetime = 0.23
+local_coords = false
+texture = ExtResource( 10 )
+direction = Vector2( -1, 0 )
+spread = 28.0
+gravity = Vector2( 0, -12 )
+initial_velocity = 70.0
+initial_velocity_random = 0.45
+initial_velocity_curve = SubResource( 9 )
+scale_amount = 0.1
+scale_amount_random = 0.5
+scale_amount_curve = SubResource( 8 )
+color_ramp = SubResource( 7 )
+
+[node name="CollisionShape2D" parent="Range" index="0"]
+shape = SubResource( 2 )
+
+[node name="ShootingBehavior" parent="." index="4"]
+script = ExtResource( 5 )
+
+[node name="Trail" type="Node2D" parent="." index="5"]
+material = SubResource( 6 )
+script = ExtResource( 11 )
+
+[editable path="Sprite/Hitbox"]

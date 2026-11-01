@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cross_staff_seal.webp-52ec687b1f3e584596f54d3fc553fa13.stex"
+path="res://.import/cross_staff_seal.webp-108e717fc48fa9d50936e23f55991324.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/cross_staff/vfx/textures/cross_staff_seal.webp"
-dest_files=[ "res://.import/cross_staff_seal.webp-52ec687b1f3e584596f54d3fc553fa13.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/cross_staff/vfx/textures/cross_staff_seal.webp"
+dest_files=[ "res://.import/cross_staff_seal.webp-108e717fc48fa9d50936e23f55991324.stex" ]
 
 [params]
 

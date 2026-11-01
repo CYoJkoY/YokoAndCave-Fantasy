@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/earthshatter_particle_dust.webp-7d5ee725285dc522ccb384374421dec1.stex"
+path="res://.import/earthshatter_particle_dust.webp-e95c851e9ebf0f7aef42be45c2228822.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/earthshatter/earthshatter_particle_dust.webp"
-dest_files=[ "res://.import/earthshatter_particle_dust.webp-7d5ee725285dc522ccb384374421dec1.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/earthshatter/earthshatter_particle_dust.webp"
+dest_files=[ "res://.import/earthshatter_particle_dust.webp-e95c851e9ebf0f7aef42be45c2228822.stex" ]
 
 [params]
 

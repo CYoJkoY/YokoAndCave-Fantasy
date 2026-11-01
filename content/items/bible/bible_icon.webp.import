@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bible_icon.webp-5d649a6d44274552d11d2daef036a89a.stex"
+path="res://.import/bible_icon.webp-4f74a8e754f4599789eff447e2b7b0cb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/bible/bible_icon.webp"
-dest_files=[ "res://.import/bible_icon.webp-5d649a6d44274552d11d2daef036a89a.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/bible/bible_icon.webp"
+dest_files=[ "res://.import/bible_icon.webp-4f74a8e754f4599789eff447e2b7b0cb.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blood_ember.webp-d41174cdf92f188b93bbc5cf0a607b3f.stex"
+path="res://.import/blood_ember.webp-36376657e2769b4adc62c5d2e34ac87f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/bloodstained_banner/vfx/textures/blood_ember.webp"
-dest_files=[ "res://.import/blood_ember.webp-d41174cdf92f188b93bbc5cf0a607b3f.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/bloodstained_banner/vfx/textures/blood_ember.webp"
+dest_files=[ "res://.import/blood_ember.webp-36376657e2769b4adc62c5d2e34ac87f.stex" ]
 
 [params]
 

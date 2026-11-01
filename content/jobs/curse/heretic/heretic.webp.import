@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heretic.webp-c96d646d2a5cb3086e9facab4288d555.stex"
+path="res://.import/heretic.webp-f2a712f0a958917a4d4f276d2d81b98e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/curse/heretic/heretic.webp"
-dest_files=[ "res://.import/heretic.webp-c96d646d2a5cb3086e9facab4288d555.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/curse/heretic/heretic.webp"
+dest_files=[ "res://.import/heretic.webp-f2a712f0a958917a4d4f276d2d81b98e.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tambourine_swing_ribbon.webp-63bbb66a29899f500abf71151c8effd9.stex"
+path="res://.import/tambourine_swing_ribbon.webp-b50e684da2aa562d424ad97b3ab32785.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/tambourine/vfx/textures/tambourine_swing_ribbon.webp"
-dest_files=[ "res://.import/tambourine_swing_ribbon.webp-63bbb66a29899f500abf71151c8effd9.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/tambourine/vfx/textures/tambourine_swing_ribbon.webp"
+dest_files=[ "res://.import/tambourine_swing_ribbon.webp-b50e684da2aa562d424ad97b3ab32785.stex" ]
 
 [params]
 

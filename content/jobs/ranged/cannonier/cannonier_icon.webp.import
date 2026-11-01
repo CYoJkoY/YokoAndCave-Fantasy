@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cannonier_icon.webp-c0a9462002dc0fcf436d1bf2f9ec6cca.stex"
+path="res://.import/cannonier_icon.webp-6ffa835e02a9246ec918159fe8b5c3af.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/ranged/cannonier/cannonier_icon.webp"
-dest_files=[ "res://.import/cannonier_icon.webp-c0a9462002dc0fcf436d1bf2f9ec6cca.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/ranged/cannonier/cannonier_icon.webp"
+dest_files=[ "res://.import/cannonier_icon.webp-6ffa835e02a9246ec918159fe8b5c3af.stex" ]
 
 [params]
 

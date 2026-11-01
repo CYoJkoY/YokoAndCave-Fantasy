@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fallen_knight_icon.webp-f153920218bf5ed86e0d44c154019e47.stex"
+path="res://.import/fallen_knight_icon.webp-3f1e347ced96fd30ec83a38d58c00045.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/enemies/fallen_knight/fallen_knight_icon.webp"
-dest_files=[ "res://.import/fallen_knight_icon.webp-f153920218bf5ed86e0d44c154019e47.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/fallen_knight/fallen_knight_icon.webp"
+dest_files=[ "res://.import/fallen_knight_icon.webp-3f1e347ced96fd30ec83a38d58c00045.stex" ]
 
 [params]
 

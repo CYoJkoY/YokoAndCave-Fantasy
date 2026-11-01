@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lightning_mage_icon.webp-f2851ea6156befcfb01dae1e3bc390f0.stex"
+path="res://.import/lightning_mage_icon.webp-c7692fce05650c2c143c16c40275130b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/jobs/elemental/lightning_mage/lightning_mage_icon.webp"
-dest_files=[ "res://.import/lightning_mage_icon.webp-f2851ea6156befcfb01dae1e3bc390f0.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/elemental/lightning_mage/lightning_mage_icon.webp"
+dest_files=[ "res://.import/lightning_mage_icon.webp-c7692fce05650c2c143c16c40275130b.stex" ]
 
 [params]
 

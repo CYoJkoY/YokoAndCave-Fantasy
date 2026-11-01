@@ -1,0 +1,34 @@
+[gd_resource type="Resource" load_steps=11 format=2]
+
+[ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/miracle_star_icon.webp" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/miracle_star.tscn" type="PackedScene" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/4/miracle_star_4_stats.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/sets/unique/unique_set_data.tres" type="Resource" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/sets/sacred/sacred_set_data.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/sets/fallen/fallen_set_data.tres" type="Resource" id=7]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/4/miracle_star_4_holy.tres" type="Resource" id=8]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/4/miracle_star_4_level.tres" type="Resource" id=9]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/4/miracle_star_4_summon.tres" type="Resource" id=10]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "weapon_fantasy_miracle_star_4"
+unlocked_by_default = true
+can_be_looted = true
+icon = ExtResource( 2 )
+name = "WEAPON_FANTASY_MIRACLE_STAR"
+tier = 3
+value = 400
+effects = [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ]
+tracking_text = ""
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+weapon_id = "weapon_fantasy_miracle_star"
+type = 0
+sets = [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
+scene = ExtResource( 3 )
+stats = ExtResource( 4 )
+add_to_chars_as_starting = [  ]

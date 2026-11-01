@@ -1,6 +1,6 @@
 extends DoubleValueEffect
 
-const CLOCK_TOWER_CONFIG = preload("res://mods-unpacked/Yoko-Fantasy/extensions/effects/clock_tower_area/clock_tower_area_config.tres")
+const CLOCK_TOWER_CONFIG = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/clock_tower_area/clock_tower_area_config.tres")
 
 enum LineType { RADIUS, STRUCTURE_SPAWN, STRUCTURE_ATTACK_SPEED, ENEMY_SLOW, STRUCTURE_DISABLED, AREA }
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/star_glint_4pt.webp-c81b6b9ece3b27928eda11e6fd7e17df.stex"
+path="res://.import/star_glint_4pt.webp-241c74a0f3ae4dc241d3da9a54795c83.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/flying_blade/visuals/textures/star_glint_4pt.webp"
-dest_files=[ "res://.import/star_glint_4pt.webp-c81b6b9ece3b27928eda11e6fd7e17df.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/flying_blade/visuals/textures/star_glint_4pt.webp"
+dest_files=[ "res://.import/star_glint_4pt.webp-241c74a0f3ae4dc241d3da9a54795c83.stex" ]
 
 [params]
 

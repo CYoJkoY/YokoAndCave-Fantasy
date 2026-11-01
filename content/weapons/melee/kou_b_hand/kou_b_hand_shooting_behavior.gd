@@ -1,9 +1,9 @@
 extends "res://weapons/shooting_behaviors/weapon_shooting_behavior.gd"
 
 const FRAMES = [
-    preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_01.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_02.webp"),
-    preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_03.webp")
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_01.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_02.webp"),
+    preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_03.webp")
 ]
 
 const FRAME_SEQUENCE = [0, 1, 2, 1, 0]

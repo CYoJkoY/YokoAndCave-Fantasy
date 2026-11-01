@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/brave.webp-9f704ff1b7e03706cfc2636fab6b73bf.stex"
+path="res://.import/brave.webp-c90a4eba496adb5c893b09ac9d96960d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/characters/brave/brave.webp"
-dest_files=[ "res://.import/brave.webp-9f704ff1b7e03706cfc2636fab6b73bf.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/brave/brave.webp"
+dest_files=[ "res://.import/brave.webp-c90a4eba496adb5c893b09ac9d96960d.stex" ]
 
 [params]
 

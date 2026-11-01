@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blackthorn_shard.webp-f43ae35b6e01753ed3dc3faa0c5a8245.stex"
+path="res://.import/blackthorn_shard.webp-5fe75d5007627956fe91163c7ae3bb66.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/blackthorn_projectile/blackthorn_shard.webp"
-dest_files=[ "res://.import/blackthorn_shard.webp-f43ae35b6e01753ed3dc3faa0c5a8245.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/blackthorn_projectile/blackthorn_shard.webp"
+dest_files=[ "res://.import/blackthorn_shard.webp-5fe75d5007627956fe91163c7ae3bb66.stex" ]
 
 [params]
 

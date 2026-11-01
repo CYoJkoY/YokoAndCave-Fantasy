@@ -1,6 +1,6 @@
 extends "res://ui/menus/shop/entity_description.gd"
 
-const FANTASY_PET_DATA = preload("res://mods-unpacked/Yoko-Fantasy/content/entities/pets/fantasy_pet_data.gd")
+const FANTASY_PET_DATA = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/fantasy_pet_data.gd")
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func set_item(item_data: ItemEntity, player_index: int, item_count := 1) -> void:

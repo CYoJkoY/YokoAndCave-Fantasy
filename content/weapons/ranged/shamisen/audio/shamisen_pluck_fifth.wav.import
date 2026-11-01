@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/shamisen_pluck_fifth.wav-d2f6a70591574209dcb5516bbb9478c7.sample"
+path="res://.import/shamisen_pluck_fifth.wav-367d80c8223ed0df866b4f86e503367b.sample"
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/shamisen/audio/shamisen_pluck_fifth.wav"
-dest_files=[ "res://.import/shamisen_pluck_fifth.wav-d2f6a70591574209dcb5516bbb9478c7.sample" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/shamisen/audio/shamisen_pluck_fifth.wav"
+dest_files=[ "res://.import/shamisen_pluck_fifth.wav-367d80c8223ed0df866b4f86e503367b.sample" ]
 
 [params]
 

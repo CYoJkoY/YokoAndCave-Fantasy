@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/frost_crystal_tip_shimmer.webp-87a5784d88d955c7fbd12b64224a89af.stex"
+path="res://.import/frost_crystal_tip_shimmer.webp-edde6b439105e9c5bf299f113eeac399.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/frostspray_projectile/frost_crystal_tip_shimmer.webp"
-dest_files=[ "res://.import/frost_crystal_tip_shimmer.webp-87a5784d88d955c7fbd12b64224a89af.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/frostspray_projectile/frost_crystal_tip_shimmer.webp"
+dest_files=[ "res://.import/frost_crystal_tip_shimmer.webp-edde6b439105e9c5bf299f113eeac399.stex" ]
 
 [params]
 

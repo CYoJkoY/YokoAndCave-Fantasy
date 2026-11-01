@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/secluded_paradise_icon.webp-23c7b90716ff151e8ca90a783a5d942b.stex"
+path="res://.import/secluded_paradise_icon.webp-d0a8f736b91ea4f07a723523159fbdee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/secluded_paradise/secluded_paradise_icon.webp"
-dest_files=[ "res://.import/secluded_paradise_icon.webp-23c7b90716ff151e8ca90a783a5d942b.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/secluded_paradise/secluded_paradise_icon.webp"
+dest_files=[ "res://.import/secluded_paradise_icon.webp-d0a8f736b91ea4f07a723523159fbdee.stex" ]
 
 [params]
 

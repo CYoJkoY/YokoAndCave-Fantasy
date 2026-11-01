@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://weapons/weapon_stats/melee_weapon_stats.gd" type="Script" id=1]
+[ext_resource path="res://weapons/melee_sounds/whoosh_swish_high_big_01.wav" type="AudioStream" id=2]
+[ext_resource path="res://weapons/melee_sounds/whoosh_swish_high_big_02.wav" type="AudioStream" id=3]
+
+[resource]
+script = ExtResource( 1 )
+cooldown = 61
+damage = 200
+accuracy = 1.0
+crit_chance = 0.03
+crit_damage = 2.0
+min_range = 0
+max_range = 235
+knockback = 10
+scaling_stats = [ [ "stat_melee_damage", 2.0 ], [ "stat_curse", 2.0 ] ]
+shooting_sounds = [ ExtResource( 2 ), ExtResource( 3 ) ]
+sound_db_mod = -8
+recoil_duration = 0.1
+attack_type = 1

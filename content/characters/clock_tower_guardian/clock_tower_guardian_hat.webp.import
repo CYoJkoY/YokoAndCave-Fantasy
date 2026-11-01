@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/clock_tower_guardian_hat.webp-001a0f1d730e1ff569cbca0ad6e2f416.stex"
+path="res://.import/clock_tower_guardian_hat.webp-3ac0d8ec0433aa074d71b240fcba0247.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/characters/clock_tower_guardian/clock_tower_guardian_hat.webp"
-dest_files=[ "res://.import/clock_tower_guardian_hat.webp-001a0f1d730e1ff569cbca0ad6e2f416.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/clock_tower_guardian/clock_tower_guardian_hat.webp"
+dest_files=[ "res://.import/clock_tower_guardian_hat.webp-3ac0d8ec0433aa074d71b240fcba0247.stex" ]
 
 [params]
 

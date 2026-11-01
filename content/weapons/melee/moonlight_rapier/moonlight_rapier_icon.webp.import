@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/moonlight_rapier_icon.webp-d5604914ae4ceb6359432c15e9688385.stex"
+path="res://.import/moonlight_rapier_icon.webp-57ab303a7a32b89c91d5584834e0d0b4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/melee/moonlight_rapier/moonlight_rapier_icon.webp"
-dest_files=[ "res://.import/moonlight_rapier_icon.webp-d5604914ae4ceb6359432c15e9688385.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/moonlight_rapier/moonlight_rapier_icon.webp"
+dest_files=[ "res://.import/moonlight_rapier_icon.webp-57ab303a7a32b89c91d5584834e0d0b4.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cursed_fire_icon.webp-6ce7c613d6954a68969cf8a18252c611.stex"
+path="res://.import/cursed_fire_icon.webp-93ebbfb467b237c1026c21087ddd233f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/items/cursed_fire/cursed_fire_icon.webp"
-dest_files=[ "res://.import/cursed_fire_icon.webp-6ce7c613d6954a68969cf8a18252c611.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/items/cursed_fire/cursed_fire_icon.webp"
+dest_files=[ "res://.import/cursed_fire_icon.webp-93ebbfb467b237c1026c21087ddd233f.stex" ]
 
 [params]
 

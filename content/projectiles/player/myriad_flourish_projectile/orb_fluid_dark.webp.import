@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/orb_fluid_dark.webp-4841f25a2535dfe04873d1ccad8b6269.stex"
+path="res://.import/orb_fluid_dark.webp-47190471273666a5a36e8936fc3e5bd4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/projectiles/player/myriad_flourish_projectile/orb_fluid_dark.webp"
-dest_files=[ "res://.import/orb_fluid_dark.webp-4841f25a2535dfe04873d1ccad8b6269.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/projectiles/player/myriad_flourish_projectile/orb_fluid_dark.webp"
+dest_files=[ "res://.import/orb_fluid_dark.webp-47190471273666a5a36e8936fc3e5bd4.stex" ]
 
 [params]
 

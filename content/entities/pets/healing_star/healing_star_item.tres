@@ -1,9 +1,9 @@
 [gd_resource type="Resource" load_steps=5 format=2]
 
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/healing_star/healing_star_stats.tres" type="Resource" id=1]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/items/healing_star/healing_star_data.tres" type="Resource" id=2]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/healing_star/healing_star_icon.webp" type="Texture" id=3]
-[ext_resource path="res://mods-unpacked/Yoko-Fantasy/content/entities/pets/fantasy_pet_data.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/healing_star/healing_star_data.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/healing_star_icon.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/fantasy_pet_data.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/healing_star_screen.webp" type="Texture" id=5]
 
 [resource]
 script = ExtResource( 4 )
@@ -20,7 +20,7 @@ is_lockable = true
 unlock_codex_descr_after_get_it = 1
 is_cursed = false
 curse_factor = 0.0
-stats = ExtResource( 1 )
+screen_example = ExtResource( 5 )
 behaviour_description = "FANTASY_HEALING_STAR_BEHAVIOUR_DESCRIPTION"
 fantasy_affected_player_stats = [ "stat_max_hp", "consumable_heal" ]
 show_hp = false

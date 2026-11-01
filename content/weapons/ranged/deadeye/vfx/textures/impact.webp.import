@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/impact.webp-0db0689576ff9f3d0389a08a2c13324b.stex"
+path="res://.import/impact.webp-03374328bda7935f1d1847eb2349b1d1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/deadeye/vfx/textures/impact.webp"
-dest_files=[ "res://.import/impact.webp-0db0689576ff9f3d0389a08a2c13324b.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/deadeye/vfx/textures/impact.webp"
+dest_files=[ "res://.import/impact.webp-03374328bda7935f1d1847eb2349b1d1.stex" ]
 
 [params]
 

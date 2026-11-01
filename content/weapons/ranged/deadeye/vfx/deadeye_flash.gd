@@ -1,7 +1,7 @@
 extends Node2D
 
-const MUZZLE_TEXTURE: Texture = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/deadeye/vfx/textures/muzzle.webp")
-const IMPACT_TEXTURE: Texture = preload("res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/deadeye/vfx/textures/impact.webp")
+const MUZZLE_TEXTURE: Texture = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/deadeye/vfx/textures/muzzle.webp")
+const IMPACT_TEXTURE: Texture = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/deadeye/vfx/textures/impact.webp")
 
 onready var _flare: Sprite = $Flare
 onready var _core: Sprite = $Core

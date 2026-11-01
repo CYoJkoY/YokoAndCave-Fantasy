@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/apostle.webp-af62ed10e0d2842bf7fdc1bfc747fff0.stex"
+path="res://.import/apostle.webp-b58f2700892648f0d3a0979c2b11a559.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/characters/apostle/apostle.webp"
-dest_files=[ "res://.import/apostle.webp-af62ed10e0d2842bf7fdc1bfc747fff0.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/characters/apostle/apostle.webp"
+dest_files=[ "res://.import/apostle.webp-b58f2700892648f0d3a0979c2b11a559.stex" ]
 
 [params]
 

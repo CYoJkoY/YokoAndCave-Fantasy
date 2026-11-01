@@ -1,8 +1,10 @@
 extends "res://singletons/item_service.gd"
 
+const FANTASY_UNIQUE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/unique_weapon_service.gd")
+
+var _fantasy_unique_weapons: Array = []
 var jobs: Array = []
 var jobs_by_stage: Dictionary = {0: [], 1: []}
-var _fantasy_added_starting_weapons: Array = []
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func _ready() -> void:
@@ -10,7 +12,13 @@ func _ready() -> void:
 
 func init_unlocked_pool() -> void:
     .init_unlocked_pool()
-    _fantasy_rebuild_mod_starting_weapons()
+    _fantasy_unique_weapons.clear()
+    for tier_data in _tiers_data:
+        for weapon in tier_data[TierData.WEAPONS].duplicate():
+            if !FANTASY_UNIQUE.is_unique(weapon): continue
+            _fantasy_unique_weapons.append(weapon)
+            tier_data[TierData.WEAPONS].erase(weapon)
+            tier_data[TierData.ALL_ITEMS].erase(weapon)
 
 func apply_item_effect_modifications(item: ItemParentData, player_index: int) -> ItemParentData:
     var new_item: ItemParentData =.apply_item_effect_modifications(item, player_index)
@@ -31,49 +39,46 @@ func get_icon_for_duplicate_shop_item(character: CharacterData, player_items: Ar
     return icon
 
 func _get_rand_item_for_wave(wave: int, player_index: int, type: int, args: GetRandItemForWaveArgs) -> ItemParentData:
+    if type == TierData.WEAPONS and args.fixed_tier == -1:
+        var luck: float = Utils.get_stat(Keys.stat_luck_hash, player_index) / 100.0
+        var unique_chance: float = FANTASY_UNIQUE.chance(wave, luck)
+        if Utils.get_chance_success(unique_chance):
+            var unique_candidates: Array = _fantasy_get_unique_weapon_candidates(player_index, args)
+            if !unique_candidates.empty():
+                var set_bonus: float = max(0, (MAX_WAVE_ONE_WEAPON_GUARANTEED + 1 - RunData.current_wave) * (BONUS_CHANCE_SAME_WEAPON_SET / MAX_WAVE_ONE_WEAPON_GUARANTEED))
+                if Utils.get_chance_success(CHANCE_SAME_WEAPON_SET + set_bonus):
+                    unique_candidates = FANTASY_UNIQUE.prefer_sets(unique_candidates, RunData.get_player_sets(player_index))
+                return apply_item_effect_modifications(Utils.get_rand_element(unique_candidates), player_index)
     var item: ItemParentData =._get_rand_item_for_wave(wave, player_index, type, args)
     item = _fantasy_can_spawn_erosion_related_item(item, wave, player_index, type, args)
 
     return item
 
 # ══════════════════════════════════════════ Custom ══════════════════════════════════════════ #
-func _fantasy_rebuild_mod_starting_weapons() -> void:
-    for added in _fantasy_added_starting_weapons:
-        var character: CharacterData = added[0]
-        var weapon: WeaponData = added[1]
-        if is_instance_valid(character):
-            character.starting_weapons.erase(weapon)
-    _fantasy_added_starting_weapons.clear()
-
-    var mod_weapons: Array = []
-    for weapon in weapons:
-        if weapon is WeaponData and weapon.resource_path.begins_with("res://mods-unpacked/Yoko-Fantasy/"):
-            mod_weapons.append(weapon)
-
-    for character in characters:
-        if !(character is CharacterData):
-            continue
-        for weapon in mod_weapons:
-            if !_fantasy_can_be_starting_weapon(character, weapon):
-                continue
-            character.starting_weapons.append(weapon)
-            _fantasy_added_starting_weapons.append([character, weapon])
-
-func _fantasy_can_be_starting_weapon(character: CharacterData, weapon: WeaponData) -> bool:
-    if weapon.tier != ItemParentData.Tier.COMMON:
-        return false
-    if character.starting_weapons.has(weapon):
-        return false
-
-    for effect in character.effects:
-        if effect.value <= 0:
-            continue
-        if effect.key == "no_melee_weapons" and weapon.type == WeaponType.MELEE:
-            return false
-        if effect.key == "no_ranged_weapons" and weapon.type == WeaponType.RANGED:
-            return false
-
-    return true
+func _fantasy_get_unique_weapon_candidates(player_index: int, args: GetRandItemForWaveArgs) -> Array:
+    var candidates: Array = []
+    var owned_weapons: Array = RunData.get_player_weapons_ref(player_index)
+    var banned: Array = RunData.players_data[player_index].banned_items
+    var no_melee: bool = RunData.get_player_effect_bool(Keys.no_melee_weapons_hash, player_index)
+    var no_ranged: bool = RunData.get_player_effect_bool(Keys.no_ranged_weapons_hash, player_index)
+    var no_structures: bool = RunData.get_player_effect(Keys.remove_shop_items_hash, player_index).has(Keys.structure_hash)
+    var min_tier: int = RunData.get_player_effect(Keys.min_weapon_tier_hash, player_index)
+    var max_tier: int = RunData.get_player_effect(Keys.max_weapon_tier_hash, player_index)
+    var excluded_items: Array = args.excluded_items + RunData.get_player_locked_shop_items(player_index)
+    for weapon in _fantasy_unique_weapons:
+        if FANTASY_UNIQUE.get_owned_unique_weapon(weapon, owned_weapons) != null: continue
+        if weapon.tier < min_tier or weapon.tier > max_tier: continue
+        if no_melee and weapon.type == WeaponType.MELEE: continue
+        if no_ranged and weapon.type == WeaponType.RANGED: continue
+        if no_structures and EntityService.is_weapon_spawning_structure(weapon): continue
+        if banned.has(weapon.my_id) or banned.has(weapon.my_id_hash) or banned.has(weapon.weapon_id) or banned.has(weapon.weapon_id_hash): continue
+        var excluded: bool = false
+        for entry in excluded_items:
+            if entry[0] is WeaponData and entry[0].weapon_id == weapon.weapon_id:
+                excluded = true
+                break
+        if !excluded: candidates.append(weapon)
+    return candidates
 
 func _fantasy_extra_curse_item(item: ItemParentData, player_index: int) -> ItemParentData:
     if item.is_cursed: return item
@@ -88,7 +93,7 @@ func _fantasy_extra_curse_item(item: ItemParentData, player_index: int) -> ItemP
     return item
 
 func _fantasy_get_jobs_by_stage() -> void:
-    jobs = ProgressData.get_dlc_data("Yoko-Fantasy").jobs
+    jobs = ProgressData.get_dlc_data("YokoAndCave-Fantasy").jobs
     for job in jobs:
         var job_stage: int = job.stage
         jobs_by_stage[job_stage].append(job)
@@ -112,14 +117,15 @@ func _fantasy_get_stat_description_text(stat_description: String, stat_hash: int
 
     match stat_hash:
         Utils.stat_fantasy_holy_hash:
-            var stat_holy: float = Utils.average_all_player_stats(Utils.stat_fantasy_holy_hash)
+            var stat_holy: float = max(0.0, Utils.average_all_player_stats(Utils.stat_fantasy_holy_hash))
             var damage_bonus: int = int(stat_holy)
-            var chance_drop_soul: int = int(stat_holy / (stat_holy + 50.0) * 100)
+            var chance_drop_soul: int = int(stat_holy / (stat_holy + 50.0) * 50)
             stat_description = Text.text(key, [str(damage_bonus), str(chance_drop_soul)])
 
         Utils.stat_fantasy_soul_hash:
             var bonus: int = 10 + RunData.get_player_effect(Utils.fantasy_soul_bonus_hash, player_index)
-            stat_description = Text.text(key, [str(bonus), str(bonus)])
+            var duration: float = 2.5 + RunData.get_player_effect(Utils.fantasy_soul_duration_hash, player_index)
+            stat_description = Text.text(key, [str(bonus), str(bonus), str(duration)])
 
     return stat_description
 
@@ -144,11 +150,7 @@ func _fantasy_can_spawn_erosion_related_item(item: ItemParentData, wave: int, pl
 
     if !is_erosion_related: return item
 
-    var can_spawn: bool = false
-    var item_effects: Array = RunData.get_player_effect(Utils.fantasy_erosion_hash, player_index)
-    if !item_effects.empty(): can_spawn = true
-
-    if !can_spawn: return _get_rand_item_for_wave(wave, player_index, type, args)
+    if !Utils.fa_has_erosion(player_index): return _get_rand_item_for_wave(wave, player_index, type, args)
 
     return item
 

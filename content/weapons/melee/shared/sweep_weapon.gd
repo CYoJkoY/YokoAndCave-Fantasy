@@ -26,7 +26,7 @@ func update_sprite_flipv() -> void:
 
 func _update_swing_fade(fade: float) -> void:
     _swing.modulate.a = fade * fade * 0.18 * ProgressData.settings.explosion_opacity
-    _swing.visible = fade > 0.0 and ProgressData.settings.visual_effects
+    _swing.visible = fade > 0.0
 
 
 func begin_swing(distance: float) -> void:
@@ -37,7 +37,7 @@ func begin_swing(distance: float) -> void:
 
 
 func update_swing(progress: float) -> void:
-    _swing.visible = ProgressData.settings.visual_effects
+    _swing.visible = true
     _swing.material.set_shader_param("progress", progress)
     _swing.modulate.a = (0.18 + sin(progress * PI) * 0.18) * ProgressData.settings.explosion_opacity
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blackthorn_charge.webp-74b045bdaafbba7e6af2277770ad2087.stex"
+path="res://.import/blackthorn_charge.webp-33c799d08c2203ccd37c7ac52dd6ae46.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods-unpacked/Yoko-Fantasy/content/weapons/ranged/blackthorn_bow/blackthorn_charge.webp"
-dest_files=[ "res://.import/blackthorn_charge.webp-74b045bdaafbba7e6af2277770ad2087.stex" ]
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/blackthorn_bow/blackthorn_charge.webp"
+dest_files=[ "res://.import/blackthorn_charge.webp-33c799d08c2203ccd37c7ac52dd6ae46.stex" ]
 
 [params]
 
