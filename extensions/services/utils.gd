@@ -289,8 +289,8 @@ func fa_get_synthesis_pity_bonus_chance(pity_id: String, pity_chance_step: float
 # ══════════════════════════════════════════ Soul ══════════════════════════════════════════ #
 func fa_spawn_soul(num: int, pos: Vector2, spread: int) -> void:
     var main: Main = get_scene_node()
+    var consumable_to_spawn: ConsumableData = ProgressData.ncl_get_content("YokoAndCave-Fantasy").soul_data
     for _i in range(num):
-        var consumable_to_spawn: ConsumableData = ProgressData.get_dlc_data("YokoAndCave-Fantasy").soul_data
         var consumable: Consumable = main.get_node_from_pool(main._consumable_pool_id, main._consumables_container)
         if consumable == null:
             consumable = main.consumable_scene.instance()
@@ -316,6 +316,9 @@ func fa_is_item_blessed(item_data: ItemParentData) -> bool:
 
 func fa_is_negative_effect(effect: Effect) -> bool:
     if effect == null or effect.custom_key == "fantasy_blessed" or effect.custom_key_hash == fantasy_blessed_hash:
+        return false
+
+    if effect.key_hash == Keys.stat_evolution_hash and effect.effect_sign == Sign.FROM_VALUE:
         return false
 
     if effect.key_hash == Keys.torture_hash and effect.value > 0:

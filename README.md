@@ -5,7 +5,7 @@
   <p>
     <a href="https://github.com/CYoJkoY/Yoko-Fantasy/releases"><img src="https://img.shields.io/github/v/release/CYoJkoY/Yoko-Fantasy?display_name=tag&sort=semver&style=flat-square&label=release" alt="Latest release"></a>
     <a href="https://github.com/CYoJkoY/Yoko-Fantasy/actions/workflows/release.yml"><img src="https://img.shields.io/github/actions/workflow/status/CYoJkoY/Yoko-Fantasy/release.yml?style=flat-square&label=build" alt="Build status"></a>
-    <img src="https://img.shields.io/badge/Brotato-1.1.15.4-478CBF?style=flat-square" alt="Brotato 1.1.15.4">
+    <img src="https://img.shields.io/badge/Brotato-1.2.0.0-478CBF?style=flat-square" alt="Brotato 1.2.0.0">
     <img src="https://img.shields.io/badge/Mod%20Loader-6.3.0-5965FF?style=flat-square" alt="Mod Loader 6.3.0">
     <a href="LICENSE"><img src="https://img.shields.io/github/license/CYoJkoY/Yoko-Fantasy?style=flat-square" alt="MIT License"></a>
   </p>
@@ -46,21 +46,33 @@ Representative content includes Holy and Blazing Path variants, Prism Tower, Hea
 
 | Resource | Role |
 | :--- | :--- |
-| `NewContentData.tres` | Primary content registration |
-| `NewContentDataDLC1.tres` | Additional content registration |
+| `NewContentData.tres` | Common content, loaded regardless of DLC ownership |
+| `NewContentDataDLC1.tres` | Additional content, loaded only when Abyssal Terrors is owned |
 | `FantasyNewContent.gd` | Custom registration and content hooks |
 
 The architecture keeps content inspectable while attaching deeper behavior to the owning Brotato subsystem.
 
 ## <img src="assets/readme/icons/installation.svg" width="20" height="20" alt=""> Installation
 
-Requirements: **Brotato 1.1.15.4**, **Brotato Mod Loader 6.3.0**, [Yoko-NewContentLoader](https://github.com/CYoJkoY/Yoko-NewContentLoader), and [Yoko-MoreStatsContainer](https://github.com/CYoJkoY/Yoko-MoreStatsContainer).
+Requirements: **Brotato 1.2.0.0**, **Brotato Mod Loader 6.3.0**, [Yoko-NewContentLoader](https://github.com/CYoJkoY/Yoko-NewContentLoader), and [Yoko-MoreStatsContainer](https://github.com/CYoJkoY/Yoko-MoreStatsContainer).
 
 1. Install Brotato and the required Mod Loader version.
 2. Install both required Yoko dependencies.
 3. Download the latest `Fantasy-*.zip` from [Releases](https://github.com/CYoJkoY/Yoko-Fantasy/releases).
 4. Place the ZIP in the Mod Loader `mods` directory.
 5. Launch Brotato and verify the dependency chain loads.
+
+### DLC and content selection
+
+Fantasy loads common content for every player and adds its DLC1 content only when the game reports ownership of **Abyssal Terrors**. There is currently no Fantasy DLC2 registry: owning **Primal Dread** alone adds no DLC-specific Fantasy content. Restart the game after changing DLC ownership or enabled mods.
+
+The native content selector controls Fantasy's item pools and character availability. Disabling the content set makes its required characters unavailable, including for random selection; it does not unload mod scripts, jobs or zones.
+
+### Save compatibility
+
+The Fantasy tree zone uses ID `1002` to avoid the new official zone's ID `2`. Saves from the pre-1.2 mod version are not supported; this version does not migrate old runs or progression.
+
+Current-version runs record their required mod/DLC content; resuming without required content is rejected before deserialization. Packaged gameplay still requires in-game validation. The current adaptation does not add Fantasy-specific mechanical, mutation or evolution gameplay.
 
 ## <img src="assets/readme/icons/development.svg" width="20" height="20" alt=""> Development & support
 

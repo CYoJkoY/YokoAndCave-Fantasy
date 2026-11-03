@@ -8,7 +8,7 @@ func get_elements_with_count(elements: Array) -> Array:
     var element_index = {}
     var element_list = []
     for element in elements:
-        if element.is_cursed:
+        if ItemService.get_flavor(element) != ItemFlavor.PLAIN:
             element_list.append([element, 1])
         else:
             var key: String = Utils.fa_get_item_stack_key(element)
@@ -21,15 +21,15 @@ func get_elements_with_count(elements: Array) -> Array:
     return element_list
 
 func add_element(element: ItemParentData, check_for_duplicates: bool = false, sort_inventory: bool = true, _display_banned: float = 0, animated_entrance = false) -> void:
-    if check_for_duplicates and not element.is_cursed:
+    if check_for_duplicates and ItemService.get_flavor(element) == ItemFlavor.PLAIN:
         var key: String = Utils.fa_get_item_stack_key(element)
         for child in get_children():
-            if child.item != null and not child.item.is_cursed \
+            if child.item != null and ItemService.get_flavor(child.item) == ItemFlavor.PLAIN \
             and Utils.fa_get_item_stack_key(child.item) == key:
                 child.add_to_number()
                 return
 
-    var _instance = _spawn_element(element, _display_banned, animated_entrance)
+    _spawn_element(element, _display_banned, animated_entrance)
 
     if sort_inventory: emit_signal("need_to_sort_inventory")
 

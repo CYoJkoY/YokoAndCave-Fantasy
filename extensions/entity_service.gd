@@ -10,7 +10,8 @@ func sort_turrets_by_strength(a: TurretEffect, b: TurretEffect) -> bool:
         "effect_turret_flame",
         "effect_turret",
         "FANTASY_PRISM_TOWER_MAIN",
-        "effect_turret_healing"
+        "effect_turret_healing",
+        "effect_turret_damage_taken"
     ]
 
     var a_index: = ordering.find(a.text_key)

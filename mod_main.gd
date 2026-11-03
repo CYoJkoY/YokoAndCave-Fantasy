@@ -22,7 +22,8 @@ func install_script_extensions() -> void:
         # STATS: Soul[ 1/3 ]
         # ENEMIES: World Tree
         #          Slime
-        # EFFECTS: gain_stat_for_every_stat[ living_cursed_enemy ]
+        # EFFECTS: extra_curse_enemy
+        #          gain_stat_for_every_stat[ living_cursed_enemy ]
         #          decaying_slow_enemy_when_below_hp[ 1/2 ]
         #          slow_cursed_enemy,
         #          time_bonus_current_health_damage
@@ -47,8 +48,7 @@ func install_script_extensions() -> void:
         "enemy.gd",
         # WEAPONS: Kou B Hand fixed self-loss
         # STATS: Holy[ 2/2 ]
-        # EFFECTS: extra_curse_enemy
-        #          on_target_enemy_killed_buff_future_target_enemy[ 1/2 ]
+        # EFFECTS: on_target_enemy_killed_buff_future_target_enemy[ 1/2 ]
         #          cannot_damage_tree[ 1/5 ]
 
         "player_run_data.gd",

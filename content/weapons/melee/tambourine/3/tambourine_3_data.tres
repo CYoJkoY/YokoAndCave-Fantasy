@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=9 format=2]
 
 [ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
-[ext_resource path="res://dlcs/dlc_1/sets/musical/musical_set_data.tres" type="Resource" id=2]
+[ext_resource path="res://items/sets/musical/musical_set_data.tres" type="Resource" id=2]
 [ext_resource path="res://items/sets/support/support_set_data.tres" type="Resource" id=3]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/tambourine/tambourine_icon.webp" type="Texture" id=4]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/tambourine/tambourine.tscn" type="PackedScene" id=5]
@@ -30,4 +30,3 @@ sets = [ ExtResource( 2 ), ExtResource( 3 ) ]
 scene = ExtResource( 5 )
 stats = ExtResource( 6 )
 upgrades_into = ExtResource( 7 )
-add_to_chars_as_starting = [  ]

@@ -448,10 +448,10 @@ func _hide_visuals() -> void:
     _tip_embers.emitting = false
 
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
     if _finished:
         return
-    .stop()
+    .stop(from_screen_border)
 
 
 func _return_to_pool() -> void:

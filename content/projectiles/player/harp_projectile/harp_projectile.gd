@@ -88,7 +88,7 @@ func bounce(thing_hit: Node) -> void:
     _reset_micro_homing()
 
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
     if _enable_stop_delay:
         return
     velocity = Vector2.ZERO
@@ -96,7 +96,7 @@ func stop() -> void:
     _sprite.visible = false
     _aura.visible = false
     _score.release()
-    .stop()
+    .stop(from_screen_border)
 
 
 func _on_Hitbox_hit_something(thing_hit: Node, damage_dealt: int) -> void:

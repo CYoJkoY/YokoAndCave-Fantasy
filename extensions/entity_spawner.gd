@@ -36,19 +36,10 @@ func on_enemy_charmed(enemy: Entity) -> void:
     if plant_enemies.has(enemy): plant_enemies.erase(enemy)
     _fantasy_charm_enemy_with_detect_ability(enemy)
 
-func spawn_entity_birth(
-    type: int,
-    scene: PackedScene,
-    pos: Vector2,
-    data: Resource = null,
-    player_index: = - 1,
-    source = null,
-    charmed_by: = - 1
-    ) -> void:
-    if type == EntityType.STRUCTURE:
-        pos = _fantasy_get_clock_tower_structure_pos(player_index, pos)
-
-    .spawn_entity_birth(type, scene, pos, data, player_index, source, charmed_by)
+func spawn_entity_birth(request: SpawnRequest) -> void:
+    if request.type == EntityType.STRUCTURE:
+        request.position = _fantasy_get_clock_tower_structure_pos(request.player_index, request.position)
+    .spawn_entity_birth(request)
 
 # ══════════════════════════════════════════ Custom ══════════════════════════════════════════ #
 func _fantasy_get_clock_tower_structure_pos(player_index: int, fallback_pos: Vector2) -> Vector2:

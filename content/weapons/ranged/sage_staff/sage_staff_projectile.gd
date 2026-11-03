@@ -233,13 +233,13 @@ func _explode(thing_hit: Node) -> float:
     return explosion.scale.x * EFFECT.EXPLOSION_BASE_RADIUS
 
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
     if not _alive:
         return
     _alive = false
     _visuals.stop(_ends_on_hit, _hit_position)
     velocity = Vector2.ZERO
-    .stop()
+    .stop(from_screen_border)
 
 
 func _return_to_pool() -> void:

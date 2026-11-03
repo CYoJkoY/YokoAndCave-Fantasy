@@ -170,12 +170,12 @@ func _update_fluid_serpent_body(t: float) -> void:
     _ember_particles.position = _line.get_point_position(num_body_points - 1)
 
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
     if _enable_stop_delay:
         return
 
     _stop_head_scale = _head_sprite.scale
-    .stop()
+    .stop(from_screen_border)
     velocity = Vector2.ZERO
     _ember_particles.emitting = false
 

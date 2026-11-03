@@ -51,13 +51,13 @@ func _on_Hitbox_hit_something(thing_hit: Node, damage_dealt: int) -> void:
 	_handling_hit = false
 
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
 	if not _hitbox.active:
 		return
 
 	if not _handling_hit:
 		_detonate(velocity)
-	.stop()
+	.stop(from_screen_border)
 
 
 func _detonate(impact_dir: Vector2) -> void:

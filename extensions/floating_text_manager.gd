@@ -29,6 +29,7 @@ func _exit_tree() -> void:
     set_process(false)
 
 func _on_unit_took_damage(unit: Unit, value: int, knockback_direction: Vector2, is_crit: bool, is_dodge: bool, is_protected: bool, armor_did_something: bool, args: TakeDamageArgs, hit_type: int, is_one_shot: bool) -> void:
+    if args.hide_feedback: return
     if not ProgressData.settings.damage_display:
         return
     if not _cleaning_up and unit is Enemy and is_instance_valid(args.hitbox) \

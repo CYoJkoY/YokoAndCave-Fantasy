@@ -7,9 +7,6 @@ var jobs: Array = []
 var jobs_by_stage: Dictionary = {0: [], 1: []}
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
-func _ready() -> void:
-    _fantasy_get_jobs_by_stage()
-
 func init_unlocked_pool() -> void:
     .init_unlocked_pool()
     _fantasy_unique_weapons.clear()
@@ -81,19 +78,21 @@ func _fantasy_get_unique_weapon_candidates(player_index: int, args: GetRandItemF
     return candidates
 
 func _fantasy_extra_curse_item(item: ItemParentData, player_index: int) -> ItemParentData:
-    if item.is_cursed: return item
+    if !can_item_be_cursed(item): return item
 
     var effect_items: Array = RunData.get_player_effect(Utils.fantasy_extra_curse_item_hash, player_index)
     for effect in effect_items:
         if !Utils.get_chance_success(effect[1] / 100.0): continue
 
-        RunData.ncl_add_effect_tracking_value(effect[0], 1, player_index)
-        return Utils.ncl_curse_item(item, player_index)
+        var cursed_item: ItemParentData = Utils.ncl_curse_item(item, player_index)
+        if cursed_item.is_cursed:
+            RunData.ncl_add_effect_tracking_value(effect[0], 1, player_index)
+        return cursed_item
 
     return item
 
-func _fantasy_get_jobs_by_stage() -> void:
-    jobs = ProgressData.get_dlc_data("YokoAndCave-Fantasy").jobs
+func _fantasy_rebuild_jobs_by_stage() -> void:
+    jobs_by_stage = {0: [], 1: []}
     for job in jobs:
         var job_stage: int = job.stage
         jobs_by_stage[job_stage].append(job)

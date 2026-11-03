@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/spawn_enemies_per_interval/spawn_enemies_per_interval_effect.gd" type="Script" id=1]
-[ext_resource path="res://dlcs/dlc_1/enemies/sea_pig/sea_pig.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/units/enemies/abyss/basic/sea_pig/sea_pig.tscn" type="PackedScene" id=2]
 
 [resource]
 script = ExtResource( 1 )

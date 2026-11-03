@@ -268,11 +268,11 @@ func bounce(thing_hit: Node) -> void:
     _hide_afterimages()
 
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
     if _enable_stop_delay:
         return
     _stop_emitters()
-    .stop()
+    .stop(from_screen_border)
 
 
 func _stop_emitters() -> void:

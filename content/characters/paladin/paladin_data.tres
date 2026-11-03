@@ -22,6 +22,7 @@
 
 [resource]
 script = ExtResource( 1 )
+required_item_set = "YokoAndCave-Fantasy"
 my_id = "character_fantasy_paladin"
 unlocked_by_default = true
 can_be_looted = true

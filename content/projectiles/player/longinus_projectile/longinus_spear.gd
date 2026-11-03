@@ -234,7 +234,7 @@ func _spawn_spark(scale_mult: float) -> void:
     spark.play(global_position, main, _hit_spark_pool_id, scale_mult, _opacity)
 
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
     if _enable_stop_delay:
         return
 
@@ -245,7 +245,7 @@ func stop() -> void:
     _comet_trail.visible = false
     for ghost in _afterimages:
         ghost.visible = false
-    .stop()
+    .stop(from_screen_border)
 
 
 func _on_trail_finished() -> void:

@@ -21,6 +21,7 @@ func setup_orbit_parent(parent_projectile: Node2D, orbit_angle: float, orbit_rad
 
 func _physics_process(delta) -> void:
     if _orbit_enabled:
+        delta *= _get_time_factor()
         if lifetime <= 0:
             delta_time += delta
 
@@ -29,10 +30,10 @@ func _physics_process(delta) -> void:
         position += orbit_offset - _last_orbit_offset
         _last_orbit_offset = orbit_offset
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
     _orbit_enabled = false
     _last_orbit_offset = Vector2.ZERO
-    .stop()
+    .stop(from_screen_border)
 
 func _return_to_pool() -> void:
     _orbit_enabled = false

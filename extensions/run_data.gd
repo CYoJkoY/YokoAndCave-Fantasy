@@ -16,18 +16,20 @@ func add_item(item: ItemData, player_index: int, is_selection: bool = false) -> 
         item = Utils.fa_bless_item(item) as ItemData
     .add_item(item, player_index, is_selection)
 
-func remove_item(item: ItemData, player_index: int, by_id: bool = false) -> void:
-    var owned_item: ItemData = null
-    for candidate in get_player_items_ref(player_index):
-        var matches: bool = candidate.my_id_hash == item.my_id_hash if by_id else ItemService.is_same_item(candidate, item)
-        if !matches: continue
-        owned_item = candidate
-        break
+func remove_item(item: ItemData, player_index: int, by_id: bool = false, apply_replacement: bool = true) -> void:
+    var owned_items: Array = get_player_items_ref(player_index)
+    var owned_item: ItemData = item if !by_id and owned_items.has(item) else null
+    if owned_item == null:
+        for candidate in owned_items:
+            var matches: bool = candidate.my_id_hash == item.my_id_hash if by_id else ItemService.is_same_item(candidate, item)
+            if matches:
+                owned_item = candidate
+                break
     if owned_item == null: return
 
     var previous_replacement: ItemData = _fantasy_blessed_replacement
-    _fantasy_blessed_replacement = owned_item.replaced_by if Utils.fa_is_item_blessed(owned_item) else null
-    .remove_item(owned_item, player_index, by_id)
+    _fantasy_blessed_replacement = owned_item.replaced_by if apply_replacement and Utils.fa_is_item_blessed(owned_item) else null
+    .remove_item(owned_item, player_index, by_id, apply_replacement)
     _fantasy_blessed_replacement = previous_replacement
 
 func add_weapon(weapon: WeaponData, player_index: int, is_selection: bool = false) -> WeaponData:

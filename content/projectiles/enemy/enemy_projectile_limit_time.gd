@@ -10,15 +10,16 @@ var delta_time: float = 0.0
 func _physics_process(delta) -> void:
     if lifetime <= 0: return
 
+    delta *= _get_time_factor()
     delta_time += delta
     if delta_time < lifetime: return
     
     delta_time = 0.0
     stop()
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
     if _enable_stop_delay: return
 
     if reset_alpa: _sprite.self_modulate.a = reset_alpha
     delta_time = 0.0
-    .stop()
+    .stop(from_screen_border)

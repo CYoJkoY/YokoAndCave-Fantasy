@@ -8,15 +8,16 @@ var delta_distance: float = 0.0
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func _physics_process(delta: float) -> void:
+    delta *= _get_time_factor()
     delta_distance += (velocity * delta).length()
     if delta_distance < max_distance: return
 
     delta_distance = 0.0
     stop()
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
     if _enable_stop_delay: return
 
     if reset_alpha_on_stop: _sprite.self_modulate.a = reset_alpha
     delta_distance = 0.0
-    .stop()
+    .stop(from_screen_border)

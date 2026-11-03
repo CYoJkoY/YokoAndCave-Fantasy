@@ -91,9 +91,9 @@ func _on_Hitbox_hit_something(thing_hit: Node, damage_dealt: int) -> void:
             _hitbox.damage = max(1, _hitbox.damage - (_hitbox.damage * _weapon_stats.piercing_dmg_reduction))
 
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
     if not _alive:
         return
     _alive = false
     _sparks.emitting = false
-    .stop()
+    .stop(from_screen_border)

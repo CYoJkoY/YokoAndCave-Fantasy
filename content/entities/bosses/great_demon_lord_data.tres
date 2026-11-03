@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource( 2 )
 my_id = "boss_fantasy_great_demon_lord"
-zone_id = 2
+zone_id = 1002
 scene = ExtResource( 1 )

@@ -48,8 +48,7 @@ func _on_EntitySpawner_enemy_spawned(enemy: Enemy) -> void:
 
 func _on_EntitySpawner_enemy_respawned(_enemy: Enemy) -> void:
     ._on_EntitySpawner_enemy_respawned(_enemy)
-    call_deferred("_fantasy_change_living_cursed_enemy", _enemy, true)
-    _fantasy_decaying_slow_enemy(_enemy)
+    call_deferred("_fantasy_finish_enemy_spawn", _enemy)
 
 func _on_enemy_died(enemy: Enemy, args: Entity.DieArgs) -> void:
     ._on_enemy_died(enemy, args)
@@ -109,10 +108,31 @@ func _fantasy_start_enemy_spawn_timers() -> void:
 func _fantasy_spawn_enemies(enemy_scene: PackedScene, count: int, spawn_edge_of_map: bool) -> void:
     for _i in range(count):
         var pos: Vector2 = _entity_spawner.get_spawn_pos_in_area(Vector2.ZERO, -1, 0, spawn_edge_of_map)
-        _entity_spawner.spawn_entity_birth(EntityType.ENEMY, enemy_scene, pos)
+        _entity_spawner.spawn_entity_birth(SpawnRequest.new(EntityType.ENEMY, enemy_scene, pos))
+
+func _fantasy_finish_enemy_spawn(enemy: Enemy) -> void:
+    if _cleaning_up or !is_instance_valid(enemy) or enemy.dead: return
+    _fantasy_extra_curse_enemy(enemy)
+    _fantasy_decaying_slow_enemy(enemy)
+    _fantasy_change_living_cursed_enemy(enemy, true)
+
+func _fantasy_extra_curse_enemy(enemy: Enemy) -> void:
+    if enemy._outline_colors.has(Utils.CURSE_COLOR): return
+
+    for player_index in range(enemy.players_ref.size()):
+        var effect_items: Array = RunData.get_player_effect(Utils.fantasy_extra_curse_enemy_hash, player_index)
+        for effect_item in effect_items:
+            var chance: float = effect_item[1] / 100.0
+            if !Utils.get_chance_success(chance): continue
+
+            Utils.ncl_curse_enemy(enemy)
+            if enemy._outline_colors.has(Utils.CURSE_COLOR):
+                RunData.ncl_add_effect_tracking_value(effect_item[0], 1, player_index)
+            return
 
 func _fantasy_change_living_cursed_enemy(enemy: Enemy, is_add: bool) -> void:
-    if !enemy._outline_colors.has(Utils.CURSE_COLOR): return
+    if is_add and !enemy._outline_colors.has(Utils.CURSE_COLOR): return
+    if !is_add and !cursed_enemies.has(enemy): return
 
     var num: int = 0
     match is_add:
@@ -274,7 +294,7 @@ func _fantasy_teleport_if_world_tree_enemy(players: Array) -> void:
         for enemy in group_data.wave_units_data:
             if enemy.unit_scene_name != "world_tree.tscn": continue
 
-            var base_pos: Vector2 = ZoneService.get_rand_pos(200)
+            var base_pos: Vector2 = ZoneService.get_rand_pos_in_area(ZoneService.get_rand_pos(), 0, 200)
             var player_count: int = players.size()
             for player_index in range(player_count):
                 if player_count > 1:

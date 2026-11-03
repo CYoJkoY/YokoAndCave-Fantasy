@@ -205,10 +205,10 @@ func _spawn_disappear_spark(pos: Vector2) -> void:
     spark.play_disappear(pos, main, _disappear_spark_pool_id)
 
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
     if not _enable_stop_delay and visible and modulate.a > 0.05:
         _spawn_disappear_spark(global_position)
-    .stop()
+    .stop(from_screen_border)
 
 
 func _return_to_pool() -> void:

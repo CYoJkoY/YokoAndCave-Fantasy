@@ -156,14 +156,14 @@ func bounce(thing_hit: Node) -> void:
     _start_next_leg(thing_hit)
 
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
     if _enable_stop_delay:
         return
     velocity = Vector2.ZERO
     _target = null
     _chain_source = null
     _visual.release()
-    .stop()
+    .stop(from_screen_border)
 
 
 func _return_to_pool() -> void:

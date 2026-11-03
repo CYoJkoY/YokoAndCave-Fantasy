@@ -240,13 +240,13 @@ func set_sprite_material(_material: ShaderMaterial) -> void:
 	pass
 
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
 	if _enable_stop_delay:
 		return
 	_disable_lasers()
 	if is_instance_valid(_particles):
 		_particles.emitting = false
-	.stop()
+	.stop(from_screen_border)
 
 
 func _return_to_pool() -> void:

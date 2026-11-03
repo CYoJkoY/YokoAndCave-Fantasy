@@ -200,7 +200,7 @@ func bounce(thing_hit: Node) -> void:
     _homing_reacquire_time = 0.0
 
 
-func stop() -> void:
+func stop(from_screen_border: bool = false) -> void:
     if _enable_stop_delay:
         return
     _homing_target = null
@@ -209,7 +209,7 @@ func stop() -> void:
     _heading = Vector2.ZERO
     _sprite.visible = false
     _glow.visible = false
-    .stop()
+    .stop(from_screen_border)
 
 
 func _return_to_pool() -> void:

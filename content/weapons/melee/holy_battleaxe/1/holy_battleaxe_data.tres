@@ -31,4 +31,3 @@ sets = [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 9 ) ]
 scene = ExtResource( 1 )
 stats = ExtResource( 5 )
 upgrades_into = ExtResource( 7 )
-add_to_chars_as_starting = [  ]

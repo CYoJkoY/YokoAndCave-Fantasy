@@ -140,7 +140,7 @@ func _return_to_pool() -> void:
     ._return_to_pool()
 
 
-func stop() -> void:
+func stop(_from_screen_border: bool = false) -> void:
     if _dissipating:
         return
     _dissipating = true

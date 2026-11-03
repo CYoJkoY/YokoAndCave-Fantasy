@@ -28,4 +28,3 @@ type = 1
 sets = [ ExtResource( 2 ), ExtResource( 3 ) ]
 scene = ExtResource( 5 )
 stats = ExtResource( 6 )
-add_to_chars_as_starting = [  ]

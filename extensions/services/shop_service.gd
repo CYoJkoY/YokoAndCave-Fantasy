@@ -158,16 +158,18 @@ static func _fantasy_get_nb_cursed_gear(gear_id: int, player_index: int) -> int:
 static func _fantasy_add_synthesis_result(result_id: int, player_index: int, is_cursed: bool) -> void:
     if ItemService.is_item_id(result_id):
         var item_data: ItemData = ItemService.get_item_from_id(result_id)
-        item_data = ItemService.apply_item_effect_modifications(item_data, player_index)
         if is_cursed:
             item_data = Utils.ncl_curse_item(item_data, player_index)
+        else:
+            item_data = ItemService.apply_item_effect_modifications(item_data, player_index)
         RunData.add_item(item_data, player_index)
 
     elif ItemService.ncl_is_weapon_id(result_id):
         var weapon_data: WeaponData = ItemService.ncl_get_weapon_from_id(result_id)
-        weapon_data = ItemService.apply_item_effect_modifications(weapon_data, player_index)
         if is_cursed:
             weapon_data = Utils.ncl_curse_item(weapon_data, player_index)
+        else:
+            weapon_data = ItemService.apply_item_effect_modifications(weapon_data, player_index)
         RunData.add_weapon(weapon_data, player_index)
 
 # ══════════════════════════════════════════ Blessing Ritual ══════════════════════════════════════════ #
@@ -200,6 +202,8 @@ static func _fantasy_attach_bless_button(
         "_fantasy_on_popup_bless_pressed",
         [item_popup, get_gear_container, update_stats, player_index]
     )
+    if item_popup._effect_choice_container != null:
+        item_popup._effect_choice_container.connect("visibility_changed", shop, "_fantasy_on_bless_context_changed", [item_popup, player_index])
 
 static func _fantasy_on_popup_bless_pressed(
     shop: BaseShop,
@@ -208,6 +212,7 @@ static func _fantasy_on_popup_bless_pressed(
     update_stats: FuncRef,
     player_index: int
 ) -> void:
+    if item_popup._pending_upgrade != null: return
     var item_data: ItemParentData = item_popup._item_data
     if item_data == null:
         return
@@ -289,6 +294,10 @@ static func _fantasy_update_bless_button(
 static func _fantasy_refresh_bless_button(shop: BaseShop, item_data: ItemParentData, player_index: int) -> void:
     var item_popup: ItemPopup = shop._popup_manager._item_popups[player_index]
     var margin: MarginContainer = item_popup.find_node("MarginContainer", true, false)
+    if item_popup._pending_upgrade != null:
+        var bless_button: MyMenuButton = margin.get_node("VBoxContainer").get_node_or_null("FantasyBlessButton") as MyMenuButton
+        if bless_button != null: bless_button.hide()
+        return
     _fantasy_update_bless_button(margin.get_node("VBoxContainer"), item_data, player_index)
 
 
@@ -327,23 +336,20 @@ static func _fantasy_shop_enter_stat_curse(update_stats: FuncRef, get_gear_conta
             if !Utils.get_chance_success(effect[2] / 100.0): continue
 
             RunData.remove_stat(effect[0], effect[1], player_index)
+            RunData.ncl_add_effect_tracking_value(effect[4], -effect[1], player_index, 0)
             var player_items: Array = RunData.get_player_items(player_index)
             var player_weapons: Array = RunData.get_player_weapons(player_index)
 
             var all_gears: Array = []
             for item in player_items:
-                if !item.is_cursed:
+                if ItemService.can_item_be_cursed(item):
                     all_gears.append(item)
 
             for weapon in player_weapons:
-                if !weapon.is_cursed:
+                if ItemService.can_item_be_cursed(weapon):
                     all_gears.append(weapon)
 
             var gear_count: int = int(min(effect[3], all_gears.size()))
-            if gear_count <= 0: continue
-
-            RunData.ncl_add_effect_tracking_value(effect[4], effect[1], player_index, 0)
-            RunData.ncl_add_effect_tracking_value(effect[4], gear_count, player_index, 1)
 
             var gears_to_curse: Array = []
             for _i in range(gear_count):
@@ -351,21 +357,23 @@ static func _fantasy_shop_enter_stat_curse(update_stats: FuncRef, get_gear_conta
                 gears_to_curse.append(all_gears[random_index])
                 all_gears.remove(random_index)
 
-            var updated_any_gear: bool = false
+            var cursed_count: int = 0
             for gear in gears_to_curse:
                 var new_gear: ItemParentData = Utils.ncl_curse_item(gear, player_index)
+                if !new_gear.is_cursed: continue
 
                 if new_gear is WeaponData:
                     RunData.remove_weapon(gear, player_index)
                     RunData.add_weapon(new_gear, player_index)
-                    updated_any_gear = true
+                    cursed_count += 1
 
                 elif new_gear is ItemData:
                     RunData.fa_replace_item(gear as ItemData, new_gear as ItemData, player_index)
-                    updated_any_gear = true
+                    cursed_count += 1
 
-            if updated_any_gear:
-                update_stats.call_func(player_index)
+            update_stats.call_func(player_index)
+            if cursed_count > 0:
+                RunData.ncl_add_effect_tracking_value(effect[4], cursed_count, player_index, 1)
                 var player_gear_container: PlayerGearContainer = get_gear_container.call_func(player_index)
                 player_gear_container.set_weapons_data(RunData.get_player_weapons(player_index))
                 player_gear_container.set_items_data(RunData.get_player_items(player_index))

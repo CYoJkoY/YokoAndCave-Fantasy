@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=319 format=2]
+[gd_resource type="Resource" load_steps=321 format=2]
 
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/swift_wolf/swift_wolf_item.tres" type="Resource" id=1]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/enemies/skeleton_knight/skeleton_knight_item.tres" type="Resource" id=2]
@@ -336,8 +336,15 @@
 
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/sets/unique/unique_set_data.tres" type="Resource" id=324]
 
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/title_screen/content_set/fantasy_content_icon.png" type="Texture" id=326]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/title_screen/content_set/fantasy_content_logo.png" type="Texture" id=327]
+
 [resource]
 script = ExtResource( 43 )
+content_name = "FANTASY_CONTENT_NAME"
+content_icon = ExtResource( 326 )
+content_logo = ExtResource( 327 )
+
 my_id = ""
 groups_in_all_zones = [ ExtResource( 25 ) ]
 music_tracks = [ ExtResource( 302 ), ExtResource( 303 ), ExtResource( 304 ) ]

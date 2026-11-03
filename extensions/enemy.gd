@@ -5,14 +5,12 @@ const FANTASY_ENEMY_SPEED_MODIFIER_SERVICE = preload("res://mods-unpacked/YokoAn
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func init(zone_min_pos: Vector2, zone_max_pos: Vector2, p_players_ref: Array = [], entity_spawner_ref = null) -> void:
     .init(zone_min_pos, zone_max_pos, p_players_ref, entity_spawner_ref)
-    _fantasy_extra_curse_enemy()
     _fantasy_buff_future_target()
     if Utils.plant_enemies_ids.has(enemy_id_hash): _fantasy_cannot_tree_damage()
 
 func respawn() -> void:
     .respawn()
     FANTASY_ENEMY_SPEED_MODIFIER_SERVICE.clear_pooled_state(self)
-    _fantasy_extra_curse_enemy()
     _fantasy_buff_future_target()
     if Utils.plant_enemies_ids.has(enemy_id_hash): _fantasy_cannot_tree_damage()
 
@@ -60,18 +58,6 @@ func _fantasy_apply_holy_damage_bonus(dmg_value_result: GetDamageValueResult) ->
     dmg_value_result.value = int(dmg_value_result.value * bonus_multiplier)
     
     return dmg_value_result
-
-func _fantasy_extra_curse_enemy() -> void:
-    if _outline_colors.has(Utils.CURSE_COLOR): return
-
-    for player_index in range(players_ref.size()):
-        var effect_items: Array = RunData.get_player_effect(Utils.fantasy_extra_curse_enemy_hash, player_index)
-        for effect_item in effect_items:
-            var chance: float = effect_item[1] / 100.0
-            if !Utils.get_chance_success(chance): continue
-
-            Utils.ncl_curse_enemy(self )
-            RunData.ncl_add_effect_tracking_value(effect_item[0], 1, player_index)
 
 func _fantasy_bonus_drop(value: int) -> int:
     for player_index in range(players_ref.size()):
