@@ -88,7 +88,7 @@ func _on_Hitbox_hit_something(thing_hit: Node, damage_dealt: int) -> void:
     else:
         _piercing -= 1
         if _hitbox.damage > 0:
-            _hitbox.damage = max(1, _hitbox.damage - (_hitbox.damage * _weapon_stats.piercing_dmg_reduction))
+            _hitbox.damage = int(max(1, _hitbox.damage - (_hitbox.damage * _weapon_stats.piercing_dmg_reduction)))
 
 
 func stop(from_screen_border: bool = false) -> void:

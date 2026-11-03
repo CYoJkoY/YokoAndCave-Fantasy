@@ -122,4 +122,4 @@ static func _apply(enemy: Node) -> void:
     for percent in strongest.values():
         speed *= 1.0 + float(percent) / 100.0
 
-    enemy.current_stats.speed = max(1, int(round(speed)))
+    enemy.current_stats.speed = int(max(1, int(round(speed))))

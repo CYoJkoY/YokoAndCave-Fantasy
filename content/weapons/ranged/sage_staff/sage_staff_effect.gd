@@ -23,7 +23,7 @@ static func get_id() -> String:
 
 func get_args(player_index: int) -> Array:
     var burn: BurningData = WeaponService.init_burning_data(BURNING_DATA, player_index)
-    burn.duration = max(burn.duration, RunData.get_player_effect(Keys.burn_chance_hash, player_index).duration)
+    burn.duration = int(max(burn.duration, RunData.get_player_effect(Keys.burn_chance_hash, player_index).duration))
     var burning_text: String = Text.text("EFFECT_BURNING", [str(burn.duration), str(burn.damage),
         WeaponService.get_scaling_stats_icon_text(burn.scaling_stats)])
     var radius: float = max(EXPLOSION_BASE_RADIUS * EXPLOSION_MIN_SCALE, EARTH_RADIUS * (1.0 + Utils.get_stat(Keys.explosion_size_hash, player_index) / 100.0))

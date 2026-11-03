@@ -7,7 +7,7 @@ func shoot(_distance: float) -> void:
     var weapon = _parent
     var weapon_stats = weapon.current_stats
 
-    var projectile_count: int = max(1, int(weapon_stats.nb_projectiles))
+    var projectile_count: int = int(max(1, int(weapon_stats.nb_projectiles)))
     var origin: Vector2 = weapon.get_cast_origin()
     var base_angle: float = weapon.rotation
 

@@ -39,7 +39,7 @@ func _on_BoostTimer_timeout() -> void:
                 entity.on_healing_effect(heal_value)
 
             if entity is Enemy:
-                entity.current_stats.health = min(entity.current_stats.health + (heal + (RunData.current_wave - 1) * heal_increase_each_wave), entity.max_stats.health)
+                entity.current_stats.health = int(min(entity.current_stats.health + (heal + (RunData.current_wave - 1) * heal_increase_each_wave), entity.max_stats.health))
 
             if entity is Player:
                 entity.emit_signal("healed", heal_value, entity.player_index)

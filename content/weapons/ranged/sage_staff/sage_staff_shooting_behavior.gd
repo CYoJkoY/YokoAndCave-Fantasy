@@ -26,7 +26,7 @@ func shoot(_distance: float) -> void:
         return
     _burst_stats = _parent.current_stats.duplicate()
     _burst_stats.burning_data = _parent.current_stats.burning_data.duplicate()
-    _count = max(1, _burst_stats.nb_projectiles)
+    _count = int(max(1, _burst_stats.nb_projectiles))
     _remaining = _count
     _elapsed = 0.0
     _angle = rand_range(-PI, PI)

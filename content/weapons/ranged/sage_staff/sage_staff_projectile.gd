@@ -72,8 +72,8 @@ func shoot_ex(p_from: Node, pos: Vector2, p_velocity: Vector2, p_rotation: float
             orb_stats = p_weapon_stats.duplicate()
             var burn: BurningData = WeaponService.init_burning_data(EFFECT.BURNING_DATA, player_index)
             burn.from = p_from
-            burn.duration = max(burn.duration, p_weapon_stats.burning_data.duration)
-            burn.spread = max(burn.spread, p_weapon_stats.burning_data.spread)
+            burn.duration = int(max(burn.duration, p_weapon_stats.burning_data.duration))
+            burn.spread = int(max(burn.spread, p_weapon_stats.burning_data.spread))
             orb_stats.burning_data = burn if burn.damage >= p_weapon_stats.burning_data.damage else p_weapon_stats.burning_data.duplicate()
             orb_stats.burning_data.chance = 1.0
             orb_stats.burning_data.duration = burn.duration
@@ -220,7 +220,7 @@ func bounce(_thing_hit: Node) -> void:
     _set_time_until_max_range()
     set_knockback_vector(direction, _weapon_stats.knockback, _weapon_stats.knockback_piercing)
     if _hitbox.damage > 0:
-        _hitbox.damage = max(1, _hitbox.damage * (1.0 - _weapon_stats.bounce_dmg_reduction))
+        _hitbox.damage = int(max(1, _hitbox.damage * (1.0 - _weapon_stats.bounce_dmg_reduction)))
     _visuals.launch(false, _elapsed)
 
 

@@ -182,7 +182,7 @@ func _update_branches(delta: float) -> void:
         branch_count = 2
     for i in range(branch_count):
         var index: int = int(rand_range(1.0, float(_points.size() - 1)))
-        index = clamp(index, 1, _points.size() - 2)
+        index = int(clamp(index, 1, _points.size() - 2))
         var point: Vector2 = _points[index]
         var tangent: Vector2 = _points[index + 1] - _points[index - 1]
         if tangent.length_squared() < 0.001:
@@ -245,7 +245,7 @@ func _update_pulses(delta: float) -> void:
             continue
         var progress: float = float(pulse.progress)
         var index: int = int(progress * float(count - 1))
-        index = clamp(index, 0, count - 1)
+        index = int(clamp(index, 0, count - 1))
         var point: Vector2 = _points[index]
         var tangent := Vector2.RIGHT
         if index <= 0:

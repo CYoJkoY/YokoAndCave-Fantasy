@@ -91,7 +91,7 @@ func shoot_ex(p_from: Node,
     .shoot_ex(p_from, pos, p_velocity, p_rotation, p_weapon_stats, damage_tracking_key,
         effects, hitbox_args, knockback_direction)
 
-    _max_range = min(_max_range, p_from.stats.max_range + MAX_RANGE_BONUS)
+    _max_range = int(min(_max_range, p_from.stats.max_range + MAX_RANGE_BONUS))
     velocity = Vector2.ZERO
     rotation = 0.0
     _hitbox.ignored_objects.clear()
@@ -310,7 +310,7 @@ func _on_Hitbox_hit_something(thing_hit: Node, damage_dealt: int) -> void:
     else:
         _piercing -= 1
         if _hitbox.damage > 0:
-            _hitbox.damage = max(1, _hitbox.damage - _hitbox.damage * _weapon_stats.piercing_dmg_reduction)
+            _hitbox.damage = int(max(1, _hitbox.damage - _hitbox.damage * _weapon_stats.piercing_dmg_reduction))
     _critical_hit = false
 
 

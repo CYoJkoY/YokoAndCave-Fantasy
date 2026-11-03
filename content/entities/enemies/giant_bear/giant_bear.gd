@@ -12,7 +12,7 @@ var _charge_shots_remaining: int = 0
 func get_damage_value(dmg_value: int, from_player_index: int, armor_applied := true, dodgeable := true, is_crit := false, hitbox: Hitbox = null, is_burning := false) -> GetDamageValueResult:
     var result: GetDamageValueResult = .get_damage_value(dmg_value, from_player_index, armor_applied, dodgeable, is_crit, hitbox, is_burning)
     if _move_locked and result.value > 0:
-        result.value = max(1, int(result.value * 0.5))
+        result.value = int(max(1, int(result.value * 0.5)))
     return result
 
 func respawn() -> void:

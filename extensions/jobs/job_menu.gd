@@ -49,7 +49,7 @@ func _input(event: InputEvent) -> void:
         get_tree().set_input_as_handled()
     elif Utils.is_player_action_pressed(event, menu_player_index, "ltrigger") or Utils.is_player_action_pressed(event, menu_player_index, "rtrigger"):
         var direction: int = -1 if Utils.is_player_action_pressed(event, menu_player_index, "ltrigger") else 1
-        var index: int = clamp(job_container.tab_container.current_tab + direction, 0, RunData.get_player_count() - 1)
+        var index: int = int(clamp(job_container.tab_container.current_tab + direction, 0, RunData.get_player_count() - 1))
         job_container._change_tab(index)
         _fantasy_focus_control(job_tab_buts[index])
         get_tree().set_input_as_handled()

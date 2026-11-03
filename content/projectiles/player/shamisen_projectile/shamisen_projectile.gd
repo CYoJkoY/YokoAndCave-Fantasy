@@ -152,7 +152,7 @@ func bounce(thing_hit: Node) -> void:
     velocity = Vector2.ZERO
     set_knockback_vector(Vector2.ZERO, 0.0, 0.0)
     if _hitbox.damage > 0:
-        _hitbox.damage = max(1, _hitbox.damage * (1.0 - _weapon_stats.bounce_dmg_reduction))
+        _hitbox.damage = int(max(1, _hitbox.damage * (1.0 - _weapon_stats.bounce_dmg_reduction)))
     _start_next_leg(thing_hit)
 
 

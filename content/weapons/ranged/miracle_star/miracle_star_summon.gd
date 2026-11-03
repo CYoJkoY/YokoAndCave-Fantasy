@@ -58,7 +58,7 @@ func _update_slot() -> void:
     var stars: Array = get_tree().get_nodes_in_group(STAR_GROUP)
     _slot = stars.find(self)
     _count = stars.size()
-    var columns: int = min(_count, 6)
+    var columns: int = int(min(_count, 6))
     var column: int = _slot % columns
     var row: int = _slot / columns
     _anchor = _zone_rect.position + _zone_rect.size * Vector2(0.5, 0.34)
