@@ -1,7 +1,7 @@
 {
 	"name": "Fantasy",
 	"namespace": "YokoAndCave",
-	"version_number": "1.0.1",
+	"version_number": "1.0.2",
 	"description": "[font=res://resources/fonts/actual/base/font_22.tres][color=#c4b5fd]幻界树海 · Sylvan Fantasy[/color][/font]\n[color=#fcd34d]【中文介绍】[/color]\n走进树海，来一场不一样的土豆冒险。\n• 新增[color=#6ee7a8]角色[/color]、[color=#93c5fd]职业[/color]、[color=#fca5a5]武器[/color]与[color=#fdba74]道具[/color]，搭配出自己的玩法。\n• 探索[color=#67e8f9]魂[/color]、[color=#fde047]神圣[/color]与[color=#d8b4fe]侵蚀[/color]机制，迎战树海中的新敌人。\n[color=#fcd34d]【English】[/color]\nStep into the forest for a new Brotato adventure.\n• Discover new [color=#6ee7a8]characters[/color], [color=#93c5fd]jobs[/color], [color=#fca5a5]weapons[/color] and [color=#fdba74]items[/color] to build your own playstyle.\n• Explore [color=#67e8f9]Soul[/color], [color=#fde047]Holy[/color] and [color=#d8b4fe]Erosion[/color] mechanics and face new enemies in the forest.\n[color=#fcd34d]前置 / Requires[/color]: Yoko-NewContentLoader · Yoko-MoreStatsContainer",
 	"website_url": "",
 	"dependencies": [
