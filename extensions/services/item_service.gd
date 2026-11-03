@@ -17,6 +17,17 @@ func init_unlocked_pool() -> void:
             tier_data[TierData.WEAPONS].erase(weapon)
             tier_data[TierData.ALL_ITEMS].erase(weapon)
 
+func update_pools(pool: Array, backup_pool: Array, player_index: int, item_tier: int, type: int) -> void:
+    .update_pools(pool, backup_pool, player_index, item_tier, type)
+    if type != TierData.ITEMS or Utils.fa_has_erosion(player_index): return
+
+    for candidates in [pool, backup_pool]:
+        for i in range(candidates.size() - 1, -1, -1):
+            for effect in candidates[i].effects:
+                if effect.key == "fantasy_erosion_speed" or effect.key == "fantasy_erosion_can_crit":
+                    candidates.remove(i)
+                    break
+
 func apply_item_effect_modifications(item: ItemParentData, player_index: int) -> ItemParentData:
     var new_item: ItemParentData =.apply_item_effect_modifications(item, player_index)
     new_item = _fantasy_extra_curse_item(new_item, player_index)
@@ -46,10 +57,7 @@ func _get_rand_item_for_wave(wave: int, player_index: int, type: int, args: GetR
                 if Utils.get_chance_success(CHANCE_SAME_WEAPON_SET + set_bonus):
                     unique_candidates = FANTASY_UNIQUE.prefer_sets(unique_candidates, RunData.get_player_sets(player_index))
                 return apply_item_effect_modifications(Utils.get_rand_element(unique_candidates), player_index)
-    var item: ItemParentData =._get_rand_item_for_wave(wave, player_index, type, args)
-    item = _fantasy_can_spawn_erosion_related_item(item, wave, player_index, type, args)
-
-    return item
+    return ._get_rand_item_for_wave(wave, player_index, type, args)
 
 # ══════════════════════════════════════════ Custom ══════════════════════════════════════════ #
 func _fantasy_get_unique_weapon_candidates(player_index: int, args: GetRandItemForWaveArgs) -> Array:
@@ -136,22 +144,6 @@ func _fantasy_get_icon_for_limited_shop_item(icon, character: CharacterData, sho
     if is_princess and is_limited_item: return get_icon(Utils.icon_fantasy_princess_limited_hash).get_data()
 
     return icon
-
-func _fantasy_can_spawn_erosion_related_item(item: ItemParentData, wave: int, player_index: int, type: int, args: GetRandItemForWaveArgs) -> ItemParentData:
-    if type != TierData.ITEMS: return item
-
-    var is_erosion_related: bool = false
-    for effect in item.effects:
-        if effect.key != "fantasy_erosion_speed" and effect.key != "fantasy_erosion_can_crit": continue
-
-        is_erosion_related = true
-        break
-
-    if !is_erosion_related: return item
-
-    if !Utils.fa_has_erosion(player_index): return _get_rand_item_for_wave(wave, player_index, type, args)
-
-    return item
 
 # ══════════════════════════════════════════ Method ══════════════════════════════════════════ #
 func fa_get_jobs(stage: int, number: int = Utils.LARGE_NUMBER, way: int = Keys.empty_hash) -> Array:
