@@ -1,14 +1,11 @@
 extends "res://ui/menus/ingame/ingame_main_menu.gd"
 
-# ui_job
 const BUTTON_SHOW_JOB = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/jobs/button_show_job_scene.tscn")
-
-onready var h_container: HBoxContainer = _items_container.get_node("HBoxContainer")
-onready var sort_inventory_but: SortInventoryButton = h_container.get_node("Sort_Inventory_button")
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func _ready() -> void:
-    _fantasy_job_button_display()
+    var job_button: MyMenuButton = BUTTON_SHOW_JOB.instance()
+    job_button.attach_to_inventory(_items_container, $"MarginContainer/VBoxContainer", self)
 
 func _on_OptionsButton_pressed() -> void:
     var focus_emulator: FocusEmulator = Utils.fa_get_menu_focus_emulator(player_index)
@@ -19,16 +16,6 @@ func _on_OptionsButton_pressed() -> void:
     emit_signal("options_button_pressed")
 
 # ══════════════════════════════════════════ Custom ══════════════════════════════════════════ #
-func _fantasy_job_button_display() -> void:
-    var ButtonShowJobInstance: Node = BUTTON_SHOW_JOB.instance()
-    var before_sort_index: int = sort_inventory_but.get_index()
-    h_container.add_child(ButtonShowJobInstance)
-    h_container.move_child(ButtonShowJobInstance, before_sort_index)
-    ButtonShowJobInstance.current_scene = $"MarginContainer/VBoxContainer"
-    ButtonShowJobInstance.global_scene = self
-
-    if !_items_container.authorize_sorting: ButtonShowJobInstance.hide()
-
 func _fantasy_open_pause_options(focus_emulator: FocusEmulator) -> void:
     var menus: Control = get_parent()
     var options = menus.get_node("MenuOptions")

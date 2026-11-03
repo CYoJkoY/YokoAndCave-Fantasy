@@ -184,14 +184,13 @@ static func _fantasy_attach_bless_button(
     if item_popup == null:
         return
 
-    var margin: MarginContainer = item_popup.find_node("MarginContainer", true, false)
-    if margin == null:
-        return
-    var container: VBoxContainer = margin.get_node("VBoxContainer")
+    var container: VBoxContainer = item_popup._cancel_button.get_parent()
     if container.has_node("FantasyBlessButton"):
         return
 
     var bless_button: MyMenuButton = BLESS_BUTTON_SCENE.instance()
+    bless_button.item_popup = item_popup
+    bless_button.popup_manager = _popup_manager
     var cancel_button: MyMenuButton = item_popup.get_node("%CancelButton")
     container.add_child(bless_button)
     container.move_child(bless_button, cancel_button.get_index())
@@ -202,8 +201,6 @@ static func _fantasy_attach_bless_button(
         "_fantasy_on_popup_bless_pressed",
         [item_popup, get_gear_container, update_stats, player_index]
     )
-    if item_popup._effect_choice_container != null:
-        item_popup._effect_choice_container.connect("visibility_changed", shop, "_fantasy_on_bless_context_changed", [item_popup, player_index])
 
 static func _fantasy_on_popup_bless_pressed(
     shop: BaseShop,
@@ -249,6 +246,7 @@ static func _fantasy_on_popup_bless_pressed(
         added_weapon.tracked_value = tracked_value
         added_weapon.dmg_dealt_last_wave = dmg_dealt_last_wave
         added_weapon.tracked_value_added_this_wave = tracked_value_added_this_wave
+        blessed_gear = added_weapon
         player_gear_container.set_weapons_data(RunData.get_player_weapons(player_index))
     elif item_data is ItemData:
         RunData.fa_replace_item(item_data as ItemData, blessed_gear as ItemData, player_index)
@@ -257,10 +255,10 @@ static func _fantasy_on_popup_bless_pressed(
     update_stats.call_func(player_index)
     SoundManager.play(Utils.get_rand_element(shop.combine_sounds), 0, 0.1)
 
-    _fantasy_cleanup_popup(shop, item_popup, player_index)
+    _fantasy_cleanup_popup(shop, item_popup, player_index, blessed_gear)
 
 
-static func _fantasy_cleanup_popup(shop: BaseShop, item_popup: ItemPopup, player_index: int) -> void:
+static func _fantasy_cleanup_popup(shop: BaseShop, item_popup: ItemPopup, player_index: int, return_item: ItemParentData = null) -> void:
     item_popup._item_data = null
     item_popup.hide()
 
@@ -273,32 +271,14 @@ static func _fantasy_cleanup_popup(shop: BaseShop, item_popup: ItemPopup, player
     if shop._focused_shop_item[player_index] != null:
         shop._focused_shop_item[player_index]._can_be_selected()
 
-static func _fantasy_update_bless_button(
-    container: VBoxContainer,
-    item_data: ItemParentData,
-    player_index: int
-) -> void:
-    var bless_button: MyMenuButton = container.get_node_or_null("FantasyBlessButton") as MyMenuButton
-    if bless_button == null: return
-
-    if item_data == null:
-        bless_button.hide()
-        return
-
-    var blessing: Dictionary = Utils.fa_get_bless_info(item_data, player_index)
-    bless_button.visible = blessing.can_bless
-    if blessing.can_bless:
-        bless_button.text = TranslationServer.translate("MENU_FANTASY_BLESS") + " (" + str(blessing.cost) + ")"
-
-
-static func _fantasy_refresh_bless_button(shop: BaseShop, item_data: ItemParentData, player_index: int) -> void:
-    var item_popup: ItemPopup = shop._popup_manager._item_popups[player_index]
-    var margin: MarginContainer = item_popup.find_node("MarginContainer", true, false)
-    if item_popup._pending_upgrade != null:
-        var bless_button: MyMenuButton = margin.get_node("VBoxContainer").get_node_or_null("FantasyBlessButton") as MyMenuButton
-        if bless_button != null: bless_button.hide()
-        return
-    _fantasy_update_bless_button(margin.get_node("VBoxContainer"), item_data, player_index)
+    if return_item != null:
+        var gear: PlayerGearContainer = shop._get_gear_container(player_index)
+        var inventory: Inventory = gear.weapons_container._elements if return_item is WeaponData else gear.items_container._elements
+        for element in inventory.get_children():
+            if not element.is_queued_for_deletion() and element.item == return_item:
+                Utils.focus_player_control(element, player_index)
+                return
+    shop._on_player_focus_lost(player_index)
 
 
 static func _fantasy_show_item_popup(shop: BaseShop, element: InventoryElement, player_index: int) -> void:
@@ -314,7 +294,8 @@ static func _fantasy_show_item_popup(shop: BaseShop, element: InventoryElement, 
     item_popup._focused = true
     item_popup._cancel_button.show()
     item_popup._cancel_button.focus_mode = Control.FOCUS_ALL
-    item_popup._cancel_button.grab_focus()
+    item_popup.visible = true
+    Utils.focus_player_control(item_popup._cancel_button, player_index)
 
 static func _fantasy_apply_bless_mark(element: InventoryElement) -> void:
     var border: TextureRect = element.get_node_or_null("FantasyBlessBorder") as TextureRect

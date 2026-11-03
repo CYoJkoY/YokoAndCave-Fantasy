@@ -14,9 +14,6 @@ func set_reroll_button_price(player_index: int) -> void:
     var get_reroll_button_func: FuncRef = funcref(self, "_get_reroll_button")
     FANTASY_BASE_SHOP_SERVICE._fantasy_rebuild_reroll_effect_icons(get_reroll_button_func, player_index)
 
-func _fantasy_on_bless_context_changed(item_popup: ItemPopup, player_index: int) -> void:
-    FANTASY_BASE_SHOP_SERVICE._fantasy_refresh_bless_button(self, item_popup._item_data, player_index)
-
 func _on_RerollButton_pressed(player_index: int) -> void:
     if RunData.get_player_locked_shop_items(player_index).size() >= ItemService.NB_SHOP_ITEMS:
         ._on_RerollButton_pressed(player_index)

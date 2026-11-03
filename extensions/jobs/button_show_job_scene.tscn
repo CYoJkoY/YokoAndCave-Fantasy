@@ -1,17 +1,25 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://resources/themes/verysmall_option_button_theme.tres" type="Theme" id=1]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/jobs/button_show_job_scene.gd" type="Script" id=2]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/jobs/jobs_icon.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/jobs/fonts/job_button_italic.tres" type="DynamicFont" id=4]
 
 [node name="button_show_job_scene" type="Button"]
 margin_left = 50.0
 margin_right = 95.0
 margin_bottom = 45.0
-rect_min_size = Vector2( 45, 45 )
+rect_min_size = Vector2( 105, 45 )
 theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 0.7, 0.2, 1 )
+custom_colors/font_color_hover = Color( 1, 0.7, 0.2, 1 )
+custom_colors/font_color_focus = Color( 1, 0.7, 0.2, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.7, 0.2, 1 )
+custom_constants/hseparation = 6
+text = "MENU_FANTASY_JOBS"
 toggle_mode = false
 icon = ExtResource( 3 )
-icon_align = 1
+icon_align = 0
 expand_icon = true
 script = ExtResource( 2 )
