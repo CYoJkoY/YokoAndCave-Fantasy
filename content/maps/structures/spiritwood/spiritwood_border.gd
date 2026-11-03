@@ -46,6 +46,7 @@ var _occluders: Array = []
 var _entities: YSort
 var _spirit_material: CanvasItemMaterial
 var _mote_gradient: Gradient
+var moonlit: bool = false
 
 # ══════════════════════════════════════════ Custom ══════════════════════════════════════════ #
 func create_border(bounds: Rect2, entities: YSort) -> void:
@@ -57,18 +58,23 @@ func create_border(bounds: Rect2, entities: YSort) -> void:
     _spirit_material.light_mode = CanvasItemMaterial.LIGHT_MODE_UNSHADED
     _mote_gradient = Gradient.new()
     _mote_gradient.offsets = PoolRealArray([0.0, 0.25, 0.7, 1.0])
-    _mote_gradient.colors = PoolColorArray([
-        Color(0.25, 0.8, 1.0, 0.0), Color(0.35, 0.9, 1.0, 0.65),
-        Color(0.2, 0.65, 1.0, 0.35), Color(0.15, 0.4, 0.8, 0.0)])
+    if moonlit:
+        _mote_gradient.colors = PoolColorArray([
+            Color(0.6, 0.7, 1.0, 0.0), Color(0.72, 0.82, 1.0, 0.55),
+            Color(0.52, 0.5, 0.9, 0.3), Color(0.4, 0.45, 0.8, 0.0)])
+    else:
+        _mote_gradient.colors = PoolColorArray([
+            Color(0.25, 0.8, 1.0, 0.0), Color(0.35, 0.9, 1.0, 0.65),
+            Color(0.2, 0.65, 1.0, 0.35), Color(0.15, 0.4, 0.8, 0.0)])
     _create_ring(bounds.grow_individual(245.0, 120.0, 235.0, 500.0),
         Scenery.TREE, Vector2(135.0, 210.0), 32.0, Vector2(0.94, 1.06),
-        Color(0.55, 0.69, 0.66), _create_material(3.4, 0.65, 0.0))
+        Color(0.38, 0.48, 0.68) if moonlit else Color(0.55, 0.69, 0.66), _create_material(3.4, 0.65, 0.0))
     _create_ring(bounds.grow_individual(64.0, 18.0, 60.0, 155.0),
         Scenery.PLANT, Vector2(108.0, 170.0), 24.0, Vector2(0.72, 0.92),
-        Color(0.68, 0.82, 0.78), _create_material(2.3, 1.15, 0.24))
+        Color(0.48, 0.6, 0.8) if moonlit else Color(0.68, 0.82, 0.78), _create_material(2.3, 1.15, 0.24))
     _create_ring(bounds.grow_individual(80.0, 64.0, 74.0, 150.0),
         Scenery.ACCENT, Vector2(380.0, 600.0), 22.0, Vector2(0.70, 0.86),
-        Color(0.76, 0.84, 0.86), _create_material(0.0, 0.0, 0.32))
+        Color(0.57, 0.65, 0.88) if moonlit else Color(0.76, 0.84, 0.86), _create_material(0.0, 0.0, 0.32))
 
 func update_wind(elapsed: float) -> void:
     for material in _materials:
@@ -104,6 +110,9 @@ func _create_material(sway: float, speed: float, glow: float) -> ShaderMaterial:
     material.set_shader_param("sway_strength", sway)
     material.set_shader_param("sway_speed", speed)
     material.set_shader_param("glow_strength", glow)
+    if moonlit:
+        material.set_shader_param("desaturation", 0.6)
+        material.set_shader_param("glow_color", Color(0.58, 0.66, 1.0))
     _materials.append(material)
     return material
 
@@ -158,7 +167,7 @@ func _create_spirit_spring(point: Vector2, size: float) -> void:
     pool.texture = SPIRIT_POOL
     pool.position = point + Vector2(0.0, 10.0 * size)
     pool.scale = Vector2.ONE * size
-    pool.modulate = Color(0.25, 0.75, 1.0, 0.28)
+    pool.modulate = Color(0.5, 0.58, 1.0, 0.23) if moonlit else Color(0.25, 0.75, 1.0, 0.28)
     pool.material = _spirit_material
     add_child(pool)
     var motes = CPUParticles2D.new()
@@ -167,15 +176,15 @@ func _create_spirit_spring(point: Vector2, size: float) -> void:
     motes.material = _spirit_material
     motes.position = _entities.to_local(to_global(point))
     motes.amount = 4
-    motes.lifetime = 6.0
-    motes.preprocess = 6.0
+    motes.lifetime = 8.0 if moonlit else 6.0
+    motes.preprocess = motes.lifetime
     motes.randomness = 0.4
     motes.emission_shape = CPUParticles2D.EMISSION_SHAPE_RECTANGLE
     motes.emission_rect_extents = Vector2(38.0, 10.0) * size
     motes.direction = Vector2(0.0, -1.0)
     motes.spread = 30.0
-    motes.gravity = Vector2(0.0, -1.2)
-    motes.initial_velocity = 9.0
+    motes.gravity = Vector2(0.0, -0.6 if moonlit else -1.2)
+    motes.initial_velocity = 5.5 if moonlit else 9.0
     motes.initial_velocity_random = 0.4
     motes.scale_amount = 0.16
     motes.scale_amount_random = 0.5

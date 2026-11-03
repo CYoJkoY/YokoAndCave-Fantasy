@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/forest_particles.tscn" type="PackedScene" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.3, 0.65, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 0.55, 1, 1, 1, 0.3, 1, 1, 1, 0 )
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.65, 1 )
+colors = PoolColorArray( 0.65, 0.8, 1, 1, 0.85, 0.9, 1, 1, 0.62, 0.58, 0.92, 1 )
+
+[node name="ForestMoonMotes" instance=ExtResource( 1 )]
+lifetime = 16.0
+preprocess = 16.0
+randomness = 0.25
+direction = Vector2( 1, -0.25 )
+spread = 65.0
+gravity = Vector2( 0, -0.45 )
+initial_velocity = 6.0
+initial_velocity_random = 0.45
+scale_amount = 0.12
+scale_amount_random = 0.55
+color_ramp = SubResource( 1 )
+color_initial_ramp = SubResource( 2 )

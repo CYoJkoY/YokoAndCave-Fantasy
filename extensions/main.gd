@@ -31,6 +31,7 @@ func _ready() -> void:
         break
     if ZoneService.get_zone_data(RunData.current_zone).name == "ZONE_FANTASY":
         var atmosphere = FANTASY_FOREST_ATMOSPHERE.new()
+        atmosphere.moonlit = RunData.get_background().name == "BG_FORESTLAND_NIGHT"
         atmosphere.entities_container = _entities_container
         atmosphere.players = _players
         _tile_map.add_child(atmosphere)

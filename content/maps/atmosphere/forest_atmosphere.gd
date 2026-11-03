@@ -20,27 +20,33 @@ const GRASS_SHADER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/ma
 const GLOW_SHADER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/forest_glow.shader")
 const TINT_SHADER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/forest_tint.shader")
 const PARTICLES = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/forest_particles.tscn")
+const MOON_PARTICLES = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/forest_moon_particles.tscn")
+const MOON_RAY_SHADER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/forest_moon_ray.shader")
 const BORDER = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/structures/spiritwood/spiritwood_border.gd")
 
 var entities_container: YSort
 var players: Array = []
+var moonlit: bool = false
 var _random = RandomNumberGenerator.new()
 var _grass_material: ShaderMaterial
 var _elapsed: float = 0.0
 var _light_patches: Array = []
 var _border: Node2D
+var _motion_speed: float = 1.0
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func _ready() -> void:
     name = "FantasyForestAtmosphere"
     _random.randomize()
+    _motion_speed = 0.6 if moonlit else 1.0
     var bounds: Rect2 = ZoneService.get_current_zone_rect()
     _border = BORDER.new()
+    _border.moonlit = moonlit
     add_child(_border)
     _border.create_border(bounds, entities_container)
     _create_grass(bounds)
     _create_lighting(bounds)
-    var particles = PARTICLES.instance()
+    var particles = MOON_PARTICLES.instance() if moonlit else PARTICLES.instance()
     particles.position = bounds.position + bounds.size * 0.5
     particles.emission_rect_extents = bounds.size * 0.5
     particles.amount = int(clamp(bounds.get_area() / 60000.0, 12.0, 80.0))
@@ -48,12 +54,12 @@ func _ready() -> void:
     add_child(particles)
 
 func _process(delta: float) -> void:
-    _elapsed += delta
+    _elapsed += delta * _motion_speed
     _border.update_wind(_elapsed)
     _border.update_occlusion(players, delta)
     _grass_material.set_shader_param("elapsed", _elapsed)
     for patch in _light_patches:
-        patch.age += delta
+        patch.age += delta * _motion_speed
         if patch.age >= patch.lifetime:
             _reset_light_patch(patch)
         var fade: float = smoothstep(0.0, patch.fade_duration, patch.age)
@@ -68,6 +74,8 @@ func _process(delta: float) -> void:
 func _create_grass(bounds: Rect2) -> void:
     _grass_material = ShaderMaterial.new()
     _grass_material.shader = GRASS_SHADER
+    if moonlit:
+        _grass_material.set_shader_param("desaturation", 0.6)
     var spacing: float = max(80.0, sqrt(bounds.get_area() / 360.0))
     var columns: int = int(bounds.size.x / spacing)
     var rows: int = int(bounds.size.y / spacing)
@@ -88,7 +96,7 @@ func _create_grass(bounds: Rect2) -> void:
             grass.position = entities_container.to_local(to_global(grass_position))
             var size: float = _random.randf_range(0.8, 1.15)
             grass.scale = Vector2(size, size)
-            grass.modulate = Color(0.95, 1.0, 0.97, 0.9)
+            grass.modulate = Color(0.58, 0.72, 0.94, 0.9) if moonlit else Color(0.95, 1.0, 0.97, 0.9)
             grass.ground_container = get_parent()
             entities_container.add_child(grass)
 
@@ -103,6 +111,9 @@ func _create_lighting(bounds: Rect2) -> void:
     tint.anchor_bottom = 1.0
     var tint_material = ShaderMaterial.new()
     tint_material.shader = TINT_SHADER
+    if moonlit:
+        tint_material.set_shader_param("center_color", Color(0.9, 0.94, 1.0))
+        tint_material.set_shader_param("edge_color", Color(0.38, 0.49, 0.72))
     tint.material = tint_material
     glow_layer.add_child(tint)
     var glow = ColorRect.new()
@@ -111,12 +122,21 @@ func _create_lighting(bounds: Rect2) -> void:
     glow.anchor_bottom = 1.0
     var glow_material = ShaderMaterial.new()
     glow_material.shader = GLOW_SHADER
+    if moonlit:
+        glow_material.set_shader_param("glow_color", Color(0.12, 0.17, 0.24))
     glow.material = glow_material
     glow_layer.add_child(glow)
 
-    var light_material = CanvasItemMaterial.new()
-    light_material.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
-    light_material.light_mode = CanvasItemMaterial.LIGHT_MODE_UNSHADED
+    var light_material: Material
+    if moonlit:
+        var moon_material = ShaderMaterial.new()
+        moon_material.shader = MOON_RAY_SHADER
+        light_material = moon_material
+    else:
+        var sun_material = CanvasItemMaterial.new()
+        sun_material.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+        sun_material.light_mode = CanvasItemMaterial.LIGHT_MODE_UNSHADED
+        light_material = sun_material
     var light_bounds = Rect2(bounds.position, bounds.size * Vector2(1.0, 0.75))
     var columns: int = int(ceil(light_bounds.size.x / 1200.0))
     var rows: int = int(ceil(light_bounds.size.y / 850.0))
@@ -124,10 +144,10 @@ func _create_lighting(bounds: Rect2) -> void:
     for x in range(columns):
         for y in range(rows):
             var spot = Sprite.new()
-            spot.name = "ForestSunray"
+            spot.name = "ForestMoonray" if moonlit else "ForestSunray"
             spot.z_index = 3
             spot.material = light_material
-            spot.modulate = Color(1.0, 0.95, 0.82, 0.0)
+            spot.modulate = Color(0.62, 0.76, 1.0, 0.0) if moonlit else Color(1.0, 0.95, 0.82, 0.0)
             add_child(spot)
             var patch = {
                 "sprite": spot,
@@ -150,3 +170,6 @@ func _reset_light_patch(patch: Dictionary) -> void:
     patch.lifetime = _random.randf_range(28.0, 38.0)
     patch.fade_duration = _random.randf_range(7.0, 10.0)
     patch.strength = _random.randf_range(0.28, 0.36)
+    if moonlit:
+        patch.strength *= 0.8
+        patch.drift *= 0.65
