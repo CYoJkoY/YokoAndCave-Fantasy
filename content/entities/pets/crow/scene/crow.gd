@@ -12,7 +12,7 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
     _angle = wrapf(_angle, 0.0, 2.0 * PI)
     sprite.flip_h = _angle > 0.0 and _angle < PI
-    _parts_offset.scale.x = -1 if sprite.flip_h else 1
+    _parts_offset.scale.x = -abs(_parts_offset.scale.x) if sprite.flip_h else abs(_parts_offset.scale.x)
 
 func _set_outlines(alpha: float = 1.0, desaturation: float = 0.0) -> void:
     ._set_outlines(alpha, desaturation)

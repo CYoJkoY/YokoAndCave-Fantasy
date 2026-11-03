@@ -303,6 +303,7 @@ scale = Vector2( 1.1, 0.9 )
 
 [node name="Offset" type="Node2D" parent="Animation"]
 position = Vector2( 0, 0 )
+scale = Vector2( 0.9, 0.9 )
 
 [node name="Shadow" type="Sprite" parent="Animation/Offset"]
 texture = ExtResource( 31 )

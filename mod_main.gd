@@ -20,11 +20,11 @@ func install_script_extensions() -> void:
         "main.gd",
         # SYSTEMS: Job[ 1/6 ]
         # STATS: Soul[ 1/3 ]
+        # VISUALS: Silver Pocket Watch time distortion
         # ENEMIES: World Tree
         #          Slime
         # EFFECTS: extra_curse_enemy
         #          gain_stat_for_every_stat[ living_cursed_enemy ]
-        #          decaying_slow_enemy_when_below_hp[ 1/2 ]
         #          slow_cursed_enemy,
         #          time_bonus_current_health_damage
         #          random_reload_when_picked_up_gold
@@ -82,7 +82,6 @@ func install_script_extensions() -> void:
         # CONSUMABLES: Attract Soul
         # EFFECTS: damage_clamp,
         #          damage_reflect,
-        #          decaying_slow_enemy_when_below_hp[ 2/2 ]
         #          material_loss_on_hit
         #          dmg_when_pickup_consumable
         #          add_stat_when_pickup_consumable

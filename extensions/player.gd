@@ -1,12 +1,5 @@
 extends "res://entities/units/player/player.gd"
 
-const FANTASY_ENEMY_SPEED_MODIFIER_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/enemy_speed_modifier_service.gd")
-
-var decaying_slow_enemy_when_below_hp_triggers: Dictionary = {}
-var _fantasy_active_decaying_slow_sources: Dictionary = {}
-var _fantasy_decaying_slow_source_enemies: Dictionary = {}
-var _fantasy_decaying_slow_original_materials: Dictionary = {}
-var _fantasy_decaying_slow_enemy_counts: Dictionary = {}
 var consumables_picked_up_this_run: Dictionary = {}
 var _fantasy_clock_tower_hat_sprite: Sprite = null
 var _fantasy_clock_tower_hat_tween: Tween = null
@@ -24,7 +17,6 @@ var _fa_healing_star_receiver = null
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func _ready() -> void:
-    _fantasy_decaying_slow_enemy_when_below_hp_ready()
     _fantasy_is_clock_tower_guardian_character = _fantasy_is_clock_tower_guardian()
     if RunData.get_player_effect(Utils.fantasy_heal_per_second_hash, player_index) > 0 and _one_second_timer.is_stopped():
         _one_second_timer.start()
@@ -52,7 +44,6 @@ func _on_OneSecondTimer_timeout() -> void:
 func take_damage(value: int, args: TakeDamageArgs) -> Array:
     var take_damage_array: Array =.take_damage(value, args)
     _fantasy_damage_reflect(take_damage_array[0], args)
-    _fantasy_decaying_slow_enemy_when_below_hp(take_damage_array[1])
     _fantasy_loss_material_on_hit(take_damage_array[1])
 
     return take_damage_array
@@ -89,12 +80,10 @@ func on_heal_over_time_effect(total_healing: int, duration: int) -> void:
     .on_heal_over_time_effect(total_healing, duration)
 
 func die(args = Utils.default_die_args) -> void:
-    _fantasy_clear_decaying_slow_effects()
     _fantasy_clear_soul_effects()
     .die(args)
 
 func on_room_cleanup() -> void:
-    _fantasy_clear_decaying_slow_effects()
     _fantasy_clear_soul_effects()
     .on_room_cleanup()
 
@@ -224,90 +213,6 @@ func _fantasy_damage_reflect(full_dmg_value: int, args: TakeDamageArgs) -> void:
 
         RunData.add_tracked_value(player_index, tracking_key_hash, reflect_damage)
         enemy.take_damage(reflect_damage, reflect_args)
-
-func _fantasy_decaying_slow_enemy_when_below_hp_ready() -> void:
-    var effect_items: Array = RunData.get_player_effect(Utils.fantasy_decaying_slow_enemy_when_below_hp_hash, player_index)
-    for effect_index in range(effect_items.size()):
-        var effect: Array = effect_items[effect_index]
-        decaying_slow_enemy_when_below_hp_triggers[effect_index] = effect[3] # Trigger times
-
-func _fantasy_decaying_slow_enemy_when_below_hp(dmg_taken: int) -> void:
-    if dmg_taken <= 0: return
-
-    var effect_items: Array = RunData.get_player_effect(Utils.fantasy_decaying_slow_enemy_when_below_hp_hash, player_index)
-    for effect_index in range(effect_items.size()):
-        var effect: Array = effect_items[effect_index]
-        var hp_threshold: float = max_stats.health * effect[0] / 100.0
-        var duration: int = effect[1]
-        var stat_nb: int = effect[2]
-
-        if current_stats.health >= hp_threshold or decaying_slow_enemy_when_below_hp_triggers[effect_index] <= 0: continue
-
-        decaying_slow_enemy_when_below_hp_triggers[effect_index] -= 1
-
-        TempStats.add_stat(Utils.stat_fantasy_decaying_slow_enemy_hash, stat_nb, player_index) # For main.gd to use
-        var source_id: String = _fantasy_get_decaying_slow_source_id(effect_index)
-        _fantasy_active_decaying_slow_sources[source_id] = stat_nb
-        _fantasy_decaying_slow_source_enemies[source_id] = []
-        var enemies: Array = Utils.get_scene_node()._entity_spawner.get_all_enemies(false)
-        for enemy in enemies:
-            fa_apply_decaying_slow_to_enemy(enemy, source_id, stat_nb)
-
-        yield (get_tree().create_timer(duration, false), "timeout")
-        if cleaning_up:
-            _fantasy_active_decaying_slow_sources.erase(source_id)
-            fa_remove_decaying_slow_source(source_id)
-            return
-
-        TempStats.remove_stat(Utils.stat_fantasy_decaying_slow_enemy_hash, stat_nb, player_index)
-        _fantasy_active_decaying_slow_sources.erase(source_id)
-        fa_remove_decaying_slow_source(source_id)
-        break # Once a time when take damage
-
-func _fantasy_get_decaying_slow_source_id(effect_index: int) -> String:
-    return "decaying_slow_%s_%s_%s" % [player_index, effect_index, decaying_slow_enemy_when_below_hp_triggers[effect_index]]
-
-func fa_apply_decaying_slow_to_enemy(enemy: Enemy, source_id: String, slow_percent: float) -> void:
-    if !is_instance_valid(enemy) or enemy.dead: return
-
-    FANTASY_ENEMY_SPEED_MODIFIER_SERVICE.set_percent_modifier(enemy, source_id, slow_percent)
-    if !_fantasy_decaying_slow_source_enemies.has(source_id):
-        _fantasy_decaying_slow_source_enemies[source_id] = []
-    if !_fantasy_decaying_slow_source_enemies[source_id].has(enemy):
-        _fantasy_decaying_slow_source_enemies[source_id].append(enemy)
-
-    if !_fantasy_decaying_slow_original_materials.has(enemy):
-        match enemy.sprite.material == enemy.flash_mat:
-            true: _fantasy_decaying_slow_original_materials[enemy] = enemy._non_flash_material
-            false: _fantasy_decaying_slow_original_materials[enemy] = enemy.sprite.material
-        _fantasy_decaying_slow_enemy_counts[enemy] = 0
-
-    _fantasy_decaying_slow_enemy_counts[enemy] += 1
-    enemy.sprite.material = load("res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/decaying_slow_enemy_when_below_hp/decaying_slow_enemy_when_below_hp_shader.tres")
-
-func fa_remove_decaying_slow_source(source_id: String) -> void:
-    var enemies: Array = _fantasy_decaying_slow_source_enemies.get(source_id, [])
-    for enemy in enemies:
-        FANTASY_ENEMY_SPEED_MODIFIER_SERVICE.remove_modifier(enemy, source_id)
-        if !_fantasy_decaying_slow_enemy_counts.has(enemy):
-            continue
-
-        _fantasy_decaying_slow_enemy_counts[enemy] -= 1
-        if _fantasy_decaying_slow_enemy_counts[enemy] > 0:
-            continue
-
-        _fantasy_decaying_slow_enemy_counts.erase(enemy)
-        if is_instance_valid(enemy) and _fantasy_decaying_slow_original_materials.has(enemy):
-            enemy.sprite.material = _fantasy_decaying_slow_original_materials[enemy]
-        _fantasy_decaying_slow_original_materials.erase(enemy)
-
-    _fantasy_decaying_slow_source_enemies.erase(source_id)
-
-func _fantasy_clear_decaying_slow_effects() -> void:
-    for source_id in _fantasy_active_decaying_slow_sources.keys().duplicate():
-        TempStats.remove_stat(Utils.stat_fantasy_decaying_slow_enemy_hash, _fantasy_active_decaying_slow_sources[source_id], player_index)
-        _fantasy_active_decaying_slow_sources.erase(source_id)
-        fa_remove_decaying_slow_source(source_id)
 
 func _fantasy_loss_material_on_hit(dmg_taken: int) -> void:
     if dmg_taken <= 0: return

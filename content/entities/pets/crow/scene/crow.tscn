@@ -384,6 +384,7 @@ position = Vector2( 0, -24 )
 
 [node name="Offset" type="Node2D" parent="Animation"]
 position = Vector2( 0, 0 )
+scale = Vector2( 0.8, 0.8 )
 
 [node name="Body" type="Sprite" parent="Animation/Offset"]
 texture = ExtResource( 29 )

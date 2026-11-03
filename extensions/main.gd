@@ -4,6 +4,7 @@ const FANTASY_UPGRADE_HOOKS = preload("res://mods-unpacked/YokoAndCave-Fantasy/e
 const FANTASY_LIGHTNING_CHAIN_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/lightning_chain_service.gd")
 const FANTASY_ENEMY_SPEED_MODIFIER_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/enemy_speed_modifier_service.gd")
 const FANTASY_FOREST_ATMOSPHERE = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/maps/atmosphere/forest_atmosphere.gd")
+const FANTASY_TIME_DISTORTION = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/visual_effects/time_distortion/time_distortion.gd")
 
 const FANTASY_END_WAVE_BEFORE_REWARDS: String = "before_wave_rewards"
 const FANTASY_END_WAVE_BEFORE_END_RUN_SCENE: String = "before_end_run_scene"
@@ -11,6 +12,7 @@ const FANTASY_END_WAVE_BEFORE_END_RUN_SCENE: String = "before_end_run_scene"
 var FaTimers: Array = []
 var summoned_twins: Array = []
 var cursed_enemies: Array = []
+var _fantasy_time_distortion = null
 
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func _ready() -> void:
@@ -20,6 +22,13 @@ func _ready() -> void:
     _fantasy_queue_job_upgrades()
     _fantasy_start_time_bonus_current_health_damage_timer()
     _fantasy_start_enemy_spawn_timers()
+    var silver_watch_hash: int = Keys.generate_hash("item_fantasy_silver_pocket_watch")
+    for player_index in range(RunData.get_player_count()):
+        if RunData.get_nb_item(silver_watch_hash, player_index) <= 0: continue
+        _fantasy_time_distortion = FANTASY_TIME_DISTORTION.new()
+        _fantasy_time_distortion.entity_spawner = _entity_spawner
+        add_child(_fantasy_time_distortion)
+        break
     if ZoneService.get_zone_data(RunData.current_zone).name == "ZONE_FANTASY":
         var atmosphere = FANTASY_FOREST_ATMOSPHERE.new()
         atmosphere.entities_container = _entities_container
@@ -64,6 +73,7 @@ func on_gold_picked_up(gold: Node, player_index: int) -> void:
 
 func clean_up_room() -> void:
     for timer in FaTimers: timer.stop()
+    if _fantasy_time_distortion != null: _fantasy_time_distortion.clear()
     .clean_up_room()
     _fantasy_clear_living_cursed_enemy()
 
@@ -113,7 +123,6 @@ func _fantasy_spawn_enemies(enemy_scene: PackedScene, count: int, spawn_edge_of_
 func _fantasy_finish_enemy_spawn(enemy: Enemy) -> void:
     if _cleaning_up or !is_instance_valid(enemy) or enemy.dead: return
     _fantasy_extra_curse_enemy(enemy)
-    _fantasy_decaying_slow_enemy(enemy)
     _fantasy_change_living_cursed_enemy(enemy, true)
 
 func _fantasy_extra_curse_enemy(enemy: Enemy) -> void:
@@ -217,16 +226,6 @@ func _fantasy_lightning_chain_on_death(enemy: Enemy) -> void:
                 params.arc_scene_path
             )
         
-func _fantasy_decaying_slow_enemy(enemy: Enemy) -> void:
-    # For decaying slow new enemy
-    for player_index in range(_players.size()):
-        var player: Player = _players[player_index]
-        for source_id in player._fantasy_active_decaying_slow_sources.keys():
-            var slow_percent: float = player._fantasy_active_decaying_slow_sources[source_id]
-            if slow_percent == 0: continue
-
-            player.fa_apply_decaying_slow_to_enemy(enemy, source_id, slow_percent)
-
 func _fantasy_twin_connect(enemy: Enemy) -> void:
     match [enemy.enemy_id, summoned_twins.has(enemy.pool_id)]:
         ["fantasy_twin_blaze", false]:

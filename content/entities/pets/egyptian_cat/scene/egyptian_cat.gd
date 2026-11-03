@@ -10,7 +10,7 @@ func _ready() -> void:
 
 func update_animation(movement: Vector2) -> void:
     .update_animation(movement)
-    _parts_offset.scale.x = sprite.scale.x
+    _parts_offset.scale.x = sprite.scale.x * _parts_offset.scale.y
 
 func _set_outlines(alpha: float = 1.0, desaturation: float = 0.0) -> void:
     ._set_outlines(alpha, desaturation)

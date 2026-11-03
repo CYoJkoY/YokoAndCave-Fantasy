@@ -54,9 +54,6 @@ func _fantasy_curse_item(cursed_item_data: ItemParentData, turn_randomization_of
                 new_effect.times = Utils.ncl_curse_effect_value(new_effect.times, effect_modifier)
             ["fantasy_tree_radius_tempstats", _, _]:
                 new_effect.range_rate = Utils.ncl_curse_effect_value(new_effect.range_rate, effect_modifier, {"process_negative": false})
-            ["fantasy_decaying_slow_enemy_when_below_hp", _, _]:
-                new_effect.value2 = Utils.ncl_curse_effect_value(new_effect.value2, effect_modifier)
-                new_effect.trigger_times = Utils.ncl_curse_effect_value(new_effect.trigger_times, effect_modifier)
             ["fantasy_projectiles_every_x_melee_shoot", _, _]:
                 new_effect.projectile_stats = _boost_weapon_stats_damage(new_effect.projectile_stats, effect_modifier)
             [_, _, Utils.fantasy_curse_all_on_reroll_hash]:

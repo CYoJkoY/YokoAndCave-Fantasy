@@ -47,7 +47,6 @@ func fa_is_damage_job_way(way_hash: int) -> bool:
 # Stats
 var stat_fantasy_holy_hash: int = Keys.generate_hash("stat_fantasy_holy")
 var stat_fantasy_soul_hash: int = Keys.generate_hash("stat_fantasy_soul")
-var stat_fantasy_decaying_slow_enemy_hash: int = Keys.generate_hash("stat_fantasy_decaying_slow_enemy")
 var stat_fantasy_crit_damage_hash: int = Keys.generate_hash("stat_fantasy_crit_damage")
 var gain_stat_fantasy_crit_damage_hash: int = Keys.generate_hash("gain_stat_fantasy_crit_damage")
 var stat_fantasy_pet_attack_speed_hash: int = Keys.generate_hash("stat_fantasy_pet_attack_speed")
@@ -68,7 +67,6 @@ var fantasy_erosion_speed_hash: int = Keys.generate_hash("fantasy_erosion_speed"
 var fantasy_extra_elites_next_wave_hash: int = Keys.generate_hash("fantasy_extra_elites_next_wave")
 var fantasy_extra_curse_item_hash: int = Keys.generate_hash("fantasy_extra_curse_item")
 var fantasy_gain_stat_every_killed_enemies_hash: int = Keys.generate_hash("fantasy_gain_stat_every_killed_enemies")
-var fantasy_decaying_slow_enemy_when_below_hp_hash: int = Keys.generate_hash("fantasy_decaying_slow_enemy_when_below_hp")
 var fantasy_reload_when_shoot_hash: int = Keys.generate_hash("fantasy_reload_when_shoot")
 var fantasy_old_specific_set_weapon_bonuses_hash: int = Keys.generate_hash("fantasy_old_specific_set_weapon_bonuses")
 var fantasy_specific_set_weapon_bonuses_hash: int = Keys.generate_hash("fantasy_specific_set_weapon_bonuses")
@@ -350,7 +348,7 @@ func fa_get_bless_info(item_data: Resource, player_index: int) -> Dictionary:
         if fa_is_negative_effect(effect):
             info.negative_count += 1
 
-    var base_cost: int = int(max(1, item_data.tier + 1)) * info.negative_count
+    var base_cost: int = (int(max(1, item_data.tier + 1)) + 1) * info.negative_count
     info.cost = base_cost + int(round(base_cost * clamp(RunData.current_wave, 0, 20) / 20.0))
     var current_souls: int = int(get_stat(stat_fantasy_soul_hash, player_index))
     info.can_bless = not blessed and info.negative_count > 0 and current_souls >= info.cost
