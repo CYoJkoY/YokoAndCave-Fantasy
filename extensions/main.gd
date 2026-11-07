@@ -67,6 +67,14 @@ func _on_enemy_died(enemy: Enemy, args: Entity.DieArgs) -> void:
     if !_cleaning_up:
         _fantasy_projectiles_on_enemy_death(enemy)
 
+func spawn_loot(unit: Unit, entity_type: int, args: Entity.DieArgs) -> void:
+    .spawn_loot(unit, entity_type, args)
+    if !unit.can_drop_loot or !unit.stats.can_drop_consumables: return
+
+    var soul: ConsumableData = ProgressData.ncl_get_content("YokoAndCave-Fantasy").roll_soul_drop()
+    if soul != null:
+        spawn_consumable(soul, unit.global_position, unit.global_position)
+
 func on_gold_picked_up(gold: Node, player_index: int) -> void:
     .on_gold_picked_up(gold, player_index)
     if player_index >= 0:

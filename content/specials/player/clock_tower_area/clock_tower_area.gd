@@ -118,6 +118,9 @@ func _flatten_grass() -> void:
     for grass in get_tree().get_nodes_in_group("fantasy_standing_grass"):
         if grass.global_position.distance_squared_to(global_position) <= radius_squared:
             grass.flatten()
+    for vegetation in get_tree().get_nodes_in_group("fantasy_clock_flattenable_vegetation"):
+        if vegetation.global_position.distance_squared_to(global_position) <= radius_squared:
+            vegetation.destroy_sprite()
 
 
 func _refresh_area_radius() -> void:

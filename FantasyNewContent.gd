@@ -24,9 +24,7 @@ func remove_custom_resources() -> void:
     ItemService._fantasy_rebuild_jobs_by_stage()
     _starting_weapons_active = false
 
-func ncl_update_consumable_to_get(base_consumable_data: ConsumableData) -> ConsumableData:
-    if base_consumable_data != null: return base_consumable_data
-
+func roll_soul_drop() -> ConsumableData:
     var stat_holy: float = Utils.average_all_player_stats(Utils.stat_fantasy_holy_hash)
     var extra_chance_drop_soul: float = Utils.sum_all_player_stats(Utils.fantasy_base_chance_drop_soul_hash) / 100.0
     var luck: float = Utils.average_all_player_stats(Keys.stat_luck_hash)
@@ -35,7 +33,7 @@ func ncl_update_consumable_to_get(base_consumable_data: ConsumableData) -> Consu
     var chance_drop_soul: float = max(0.0, BASE_CHANCE_DROP_SOUL * chance_drop_soul_luck_bonus * chance_drop_soul_holy_bonus) + extra_chance_drop_soul
     if Utils.get_chance_success(clamp(chance_drop_soul, 0.0, 1.0)): return soul_data
 
-    return base_consumable_data
+    return null
 
 # ══════════════════════════════════════════ Method ══════════════════════════════════════════ #
 func get_additional_starting_weapons(character: CharacterData) -> Array:
