@@ -3,6 +3,7 @@ extends Area2D
 const FANTASY_ENEMY_SPEED_MODIFIER_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/enemy_speed_modifier_service.gd")
 
 const EFFECT_REFRESH_INTERVAL: float = 0.5
+const CLOCK_TOWER_AREA_GROUP: String = "fantasy_clock_tower_area"
 
 export (float) var base_radius: float
 export (float) var source_radius: float = 236.0
@@ -64,6 +65,7 @@ func init(_main: Main, _player_index: int, _pos: Vector2, radius: float, _base_r
 
 
 func _ready() -> void:
+    add_to_group(CLOCK_TOWER_AREA_GROUP)
     global_position = pos
     _cache_visual_nodes()
     set_area_radius(base_radius)
@@ -119,8 +121,12 @@ func _flatten_grass() -> void:
         if grass.global_position.distance_squared_to(global_position) <= radius_squared:
             grass.flatten()
     for vegetation in get_tree().get_nodes_in_group("fantasy_clock_flattenable_vegetation"):
-        if vegetation.global_position.distance_squared_to(global_position) <= radius_squared:
-            vegetation.destroy_sprite()
+        fantasy_flatten_vegetation(vegetation)
+
+
+func fantasy_flatten_vegetation(vegetation: Node2D) -> void:
+    if vegetation.global_position.distance_squared_to(global_position) <= base_radius * base_radius:
+        vegetation.destroy_sprite()
 
 
 func _refresh_area_radius() -> void:
