@@ -63,7 +63,9 @@ func _physics_process(delta: float) -> void:
                 _blow_away_enemies()
 
         State.BLOWING:
-            pass
+            _state_time_left -= delta
+            if _state_time_left <= 0.0:
+                _enter_cooldown()
 
         State.COOLDOWN:
             _state_time_left -= delta
@@ -99,6 +101,10 @@ func _blow_away_enemies() -> void:
             direction = Vector2.RIGHT
         enemy.knockback_vector = direction.normalized() * blow_strength * BLOW_STRENGTH_MULTIPLIER
 
+func _enter_cooldown() -> void:
+    _set_state(State.COOLDOWN)
+    _state_time_left = cooldown_duration
+
 func _set_state(next_state: int) -> void:
     if _state == next_state:
         return
@@ -113,14 +119,16 @@ func _set_visual_state(state: int) -> void:
 
     if state == State.COOLDOWN:
         _animation_player.play("tired_idle")
-    elif state == State.CHARGING:
+    elif state == State.CHARGING or state == State.BLOWING:
         _animation_player.play("angry_trigger")
+        if state == State.BLOWING:
+            _state_time_left = _animation_player.get_animation("angry_trigger").length
     elif state == State.ARMED:
         _animation_player.play("idle")
 
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
-    if anim_name != "angry_trigger" or _state != State.BLOWING:
+    if anim_name != "angry_trigger":
         return
 
-    _set_state(State.COOLDOWN)
-    _state_time_left = cooldown_duration
+    if _state == State.BLOWING:
+        _enter_cooldown()
