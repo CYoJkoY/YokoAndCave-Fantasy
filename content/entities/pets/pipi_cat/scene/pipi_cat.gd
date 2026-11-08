@@ -49,7 +49,6 @@ func _physics_process(delta: float) -> void:
     if dead:
         return
 
-    _prioritize_enemies()
     _prune_targets()
 
     match _state:
@@ -102,18 +101,6 @@ func _blow_away_enemies() -> void:
         if direction.length_squared() == 0:
             direction = Vector2.RIGHT
         enemy.knockback_vector = direction.normalized() * blow_strength * BLOW_STRENGTH_MULTIPLIER
-
-func _prioritize_enemies() -> void:
-    for enemy in _entity_spawner_ref.get_all_enemies(false):
-        if enemy.dead or enemy.current_target == self:
-            continue
-
-        if enemy.current_target != null and enemy.current_target.is_connected("died", enemy, "_on_target_died"):
-            enemy.current_target.disconnect("died", enemy, "_on_target_died")
-
-        enemy.current_target = self
-        if not is_connected("died", enemy, "_on_target_died"):
-            var _error_died = connect("died", enemy, "_on_target_died")
 
 func _enter_cooldown() -> void:
     _set_state(State.COOLDOWN)
