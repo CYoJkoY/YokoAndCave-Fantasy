@@ -45,6 +45,20 @@ func update_data(effect: PetEffect) -> void:
     blow_strength = pipi_effect.blow_strength
     _trigger_shape.shape.radius = blow_radius
 
+func die(args: = DieArgs.new()) -> void:
+    _set_targetable(false)
+    .die(args)
+
+func respawn() -> void:
+    # The spawner registers targetable pets after respawn() returns. Registering
+    # here as well would add a duplicate entry that erase() cannot fully remove,
+    # so this only restores the state machine.
+    .respawn()
+    _state = State.ARMED
+    _state_time_left = 0.0
+    _targets_in_range.clear()
+    _set_visual_state(State.ARMED)
+
 func _physics_process(delta: float) -> void:
     if dead:
         return
@@ -110,7 +124,11 @@ func _set_state(next_state: int) -> void:
     if _state == next_state:
         return
 
+    var was_targetable: bool = _is_targetable_state(_state)
     _state = next_state
+    var is_targetable: bool = _is_targetable_state(next_state)
+    if was_targetable != is_targetable:
+        _set_targetable(is_targetable)
     _set_visual_state(next_state)
 
 func _set_visual_state(state: int) -> void:
@@ -124,6 +142,41 @@ func _set_visual_state(state: int) -> void:
         _animation_player.play("angry_trigger")
     elif state == State.ARMED:
         _animation_player.play("idle")
+
+func _is_targetable_state(state: int) -> bool:
+    return state != State.COOLDOWN
+
+func _set_targetable(targetable: bool) -> void:
+    if not is_instance_valid(_entity_spawner_ref):
+        return
+
+    var targetable_pets: Array = _entity_spawner_ref.targetable_pets
+    if targetable:
+        if not can_be_targeted_by_enemies:
+            return
+        if not targetable_pets.has(self):
+            targetable_pets.push_back(self)
+        return
+
+    if not targetable_pets.has(self):
+        return
+
+    targetable_pets.erase(self)
+    if _entity_spawner_ref._cleaning_up:
+        return
+
+    # Removing the pet only affects future target refreshes. Enemies already
+    # locked on it keep a stale target until their next refresh, so retarget
+    # them once here instead of revisiting every enemy each frame.
+    _retarget_enemies_away_from_self()
+
+func _retarget_enemies_away_from_self() -> void:
+    for enemy in _entity_spawner_ref.get_all_enemies(false):
+        if not is_instance_valid(enemy) or enemy.dead:
+            continue
+        if enemy.current_target != self:
+            continue
+        enemy.update_target()
 
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
     if anim_name != "angry_trigger":
