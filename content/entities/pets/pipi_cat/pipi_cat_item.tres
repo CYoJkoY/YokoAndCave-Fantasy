@@ -1,0 +1,33 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/pipi_cat/pipi_cat_data.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/pipi_cat_stats.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/pipi_cat_icon.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/fantasy_pet_data.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/pipi_cat_screen.webp" type="Texture" id=5]
+
+[resource]
+script = ExtResource( 4 )
+my_id = "fantasy_pipi_cat"
+unlocked_by_default = false
+can_be_looted = true
+icon = ExtResource( 3 )
+name = "FANTASY_PIPI_CAT_NAME"
+tier = 0
+value = 1
+effects = [  ]
+tracking_text = ""
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+stats = ExtResource( 2 )
+screen_example = ExtResource( 5 )
+behaviour_description = "FANTASY_PIPI_CAT_BEHAVIOUR"
+fantasy_affected_player_stats = [ "stat_speed", "knockback" ]
+show_hp = false
+show_dammage = false
+show_speed = true
+show_knoback_resistance = false
+show_material_dropped = false
+item_drop = ExtResource( 1 )
