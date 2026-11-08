@@ -1,28 +1,40 @@
-class_name PipiCat
 extends Pet
 
 enum State { ARMED, CHARGING, BLOWING, COOLDOWN }
+
+const FANTASY_VISUAL_PARTS_SYNC = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/visual_parts_sync.gd")
 
 export(float) var charge_duration: float = 2.0
 export(float) var cooldown_duration: float = 5.0
 export(float) var blow_radius: float = 260.0
 export(float) var blow_strength: float = 2.4
 
+const BLOW_STRENGTH_MULTIPLIER: float = 4.0
+
 var is_pipi_cat: bool = true
 
+onready var _parts_offset: Node2D = $Animation/Offset
 onready var _trigger_shape: CollisionShape2D = $TargetTriggerZone/CollisionShape2D
-onready var _animation_player: AnimationPlayer = $AnimationPlayer
 onready var _normal: Sprite = $Animation/Offset/Normal
 onready var _angry: Sprite = $Animation/Offset/Angry
 onready var _tired: Sprite = $Animation/Offset/Tired
 
+var _visual_parts_sync = FANTASY_VISUAL_PARTS_SYNC.new()
 var _state: int = State.ARMED
 var _state_time_left: float = 0.0
 var _targets_in_range: Array = []
 
 func _ready() -> void:
-    ._ready()
+    _visual_parts_sync.setup_from(_parts_offset, sprite)
     _set_visual_state(State.ARMED)
+
+func update_animation(movement: Vector2) -> void:
+    .update_animation(movement)
+    _parts_offset.scale.x = sprite.scale.x * _parts_offset.scale.y
+
+func _set_outlines(alpha: float = 1.0, desaturation: float = 0.0) -> void:
+    ._set_outlines(alpha, desaturation)
+    _visual_parts_sync.sync_from(sprite)
 
 func update_data(effect: PetEffect) -> void:
     .update_data(effect)
@@ -37,7 +49,6 @@ func _physics_process(delta: float) -> void:
     if dead:
         return
 
-    ._physics_process(delta)
     _prune_targets()
 
     match _state:
@@ -47,7 +58,7 @@ func _physics_process(delta: float) -> void:
                 _state_time_left = 0.0
                 return
 
-            _state_time_left -= Utils.physics_one(delta)
+            _state_time_left -= delta
             if _state_time_left <= 0.0:
                 _blow_away_enemies()
 
@@ -55,7 +66,7 @@ func _physics_process(delta: float) -> void:
             pass
 
         State.COOLDOWN:
-            _state_time_left -= Utils.physics_one(delta)
+            _state_time_left -= delta
             if _state_time_left <= 0.0:
                 _set_state(State.ARMED)
 
@@ -86,7 +97,7 @@ func _blow_away_enemies() -> void:
         var direction: Vector2 = enemy.global_position - global_position
         if direction.length_squared() == 0:
             direction = Vector2.RIGHT
-        enemy.knockback_vector = direction.normalized() * blow_strength
+        enemy.knockback_vector = direction.normalized() * blow_strength * BLOW_STRENGTH_MULTIPLIER
 
 func _set_state(next_state: int) -> void:
     if _state == next_state:

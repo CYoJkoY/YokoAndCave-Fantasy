@@ -18,3 +18,5 @@ charge_duration = 2.0
 cooldown_duration = 5.0
 blow_radius = 260.0
 blow_strength = 2.4
+charge_scaling_stats = [ [ "stat_elemental_damage", 0.06 ] ]
+cooldown_scaling_stats = [ [ "stat_elemental_damage", -0.03 ] ]
