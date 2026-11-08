@@ -1,6 +1,13 @@
 class_name PipiCatEffect
 extends PetEffect
 
+# The blow travels this fraction of the map's shorter edge when blow_strength
+# equals BLOW_STRENGTH_REFERENCE. Scaling blow_strength scales the distance
+# linearly, so extra stats can be attached to it later without touching the
+# description.
+const BLOW_DISTANCE_MAP_FRACTION: float = 0.5
+const BLOW_STRENGTH_REFERENCE: float = 2.4
+
 export(float) var charge_duration: float = 2.0
 export(float) var cooldown_duration: float = 5.0
 export(float) var blow_radius: float = 260.0
@@ -34,13 +41,17 @@ func get_cooldown_duration(player_index: int) -> float:
     var scaling: float = _get_duration_scaling(cooldown_scaling_stats, player_index)
     return max(0.1, cooldown_duration * (1.0 + scaling / 100.0))
 
+func get_blow_distance_fraction() -> float:
+    return BLOW_DISTANCE_MAP_FRACTION * blow_strength / BLOW_STRENGTH_REFERENCE
+
 func get_args(_player_index: int) -> Array:
     return [
         "%.1f" % charge_duration,
         WeaponService.get_scaling_stats_icon_text(charge_scaling_stats),
         str(blow_radius),
         "%.1f" % cooldown_duration,
-        WeaponService.get_scaling_stats_icon_text(cooldown_scaling_stats)
+        WeaponService.get_scaling_stats_icon_text(cooldown_scaling_stats),
+        str(int(round(get_blow_distance_fraction() * 100.0)))
     ]
 
 func serialize() -> Dictionary:

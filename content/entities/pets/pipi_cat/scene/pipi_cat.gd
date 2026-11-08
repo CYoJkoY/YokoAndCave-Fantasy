@@ -9,7 +9,12 @@ export(float) var cooldown_duration: float = 5.0
 export(float) var blow_radius: float = 260.0
 export(float) var blow_strength: float = 2.4
 
-const BLOW_STRENGTH_MULTIPLIER: float = 4.0
+# Unit.get_next_knockback_value() decays the pulse by this fraction each physics
+# frame, and Unit.get_knockback_value() turns each remaining point into 100 px/s
+# when the enemy has no knockback resistance. Integrating that decay over physics
+# steps gives a total travel of magnitude * 9 frames * 100 / physics fps.
+const KNOCKBACK_DECAY_PER_FRAME: float = 0.1
+const KNOCKBACK_SPEED_PER_POINT: float = 100.0
 
 var is_pipi_cat: bool = true
 
@@ -108,13 +113,24 @@ func _prune_targets() -> void:
 func _blow_away_enemies() -> void:
     _set_state(State.BLOWING)
     _state_time_left = max(0.1, _animation_player.get_animation("angry_trigger").length)
+    var knockback_magnitude: float = _get_blow_knockback_magnitude()
     for enemy in _targets_in_range:
         if not is_instance_valid(enemy) or enemy.dead:
             continue
         var direction: Vector2 = enemy.global_position - global_position
         if direction.length_squared() == 0:
             direction = Vector2.RIGHT
-        enemy.knockback_vector = direction.normalized() * blow_strength * BLOW_STRENGTH_MULTIPLIER
+        enemy.knockback_vector = direction.normalized() * knockback_magnitude
+
+func _get_blow_knockback_magnitude() -> float:
+    var zone_size: Vector2 = ZoneService.get_current_zone_rect().size
+    var blow_distance: float = min(zone_size.x, zone_size.y) * _get_blow_distance_fraction()
+    var decaying_frames: float = (1.0 - KNOCKBACK_DECAY_PER_FRAME) / KNOCKBACK_DECAY_PER_FRAME
+    var physics_fps: float = float(Engine.iterations_per_second)
+    return blow_distance * physics_fps / (decaying_frames * KNOCKBACK_SPEED_PER_POINT)
+
+func _get_blow_distance_fraction() -> float:
+    return PipiCatEffect.BLOW_DISTANCE_MAP_FRACTION * blow_strength / PipiCatEffect.BLOW_STRENGTH_REFERENCE
 
 func _enter_cooldown() -> void:
     _set_state(State.COOLDOWN)
