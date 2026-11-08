@@ -1,11 +1,11 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://resources/shaders/flash.gdshader" type="Shader" id=1]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/scene/pipi_cat.gd" type="Script" id=2]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/egyptian_cat/scene/egyptian_cat_attack_head.webp" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/scene/pipi_cat_normal.webp" type="Texture" id=3]
 [ext_resource path="res://entities/units/movement_behaviors/follow_target_movement_behavior.gd" type="Script" id=4]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/pipi_cat_stats.tres" type="Resource" id=5]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/egyptian_cat/scene/egyptian_cat_body.webp" type="Texture" id=6]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/scene/pipi_cat_shadow.webp" type="Texture" id=6]
 [ext_resource path="res://resources/shaders/outline.gdshader" type="Shader" id=7]
 [ext_resource path="res://particles/curse/curse_enemy_particles.tscn" type="PackedScene" id=8]
 [ext_resource path="res://overlap/hurtbox.tscn" type="PackedScene" id=9]
@@ -29,9 +29,8 @@
 [ext_resource path="res://entities/units/unit/crit_sounds/bullet_impact_metal_light_03.wav" type="AudioStream" id=27]
 [ext_resource path="res://entities/units/unit/hurt_sounds/punch_general_body_impact_06.wav" type="AudioStream" id=28]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/scene/pipi_cat_target_behavior.gd" type="Script" id=29]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/egyptian_cat/scene/egyptian_cat_head.webp" type="Texture" id=30]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/egyptian_cat/scene/egyptian_cat_shadow.webp" type="Texture" id=31]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/egyptian_cat/scene/egyptian_cat.webp" type="Texture" id=32]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/scene/pipi_cat_angry.webp" type="Texture" id=30]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/scene/pipi_cat_tired.webp" type="Texture" id=31]
 
 [sub_resource type="PhysicsMaterial" id=6]
 friction = 0.0
@@ -58,7 +57,7 @@ radius = 30.0666
 [sub_resource type="Animation" id=3]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Animation/Offset/Body:self_modulate")
+tracks/0/path = NodePath("Animation/Offset/Normal:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -68,54 +67,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Animation/Offset/Body/Head:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Animation/Sprite:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Animation/Sprite:scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Animation/Sprite:rotation_degrees")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -137,42 +88,6 @@ tracks/0/keys = {
 "args": [  ],
 "method": "death_animation_finished"
 } ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Animation/Sprite:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 360.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Animation/Sprite:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 0.341 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 0, 0 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Animation/Sprite:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 0.297 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 0.34902, 0.34902, 0.34902, 1 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -248,30 +163,66 @@ tracks/1/keys = {
 "method": "shoot"
 } ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("Animation/Offset/AttackHead:visible")
+
+[sub_resource type="Animation" id=12]
+loop = true
+length = 1.2
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Animation:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -23.7811, -0.05, 0, 0.05, 0, -23.2, -0.05, 0, 0.05, 0, -23.7811, -0.05, 0, 0.05, 0 ),
+"times": PoolRealArray( 0, 0.6, 1.2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Animation:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1.00657, -0.05, 0, 0.05, 0, 1.02, -0.05, 0, 0.05, 0, 1.00657, -0.05, 0, 0.05, 0 ),
+"times": PoolRealArray( 0, 0.6, 1.2 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Animation:scale:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.1, 0.25 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
+"points": PoolRealArray( 0.993434, -0.05, 0, 0.05, 0, 0.985, -0.05, 0, 0.05, 0, 0.993434, -0.05, 0, 0.05, 0 ),
+"times": PoolRealArray( 0, 0.6, 1.2 )
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("Animation/Offset/Body/Head:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0.1, 0.25 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+
+[sub_resource type="Animation" id=13]
+length = 0.36
+step = 0.06
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Animation:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1.00657, -0.25, 0, 0.25, 0, 1.09, -0.25, 0, 0.25, 0, 1.00657, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.16, 0.36 )
 }
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Animation:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.993434, -0.25, 0, 0.25, 0, 1.075, -0.25, 0, 0.25, 0, 0.993434, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.16, 0.36 )
+}
+
 
 [sub_resource type="CircleShape2D" id=11]
 
@@ -293,34 +244,27 @@ dodge_sounds = [ ExtResource( 20 ), ExtResource( 16 ) ]
 stats = ExtResource( 5 )
 flash_mat = SubResource( 1 )
 curse_particles = ExtResource( 8 )
-shoot_projectiles = false
-damage_tracking_id = "item_fantasy_pipi_cat"
-has_shoot_anim = false
 
 [node name="Animation" type="Node2D" parent="."]
-position = Vector2( 0, -24 )
-scale = Vector2( 1.1, 0.9 )
+position = Vector2( 0, -23.7811 )
+scale = Vector2( 1.00657, 0.993434 )
 
 [node name="Offset" type="Node2D" parent="Animation"]
-position = Vector2( 0, 0 )
 scale = Vector2( 0.9, 0.9 )
 
 [node name="Shadow" type="Sprite" parent="Animation/Offset"]
-texture = ExtResource( 31 )
-
-[node name="Body" type="Sprite" parent="Animation/Offset"]
 texture = ExtResource( 6 )
 
-[node name="Head" type="Sprite" parent="Animation/Offset/Body"]
-texture = ExtResource( 30 )
-
-[node name="AttackHead" type="Sprite" parent="Animation/Offset"]
-visible = false
+[node name="Normal" type="Sprite" parent="Animation/Offset"]
 texture = ExtResource( 3 )
 
-[node name="Sprite" type="Sprite" parent="Animation"]
+[node name="Angry" type="Sprite" parent="Animation/Offset"]
 visible = false
-texture = ExtResource( 32 )
+texture = ExtResource( 30 )
+
+[node name="Tired" type="Sprite" parent="Animation/Offset"]
+visible = false
+texture = ExtResource( 31 )
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 visible = false
@@ -336,6 +280,8 @@ anims/RESET = SubResource( 3 )
 anims/death = SubResource( 4 )
 anims/idle = SubResource( 5 )
 anims/shoot = SubResource( 8 )
+anims/tired_idle = SubResource( 12 )
+anims/angry_trigger = SubResource( 13 )
 
 [node name="FlashTimer" type="Timer" parent="."]
 wait_time = 0.1
@@ -347,9 +293,7 @@ distance_to_target = 150.0
 
 [node name="TargetBehavior" type="Node2D" parent="."]
 script = ExtResource( 29 )
-target_player_if_no_target = true
 pet_id = "fantasy_pipi_cat"
-exclude_elite_and_boss_target = true
 
 [node name="Range" type="Area2D" parent="TargetBehavior"]
 visible = false
@@ -381,8 +325,6 @@ shape = SubResource( 9 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="timeout" from="FlashTimer" to="." method="_on_FlashTimer_timeout"]
-[connection signal="target_found" from="TargetBehavior" to="MovementBehavior" method="_on_TargetBehavior_target_found"]
-[connection signal="target_player" from="TargetBehavior" to="MovementBehavior" method="_on_TargetBehavior_target_player"]
 [connection signal="body_entered" from="TargetBehavior/Range" to="TargetBehavior" method="_on_Range_body_entered"]
 [connection signal="body_exited" from="TargetBehavior/Range" to="TargetBehavior" method="_on_Range_body_exited"]
 [connection signal="timeout" from="BurningTimer" to="." method="_on_BurningTimer_timeout"]
