@@ -8,6 +8,8 @@ export(float) var cooldown_duration: float = 5.0
 export(float) var blow_radius: float = 260.0
 export(float) var blow_strength: float = 2.4
 
+var is_pipi_cat: bool = true
+
 onready var _trigger_shape: CollisionShape2D = $TargetTriggerZone/CollisionShape2D
 onready var _animation_player: AnimationPlayer = $AnimationPlayer
 onready var _normal: Sprite = $Animation/Offset/Normal

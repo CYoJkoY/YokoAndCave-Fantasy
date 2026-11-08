@@ -16,6 +16,7 @@ func respawn() -> void:
 
 func update_target() -> void:
     .update_target()
+    _fantasy_prioritize_pipi_cat()
     if Utils.plant_enemies_ids.has(enemy_id_hash): _fantasy_update_cannot_tree_damage_target()
 
 func is_playing_shoot_animation() -> bool:
@@ -58,6 +59,29 @@ func _fantasy_apply_holy_damage_bonus(dmg_value_result: GetDamageValueResult) ->
     dmg_value_result.value = int(dmg_value_result.value * bonus_multiplier)
     
     return dmg_value_result
+
+func _fantasy_prioritize_pipi_cat() -> void:
+    var pipi_cat_target = null
+    var min_dist_squared: int = Utils.LARGE_NUMBER
+
+    for pet in _entity_spawner_ref.targetable_pets:
+        if pet.dead or !("is_pipi_cat" in pet) or !pet.is_pipi_cat:
+            continue
+
+        var dist_squared = global_position.distance_squared_to(pet.global_position)
+        if dist_squared < min_dist_squared:
+            min_dist_squared = dist_squared
+            pipi_cat_target = pet
+
+    if pipi_cat_target == null or current_target == pipi_cat_target:
+        return
+
+    if current_target != null and current_target.is_connected("died", self, "_on_target_died"):
+        current_target.disconnect("died", self, "_on_target_died")
+
+    current_target = pipi_cat_target
+    if !current_target.is_connected("died", self, "_on_target_died"):
+        var _error_died = current_target.connect("died", self, "_on_target_died")
 
 func _fantasy_bonus_drop(value: int) -> int:
     for player_index in range(players_ref.size()):

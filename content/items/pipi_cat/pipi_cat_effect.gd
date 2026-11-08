@@ -18,7 +18,13 @@ func get_cooldown_duration(player_index: int) -> float:
     return max(0.1, cooldown_duration * (1.0 - elemental_damage * COOLDOWN_ELEMENTAL_SCALING / 100.0))
 
 func get_args(player_index: int) -> Array:
-    return [str(get_charge_duration(player_index)), str(blow_radius), str(get_cooldown_duration(player_index))]
+    return [
+        "%.1f" % charge_duration,
+        str(int(CHARGE_ELEMENTAL_SCALING * 100.0)) + "%",
+        str(blow_radius),
+        "%.1f" % cooldown_duration,
+        str(int(COOLDOWN_ELEMENTAL_SCALING * 100.0)) + "%"
+    ]
 
 func serialize() -> Dictionary:
     var serialized: Dictionary = .serialize()
