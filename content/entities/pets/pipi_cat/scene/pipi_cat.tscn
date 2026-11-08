@@ -233,6 +233,7 @@ radius = 260.0
 collision_layer = 512
 collision_mask = 640
 mode = 2
+can_be_targeted_by_enemies = true
 physics_material_override = SubResource( 6 )
 custom_integrator = true
 script = ExtResource( 2 )
@@ -293,7 +294,9 @@ distance_to_target = 150.0
 
 [node name="TargetBehavior" type="Node2D" parent="."]
 script = ExtResource( 29 )
+target_player_if_no_target = true
 pet_id = "fantasy_pipi_cat"
+exclude_elite_and_boss_target = true
 
 [node name="Range" type="Area2D" parent="TargetBehavior"]
 visible = false

@@ -1,13 +1,24 @@
 class_name PipiCatEffect
 extends PetEffect
 
-export(float) var charge_duration: float = 1.5
+export(float) var charge_duration: float = 2.0
 export(float) var cooldown_duration: float = 5.0
 export(float) var blow_radius: float = 260.0
 export(float) var blow_strength: float = 2.4
 
-func get_args(_player_index: int) -> Array:
-    return [str(charge_duration), str(blow_radius), str(cooldown_duration)]
+const CHARGE_ELEMENTAL_SCALING: float = 0.06
+const COOLDOWN_ELEMENTAL_SCALING: float = 0.03
+
+func get_charge_duration(player_index: int) -> float:
+    var elemental_damage: float = Utils.get_stat(Keys.stat_elemental_damage_hash, player_index)
+    return charge_duration * (1.0 + elemental_damage * CHARGE_ELEMENTAL_SCALING / 100.0)
+
+func get_cooldown_duration(player_index: int) -> float:
+    var elemental_damage: float = Utils.get_stat(Keys.stat_elemental_damage_hash, player_index)
+    return max(0.1, cooldown_duration * (1.0 - elemental_damage * COOLDOWN_ELEMENTAL_SCALING / 100.0))
+
+func get_args(player_index: int) -> Array:
+    return [str(get_charge_duration(player_index)), str(blow_radius), str(get_cooldown_duration(player_index))]
 
 func serialize() -> Dictionary:
     var serialized: Dictionary = .serialize()

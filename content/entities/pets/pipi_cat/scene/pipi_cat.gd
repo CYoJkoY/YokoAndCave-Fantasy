@@ -3,7 +3,7 @@ extends Pet
 
 enum State { ARMED, CHARGING, BLOWING, COOLDOWN }
 
-export(float) var charge_duration: float = 1.5
+export(float) var charge_duration: float = 2.0
 export(float) var cooldown_duration: float = 5.0
 export(float) var blow_radius: float = 260.0
 export(float) var blow_strength: float = 2.4
@@ -25,8 +25,8 @@ func _ready() -> void:
 func update_data(effect: PetEffect) -> void:
     .update_data(effect)
     var pipi_effect: PipiCatEffect = effect as PipiCatEffect
-    charge_duration = pipi_effect.charge_duration
-    cooldown_duration = pipi_effect.cooldown_duration
+    charge_duration = pipi_effect.get_charge_duration(player_index)
+    cooldown_duration = pipi_effect.get_cooldown_duration(player_index)
     blow_radius = pipi_effect.blow_radius
     blow_strength = pipi_effect.blow_strength
     _trigger_shape.shape.radius = blow_radius
