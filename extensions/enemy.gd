@@ -2,36 +2,20 @@ extends "res://entities/units/enemies/enemy.gd"
 
 const FANTASY_ENEMY_SPEED_MODIFIER_SERVICE = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/enemy_speed_modifier_service.gd")
 
-var _fantasy_target_refresh_timer: Timer
-
 # ══════════════════════════════════════════ Extension ══════════════════════════════════════════ #
 func init(zone_min_pos: Vector2, zone_max_pos: Vector2, p_players_ref: Array = [], entity_spawner_ref = null) -> void:
-    _fantasy_ensure_target_refresh_timer()
     .init(zone_min_pos, zone_max_pos, p_players_ref, entity_spawner_ref)
-    _fantasy_start_target_refresh_timer()
     _fantasy_buff_future_target()
     if Utils.plant_enemies_ids.has(enemy_id_hash): _fantasy_cannot_tree_damage()
 
 func respawn() -> void:
-    _fantasy_ensure_target_refresh_timer()
     .respawn()
-    _fantasy_start_target_refresh_timer()
     FANTASY_ENEMY_SPEED_MODIFIER_SERVICE.clear_pooled_state(self)
     _fantasy_buff_future_target()
     if Utils.plant_enemies_ids.has(enemy_id_hash): _fantasy_cannot_tree_damage()
 
-func die(args: Entity.DieArgs = Utils.default_die_args) -> void:
-    if is_instance_valid(_fantasy_target_refresh_timer):
-        _fantasy_target_refresh_timer.stop()
-    .die(args)
-
 func update_target() -> void:
-    _fantasy_ensure_target_refresh_timer()
-    var previous_target = current_target
     .update_target()
-    _fantasy_disconnect_target(previous_target)
-    _fantasy_prioritize_pipi_cat()
-    _fantasy_connect_current_target()
     if Utils.plant_enemies_ids.has(enemy_id_hash): _fantasy_update_cannot_tree_damage_target()
 
 func is_playing_shoot_animation() -> bool:
@@ -74,63 +58,6 @@ func _fantasy_apply_holy_damage_bonus(dmg_value_result: GetDamageValueResult) ->
     dmg_value_result.value = int(dmg_value_result.value * bonus_multiplier)
     
     return dmg_value_result
-
-func _fantasy_prioritize_pipi_cat() -> void:
-    var pipi_cat_target = null
-    var min_dist_squared: int = Utils.LARGE_NUMBER
-
-    for pet in _entity_spawner_ref.targetable_pets:
-        if pet.dead or !("is_pipi_cat" in pet) or !pet.is_pipi_cat:
-            continue
-
-        var dist_squared = global_position.distance_squared_to(pet.global_position)
-        if dist_squared < min_dist_squared:
-            min_dist_squared = dist_squared
-            pipi_cat_target = pet
-
-    if pipi_cat_target == null or current_target == pipi_cat_target:
-        return
-
-    _fantasy_disconnect_target(current_target)
-
-    current_target = pipi_cat_target
-
-func _fantasy_ensure_target_refresh_timer() -> void:
-    if is_instance_valid(_fantasy_target_refresh_timer):
-        return
-
-    _fantasy_target_refresh_timer = Timer.new()
-    _fantasy_target_refresh_timer.name = "FantasyTargetRefreshTimer"
-    _fantasy_target_refresh_timer.wait_time = UPDATE_TARGET_DELAY
-    _fantasy_target_refresh_timer.one_shot = false
-    add_child(_fantasy_target_refresh_timer)
-    var _error_timeout = _fantasy_target_refresh_timer.connect("timeout", self, "_on_fantasy_target_refresh_timeout")
-
-func _fantasy_start_target_refresh_timer() -> void:
-    _fantasy_ensure_target_refresh_timer()
-    if !dead and _fantasy_target_refresh_timer.is_stopped():
-        _fantasy_target_refresh_timer.start()
-
-func _on_fantasy_target_refresh_timeout() -> void:
-    if dead:
-        _fantasy_target_refresh_timer.stop()
-        return
-
-    update_target()
-
-func _fantasy_disconnect_target(target) -> void:
-    if target == null or !is_instance_valid(target):
-        return
-
-    if target.is_connected("died", self, "_on_target_died"):
-        target.disconnect("died", self, "_on_target_died")
-
-func _fantasy_connect_current_target() -> void:
-    if current_target == null or !is_instance_valid(current_target):
-        return
-
-    if !current_target.is_connected("died", self, "_on_target_died"):
-        var _error_died = current_target.connect("died", self, "_on_target_died")
 
 func _fantasy_bonus_drop(value: int) -> int:
     for player_index in range(players_ref.size()):
