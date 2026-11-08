@@ -52,8 +52,7 @@ func _physics_process(delta: float) -> void:
                 _blow_away_enemies()
 
         State.BLOWING:
-            _set_state(State.COOLDOWN)
-            _state_time_left = cooldown_duration
+            pass
 
         State.COOLDOWN:
             _state_time_left -= Utils.physics_one(delta)
@@ -97,9 +96,9 @@ func _set_state(next_state: int) -> void:
     _set_visual_state(next_state)
 
 func _set_visual_state(state: int) -> void:
-    _normal.visible = state == State.ARMED
+    _normal.visible = state == State.ARMED or state == State.CHARGING
     _tired.visible = state == State.COOLDOWN
-    _angry.visible = state == State.CHARGING or state == State.BLOWING
+    _angry.visible = state == State.BLOWING
 
     if state == State.COOLDOWN:
         _animation_player.play("tired_idle")
@@ -107,3 +106,10 @@ func _set_visual_state(state: int) -> void:
         _animation_player.play("angry_trigger")
     elif state == State.ARMED:
         _animation_player.play("idle")
+
+func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
+    if anim_name != "angry_trigger" or _state != State.BLOWING:
+        return
+
+    _set_state(State.COOLDOWN)
+    _state_time_left = cooldown_duration
