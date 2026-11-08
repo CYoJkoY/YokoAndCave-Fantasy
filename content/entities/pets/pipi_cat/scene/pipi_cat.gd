@@ -49,6 +49,7 @@ func _physics_process(delta: float) -> void:
     if dead:
         return
 
+    _prioritize_enemies()
     _prune_targets()
 
     match _state:
@@ -93,6 +94,7 @@ func _prune_targets() -> void:
 
 func _blow_away_enemies() -> void:
     _set_state(State.BLOWING)
+    _state_time_left = max(0.1, _animation_player.get_animation("angry_trigger").length)
     for enemy in _targets_in_range:
         if not is_instance_valid(enemy) or enemy.dead:
             continue
@@ -100,6 +102,18 @@ func _blow_away_enemies() -> void:
         if direction.length_squared() == 0:
             direction = Vector2.RIGHT
         enemy.knockback_vector = direction.normalized() * blow_strength * BLOW_STRENGTH_MULTIPLIER
+
+func _prioritize_enemies() -> void:
+    for enemy in _entity_spawner_ref.get_all_enemies(false):
+        if enemy.dead or enemy.current_target == self:
+            continue
+
+        if enemy.current_target != null and enemy.current_target.is_connected("died", enemy, "_on_target_died"):
+            enemy.current_target.disconnect("died", enemy, "_on_target_died")
+
+        enemy.current_target = self
+        if not is_connected("died", enemy, "_on_target_died"):
+            var _error_died = connect("died", enemy, "_on_target_died")
 
 func _enter_cooldown() -> void:
     _set_state(State.COOLDOWN)
@@ -121,8 +135,6 @@ func _set_visual_state(state: int) -> void:
         _animation_player.play("tired_idle")
     elif state == State.CHARGING or state == State.BLOWING:
         _animation_player.play("angry_trigger")
-        if state == State.BLOWING:
-            _state_time_left = _animation_player.get_animation("angry_trigger").length
     elif state == State.ARMED:
         _animation_player.play("idle")
 
