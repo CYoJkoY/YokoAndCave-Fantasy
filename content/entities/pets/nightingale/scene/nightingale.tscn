@@ -32,7 +32,6 @@
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/nightingale/scene/nightingale_body.webp" type="Texture" id=30]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/nightingale/scene/nightingale_right_wing_blocked.webp" type="Texture" id=31]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/nightingale/scene/nightingale_right_wing.webp" type="Texture" id=32]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/nightingale/scene/nightingale.webp" type="Texture" id=33]
 
 [sub_resource type="PhysicsMaterial" id=6]
 friction = 0.0
@@ -404,15 +403,14 @@ damage_tracking_id = "item_fantasy_nightingale"
 position = Vector2( 0, -24 )
 
 [node name="Offset" type="Node2D" parent="Animation"]
-position = Vector2( 0, 0 )
 scale = Vector2( 0.44, 0.44 )
 
 [node name="Body" type="Sprite" parent="Animation/Offset"]
 texture = ExtResource( 30 )
 
 [node name="LeftWing" type="Sprite" parent="Animation/Offset/Body"]
-position = Vector2( -40, -70 )
 show_behind_parent = true
+position = Vector2( -40, -70 )
 texture = ExtResource( 29 )
 
 [node name="RightWing" type="Sprite" parent="Animation/Offset/Body"]
@@ -421,16 +419,16 @@ texture = ExtResource( 32 )
 offset = Vector2( 15, 70 )
 
 [node name="Tail" type="Sprite" parent="Animation/Offset/Body"]
+show_behind_parent = true
 position = Vector2( -90, 0 )
 rotation = -0.100202
 scale = Vector2( 0.95, 0.95 )
-show_behind_parent = true
 texture = ExtResource( 28 )
 
 [node name="Sprite" type="Sprite" parent="Animation"]
 visible = false
 position = Vector2( -20, 24 )
-texture = ExtResource( 33 )
+texture = ExtResource( 30 )
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 visible = false

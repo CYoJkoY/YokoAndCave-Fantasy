@@ -1,9 +1,9 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://resources/shaders/flash.gdshader" type="Shader" id=1]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/scene/pipi_cat.gd" type="Script" id=2]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/scene/pipi_cat_normal.webp" type="Texture" id=3]
-[ext_resource path="res://entities/units/movement_behaviors/follow_target_movement_behavior.gd" type="Script" id=4]
+[ext_resource path="res://entities/units/movement_behaviors/movement_behavior.gd" type="Script" id=4]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/pipi_cat_stats.tres" type="Resource" id=5]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/scene/pipi_cat_shadow.webp" type="Texture" id=6]
 [ext_resource path="res://resources/shaders/outline.gdshader" type="Shader" id=7]
@@ -67,6 +67,42 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Animation:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 0.36
+step = 0.06
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Animation:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1.00657, -0.25, 0, 0.25, 0, 1.09, -0.25, 0, 0.25, 0, 1.00657, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.16, 0.36 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Animation:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.993434, -0.25, 0, 0.25, 0, 1.075, -0.25, 0, 0.25, 0, 0.993434, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.16, 0.36 )
 }
 
 [sub_resource type="Animation" id=4]
@@ -165,9 +201,8 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=12]
-loop = true
 length = 1.2
-step = 0.1
+loop = true
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Animation:position:y")
 tracks/0/interp = 1
@@ -199,31 +234,6 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.6, 1.2 )
 }
 
-[sub_resource type="Animation" id=13]
-length = 0.36
-step = 0.06
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("Animation:scale:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 1.00657, -0.25, 0, 0.25, 0, 1.09, -0.25, 0, 0.25, 0, 1.00657, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.16, 0.36 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("Animation:scale:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 0.993434, -0.25, 0, 0.25, 0, 1.075, -0.25, 0, 0.25, 0, 0.993434, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.16, 0.36 )
-}
-
-
 [sub_resource type="CircleShape2D" id=11]
 
 [sub_resource type="CircleShape2D" id=9]
@@ -233,7 +243,6 @@ radius = 260.0
 collision_layer = 512
 collision_mask = 640
 mode = 2
-can_be_targeted_by_enemies = true
 physics_material_override = SubResource( 6 )
 custom_integrator = true
 script = ExtResource( 2 )
@@ -248,10 +257,8 @@ curse_particles = ExtResource( 8 )
 
 [node name="Animation" type="Node2D" parent="."]
 position = Vector2( 0, -23.7811 )
-scale = Vector2( 1.00657, 0.993434 )
 
 [node name="Offset" type="Node2D" parent="Animation"]
-scale = Vector2( 0.9, 0.9 )
 
 [node name="Shadow" type="Sprite" parent="Animation/Offset"]
 texture = ExtResource( 6 )
@@ -267,6 +274,10 @@ texture = ExtResource( 30 )
 visible = false
 texture = ExtResource( 31 )
 
+[node name="Sprite" type="Sprite" parent="Animation"]
+visible = false
+texture = ExtResource( 3 )
+
 [node name="Collision" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2( -8, -6 )
@@ -278,25 +289,21 @@ visible = false
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "idle"
 anims/RESET = SubResource( 3 )
+anims/angry_trigger = SubResource( 13 )
 anims/death = SubResource( 4 )
 anims/idle = SubResource( 5 )
 anims/shoot = SubResource( 8 )
 anims/tired_idle = SubResource( 12 )
-anims/angry_trigger = SubResource( 13 )
 
 [node name="FlashTimer" type="Timer" parent="."]
 wait_time = 0.1
 
 [node name="MovementBehavior" type="Node2D" parent="."]
 script = ExtResource( 4 )
-stop_close_to_target = true
-distance_to_target = 150.0
 
 [node name="TargetBehavior" type="Node2D" parent="."]
 script = ExtResource( 29 )
-target_player_if_no_target = true
 pet_id = "fantasy_pipi_cat"
-exclude_elite_and_boss_target = true
 
 [node name="Range" type="Area2D" parent="TargetBehavior"]
 visible = false

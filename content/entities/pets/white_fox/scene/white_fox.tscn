@@ -38,7 +38,6 @@
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/white_fox/scene/white_fox_head.webp" type="Texture" id=36]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/white_fox/scene/white_fox_tail2.webp" type="Texture" id=37]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/white_fox/scene/white_fox_tail3.webp" type="Texture" id=38]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/white_fox/scene/white_fox.webp" type="Texture" id=39]
 
 [sub_resource type="PhysicsMaterial" id=6]
 friction = 0.0
@@ -379,7 +378,6 @@ has_shoot_anim = true
 position = Vector2( 0, -23.9975 )
 
 [node name="Offset" type="Node2D" parent="Animation"]
-position = Vector2( 0, 0 )
 
 [node name="Shadow" type="Sprite" parent="Animation/Offset"]
 texture = ExtResource( 5 )
@@ -421,7 +419,7 @@ texture = ExtResource( 30 )
 
 [node name="Sprite" type="Sprite" parent="Animation"]
 visible = false
-texture = ExtResource( 39 )
+texture = ExtResource( 35 )
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 visible = false
