@@ -31,7 +31,6 @@
 [ext_resource path="res://entities/units/target_behavior/closest_enemy_target_behavior.gd" type="Script" id=29]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/egyptian_cat/scene/egyptian_cat_head.webp" type="Texture" id=30]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/egyptian_cat/scene/egyptian_cat_shadow.webp" type="Texture" id=31]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/egyptian_cat/scene/egyptian_cat.webp" type="Texture" id=32]
 
 [sub_resource type="PhysicsMaterial" id=6]
 friction = 0.0
@@ -302,7 +301,6 @@ position = Vector2( 0, -24 )
 scale = Vector2( 1.1, 0.9 )
 
 [node name="Offset" type="Node2D" parent="Animation"]
-position = Vector2( 0, 0 )
 scale = Vector2( 0.9, 0.9 )
 
 [node name="Shadow" type="Sprite" parent="Animation/Offset"]
@@ -320,7 +318,7 @@ texture = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="Animation"]
 visible = false
-texture = ExtResource( 32 )
+texture = ExtResource( 6 )
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 visible = false

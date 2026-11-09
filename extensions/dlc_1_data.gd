@@ -2,74 +2,182 @@ extends "res://dlcs/dlc_1/dlc_1_data.gd"
 
 const HEALING_STAR_SCENE_PATH: String = "res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/scene/healing_star.tscn"
 
-func curse_item(item_data: ItemParentData, player_index: int, turn_randomization_off: bool = false, min_modifier: float = 0.0) -> ItemParentData:
+func curse_item(
+    item_data: ItemParentData,
+    player_index: int,
+    turn_randomization_off: bool = false,
+    min_modifier: float = 0.0
+) -> ItemParentData:
     var can_be_cursed: bool = ItemService.can_item_be_cursed(item_data)
-    var cursed_item_data: ItemParentData = .curse_item(item_data, player_index, turn_randomization_off, min_modifier)
-    if !can_be_cursed:
-        return cursed_item_data
-    return _fantasy_curse_item(cursed_item_data, turn_randomization_off, min_modifier)
+    var cursed_item_data: ItemParentData =.curse_item(
+        item_data,
+        player_index,
+        turn_randomization_off,
+        min_modifier
+    )
 
-func _fantasy_curse_item(cursed_item_data: ItemParentData, turn_randomization_off: bool, min_modifier: float) -> ItemParentData:
+    if not can_be_cursed:
+        return cursed_item_data
+
+    return _fantasy_curse_item(cursed_item_data, player_index, turn_randomization_off, min_modifier)
+
+func _fantasy_curse_item(
+    cursed_item_data: ItemParentData,
+    _player_index: int,
+    turn_randomization_off: bool,
+    min_modifier: float
+) -> ItemParentData:
     if not has_effect_fantasy(cursed_item_data.effects):
         return cursed_item_data
 
     var new_item_data: ItemParentData = cursed_item_data.duplicate()
     var new_effects: Array = []
+
     for effect in new_item_data.effects:
         if not is_effect_fantasy(effect):
             new_effects.append(effect)
             continue
 
-        var effect_modifier: float = _get_cursed_item_effect_modifier(turn_randomization_off, min_modifier)
+        var effect_modifier: float = _get_cursed_item_effect_modifier(
+            turn_randomization_off,
+            min_modifier
+        )
+
         var new_effect: Effect = effect.duplicate()
-        if new_effect is PetEffect and new_effect.scene != null and new_effect.scene.resource_path == HEALING_STAR_SCENE_PATH:
+
+        # Resource.duplicate() does not carry over plain script members, so the
+        # curse flag set by the base flow would be lost on the second duplicate.
+        if new_effect is PetEffect:
+            new_effect.is_cursed = effect.is_cursed
+
+        if (
+            new_effect is PetEffect
+            and new_effect.scene != null
+            and new_effect.scene.resource_path == HEALING_STAR_SCENE_PATH
+        ):
             new_effect.value = 2
 
-        match [new_effect.get_id(), new_effect.key_hash, new_effect.custom_key_hash]:
+        var id: String = new_effect.get_id()
+        var key: int = new_effect.key_hash
+        var cskey: int = new_effect.custom_key_hash
+
+        match [id, key, cskey]:
+            ["fantasy_pipi_cat", _, _]:
+                var factor: float = 1.0 + effect_modifier
+                new_effect.charge_duration /= factor
+                new_effect.cooldown_duration /= factor
+                new_effect.blow_radius *= factor
+                new_effect.blow_strength *= factor
+                new_effect.stun_duration *= factor
+
             ["fantasy_kou_b_hand", _, _]:
-                new_effect.self_loss_percent = Utils.ncl_curse_effect_value(new_effect.self_loss_percent, cursed_item_data.curse_factor)
-                new_effect.boss_loss_percent = Utils.ncl_curse_effect_value(new_effect.boss_loss_percent, cursed_item_data.curse_factor)
+                new_effect.self_loss_percent = Utils.ncl_curse_effect_value(
+                    new_effect.self_loss_percent,
+                    cursed_item_data.curse_factor
+                )
+                new_effect.boss_loss_percent = Utils.ncl_curse_effect_value(
+                    new_effect.boss_loss_percent,
+                    cursed_item_data.curse_factor
+                )
+
             ["fantasy_shop_enter_stat_curse", _, _]:
                 new_effect.value = 0 if new_effect.value == 1 else new_effect.value
-                new_effect.chance = Utils.ncl_curse_effect_value(new_effect.chance, effect_modifier, {"step": 1})
-                new_effect.curse_num = Utils.ncl_curse_effect_value(new_effect.curse_num, effect_modifier, {"step": 1})
+                new_effect.chance = Utils.ncl_curse_effect_value(
+                    new_effect.chance,
+                    effect_modifier,
+                    {"step": 1}
+                )
+                new_effect.curse_num = Utils.ncl_curse_effect_value(
+                    new_effect.curse_num,
+                    effect_modifier,
+                    {"step": 1}
+                )
+
             ["fantasy_melee_pet", _, _], ["fantasy_ranged_pet", _, _]:
-                new_effect.weapon_stats = _boost_weapon_stats_damage(new_effect.weapon_stats, effect_modifier)
+                new_effect.weapon_stats = _boost_weapon_stats_damage(
+                    new_effect.weapon_stats,
+                    effect_modifier
+                )
+
             ["fantasy_damage_clamp", _, _]:
-                new_effect.value2 = Utils.ncl_curse_effect_value(new_effect.value2, effect_modifier, {"is_negative": true, "step": 1})
+                new_effect.value2 = Utils.ncl_curse_effect_value(
+                    new_effect.value2,
+                    effect_modifier,
+                    {"is_negative": true, "step": 1}
+                )
+
             ["fantasy_longinus", _, _]:
                 new_effect.holy_scaling *= 1.0 + effect_modifier
+
             ["fantasy_erosion", _, _]:
-                new_effect.scaling_stats = _boost_scaling_sats(new_effect.scaling_stats.duplicate(), effect_modifier)
+                new_effect.scaling_stats = _boost_scaling_sats(
+                    new_effect.scaling_stats.duplicate(),
+                    effect_modifier
+                )
                 new_effect.chance = Utils.ncl_curse_effect_value(new_effect.chance, effect_modifier)
                 new_effect.times = Utils.ncl_curse_effect_value(new_effect.times, effect_modifier)
+
             ["fantasy_dmg_when_pickup_consumable", _, _]:
-                new_effect.value2 = Utils.ncl_curse_effect_value(new_effect.value2, effect_modifier, {"process_negative": false, "step": 1})
-                new_effect.scaling_stats = _boost_scaling_sats(new_effect.scaling_stats.duplicate(), effect_modifier)
+                new_effect.value2 = Utils.ncl_curse_effect_value(
+                    new_effect.value2,
+                    effect_modifier,
+                    {"process_negative": false, "step": 1}
+                )
+                new_effect.scaling_stats = _boost_scaling_sats(
+                    new_effect.scaling_stats.duplicate(),
+                    effect_modifier
+                )
+
             ["fantasy_periodic_radius_damage", _, _]:
-                new_effect.value2 = Utils.ncl_curse_effect_value(new_effect.value2, effect_modifier, {"process_negative": false, "step": 1})
-                new_effect.base_cooldown = Utils.ncl_curse_effect_value(new_effect.base_cooldown, effect_modifier, {"is_negative": true, "step": 1})
-                new_effect.scaling_stats = _boost_scaling_sats(new_effect.scaling_stats.duplicate(), effect_modifier)
+                new_effect.value2 = Utils.ncl_curse_effect_value(
+                    new_effect.value2,
+                    effect_modifier,
+                    {"process_negative": false, "step": 1}
+                )
+                new_effect.base_cooldown = Utils.ncl_curse_effect_value(
+                    new_effect.base_cooldown,
+                    effect_modifier,
+                    {"is_negative": true, "step": 1}
+                )
+                new_effect.scaling_stats = _boost_scaling_sats(
+                    new_effect.scaling_stats.duplicate(),
+                    effect_modifier
+                )
                 new_effect.chance = Utils.ncl_curse_effect_value(new_effect.chance, effect_modifier)
                 new_effect.times = Utils.ncl_curse_effect_value(new_effect.times, effect_modifier)
+
             ["fantasy_tree_radius_tempstats", _, _]:
-                new_effect.range_rate = Utils.ncl_curse_effect_value(new_effect.range_rate, effect_modifier, {"process_negative": false})
+                new_effect.range_rate = Utils.ncl_curse_effect_value(
+                    new_effect.range_rate,
+                    effect_modifier,
+                    {"process_negative": false}
+                )
+
             ["fantasy_projectiles_every_x_melee_shoot", _, _]:
-                new_effect.projectile_stats = _boost_weapon_stats_damage(new_effect.projectile_stats, effect_modifier)
+                new_effect.projectile_stats = _boost_weapon_stats_damage(
+                    new_effect.projectile_stats,
+                    effect_modifier
+                )
+
             [_, _, Utils.fantasy_curse_all_on_reroll_hash]:
                 new_effect.text_key += "_CURSED"
-                new_item_data.replaced_by = ItemService.get_element(ItemService.items, new_effect.key_hash)
+                new_item_data.replaced_by = ItemService.get_element(
+                    ItemService.items,
+                    new_effect.key_hash
+                )
+
             [_, _, Utils.fantasy_extra_curse_enemy_hash]:
                 var extra_effect: Effect = Effect.new()
                 extra_effect.key = "number_of_enemies"
                 extra_effect.key_hash = Keys.number_of_enemies_hash
                 extra_effect.value = new_effect.value
                 new_effects.append(extra_effect)
-        new_effects.append(new_effect)
 
+        new_effects.append(new_effect)
     new_item_data.effects = new_effects
     return new_item_data
 
+# ══════════════════════════════════════════ Method ══════════════════════════════════════════ #
 func has_effect_fantasy(effects: Array) -> bool:
     for effect in effects:
         if is_effect_fantasy(effect):
@@ -77,4 +185,8 @@ func has_effect_fantasy(effects: Array) -> bool:
     return false
 
 func is_effect_fantasy(effect: Effect) -> bool:
-    return effect.get_id().begins_with("fantasy") or effect.key.begins_with("fantasy") or effect.custom_key.begins_with("fantasy")
+    return (
+        effect.get_id().begins_with("fantasy")
+        or effect.key.begins_with("fantasy")
+        or effect.custom_key.begins_with("fantasy")
+    )
