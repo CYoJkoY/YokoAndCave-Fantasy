@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pipi_cat_angry.wav-5187968fa43713c4d957b3762587bb14.sample"
+
+[deps]
+
+source_file="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/audio/pipi_cat_angry.wav"
+dest_files=[ "res://.import/pipi_cat_angry.wav-5187968fa43713c4d957b3762587bb14.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -161,7 +161,7 @@
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/village_special_sword/2/village_special_sword_2_data.tres" type="Resource" id=161]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/village_special_sword/4/village_special_sword_4_data.tres" type="Resource" id=162]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/sets/holy/holy_set_data.tres" type="Resource" id=163]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/change_weapon_every_killed_enemies/change_weapon_every_killed_enemies_effect.gd" type="Script" id=165]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/change_weapon_every_killed_enemies_effect.gd" type="Script" id=165]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/sacrificial_circle/sacrificial_circle_effect.gd" type="Script" id=166]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/dance/dance_effect.gd" type="Script" id=167]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/brave_sword/4/brave_sword_4_data.tres" type="Resource" id=168]
@@ -211,14 +211,14 @@
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/effect_behaviors/player/stationary_stat_interval/stationary_stat_interval_player_effect_behavior_data.tres" type="Resource" id=212]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/stationary_temp_stats_per_interval/stationary_temp_stats_per_interval_effect.gd" type="Script" id=213]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/stationary_percent_stat_per_interval/stationary_percent_stat_per_interval_effect.gd" type="Script" id=214]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/cannot_attack_while_stationary/cannot_attack_while_stationary_effect.gd" type="Script" id=215]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/add_weapon_set/add_weapon_set_effect.gd" type="Script" id=216]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/cannot_attack_while_stationary_effect.gd" type="Script" id=215]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/add_weapon_set_effect.gd" type="Script" id=216]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/gain_item_on_reroll/gain_item_on_reroll_effect.gd" type="Script" id=217]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/guaranteed_set_weapons_in_shop/guaranteed_set_weapons_in_shop_effect.gd" type="Script" id=218]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/luck/pianist/pianist_data.tres" type="Resource" id=219]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/luck/impromptu_creator/impromptu_creator_data.tres" type="Resource" id=220]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/gardener/gardener_data.tres" type="Resource" id=221]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/add_gear_by_id/add_gear_by_id_effect.gd" type="Script" id=222]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/add_gear_by_id_effect.gd" type="Script" id=222]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/weapon_hit_proc/weapon_hit_proc_effect.gd" type="Script" id=223]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/music_override_track/music_override_track_effect.gd" type="Script" id=224]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/luck/tuner/tuner_data.tres" type="Resource" id=225]
@@ -260,13 +260,11 @@
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/holy/savior/savior_data.tres" type="Resource" id=263]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/projectile_on_enemy_death/projectile_on_enemy_death_effect.gd" type="Script" id=264]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/sets/sacred/sacred_set_data.tres" type="Resource" id=265]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/earthshatter/1/earthshatter_data.tres" type="Resource" id=266]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/earthshatter/2/earthshatter_2_data.tres" type="Resource" id=267]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/earthshatter/3/earthshatter_3_data.tres" type="Resource" id=268]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/earthshatter/4/earthshatter_4_data.tres" type="Resource" id=269]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/earthshatter/earthshatter_effect.gd" type="Script" id=270]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/deadeye/2/deadeye_2_data.tres" type="Resource" id=271]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/deadeye/3/deadeye_3_data.tres" type="Resource" id=272]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/deadeye/4/deadeye_4_data.tres" type="Resource" id=273]
@@ -274,11 +272,9 @@
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/crusader_hammer/3/crusader_hammer_3_data.tres" type="Resource" id=275]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/crusader_hammer/4/crusader_hammer_4_data.tres" type="Resource" id=276]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/crusader_hammer/crusader_hammer_effect.gd" type="Script" id=277]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/meteor_hammer/2/meteor_hammer_2_data.tres" type="Resource" id=278]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/meteor_hammer/3/meteor_hammer_3_data.tres" type="Resource" id=279]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/meteor_hammer/4/meteor_hammer_4_data.tres" type="Resource" id=280]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/tambourine/2/tambourine_2_data.tres" type="Resource" id=281]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/tambourine/3/tambourine_3_data.tres" type="Resource" id=282]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/tambourine/4/tambourine_4_data.tres" type="Resource" id=283]
@@ -289,27 +285,19 @@
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/bloodstained_banner/3/bloodstained_banner_3_data.tres" type="Resource" id=288]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/bloodstained_banner/4/bloodstained_banner_4_data.tres" type="Resource" id=289]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/tambourine_shockwave/tambourine_shockwave_effect.gd" type="Script" id=292]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/finger_snap/finger_snap_effect.gd" type="Script" id=293]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/projectiles_every_x_melee_shoot/projectiles_every_x_melee_shoot_effect.gd" type="Script" id=294]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/bloodstained_banner/bloodstained_banner_effect.gd" type="Script" id=295]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/shamisen/shamisen_effect.gd" type="Script" id=296]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/1/kou_b_hand_1_data.tres" type="Resource" id=297]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/2/kou_b_hand_2_data.tres" type="Resource" id=298]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/3/kou_b_hand_3_data.tres" type="Resource" id=299]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/4/kou_b_hand_4_data.tres" type="Resource" id=300]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/kou_b_hand/kou_b_hand_effect.gd" type="Script" id=301]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/music/doudouone.mp3" type="AudioStream" id=302]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/music/koukouzis_longing.mp3" type="AudioStream" id=303]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/music/moon_in_woodland.mp3" type="AudioStream" id=304]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/sage_staff/4/sage_staff_4_data.tres" type="Resource" id=305]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/4/seven_star_sword_4_data.tres" type="Resource" id=306]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/longinus/4/longinus_4_data.tres" type="Resource" id=307]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/dead_hand/4/dead_hand_4_data.tres" type="Resource" id=308]
@@ -321,27 +309,21 @@
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/gospel/4/gospel_4_data.tres" type="Resource" id=314]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/apocalypse/4/apocalypse_4_data.tres" type="Resource" id=315]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/miracle_star/4/miracle_star_4_data.tres" type="Resource" id=316]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/longinus/longinus_effect.gd" type="Script" id=317]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/silver_cross/silver_cross_effect.gd" type="Script" id=318]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/seven_star_sword/seven_star_sword_effect.gd" type="Script" id=319]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/dead_hand/dead_hand_effect.gd" type="Script" id=320]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/phantom_gale/phantom_gale_effect.gd" type="Script" id=321]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/annihilation_ray/annihilation_ray_effect.gd" type="Script" id=322]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/sage_staff/sage_staff_effect.gd" type="Script" id=323]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/ranged/bloodstained_banner/bloodstained_banner_sacrifice_effect.gd" type="Script" id=325]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/sets/unique/unique_set_data.tres" type="Resource" id=324]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/title_screen/content_set/fantasy_content_icon.png" type="Texture" id=326]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/title_screen/content_set/fantasy_content_logo.png" type="Texture" id=327]
-
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/pipi_cat/pipi_cat_data.tres" type="Resource" id=329]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/pipi_cat_item.tres" type="Resource" id=330]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/pipi_cat/pipi_cat_effect.gd" type="Script" id=331]
+
 
 [resource]
 script = ExtResource( 43 )
