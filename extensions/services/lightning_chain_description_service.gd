@@ -22,7 +22,7 @@ static func get_args(
 		}
 	)
 
-	var chain_targets_count_text: String = Utils.ncl_get_num_text_with_scaling_stats(
+	var chain_targets_count_text: String = Utils.ncl_get_int_num_text_with_scaling_stats(
 		base_chain_targets,
 		resolved_targets_scaling_stats,
 		{

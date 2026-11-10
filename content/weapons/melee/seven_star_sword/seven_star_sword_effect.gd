@@ -20,10 +20,10 @@ func get_damage(player_index: int) -> int:
 
 
 func get_radius(player_index: int) -> float:
-    return float(Utils.ncl_get_num_with_scaling_stats(BASE_RADIUS, [[Keys.stat_range_hash, 0.5]], player_index))
+    return float(Utils.ncl_get_int_num_with_scaling_stats(BASE_RADIUS, [[Keys.stat_range_hash, 0.5]], player_index))
 
 
 func get_args(player_index: int) -> Array:
     var text: String = Utils.fa_format_damage_with_scaling_stats(get_damage(player_index), value, get_scaling_stats())
-    var radius: String = Utils.ncl_get_num_text_with_scaling_stats(BASE_RADIUS, [[Keys.stat_range_hash, 0.5]], {"player_index": player_index})
+    var radius: String = Utils.ncl_get_int_num_text_with_scaling_stats(BASE_RADIUS, [[Keys.stat_range_hash, 0.5]], {"player_index": player_index})
     return [text, radius, str(RECOVERY), str(CROSS_RADIUS)]

@@ -6,7 +6,7 @@ static func get_scaled_target_count(
 	player_index: int,
 	max_targets: int = -1
 ) -> int:
-	var target_count: int = Utils.ncl_get_num_with_scaling_stats(base_targets, targets_scaling_stats, player_index)
+	var target_count: int = Utils.ncl_get_int_num_with_scaling_stats(base_targets, targets_scaling_stats, player_index)
 	if max_targets > 0:
 		target_count = int(min(target_count, max_targets))
 	return int(max(1, target_count))
