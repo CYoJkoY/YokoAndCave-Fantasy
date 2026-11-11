@@ -63,12 +63,28 @@ func _fantasy_curse_item(
 
         match [id, key, cskey]:
             ["fantasy_pipi_cat", _, _]:
-                var factor: float = 1.0 + effect_modifier
-                new_effect.charge_duration /= factor
-                new_effect.cooldown_duration /= factor
-                new_effect.blow_radius *= factor
-                new_effect.blow_strength *= factor
-                new_effect.stun_duration *= factor
+                new_effect.charge_duration = Utils.ncl_curse_effect_value(
+                    new_effect.charge_duration,
+                    cursed_item_data.curse_factor,
+                    {"is_negative": true}
+                )
+                new_effect.cooldown_duration = Utils.ncl_curse_effect_value(
+                    new_effect.cooldown_duration,
+                    cursed_item_data.curse_factor,
+                    {"is_negative": true}
+                )
+                new_effect.blow_radius = Utils.ncl_curse_effect_value(
+                    new_effect.blow_radius,
+                    cursed_item_data.curse_factor
+                )
+                new_effect.blow_distance_map_ratio = Utils.ncl_curse_effect_value(
+                    new_effect.blow_distance_map_ratio,
+                    cursed_item_data.curse_factor
+                )
+                new_effect.stun_duration = Utils.ncl_curse_effect_value(
+                    new_effect.stun_duration,
+                    cursed_item_data.curse_factor
+                )
 
             ["fantasy_kou_b_hand", _, _]:
                 new_effect.self_loss_percent = Utils.ncl_curse_effect_value(

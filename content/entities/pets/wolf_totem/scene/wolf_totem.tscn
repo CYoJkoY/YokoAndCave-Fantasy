@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/wolf_totem/scene/wolf_totem.gd" type="Script" id=1]
 [ext_resource path="res://particles/burning/unit_burning_particles.tscn" type="PackedScene" id=2]
@@ -317,7 +317,6 @@ has_shoot_anim = true
 position = Vector2( 0, -22.615 )
 
 [node name="Offset" type="Node2D" parent="Animation"]
-position = Vector2( 0, 0 )
 
 [node name="Shadow" type="Sprite" parent="Animation/Offset"]
 texture = ExtResource( 6 )

@@ -1,31 +1,43 @@
 [gd_resource type="Resource" load_steps=6 format=2]
 
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/tambourine_shockwave/tambourine_shockwave_effect.gd" type="Script" id=1]
-
 [ext_resource path="res://items/global/custom_arg.gd" type="Script" id=2]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
 arg_index = 0
 arg_sign = 0
+arg_value = 0
+arg_format = 0
+arg_key = ""
 
 [sub_resource type="Resource" id=2]
 script = ExtResource( 2 )
 arg_index = 1
 arg_sign = 0
+arg_value = 0
+arg_format = 0
+arg_key = ""
 
 [sub_resource type="Resource" id=3]
 script = ExtResource( 2 )
 arg_index = 2
 arg_sign = 2
+arg_value = 0
+arg_format = 0
+arg_key = ""
 
 [resource]
 script = ExtResource( 1 )
+key = ""
 text_key = "EFFECT_FANTASY_TAMBOURINE_SHOCKWAVE"
 value = 7
+custom_key = ""
+storage_method = 0
+effect_sign = 1
+custom_args = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
 value2 = 100
+sum_strategy = 0
 base_damage = 6
 scaling_stats = [ [ "stat_fantasy_holy", 1.0 ], [ "stat_luck", 0.15 ] ]
 damage_color = Color( 0.94, 0.68, 0.26, 1 )
-effect_sign = 1
-custom_args = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]

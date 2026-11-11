@@ -5,7 +5,7 @@
 [ext_resource path="res://overlap/hurtbox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://resources/shaders/flash.gdshader" type="Shader" id=3]
 [ext_resource path="res://resources/shaders/outline.gdshader" type="Shader" id=4]
-[ext_resource path="res://entities/units/movement_behaviors/movement_behavior.gd" type="Script" id=5]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/movement_behaviors/pet/healing_star_movement_behavior.gd" type="Script" id=5]
 [ext_resource path="res://entities/units/target_behavior/target_behavior.gd" type="Script" id=6]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/scene/healing_star.gd" type="Script" id=7]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/scene/healing_star_sprite.webp" type="Texture" id=8]
@@ -157,6 +157,13 @@ wait_time = 0.1
 
 [node name="MovementBehavior" type="Node2D" parent="."]
 script = ExtResource( 5 )
+mirror_facing = false
+wander_speed = 160.0
+seek_speed = 640.0
+wander_acceleration = 750.0
+seek_acceleration = 1500.0
+hover_target_path = NodePath("Animation")
+tilt_target_path = NodePath("Animation/Offset")
 
 [node name="TargetBehavior" type="Node2D" parent="."]
 script = ExtResource( 6 )

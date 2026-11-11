@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource( 1 )
+cooldown = 60
 damage = 12
 accuracy = 1.0
 crit_chance = 0.0
@@ -12,12 +13,27 @@ crit_damage = 2.0
 min_range = 0
 max_range = 800
 knockback = 0
+knockback_piercing = 0.0
+can_have_positive_knockback = true
+can_have_negative_knockback = false
+effect_scale = 1.0
 scaling_stats = [ [ "stat_speed", 0.5 ] ]
 lifesteal = 0.0
 shooting_sounds = [  ]
+sound_db_mod = -5
+is_healing = false
+recoil = 25
+recoil_duration = 0.1
+additional_cooldown_every_x_shots = -1
+additional_cooldown_multiplier = -1.0
+speed_percent_modifier = 0
+can_shoot_without_target = false
 nb_projectiles = 1
+projectile_spread = 0.0
 piercing = 0
+piercing_dmg_reduction = 0.5
 bounce = 0
+bounce_dmg_reduction = 0.5
 can_bounce = false
 projectile_speed = 5500
 increase_projectile_speed_with_range = false

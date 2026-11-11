@@ -100,13 +100,28 @@ func get_damage_value(
     return dmg_value_result
 
 # ══════════════════════════════════════════ Custom ══════════════════════════════════════════ #
-func fa_launch_airborne(direction: Vector2, distance: float, player_index: int, stun_duration: float) -> void:
+func fa_launch_airborne(
+    direction: Vector2,
+    distance: float,
+    player_index: int,
+    stun_duration: float,
+    impact_damage_percent: float = 20.0,
+    boss_impact_damage_percent: float = 2.0
+) -> void:
     if dead or _pending_die:
         return
     if _fantasy_airborne_controller == null:
         _fantasy_airborne_controller = FANTASY_AIRBORNE_CONTROLLER.new()
         add_child(_fantasy_airborne_controller)
-    _fantasy_airborne_controller.launch(self, direction, distance, player_index, stun_duration)
+    _fantasy_airborne_controller.launch(
+        self,
+        direction,
+        distance,
+        player_index,
+        stun_duration,
+        impact_damage_percent,
+        boss_impact_damage_percent
+    )
 
 func fa_take_airborne_impact(value: int, player_index: int, source: Node) -> void:
     if dead or _pending_die:

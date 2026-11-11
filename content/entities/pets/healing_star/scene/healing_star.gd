@@ -2,11 +2,6 @@ extends Pet
 
 const FANTASY_VISUAL_PARTS_SYNC = preload("res://mods-unpacked/YokoAndCave-Fantasy/extensions/services/visual_parts_sync.gd")
 
-enum State {
-    WANDER,
-    SEEK_CONSUMABLE
-}
-
 const TRACKING_ID: String = "item_fantasy_healing_star"
 const CLAIM_META: String = "fa_healing_star_claimed"
 const HEAL_TICK_INTERVAL: float = 0.30
@@ -14,34 +9,22 @@ const HEAL_TICK_INTERVAL: float = 0.30
 const TEXTURE_GLOW = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/particles/particle_radial_glow.webp")
 const TEXTURE_STAR_SMALL = preload("res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/healing_star/particles/particle_star_small.webp")
 
-export(float) var max_speed: float = 640.0
-export(float) var acceleration: float = 1500.0
-export(float) var wander_speed: float = 160.0
 export(float) var pickup_range: float = 48.0
 
 var stored_healing: int = 0
 var _healing_shares: Dictionary = {}
-var _current_state: int = State.WANDER
-var _current_target = null
-var _wander_target_pos: Vector2 = Vector2.ZERO
-var _velocity: Vector2 = Vector2.ZERO
 var _scan_timer: float = 0.0
-var _wander_timer: float = 0.0
 var _time_passed: float = 0.0
 var _tracking_key_hash: int = Keys.empty_hash
 var _player: Player = null
 var _main: Main = null
 
 var _heal_tick_timer: float = 0.0
-var _current_spin_speed: float = 1.0
-var _current_tilt: float = 0.0
 var _scale_tween: Tween = null
 
 onready var _offset: Node2D = $Animation/Offset
 onready var _body_sprite: Sprite = $Animation/Offset/Body
 onready var _aura_glow: Sprite = $Animation/Offset/AuraGlow
-
-onready var _trail_particles: CPUParticles2D = $Animation/TrailParticles
 
 var _visual_parts_sync = FANTASY_VISUAL_PARTS_SYNC.new()
 var _add_material: CanvasItemMaterial = null
@@ -59,8 +42,12 @@ func init(zone_min_pos: Vector2, zone_max_pos: Vector2, p_players_ref: Array = [
     .init(zone_min_pos, zone_max_pos, p_players_ref, entity_spawner_ref)
     _tracking_key_hash = Keys.generate_hash(TRACKING_ID)
     _main = Utils.get_scene_node()
-    _pick_new_wander_target()
     _scan_timer = rand_range(0.02, 0.1)
+
+
+func respawn() -> void:
+    .respawn()
+    _movement_behavior.reset_state()
 
 
 func _ready() -> void:
@@ -218,74 +205,38 @@ func _physics_process(delta: float) -> void:
     _scan_timer -= delta
     if _scan_timer <= 0.0:
         _scan_timer = rand_range(0.08, 0.16)
-        if _current_state == State.WANDER or !_is_target_valid(_current_target):
-            if _scan_for_consumables():
-                _current_state = State.SEEK_CONSUMABLE
+        if _movement_behavior.is_seeking():
+            if !_is_target_valid(_movement_behavior.get_consumable_target()):
+                _release_target_claim()
+                _movement_behavior.clear_consumable_target()
+                _scan_for_consumables()
+        else:
+            _scan_for_consumables()
 
-    match _current_state:
-        State.WANDER:
-            _process_wander(delta)
-        State.SEEK_CONSUMABLE:
-            _process_seek(delta)
+    if _movement_behavior.is_seeking():
+        var target = _movement_behavior.get_consumable_target()
+        if !_is_target_valid(target):
+            _release_target_claim()
+            _movement_behavior.clear_consumable_target()
+            _scan_for_consumables()
+        elif global_position.distance_squared_to(target.global_position) <= pickup_range * pickup_range:
+            _collect_target()
 
     _update_visuals(delta)
 
 
-func _process_wander(delta: float) -> void:
-    _wander_timer -= delta
-    if _wander_timer <= 0.0 or global_position.distance_squared_to(_wander_target_pos) < 30.0 * 30.0:
-        _pick_new_wander_target()
-
-    _move_toward(_wander_target_pos, wander_speed, acceleration * 0.5, delta)
-
-
-func _process_seek(delta: float) -> void:
-    if !_is_target_valid(_current_target):
-        _release_target_claim()
-        _current_target = null
-        if !_scan_for_consumables():
-            _current_state = State.WANDER
-            _pick_new_wander_target()
-        return
-
-    var target_pos: Vector2 = _current_target.global_position
-    if global_position.distance_squared_to(target_pos) <= pickup_range * pickup_range:
-        _collect_target()
-        return
-
-    _move_toward(target_pos, max_speed, acceleration, delta)
-
-
-func _move_toward(target_position: Vector2, speed: float, accel: float, delta: float) -> void:
-    var desired_velocity: Vector2 = global_position.direction_to(target_position) * speed
-    _velocity = _velocity.move_toward(desired_velocity, accel * delta)
-    global_position += _velocity * delta
-    global_position.x = clamp(global_position.x, ZoneService.current_zone_min_position.x + 30.0, ZoneService.current_zone_max_position.x - 30.0)
-    global_position.y = clamp(global_position.y, ZoneService.current_zone_min_position.y + 30.0, ZoneService.current_zone_max_position.y - 30.0)
-
-
-func _integrate_forces(state: Physics2DDirectBodyState) -> void:
-    if sleeping:
-        return
-    state.transform.origin = global_position
-    state.linear_velocity = Vector2.ZERO
-
-
 func _collect_target() -> void:
-    if !_is_target_valid(_current_target):
+    var target = _movement_behavior.get_consumable_target()
+    if !_is_target_valid(target):
         _release_target_claim()
-        _current_target = null
-        _current_state = State.WANDER
-        _pick_new_wander_target()
+        _movement_behavior.clear_consumable_target()
         return
 
-    var target = _current_target
     var consumable_type: String = _get_consumable_type(target)
     var p = _get_player()
     if !is_instance_valid(p):
         _release_target_claim()
-        _current_target = null
-        _current_state = State.WANDER
+        _movement_behavior.clear_consumable_target()
         return
 
     target.global_position = p.global_position
@@ -298,13 +249,9 @@ func _collect_target() -> void:
 
     _play_pickup_bounce()
     _release_target_claim()
-    _current_target = null
+    _movement_behavior.clear_consumable_target()
 
-    if _scan_for_consumables():
-        _current_state = State.SEEK_CONSUMABLE
-    else:
-        _current_state = State.WANDER
-        _pick_new_wander_target()
+    _scan_for_consumables()
 
 
 # ══════════════════════════════════════════ Consumable Detection & Management ════════════════════ #
@@ -338,8 +285,8 @@ func _scan_for_consumables() -> bool:
 
     if nearest != null:
         _release_target_claim()
-        _current_target = nearest
         nearest.set_meta(CLAIM_META, self)
+        _movement_behavior.set_consumable_target(nearest)
         return true
 
     return false
@@ -370,21 +317,10 @@ func _get_consumable_type(target) -> String:
 
 
 func _release_target_claim() -> void:
-    if is_instance_valid(_current_target) and _current_target.has_meta(CLAIM_META):
-        if _current_target.get_meta(CLAIM_META) == self:
-            _current_target.remove_meta(CLAIM_META)
-
-
-func _pick_new_wander_target() -> void:
-    _wander_timer = rand_range(2.0, 4.0)
-    var padding: float = 140.0
-    var min_pos: Vector2 = ZoneService.current_zone_min_position + Vector2(padding, padding)
-    var max_pos: Vector2 = ZoneService.current_zone_max_position - Vector2(padding, padding)
-
-    _wander_target_pos = Vector2(
-        rand_range(min_pos.x, max_pos.x),
-        rand_range(min_pos.y, max_pos.y)
-    )
+    var target = _movement_behavior.get_consumable_target()
+    if is_instance_valid(target) and target.has_meta(CLAIM_META):
+        if target.get_meta(CLAIM_META) == self:
+            target.remove_meta(CLAIM_META)
 
 
 # ══════════════════════════════════════════ Healing Delivery ═════════════════════════════════════ #
@@ -471,25 +407,6 @@ func _take_healing_share(source_index: int, requested: int, reserve: int, fundin
 # ══════════════════════════════════════════ Visuals & Aesthetic Polish ══════════════════════════ #
 
 func _update_visuals(delta: float) -> void:
-    var speed_ratio: float = clamp(_velocity.length() / max_speed, 0.0, 1.0)
-
-    var float_y: float = sin(_time_passed * 2.4) * 4.2 + sin(_time_passed * 5.8) * 1.2
-    _animation.position.y = -18.0 + float_y
-
-    var target_spin_speed: float = 1.0 + speed_ratio * 3.6
-    _current_spin_speed = lerp(_current_spin_speed, target_spin_speed, 5.0 * delta)
-    _body_sprite.rotation += _current_spin_speed * delta
-
-    if _current_state == State.SEEK_CONSUMABLE:
-        var target_tilt: float = clamp(_velocity.x / max_speed, -0.35, 0.35)
-        _current_tilt = lerp(_current_tilt, target_tilt, 6.0 * delta)
-        _trail_particles.emitting = speed_ratio > 0.4
-    else:
-        _current_tilt = lerp(_current_tilt, 0.0, 4.0 * delta)
-        _trail_particles.emitting = speed_ratio > 0.65
-
-    _offset.rotation = _current_tilt
-
     var max_hp: float = _get_player_max_hp()
     var max_capacity: float = max_hp * 3.0
     var charge_ratio: float = clamp(float(stored_healing) / max_capacity, 0.0, 1.0)

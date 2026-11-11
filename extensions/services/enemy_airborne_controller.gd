@@ -10,7 +10,7 @@ var _active: bool = false
 var _stunned: bool = false
 var _stun_duration: float = 0.0
 var _player_index: int = 0
-var _impact_rate: float = 0.2
+var _impact_damage_rate: float = 0.2
 var _hit_targets: Dictionary = {}
 var _motion_frame: int = -1
 var _motion: Dictionary = {}
@@ -37,10 +37,20 @@ func _ready() -> void:
     set_physics_process(false)
 
 
-func launch(enemy: Node, direction: Vector2, distance: float, player_index: int, stun_duration: float) -> void:
+func launch(
+    enemy: Node,
+    direction: Vector2,
+    distance: float,
+    player_index: int,
+    stun_duration: float,
+    impact_damage_percent: float = 20.0,
+    boss_impact_damage_percent: float = 2.0
+) -> void:
     _enemy = enemy
+    _impact_damage_rate = (
+        boss_impact_damage_percent if _uses_script(enemy, "boss.gd") else impact_damage_percent
+    ) / 100.0
     if !_active and !_stunned:
-        _impact_rate = 0.02 if _uses_script(enemy, "boss.gd") else 0.2
         _mode = enemy.mode
         _body_disabled = enemy._collision.disabled
         _contact_disabled = enemy._hitbox.is_disabled()
@@ -231,7 +241,7 @@ func _damage_collisions(motion: Dictionary, delta: float) -> void:
             continue
         if source.shape.collide_with_motion(source_transform, source_motion, target_shape.shape, target_transform, target_motion):
             _hit_targets[id] = true
-            var damage: int = max(1, int(round(_enemy.current_stats.health * _impact_rate)))
+            var damage: int = max(1, int(round(_enemy.current_stats.health * _impact_damage_rate))) as int
             target.fa_take_airborne_impact(damage, _player_index, _enemy)
             if !_active or _enemy.dead or _enemy._pending_die:
                 return

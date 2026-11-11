@@ -161,7 +161,7 @@
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/village_special_sword/2/village_special_sword_2_data.tres" type="Resource" id=161]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/village_special_sword/4/village_special_sword_4_data.tres" type="Resource" id=162]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/sets/holy/holy_set_data.tres" type="Resource" id=163]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/change_weapon_every_killed_enemies_effect.gd" type="Script" id=165]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/change_weapon_every_killed_enemies/change_weapon_every_killed_enemies_effect.gd" type="Script" id=165]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/sacrificial_circle/sacrificial_circle_effect.gd" type="Script" id=166]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/dance/dance_effect.gd" type="Script" id=167]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/brave_sword/4/brave_sword_4_data.tres" type="Resource" id=168]
@@ -211,14 +211,14 @@
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/effect_behaviors/player/stationary_stat_interval/stationary_stat_interval_player_effect_behavior_data.tres" type="Resource" id=212]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/stationary_temp_stats_per_interval/stationary_temp_stats_per_interval_effect.gd" type="Script" id=213]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/stationary_percent_stat_per_interval/stationary_percent_stat_per_interval_effect.gd" type="Script" id=214]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/cannot_attack_while_stationary_effect.gd" type="Script" id=215]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/add_weapon_set_effect.gd" type="Script" id=216]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/cannot_attack_while_stationary/cannot_attack_while_stationary_effect.gd" type="Script" id=215]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/add_weapon_set/add_weapon_set_effect.gd" type="Script" id=216]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/gain_item_on_reroll/gain_item_on_reroll_effect.gd" type="Script" id=217]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/guaranteed_set_weapons_in_shop/guaranteed_set_weapons_in_shop_effect.gd" type="Script" id=218]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/luck/pianist/pianist_data.tres" type="Resource" id=219]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/luck/impromptu_creator/impromptu_creator_data.tres" type="Resource" id=220]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/universal/gardener/gardener_data.tres" type="Resource" id=221]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/add_gear_by_id_effect.gd" type="Script" id=222]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/add_gear_by_id/add_gear_by_id_effect.gd" type="Script" id=222]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/weapon_hit_proc/weapon_hit_proc_effect.gd" type="Script" id=223]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/music_override_track/music_override_track_effect.gd" type="Script" id=224]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/jobs/luck/tuner/tuner_data.tres" type="Resource" id=225]
@@ -322,7 +322,9 @@
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/title_screen/content_set/fantasy_content_logo.png" type="Texture" id=327]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/pipi_cat/pipi_cat_data.tres" type="Resource" id=329]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/pipi_cat_item.tres" type="Resource" id=330]
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/pipi_cat/pipi_cat_effect.gd" type="Script" id=331]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/howling_pet/howling_pet_effect.gd" type="Script" id=331]
+
+
 
 
 [resource]

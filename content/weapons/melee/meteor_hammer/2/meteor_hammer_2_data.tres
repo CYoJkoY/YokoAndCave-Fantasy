@@ -7,21 +7,26 @@
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/meteor_hammer/meteor_hammer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/meteor_hammer/meteor_hammer_icon.webp" type="Texture" id=7]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/weapons/melee/meteor_hammer/3/meteor_hammer_3_data.tres" type="Resource" id=8]
-
 [ext_resource path="res://items/global/effect.gd" type="Script" id=9]
 [ext_resource path="res://effects/weapons/null_effect.gd" type="Script" id=10]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 9 )
 key = "stat_attack_speed"
+text_key = ""
 value = -3
+custom_key = ""
+storage_method = 0
+effect_sign = 3
 custom_args = [  ]
 
 [sub_resource type="Resource" id=2]
 script = ExtResource( 10 )
+key = ""
 text_key = "EFFECT_FANTASY_METEOR_HAMMER_KILL_COOLDOWN"
 value = 20
 custom_key = "meteor_hammer_kill_cooldown"
+storage_method = 0
 effect_sign = 0
 custom_args = [  ]
 
@@ -40,6 +45,8 @@ is_lockable = true
 unlock_codex_descr_after_get_it = 1
 is_cursed = false
 curse_factor = 0.0
+is_meca = false
+is_mutant = false
 weapon_id = "weapon_fantasy_meteor_hammer"
 type = 0
 sets = [ ExtResource( 3 ), ExtResource( 2 ) ]

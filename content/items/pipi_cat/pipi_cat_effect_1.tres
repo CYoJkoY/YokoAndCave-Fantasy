@@ -1,7 +1,8 @@
 [gd_resource type="Resource" load_steps=3 format=2]
 
-[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/items/pipi_cat/pipi_cat_effect.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/extensions/effects/howling_pet/howling_pet_effect.gd" type="Script" id=1]
 [ext_resource path="res://mods-unpacked/YokoAndCave-Fantasy/content/entities/pets/pipi_cat/scene/pipi_cat.tscn" type="PackedScene" id=2]
+
 
 [resource]
 script = ExtResource( 1 )
@@ -17,6 +18,10 @@ is_structure = false
 charge_duration = 2.0
 cooldown_duration = 5.0
 blow_radius = 260.0
-blow_strength = 2.4
+blow_distance_map_ratio = 0.5
+impact_damage_percent = 20.0
+boss_impact_damage_percent = 2.0
+stun_duration = 1.0
+stun_scaling_stats = [ [ "stat_elemental_damage", 0.02 ] ]
 charge_scaling_stats = [ [ "stat_elemental_damage", 0.06 ] ]
 cooldown_scaling_stats = [ [ "stat_elemental_damage", -0.03 ] ]

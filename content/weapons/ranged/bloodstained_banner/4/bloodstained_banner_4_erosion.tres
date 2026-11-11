@@ -7,15 +7,23 @@
 script = ExtResource( 2 )
 arg_index = 1
 arg_sign = 2
+arg_value = 0
+arg_format = 0
+arg_key = ""
 
 [resource]
 script = ExtResource( 1 )
+key = ""
 text_key = "EFFECT_FANTASY_BLOODSTAINED_BANNER_EROSION"
 value = 20
+custom_key = ""
+storage_method = 0
 effect_sign = 4
 custom_args = [ SubResource( 1 ) ]
 scaling_stats = [ [ "stat_curse", 0.5 ] ]
 chance = 100
 times = 8
 cd = 30
+crit_chance = 0
+crit_damage = 1.5
 source_id = "weapon_fantasy_bloodstained_banner"
